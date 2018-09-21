@@ -5,7 +5,7 @@
 Since beers is one of the most demanded drinks between Ironhackers, we will create an app to display some of the best handcrafted beers. We will have something like the this:
 
 <div style="display: flex; justify-content: center">
-<img src="https://media.giphy.com/media/1AgVk74SfxXff5o9kn/giphy.gif" />
+<img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
 </div>
 
 ## Introduction
