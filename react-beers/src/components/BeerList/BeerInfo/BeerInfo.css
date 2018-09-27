@@ -1,3 +1,42 @@
 .info-blog {
-    margin: 0 auto;
+    margin: 50px auto;
+}
+
+.info-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-img img {
+    height: 400px;
+}
+
+.info-name, .info-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b-name {
+    font-size: 2rem;
+    font-weight: lighter;
+    letter-spacing: 3px;
+}
+
+.b-level {
+    font-size: 1.8rem;
+    color: grey;
+}
+
+.b-tgl {
+    color: grey;
+}
+
+.info-contr {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.info-wrap {
+    margin-top: 60px;
 }

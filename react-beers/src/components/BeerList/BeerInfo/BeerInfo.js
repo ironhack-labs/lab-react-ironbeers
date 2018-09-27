@@ -29,8 +29,8 @@ class BeerInfo extends Component {
         return (
             <div>
                 <Header />
-                <div className="row">
-                    <div className="col-12 col-md-6 info-blog">
+                <div className="row info-wrap">
+                    <div className="col-12 col-md-4 info-blog">
                         <div className="info-img">
                             <img src={ beer.image_url } alt="infoImage"/>
                         </div>

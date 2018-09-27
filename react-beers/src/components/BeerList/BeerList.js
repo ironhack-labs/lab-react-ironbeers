@@ -25,7 +25,7 @@ class BeerList extends Component {
         return (
             <div>
                 <Header />
-                <div className="container">
+                <div className="container beerCont">
                     {
                         this.state.beerList.map((beer, id) => {
                             const { image_url, name, tagline, contributed_by, _id } = beer;
