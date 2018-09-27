@@ -1,0 +1,40 @@
+.img-beer {
+    height: 25vh;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 20px;
+}
+
+.beer-tab {
+    height: 100%;
+}
+
+.beer-info {
+    text-align: left;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 20px;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.beer-row {
+    padding: 40px 20px 0;
+}
+
+.tagline {
+    color: grey;
+}
+
+.moreInfo {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: blue;
+    text-shadow: 0 0 1px black;
+}
+
+.moreInfo:hover {
+    text-decoration: none;
+    color: red;
+}

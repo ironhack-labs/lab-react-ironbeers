@@ -12,7 +12,6 @@ class BeerList extends Component {
     componentDidMount() {
         axios.get("https://ironbeer-api.herokuapp.com/beers/all")
             .then((res) => {
-                console.log(res.data);
                 this.setState({
                     beerList: res.data
                 });
@@ -29,8 +28,8 @@ class BeerList extends Component {
                 <div className="container">
                     {
                         this.state.beerList.map((beer, id) => {
-                            const { image_url, name, tagline, contributed_by } = beer;
-                            return <BeerTab key={ beer + id } image={ image_url } name={ name } tagline={ tagline } contributed_by={ contributed_by } />
+                            const { image_url, name, tagline, contributed_by, _id } = beer;
+                            return <BeerTab key={ beer + id } image={ image_url } name={ name } tagline={ tagline } contributed_by={ contributed_by } id={ _id } />
                         })
                     }
                 </div>
