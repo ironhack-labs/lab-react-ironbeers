@@ -20,3 +20,8 @@
     text-decoration: none;
     color: black;
 }
+
+.card:hover {
+    background: rgba(82, 154, 208, 0.3);
+    box-shadow: 0 0 10px blue;
+}
