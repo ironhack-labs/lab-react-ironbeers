@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3196f8b6-8b3b-4155-88ed-df364bf22430" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/react-beers/src/components/Home/Home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-beers/src/components/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-beers/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-beers/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-beers/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-beers/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-beers/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-beers/src/components/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/src/components/Home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-beers/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/src/components/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-beers/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,26 +32,23 @@
       <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-beers/src/components/Home/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="30" column="43" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="43" />
+            <state relative-caret-position="247">
+              <caret line="29" column="38" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#221#1668#0" />
+                <element signature="e#1756#3199#0" />
+                <element signature="e#3287#4735#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Home.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/react-beers/src/components/Home/Home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/react-beers/src/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            <state relative-caret-position="380">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -68,10 +62,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/react-beers/src/App.js" />
-        <option value="$PROJECT_DIR$/react-beers/src/components/Home/Home.js" />
-        <option value="$PROJECT_DIR$/react-beers/src/components/Home/Home.css" />
         <option value="$PROJECT_DIR$/react-beers/public/index.html" />
         <option value="$PROJECT_DIR$/react-beers/src/index.css" />
+        <option value="$PROJECT_DIR$/react-beers/src/index.js" />
+        <option value="$PROJECT_DIR$/react-beers/src/components/Home/Home.js" />
+        <option value="$PROJECT_DIR$/react-beers/src/components/Home/Home.css" />
       </list>
     </option>
   </component>
@@ -112,12 +107,6 @@
               <item name="lab-react-ironbeers" type="b2602c69:ProjectViewProjectNode" />
               <item name="lab-react-ironbeers" type="462c0819:PsiDirectoryNode" />
               <item name="react-beers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab-react-ironbeers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab-react-ironbeers" type="462c0819:PsiDirectoryNode" />
-              <item name="react-beers" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lab-react-ironbeers" type="b2602c69:ProjectViewProjectNode" />
@@ -176,12 +165,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538069845854</updated>
-      <workItem from="1538069848138" duration="2124000" />
+      <workItem from="1538069848138" duration="2714000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2124000" />
+    <option name="totallyTimeSpent" value="2714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="79" y="43" width="1461" height="921" extended-state="0" />
@@ -213,6 +202,27 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/react-beers/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-beers/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-beers/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/react-beers/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -222,39 +232,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/react-beers/src/components/Home/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-beers/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-beers/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="60" lean-forward="true" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+        <state relative-caret-position="247">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="38" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#221#1668#0" />
+            <element signature="e#1756#3199#0" />
+            <element signature="e#3287#4735#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/react-beers/src/components/Home/Home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-beers/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        <state relative-caret-position="380">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>

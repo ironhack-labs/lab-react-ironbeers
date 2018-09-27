@@ -10,3 +10,13 @@
     text-align: justify;
     padding: 0 20px 20px;
 }
+
+.main-link {
+    text-decoration: none;
+    color: black;
+}
+
+.main-link:hover {
+    text-decoration: none;
+    color: black;
+}
