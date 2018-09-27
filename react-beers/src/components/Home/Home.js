@@ -1,11 +1,9 @@
 import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
-import Header from '../../components/Header/Header';
 
 const home = () => (
     <div className="main-wrapper container">
-        <Header />
         <div className="row">
             <Link className="main-link" to="/beers">
                 <div className="card">
