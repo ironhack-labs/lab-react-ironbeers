@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3196f8b6-8b3b-4155-88ed-df364bf22430" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/react-beers/src/components/AddBeer/AddBeer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-beers/src/components/AddBeer/AddBeer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-beers/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-beers/src/components/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-beers/src/components/Home/Home.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react-beers/src/App.js">
+      <file leaf-file-name="BeerList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="197">
+              <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -31,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddBeer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddBeer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-beers/src/components/AddBeer/AddBeer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="88" column="101" selection-start-line="88" selection-start-column="101" selection-end-line="88" selection-end-column="101" />
+            <state relative-caret-position="104">
+              <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -43,23 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddBeer.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react-beers/src/components/AddBeer/AddBeer.css">
+      <file leaf-file-name="BeerList.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react-beers/src/components/Home/Home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -74,21 +62,21 @@
       <list>
         <option value="$PROJECT_DIR$/react-beers/src/index.css" />
         <option value="$PROJECT_DIR$/react-beers/src/index.js" />
-        <option value="$PROJECT_DIR$/react-beers/src/components/Home/Home.css" />
         <option value="$PROJECT_DIR$/react-beers/public/index.html" />
         <option value="$PROJECT_DIR$/react-beers/src/components/Header/Header.js" />
         <option value="$PROJECT_DIR$/react-beers/src/components/Home/Home.js" />
         <option value="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerTab/BeerTab.js" />
         <option value="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerTab/BeerTab.css" />
         <option value="$PROJECT_DIR$/react-beers/src/components/Header/Header.css" />
-        <option value="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.js" />
-        <option value="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.css" />
         <option value="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerInfo/BeerInfo.js" />
         <option value="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerInfo/BeerInfo.css" />
         <option value="$PROJECT_DIR$/react-beers/src/components/BeerList/RandomBeer/RandomBeer.js" />
         <option value="$PROJECT_DIR$/react-beers/src/App.js" />
         <option value="$PROJECT_DIR$/react-beers/src/components/AddBeer/AddBeer.css" />
         <option value="$PROJECT_DIR$/react-beers/src/components/AddBeer/AddBeer.js" />
+        <option value="$PROJECT_DIR$/react-beers/src/components/Home/Home.css" />
+        <option value="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.js" />
+        <option value="$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.css" />
       </list>
     </option>
   </component>
@@ -163,7 +151,7 @@
               <item name="react-beers" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
+              <item name="BeerList" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -201,12 +189,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538069845854</updated>
-      <workItem from="1538069848138" duration="12827000" />
+      <workItem from="1538069848138" duration="13960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12827000" />
+    <option name="totallyTimeSpent" value="13960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="79" y="43" width="1461" height="921" extended-state="0" />
@@ -242,13 +230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-beers/src/components/Home/Home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -303,23 +284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react-beers/src/components/BeerList/RandomBeer/RandomBeer.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -360,16 +324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-beers/src/components/Home/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react-beers/src/components/AddBeer/AddBeer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -377,13 +331,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/react-beers/src/components/Home/Home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-beers/src/components/Home/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/react-beers/src/components/AddBeer/AddBeer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="88" column="101" selection-start-line="88" selection-start-column="101" selection-end-line="88" selection-end-column="101" />
+        <state relative-caret-position="104">
+          <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-beers/src/components/BeerList/BeerList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
