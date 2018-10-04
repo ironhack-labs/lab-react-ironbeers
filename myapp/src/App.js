@@ -12,6 +12,7 @@ class App extends Component {
         <Route exact path="/" render={() => <HomePage></HomePage>}></Route>
         <Route exact path="/beers" render={() => <BeerList></BeerList>}></Route>
         <Route path="/beers/:id" component={SingleBeer}></Route>
+        <Route path="/random-beer" render={() => <SingleBeer random={true}></SingleBeer>}></Route>
       </div>
     );
   }

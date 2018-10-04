@@ -21,7 +21,8 @@ export default class BeerList extends React.Component {
         axios.get('https://ironbeer-api.herokuapp.com/beers/all')
         // .then(arr => console.log(arr.data))
         .then(arr => this.setState({beerList: arr.data}))
-    }
+        .catch(e => console.log(e));
+    };
 
     render() {
         // console.log(this.state.beerList)

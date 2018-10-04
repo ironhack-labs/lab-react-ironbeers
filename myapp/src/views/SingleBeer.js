@@ -4,21 +4,28 @@ import BeerDetail from '../components/BeerDetail';
 import axios from 'axios';
 
 export default class SingleBeer extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
-            beer: {}
+            beer: {},
+            random: props.random || false
         }
     };
 
     componentWillMount() {
-        this.fetchBeer();
+        this.state.random ? this.fetchRandom() : this.fetchBeer();
     };
 
     fetchBeer() {
         // console.log(this.props.match.params.id)
         axios.get(`https://ironbeer-api.herokuapp.com/beers/single/${this.props.match.params.id}`)
         .then(beer => this.setState({beer: beer.data}))
+        .catch(e => console.log(e))
+    }
+
+    fetchRandom() {
+        axios.get('https://ironbeer-api.herokuapp.com/beers/random')
+        .then(beer => this.setState({beer: beer.data[0]}))
         .catch(e => console.log(e))
     }
 
