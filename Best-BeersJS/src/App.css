@@ -17,3 +17,16 @@
   width: 70%;
   
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+
+nav img {
+  height: 100px;
+  text-align: center;
+
+}
