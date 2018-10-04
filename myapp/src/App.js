@@ -3,13 +3,15 @@ import './App.css';
 import HomePage from './views/HomePage';
 import { Route } from 'react-router-dom';
 import BeerList from './views/BeerList';
+import SingleBeer from './views/SingleBeer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Route exact path="/" render={() => <HomePage></HomePage>}></Route>
-        <Route path="/beers" render={() => <BeerList></BeerList>}></Route>
+        <Route exact path="/beers" render={() => <BeerList></BeerList>}></Route>
+        <Route path="/beers/:id" component={SingleBeer}></Route>
       </div>
     );
   }
