@@ -7,28 +7,33 @@ export default class BeerList extends React.Component {
     constructor() {
         super();
         this.state = {
-            beerList: []
+            beerList: [],
         }
     }
 
     componentWillMount() {
-        // console.log('entró')
         this.fetchBeers();
     }
 
     fetchBeers(){
-        // console.log('entró')
         axios.get('https://ironbeer-api.herokuapp.com/beers/all')
-        // .then(arr => console.log(arr.data))
         .then(arr => this.setState({beerList: arr.data}))
         .catch(e => console.log(e));
     };
 
+    searchBeer = (input) => {
+        if(this.state.input !== ""){
+            axios.get(`https://ironbeer-api.herokuapp.com/beers/search?q=${input}`)
+            .then(filter => this.setState({beerList: filter.data}))
+            .catch(e => console.log(e))
+        }
+    }
+
     render() {
-        // console.log(this.state.beerList)
         return(
             <div>
                 <Header></Header>
+                <input type="text" name="search" onChange={e => this.searchBeer(e.currentTarget.value)}></input>
                 {this.state.beerList.map(beer => <BeerCard {...beer} key={beer._id}></BeerCard>)}
             </div>
         )
