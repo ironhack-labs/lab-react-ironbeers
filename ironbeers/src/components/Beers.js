@@ -26,15 +26,14 @@ export class Beers extends React.Component {
 
   render() {
     let listOfBeers = this.state.listOfBeers;
-    console.log(listOfBeers);
     return (
       <div>
         <Header />
         <div>
-          {listOfBeers.map((beer, i) => {
+          {listOfBeers.map(beer => {
             return (
-              <div key={i}>
-                <Link to={`/beers/${beer._id}`}>
+              <div key={beer._id}>
+                <Link to={`/beer/${beer._id}`}>
                   <img height="50px" src={beer.image_url} alt={beer.name} />
                   <h2>{beer.name}</h2>
                   <p>{beer.tagline}</p>
