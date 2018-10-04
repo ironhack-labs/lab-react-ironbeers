@@ -5,11 +5,9 @@ import { Beers } from "./components/Beers";
 import { RandomBeer } from "./components/RandomBeer";
 import { NewBeer } from "./components/NewBeer";
 import { Home } from "./components/Home";
+import { BeerDetail } from "./components/BeerDetail";
 
 class App extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
     return (
@@ -19,6 +17,7 @@ class App extends Component {
           <Route path="/beers" component={Beers} />
           <Route path="/random-beer" component={RandomBeer} />
           <Route path="/new-beer" component={NewBeer} />
+        {/*   <Route exact path="/beers/:id" component={BeerDetail} /> */}
         </Switch>
       </div>
     );
