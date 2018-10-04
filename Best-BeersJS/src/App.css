@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+
+.all{
+  width: 100%;
+  text-align: center;
+}
+
+.all p{
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+}
+
+.all img{
+  width: 70%;
+  
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+
+nav img {
+  height: 100px;
+  text-align: center;
+
+}
