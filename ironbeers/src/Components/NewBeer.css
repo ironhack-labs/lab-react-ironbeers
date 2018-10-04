@@ -1,0 +1,9 @@
+input{
+    padding:5px;
+    padding-right:20%;
+    border-radius:5%;
+}
+textarea{
+    padding:5%;
+    padding-right:20%;
+}
