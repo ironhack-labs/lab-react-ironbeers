@@ -30,3 +30,8 @@
     transform: rotate(360deg);
   }
 }
+
+.beer-img{
+  height: 16vh;
+  object-fit: contain;
+}

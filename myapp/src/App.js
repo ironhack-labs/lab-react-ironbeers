@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import Beers from './Beers';
-import RandomBeer from './RandomBeer';
-import NewBeer from './NewBeer';
-import Header from './Header';
+import HomePage from './views/HomePage';
+import { Route } from 'react-router-dom';
+import BeerList from './views/BeerList';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header></Header>
-        <Beers/>
-        <RandomBeer></RandomBeer>
-        <NewBeer></NewBeer>
+        <Route exact path="/" render={() => <HomePage></HomePage>}></Route>
+        <Route path="/beers" render={() => <BeerList></BeerList>}></Route>
       </div>
     );
   }
