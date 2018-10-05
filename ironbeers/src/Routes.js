@@ -9,10 +9,11 @@ import BeerDetail from './components/BeerDetail';
 const Routes = () => {
     return (
         <Switch>
-            <Route path="/new" component={NewBeer} />
+            <Route exact path="/" component={Beers} />
+            <Route exact path="/new" component={NewBeer} />
             <Route exact path="/beers" component={Beers} />
-            <Route path="/random" component={RandomBeer} />
-            <Route path="/beers/:id" component={BeerDetail} />
+            <Route exact path="/random" component={RandomBeer} />
+            <Route exact path="/beers/:id" component={BeerDetail} />
         </Switch>
     )
 }
