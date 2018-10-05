@@ -1,19 +1,19 @@
 {
   "data": [
     {
-      "img": "allbeer",
+      "img": "http://localhost:3000/images/allbeer.png",
       "title": "All Beers",
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ut natus ducimus veritatis molestias doloribus consequatur eum repudiandae dolores velit nam labore expedita sequi vitae voluptate beatae, vel eos sapiente.",
       "address": "/beers"
     },
     {
-      "img": "randombeer",
+      "img": "http://localhost:3000/images/randombeer.png",
       "title": "Random Beer",
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ut natus ducimus veritatis molestias doloribus consequatur eum repudiandae dolores velit nam labore expedita sequi vitae voluptate beatae, vel eos sapiente.",
       "address": "/random-beer"
     },
     {
-      "img": "newbeer",
+      "img": "http://localhost:3000/images/newbeer.png",
       "title": "New Beer",
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ut natus ducimus veritatis molestias doloribus consequatur eum repudiandae dolores velit nam labore expedita sequi vitae voluptate beatae, vel eos sapiente.",
       "address": "/new-beer"

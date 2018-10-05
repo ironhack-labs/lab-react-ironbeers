@@ -1,9 +1,4 @@
 import React, { Component } from "react"
-import allbeer from "../images/allbeer.png"
-import randombeer from "../images/randombeer.png"
-import newbeer from "../images/newbeer.png"
-
-// let d = "./"
 
 export class Block extends Component {
   render() {
