@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import SingleBeer from './components/SingleBeer';
+import SingleBeer from './SingleBeer';
 import axios from 'axios';
 
 export default class SingleBeerLoader extends Component {
   constructor(props){
     super(props);
+    console.log(props)
     this.state = {
       beer: null,
-      id: props.id
+      id: props.match.params.id
     }
   }
   
@@ -21,7 +22,7 @@ export default class SingleBeerLoader extends Component {
     let id = this.state.id;
     axios.get(`https://ironbeer-api.herokuapp.com/beers/single/${id}`)
       .then(beer => {
-        this.setState({beer: beer.data[0]})
+        this.setState({beer: beer.data})
       });
   }
   

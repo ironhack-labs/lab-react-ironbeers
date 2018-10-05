@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SingleBeer from './components/SingleBeer';
+import SingleBeer from './SingleBeer';
 import axios from 'axios';
 
 export default class RandomBeerLoader extends Component {

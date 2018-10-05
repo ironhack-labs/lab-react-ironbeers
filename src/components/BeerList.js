@@ -34,9 +34,9 @@ export default class BeerList extends Component {
       return (
         <div>
           {beers.map(beer=> {
-            let link = beer.id
+            let link = beer._id
             return (
-              <Link to={`/beers/${link}`}>
+              <Link to={`/beers/${link}`} key={link}>
                 <BeerListElement beer={beer}/>
               </Link>
             )
