@@ -7,7 +7,7 @@ Since beers is one of the most demanded drinks between Ironhackers, we will crea
 <div style="display: flex; justify-content: center">
 <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
 </div>
-
+ 
 ## Introduction
 
 For this project, we will be using an API so that we can retrieve the data of the beers. The root of the API is: `https://ironbeer-api.herokuapp.com/beers`, and the available endpoints are the following:
@@ -41,9 +41,14 @@ The **IronBeers** Project will include the following features:
 - Mobile first design
 
 
+## Requirements
+
+- Fork this repo
+- Clone this repo
+
 ## Submission
 
-- Upon completion, run the following commands
+- Upon completion, run the following commands:
 
   ```
   git add .
@@ -51,10 +56,10 @@ The **IronBeers** Project will include the following features:
   git push origin master
   ```
 
-- Navigate to your repo and [create a Pull Request](https://help.github.com/articles/creating-a-pull-request/)
+- Create Pull Request so your TAs can check up your work.
 
 
-## Deliverables
+## Instructions
 
 ### Iteration 1: Create the App
 
@@ -168,5 +173,6 @@ Yes! One endpoint left! But it is for the **Bonus**. On the `/beers` route, add 
 
 Awesome! Grab a beer! You deserve it! Now you are a **React Warrior**, keep training to become a Ninja!
 
-![beer](https://user-images.githubusercontent.com/23629340/40708446-c26afc76-63f3-11e8-8017-cad22ad2fefc.png) 
+
+Happy coding! :heart:
 
