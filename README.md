@@ -37,14 +37,6 @@ The **IronBeers** Project will include the following features:
 
 - Fork this repo
 - Clone this repo
-- A fully working React App
-- Mobile first design
-
-
-## Requirements
-
-- Fork this repo
-- Clone this repo
 
 ## Submission
 
@@ -60,6 +52,8 @@ The **IronBeers** Project will include the following features:
 
 
 ## Instructions
+
+At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design!
 
 ### Iteration 1: Create the App
 
@@ -165,13 +159,13 @@ Since we did not cover how to upload images, do not worry about that, the API wi
 <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
 </div>
 
-### Bonus Iteration: Filter the Beers
+### (Extra) Bonus Iteration: Filter the Beers
 
-Yes! One endpoint left! But it is for the **Bonus**. On the `/beers` route, add an `input` where users can search for **beers**. Every time a new letter is typed, you should call to `https://ironbeer-api.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
+Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ironbeer-api.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
 
 # We are done!
 
-Awesome! Grab a beer! You deserve it! Now you are a **React Warrior**, keep training to become a Ninja!
+Awesome! Grab a beer (if you're not underage :wink: )! Now you are a **React Warrior**, keep training to become the Ninja!
 
 
 Happy coding! :heart:
