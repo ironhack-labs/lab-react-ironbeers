@@ -7,7 +7,7 @@ Since beers is one of the most demanded drinks between Ironhackers, we will crea
 <div style="display: flex; justify-content: center">
 <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
 </div>
-
+ 
 ## Introduction
 
 For this project, we will be using an API so that we can retrieve the data of the beers. The root of the API is: `https://ironbeer-api.herokuapp.com/beers`, and the available endpoints are the following:
@@ -37,13 +37,10 @@ The **IronBeers** Project will include the following features:
 
 - Fork this repo
 - Clone this repo
-- A fully working React App
-- Mobile first design
-
 
 ## Submission
 
-- Upon completion, run the following commands
+- Upon completion, run the following commands:
 
   ```
   git add .
@@ -51,10 +48,12 @@ The **IronBeers** Project will include the following features:
   git push origin master
   ```
 
-- Navigate to your repo and [create a Pull Request](https://help.github.com/articles/creating-a-pull-request/)
+- Create Pull Request so your TAs can check up your work.
 
 
-## Deliverables
+## Instructions
+
+:exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design!
 
 ### Iteration 1: Create the App
 
@@ -160,13 +159,14 @@ Since we did not cover how to upload images, do not worry about that, the API wi
 <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
 </div>
 
-### Bonus Iteration: Filter the Beers
+### (Extra) Bonus Iteration: Filter the Beers
 
-Yes! One endpoint left! But it is for the **Bonus**. On the `/beers` route, add an `input` where users can search for **beers**. Every time a new letter is typed, you should call to `https://ironbeer-api.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
+Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ironbeer-api.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
 
 # We are done!
 
-Awesome! Grab a beer! You deserve it! Now you are a **React Warrior**, keep training to become a Ninja!
+Awesome! Grab a beer (if you're not underage :wink: )! Now you are a **React Warrior**, keep training to become the Ninja!
 
-![beer](https://user-images.githubusercontent.com/23629340/40708446-c26afc76-63f3-11e8-8017-cad22ad2fefc.png) 
+
+Happy coding! :heart:
 
