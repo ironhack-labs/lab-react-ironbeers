@@ -53,7 +53,7 @@ The **IronBeers** Project will include the following features:
 
 ## Instructions
 
-At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design!
+:exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design!
 
 ### Iteration 1: Create the App
 
