@@ -8,11 +8,11 @@ class BeerTag extends Component {
         return (
             <div className="beer-list">
                 <Link to={`/beer/${this.props.id}`}>
-                <div><img src={this.props.imageurl} alt=""></img></div>
-                <div> <h1>{this.props.name}</h1>
-                    <h4>{this.props.tagline}</h4>
-                    <h5>Created by:{this.props.name} </h5>
-                </div>
+                    <div><img src={this.props.imageurl} alt=""></img></div>
+                    <div> <h1>{this.props.name}</h1>
+                        <h4>{this.props.tagline}</h4>
+                        <h5>Created by:{this.props.name} </h5>
+                    </div>
                 </Link>
             </div>
         )
@@ -22,7 +22,7 @@ class BeerTag extends Component {
 class Allbeers extends Component {
     constructor(props) {
         super(props)
-        this.state = { listBeers: [], searchBeer:""}
+        this.state = { listBeers: [], searchBeer: "" }
     }
 
     getAllBeers() {
@@ -38,13 +38,28 @@ class Allbeers extends Component {
         this.getAllBeers();
     }
 
-    handleChange(event){
-        this.setState({searchBeer:event.target.value})
-        axios.get(`https://ironbeer-api.herokuapp.com/beers/search?q=${this.state.searchBeer}`)
-        .then(response => {
-            this.setState({ listBeers: response.data })
+    handleChange(event) {
+        const valuetosearch = event.target.value;
+        const getAxiosData = (valuetosearch) => {
+            let apitoget = "";
+            if (valuetosearch === "") {
+                apitoget = 'https://ironbeer-api.herokuapp.com/beers/all'
+            } else {
+                apitoget = `https://ironbeer-api.herokuapp.com/beers/search?q=${this.state.searchBeer}`
+            }
+            axios.get(apitoget)
+                .then(response => {
+                    this.setState({ listBeers: response.data })
+
+                }
+                )
 
         }
+
+        this.setState({ searchBeer: valuetosearch }, () => {
+            getAxiosData(valuetosearch)
+        } 
+
         )
 
     }
@@ -57,7 +72,7 @@ class Allbeers extends Component {
                 </header>
                 <div>
                     <label>Search for a beer</label>
-                    <input type='text' name="searchBeer" value={this.state.searchBeer} onChange={e=>this.handleChange(e)}/>
+                    <input type='text' name="searchBeer" value={this.state.searchBeer} onChange={e => this.handleChange(e)} />
                 </div>
                 <div >
                     {
