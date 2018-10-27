@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.div-container {
+  width: 80%;
+  /* height: 100px; */
+  margin: 20px;
+  /* background-color: red; */
+  display: flex;
+  flex-flow: column;
+}
+
+img {
+  width: 80%;
+  height: 80%
+}
+
+
+.div-container-home {
+  display: flex;
+  flex-flow: column;
+  margin-left: 200px;
+  text-align: center;
+}
+
+.header-component {
+  background-color: rgb(91, 157, 243);
+}
+
+.header-component img {
+  width: 50px;
+  height: 50px;
+}
+
+.beer-list {
+  width: 30%;
+}
+
+.beer-list img {
+  width: 20%;
+  height:40%
+}
+
+.beer-detail {
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  margin-left: 30%;
+}
+
+.beer-detail img {
+  width: 10%;
+  height: 10%;
+}
+
+.beer-detail div {
+  margin: 5px;
+  text-align: justify;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  width: 40%;
+  text-align: justify;
+  margin-left:30%
+}
+
+form>label {
+  margin-top:20px;
+}
+button {
+  margin: 10px;
+  border-radius: 10px ;
+  background-color: rgb(64, 147, 241);
+  color: white;
+  height: 40px;
+}
