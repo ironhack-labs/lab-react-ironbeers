@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-class ListOfBeers extends Component {
+class QueryOfBeers extends Component {
     constructor(props){
       super(props);
       this.state = {
@@ -10,26 +10,28 @@ class ListOfBeers extends Component {
       };
     }
 
-    getBeers = () => {
-      //const { params } = this.props.match;
-      axios.get(`https://ironbeer-api.herokuapp.com/beers/all` /*,{withCredentials:true}*/)
-      .then( responseFromApi =>{
-        const theBeers = responseFromApi.data;
-        this.setState({beers: theBeers});
-        console.log(this.state)
-      })
-      .catch((err)=>{
-          console.log(err)
-      })
-    }
+    getBeer = () => {
+        const { params } = this.props.match;
+        console.log(params)
+        axios.get(`https://ironbeer-api.herokuapp.com/beers/search?q=${params.query}`/*, {withCredentials:true}*/)
+        .then( responseFromApi =>{
+          const theBeer = responseFromApi.data;
+          this.setState({beers: theBeer});
+          console.log(this.state)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+      }
+
   
     filteredBeers;
 
     render(){
-        //console.log(Object.keys(this.state.beers).length)
+        console.log(Object.keys(this.state.beers).length)
         
             if( Object.keys(this.state.beers).length <= 0) {
-                this.getBeers()
+                this.getBeer()
             }
         
         //console.log(this.state.beers)
@@ -38,7 +40,7 @@ class ListOfBeers extends Component {
 
       return(
         <div>
-          <h1>I'm here working dude with all the beers</h1>
+          <h1>I'm here working dude with dem Queries</h1>
           
           {
               this.filteredBeers.map((beer, index) => {
@@ -71,4 +73,4 @@ class ListOfBeers extends Component {
 }  
 
 
-export default ListOfBeers;
+export default QueryOfBeers;

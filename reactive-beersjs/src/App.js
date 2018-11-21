@@ -5,7 +5,8 @@ import ListOfBeers from './components/List-Beers'
 import BeerDetails from './components/Beer-Details';
 import BeerForm from './components/Beer-Form';
 import BeerRandom from './components/Beer-Random';
-import Navbar from './components/navbar/Navbar'  
+import Navbar from './components/navbar/Navbar'
+import QueryOfBeers from './components/Query-Beer';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
             <Route exact path='/beer/:id' component={BeerDetails} />
             <Route exact path='/randombeer' component={BeerRandom} />
             <Route exact path='/makebeer' component={BeerForm} />
+            <Route exact path='/search/:query' component={QueryOfBeers}/>
           </Switch>
       </div>
     );

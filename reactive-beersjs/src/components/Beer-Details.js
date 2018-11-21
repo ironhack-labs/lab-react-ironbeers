@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 class BeerDetails extends Component {
     constructor(props){
@@ -23,12 +23,12 @@ class BeerDetails extends Component {
   
     render(){
 
-      {
+      
         if( Object.keys(this.state).length <= 0) {
             this.getBeer()
             console.log(this.state)
         }
-      }
+      
       return(
         <div>
           <h1>I'm here working dude with a single beer</h1>
