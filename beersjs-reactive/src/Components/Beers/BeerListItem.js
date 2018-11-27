@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const BeerListItem = ({_id, image_url, name, tagline, contributed_by}) => (
   <div className='beers-list'>
-    <Link className='beer-list-item' to={`/beers/'${_id}`}>
+    <Link className='beer-list-item' to={`/beers/${_id}`}>
       <div>
         <img src={image_url} alt={name}/>
       </div>

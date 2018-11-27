@@ -67,6 +67,52 @@
   max-width: 90%;
 }
 
+.beer-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 3%; 
+}
+
+.beer-img-envelop > img{
+  max-height: 50vh;
+}
+
+.beer-detail-first-line,
+.beer-detail-second-line{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.beer-description,
+.beer-contributor{
+  text-align: justify;
+}
+
+.beer-detail-first-line,
+.beer-detail-second-line,
+.beer-description,
+.beer-contributor{
+  margin: 5px 0;
+}
+
+.beer-detail-first-line{
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+.beer-attenuation,
+.beer-tagline,
+.beer-contributor{
+  color: grey;
+}
+
+.beer-first-brewed{
+  color: black;
+  font-weight: 900;
+}
 
 @keyframes App-logo-spin {
   from {
