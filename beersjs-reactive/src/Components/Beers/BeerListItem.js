@@ -8,9 +8,9 @@ const BeerListItem = ({_id, image_url, name, tagline, contributed_by}) => (
         <img src={image_url} alt={name}/>
       </div>
       <div>
-        <h4>Name {name}</h4>
-        <p> Tag {tagline}</p>
-        <p><strong>Contributed {contributed_by}</strong></p>
+        <h4>{name}</h4>
+        <p>{tagline}</p>
+        <p><strong>{contributed_by}</strong></p>
       </div>
     </Link>
   </div>
