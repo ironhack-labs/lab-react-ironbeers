@@ -31,7 +31,9 @@ class Beers extends Component{
     return (
       <section>
         <Header />
-        {beers.map(beer => <BeerListItem key={beer._id} {...beer}/>)}
+        <div className='list'>
+          {beers.map(beer => <BeerListItem key={beer._id} {...beer}/>)}
+        </div>
       </section>
     )
   }

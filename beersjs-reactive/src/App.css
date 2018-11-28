@@ -30,17 +30,31 @@
 }
 
 .home{
-  width: 100vw;
-  max-width: 800px;
   margin: auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.home-section{
+  border: 1px solid lightgray;
+}
+
+.home-section-text{
+  padding:0 3% 3% 3%;
 }
 
 .home img{
   width: 100%;
+  max-height: 350px;
 }
 
 .home a{
   text-decoration: none;
+  color: black;
 }
 
 .beers-list a{
@@ -86,6 +100,11 @@
   justify-content: space-between;
 }
 
+.beer-detail-first-line,
+.beer-detail-second-line{
+  text-align: left;
+}
+
 .beer-description,
 .beer-contributor{
   text-align: justify;
@@ -112,6 +131,49 @@
 .beer-first-brewed{
   color: black;
   font-weight: 900;
+}
+
+.new-beer-form{
+  display: grid;
+  justify-content: center;
+  margin: 3%;
+}
+
+.label{
+  display: grid;
+}
+
+.form-field{
+  margin: 5px;
+}
+
+.input,
+.textarea,
+.form-button{
+  border-radius: 7px;
+  margin: 2px;
+  padding: 2px;
+}
+
+.form-button{
+  padding: 5px;
+  background-color: #282c34;
+  color: whitesmoke;
+}
+
+.list{
+  display: grid;
+  justify-content: center;
+  margin: 3%;
+}
+
+.beer-list-item{
+  margin: 5px;
+  border-bottom: 1px lightgray solid;
+}
+
+.form-field-button{
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
