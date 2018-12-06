@@ -37,7 +37,10 @@ class BeerId extends Component {
         <div>
         <img src={this.state.beerInfo.image_url} alt="imgbeer" />
         <h1>{this.state.beerInfo.name}</h1>
+        <p>{this.state.beerInfo.first_brewed}</p>
+        <p>{this.state.beerInfo.attenuation_level}</p>
         <p>{this.state.beerInfo.tagline}</p>
+        <p>{this.state.beerInfo.description}</p>
         <p>author: {this.state.beerInfo.contributed_by}</p>
 
                   <Link to='/'>go home</Link>
