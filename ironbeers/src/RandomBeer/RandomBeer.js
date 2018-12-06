@@ -12,7 +12,6 @@ class RandomBeer extends Component {
   getRandomBeer = () => {
     axios.get(`https://ironbeer-api.herokuapp.com/beers/random`)
       .then(responseFromApi => {
-        console.log(responseFromApi);
         this.setState({
           randombeer: responseFromApi.data[0]
         });
@@ -24,11 +23,10 @@ class RandomBeer extends Component {
   }
 
   render() {
-    console.log("bitch");
 
     return this.state.randombeer ? (
       <div>
-        hola
+        
         <div>
         <img src={this.state.randombeer.image_url} alt="imgbeer" />
         <h1>{this.state.randombeer.name}</h1>
