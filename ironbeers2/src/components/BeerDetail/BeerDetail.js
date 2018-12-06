@@ -1,25 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import axios from "axios";
+import "./BeerDetail.css";
 
-export default class RamdomBeers extends Component {
-
+export default class BeerDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      beer: '',
+      beer: []
     };
   }
 
-  componentWillMount() {
-    this.getRandomBeer();
+  componentDidMount() {
+    this.getSingleBeer();
   }
 
-  getRandomBeer = () => {
+  getSingleBeer = () => {
+    const { params } = this.props.match;
     axios
-      .get(`https://ironbeer-api.herokuapp.com/beers/random`)
+      .get(`https://ironbeer-api.herokuapp.com/beers/single/${params.id}`)
       .then(responseFromApi => {
-        const beer = responseFromApi.data[0];
+        const beer = responseFromApi.data;
+        console.log(beer);
         this.setState({ beer });
       })
       .catch(err => {
@@ -28,6 +30,7 @@ export default class RamdomBeers extends Component {
   };
 
   render() {
+    console.log(this.state.beer);
 
     return (
       <ListGroup>
@@ -53,6 +56,6 @@ export default class RamdomBeers extends Component {
           <p>{this.state.beer.contributed_by}</p>
         </ListGroupItem>
       </ListGroup>
-    )
+    );
   }
 }

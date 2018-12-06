@@ -1,0 +1,19 @@
+.title-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.first-title {
+    text-align: left;
+}
+
+.second-title {
+    text-align: right;
+}
+
+.description-beer {
+    text-align: justify;
+    padding: 20px;
+}

@@ -31,28 +31,31 @@ export default class Beers extends Component {
     console.log(this.state.listOfBeers);
 
     return (
-      <React.Fragment>
+      <div>
         {this.state.listOfBeers.map(beer => (
-          <ListGroup key={beer.id} className='beer-section'>
-            <div className='image-section'>
+          <Link to={`/beers/${beer._id}`}>
+          <ListGroup key={beer.id} className="beer-section">
+            <div className="image-section">
               <ListGroupItem>
+
                 <img src={beer.image_url} />
               </ListGroupItem>
             </div>
-            <div className='description-section'>
+            <div className="description-section">
               <ListGroupItem>
                 <h1>{beer.name}</h1>
               </ListGroupItem>
               <ListGroupItem>
-                <h2>{beer.tagline}</h2>
+                <h>{beer.tagline}</h>
               </ListGroupItem>
               <ListGroupItem>
                 <p>Created by: {beer.name}</p>
               </ListGroupItem>
             </div>
           </ListGroup>
+          </Link>
         ))}
-      </React.Fragment>
+      </div>
     );
   }
 }
