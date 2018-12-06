@@ -54,7 +54,7 @@ componentDidMount() {
         </div>)
         : 
           (
-          <p>Espera, hermano. Estamos recopilando la data.</p>
+          <p style={{margin: '20%'}}>Espera, hermano. Estamos recopilando la movida.</p>
         )
     )
   }
