@@ -4,7 +4,7 @@ import './App.css';
 import { Switch, Route, Link } from "react-router-dom";
 import Beers from "./Components/Beers/getBeer.js"
 import RandomBeer from "./Components/RandomBeer/getRandomBeer.js"
-import NewBeer from "./Components/NewBeer/NewBeer.js"
+import NewBeer from "./Components/NewBeer/getNewBeer.js"
 import EachBeer from "./Components/EachBeer/getEachBeer.js"
 
 
