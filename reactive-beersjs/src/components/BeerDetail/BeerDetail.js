@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 export default class BeerDetail extends Component {
   render() {
+    console.log(this.props.beer)
     return (
       <div>
         <img src={this.props.beer.image_url} />
