@@ -1,0 +1,15 @@
+.home-section {
+  text-decoration:none;
+  color: black;
+}
+
+.home-section div{
+  border: 1px solid black;
+  width:auto;
+}
+
+
+.home-section img{
+  width:100%;
+}
+
