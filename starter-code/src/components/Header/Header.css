@@ -1,0 +1,11 @@
+.nav-bar{
+  height: 10vh;
+  background-color: lightseagreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar Link {
+  color: white;
+}
