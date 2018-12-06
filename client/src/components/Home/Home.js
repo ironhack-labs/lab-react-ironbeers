@@ -22,7 +22,7 @@ export default class Home extends Component {
           </StyledP>
         </RouteWrapper>
         <RouteWrapper>
-          <Link to="/random">
+          <Link to="/beers/random">
             <StyledImg
               src={require("../../images/random-beer.jpg")}
               alt="beer"
@@ -35,7 +35,7 @@ export default class Home extends Component {
           </StyledP>
         </RouteWrapper>
         <RouteWrapper>
-          <Link to="/new-beer">
+          <Link to="/beers/new">
             <StyledImg src={require("../../images/beer.jpg")} alt="beer" />
           </Link>
           <StyledH1>New Beer</StyledH1>
