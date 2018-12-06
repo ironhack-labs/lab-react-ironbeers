@@ -1,0 +1,8 @@
+.containerHeader{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; 
+  background-color: #46c5fa;
+  margin-bottom: 20px;
+}
+
