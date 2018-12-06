@@ -18,11 +18,8 @@ export default class NewBeer extends Component {
   handleFormSubmit = (event, beer) => {
     event.preventDefault();
 
-    console.log(event, beer)
-
     axios.post('https://ironbeer-api.herokuapp.com/beers/new', beer)
       .then(res => {
-        console.log(res);
         this.setState({...this.state, redirect: true})
 
       })

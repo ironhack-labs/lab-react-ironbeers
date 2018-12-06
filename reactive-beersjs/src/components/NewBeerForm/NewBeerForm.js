@@ -25,8 +25,6 @@ export default class NewBeerForm extends Component {
   }
 
   render() {
-    console.log(this.state);
-
     return (
       <form onSubmit={e => this.props.onSubmit(e, this.state)}>
         <h1>Forms</h1>
