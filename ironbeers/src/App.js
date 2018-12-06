@@ -6,6 +6,7 @@ import NewBeer from './NewBeer/NewBeer.js';
 import RandomBeer from './RandomBeer/RandomBeer.js'
 import AllBeers from './AllBeers/AllBeers.js'
 import { Switch, Route, Link } from "react-router-dom";
+// import Nav from '../Navbar/Nav.js'
 
 
 class App extends Component {

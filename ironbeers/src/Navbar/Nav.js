@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
 import Link from 'react-router-dom/Link';
-import Nav from '../Navbar/Nav.js'
 
 
-
-class RandomBeer extends Component {
+class Nav extends Component {
   
 
   render () {
       
       return (
         <div>
-                  <Nav></Nav>
+          
+          <Link to='/'>go home</Link>
         </div>
           
 
@@ -19,4 +18,4 @@ class RandomBeer extends Component {
   }
 }
 
-export default RandomBeer;
+export default Nav;

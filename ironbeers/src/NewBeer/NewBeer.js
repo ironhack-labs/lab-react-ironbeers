@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'react-router-dom/Link';
+import Nav from '../Navbar/Nav.js'
+
 
 
 class NewBeer extends Component {
@@ -9,8 +11,7 @@ class NewBeer extends Component {
       
       return (
         <div>
-          newbeer
-          <Link to='/home'>hola</Link>
+       <Nav></Nav>
         </div>
           
 
