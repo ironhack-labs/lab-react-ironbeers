@@ -14,7 +14,6 @@ export default class Beer extends Component {
         <img src={singleBeer.image_url} alt=""/>
         </div>
         <div className="infocontainer">
-        <h2>{singleBeer.name}</h2>
         <Link className="" to={`/beers/${singleBeer._id}`}><h2>{singleBeer.name}</h2></Link>
         <h3>{singleBeer.tagline}</h3>
         <p>{singleBeer.contributed_by}</p>
