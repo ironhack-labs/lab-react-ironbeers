@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
+import NavBar from "../NavBar/NavBar";
 
-export default class RandomeBeer extends Component {
+export default class RandomBeer extends Component {
   render() {
     return (
       <div>
-         <h1>RandomBeer</h1>
+           <NavBar/>
+
+          <h1>RandomBeer</h1>
+
+
         <p>Lorem ipsum dolor sit amet consectetur adip</p>
       </div>
     )
