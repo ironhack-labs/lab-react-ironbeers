@@ -1,0 +1,9 @@
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.list-group-item {
+    padding: 0;
+}
