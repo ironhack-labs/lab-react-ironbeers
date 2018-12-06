@@ -37,7 +37,7 @@ componentDidMount() {
                 
                 <div>
                   <h1>{beer.name}</h1>
-                  <h5>{beer.tagline}</h5>
+                  <h4>{beer.tagline}</h4>
                 </div>
               </div>
             )
