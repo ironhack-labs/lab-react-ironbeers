@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-
+import cerveza1 from './img/cerveza1.png'
+import cerveza2 from './img/cerveza2.jpeg'
+import cerveza3 from './img/cerveza3.jpg'
 
 const Navbar = () => {
     return (
@@ -10,7 +12,7 @@ const Navbar = () => {
          <ul>
          <li>
 
-         {/* <img className="imgHome" src={}/> */}
+         <img style={{width: '540px', height: '340px' }} src={cerveza1}/>
          <Link className="link" to="/allBeers">
             <h1>All beers</h1>
           </Link>
@@ -20,7 +22,7 @@ const Navbar = () => {
           </li>
 
          <li>
-         {/* <img className="imgHome" src={}/> */}
+         <img style={{width: '540px', height: '340px' }} src={cerveza2}/>
          <Link className="link" to="/randomBeer">
             <h1>Random beers</h1>
           </Link>
@@ -30,7 +32,7 @@ const Navbar = () => {
           </li>
 
          <li>
-         {/* <img className="imgHome" src={}/> */}
+         <img style={{width: '540px', height: '340px' }} src={cerveza3}/>
          <Link  className="link" to="/newBeer"> 
             <h1>New beers</h1>
           </Link>

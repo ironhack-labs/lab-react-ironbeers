@@ -1,6 +1,6 @@
 .App{
   font-family: avenir, Helvetica, sans-serif;
- 
+
 }
 
 h1{
@@ -8,10 +8,7 @@ h1{
   color: black;
 }
 
-.navbar{
-  display: flex;
-  color: black
-}
+
 
 .link{
   color: black;

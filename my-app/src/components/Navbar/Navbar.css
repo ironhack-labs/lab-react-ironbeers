@@ -1,11 +1,9 @@
 .navbar li{
   list-style-type: none;
-  margin: 0;
+  margin-bottom: 60px;
 }
 
-
-
-.navbar ul{
-  /* display: flex; */
-  text-decoration: none;
+.navbar {
+  display: flex;
+  justify-content: center;
 }

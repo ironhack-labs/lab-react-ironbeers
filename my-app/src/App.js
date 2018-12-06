@@ -11,11 +11,8 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="navbar">
-         <Navbar/>
-        </div>
-
         <Switch>
+          <Route exact path="/" component={Navbar}/>
           <Route exact path="/allBeers" component={BeerList}/>
           <Route exact path= "/randomBeer/:id" component={RandomBeer}/>
           <Route exact path= "/newBeer" component={NewBeer}/>
