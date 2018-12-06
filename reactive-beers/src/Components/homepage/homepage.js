@@ -9,6 +9,7 @@ class Homepage extends Component {
                 <Link to="/beers">All Beers</Link> <br/>
                 <Link to="/random-beers">Random Beers</Link><br/>
                 <Link to="/new-beers">New Beers</Link><br/>
+                {/* <Link to="/beers/:id">Each Beer</Link><br/> */}
             </div>
         );
     }

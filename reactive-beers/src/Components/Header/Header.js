@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 class Header extends Component {
     render() {
         return (
-            <div>
-                <Link to="/">Home</Link>
+            <div style={{backgroundColor:'blue'}}>
+                <Link to="/" style={{textDecoration:'none',color:'white'}}>Home</Link>
             </div>
         );
     }
