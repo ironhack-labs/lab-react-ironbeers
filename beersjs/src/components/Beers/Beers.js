@@ -28,28 +28,34 @@ componentDidMount() {
           <header> <Link className="navbar-brand" to="/">HOME</Link></header>
           <h1><Link className="navbar-brand" to="/beers">ALL BEERS</Link></h1>
           <h1>BEERS</h1>
-
+         
           <div>
-          <h1>estrcutra< y mapeo/h1>
-
-
-          </div>
-          
-
-
-          </h1>
-
+          {this.state.beers.map((beer) => {
+            return (
+              <div key={beer._id}>
+                <img  src={beer.image_url} alt=""/>
+                
+                <div>
+                  <h1>{beer.name}</h1>
+                  <h5>{beer.tagline}</h5>
+                </div>
+              </div>
+            )
+          })
+          }
         </div>
-      )
+       </div>)
+      
     }
-    else{
-      <h1>Loading...</h1>
+    else {
+      return <h1>Loading...</h1>
     }
     
   }
 }
 
 
+
 // this.props.match.params.id
-// en la sencilla hago peticion axio con la url hago la peticion a
+// en la OneBeer hago peticion axio con la url hago la peticion a
 // props para coger el id de url , para coger un chorrazo... p
