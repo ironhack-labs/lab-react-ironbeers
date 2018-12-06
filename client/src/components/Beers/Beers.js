@@ -11,8 +11,7 @@ export default class Beers extends Component {
   };
 
   getBeers() {
-    return axios
-      .get("https://ironbeer-api.herokuapp.com/beers/all")
+    return axios.get("https://ironbeer-api.herokuapp.com/beers/all")
       .then(beers =>
         this.setState({
           ...this.state,
@@ -29,7 +28,6 @@ export default class Beers extends Component {
 
   render() {
     if (!this.state.loading) {
-      console.log(this.state.beers);
       return (
         <React.Fragment>
           {this.state.beers.map(elem => (

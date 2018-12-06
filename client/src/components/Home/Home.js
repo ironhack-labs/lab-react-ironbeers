@@ -22,7 +22,7 @@ export default class Home extends Component {
           </StyledP>
         </RouteWrapper>
         <RouteWrapper>
-          <Link to="/random-beer">
+          <Link to="/random">
             <StyledImg
               src={require("../../images/random-beer.jpg")}
               alt="beer"
