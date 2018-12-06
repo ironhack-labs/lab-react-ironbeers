@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+import Navbar from "../Header/Header";
 
 export default class NewBeer extends Component {
   render() {
     return (
       <div>
-         <h1>New Beer</h1>
-         <p>Lorem djfsdkfjksfjksjfsk</p>
+         <Navbar />
+         <p>Soy new beer</p>
       </div>
     )
   }
