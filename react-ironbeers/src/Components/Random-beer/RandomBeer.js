@@ -16,7 +16,6 @@ export default class RandomBeer extends Component {
     axios
       .get(`https://ironbeer-api.herokuapp.com/beers/random`)
       .then(beerData => {
-        console.log(beerData)
         this.setState({...this.state,beer:beerData.data})
       })
       .catch(e => console.log(e));
