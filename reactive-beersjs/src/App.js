@@ -5,6 +5,7 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
 import AllBeers from './components/AllBeers/AllBeers';
 import RandomBeer from './components/RandomBeer/RandomBeer';
