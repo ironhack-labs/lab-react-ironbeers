@@ -29,6 +29,23 @@ export const LdsDualRing = styled.div`
     }
 `;
 
+export const SearchInput = styled.input`
+    margin: 1rem 0 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    outline: none;
+    transition: all 0.1s;
+
+    &:focus {
+        border: 1px solid rgb(150, 220, 255);
+        transition: all 0.25s;
+    }
+`;
+
 export const BeerWrapper = styled.div`
     display: flex;
     margin: 1rem;
@@ -38,5 +55,6 @@ export const BeerWrapper = styled.div`
 
 export const StyledImg = styled.img`
     width: 100px;
-    height: 200px;
+    object-fit: contain;
+    height: 250px;
 `;

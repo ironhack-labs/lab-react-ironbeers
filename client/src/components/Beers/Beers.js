@@ -2,13 +2,26 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import { LdsDualRing, BeerWrapper, StyledImg } from "./Beers.styled";
+import { LdsDualRing, SearchInput, BeerWrapper, StyledImg } from "./Beers.styled";
 
 export default class Beers extends Component {
   state = {
+    rawBeers: {},
     beers: {},
     loading: true
   };
+
+  getBeersRaw() {
+    return axios.get("https://ironbeer-api.herokuapp.com/beers/all")
+      .then(beers =>
+        this.setState({
+          ...this.state,
+          rawBeers: beers.data,
+          loading: false
+        })
+      )
+      .catch(err => console.log(err));
+  }
 
   getBeers() {
     return axios.get("https://ironbeer-api.herokuapp.com/beers/all")
@@ -22,14 +35,24 @@ export default class Beers extends Component {
       .catch(err => console.log(err));
   }
 
+  searchBeer = (e) => {
+    const searchVal = this.state.rawBeers.filter(elem => elem.name.toLowerCase().includes(e.target.value.toLowerCase()))
+    this.setState({
+      ...this.state,
+      beers: searchVal
+    })
+  }
+
   componentWillMount() {
     this.getBeers();
+    this.getBeersRaw();
   }
 
   render() {
     if (!this.state.loading) {
       return (
         <React.Fragment>
+          <SearchInput type="text" onChange={this.searchBeer}/>
           {this.state.beers.map(elem => (
             <Link key={elem._id} to={`/beers/${elem._id}`}>
               <BeerWrapper>
