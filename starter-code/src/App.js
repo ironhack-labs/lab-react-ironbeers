@@ -5,7 +5,7 @@ import Home from './components/Home/Home.jsx';
 import Beers from './components/Beers/Beers.jsx';
 import RandomBeer from './components/RandomBeer/RandomBeer.jsx';
 import NewBeer from './components/NewBeer/NewBeer.jsx';
-import NavBar from './components/NavBar/NavBar';
+import BeerDetails from './components/BeerDetails/BeerDetails.jsx';
 
 
 class App extends Component {
@@ -28,6 +28,8 @@ class App extends Component {
   <Route exact path='/beers' component={Beers}/>
   <Route exact path='/random-beers' component={RandomBeer}/>
   <Route exact path='/new-beer' component={NewBeer}/>
+  <Route exact path="/beers/:id" component={BeerDetails} />
+
 
 </Switch>
         
