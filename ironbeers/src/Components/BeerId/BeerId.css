@@ -1,0 +1,26 @@
+.BeerCard img{
+    width: 20%;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.BeerCard{
+    width: 50%;
+    height: 200px;
+    border: black solid 1px;
+}
+
+.BeerDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav{
+    background-color: aqua;
+    font-size: 2rem;
+}

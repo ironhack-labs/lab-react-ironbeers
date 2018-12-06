@@ -1,3 +1,19 @@
+.Beer{
+    display: flex;
+    justify-content: center;
+}
+
+.BeerCard img{
+    width: 20%;
+}
+
+.BeerCard{
+    display: flex;
+    width: 50%;
+    border: black solid 1px;
+}
+
 .nav{
-    background-color: aqua
+    background-color: aqua;
+    font-size: 2rem;
 }
