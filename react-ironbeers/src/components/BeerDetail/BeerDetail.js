@@ -44,7 +44,7 @@ export default class BeerDetail extends Component {
           )
       }else{
         return (
-            <h1>Loading Beer...</h1>
+            <h1>Loading Selected Beer...</h1>
         )
       }
   
