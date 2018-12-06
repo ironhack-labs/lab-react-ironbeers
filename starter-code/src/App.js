@@ -5,14 +5,14 @@ import Home from './components/Home/Home.jsx';
 import Beers from './components/Beers/Beers.jsx';
 import RandomBeer from './components/RandomBeer/RandomBeer.jsx';
 import NewBeer from './components/NewBeer/NewBeer.jsx';
+import NavBar from './components/NavBar/NavBar';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-
-      <p>HOME</p>
+     
 
 
 

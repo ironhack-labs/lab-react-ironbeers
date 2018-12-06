@@ -1,0 +1,11 @@
+.nav-style{
+
+    background-color: aqua;
+    color: black;
+    height: 20%;
+    width: 100%;
+    list-style-type:  none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
