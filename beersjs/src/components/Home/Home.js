@@ -9,9 +9,9 @@ export default class Home extends Component {
       <div>
          <h1><Link className="navbar-brand" to="/beers">ALL BEERS</Link></h1>
 
-         <h1><Link className="navbar-brand" to="/random-beer">RANDOM BEER</Link></h1>
+         <h1><Link className="navbar-brand" to="/randombeer">RANDOM BEER</Link></h1>
 
-         <h1><Link className="navbar-brand" to="/new-beer">NEW BEER</Link></h1>
+         <h1><Link className="navbar-brand" to="/newbeer">NEW BEER</Link></h1>
       </div>
     )
   }
