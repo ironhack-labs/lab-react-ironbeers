@@ -1,0 +1,13 @@
+.beercontainer{
+  display: flex;
+  margin: 20px;
+}
+
+.imagecontainer img{
+  object-fit: cover;
+  max-height: 150px;
+}
+
+.infocontainer{
+  margin-left: 30px;
+}
