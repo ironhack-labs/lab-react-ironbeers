@@ -1,0 +1,4 @@
+.form-labels label,input,textarea{
+    display: block;
+    margin: auto;
+}
