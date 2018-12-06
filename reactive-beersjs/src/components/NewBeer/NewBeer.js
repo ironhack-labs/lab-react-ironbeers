@@ -8,7 +8,6 @@ export default class NewBeer extends Component {
   render() {
     return (
       <div>
-        <NavBar />
         <h1>New Beer</h1>
 
       </div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import NavBar from './../NavBar/NavBar';
 import BeerCard from './../BeerCard/BeerCard';
 
 import axios from 'axios'
@@ -21,30 +20,16 @@ export default class AllBeers extends Component {
     axios.get('https://ironbeer-api.herokuapp.com/beers/all')
       .then(beers => {
         this.setState({...this.state, beers})
-
       })
   }
 
   render() {
-    console.log('the state is', this.state);
+    //console.log('the state is', this.state);
     return (
       <div>
-        <NavBar />
         <h1>All Beers</h1>
 
-        {
-          (this.state.beers) ?
-            this.state.beers.data.map(beer => {
-              return ( 
-              <BeerCard beer={beer} />
-
-              )
-            })
-
-            : 
-
-            <p>Loading...</p>
-        }
+        {(this.state.beers) ? this.state.beers.data.map(beer => <BeerCard beer={beer} />) : <p>Loading...</p>}
 
       </div>
     )

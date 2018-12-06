@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 export default class BeerCard extends Component {
   render() {
-    console.log(this.props)
     return (
       <Link to={`/beer/${this.props.beer._id}`}>
         <img src={this.props.beer.image_url} />
