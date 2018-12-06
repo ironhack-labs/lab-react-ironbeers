@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Navbar } from "react-bootstrap";
-import './NavbarComponent.css'
+import { Link } from "react-router-dom";
+import "./NavbarComponent.css";
 
 export default class NavbarComponent extends Component {
   render() {
@@ -8,7 +9,9 @@ export default class NavbarComponent extends Component {
       <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#home">IronBeers</a>
+            <Link to={`/`}>
+              <a className='home' href="#home">IronBeers</a>
+            </Link>
           </Navbar.Brand>
         </Navbar.Header>
       </Navbar>

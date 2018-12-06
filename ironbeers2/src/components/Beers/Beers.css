@@ -1,9 +1,36 @@
 img {
-    width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: cover;
 }
 
 .list-group-item {
     padding: 0;
+    border: 0;
+}
+
+.beer-section {
+    display: flex;
+    align-items: center;
+}
+
+.image-section {
+    text-align: center;
+    padding: 30px;
+}
+
+.description-section {
+    width: 100%;
+}
+
+.description-section h1 {
+    font-size: 20px;
+}
+
+.description-section h2 {
+    font-size: 15px;
+}
+
+.beer-section, .list-group {
+    margin-bottom: 0;
+    border-bottom: 3px solid rgba(233, 233, 233, 0.801);
 }

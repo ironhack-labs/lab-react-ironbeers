@@ -2,6 +2,23 @@
     background: rgb(0, 132, 255);
 }
 
+.home {
+    color:white;
+    text-decoration: none;
+}
+
+.home:hover {
+    color:white;
+    text-decoration: none;
+}
+
+
 .navbar-default .navbar-brand {
-    color:white
+    color:white;
+    text-decoration: none;
+}
+
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color:white;
 }
