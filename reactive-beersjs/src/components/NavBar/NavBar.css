@@ -1,4 +1,8 @@
 .NavBar {
   background: #23B9FF;
-  padding: 1.5rem 1rem;
+  padding: 1rem;
+}
+
+.NavBar img {
+  max-width: 3rem;
 }

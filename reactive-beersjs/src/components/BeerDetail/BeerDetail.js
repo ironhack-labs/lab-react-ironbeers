@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+import './BeerDetail.css'
 
 export default class BeerDetail extends Component {
   render() {
     return (
-      <div>
+      <div className="BeerDetail">
         <img src={this.props.beer.image_url} />
         <p className="title">{this.props.beer.name}</p>
         <p className="atenuation">{this.props.beer.attenuation_level}</p>
