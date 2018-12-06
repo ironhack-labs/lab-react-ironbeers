@@ -1,0 +1,12 @@
+.header{
+  background-color: rgb(6, 183, 253);
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-home{
+  font-size: 40px;
+  color: white;
+  
+}

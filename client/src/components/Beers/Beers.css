@@ -1,0 +1,13 @@
+.img-beer{
+  width: 50px;
+  height: 100px;
+  margin-right: 50px;
+}
+.beer-container{
+  display: flex;
+  border: 1px solid rgba(196, 196, 196, 0.5);
+  padding: 15px 30px;
+}
+h2, h5{
+  text-align: left;
+}
