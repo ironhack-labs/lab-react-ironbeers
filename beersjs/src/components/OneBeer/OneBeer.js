@@ -4,38 +4,44 @@ import axios from "axios";
 
 export default class OneBeer extends Component {
 
-  constructor(props) {
-    super(props)
-  
-    this.state = {
-      beer: null
-    }
-  }
+  constructor(props){
+    super(props);
+    this.state = {oneBeer:null};
+}
 
-  getOneBeer = () => {
+ componentDidMount(){
+    this.getOneBeer();
+}
+
+ getOneBeer = () => {
     
-  }
-  
-  render() {
+  const { params } = this.props.match;
+    console.log(params);
     
+    axios.get(`https://ironbeer-api.herokuapp.com/beers/single/${this.props.match.params.id}`)
+    .then( resOfApi =>{
+        const oneBeer = resOfApi.data;
+        this.setState({...this.state, oneBeer});
+    })
+   
+}
 
-    if(this.state.beers !== null){
-      return ( 
-        <div>
-          <img src={this.state.beer.image_url}></img>
-        <div>{this.state.beer.name}</div>
-        <div>{this.state.beer.tagline}</div>
-        <div>{this.state.beer.first_brewed}</div>
-        <div>{this.state.beer.attenuation_level}</div>
-        <div>{this.state.beer.description}</div>
-        <div>{this.state.beer.contributed_by}</div>
-        </div>
-        )
-      
-    }
-    else {
-      return <h1>Loading...</h1>
-    }
+ render(){
+   const beer = this.state.oneBeer !== null? <div>
+   <img style={{width: '10%'}} src={this.state.oneBeer.image_url} alt=""/>
+   <h1>{this.state.oneBeer.name}</h1>
+   <p>{this.state.oneBeer.tagline}</p>
+   <p>{this.state.oneBeer.first_brewed}</p>
+   <p>{this.state.oneBeer.attenuation_level}</p>
+   <p>{this.state.oneBeer.description}</p>
+   <p>{this.state.oneBeer.contributed_by}</p>
+   
+   
+   <Link to={'/beers'}>Back to Beers</Link>
+ </div> : <p>Loading...</p>
 
-  }
+  return(
+    beer
+  )
+}
 }

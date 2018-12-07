@@ -39,6 +39,7 @@ componentDidMount() {
                   <h1>{beer.name}</h1>
                   <h4>{beer.tagline}</h4>
                 </div>
+                <h1><Link to={`/single/${beer._id}`}>ALL THE DETAILS ABOUT THIS SINGLE BEER</Link></h1>
               </div>
             )
           })

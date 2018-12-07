@@ -25,6 +25,3 @@ constructor(props) {
     )
   }
 }
-{/* <header> <Link className="navbar-brand" to="/">HOME</Link></header>
-        <h1><Link className="navbar-brand" to="/beers">ALL BEERS</Link></h1>
-        <h1>BEERS</h1> */}
