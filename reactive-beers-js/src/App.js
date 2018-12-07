@@ -17,6 +17,7 @@ class App extends Component {
       <Route exact path='/' component={Home}/>}/>
       <Route exact path='/beers' component={AllBeers}/>}/>
       <Route path='/beers/:id' component={Beer}/>}/>
+      <Route path='/random-beer' component={Beer}/>}/>
       </Switch>
       </div>
     );

@@ -19,8 +19,24 @@ export default class Beer extends Component {
       })
 
   }
+
+  getRandomBeer(){
+    axios.get(`https://ironbeer-api.herokuapp.com/beers/random`)
+      .then(res => {
+        console.log(res);
+        this.setState({ ...this.state, beer: res.data[0]});
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
   componentDidMount() {
+    if (this.props.match.params.id){
     this.getBeer();
+    }
+    else{
+      this.getRandomBeer();
+    }
   }
   render() {
     return (this.state.beer ? (
