@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import NavBar from "../NavBar/NavBar";
 
 export default class Beers extends Component {
   render() {
     return (
       <div>
-     <h2><Link to="/">Home</Link></h2>
+     <NavBar />
       </div>
     );
   }
