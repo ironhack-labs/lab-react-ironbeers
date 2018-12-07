@@ -1,0 +1,22 @@
+.beer-box{
+  display:flex;
+  width: 500px;
+  margin: 10px;
+}
+.beer-box .img-div{
+  height: 200px;
+  width: 100px;
+}
+
+.beer-box .img-div img{
+  height:100%;
+}
+
+.beer-box .content{
+  width: 400px;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}

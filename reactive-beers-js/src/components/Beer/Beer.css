@@ -1,0 +1,9 @@
+.single-beer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single-beer img{
+  width: 100px;
+}
