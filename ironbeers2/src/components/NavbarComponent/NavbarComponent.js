@@ -9,9 +9,13 @@ export default class NavbarComponent extends Component {
       <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to={`/`}>
-              <a className='home' href="#home">IronBeers</a>
-            </Link>
+            <div className='navbar-icon'>
+              <Link to={`/`}>
+                <a className="home" href="#home">
+                  <i class="fas fa-home" />
+                </a>
+              </Link>
+            </div>
           </Navbar.Brand>
         </Navbar.Header>
       </Navbar>

@@ -7,6 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 import Beers from "./components/Beers";
 import BeersDetail from './components/BeerDetail';
 import RamdomBeer from './components/RamdomBeers';
+import newBeer from './components/NewBeer';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/beers" component={Beers} />
+          <Route exact path="/newBeer" component={newBeer} />
           <Route exact path="/randomBeer" component={RamdomBeer} />
           <Route exact path="/beers/:id" component={BeersDetail} />
         </Switch>

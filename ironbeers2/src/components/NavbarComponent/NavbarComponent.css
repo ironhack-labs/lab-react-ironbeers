@@ -22,3 +22,12 @@
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
     color:white;
 }
+
+.navbar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
