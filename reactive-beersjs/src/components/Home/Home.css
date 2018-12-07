@@ -1,0 +1,17 @@
+.Home a {
+  background: #23B9FF;
+  display: block;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: .025rem;
+  font-size: 1.2rem;
+  transition: all .2s ease-in-out;
+}
+
+.Home a:hover {
+  background-color: #0096DE;
+}

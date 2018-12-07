@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import FormInput from './../FormInput/FormInput';
 import Textarea from './../Textarea/Textarea';
 
+import './NewBeerForm.css'
+
 export default class NewBeerForm extends Component {
   constructor() {
     super();
@@ -26,7 +28,7 @@ export default class NewBeerForm extends Component {
 
   render() {
     return (
-      <form onSubmit={e => this.props.onSubmit(e, this.state)}>
+      <form onSubmit={e => this.props.onSubmit(e, this.state)} className="NewBeerForm">
         <h1>Forms</h1>
 
         <FormInput type="text" name="name" title="Name" onChange={this.handleChange} />

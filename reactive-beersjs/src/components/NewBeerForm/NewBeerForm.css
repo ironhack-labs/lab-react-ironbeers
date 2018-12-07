@@ -1,0 +1,21 @@
+.NewBeerForm {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.NewBeerForm div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.NewBeerForm button[type="submit"] {
+  margin-bottom: 2rem;
+  background: #00A9FF;
+  border: none;
+  border-radius: 10px;
+  padding: .5rem 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
