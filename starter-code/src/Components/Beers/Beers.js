@@ -11,6 +11,7 @@ export default class Beers extends Component {
 getAllBeers = () =>{
   axios.get(`https://ironbeer-api.herokuapp.com/beers/all`)
   .then(resApi => {
+    console.log(resApi)
     this.setState({
       lisOfbeers: resApi.data
     });
@@ -49,12 +50,13 @@ componentDidMount() {
             }    
           </div>
           <div style={{width: '40%', float:"right"}}>
-              {/* <AddBeer getData={() => this.getAllProjects()}/> */}
+
           </div>
         </div>)
         : 
           (
-          <p style={{margin: '20%'}}>Espera, hermano. Estamos recopilando la movida.</p>
+          <p style={{margin: '20%'}}>Espera, hermano.<br></br><br></br>
+          Estamos recopilando la movida.</p>
         )
     )
   }
