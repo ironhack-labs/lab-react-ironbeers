@@ -30,24 +30,25 @@ render(){
     <h3>Home</h3>
   </Link>
     <div>
-      { this.state.listOfBeers.map((beer, index) => {
-         return (
-          <div>
-            <img src={beer.image_url} alt=""/>
-            <h1>{beer.name}</h1>
-            <p>{beer.tagline}</p>
-            <p>contributed by: {beer.contributed_by}</p>
-          </div>
-        )})
-      }    
+    {this.state.listOfBeers.map(beer => (
+  <Link key={beer._id} to={`/beers/${beer._id}`}>
+    <div>
+      <img src={beer.image_url} alt=""/>
+      <div>
+        <h1>{beer.name}</h1>
+        <p>{beer.tagline}</p>
+        <p>Created by: {beer.contributed_by}</p>
+      </div>
+    </div>
+  </Link>
+))}
     </div>
   </div>)
   : 
     (
     <p>Loading...</p>
   )
-  
- 
+}
+}
 
-}
-}
+
