@@ -1,0 +1,13 @@
+.card-beer img{
+height: 20vh;
+margin: 3vh 3vw;
+}
+.card-beer{
+  display: flex;
+  border-bottom: 1px solid grey
+
+}
+.card-beer-text{
+  display: flex;
+  flex-direction: column;
+}
