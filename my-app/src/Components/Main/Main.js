@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-import Allbeers from "../Allbeers/Allbeers";
-import NewBeer from "../NewBeer/NewBeer";
-import RandomBeer from "../RandomBeer/RandomBeer";
 
 export default class Main extends Component {
   render() {
