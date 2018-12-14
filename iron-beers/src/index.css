@@ -12,3 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.buttonFull{
+  width: 100%;
+  background-color: #3dc4fc;
+  height: 70px;
+  cursor: pointer;
+ }
