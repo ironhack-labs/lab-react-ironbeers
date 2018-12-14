@@ -30,3 +30,10 @@
     transform: rotate(360deg);
   }
 }
+
+.buttonFull{
+  width: 100%;
+  background-color: #3dc4fc;
+  height: 70px;
+  cursor: pointer;
+}
