@@ -12,8 +12,8 @@ class New extends Component{
             .catch(e=>console.log(e))
     }
     render() {
-        console.log(this.state.beer)
         const {beers} = this.state
+        console.log(this.state.beers)
         return (
             <div>
                 <Link to="/">
