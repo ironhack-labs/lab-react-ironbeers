@@ -4,20 +4,22 @@ import { drawAll } from '../../services/api'
 
 class AllBeers extends Component{
 
-    state={
-        beers:[]
+
+    state = {
+        beers: []
     }
 
     componentWillMount(){
         drawAll()
         .then(beers=>{
-            this.state({beers})
+            this.setState({beers})
         })
         .catch(e=> console.log(e))
     }
 
     render(){
         const {beers} = this.state
+        if (beers === null) return <p>Loading...</p>
         return(
             <div>
                 <Link to='/'>Home</Link>
@@ -26,7 +28,10 @@ class AllBeers extends Component{
                     {beers.map(beer=>{
                         return(
                             <div>
-                                <h1>Chelaaaas</h1>
+                                <h1>{beer.name}</h1>
+                                <img src={beer.image_url} style={{
+                                    width:'100px'
+                                }} alt="Foto de la chelita" />
                             </div>
                         )
                     })}
