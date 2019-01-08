@@ -1,0 +1,199 @@
+* {
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --blue: #3dc4fc;
+  --gray: #ccc;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 32px;
+}
+nav {
+  background: var(--blue);
+  box-shadow: 0 0 5px rgba(17, 41, 59, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+a {
+  text-decoration: none;
+}
+button, input[type="submit"] {
+  background: var(--blue);
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px 30px;
+}
+.page {
+  padding-top: 90px;
+}
+nav i.material-icons {
+  color: #fff;
+  font-size: 50px;
+  transition: all 250ms;
+}
+nav:hover i.material-icons {
+  color: rgba(255, 255, 255, 0.7);
+}
+main {
+  padding: 0 8vw;
+}
+.go-back {
+  display: flex;
+  justify-content: center;
+  padding: 5vh 0;
+}
+.card {
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  box-shadow: 0 1px 10px #ddd;
+  overflow: hidden;
+  margin-bottom: 5vh;
+}
+.card .cover-img {
+  width: 100%;
+}
+.card div:first-child {
+  position: relative;
+}
+.card .photo-credit {
+  background: rgb(0, 0, 0);
+  border-top-left-radius: 10px;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  opacity: 0.6;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+}
+.card .photo-credit:hover {
+  opacity: 1;
+}
+.card-body {
+  padding: 5vh 4vw;
+}
+.card-body h2 {
+  color: #000;
+}
+.card-body p {
+  color: #aaa;
+  font-size: 18px;
+  padding: 3vh 0 0;
+}
+.beer-item {
+  all: unset;
+  cursor: pointer;
+}
+.tile {
+  border-bottom: 0.17vh solid var(--gray);
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
+  padding: 3vh 0;
+  overflow: hidden;
+}
+.tile .tile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 30%;
+}
+.tile .tile-img img {
+  height: 100%;
+  width: auto;
+}
+.tile .tile-body {
+  width: 70%;
+}
+.tile .tile-body h3 {
+  font-size: 3.5vh;
+}
+.tile .tile-body p {
+  font-size: 2.6vh;
+}
+.tile .tile-body p.tag {
+  color: #aaa;
+  font-size: 3vh;
+  padding: 2vh 0 1vh;
+}
+.beer-content img {
+  display: block;
+  height: 40vh;
+  margin: 0 auto;
+  width: auto;
+}
+.headers {
+  border-collapse: collapse;
+  margin: 5vh 0 3vh;
+  width: 100%;
+}
+.headers tr th, .headers tr td {
+  padding: 5px;
+}
+.headers tr th, .headers tr td:nth-child(odd) {
+  text-align: left;
+  width: 80%;
+}
+.headers tr td:nth-child(even) {
+  text-align: right;
+  width: 20%;
+}
+.headers tr th {
+  font-size: 4.5vh;
+}
+.headers .tag {
+  color: #aaa;
+  font-size: 2.5vh;
+}
+.headers .level {
+  color: #aaa;
+  font-size: 4vh;
+}
+.headers .date {
+  font-size: 2vh;
+}
+.beer-content p {
+  font-size: 18px;
+  text-align: justify;
+}
+.beer-content span {
+  color: #aaa;
+  display: block;
+  font-size: 14px;
+  padding: 3vh 0;
+}
+.form-field label {
+  padding: 0 20px;
+}
+.form-field input, .form-field textarea, .search input {
+  display: block;
+  margin-bottom: 3vh;
+  width: 100%;
+}
+.form-field input:not([type="submit"]), .form-field textarea, .search input {
+  border: 2px solid rgba(204, 204, 204, 0.4);
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.form-field textarea {
+  height: 30vh;
+}
