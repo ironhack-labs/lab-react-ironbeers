@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.header{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(0, 135, 252);
+  display: flex;
+  justify-content: center
+}
+
+
+.headerlogo{
+  width: 40px;
+  height: 40px;
+  padding-top: 10px
+}
+.background{
+  height: 100vh;
+  width: 100vw;
+  background-color: honeydew;
+  
+
+}
+.box{
+  height: 40vh;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  display: inline-block
+}
+
+.backgroundimage{
+  height: 30vh;
+  width: 20vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%
+}
+
+.linktext{
+  text-decoration: none;
+  color: black
+}
+
+
+.beers{
+  background-image: url(https://cdn10.bigcommerce.com/s-4dsnxp/templates/__custom/images/mixed.png?t=1547126400);
+}
+.newbeer{
+  background-image: url(https://fixcom.azureedge.net/assets/content/19743/craft-beer-header.png);
+}
+.randombeer{
+  background-image: url(https://img.pngio.com/pint-beer-png-image-beer-png-374_485.png);
+}
+.column{
+  display: flex;
+  flex-direction: column
+}
