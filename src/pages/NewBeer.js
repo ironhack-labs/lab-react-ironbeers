@@ -23,6 +23,7 @@ export default class NewBeer extends React.Component {
 
   handleChange(input, name) {
     this.state.newBeer[name] = input;
+    console.log(this.state.newBeer);
     this.setState({ newBeer: this.state.newBeer });
   }
 
@@ -46,6 +47,7 @@ export default class NewBeer extends React.Component {
               label="Name"
               placeholder="Enter the beer name"
               onChange={input => this.handleChange(input, "name")}
+              initValue={()=>this.resetValues()}
             />
             <InputForm
               label="Tagline"
