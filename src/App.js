@@ -4,7 +4,7 @@ import {HomePage} from './pages/HomePage'
 import  ListBeers from "./pages/ListBeers";
 import SingleBeer from "./pages/SingleBeer";
 import RandomBeer  from "./pages/RandomBeer";
-import  NewBeer  from "./pages/NewBeer";
+import  {NewBeer}  from "./pages/NewBeer";
 import { Header } from "./components/Header";
 
 class App extends Component {
