@@ -1,35 +1,5 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .header{
   width: 100%;
   height: 60px;
@@ -47,16 +17,14 @@
 .background{
   height: 100vh;
   width: 100vw;
-  background-color: honeydew;
+  display: flex;
+  align-items: center;
+  justify-content: space-around
   
-
 }
 .box{
   height: 40vh;
-  width: 30vw;
-  display: flex;
-  justify-content: center;
-  display: inline-block
+ text-align: center
 }
 
 .backgroundimage{
@@ -83,5 +51,32 @@
 }
 .column{
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+ 
+}
+.cardImg{
+  height: 20vh;
+ margin-right: 20px
+
+}
+
+.card{
+  display: flex;
+ justify-content: center;
+ align-items:  center;
+ text-align: center;
+ margin: 20px;
+}
+
+.fullCardImg{
+  height: 50vh;
+ margin-right: 30px
+}
+.formWidth{
+
+  text-align: center;
+  width: 30vw;
+}
+.formField{
+  margin: 20px
 }

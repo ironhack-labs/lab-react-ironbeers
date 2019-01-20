@@ -2,7 +2,7 @@ import React, { Component } from "react";
 class FormField extends Component {
   render() {
     return (
-      <div >
+      <div className="formField">
         <label className="label">{this.props.label}</label>
         <div >
           <input

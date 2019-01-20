@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header.jsx";
 import FormField from "./FormField.jsx";
 import Button from "./Button.jsx";
+import axios from "axios";
 class NewBeer extends Component {
   constructor() {
     super();
@@ -53,7 +54,9 @@ class NewBeer extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    // axios post
+     axios.post(`https://ironbeer-api.herokuapp.com/beers/new`,JSON.stringify(this.state) )
+    .then(e=> console.log(e))
+    
     this.setState({
       name: "",
       tagline: "",
@@ -73,6 +76,8 @@ class NewBeer extends Component {
           <Header />
         </div>
 
+       <div className="card">
+        <div className="formWidth">
         <div>
           <FormField
           inputchange={e => this.handleNameInput(e)}
@@ -103,7 +108,7 @@ class NewBeer extends Component {
           inputchange={e => this.handleFirst_brewedInput(e)}
             name="firstbrewed"
             label="First Brewed"
-            type="text"
+            type="date"
             placeholder="type some info"
           />
           <FormField
@@ -117,7 +122,7 @@ class NewBeer extends Component {
           inputchange={e => this.handleAttenuation_level(e)}
             name="attenuation_level"
             label="Attenuation level"
-            type="text"
+            type="number"
             placeholder="type some info"
           />
           <FormField
@@ -128,6 +133,8 @@ class NewBeer extends Component {
             placeholder="your name here"
           />
           <Button submit={e=>this.handleFormSubmit(e)} className="" info="Create" />
+        </div>
+        </div>
         </div>
       </div>
     );
