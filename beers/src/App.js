@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      {window.location.pathname === "/" ? null:<Nav></Nav> }
+      {window.location.pathname === "/" ? null:<Nav/> }
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/beers" component={Allbeers} />
