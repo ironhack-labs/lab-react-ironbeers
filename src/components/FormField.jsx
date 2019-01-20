@@ -44,8 +44,8 @@ export const StyledFormField = styled.div`
         width: auto;
       }
       /* &[type='textarea'] {
-        height: 10em;
-      } */
+-       height: 10em;
+-     } */
     }
   }
 `;
