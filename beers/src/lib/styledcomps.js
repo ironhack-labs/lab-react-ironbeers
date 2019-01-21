@@ -1,14 +1,26 @@
 import styled from "@emotion/styled";
 const Div = styled.div`
-  img {
-    height: 200px;
-    width: 300px;
-  }
+ 
+  width: 30%;
+  margin: 30px auto;
   a {
     text-decoration: none;
     color: red;
   }
-  margin: 25px;
+  p {
+    text-align: center;
+    font-size: 30px;
+    color:red;
+    
+    
+  }
+
+  .box {
+    background-image: url(${({ img }) => img});
+    background-size: 100% 100%;
+    padding: 7vh;
+    
+  }
 `;
 
 const Beersdiv = styled.div`
@@ -16,7 +28,9 @@ const Beersdiv = styled.div`
   width: 50%;
   margin: 0 auto;
   overflow: scroll;
-  img{height:100%;
-  width:30px;}
+  img {
+    height: 100%;
+    width: 30px;
+  }
 `;
 export { Div, Beersdiv };

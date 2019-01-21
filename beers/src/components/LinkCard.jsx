@@ -4,13 +4,26 @@ import { Div } from "../lib/styledcomps";
 
 export const LinkCard = ({ children, img, link }) => {
   return (
-    <Div>
+    <Div img={img}>
       <Link to={`/${link}`}>
-        <div>
-          <img src={img} alt={children} />
-          <p>{children}</p>
+        <div className="box">
+          <article className="media">
+            <div className="media-content">
+              <div className="content">
+                <p>
+                  <strong>{children}</strong>
+                </p>
+              </div>
+            </div>
+          </article>
         </div>
       </Link>
     </Div>
   );
 };
+{
+  /* <div>
+          <img src={img} alt={children} />
+          <p>{children}</p>
+        </div> */
+}

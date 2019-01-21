@@ -1,7 +1,7 @@
 import React from "react";
 import { Input } from "../components/Input";
 import { newOne } from "../lib/beerApi";
-import {Redirect } from 'react-router'
+import { Redirect } from "react-router";
 const info = {
   brewers_tips: "",
   name: "",
@@ -16,22 +16,24 @@ export class Newbeer extends React.Component {
     super();
     this.state = {
       info,
-      created:false
+      created: false
     };
   }
 
   submitInfo = () => {
-    const {info,created} = this.state
+    const { info, created } = this.state;
     let { attenuation_level } = this.state.info;
     attenuation_level = parseInt(attenuation_level);
-    if(isNaN(attenuation_level)){
-        alert("attenuation_level has to be a number")
-    }else{
-        newOne(info).then(e=>{if(e.status===200){
-            this.setState({created:!created})
-        }else{
-            alert(`error ${e.status}`)
-        }})
+    if (isNaN(attenuation_level)) {
+      alert("attenuation_level has to be a number");
+    } else {
+      newOne(info).then(e => {
+        if (e.status === 200) {
+          this.setState({ created: !created });
+        } else {
+          alert(`error ${e.status}`);
+        }
+      });
     }
   };
 
@@ -42,7 +44,7 @@ export class Newbeer extends React.Component {
   };
 
   render() {
-      const{created}=this.state
+    const { created } = this.state;
     const {
       brewers_tips,
       name,
@@ -87,7 +89,7 @@ export class Newbeer extends React.Component {
         >
           Add the beer
         </button>
-        {created ? <Redirect to="/"/>:null}
+        {created ? <Redirect to="/" /> : null}
       </div>
     );
   }
