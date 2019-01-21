@@ -135,20 +135,21 @@ export default class Form extends Component {
           placeholder={"Your name"}
           handleChange={e => this.handleInput(e)}
         />
-
-        <div className="container">
-          <Button
-            action={e => this.handleFormSubmit(e)}
-            type={"warning"}
-            title={"Add"}
-          />
-        </div>
-        <div className="container">
-          <Button
-            action={e => this.handleClearForm(e)}
-            type={"secondary"}
-            title={"Clear Form"}
-          />
+        <div id='buttons' className="container">
+          <span>
+            <Button
+              action={e => this.handleFormSubmit(e)}
+              type={"warning"}
+              title={"Add"}
+            />
+          </span>
+          <span>
+            <Button
+              action={e => this.handleClearForm(e)}
+              type={"secondary"}
+              title={"Clear Form"}
+            />
+          </span>
         </div>
       </form>
     );

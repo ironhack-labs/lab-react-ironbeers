@@ -1,6 +1,7 @@
 import React from "react";
 import { getData } from "../lib/getData.js";
 import { ListBeersCard } from "./ListBeersCard.js";
+import { Loader } from "../components/Loader";
 
 export default class ListBeers extends React.Component {
   constructor() {
@@ -30,7 +31,7 @@ export default class ListBeers extends React.Component {
                 <ListBeersCard key={beer._id} beer={beer} />
               ))
             ) : (
-              <div className="pageloader"><span className="title">Loading</span></div>
+              <Loader />
             )}
           </div>
         </div>

@@ -3,12 +3,12 @@ import React from "react";
 export const Input = ({name,title,inputtype,value,handleChange,placeholder}) => {
   return (
     <div className="field">
-      <label htmlFor={name} className="label">
+      <label htmlFor={name} className="label is-small">
         {title}
       </label>
       <div className="control">
       <input
-        className="input"
+        className="input is-small"
         id={name}
         name={name}
         type={inputtype}

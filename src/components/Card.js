@@ -6,7 +6,7 @@ export const Card = ({ title, image, to }) => {
     <div className="column">
       <div className="card">
         <div className="card-image">
-          <figure className="image is-3by1">
+          <figure className="image is-16by9">
             <img alt="beer-draft" src={image} />
           </figure>
         </div>

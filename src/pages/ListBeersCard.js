@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const ListBeersCard = ({ beer }) => {
   return (
     <div className="column">
-      <Link to={`/beer/${beer._id}`}>
+     
         <div className="box">
           <article className="media">
             <div className="media-left">
@@ -20,10 +20,13 @@ export const ListBeersCard = ({ beer }) => {
               <p>
                 <strong>Created by: </strong> {beer.contributed_by}
               </p>
+              <Link to={`/beer/${beer._id}`}>
+              <button class="button is-warning"><span><i class="far fa-eye"></i></span>See More</button>
+              </Link>
             </div>
           </article>
         </div>
-      </Link>
+     
     </div>
   );
 };

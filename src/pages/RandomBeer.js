@@ -1,5 +1,7 @@
 import React from "react";
 import { getData } from "../lib/getData.js";
+import {BeerDetail} from '../components/BeerDetail'
+import {Loader} from '../components/Loader'
 
 export default class RandomBeer extends React.Component {
   constructor() {
@@ -27,17 +29,9 @@ export default class RandomBeer extends React.Component {
       <div className="section">
         <div className="container">
           {this.state.data ? (
-            <div>
-              <img src={this.state.data.image_url} alt="beer"/>
-            <p>{this.state.data.name}</p>
-            <p>{this.state.data.tagline}</p>
-            <p>{this.state.data.first_brewed}</p>
-            <p>{this.state.data.attenuation_level}</p>
-            <p>{this.state.data.description}</p>
-            <p>{this.state.data.contributed_by}</p>
-            </div>
+            <BeerDetail beer={this.state.data}/>
           ) : (
-            <div className="pageloader is-warning"><span className="title">Loading</span></div>
+            <Loader />
           )}
         </div>
       </div>
