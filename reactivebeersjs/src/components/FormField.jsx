@@ -4,9 +4,9 @@ class FormField extends Component {
     return (
       <div className="formField">
         <label className="label">{this.props.label}</label>
-        <div >
+        <div>
           <input
-          name={this.props.name}
+            name={this.props.name}
             type={this.props.type}
             placeholder={this.props.placeholder}
             onChange={this.props.inputchange}

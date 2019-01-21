@@ -1,41 +1,37 @@
 import React, { Component } from "react";
-import Header from "./Header.jsx"
+import Header from "./Header.jsx";
 import axios from "axios";
-import FullCard from "./FullCard"
+import FullCard from "./FullCard";
 class RandomBeer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      randombeer: {}
+    };
+  }
 
-    constructor() {
-        super();
-        this.state = {
-          randombeer: {}
-        };
-      }
-    
-      allBeers = () => {
-        axios.get(`https://ironbeer-api.herokuapp.com/beers/random`).then(e => {
-          this.setState({
-            randombeer: e.data[0]
-          });
-          console.log(this.state.randombeer);
-        });
-      };
-    
-      componentDidMount() {
-        this.allBeers();
-      }
+  allBeers = () => {
+    axios.get(`https://ironbeer-api.herokuapp.com/beers/random`).then(e => {
+      this.setState({
+        randombeer: e.data[0]
+      });
+      console.log(this.state.randombeer);
+    });
+  };
+
+  componentDidMount() {
+    this.allBeers();
+  }
   render() {
     return (
-
+      <div>
         <div>
-        <div>
-            <Header></Header>
+          <Header />
         </div>
-        
         <div>
-      <FullCard data={this.state.randombeer}></FullCard>
+          <FullCard data={this.state.randombeer} />
+        </div>
       </div>
-      </div>
-     
     );
   }
 }

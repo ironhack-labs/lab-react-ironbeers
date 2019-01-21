@@ -13,9 +13,8 @@ class Card extends Component {
           </div>
           <div />
         </div>
-        <hr/>
+        <hr />
       </Link>
-     
     );
   }
 }

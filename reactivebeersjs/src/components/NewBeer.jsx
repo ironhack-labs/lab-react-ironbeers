@@ -12,7 +12,7 @@ class NewBeer extends Component {
       description: "",
       first_brewed: "",
       brewers_tips: "",
-      attenuation_level:0,
+      attenuation_level: 0,
       contributed_by: ""
     };
   }
@@ -54,9 +54,9 @@ class NewBeer extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-     axios.post(`https://ironbeer-api.herokuapp.com/beers/new`,this.state )
-    .then(e=> console.log(e))
-    
+    axios
+      .post(`https://ironbeer-api.herokuapp.com/beers/new`, this.state)
+      .then(e => console.log(e));
   };
 
   render() {
@@ -66,65 +66,69 @@ class NewBeer extends Component {
           <Header />
         </div>
 
-       <div className="card">
-        <div className="formWidth">
-        <div>
-          <FormField
-          inputchange={e => this.handleNameInput(e)}
-            name="name"
-            label="Name"
-            type="text"
-            placeholder="Coronita"
-          />
-          <FormField
-          inputchange={e => this.handleTaglineInput(e)}
-            name="tagline"
-            label="Tagline"
-            type="text"
-            placeholder="Not the best beer"
-          />
-          <div className="column">
-            {" "}
-            <label>Description</label>
-            <textarea
-            onChange={e => this.handleDescriptionInput(e)}
-              rows="4"
-              cols="20"
-              name="description"
-              placeholder="Something about the beer"
-            />
+        <div className="card">
+          <div className="formWidth">
+            <div>
+              <FormField
+                inputchange={e => this.handleNameInput(e)}
+                name="name"
+                label="Name"
+                type="text"
+                placeholder="Coronita"
+              />
+              <FormField
+                inputchange={e => this.handleTaglineInput(e)}
+                name="tagline"
+                label="Tagline"
+                type="text"
+                placeholder="Not the best beer"
+              />
+              <div className="column">
+                {" "}
+                <label>Description</label>
+                <textarea
+                  onChange={e => this.handleDescriptionInput(e)}
+                  rows="4"
+                  cols="20"
+                  name="description"
+                  placeholder="Something about the beer"
+                />
+              </div>
+              <FormField
+                inputchange={e => this.handleFirst_brewedInput(e)}
+                name="firstbrewed"
+                label="First Brewed"
+                type="date"
+                placeholder="type some info"
+              />
+              <FormField
+                inputchange={e => this.handleBrewers_tipsInput(e)}
+                name="brewers_tips"
+                label="Breweds tips"
+                type="text"
+                placeholder="type some info"
+              />
+              <FormField
+                inputchange={e => this.handleAttenuation_level(e)}
+                name="attenuation_level"
+                label="Attenuation level"
+                type="number"
+                placeholder="type some info"
+              />
+              <FormField
+                inputchange={e => this.handleContributed_by(e)}
+                name="contributed_by"
+                label="Contributed by"
+                type="text"
+                placeholder="your name here"
+              />
+              <Button
+                submit={e => this.handleFormSubmit(e)}
+                className=""
+                info="Create"
+              />
+            </div>
           </div>
-          <FormField
-          inputchange={e => this.handleFirst_brewedInput(e)}
-            name="firstbrewed"
-            label="First Brewed"
-            type="date"
-            placeholder="type some info"
-          />
-          <FormField
-          inputchange={e => this.handleBrewers_tipsInput(e)}
-            name="brewers_tips"
-            label="Breweds tips"
-            type="text"
-            placeholder="type some info"
-          />
-          <FormField
-          inputchange={e => this.handleAttenuation_level(e)}
-            name="attenuation_level"
-            label="Attenuation level"
-            type="number"
-            placeholder="type some info"
-          />
-          <FormField
-           inputchange={e => this.handleContributed_by(e)}
-            name="contributed_by"
-            label="Contributed by"
-            type="text"
-            placeholder="your name here"
-          />
-          <Button submit={e=>this.handleFormSubmit(e)} className="" info="Create" />
-        </div>
-        </div>
         </div>
       </div>
     );
