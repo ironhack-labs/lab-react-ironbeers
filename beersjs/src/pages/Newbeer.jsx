@@ -11,7 +11,7 @@ export class Newbeer extends React.Component {
       description: "",
       first_brewed: "",
       brewers_tips: "",
-      attenuation_level: "",
+      attenuation_level: 0,
       contributed_by: ""
     };
   }
@@ -23,10 +23,38 @@ export class Newbeer extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log(this.state);
-    let {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by} = this.state;
-    Axios.post("https://ironbeer-api.herokuapp.com/beers/new", {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by});
     e.stopPropagation();
+    console.log(this.state);
+    let {
+      name,
+      tagline,
+      description,
+      first_brewed,
+      brewers_tips,
+      attenuation_level,
+      contributed_by
+    } = this.state;
+    Axios.post("https://ironbeer-api.herokuapp.com/beers/new", {
+      name,
+      tagline,
+      description,
+      first_brewed,
+      brewers_tips,
+      attenuation_level,
+      contributed_by
+    })
+      .then(
+        this.setState({
+          name: "",
+          tagline: "",
+          description: "",
+          first_brewed: "",
+          brewers_tips: "",
+          attenuation_level: 0,
+          contributed_by: ""
+        })
+      )
+      .catch(res => console.log(`eeerrrorr ${res}`));
   }
 
   render() {
