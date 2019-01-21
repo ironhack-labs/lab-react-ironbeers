@@ -12,7 +12,7 @@ class NewBeer extends Component {
       description: "",
       first_brewed: "",
       brewers_tips: "",
-      attenuation_level: "",
+      attenuation_level:0,
       contributed_by: ""
     };
   }
@@ -54,19 +54,9 @@ class NewBeer extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-     axios.post(`https://ironbeer-api.herokuapp.com/beers/new`,JSON.stringify(this.state) )
+     axios.post(`https://ironbeer-api.herokuapp.com/beers/new`,this.state )
     .then(e=> console.log(e))
     
-    this.setState({
-      name: "",
-      tagline: "",
-      description: "",
-      first_brewed: "",
-      brewers_tips: "",
-      attenuation_level: "",
-      contributed_by: ""
-    });
-    console.log("oli")
   };
 
   render() {
