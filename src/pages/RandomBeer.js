@@ -2,6 +2,7 @@ import React from "react";
 import { getData } from "../lib/getData.js";
 import {BeerDetail} from '../components/BeerDetail'
 import {Loader} from '../components/Loader'
+import {Header} from '../components/Header'
 
 export default class RandomBeer extends React.Component {
   constructor() {
@@ -26,6 +27,8 @@ export default class RandomBeer extends React.Component {
 
   render() {
     return (
+      <React.Fragment>
+      <Header />
       <div className="section">
         <div className="container">
           {this.state.data ? (
@@ -35,6 +38,7 @@ export default class RandomBeer extends React.Component {
           )}
         </div>
       </div>
+      </React.Fragment>
     );
   }
 }

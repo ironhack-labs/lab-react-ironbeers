@@ -2,6 +2,7 @@ import React from "react";
 import { getData } from "../lib/getData.js";
 import { BeerDetail } from "../components/BeerDetail.js";
 import { Loader } from "../components/Loader.js";
+import {Header} from '../components/Header'
 
 export default class SingleBeer extends React.Component {
   constructor() {
@@ -24,15 +25,18 @@ export default class SingleBeer extends React.Component {
 
   render() {
     return (
-      <div className="section sectionSingleBeer">
-        <div className="container containerSingleBeer">
-          {this.state.data ? (
-            <BeerDetail beer={this.state.data}/>
-          ) : (
-           <Loader />
-          )}
+      <React.Fragment>
+        <Header />
+        <div className="section sectionSingleBeer">
+          <div className="container containerSingleBeer">
+            {this.state.data ? (
+              <BeerDetail beer={this.state.data} />
+            ) : (
+              <Loader />
+            )}
+          </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

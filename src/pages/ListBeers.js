@@ -3,6 +3,7 @@ import { getData } from "../lib/getData.js";
 import { ListBeersCard } from "../components/ListBeersCard.js";
 import { Loader } from "../components/Loader";
 import { Input } from "../components/Input.js";
+import {Header} from '../components/Header'
 
 export default class ListBeers extends React.Component {
   constructor() {
@@ -42,6 +43,8 @@ export default class ListBeers extends React.Component {
 
   render() {
     return (
+      <React.Fragment>
+        <Header />
       <div className="section">
         <div className="container">
           <Input
@@ -76,6 +79,7 @@ export default class ListBeers extends React.Component {
           </div>
         </div>
       </div>
+      </React.Fragment>
     );
   }
 }
