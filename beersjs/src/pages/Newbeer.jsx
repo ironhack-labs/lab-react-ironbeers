@@ -23,37 +23,9 @@ export class Newbeer extends React.Component {
   }
 
   handleSubmit(e) {
-    e.stopPropagation();
-    console.log(this.state);
-    let {
-      name,
-      tagline,
-      description,
-      first_brewed,
-      brewers_tips,
-      attenuation_level,
-      contributed_by
-    } = this.state;
-    Axios.post("https://ironbeer-api.herokuapp.com/beers/new", {
-      name,
-      tagline,
-      description,
-      first_brewed,
-      brewers_tips,
-      attenuation_level,
-      contributed_by
-    })
-      .then(
-        this.setState({
-          name: "",
-          tagline: "",
-          description: "",
-          first_brewed: "",
-          brewers_tips: "",
-          attenuation_level: 0,
-          contributed_by: ""
-        })
-      )
+    e.preventDefault();    
+    Axios.post("https://ironbeer-api.herokuapp.com/beers/new", this.state)
+      .then(e=>console.log(e))
       .catch(res => console.log(`eeerrrorr ${res}`));
   }
 
@@ -93,7 +65,7 @@ export class Newbeer extends React.Component {
             first_brewed:
             <input
               name="first_brewed"
-              type="text"
+              type="date"
               value={this.state.first_brewed}
               onChange={e => this.handleChange(e)}
             />
@@ -126,7 +98,7 @@ export class Newbeer extends React.Component {
             />
           </label>
 
-          <input className="buttonSubmit" type="submit" value="Add beer" />
+          <button className="buttonSubmit" onClick={(e) => this.handleSubmit(e)}>Add Beer</button>
         </form>
         <p>{JSON.stringify(this.state)}</p>
       </div>
