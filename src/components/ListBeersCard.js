@@ -21,7 +21,7 @@ export const ListBeersCard = ({ beer }) => {
                 <strong>Created by: </strong> {beer.contributed_by}
               </p>
               <Link to={`/beer/${beer._id}`}>
-              <button class="button is-warning"><span><i class="far fa-eye"></i></span>See More</button>
+              <button className="button is-warning"><span><i className="far fa-eye"></i></span>See More</button>
               </Link>
             </div>
           </article>

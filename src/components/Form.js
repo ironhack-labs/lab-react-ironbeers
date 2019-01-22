@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { postData } from "../lib/postData.js";
 
-/* Import Components */
 import { Input } from "../components/Input";
 import { TextArea } from "../components/TextArea";
 import { Button } from "../components/Button";
@@ -22,8 +21,6 @@ export default class Form extends Component {
       }
     };
   }
-
-  /* This lifecycle hook gets executed when the component mounts */
 
   handleInput(e) {
     let value = e.target.value;
