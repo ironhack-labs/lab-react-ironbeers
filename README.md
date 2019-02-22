@@ -99,9 +99,9 @@ You should display the following from each of the beers:
 </div>
 
 
-:::info
+
 The first time you call the API, it might take a bit to respond. It's hosted on Heroku, and it goes to sleep after 30 minutes, you know! :wink:
-:::
+
 
 ### Iteration 5: Single Beer
 
@@ -144,16 +144,16 @@ Finally, on the `/new-beer` route, we should render a form where user could crea
   - **description**
   - **first_brewed**
   - **brewers_tips**
-  - **attenuation_level**
+  - **attenuation_level** (must be a number above 1)
   - **contributed_by**
 
 Then, you should do a `POST` request to `https://ironbeer-api.herokuapp.com/beers/new`, passing all the data on the `body` object. If everything went ok, you would receive a **200** response from the server. 
 
 Notice that the fields on the `body` should have those specific **names** so the API can create a new beer.
 
-:::info
+
 Since we did not cover how to upload images, do not worry about that, the API will assign a random image to the new beer. :beer:
-:::
+
 
 <div style="display: flex; justify-content: center">
 <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
