@@ -30,6 +30,9 @@
   padding: 0 10px;
   text-align: left;
 }
+.section_container > h2 {
+  margin: 15px 0 5px 0;
+}
 .section_container > p {
   font-size: 16px;
   opacity: .8;
@@ -151,5 +154,4 @@ form > input:focus, form > textarea:focus {
   font-size: 15px;
   margin: 10px auto;
 }
-
 

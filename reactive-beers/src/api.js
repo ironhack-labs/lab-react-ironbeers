@@ -13,6 +13,11 @@ export default {
     return service.get('/random')
     .then(res => res.data[0])
   },
+  addBeer(newBeer){
+    console.log(newBeer)
+    return service.post('/new', newBeer)
+    .then(res => res.data)
+  },
   getBeersCached(){
     if (localStorage.getItem('beers')){
       return JSON.parse(localStorage.getItem('beers'))
