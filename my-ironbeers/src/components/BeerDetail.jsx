@@ -23,6 +23,7 @@ class BeerDetail extends Component {
 				const birraDetail = birras.find((birra) => {
 					return birra._id === this.props.match.params._id;
 				});
+
 				this.setState(birraDetail);
 			})
 			.catch((err) => console.log(err));

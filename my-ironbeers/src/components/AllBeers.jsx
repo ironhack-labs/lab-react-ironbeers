@@ -3,6 +3,7 @@ import AllBeersService from '../service/AllBeersService';
 import Navbar from './Navbar';
 import './AllBeers.css';
 import { NavLink } from 'react-router-dom';
+import SearchBar from './searchBar';
 
 class AllBeers extends Component {
 	constructor(props) {
@@ -24,10 +25,21 @@ class AllBeers extends Component {
 			.catch((err) => console.log(err));
 	};
 
+	filterBeer = (mysearch) => {
+		const newState = { ...this.state };
+
+		newState.beers = newState.beers.filter((birra) => {
+			return birra.name.indexOf(mysearch) === 0;
+		});
+		console.log(newState);
+		this.setState(newState);
+	};
+
 	render() {
 		return this.state.beers ? (
 			<div>
 				<Navbar />
+				<SearchBar FilterName={this.filterBeer} />
 
 				{this.state.beers.map((birra) => (
 					<NavLink className="all-beers" to={`/beers/${birra._id}`} key={birra._id}>

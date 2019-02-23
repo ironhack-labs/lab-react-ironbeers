@@ -8,8 +8,11 @@ export default class AllBeersService {
 	}
 	getBeer = () => {
 		return this.service.get('/beers/all').then((data) => {
-			console.log(data.data);
 			return data.data;
 		});
+	};
+
+	addNewBeer = (beer) => {
+		return this.service.post('/beers/new', { ...beer }).then((newBeer) => newBeer);
 	};
 }
