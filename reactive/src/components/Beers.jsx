@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import axios from "axios";
+import SearchBar from './SearchBar';
 
 class Beers extends Component {
   constructor() {
@@ -16,10 +17,21 @@ class Beers extends Component {
     });
   }
 
+  handlerFunction = (search) => {
+    if (search === ""){
+      this.componentDidMount();
+    } else {
+      axios.get(`https://ironbeer-api.herokuapp.com/beers/search?q=${search}`).then(response => {
+        this.setState({ beers: response.data });
+      });
+    } 
+  }
+
   render() {
     return (
       <div className="Beer">
       <Link to='/'>Back</Link>
+      <SearchBar handlerFunction={this.handlerFunction}></SearchBar>
         {this.state.beers.map((beer, idx) => {
            return <div key={idx}>
           <img src={beer.image_url} alt=""></img>
