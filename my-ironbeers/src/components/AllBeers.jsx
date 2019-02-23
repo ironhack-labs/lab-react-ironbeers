@@ -16,14 +16,25 @@ class AllBeers extends Component {
 		this.getBeer();
 	}
 
-	getBeer = () => {
+	getBeer = (mysearch) => {
+		console.log(mysearch);
 		this.AllBeersService
 			.getBeer()
 			.then((birras) => {
-				this.setState({ ...this.state, beers: birras });
+				if (mysearch === undefined) {
+					this.setState({ ...this.state, beers: birras });
+				} else {
+					const birrasSearch = birras.filter((birra) => birra.name === mysearch);
+					console.log(birrasSearch);
+					this.setState({ ...this.state, beers: birrasSearch });
+				}
 			})
 			.catch((err) => console.log(err));
 	};
+
+	// var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+	// const result = words.filter(word => word.length > 6);
 
 	filterBeer = (mysearch) => {
 		const newState = { ...this.state };
@@ -39,7 +50,7 @@ class AllBeers extends Component {
 		return this.state.beers ? (
 			<div>
 				<Navbar />
-				<SearchBar FilterName={this.filterBeer} />
+				<SearchBar FilterName={this.getBeer} />
 
 				{this.state.beers.map((birra) => (
 					<NavLink className="all-beers" to={`/beers/${birra._id}`} key={birra._id}>
