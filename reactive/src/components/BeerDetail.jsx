@@ -14,7 +14,7 @@ class BeerDetail extends Component {
     axios.get("https://ironbeer-api.herokuapp.com/beers/all").then(response => {
       const beerId = this.props.match.params.beerId;
       const beer = response.data.filter(beer => {
-        return beer._id == beerId;
+        return beer._id === beerId;
       })[0];
       this.setState({ beer: beer });
     });
