@@ -1,0 +1,11 @@
+.Header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:10vh;
+    width:100%;
+    background-color:rgb(61,196,252);
+    color:white;
+    text-align:center;
+
+}
