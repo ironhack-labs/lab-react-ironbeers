@@ -34,3 +34,11 @@ class Beers extends Component {
 }
 export default Beers;
 
+// <div>
+
+//   <Link to='/'>Back</Link>
+//     <h2>List all beers</h2>
+
+// </div>
+
+//cada nombre de cerveza es un link que te lleva al detalle de cerveza con el id y usando params.
