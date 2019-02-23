@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import './NewBeer.css'
 
 class NewBeer extends Component {
   constructor(props) {
@@ -70,21 +70,26 @@ class NewBeer extends Component {
   handleFormSubmit = e => {
     e.preventDefault();
 
-    console.log(this.state)
-    axios.post("https://ironbeer-api.herokuapp.com/beers/new", this.state)
-    .then(response => {
-      console.log(response)
-      // this.setState({ beers: response.data });
-    })
-    .catch(err => {
-      console.log(err);
-    });
+    console.log(this.state);
+    axios
+      .post("https://ironbeer-api.herokuapp.com/beers/new", this.state)
+      .then(response => {
+        console.log(response);
+        // this.setState({ beers: response.data });
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   render() {
     return (
       <div>
-        <Link to="/">Back</Link>
+        <div className="navbar navbar-dark bg-primary justify-content-center">
+          <Link to="/">
+            <img src="/images/home.png" alt="" />
+          </Link>
+        </div>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label>Name:</label>
@@ -151,7 +156,7 @@ class NewBeer extends Component {
             />
           </div>
 
-          <input type="submit" value="Add new" />
+          <input type="submit" value="Add new" id="button"/>
         </form>
       </div>
     );
@@ -160,5 +165,3 @@ class NewBeer extends Component {
 
 export default NewBeer;
 
-// import { Link } from "react-router-dom";
-// <Link to='/'>Back</Link>

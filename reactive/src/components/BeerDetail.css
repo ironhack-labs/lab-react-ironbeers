@@ -1,0 +1,25 @@
+.single-container {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.single-container h2 {
+    font-size: 2em;
+}
+
+.single-container img {
+   width: 30%;
+   margin: 0 auto 30px auto;
+}
+
+.single-container span {
+    color: grey;
+    font-size: 1em;
+}
+
+.single-container p {
+    font-size: 0.8em;
+    text-align: justify;
+}

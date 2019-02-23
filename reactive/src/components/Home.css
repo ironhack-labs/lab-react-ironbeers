@@ -1,0 +1,25 @@
+.home h3 link{
+    text-decoration: none;
+    
+}
+
+.home-container img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.text-container {
+    margin: 15px;
+}
+.text-container h3{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+}
+
+.text-container p {
+    color: grey;
+    text-align: justify;
+    font-size: 0.9em;
+}

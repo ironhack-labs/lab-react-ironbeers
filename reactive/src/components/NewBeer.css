@@ -1,0 +1,19 @@
+form {
+    text-align: center;
+    margin: 15px;
+    font-weight: bold;
+
+}
+
+#button {
+    background-color:#2b7cf6;
+    border-color: #2b7cf6;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: white;
+}
+
+#button:hover {
+    background-color:#478aee;
+    color: white;
+}

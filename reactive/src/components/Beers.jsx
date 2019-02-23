@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import SearchBar from './SearchBar';
+import SearchBar from "./SearchBar";
+import "./Beers.css";
 
 class Beers extends Component {
   constructor() {
@@ -17,40 +18,49 @@ class Beers extends Component {
     });
   }
 
-  handlerFunction = (search) => {
-    if (search === ""){
+  handlerFunction = search => {
+    if (search === "") {
       this.componentDidMount();
     } else {
-      axios.get(`https://ironbeer-api.herokuapp.com/beers/search?q=${search}`).then(response => {
-        this.setState({ beers: response.data });
-      });
-    } 
-  }
+      axios
+        .get(`https://ironbeer-api.herokuapp.com/beers/search?q=${search}`)
+        .then(response => {
+          this.setState({ beers: response.data });
+        });
+    }
+  };
 
   render() {
     return (
-      <div className="Beer">
-      <Link to='/'>Back</Link>
-      <SearchBar handlerFunction={this.handlerFunction}></SearchBar>
-        {this.state.beers.map((beer, idx) => {
-           return <div key={idx}>
-          <img src={beer.image_url} alt=""></img>
-          <Link to ={`/beers/${beer._id}`}><h1>{beer.name}</h1></Link>
-          <span>{beer.tagline}</span>
-          <p>Created by: {beer.contributed_by}</p>
-          </div>
-        })}
+      <div>
+        <div className="navbar navbar-dark bg-primary justify-content-center">
+          <Link to="/">
+            <img src="/images/home.png" alt="" />
+          </Link>
+        </div>
+        <div className="box-container">
+        <SearchBar handlerFunction={this.handlerFunction} />
+        <div className="container beer-container">
+            {this.state.beers.map((beer, idx) => {
+              return (
+                <div className="row single-beer" key={idx}>
+                  <div className="col-3">
+                    <img src={beer.image_url} alt="" />
+                  </div>
+                  <div className="col-9">
+                    <Link to={`/beers/${beer._id}`} style={{ textDecoration: 'none' }}>
+                      <h3>{beer.name}</h3>
+                    </Link>
+                    <span>{beer.tagline}</span>
+                    <p><b>Created by:</b> {beer.contributed_by}</p>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+        </div>
       </div>
     );
   }
 }
 export default Beers;
-
-// <div>
-
-//   <Link to='/'>Back</Link>
-//     <h2>List all beers</h2>
-
-// </div>
-
-//cada nombre de cerveza es un link que te lleva al detalle de cerveza con el id y usando params.
