@@ -21,7 +21,7 @@ class App extends Component {
           <Route path="/allBeers" component={AllBeers} />
           <Route path="/randomBeer" component={RandomBeer} />
           <Route path="/newBeer" component={NewBeer} />
-          <Route path="/allBeers/:beerID" component={BeerDetails} />
+          <Route path="/allBeers/:beerId" component={BeerDetails} />
         </Switch>
 
       </div>

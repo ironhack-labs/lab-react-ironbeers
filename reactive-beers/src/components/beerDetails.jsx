@@ -7,7 +7,7 @@ export default class BeerDetails extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      beer: []
+      beer: {}
     }
   }
 

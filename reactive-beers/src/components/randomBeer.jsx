@@ -22,7 +22,7 @@ export default class RandomBeer extends Component {
     return (
       <div>
         <Link to="/">Home</Link>
-        {/* <img src="https://dydza6t6xitx6.cloudfront.net/ci-stella-artois-f4762eb0a31c5839.jpeg" alt='' /> */}
+
         <h2>Random Beer</h2>
         {this.state.randomBeer.map((beer, idx) => {
           return <div key={idx}>
