@@ -16,18 +16,11 @@ class AllBeers extends Component {
 		this.getBeer();
 	}
 
-	getBeer = (mysearch) => {
-		console.log(mysearch);
+	getBeer = () => {
 		this.AllBeersService
 			.getBeer()
 			.then((birras) => {
-				if (mysearch === undefined) {
-					this.setState({ ...this.state, beers: birras });
-				} else {
-					const birrasSearch = birras.filter((birra) => birra.name === mysearch);
-					console.log(birrasSearch);
-					this.setState({ ...this.state, beers: birrasSearch });
-				}
+				this.setState({ ...this.state, beers: birras });
 			})
 			.catch((err) => console.log(err));
 	};
@@ -36,21 +29,28 @@ class AllBeers extends Component {
 
 	// const result = words.filter(word => word.length > 6);
 
-	filterBeer = (mysearch) => {
-		const newState = { ...this.state };
+	searchBeer = (mysearch) => {
+		this.AllBeersService
+			.searchBeer(mysearch)
+			.then((birras) => {
+				this.setState({ ...this.state, beers: birras });
+			})
+			.catch((err) => console.log(err));
 
-		newState.beers = newState.beers.filter((birra) => {
-			return birra.name.indexOf(mysearch) === 0;
-		});
-		console.log(newState);
-		this.setState(newState);
+		// const newState = { ...this.state };
+
+		// newState.beers = newState.beers.filter((birra) => {
+		// 	return birra.name.indexOf(mysearch) === 0;
+		// });
+		// console.log(newState);
+		// this.setState(newState);
 	};
 
 	render() {
 		return this.state.beers ? (
 			<div>
 				<Navbar />
-				<SearchBar FilterName={this.getBeer} />
+				<SearchBar FilterName={this.searchBeer} />
 
 				{this.state.beers.map((birra) => (
 					<NavLink className="all-beers" to={`/beers/${birra._id}`} key={birra._id}>

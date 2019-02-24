@@ -15,4 +15,17 @@ export default class AllBeersService {
 	addNewBeer = (beer) => {
 		return this.service.post('/beers/new', { ...beer }).then((newBeer) => newBeer);
 	};
+
+	searchBeer = (search) => {
+		console.log(search);
+		if (search === '') {
+			return this.service.get('/beers/all').then((data) => {
+				return data.data;
+			});
+		} else
+			return this.service.get('/beers/search?q=' + search).then((beersFiltred) => {
+				console.log(beersFiltred.data);
+				return beersFiltred.data;
+			});
+	};
 }

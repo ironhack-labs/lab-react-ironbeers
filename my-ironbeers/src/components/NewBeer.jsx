@@ -82,7 +82,7 @@ class NewBeer extends Component {
 					name="tagline"
 					onChange={(e) => this.handlerChange(e)}
 				/>
-				<input
+				<textarea
 					type="text"
 					placeholder="Beer's Description"
 					name="description"

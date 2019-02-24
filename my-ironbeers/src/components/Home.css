@@ -1,0 +1,23 @@
+html,
+body {
+	margin: 0;
+	padding: 0px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.home-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.allbeers {
+	display: flex;
+	flex-direction: column;
+}
+
+.allbeers img {
+	height: 200px;
+}
