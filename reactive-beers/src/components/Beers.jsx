@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './header';
 import beerService from '../beersService/beerService'
+import { Link } from "react-router-dom";
 
 export default class Beers extends Component {
   
@@ -21,6 +22,7 @@ export default class Beers extends Component {
     this.beerService.getBeers()
     .then(beer=>{
       this.setState({...this.state,beer:beer})
+      console.log(beer)
     })
     .catch(err=>console.log(err))
   }
@@ -30,16 +32,17 @@ export default class Beers extends Component {
       <div>
         <Header />
         {this.state.beer.map((beer, index) => {
-          console.log(beer)
           return (
             <div key={index} className="Beers">
+            <Link to={`/beers/${beer._id}`} key={beer._id}>
               <div>
               <img className="imgBeer" src={beer.image_url} />
               </div>
+            </Link>
               <div>
               <h3>{beer.name}</h3>
-              <p>{beer.tagline}</p>
-              <p>{beer.contributed_by}</p>
+              <h4>{beer.tagline}</h4>
+              <p>Created by: {beer.contributed_by}</p>
               </div>
             </div>
           )

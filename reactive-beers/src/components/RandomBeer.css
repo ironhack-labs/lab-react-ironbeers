@@ -1,0 +1,20 @@
+.random-beer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.random-beer img {
+	height: 200px;
+}
+
+.random-name {
+	display: inline-block;
+  justify-content: left;
+  font-size: 3em;
+}
+
+.random-text {
+  display: inline-block;
+  max-width: 500px;
+}
