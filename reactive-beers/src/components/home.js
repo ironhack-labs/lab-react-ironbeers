@@ -3,6 +3,7 @@ import React from "react";
 import AllBeers from "./allBeers";
 import RandomBeer from "./randomBeer";
 import NewBeer from "./newBeer";
+import BeerDetails from "./beerDetails";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <AllBeers />
         <RandomBeer />
         <NewBeer />
+        <BeerDetails />
       </div>
     </div>
   )
