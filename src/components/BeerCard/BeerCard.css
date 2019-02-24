@@ -1,0 +1,21 @@
+.beer-card {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.img-beer-card {
+    object-fit: contain;
+    align-self: center;
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0 1rem;
+}
+
+.info-beer {
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    border: 2px solid black;
+}

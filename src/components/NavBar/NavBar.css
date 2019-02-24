@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3DC4FC;
+    height: 2.5em;
+    font-size: 1.8em;
+}
+
+.nav a {
+    color: white;
+}
