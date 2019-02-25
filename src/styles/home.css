@@ -1,0 +1,10 @@
+.img-container {
+    align-content: center;
+    display: flex;
+  }
+  .App-img{
+    width: 1200px;
+    margin: 0 auto;
+    
+  }
+  
