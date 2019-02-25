@@ -27,3 +27,21 @@ a {
     max-height: 300px;
     margin: 0 1rem;
 }
+
+.add-beer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-beer-form input {
+  margin: 1em auto;
+  min-width: 80%;
+}
+
+.add-beer-form button {
+  background-color:#3DC4FC;
+  border-radius: 10px;
+  height: 3em;
+  min-width: 80%;
+  margin: 0 auto;
+}
