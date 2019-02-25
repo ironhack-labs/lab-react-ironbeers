@@ -1,0 +1,9 @@
+img{
+    width: 50px;
+    height: auto;
+}
+.card{
+    width: 33%;
+    flex-direction: column;
+    justify-content: space-between;
+}
