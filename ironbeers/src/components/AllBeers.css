@@ -1,0 +1,17 @@
+.all-beers {
+	display: flex;
+	justify-content: center;
+	width: 200px;
+	margin: auto;
+	padding: 20px 0;
+}
+
+img {
+	height: 100px;
+	padding-right: 20px;
+}
+
+.beer-text {
+	text-align: left;
+	width: 200px;
+}
