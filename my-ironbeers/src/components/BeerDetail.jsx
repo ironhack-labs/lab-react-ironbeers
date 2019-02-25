@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import AllBeersService from '../service/AllBeersService';
 import './RandomBeer.css';
+import './Navbar.css';
 
 class BeerDetail extends Component {
 	constructor(props) {
@@ -40,19 +41,19 @@ class BeerDetail extends Component {
 					</div>
 
 					<div className="random-text">
-						<div>
+						<div className="container-name">
 							<div className="random-name">{this.state.name}</div>
 							<div className="random-level">{this.state.attenuation_level}</div>
 						</div>
 
-						<div>
+						<div className="container-tag">
 							<div className="random-tag">{this.state.tagline}</div>
 							<div className="random-brewed">{this.state.first_brewed}</div>
 						</div>
 
 						<div>
-							{this.state.description}
-							{this.state.contributed_by}
+							<div className="description">{this.state.description}</div>
+							<div className="contributed">{this.state.contributed_by}</div>
 						</div>
 					</div>
 				</div>

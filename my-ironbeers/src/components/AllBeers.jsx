@@ -51,21 +51,29 @@ class AllBeers extends Component {
 			<div>
 				<Navbar />
 				<SearchBar FilterName={this.searchBeer} />
-
-				{this.state.beers.map((birra) => (
-					<NavLink className="all-beers" to={`/beers/${birra._id}`} key={birra._id}>
-						<div>
-							<img src={birra.image_url} alt="beer" />
+				<div className="all-beers">
+					{this.state.beers.map((birra) => (
+						<div className="item">
+							<NavLink
+								style={{ textDecoration: 'none', color: 'black', margin: 0 }}
+								className="item-2"
+								to={`/beers/${birra._id}`}
+								key={birra._id}
+							>
+								<div className="onlyImg">
+									<img src={birra.image_url} alt="beer" />
+								</div>
+								<div className="beer-text">
+									<div className="nameBeer">{birra.name}</div>
+									<div className="sloganBeer">{birra.tagline}</div>
+									<div>
+										<p>Created by: {birra.contributed_by}</p>
+									</div>
+								</div>
+							</NavLink>
 						</div>
-						<div className="beer-text">
-							{birra.name}
-							{birra.tagline}
-							<div>
-								<p>Created by: {birra.contributed_by}</p>
-							</div>
-						</div>
-					</NavLink>
-				))}
+					))}
+				</div>
 			</div>
 		) : (
 			<p>Loading</p>

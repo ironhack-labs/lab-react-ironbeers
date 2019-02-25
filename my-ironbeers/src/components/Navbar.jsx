@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css';
 
 const navbar = () => {
 	return (
 		<nav className="nav-style">
-			<ul>
-				<li>
-					<Link to="/">Home</Link>
-				</li>
-			</ul>
+			<div>
+				<NavLink to="/">
+					<img src="../../imagenes/home-copia.png" alt="home" />
+				</NavLink>
+			</div>
 		</nav>
 	);
 };

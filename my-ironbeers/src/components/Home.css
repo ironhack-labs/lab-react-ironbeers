@@ -11,13 +11,38 @@ body {
 .home-container {
 	display: flex;
 	flex-direction: column;
+	margin: auto;
+	flex-wrap: nowrap;
+	text-align: center;
 }
 
-.allbeers {
+/* .allbeers-menu {
 	display: flex;
 	flex-direction: column;
+} */
+
+.menu-3 {
+	margin: auto;
+	width: 100%;
 }
 
-.allbeers img {
-	height: 200px;
+.menu-img {
+}
+
+.menu-img img {
+	width: 100%;
+}
+
+.menu-3 p {
+	margin: auto;
+	width: 100%;
+	color: rgb(168, 166, 166);
+	padding: 10px 10px;
+	width: 80%;
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+	font-size: 30px;
 }

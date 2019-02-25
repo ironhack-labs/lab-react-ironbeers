@@ -1,0 +1,42 @@
+.form-beer {
+	display: flex;
+	flex-direction: column;
+	padding-top: 80px;
+}
+
+textarea[type=text],
+input[type=text] {
+	color: black;
+	font-style: normal;
+	border: 1px solid gray;
+	border-radius: 10px;
+	width: 70%;
+	margin: 5px auto;
+}
+
+input[type=submit] {
+	color: white;
+	background-color: rgb(0, 153, 255);
+	font-style: italic;
+	border: 1px solid white;
+	border-radius: 4px;
+	width: 70%;
+	margin: 5px auto;
+	height: 25px;
+	border-radius: 10px;
+}
+
+input::placeholder {
+	color: burlywood;
+}
+
+input:placeholder {
+	color: gray;
+}
+textarea::placeholder {
+	color: burlywood;
+}
+
+textarea:placeholder {
+	color: gray;
+}

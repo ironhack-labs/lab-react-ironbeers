@@ -1,0 +1,13 @@
+input[type=text] {
+	color: black;
+	font-style: normal;
+	border: rgb(168, 166, 166);
+	border-radius: 4px;
+	width: 70%;
+	margin-top: 200px;
+	padding: 5px;
+}
+
+.divSearch {
+	padding-top: 80px;
+}

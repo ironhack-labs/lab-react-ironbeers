@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import AllBeersService from '../service/AllBeersService';
 import { Redirect } from 'react-router-dom';
+import './NewBeer.css';
+import Navbar from './Navbar';
 
 class NewBeer extends Component {
 	constructor(props) {
@@ -74,49 +76,52 @@ class NewBeer extends Component {
 
 	render() {
 		return (
-			<form className="form-beer" onSubmit={this.handlerSubmit}>
-				<input type="text" placeholder="Beer's Name" name="name" onChange={(e) => this.handlerChange(e)} />
-				<input
-					type="text"
-					placeholder="Beer's Tagline"
-					name="tagline"
-					onChange={(e) => this.handlerChange(e)}
-				/>
-				<textarea
-					type="text"
-					placeholder="Beer's Description"
-					name="description"
-					onChange={(e) => this.handlerChange(e)}
-				/>
-				<input
-					type="text"
-					placeholder="Beer's First Brewed"
-					name="first_brewed"
-					onChange={(e) => this.handlerChange(e)}
-				/>
+			<div>
+				<Navbar />
+				<form className="form-beer" onSubmit={this.handlerSubmit}>
+					<input type="text" placeholder="Beer's Name" name="name" onChange={(e) => this.handlerChange(e)} />
+					<input
+						type="text"
+						placeholder="Beer's Tagline"
+						name="tagline"
+						onChange={(e) => this.handlerChange(e)}
+					/>
+					<textarea
+						type="text"
+						placeholder="Beer's Description"
+						name="description"
+						onChange={(e) => this.handlerChange(e)}
+					/>
+					<input
+						type="text"
+						placeholder="Beer's First Brewed"
+						name="first_brewed"
+						onChange={(e) => this.handlerChange(e)}
+					/>
 
-				<input
-					type="text"
-					placeholder="Beer's Brewer Tips"
-					name="brewers_tips"
-					onChange={(e) => this.handlerChange(e)}
-				/>
-				<input
-					type="text"
-					placeholder="Beer's Attenuation Level"
-					name="attenuation_level"
-					onChange={(e) => this.handlerChange(e)}
-				/>
+					<input
+						type="text"
+						placeholder="Beer's Brewer Tips"
+						name="brewers_tips"
+						onChange={(e) => this.handlerChange(e)}
+					/>
+					<input
+						type="text"
+						placeholder="Beer's Attenuation Level"
+						name="attenuation_level"
+						onChange={(e) => this.handlerChange(e)}
+					/>
 
-				<input
-					type="text"
-					placeholder="Contributed by:"
-					name="contributed_by"
-					onChange={(e) => this.handlerChange(e)}
-				/>
-				<input type="submit" value="Add Beer" />
-				{this.state.redirect ? <Redirect to="/beers" /> : ''}
-			</form>
+					<input
+						type="text"
+						placeholder="Contributed by:"
+						name="contributed_by"
+						onChange={(e) => this.handlerChange(e)}
+					/>
+					<input type="submit" value="Add Beer" />
+					{this.state.redirect ? <Redirect to="/beers" /> : ''}
+				</form>
+			</div>
 		);
 	}
 }

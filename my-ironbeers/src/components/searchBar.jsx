@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './SearchBar.css';
+import './searchBar.css';
 
 class SearchBar extends Component {
 	state = {
@@ -14,7 +14,11 @@ class SearchBar extends Component {
 	};
 
 	render() {
-		return <input className="search" type="text" onChange={(e) => this.filter(e)} />;
+		return (
+			<div className="divSearch">
+				<input className="search" type="text" onChange={(e) => this.filter(e)} />
+			</div>
+		);
 	}
 }
 
