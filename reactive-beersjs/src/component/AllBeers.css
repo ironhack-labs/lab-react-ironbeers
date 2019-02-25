@@ -1,0 +1,8 @@
+.imgBeers {
+  width: 70px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
