@@ -7,9 +7,22 @@ export default class getBeers{
     });
   }
   getRandomBeer= () =>{
-
      return this.service.get('/random')
     .then(data=> data.data)
+    .catch(err=>console.log(err))
+  }
+
+  getAllBeer = ()=>{
+    return this.service.get('/all')
+    .then(data=> data.data)
+    .catch(err=>console.log(err))
+  }
+  
+
+  newBeer = (nuevaCerveza)=>{
+    
+    return this.service.post('/new',nuevaCerveza)
+    .then(data=> console.log(data))
     .catch(err=>console.log(err))
   }
 

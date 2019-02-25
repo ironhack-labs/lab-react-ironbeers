@@ -9,9 +9,10 @@ export default class Home extends Component {
 
 
   render() {
+   console.log(this.props.path)
     return (
-      <nav style={ {display: (this.props.display.path==="/home")?"none":"block"}}>
-        <a href="/">HOME</a>
+      <nav style={ {display: (this.props.path==="/home" ||this.props.path===undefined)?"none":"block"}}>
+       <img src="/home.png" alt="home" />
       </nav>
     )
   }

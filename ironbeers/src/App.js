@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Link,Switch,Route } from 'react-router-dom';
-import Beers from './beers/Beers'
-
+import RandomBeer from './beers/RandomBeer'
+import AllBeer from './beers/AllBeer'
+import NewBeer from './beers/NewBeer'
+import Home from './home/Home'
 
 class App extends Component {
+  
 
   state = {
     home: false
@@ -13,27 +16,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Link to='/home'>Home</Link>
-      <p>
-      <Link to='/beers'>Beers</Link>
-      </p>
-      <p>
-      <Link to="/random-beer">Random beer</Link>
-      </p>
-      <p>
-      <Link to="/new-beer">New beer</Link>
-      </p>
+      <ul className="menu">
+      <li> <Link to='/home'>Home</Link></li>
+      <li><Link to='/beers'>Beers</Link></li>
+      <li><Link to="/random-beer">Random beer</Link></li>
+      <li><Link to="/new-beer">New beer</Link></li>
+      </ul>
 
 
 
       <Switch>
-      <Route exact path={"/beers"} component={Beers}/>
-      <Route exact path={"/home"} component={Beers}/>
-      <Route exact path={"/random-beer"} component={Beers}/>
-      <Route exact path={"/new-beer"} component={Beers}/>
-      
-      
-    </Switch>     
+      <Route exact path={"/home"} component={Home}/>
+        <Route exact path={"/random-beer"} component={RandomBeer}/>
+        <Route exact path={"/beers"} component={AllBeer}/>
+        <Route exact path={"/new-beer"} component={NewBeer}/>
+        
+      </Switch>     
       </div>
    
     );
