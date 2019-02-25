@@ -1,0 +1,15 @@
+img {
+    width: 60%;
+    margin: 20px 0px;
+    border:20px double whitesmoke;
+
+  }
+  .Beers {
+      padding: 100px
+  }
+  h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(rgb(250, 249, 249), #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
