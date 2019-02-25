@@ -1,0 +1,18 @@
+.header{
+  background-color: #3DC4FC;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.header i{
+  color: #fff;
+  font-size: 2em;
+}
+
+a{
+  text-decoration: none;
+
+}
