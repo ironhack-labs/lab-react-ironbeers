@@ -25,6 +25,7 @@ router.post("/signup", (req, res, next) => {
 
 //Login
 router.post("/login", passport.authenticate("local"), (req, res, next) => {
+  console.log(req.user)
   res.status(200).json(req.user);
 });
 
