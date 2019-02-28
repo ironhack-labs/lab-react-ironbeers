@@ -37,7 +37,12 @@ router.get("/private", isAuth, (req, res, next) => {
 
 router.get("/logout", isAuth, (req, res, next) => {
   req.logout();
-  res.status(200).json({ message: "Logout successful" });
+
+  req.session.destroy((err)=>{
+  if(!err) {
+  res.status(200).clearCookie('connect.sid', {path: '/'}).json({message:"Logout successful"})
+  }
+})
 });
 
 module.exports = router;

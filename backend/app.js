@@ -30,7 +30,7 @@ const app = express();
 
 //cors config
 app.use(cors({
-  origin: '*',
+  origin: true,
   credentials: true
 }))
 

@@ -18,44 +18,38 @@ class App extends Component {
         this.setState({ isLogged: false });
       });
   };
+
   drawNavs = () => {
     let { isLogged } = this.state;
     if (isLogged) {
       return (
-        <nav>
+        <div>
           <NavLink exact activeStyle={{ fontWeight: "bolder" }} to="/">
-            {" "}
-            Home{" "}
+            Home
           </NavLink>
-          <span>" | "</span>
+          <span> | </span>
           <NavLink activeStyle={{ fontWeight: "bolder" }} to="/beers">
-            {" "}
-            Beers{" "}
+            Beer
           </NavLink>
-          <span>" | "</span>
+          <span> | </span>
           <NavLink activeStyle={{ fontWeight: "bolder" }} to="/logout">
-            {" "}
-            Sign Out{" "}
+            Sign Out
           </NavLink>
-        </nav>
+        </div>
       );
     } else {
       return (
         <nav>
           <NavLink exact activeStyle={{ fontWeight: "bolder" }} to="/">
-            {" "}
-            Home{" "}
+            Home
           </NavLink>
-          {" | "}
-          {this.drawNavs}
+          <span> | </span>
           <NavLink activeStyle={{ fontWeight: "bolder" }} to="/login">
-            {" "}
-            Login{" "}
+            Login
           </NavLink>
-          {" | "}
+          <span> | </span>
           <NavLink activeStyle={{ fontWeight: "bolder" }} to="/signup">
-            {" "}
-            Signup{" "}
+            Signup
           </NavLink>
         </nav>
       );
@@ -66,16 +60,16 @@ class App extends Component {
     this.checkLogged();
   };
 
-  componentDidUpdate = () => {
+/*   componentDidUpdate = () => {
     this.checkLogged();
-  };
+  }; */
 
   render() {
     return (
       <div>
-        <h1>Sup?</h1>
           {this.drawNavs()}
-        <Routes />
+          <h1>Sup?</h1>
+          <Routes />  
       </div>
     );
   }
