@@ -32,6 +32,9 @@ class App extends Component {
           <NavLink to="/signup">Sign up!</NavLink>
           {'|'}
           <NavLink to="/login">Log in</NavLink>
+          {'|'}          
+          <NavLink to="/random">Random brew</NavLink>
+
         </nav>
         <button onClick={()=>{
             axios.get('http://localhost:3000/logout',{withCredentials:true})
