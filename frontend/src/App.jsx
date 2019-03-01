@@ -24,7 +24,7 @@ class App extends Component {
     if (isLogged) {
       return (
         <div>
-          <NavLink exact activeStyle={{ fontWeight: "bolder" }} to="/">
+          <NavLink activeStyle={{ fontWeight: "bolder" }} to="/">
             Home
           </NavLink>
           <span> | </span>
@@ -40,7 +40,7 @@ class App extends Component {
     } else {
       return (
         <nav>
-          <NavLink exact activeStyle={{ fontWeight: "bolder" }} to="/">
+          <NavLink activeStyle={{ fontWeight: "bolder" }} to="/">
             Home
           </NavLink>
           <span> | </span>
@@ -60,16 +60,16 @@ class App extends Component {
     this.checkLogged();
   };
 
-/*   componentDidUpdate = () => {
+  /*   componentDidUpdate = () => {
     this.checkLogged();
   }; */
 
   render() {
     return (
       <div>
-          {this.drawNavs()}
-          <h1>Sup?</h1>
-          <Routes />  
+        {this.drawNavs()}
+        <h1>Sup?</h1>
+        <Routes />
       </div>
     );
   }
