@@ -3,6 +3,7 @@ import Routes from "./Routes.jsx";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 let loginUrl = "http://localhost:3000/login";
+let logoutURL = "http://localhost:3000/logout";
 const url = "http://localhost:3000/private";
 
 class App extends Component {
@@ -72,7 +73,7 @@ class App extends Component {
     }
   };
 
-  
+
   componentDidMount = () => {
     this.checkLogged();
   };
@@ -92,6 +93,15 @@ class App extends Component {
       });
   };
 
+  logOut = () =>{
+    axios.get(logoutURL , {withCredentials:true})
+    .then(res => {
+        // this.props.history.push('/')
+        this.setState({isLogged:false})
+        console.log(res)})
+    .catch(e => console.log(e))
+  }
+
 
 
   render() {
@@ -100,7 +110,7 @@ class App extends Component {
       <div>
         {this.drawNavs()}
         <h1>Sup?</h1>
-        <Routes isLogged={isLogged} logIn={this.logIn} />
+        <Routes isLogged={isLogged} logIn={this.logIn} logOut={this.logOut} />
       </div>
     );
   }
