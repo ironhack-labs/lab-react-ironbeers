@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Routes from "./Routes.jsx";
 import { NavLink } from "react-router-dom";
-import Axios from "axios";
+import axios from "axios";
+let loginUrl = "http://localhost:3000/login";
 const url = "http://localhost:3000/private";
 
 class App extends Component {
@@ -10,12 +11,15 @@ class App extends Component {
   };
 
   checkLogged = () => {
-    Axios.get(url, { withCredentials: true })
+    axios
+      .get(url, { withCredentials: true })
       .then(res => {
         this.setState({ isLogged: true });
+        this.render();
       })
       .catch(e => {
         this.setState({ isLogged: false });
+        this.render();
       });
   };
 
@@ -27,10 +31,22 @@ class App extends Component {
           <NavLink activeStyle={{ fontWeight: "bolder" }} to="/">
             Home
           </NavLink>
+
           <span> | </span>
           <NavLink activeStyle={{ fontWeight: "bolder" }} to="/beers">
-            Beer
+            Beers
           </NavLink>
+
+          <span> | </span>
+          <NavLink activeStyle={{ fontWeight: "bolder" }} to="/beers/random">
+            Random Beer
+          </NavLink>
+
+          <span> | </span>
+          <NavLink activeStyle={{ fontWeight: "bolder" }} to="/beers/new">
+            Add beer
+          </NavLink>
+
           <span> | </span>
           <NavLink activeStyle={{ fontWeight: "bolder" }} to="/logout">
             Sign Out
@@ -56,20 +72,35 @@ class App extends Component {
     }
   };
 
+  
   componentDidMount = () => {
     this.checkLogged();
   };
 
-  /*   componentDidUpdate = () => {
-    this.checkLogged();
-  }; */
+
+
+  logIn = auth => {
+    axios
+      .post(loginUrl, auth, { withCredentials: true })
+      .then(res => {
+        console.log(res);
+        this.setState({ isLogged: true });
+      })
+      .catch(e => {
+        let message = "Invalid username and password";
+        this.setState({ message });
+      });
+  };
+
+
 
   render() {
+    const { isLogged } = this.state;
     return (
       <div>
         {this.drawNavs()}
         <h1>Sup?</h1>
-        <Routes />
+        <Routes isLogged={isLogged} logIn={this.logIn} />
       </div>
     );
   }
