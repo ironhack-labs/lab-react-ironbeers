@@ -18,6 +18,20 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.hero-body{
+  padding: 1rem 1.5rem !important;
+}
+.fas .fa-home{
+  font-size: 2rem !important;
+  cursor: pointer !important;
+}
+
+.image-item-beer{
+  height: 100px !important;
+  width: auto !important;
+  margin: 0 auto !important;
+}
+
 
 .App-link {
   color: #61dafb;

@@ -10,8 +10,8 @@ const ListBeers = () => {
   return http.get(`/`)
 }
 
-// const listUsers = () => {
-//   return axios.get(`${API_URL}/users`)
-// }
+// const ListBeers = () => {
+//  return axios.get(`${API_URL}`)
+//  }
 
 export {ListBeers};

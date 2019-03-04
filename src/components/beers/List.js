@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // import {Link} from 'react-router-dom'
 import axios from 'axios'
-import {ListBeers} from '../../services/BeerService'
+import { ListBeers } from '../../services/BeerService'
+import ListItem from '../beers/ListItem'
 
 export default class Home extends Component {
 
@@ -28,9 +29,11 @@ export default class Home extends Component {
      return <h1>Some Bad request from the server :(</h1>
     } else{
       return (
-        <div>
+        <div className='has-margin-top-20'>
           {this.state.beers.map(beer => 
-              <h1>{beer.name}</h1>)}
+           <ListItem {...beer}></ListItem>
+          // <h1>{beer.name}</h1>
+              )}
         </div>
       );
     }

@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bulma/css/bulma.min.css'
 import 'bulma-helpers/css/bulma-helpers.min.css'
 import { BrowserRouter} from 'react-router-dom'
-
+import '@fortawesome/fontawesome-free/css/fontawesome.css'
 
 
 ReactDOM.render(
