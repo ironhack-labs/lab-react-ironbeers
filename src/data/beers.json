@@ -1,0 +1,17 @@
+[
+  {
+    "image": "https://www.abc.net.au/news/image/9680296-3x2-700x467.jpg",
+    "title": "All beers",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
+  },
+  {
+    "image": "https://assets.visitmilwaukee.org/visitmke/media/global/Partner%20Images/Gallery%20Size/VM-ThirdSpaceBrewing-Beers.jpg?ext=.jpg&mode=crop&width=1920&height=1080&scale=both",
+    "title": "Random beer",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
+  },
+  {
+    "image": "https://www.telegraph.co.uk/content/dam/Food%20and%20drink/2015-09/01sep/beer-craft.jpg?imwidth=450",
+    "title": "New beer",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
+  }
+]
