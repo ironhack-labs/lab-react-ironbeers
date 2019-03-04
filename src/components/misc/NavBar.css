@@ -1,0 +1,12 @@
+.navbar-brand {
+  margin: 0 3vh;
+}
+
+.navbar-links {
+  display: flex;
+  margin-left: 4vh;
+}
+
+.navbar-item {
+  margin: 0 1vh;
+}
