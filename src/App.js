@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Home from './components/beers/Home'
+import Header from './components/misc/Header'
+import List from './components/beers/List'
 import './App.css';
+import { Switch, Route, Redirect} from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        
+      <Header></Header>
+        <section className='container'>
+          <div className='column'>
+          <Switch>
+              <Route exact path='/home' component={Home}></Route>
+              <Route exact path='/beers' component={List}></Route>
+              <Redirect to='/home' />
+            </Switch>
+          </div>
+        </section>
       </div>
     );
   }
