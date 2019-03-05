@@ -3,11 +3,11 @@
   width: 30%;
   display: flex;
   flex-direction: row;
-  background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+  background-image: linear-gradient(to top, rgba(230, 185, 128, 0.1) 0%, #eacda3 100%);
   border-radius: 20px;
 }
 
 .fixed-card figure {
   margin: 3vh;
-  width: 70%;
+  min-width: 50px;
 }
