@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from './components/beers/Home'
+import Random from './components/beers/Random'
 import Header from './components/misc/Header'
 import List from './components/beers/List'
 import './App.css';
@@ -15,6 +16,7 @@ class App extends Component {
           <Switch>
               <Route exact path='/home' component={Home}></Route>
               <Route exact path='/beers' component={List}></Route>
+              <Route exact path='/random' component={Random}></Route>
               <Redirect to='/home' />
             </Switch>
           </div>

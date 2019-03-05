@@ -46,7 +46,7 @@ export default class Home extends Component {
           <div className="card has-margin-top-20">
             <div className="card-image">
               <figure className="image is-4by3">
-                <img src="https://images.pexels.com/photos/1128975/pexels-photo-1128975.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=" image" />
+              <Link to={`/random`}> <img src="https://images.pexels.com/photos/1128975/pexels-photo-1128975.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=" image" /></Link>
               </figure>
             </div>
             <div className="card-content">
