@@ -13,3 +13,7 @@ export const listBeers = () => {
 export const getOneBeer = (id) => {
   return http.get(`/single/${id}`);
 }
+
+export const getOneRandomBeer = () => {
+  return http.get('/random');
+}
