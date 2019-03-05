@@ -15,9 +15,10 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
+          <Route exact path='/' component={Home}/>
           <Route exact path='/home' component={Home}/>
           <Route exact path='/beers' component={Beers}/>
-          <Route exact path='/random-beer' component={Random}/>
+          <Route exact path='/random' component={Random}/>
           <Route exact path='/new-beer' component={New}/> 
           <Route exact path='/beers/:id' component={CardBeer}/> 
         </Switch>

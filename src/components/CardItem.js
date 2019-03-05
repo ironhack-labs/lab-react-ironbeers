@@ -4,20 +4,20 @@ import React from 'react';
 const CardItem = (props) => (
 
       <div className="container">
-        <div className="card" key={this.props.beer._id}>
+        <div className="card" key={props.beer._id}>
             <div className="card-image">
-              <img src={this.props.beer.image_url} alt={this.props.beer.name} className="image_card"/>
+              <img src={props.beer.image_url} alt={props.beer.name} className="image_card"/>
             </div>
             <div className="card-content">
               <div className="media">
                 <div className="media-left">
-                <h3>{this.props.beer.name}</h3>
-                <h5>{this.props.beer.tagline}</h5>
-                <h6><strong>Created by: </strong>{this.props.beer.name}</h6>
+                <h3>{props.beer.name}</h3>
+                <h5>{props.beer.tagline}</h5>
+                <h6><strong>Created by: </strong>{props.beer.name}</h6>
                 </div>
                 <div className="media-content">
-                  <p className="title is-4">{this.props.beer.tagline}</p>
-                  <p className="subtitle is-6">{this.props.beer.brewers_tips}</p>
+                  <p className="title is-4">{props.beer.tagline}</p>
+                  <p className="subtitle is-6">{props.beer.brewers_tips}</p>
                 </div>
               </div>
             </div>

@@ -12,6 +12,6 @@ export const listBeers = () => {
 export const oneBeer = (id) => {
     return http.get('/single/' + id);
 }
-export const randomBeer = (id) => {
+export const randomBeer = () => {
     return http.get('/random');
 }
