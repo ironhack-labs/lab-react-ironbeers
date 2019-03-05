@@ -9,13 +9,20 @@ import RandomBeers from './components/RandomBeers';
 import Home from './components/Home';
 
 class App extends Component {
+
+  state = {
+    isHome: true
+  }
+
+  
+
   render() {
+    const { isHome } = this.state
     return (
       <div className="App">
-        <Navbar />
+        <Navbar isHome={isHome} />
         <section className="section">
           <div className="container">
-            
             <Switch>
               <Route exact path='/home' component={Home}/>
               <Route exact path='/beers' component={Beers}/>

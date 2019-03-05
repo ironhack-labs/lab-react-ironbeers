@@ -2,8 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
-const Home = () => {
-  return (
+const Home = () => (
     <div>
         <NavLink to="/beers" className="button is-large">
             <span className="icon is-large">
@@ -24,7 +23,6 @@ const Home = () => {
             <span>Add Beers</span>
         </NavLink>
     </div>
-  )
-}
+)
 
 export default Home;
