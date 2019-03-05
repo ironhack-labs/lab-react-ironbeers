@@ -1,0 +1,20 @@
+.home-img {
+  object-fit: cover;
+}
+
+.card-image {
+  height: 70%;
+    display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 230px;
+}
+
+.cards-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
