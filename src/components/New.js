@@ -13,7 +13,7 @@ const New = () => (
        
       </div>
       <div className="media-content">
-        <p className="title is-4">John Smith</p>
+        <p className="title is-4">new</p>
         <p className="subtitle is-6">@johnsmith</p>
       </div>
     </div>

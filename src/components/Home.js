@@ -8,7 +8,7 @@ const Home = () => (
             <div className="card">
           <div className="card-image">
           <figure className="image is-4by3">
-            <img src="http://fotos.subefotos.com/2747715c0eef3be3fa5d34139d1c4925o.jpg" alt="Placeholder image"/>
+            <img src="http://fotos.subefotos.com/2747715c0eef3be3fa5d34139d1c4925o.jpg" alt="image1"/>
           </figure> 
           </div>
           <div className="card-content">
@@ -26,7 +26,7 @@ const Home = () => (
             <div className="card">
           <div className="card-image">
           <figure className="image is-4by3">
-            <img src="http://estrelladegalicia.es/wp-content/uploads/MG_1848.jpg" alt="Placeholder image"/>
+            <img src="http://estrelladegalicia.es/wp-content/uploads/MG_1848.jpg" alt="image2"/>
           </figure> 
           </div>
           <div className="card-content">
@@ -43,7 +43,7 @@ const Home = () => (
             <div className="card">
           <div className="card-image">
           <figure className="image is-4by3">
-            <img src="http://2.bp.blogspot.com/-KYD-fnCtESk/U9qg5IudLGI/AAAAAAAABJ0/-KpsTHGT3AU/s1600/cervezas.jpg" alt="Placeholder image"/>
+            <img src="http://2.bp.blogspot.com/-KYD-fnCtESk/U9qg5IudLGI/AAAAAAAABJ0/-KpsTHGT3AU/s1600/cervezas.jpg" alt="image3"/>
           </figure> 
           </div>
           <div className="card-content">
