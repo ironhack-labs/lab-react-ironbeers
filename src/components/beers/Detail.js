@@ -13,8 +13,7 @@ export default class Detail extends Component {
           </figure>
         </div>
         <div className="card-content">
-          <div className="media">
-            
+          <div className="media">    
             <div className="media-content">
               <p className="title is-4">{this.props.name}</p>
               <p className="subtitle is-6">{this.props.tagline}</p>
@@ -24,7 +23,6 @@ export default class Detail extends Component {
               <small>{this.props.first_brewed}</small>
             </div>
           </div>
-
           <div className="content">
            <p>{this.props.description}</p>
           </div>

@@ -12,9 +12,12 @@ const ListBeers = () => {
 const randomBeer = () => {
   return http.get('/random')
 }
+const detailBeer = (id) => {
+  return http.get(`/single/${id}`)
+}
 
 // const ListBeers = () => {
 //  return axios.get(`${API_URL}`)
 //  }
 
-export {ListBeers, randomBeer};
+export {ListBeers, randomBeer, detailBeer};

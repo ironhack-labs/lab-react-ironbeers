@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react';
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 // import axios from 'axios'
 
 export default class ListItem extends Component {
@@ -19,7 +19,7 @@ export default class ListItem extends Component {
         <div className="media-content">
           <div className="content">
           
-              <strong>{this.props.name}</strong>
+            <Link to={`single/${this.props._id}`}><strong>{this.props.name}</strong></Link>
               <br />  <p>{this.props.tagline}</p>
              <small>{this.props.contributed_by}</small> 
           </div>
