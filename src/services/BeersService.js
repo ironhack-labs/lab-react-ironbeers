@@ -9,3 +9,7 @@ const http = axios.create({
 export const listBeers = () => {
   return http.get('/all');
 }
+
+export const getOneBeer = (id) => {
+  return http.get(`/single/${id}`);
+}

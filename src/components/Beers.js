@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { listBeers } from '../services/BeersService';
 import BeerItem from './BeerItem';
+import './Beers.css';
 
 class Beers extends Component {
   state = {
