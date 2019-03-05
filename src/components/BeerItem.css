@@ -1,0 +1,13 @@
+.fixed-card {
+  margin: 5vh;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+  border-radius: 20px;
+}
+
+.fixed-card figure {
+  margin: 3vh;
+  width: 70%;
+}

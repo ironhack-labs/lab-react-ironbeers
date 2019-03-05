@@ -1,8 +1,14 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.fixed-card {
-  width: 28%;
-  margin: 15vh 5vh;
+.fixed-home-card {
+  max-width: 25%;
+  margin: 10vh 5vh;
 }
+
+.fixed-home-card .content {
+  color: #000;
+}
+
