@@ -1,0 +1,19 @@
+.container-form {
+  margin: 5vh 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin: 5vh 0;
+}
+
+.field-content {
+  width: 50%;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

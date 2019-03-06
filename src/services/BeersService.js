@@ -17,3 +17,7 @@ export const getOneBeer = (id) => {
 export const getOneRandomBeer = () => {
   return http.get('/random');
 }
+
+export const postNewBeer = (beer) => {
+  return http.post('/new', beer);
+}
