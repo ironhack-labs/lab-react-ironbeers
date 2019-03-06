@@ -37,12 +37,10 @@ class CardBeer extends Component  {
             </div>
             <div className="card-content">
               <div className="media">
-                <div className="media-left">
+                <div className="media-top">
                 <h3>{this.state.beer.name}</h3>
                 <h5>{this.state.beer.tagline}</h5>
                 <h6><strong>Created by: </strong>{this.state.beer.name}</h6>
-                </div>
-                <div className="media-content">
                   <p className="title is-4">{this.state.beer.tagline}</p>
                   <p className="subtitle is-6">{this.state.beer.brewers_tips}</p>
                 </div>

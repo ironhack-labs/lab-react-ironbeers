@@ -20,9 +20,10 @@ handleFormSubmit = (e)=> {
   e.preventDefault();
   newBeer(this.state)
     .then(response => {
-      console.log(response + " your beer has been added")
+      console.log("Your beer has been added")
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log(err));
+    
 };
 
 

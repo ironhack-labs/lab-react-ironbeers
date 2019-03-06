@@ -8,25 +8,25 @@ import SearchBeer from './SearchBeer'
 class Beers extends Component {
     state = {
         beers: [],
-        search: '',
         error: false
     }
     
     componentDidMount = () => {
       listBeers()
       .then(
-        response => {this.setState({ beers: response.data })},
-        err => this.setState({ error: true })
-        )
-    }
-    
-    onSearch = (search) => {
-      this.setState({ search });
-      searchBeer(search)
-      .then(
-        response => {this.setState({ beers: response.data })},
+        response => this.setState({ beers: response.data }),
         err => this.setState({ error: true })
       )
+    }
+
+    onSearch = search => {
+      if(search){
+        searchBeer(search)
+        .then(
+          response => this.setState({ beers: response.data }),
+          err => this.setState({ error: true })
+        )
+      }
     }
     
     render = () => {
@@ -52,7 +52,6 @@ class Beers extends Component {
                 <SearchBeer  onSearch={this.onSearch}/> 
                   <div className="media-content">
                     <div className="content">
-                      
                         <table className="table">
                           <thead>
                             <tr>
