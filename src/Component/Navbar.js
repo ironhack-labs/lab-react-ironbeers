@@ -5,10 +5,9 @@ const Navbar= () =>{
   return(
   <nav className="blue darken-1" >
     <div className="nav-wrapper ">
-      <a href="www.google.com" className="  brand-logo left">
+      <Link to="/" className="  brand-logo left">
         <i className="center-align large material-icons">home</i>
-
-      </a>
+      </Link>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>
           <Link to="/beers" className="otherFields">
@@ -22,7 +21,7 @@ const Navbar= () =>{
         </li>
         <li>
           <Link to="/newbeer" className="otherFields">
-            <button  className="btn waves-effect waves-light center-align " > </button>
+            <button  className="btn waves-effect waves-light center-align " > New Beer</button>
           </Link>
         </li>
       </ul>
