@@ -3,23 +3,6 @@ import {Link} from 'react-router-dom'
 
 export default class Home extends Component {
 
-  // state= {
-  //   users: [],
-  //   error: false
-  // }
-
-  // componentDidMount = () => {
-  //   listUsers()
-  //     .then(response => {this.setState({ users: response.data })},
-  //     err => {if(err){
-  //       this.setState({
-  //         error: true
-  //       })
-  //     }}
-  //     ) 
-  // }
-
-
   render = ()=> {
 
       return (
@@ -63,7 +46,7 @@ export default class Home extends Component {
           <div className="card has-margin-top-20">
             <div className="card-image">
               <figure className="image is-4by3">
-                <img src="https://images.pexels.com/photos/1624174/pexels-photo-1624174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=" image" />
+              <Link to={`/new`}>  <img src="https://images.pexels.com/photos/1624174/pexels-photo-1624174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=" image" /></Link>
               </figure>
             </div>
             <div className="card-content">
