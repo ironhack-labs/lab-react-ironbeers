@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 0;
 }
 
 .App-logo {
@@ -23,18 +24,28 @@
   color: #61dafb;
 }
 
+body {
+  margin: 0;
+}
 .nav-style{
   position: fixed;
   top: 0px;
+  height: 3rem;
   background-color: #61dafb;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .nav-icon{
+  position: fixed;
+  top: 10px;
+  text-align: center;
   list-style: none;
-  color: white;
-
+  margin-top: 0px;
+  font-size: 2rem;
+  color: white !important;
+  text-decoration-color: white;
 }
 
 @keyframes App-logo-spin {
