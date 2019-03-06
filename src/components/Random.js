@@ -14,9 +14,12 @@ class Random extends Component {
 
   componentDidMount = () => {  
     randomBeer()
-
-    .then(response => this.setState({ randomBeer: response.data[0]}))
-    .catch(err => this.setState({ error: true }))
+    .then((response) => {
+      this.setState({ randomBeer: response.data[0]})
+    },
+    (err) => {
+      this.setState({ error: true })
+    })
     
   }
 
@@ -26,27 +29,27 @@ class Random extends Component {
       return (<h1>Sorry!!!</h1>);
   } else {
       return (
-      <div >
-      <Navbar/>
       <div className="container">
-        <div className="card" key={this.state.randomBeer._id}>
-          <div className="card-image">
-          <img src={this.state.randomBeer.image_url} alt={this.state.randomBeer.name} className="image_card"/>
-          </div>
-          <div className="card-content">
-            <div className="media">
-              <div className="media-top">
-              <h3>{this.state.randomBeer.name}</h3>
-              <h5>{this.state.randomBeer.tagline}</h5>
-              <h6><strong>Created by: </strong>{this.state.randomBeer.name}</h6>
-                <p className="title is-4">{this.state.randomBeer.tagline}</p>
-                <p className="subtitle is-6">{this.state.randomBeer.brewers_tips}</p>
+      <Navbar/>
+        <div className="container">
+          <div className="card" key={this.state.randomBeer._id}>
+            <div className="card-image">
+            <img src={this.state.randomBeer.image_url} alt={this.state.randomBeer.name} className="image_card"/>
+            </div>
+            <div className="card-content">
+              <div className="media">
+                <div className="media-top">
+                <h3>{this.state.randomBeer.name}</h3>
+                <h5>{this.state.randomBeer.tagline}</h5>
+                <h6><strong>Created by: </strong>{this.state.randomBeer.name}</h6>
+                  <p className="title is-4">{this.state.randomBeer.tagline}</p>
+                  <p className="subtitle is-6">{this.state.randomBeer.brewers_tips}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   )
       }
 }

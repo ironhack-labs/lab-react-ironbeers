@@ -14,8 +14,12 @@ class CardBeer extends Component  {
   componentDidMount = () => {
 
     oneBeer(this.props.match.params.id)
-    .then(response => this.setState({ beer: response.data }))
-    .catch(err => this.setState({ error: true }))
+    .then((response) => {
+      this.setState({ beer: response.data })
+    },
+    (err) => {
+      this.setState({ error: true })
+    })
   }
   
   render = () => {

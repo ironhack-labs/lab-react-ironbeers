@@ -31,27 +31,26 @@ class Beers extends Component {
             return (<h1>Sorry!!!</h1>);
         } else {
             return (
-        
               <div className="container">
-              <Navbar/>
-              <div className="box">
-                <div className="media-content">
-                   <div className="content">
-                      <table className="table">
-                        <thead>
-                          <tr>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {beerList}
-                        </tbody>
-                      </table>
+                <Navbar/>
+                <div className="box">
+                  <div className="media-content">
+                    <div className="content">
+                        <table className="table">
+                          <thead>
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {beerList}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
+                  </div>
                 </div>
-              </div>
-          </div>
             );
         }
     }

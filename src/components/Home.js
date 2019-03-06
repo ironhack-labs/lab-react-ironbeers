@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Home = () => (
 
-  <div className="home">
+  <div className="container">
 
             <div className="card">
           <div className="card-image">
@@ -49,7 +49,7 @@ const Home = () => (
           <div className="card-content">
             <div className="media">
               <div className="media-content">
-                <p className="title is-4"><NavLink exact to="/new" activeClassName="is-active">New-beer</NavLink></p>
+                <p className="title is-4"><NavLink exact to="/new-beer" activeClassName="is-active">New-beer</NavLink></p>
                 <p className="subtitle is-6">este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective.</p>
               </div>
             </div>
