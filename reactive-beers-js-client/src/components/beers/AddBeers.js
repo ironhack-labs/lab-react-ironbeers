@@ -40,23 +40,37 @@ class AddBeer extends Component{
     }
     render(){
         return(
-            <div>
+            <div className="container">
                 <form onSubmit={this.handleFormSubmit}>
+                <div className="form-group">
                 <label htmlFor="name">Name:</label>
-                <input type="text" name="name" value={this.state.name} onChange={e=>{this.handleChange(e)}} />
+                <input className="form-control" type="text" name="name" value={this.state.name} onChange={e=>{this.handleChange(e)}} />
+                </div>
+                <div className="form-group">
                 <label htmlFor="tagline">TagLine:</label>
-                <input type="text" name="tagline" value={this.state.tagline} onChange={e=>{this.handleChange(e)}} />
+                <input  className="form-control" type="text" name="tagline" value={this.state.tagline} onChange={e=>{this.handleChange(e)}} />
+                </div>
+                <div className="form-group">
                 <label htmlFor="description">Descripción del proyecto:</label>
-                <textarea name="description" id="description" value={this.state.description} onChange={e => { this.handleChange(e) }}  cols="30" rows="10"></textarea>
+                <textarea className="form-control" name="description" id="description" value={this.state.description} onChange={e => { this.handleChange(e) }}  cols="30" rows="10"></textarea>
+                </div >
+                <div className="form-group">
                 <label htmlFor="first_brewed">First brewed:</label>
-                <input type="text" name="first_brewed" value={this.state.first_brewed} onChange={e=>{this.handleChange(e)}} />
+                <input  className="form-control" type="text" name="first_brewed" value={this.state.first_brewed} onChange={e=>{this.handleChange(e)}} />
+                </div>
+                <div className="form-group">
                 <label htmlFor="brewers_tips">Brewers tips:</label>
-                <input type="text" name="brewers_tips" value={this.state.brewers_tips} onChange={e=>{this.handleChange(e)}} />
+                <input  className="form-control" type="text" name="brewers_tips" value={this.state.brewers_tips} onChange={e=>{this.handleChange(e)}} />
+                </div>
+                <div className="form-group">
                 <label htmlFor="attenuation_level">Attenuation level:</label>
-                <input type="text" name="attenuation_level" value={this.state.attenuation_level} onChange={e=>{this.handleChange(e)}} />
+                <input  className="form-control" type="text" name="attenuation_level" value={this.state.attenuation_level} onChange={e=>{this.handleChange(e)}} />
+                </div>
+                <div className="form-group">
                 <label htmlFor="contributed_by">Contributed by:</label>
-                <input type="text" name="contributed_by" value={this.state.contributed_by} onChange={e=>{this.handleChange(e)}} />
-                <input type="submit" value="Submit" />
+                <input  className="form-control" type="text" name="contributed_by" value={this.state.contributed_by} onChange={e=>{this.handleChange(e)}} />
+                </div>
+                <input className="btn btn-primary mb-2" type="submit" value="Submit" />
                 </form>
             </div>
         )

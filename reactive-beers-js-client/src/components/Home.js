@@ -40,7 +40,7 @@ const home = () => {
           <div className="card-body">
             <h3 className="card-title">New-beer</h3>
             <p className="card-text">Agrega una nueva cerveza...</p>
-            <Link to="" className="btn btn-primary">
+            <Link to="newbeer" className="btn btn-primary">
               Ir a Agregar una nueva cerveza
             </Link>
           </div>

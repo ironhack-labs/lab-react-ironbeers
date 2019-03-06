@@ -24,7 +24,7 @@ class BeersList extends Component {
       <div className="container">
         {this.state.listOfBeers.map((beers, index) => {
           return (
-            <div key={index} className="card card-w  ">
+            <div key={index} className="card card-w">
               <Link to={`/beerlist/${beers._id}`}>
                 <img
                   src={beers.image_url}
