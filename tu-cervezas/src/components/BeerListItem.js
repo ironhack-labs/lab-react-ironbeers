@@ -19,7 +19,7 @@ const BeerListItem = (props) => {
           <span className="tagline">{props.tagline}</span>
         </div>
         <div className="beer-list-text-cont">
-          <small className="contributed-by">Created by: {props.contributed_by}</small>
+          <small className="contributed-by">Created by: {props.contributed_by.split("<")[0]}</small>
         </div>
       </div>
     </div>
