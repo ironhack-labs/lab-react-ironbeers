@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="nav-style">
       <ul>
-        <li className="nav-icon"><Link to='/'><FontAwesomeIcon icon="home" /></Link></li>
+        <li className="nav-icon"><Link to='/'><FontAwesomeIcon className="nav-icon" icon="home" /></Link></li>
       </ul>
     </nav>
   )
