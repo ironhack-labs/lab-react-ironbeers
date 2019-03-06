@@ -1,0 +1,30 @@
+.beer-list-item {
+  display: flex;
+  height: 120px;
+}
+
+.beer-list-img {
+  height: 100px;
+  margin: 10px 0;
+}
+
+.beer-list-img-container {
+  width: 20%;
+}
+
+.beer-list-text {
+  width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.beer-list-text h3 {
+  margin: 0;
+}
+
+.beer-list-text div {
+  display: block;
+  height: 30%;
+}
