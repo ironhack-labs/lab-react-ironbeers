@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default class BeerList  extends React.Component {
   constructor(props) {
@@ -27,13 +28,13 @@ export default class BeerList  extends React.Component {
           <article className="media">
             <div className="media-left">
               <figure className="image is-64x64">
-                <img src={beer.image_url} alt="Image" />
+                <img src={beer.image_url} alt="beer image" />
               </figure>
             </div>
             <div className="media-content">
               <div className="content">
                 <p>
-                  <strong>{beer.name}</strong>
+                  <Link to={`/beers/${beer._id}`}><strong>{beer.name}</strong></Link>
                   <br/>
                   <small>{beer.tagline}</small>
                   <br/>

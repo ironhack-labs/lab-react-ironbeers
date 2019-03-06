@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import bulma from 'bulma/css/bulma.min.css';
+import 'bulma/css/bulma.min.css';
 import 'bulma-helpers/css/bulma-helpers.min.css';
 import './index.css';
 import App from './App';
