@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './BeerListItem.css'
 //import 'bootstrap/dist/css/bootstrap.css'
 
@@ -10,7 +11,9 @@ const BeerListItem = (props) => {
       </div>
       <div className="beer-list-text">
         <div className="beer-list-text-cont">
+        <Link to={`/beer/${props._id}`}>
           <h3>{props.name}</h3>
+        </Link>
         </div>
         <div className="beer-list-text-cont">
           <span className="tagline">{props.tagline}</span>
