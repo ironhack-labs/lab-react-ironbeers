@@ -26,6 +26,8 @@ class Beers extends Component {
           response => this.setState({ beers: response.data }),
           err => this.setState({ error: true })
         )
+      } else if(search === ""){
+        this.componentDidMount()
       }
     }
     

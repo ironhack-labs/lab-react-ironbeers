@@ -38,14 +38,18 @@ class Random extends Component {
             </div>
             <div className="card-content">
               <div className="media">
-                <div className="media-top">
+                <div className="media-left">
                 <h3>{this.state.randomBeer.name}</h3>
                 <h5>{this.state.randomBeer.tagline}</h5>
-                <h6><strong>Created by: </strong>{this.state.randomBeer.name}</h6>
-                  <p className="title is-4">{this.state.randomBeer.tagline}</p>
-                  <p className="subtitle is-6">{this.state.randomBeer.brewers_tips}</p>
+                </div>
+                <div className="media-right">
+                <h3>{this.state.randomBeer.attenuation_level}</h3>
+                <h5>{this.state.randomBeer.first_brewed}</h5>
                 </div>
               </div>
+                <h6><strong>Created by: </strong>{this.state.randomBeer.name}</h6>
+                  <p className="title is-4">{this.state.randomBeer.tagline}</p>
+                  <p className="subtitle is-6">{this.state.randomBeer.brewers_tips}</p>    
             </div>
           </div>
         </div>
