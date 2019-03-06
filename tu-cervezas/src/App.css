@@ -30,3 +30,34 @@ body {
 .beer-list{
   margin-top: 4rem;
 }
+
+.home{
+  margin: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.home-item{
+  width: 100%;
+}
+
+.home-image{
+  height: 40vh;
+}
+
+.home-text{
+  width: 80vh;
+  margin-bottom: 1.5rem;
+}
+
+.home-header{
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 500px){
+  .home-image{
+    width: 100%;
+  }
+}
