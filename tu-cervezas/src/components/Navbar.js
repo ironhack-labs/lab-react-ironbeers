@@ -10,9 +10,7 @@ library.add(faHome)
 const Navbar = () => {
   return (
     <nav className="nav-style">
-      <ul>
-        <li className="nav-icon"><Link to='/'><FontAwesomeIcon className="nav-icon" icon="home" /></Link></li>
-      </ul>
+    <Link to='/'><FontAwesomeIcon className="nav-icon" icon="home" /></Link>
     </nav>
   )
 }

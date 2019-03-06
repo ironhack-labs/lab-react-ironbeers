@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import Navbar from './components/Navbar';
 import BeerList from './components/BeerList';
 import Navbar from './components/Navbar';
 import { Switch, Route } from 'react-router-dom';
@@ -10,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-
+        <BeerList />
         <Switch>
           <Route exact path='/' component={Navbar}/>
         </Switch>
