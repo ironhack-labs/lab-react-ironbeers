@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+.card-w{
+  width: 600px;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-w > img{
+  height: 200px;
+  width: 300px;
+  margin: 2vh;
+}
+.item-list{
+  height: 120px !important;
+  width: 60px !important;
+}
