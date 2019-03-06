@@ -7,7 +7,6 @@ export default class Home extends Component {
 
       return (
         <div>
-         
           <div className="card has-margin-top-20">
             <div className="card-image">
               <figure className="image is-4by3">
@@ -25,7 +24,6 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-          
           <div className="card has-margin-top-20">
             <div className="card-image">
               <figure className="image is-4by3">
@@ -60,7 +58,7 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-          </div>
+       </div>
       );
 
     }

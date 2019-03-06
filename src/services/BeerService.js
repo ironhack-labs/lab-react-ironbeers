@@ -15,13 +15,15 @@ const randomBeer = () => {
 const detailBeer = (id) => {
   return http.get(`/single/${id}`)
 }
-
 const addBeer = (beer) => {
  return http.post("/new", beer)
 }
-
+const searchBeer = (search) => {
+  return http.get(`/search?q=${search}`)
+ }
+ 
 // const ListBeers = () => {
 //  return axios.get(`${API_URL}`)
 //  }
 
-export {ListBeers, randomBeer, detailBeer,addBeer};
+export {ListBeers, randomBeer, detailBeer,addBeer,searchBeer};

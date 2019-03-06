@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import {  Redirect} from 'react-router-dom'
+import { Redirect} from 'react-router-dom'
 import { addBeer } from '../../services/BeerService'
 
 export default class Form extends Component {
@@ -37,7 +36,6 @@ export default class Form extends Component {
          });
     })
     .catch( error =>  
-      
     console.log("Add Beer ERROR", error) )
   }
 
