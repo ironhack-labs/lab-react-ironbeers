@@ -3,13 +3,6 @@ import {Link} from 'react-router-dom';
 
 class RandomBeer extends Component {
     state={
-        image_url:'',
-        name:'',
-        tagline:'',
-        first_brewed:'',
-        atenuation_level:'',
-        description:'',
-        contributed_by:'',
         beer:{}
     };
 
