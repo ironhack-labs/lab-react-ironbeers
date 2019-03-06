@@ -9,7 +9,8 @@ class RandomBeer extends Component {
         first_brewed:'',
         atenuation_level:'',
         description:'',
-        contributed_by:''
+        contributed_by:'',
+        beer:{}
     };
 
     getRandomBeer = () => {
@@ -18,35 +19,28 @@ class RandomBeer extends Component {
             responseFromApi.json()
             .then( datos => {
                 const beer = datos;
-                this.setState(beer);
+                console.log(beer)
+                this.setState({beer:beer[0]});
             });
         })
         .catch(err=>console.log(err));
     }
 
-    componentDidMount(){
+    componentWillMount(){
         this.getRandomBeer();
     }
 
     render(){
-        const {
-        image_url,
-        name,
-        tagline,
-        first_brewed,
-        atenuation_level,
-        description,
-        contributed_by,
-        } = this.state
+        //console.log(this.state.beer)
         return(
             <div>
-                <img src={image_url} alt={name}/>
-                <h3>{name}</h3>
-                <p>{tagline}</p>
-                <p>{first_brewed}</p>
-                <p>{atenuation_level}</p>
-                <p>{description}</p>
-                <p>{contributed_by}</p> 
+                <img src={this.state.beer.image_url} alt=""/>
+                <h3>{this.state.beer.name}</h3>
+                <p>{this.state.beer.tagline}</p>
+                <p>{this.state.beer.first_brewed}</p>
+                <p>{this.state.beer.atenuation_level}</p>
+                <p>{this.state.beer.description}</p>
+                <p>{this.state.beer.contributed_by}</p> 
 
                 <Link to={"/beer"}>regresar</Link>
 
