@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-// import {Link} from 'react-router-dom'
-// import axios from 'axios'
+
+
 
 export default class Detail extends Component {
 
   render = ()=> {
     return(     
+    <div>
       <div className="card">
         <div className="card-image">
           <figure className="image is-4by3">
@@ -28,6 +29,7 @@ export default class Detail extends Component {
           </div>
         </div>
       </div>
+     </div>
     )
   }
 }
