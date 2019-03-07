@@ -1,13 +1,24 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import {Card} from "react-bootstrap";
 
 const AllBeers = (props) =>{
   return(
-    <div className="card">
-      <img className="circle responsive-img"  src={props.beer.image_url} width="20" alt=""/>
-        <h4 className="headerProf"> {props.beer.name}</h4>
-        <h6>{props.beer.tagline}</h6>
-        <p>{props.beer.contributed_by}</p>
-    </div>
+
+    <Card style={{ width: '18rem' }}>
+      <Link to={`single/${props.beer._id}`}>
+      <Card.Img variant="top"  className="img"  src={props.beer.image_url} />
+      <Card.Body>
+        <Card.Title>{props.beer.name}</Card.Title>
+        <Card.Text>
+          <h6>{props.beer.tagline}</h6>
+          <p>{props.beer.contributed_by}</p>
+        </Card.Text>
+      </Card.Body>
+      </Link>
+    </Card>
+
+
   )
 };
 

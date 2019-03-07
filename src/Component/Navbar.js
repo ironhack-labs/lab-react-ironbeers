@@ -1,33 +1,25 @@
 import React from 'react'
-import {Link } from "react-router-dom";
+import {Navbar,Form, Button,FormControl,Nav} from "react-bootstrap";
 
-const Navbar= () =>{
-  return(
-  <nav className="blue darken-1" >
-    <div className="nav-wrapper ">
-      <Link to="/" className="  brand-logo left">
-        <i className="center-align large material-icons">home</i>
-      </Link>
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li>
-          <Link to="/beers" className="otherFields">
-            <button  className="btn waves-effect waves-light center-align " > Beers</button>
-          </Link>
-        </li>
-        <li>
-          <Link to="/randombeers" className="otherFields">
-            <button  className="btn waves-effect waves-light center-align " > RandomBeer</button>
-          </Link>
-        </li>
-        <li>
-          <Link to="/newbeer" className="otherFields">
-            <button  className="btn waves-effect waves-light center-align " > New Beer</button>
-          </Link>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  )
+const Navbars= () => {
+  return (
+
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar.Brand href="#home">Iron-Beeers</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/beers">Beers</Nav.Link>
+          <Nav.Link href="/randombeers">Random Beers</Nav.Link>
+          <Nav.Link href="/newbeer">New Beer</Nav.Link>
+          <Nav.Link href="/searchbeer">Search Beer</Nav.Link>
+
+        </Nav>
+
+      </Navbar.Collapse>
+    </Navbar>
+
+  );
 }
-
-export default Navbar
+export default Navbars

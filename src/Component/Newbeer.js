@@ -1,18 +1,20 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import {Form, Row, Col, FormControl, Button} from "react-bootstrap";
+
 class Newbeer extends Component{
 
   handleSubmit = (e) => {
-    let form ={
-      "name":"cerveza",
-      "tagline":"prueba",
-      "description":"nada",
-      "first_brewed":"nada",
-      "brewers_tips":"brewedtips",
-      "attenuation_level":4,
-      "contributed_by":"contributed_level"}
-    let x=document.getElementById('name').value
-     console.log('docu',document.getElementById('name').value)
+    // let form ={
+    //   "name":"cerveza",
+    //   "tagline":"prueba",
+    //   "description":"nada",
+    //   "first_brewed":"nada",
+    //   "brewers_tips":"brewedtips",
+    //   "attenuation_level":4,
+    //   "contributed_by":"contributed_level"}
+
+     console.log('docuzzzzzzz',document.getElementById('tagline').value)
     axios.post('https://ironbeer-api.herokuapp.com/beers/new',
       {
         "name":document.getElementById('name').value,
@@ -39,67 +41,82 @@ class Newbeer extends Component{
 
   render() {
     return(
-      <div>
-        <div className="input-field"><br/>
-          <input
-            name="name"
-            id="name"
-            type="text"
-          />
-          <label htmlFor="codigo_invitacion">name</label>
-        </div>
-        <div className="input-field"><br/>
-          <input
+      <Row>
+        <Col xs={4}>
+        </Col>
+        <Col xs={4}>
+
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Name</Form.Label>
+            <Form.Control   name="name"
+                            id="name"
+                            type="text"/>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Tagline</Form.Label>
+            <Form.Control
             id="tagline"
             name="tagline"
             type="text"
           />
-          <label htmlFor="tagline">tagline</label>
-        </div>
-        <div className="input-field"><br/>
-          <input
-            id="description"
-            name="description"
-            type="text"
-          />
-          <label htmlFor="description">description  </label>
-        </div>
-        <div className="input-field"><br/>
-          <input
-            id="first_brewed"
-            name="first_brewed"
-            type="text"
-          />
-          <label htmlFor="first_brewed">  first brewed  </label>
-        </div>
-        <div className="input-field"><br/>
-          <input
-            id="brewers_tips"
-            name="brewers_tips"
-            type="text"
-          />
-          <label htmlFor="brewers_tips">  brewed tips </label>
-        </div>
-        <div className="input-field"><br/>
-          <input
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label> Description</Form.Label>
+            <Form.Control
+              id="description"
+              name="description"
+              type="text"
+            />
+
+
+            <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>First brewed</Form.Label>
+            <Form.Control
+              id="first_brewed"
+              name="first_brewed"
+              type="text"
+            />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>First brewed</Form.Label>
+            <Form.Control
+              id="brewers_tips"
+              name="brewers_tips"
+              type="text"
+            />
+          </Form.Group>
+
+
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Attenuation level</Form.Label>
+            <Form.Control
             id="attenuation_level"
             name="attenuation_level"
             type="number"
           />
-          <label htmlFor="attenuation_level">  atenuation level  </label>
-        </div>
-        <div className="input-field"><br/>
-          <input
+          </Form.Group>
+
+
+
+          </Form.Group><Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>contributed by</Form.Label>
+            <Form.Control
             id="contributed_by"
             name="contributed_by"
             type="text"
           />
-          <label htmlFor="contributed_by">    contributed_level  </label>
-        </div>
+          </Form.Group>
+
         <div className="input-field"><br/>
-          <button onClick={this.handleSubmit} className="btn waves-effect waves-light"> Crear cuenta</button>
+          <Button onClick={this.handleSubmit}   variant="outline-success"> Crear cuenta</Button>
         </div>
-      </div>
+        </Col>
+        <Col xs={4}>
+        </Col>
+      </Row>
     );
   }
 }

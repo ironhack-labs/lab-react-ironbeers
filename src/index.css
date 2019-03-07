@@ -13,9 +13,18 @@ code {
     monospace;
 }
 
+.img{
+  align-content: center;
+  width: 20px;
+  height: 40px;
+}
+
 .card{
   width: 300px;
-  height: 300px;
+  height: 250px;
+}
+.little{
+  font-size: 8px;
 }
 
 .alinear{

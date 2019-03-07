@@ -14,6 +14,7 @@ class Beers extends Component{
     axios.get('https://ironbeer-api.herokuapp.com/beers/all')
       .then(res=>{
         this.setState({beer: res.data})
+        console.log(res.data)
       });
   }
 

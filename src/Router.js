@@ -1,10 +1,11 @@
 import React from  'react';
 import { Route, Switch}     from "react-router-dom";
 import Home from "./Component/Home";
-import Navbar from "./Component/Navbar";
 import Beers from "./Component/Beers";
 import RandomBeers from "./Component/RandomBeers";
 import Newbeer from "./Component/Newbeer";
+import Find from "./Component/Find";
+import SingleBeer from "./Component/SingleBeer";
 
 
 const Router = () => (
@@ -13,6 +14,8 @@ const Router = () => (
     <Route exact path = "/beers"    component = { Beers } />
     <Route exact path = "/randombeers"    component = { RandomBeers } />
     <Route exact path = "/newbeer"    component = { Newbeer } />
+    <Route exact path = "/searchbeer"    component = { Find } />
+    <Route exact path = "/single/:id"    component = { SingleBeer } />
   </Switch>
 )
 
