@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
-import { BrowserRouter as Switch, Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import Home from './components/Home';
+import Beers from './components/Beers';
+import Random from './components/Random';
+import New from './components/New';
 
 class App extends Component {
 
@@ -17,11 +20,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          {/* <Route path='/beers' component={Beers}/> */}
-          
-        </Switch>
+        <section className="container">
+          <div className="column">
+              <Router>
+                  <div>
+                    <Route exact path='/Home' component={Home}/>
+                    <Route exact path='/beers' component={Beers}/>
+                    <Route exact path='/random' component={Random}/>
+                    <Route exact path='/new' component={New}/>
+
+                    <Redirect to="/home"/>
+                  </div>
+              </Router>
+              
+            </div>
+        </section> 
       </div>
     );
   }
