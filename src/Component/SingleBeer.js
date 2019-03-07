@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
-import {Link} from "react-router-dom";
 import {ListGroup, Card, Col, ListGroupItem, Row} from "react-bootstrap";
 import axios from "axios";
 import Navbars from "./Navbar";
-import DetailBeer from "./Find";
+
 
 class SingleBeer extends Component{
 

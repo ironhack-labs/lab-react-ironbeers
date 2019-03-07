@@ -1,18 +1,10 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import {Form, Row, Col, FormControl, Button} from "react-bootstrap";
+import {Form, Row, Col, Button} from "react-bootstrap";
 
 class Newbeer extends Component{
 
   handleSubmit = (e) => {
-    // let form ={
-    //   "name":"cerveza",
-    //   "tagline":"prueba",
-    //   "description":"nada",
-    //   "first_brewed":"nada",
-    //   "brewers_tips":"brewedtips",
-    //   "attenuation_level":4,
-    //   "contributed_by":"contributed_level"}
 
      console.log('docuzzzzzzz',document.getElementById('tagline').value)
     axios.post('https://ironbeer-api.herokuapp.com/beers/new',
@@ -98,8 +90,6 @@ class Newbeer extends Component{
             type="number"
           />
           </Form.Group>
-
-
 
           </Form.Group><Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>contributed by</Form.Label>

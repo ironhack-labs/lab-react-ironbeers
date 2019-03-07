@@ -1,9 +1,8 @@
 import React from 'react'
-import {Navbar,Form, Button,FormControl,Nav} from "react-bootstrap";
+import {Navbar,Nav} from "react-bootstrap";
 
 const Navbars= () => {
   return (
-
     <Navbar bg="dark" variant="dark" expand="lg">
       <Navbar.Brand href="#home">Iron-Beeers</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>

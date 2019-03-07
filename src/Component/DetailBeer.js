@@ -1,6 +1,5 @@
 import React from 'react'
 
-import {Link} from "react-router-dom";
 import {Card, ListGroup, ListGroupItem} from "react-bootstrap";
 import Navbars from "./Navbar";
 
