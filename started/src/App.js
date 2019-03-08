@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
+// import axios from 'axios';
 import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import Home from './components/Home';
 import BeersList from './components/BeersList';
@@ -20,6 +20,7 @@ class App extends Component {
 
   render() {
     return (
+      
       <div className="App">
       <Router>
         <section className="container">
@@ -33,7 +34,7 @@ class App extends Component {
                     <Route exact path='/random' component={Random}/>
                     <Route exact path='/new' component={New}/>
 
-                    {/* <Redirect to="/home"/> */}
+                     <Redirect to="/home"/> 
                   </div>
               
               

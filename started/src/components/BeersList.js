@@ -35,6 +35,7 @@ export default class BeersList extends Component {
       }
 
     render () {
+      
         const { error, isLoaded, beers } = this.state;
         if (error) {
           return <div>Error: {error.message}</div>;
@@ -42,14 +43,35 @@ export default class BeersList extends Component {
           return <div>Loading...</div>;
         } else {
           return (
-            <ul>
-              {beers.map((beer,index) => {
-                return<li key={index}>
-                  {beer.name} {beer.image} {beer.tagline} 
-                </li>
-              })}
-            </ul>
-          );
+              <div className="container">
+                <Header></Header>
+                {beers.map((beer,index) => (
+                  
+                        <div key={index} className="box">
+                            <article className="media">
+                                <div className="media-left">
+                                <figure className="image is-64x64">
+                                    <img src={beer.image_url} alt="Beer"/>
+                                </figure>
+                                </div>
+                                <div className="media-content">
+                                <div className="content">
+                                    
+                                    <h1>{beer.name}</h1><br/>
+                                    <p>{beer.tagline}</p>
+                                    
+                                    <small>{beer.contributed_by}</small>
+                                
+                                </div>
+                            
+                                </div>
+                            </article>
+                        </div>
+                    )
+                )}
+
+            </div>
+          )
         }
       
     }

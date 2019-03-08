@@ -7,7 +7,7 @@ const Home = () => {
             <div className="card">
                 <div className="card-image"> 
                     <figure className="image is-4by3">
-                    <Link to={`/beers`}><img src="https://devinosconcarla.vinopremier.com/wp-content/uploads/2014/08/516x305_beer-glasses-12.jpg" alt="Placeholder image"/></Link>
+                    <Link to={`/beers`}><img src="https://devinosconcarla.vinopremier.com/wp-content/uploads/2014/08/516x305_beer-glasses-12.jpg" alt="beers"/></Link>
                     </figure>
                 </div>
                 <div className="card-content">
@@ -28,7 +28,7 @@ const Home = () => {
             <div className="card">
                     <div className="card-image"> 
                         <figure className="image is-4by3">
-                        <Link to={`/random`}> <img src="http://cervezassilvestres.com/wp-content/uploads/2018/11/Galeria-Cervezas-Silvestres-Vacaloura-copia.jpg" alt="Placeholder image"/></Link>
+                        <Link to={`/random`}> <img src="http://cervezassilvestres.com/wp-content/uploads/2018/11/Galeria-Cervezas-Silvestres-Vacaloura-copia.jpg" alt="beers"/></Link>
                         </figure>
                     </div>
                     <div className="card-content">
@@ -49,7 +49,7 @@ const Home = () => {
             <div className="card">
                     <div className="card-image"> 
                         <figure className="image is-4by3">
-                        <Link to={`/new`}><img src="https://www.eladerezo.com/wp-content/uploads/2014/10/la-loca-juana-cerveza-artesana-759x500.jpg" alt="Placeholder image"/></Link>
+                        <Link to={`/new`}><img src="https://www.eladerezo.com/wp-content/uploads/2014/10/la-loca-juana-cerveza-artesana-759x500.jpg" alt="beer"/></Link>
                         </figure>
                     </div>
                     <div className="card-content">
