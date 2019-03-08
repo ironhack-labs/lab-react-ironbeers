@@ -5,8 +5,8 @@ const TextArea = (props) => {
     <div>
       <div className="field">
         <div className="control">
-          <p>{props.name}</p>
-          <textarea class="textarea is-primary" placeholder={props.name}></textarea>
+          <p>{props.title}</p>
+          <textarea className="textarea is-primary" placeholder={props.title} {...props}></textarea>
         </div>
       </div>
     </div>

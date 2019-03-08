@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
-import { randomBeer } from '../services/beersService';
+import { randomBeer,detailBeer } from '../services/beersService';
 
 class BeerDetail extends Component {
-
-  constructor(props) {
-    super(props)
-  }
 
   state = {
     beer: [],
@@ -14,18 +10,21 @@ class BeerDetail extends Component {
 
   componentDidMount = () => {
     if(!this.props.location.key){
+
       randomBeer()
       .then(response => this.setState({ beer: response.data[0] }))
       .catch(err => this.setState({ error: true }))
     } else {
-      randomBeer()
-      .then(response => this.setState({ beer: response.data[0] }))
+      detailBeer(this.props.match.params.id)
+      .then(response => {
+        console.log("didmount response",response)
+        this.setState({ beer: response.data })
+      })
       .catch(err => this.setState({ error: true }))
     }
   }
 
   render = () => {
-    console.log(this)
     return (
      <div className="container">
       <div className="card">

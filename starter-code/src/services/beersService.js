@@ -15,10 +15,11 @@ export const randomBeer = () => {
   return http.get('/random')
 }
 
-export const detailBeer = () => {
-  return http.get('/search?q={query}')
+export const detailBeer = (query) => {
+  return http.get(`/single/${query}`)
 }
 
-export const newBeer = () => {
-  return http.post('/new')
+
+export const newBeer = (beer) => {
+  return http.post('/new', beer)
 }

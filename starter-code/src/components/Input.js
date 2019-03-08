@@ -1,38 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Input extends Component {
+const Input = (props) => {
 
-  constructor(props){
-    super(props);
-    
-    this.state = {
-      name: "",
-      tagline: true,
-      first_brewed: false,
-      description: "",
-      image_url: "",
-      brewers_tips: "",
-      contributed_by: "",
-      attenuation_level: undefined
-    }
-  }
-
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value })
-  }
-
-  render() {
-    return (
-      <div>
-        <div className="field">
-          <div className="control">
-            <p>{this.props.name}</p>
-            <input className="input is-primary" type="text" placeholder={this.props.name} value={this.state.name} onChange={this.handleChange}/>
-          </div>
+  return (
+    <div>
+      <div className="field">
+        <div className="control">
+          <p>{props.title}</p>
+          <input className="input is-primary" type={props.type} placeholder={props.title} {...props}/>
         </div>
       </div>
-        )
-  }
+    </div>
+  )
 }
+
+
+
 
 export default Input
