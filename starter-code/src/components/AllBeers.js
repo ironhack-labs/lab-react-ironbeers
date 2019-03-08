@@ -18,7 +18,16 @@ class AllBeers extends Component {
   showBeers = () => {
     let list = this.state.beers.map((beer) => {
       return ( 
-        <h1>{beer.name}</h1>
+        
+        <div className="card md-col-4">
+          <img className="card-img-top" src={beer.image_url} alt="Beer" />
+          <div className="card-body">
+           <h5 className="card-title">{beer.name}</h5>
+            <p className="card-text">{beer.tagline}</p>
+            <p className="card-text">Created By: {beer.contributed_by}</p>
+          </div>
+        </div>
+
         )
     })
     return list;
@@ -27,8 +36,8 @@ class AllBeers extends Component {
 
   render() {
     return (
-      <div className="AllBeers">
-        <h1>{this.showBeers()}</h1>
+      <div className="AllBeers container">
+        <div className="row"> {this.showBeers()} </div>
       </div>
     );
   }
