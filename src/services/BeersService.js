@@ -21,3 +21,7 @@ export const getOneRandomBeer = () => {
 export const postNewBeer = (beer) => {
   return http.post('/new', beer);
 }
+
+export const searchBeer = (search) => {
+  return http.get(`/search?q=${search}`);
+}
