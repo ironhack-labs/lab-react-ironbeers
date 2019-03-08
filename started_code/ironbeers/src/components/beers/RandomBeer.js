@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import NavBar from './NavBar'
 
 class RandomBeer extends Component {
     state={
@@ -26,17 +26,28 @@ class RandomBeer extends Component {
     render(){
         //console.log(this.state.beer)
         return(
-            <div>
-                <img src={this.state.beer.image_url} alt=""/>
-                <h3>{this.state.beer.name}</h3>
-                <p>{this.state.beer.tagline}</p>
-                <p>{this.state.beer.first_brewed}</p>
-                <p>{this.state.beer.atenuation_level}</p>
-                <p>{this.state.beer.description}</p>
-                <p>{this.state.beer.contributed_by}</p> 
+            <div className='container'>
+                <NavBar/>
+                <div className='info-sigle'>
+                    <div className="beerDatils" >
+                        <img src={this.state.beer.image_url} alt="" className="img-Details"/>
+                    </div>
+                    <div >
+                        <div className="row ">
+                            <h3  className="col-8">{this.state.beer.name}</h3>
+                            <p  className="col ">{this.state.beer.attenuation_level}</p>
+                        </div>
+                        <div className="row">
 
-                <Link to={"/beer"}>regresar</Link>
-
+                            <p className="col-8">{this.state.beer.tagline}</p>
+                            <p className="col">{this.state.beer.first_brewed}</p>
+                        
+                        </div>
+                            <p>{this.state.beer.description}</p>
+                            <p>{this.state.beer.contributed_by}</p> 
+                    </div>
+                </div>
+           
             </div>
         )
     }

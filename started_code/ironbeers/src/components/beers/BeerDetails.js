@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import NavBar from './NavBar'
 
 class BeerDetails extends Component{
     state={
@@ -7,7 +7,7 @@ class BeerDetails extends Component{
         name:'',
         tagline:'',
         first_brewed:'',
-        atenuation_level:'',
+        attenuation_level:'',
         description:'',
         contributed_by:''
     };
@@ -36,22 +36,33 @@ class BeerDetails extends Component{
         name,
         tagline,
         first_brewed,
-        atenuation_level,
+        attenuation_level,
         description,
         contributed_by,
         } = this.state
         return(
-            <div>
-                <img src={image_url} alt={name}/>
-                <h3>{name}</h3>
-                <p>{tagline}</p>
-                <p>{first_brewed}</p>
-                <p>{atenuation_level}</p>
-                <p>{description}</p>
-                <p>{contributed_by}</p> 
-
-                <Link to={"/beer"}>regresar</Link>
-
+            <div className="container">
+                <NavBar/>
+                <div className='info-sigle'>
+                    <div className="beerDatils">
+                        <img src={image_url} alt={name} className="img-Details"/>
+                    </div>
+                    <br/>
+                    <div className="row">
+                    
+                        <h3 className="col-8">{name}</h3>
+                        <p className="col">{attenuation_level}</p>
+                        
+                    </div>
+                    <div className="row">
+                            <p className="col-8">{tagline}</p>
+                            <p className="col">{first_brewed}</p>
+                    </div>
+                    <div>
+                    <p>{description}</p>
+                    <p>{contributed_by}</p> 
+                    </div>
+                </div>
             </div>
         )
     }

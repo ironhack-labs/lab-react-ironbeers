@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import NavBar from './NavBar'
 
 class BeerList extends Component {
     state={
@@ -21,18 +22,25 @@ class BeerList extends Component {
 
     render(){
         return(
-            <div>
+            <div className="container">
+            <NavBar/>
             {this.state.beerlist.map((beer, index) => {
                 return(
-                    <div key={beer.id}>
-                        <img src={beer.image_url} alt={beer.name}/>
-                           
+                    <div key={beer.id} className="info-sigle">
+                        
+                        <div className="row">
+                        <div className="col-4">
+                            <img className="img-beer" src={beer.image_url} alt={beer.name}/>
+                        </div>
+                        <div className="col-8">  
                            <Link to={`/single/${beer._id}`}>
-                           <h3>{beer.name}</h3>
+                           <h3>Name: {beer.name}</h3>
                            </Link>
                             
-                            <p>{beer.tagline}</p>
-                            <p>{beer.contributed_by}</p> 
+                            <h4>{beer.tagline}</h4>
+                            <p>contributed by: {beer.contributed_by}</p> 
+                        </div> 
+                        </div>
                     </div>
                 )    
             })}
