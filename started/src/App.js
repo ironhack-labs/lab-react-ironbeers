@@ -4,7 +4,7 @@ import './App.css';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import Home from './components/Home';
-import Beers from './components/Beers';
+import BeersList from './components/BeersList';
 import Random from './components/Random';
 import New from './components/New';
 
@@ -29,11 +29,11 @@ class App extends Component {
               
                   <div>
                     <Route exact path='/Home' component={Home}/>
-                    <Route exact path='/beers' component={Beers}/>
+                    <Route exact path='/Beers' component={BeersList}/>
                     <Route exact path='/random' component={Random}/>
                     <Route exact path='/new' component={New}/>
 
-                    <Redirect to="/home"/>
+                    {/* <Redirect to="/home"/> */}
                   </div>
               
               
