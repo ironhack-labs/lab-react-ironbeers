@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Beers from './components/Beers';
 import Random from './components/Random';
 import New from './components/New';
+import Header from './components/misc/Header';
 
 class App extends Component {
 
@@ -20,6 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header></Header>
         <section className="container">
           <div className="column">
               <Router>
