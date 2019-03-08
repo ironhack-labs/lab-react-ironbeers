@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return(
         <section class="hero is-info">
-            <div class="hero-body">
+            <div class="hero-body has-text-centered">
                 <div class="container">
-                <Link to='/home'> <i className="fas fa-home is-size-2"></i></Link> 
+                <Link to='/home'> <i className="fas fa-home is-size-1 "></i></Link> 
                 </div>
             </div>
         </section>

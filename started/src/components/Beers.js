@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Header from '../components/misc/Header';
 
 // import { beersList } from '../services/BeersServices';
 
@@ -19,8 +21,10 @@ export default class Beers extends Component {
 
     render () {
         return(
+            <div>
+            <Header></Header>
             <h1>Beers</h1>
-
+            </div>
         )
     }
 }

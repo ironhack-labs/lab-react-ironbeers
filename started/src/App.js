@@ -7,7 +7,7 @@ import Home from './components/Home';
 import Beers from './components/Beers';
 import Random from './components/Random';
 import New from './components/New';
-import Header from './components/misc/Header';
+
 
 class App extends Component {
 
@@ -21,10 +21,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header></Header>
+      <Router>
         <section className="container">
+        
+        
           <div className="column">
-              <Router>
+              
                   <div>
                     <Route exact path='/Home' component={Home}/>
                     <Route exact path='/beers' component={Beers}/>
@@ -33,10 +35,11 @@ class App extends Component {
 
                     <Redirect to="/home"/>
                   </div>
-              </Router>
+              
               
             </div>
         </section> 
+     </Router>
       </div>
     );
   }
