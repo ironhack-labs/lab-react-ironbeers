@@ -5,6 +5,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import Home from './components/Home';
 import BeersList from './components/BeersList';
+import DetailedBeer from './components/DetailedBeer';
 import Random from './components/Random';
 import New from './components/New';
 
@@ -31,6 +32,7 @@ class App extends Component {
                   <div>
                     <Route exact path='/Home' component={Home}/>
                     <Route exact path='/Beers' component={BeersList}/>
+                    <Route exact path='/single/:id' component={DetailedBeer}/>
                     <Route exact path='/random' component={Random}/>
                     <Route exact path='/new' component={New}/>
 

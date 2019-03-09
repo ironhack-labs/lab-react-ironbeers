@@ -12,9 +12,9 @@ export default class BeersList extends Component {
           isLoaded: false,
           beers: []
         };
-      }
+    }
 
-      componentDidMount() {
+    componentDidMount() {
         fetch("https://ironbeer-api.herokuapp.com/beers/all")
           .then(res => res.json())
           .then(
@@ -23,7 +23,7 @@ export default class BeersList extends Component {
                 isLoaded: true,
                 beers: result
               });
-              console.log(result)
+            //   console.log(result)
             },
             (error) => {
               this.setState({
@@ -31,8 +31,8 @@ export default class BeersList extends Component {
                 error: error
               });
             }
-          )
-      }
+        )
+    }
 
     render () {
       
@@ -44,7 +44,7 @@ export default class BeersList extends Component {
         } else {
           return (
               <div className="container">
-                <Header></Header>
+                <Header/>
                 {beers.map((beer,index) => (
                   
                         <div key={index} className="box">
@@ -56,8 +56,10 @@ export default class BeersList extends Component {
                                 </div>
                                 <div className="media-content">
                                 <div className="content">
-                                    
-                                    <h1>{beer.name}</h1><br/>
+                                    <Link to={`/single/${beer._id}`}>
+                                    <h1>{beer.name}</h1>
+                                    </Link>
+                                    <br/>
                                     <p>{beer.tagline}</p>
                                     
                                     <small>{beer.contributed_by}</small>
