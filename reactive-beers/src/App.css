@@ -1,3 +1,46 @@
-img {
-  width: 400px;
+body {
+  height: 100%;
+}
+
+.form {
+  margin: auto 30px;
+}
+
+.field {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.header {
+  justify-content: center !important;
+}
+
+i {
+  color: white;
+}
+
+.card-beer img {
+  height: 75px !important;
+}
+
+.card-beer figure {
+  height: 100% !important;
+}
+
+.card-beer .media-content {
+  margin: auto;
+}
+
+.card-detail img {
+  height: 200px;
+  width: auto;
+  margin: auto;
+}
+
+.card-home {
+  height: 33vh;
+}
+
+.card-home img {
+  height: 115px;
 }
