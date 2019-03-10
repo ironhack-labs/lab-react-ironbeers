@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import DetailedBeer from './DetailedBeer';
-// import { Link } from 'react-router-dom';
-// import Header from '../components/misc/Header';
 
-export default class Random extends Component {
+
+export default class Single extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -22,16 +21,16 @@ export default class Random extends Component {
     }
 
     componentDidMount() {
-        // const {params} = this.props.match;
+        const {params} = this.props.match;
         // console.log(this.props.match)
-        fetch(`https://ironbeer-api.herokuapp.com/beers/random`)
+        fetch(`https://ironbeer-api.herokuapp.com/beers/single/${params.id}`)
           .then(res => res.json())
           .then(
             (data) => {
-                console.log(data)
+                // console.log(data)
               this.setState({
                 isLoaded: true,
-                beer: data[0]
+                beer: data
               });
             
             },
@@ -50,12 +49,12 @@ export default class Random extends Component {
           } else if (!isLoaded) {
             return <div>Loading...</div>;
           } else {
-            return(
-                <div>
-                    <DetailedBeer {...this.state.beer}></DetailedBeer>
-                </div>
-            )
-        } 
-    }
-
+        return(
+            <div>
+              <DetailedBeer {...this.state.beer}></DetailedBeer>
+            </div>
+      
+          )
+        }
+    }    
 }
