@@ -11,12 +11,9 @@ class SingleBeer extends Component {
   }
 
   componentDidMount = () => {
-    console.log("PROPS =>", this.props)
     getBeer(this.props.match.params.beerId)       
         .then(response => {
-          //console.log(response)
           this.setState({ beer: response.data })
-          console.log("LAS CERVEZA ESCOGIDA es ", this.state.beer)
          })
         .catch(err => this.setState({ error: true }))
   }
@@ -28,6 +25,7 @@ class SingleBeer extends Component {
       <BeerDetail {...this.state.beer}/>
     </div>
   )
+  
 }
 
 export default SingleBeer;
