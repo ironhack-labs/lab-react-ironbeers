@@ -51,7 +51,7 @@ export default class Single extends Component{
           } else {
         return(
             <div>
-              <DetailedBeer {...this.state.beer}></DetailedBeer>
+              <DetailedBeer {...beer}/>
             </div>
       
           )

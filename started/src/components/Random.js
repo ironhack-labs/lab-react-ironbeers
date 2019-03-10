@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import DetailedBeer from './DetailedBeer';
-// import { Link } from 'react-router-dom';
-// import Header from '../components/misc/Header';
+
 
 export default class Random extends Component {
     constructor(props) {
@@ -22,8 +21,6 @@ export default class Random extends Component {
     }
 
     componentDidMount() {
-        // const {params} = this.props.match;
-        // console.log(this.props.match)
         fetch(`https://ironbeer-api.herokuapp.com/beers/random`)
           .then(res => res.json())
           .then(
@@ -52,7 +49,7 @@ export default class Random extends Component {
           } else {
             return(
                 <div>
-                    <DetailedBeer {...this.state.beer}></DetailedBeer>
+                    <DetailedBeer {...beer}/>
                 </div>
             )
         } 
