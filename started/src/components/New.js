@@ -32,24 +32,24 @@ export default class New extends Component {
     handleFormSubmit = (e) => {
         e.preventDefault();
 
-
-        const name = this.state.newBeer.name;
-        const tagline = this.state.newBeer.tagline;
-        const description = this.state.newBeer.description;
-        const first_brewed = this.state.newBeer.first_brewed;
-        const brewers_tips = this.state.brewers_tips;
-        const attenuation_level = this.state.newBeer.attenuation_level;
-        const contributed_by = this.state.newBeer.contributed_by;
+        const{ name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = this.state.newBeer;
+        // const name = this.state.newBeer.name;
+        // const tagline = this.state.newBeer.tagline;
+        // const description = this.state.newBeer.description;
+        // const first_brewed = this.state.newBeer.first_brewed;
+        // const brewers_tips = this.state.brewers_tips;
+        // const attenuation_level = this.state.newBeer.attenuation_level;
+        // const contributed_by = this.state.newBeer.contributed_by;
 
         const data = {
-
-            name: name,
-            tagline: tagline,
-            description: description,
-            first_brewed: first_brewed,
-            brewers_tips: brewers_tips,
-            attenuation_level: attenuation_level,
-            contributed_by: contributed_by
+            name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by
+            // name: name,
+            // tagline: tagline,
+            // description: description,
+            // first_brewed: first_brewed,
+            // brewers_tips: brewers_tips,
+            // attenuation_level: attenuation_level,
+            // contributed_by: contributed_by
         };
         console.log(data)
 

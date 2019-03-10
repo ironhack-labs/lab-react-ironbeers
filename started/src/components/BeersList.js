@@ -10,7 +10,8 @@ export default class BeersList extends Component {
         this.state = {
           error: null,
           isLoaded: false,
-          beers: []
+          beers: [],
+          search: ''
         };
     }
 
@@ -33,6 +34,39 @@ export default class BeersList extends Component {
             }
         )
     }
+    handleChange(e) {
+      this.setState({
+        search: e.target.value
+      })
+    }
+
+    onSearch() {
+      const {search} = this.state.search;
+      console.log(this.state.search)
+      if (search){
+        fetch(`https://ironbeer-api.herokuapp.com/beers/search?q=${search}`)
+          .then(res => res.json())
+          .then(
+            (data) => {
+                // console.log(data)
+              this.setState({
+                isLoaded: true,
+                beers: data
+              });
+            
+            },
+            (error) => {
+              this.setState({
+                isLoaded: true,
+                error: error
+              });
+            }
+        )
+      } else {
+        this.componentDidMount();
+      }
+
+  } 
 
     render () {
       
@@ -45,6 +79,14 @@ export default class BeersList extends Component {
           return (
               <div className="container">
                 <Header/>
+                <div className="panel-block">
+                    <p className="control has-icons-left">
+                      <input className="input " type="text" placeholder="search" onChange={this.handleChange}/>
+                      <span className="icon is-small is-left">
+                        <i className="fas fa-search" aria-hidden="true"></i>
+                      </span>
+                    </p>
+                </div>
                 {beers.map((beer,index) => (
                   
                         <div key={index} className="box">
