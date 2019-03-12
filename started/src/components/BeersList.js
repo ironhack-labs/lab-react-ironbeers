@@ -34,21 +34,17 @@ export default class BeersList extends Component {
             }
         )
     }
-    handleChange(e) {
-      this.setState({
-        search: e.target.value
-      })
-    }
+   
 
-    onSearch() {
-      const {search} = this.state.search;
-      console.log(this.state.search)
+    onSearch (e) {
+      const search = e.target.value;
+      console.log(search)
       if (search){
         fetch(`https://ironbeer-api.herokuapp.com/beers/search?q=${search}`)
           .then(res => res.json())
           .then(
             (data) => {
-                // console.log(data)
+                 console.log(data)
               this.setState({
                 isLoaded: true,
                 beers: data
@@ -81,7 +77,7 @@ export default class BeersList extends Component {
                 <Header/>
                 <div className="panel-block">
                     <p className="control has-icons-left">
-                      <input className="input " type="text" placeholder="search" onChange={this.handleChange}/>
+                      <input className="input " type="text" placeholder="search" name="search"  onChange={this.onSearch}/>
                       <span className="icon is-small is-left">
                         <i className="fas fa-search" aria-hidden="true"></i>
                       </span>
