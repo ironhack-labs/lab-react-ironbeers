@@ -3,16 +3,19 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class BeerDetails extends Component{
-  state = {
+  constructor(props){
+    super(props);
+    this.state = {
     thebeer: ''
   }
+}
 
   componentDidMount() {
-    axios.get("https://ironbeer-api.herokuapp.com/beers/single/:id")
+    const id = this.props.match.params.id;
+    axios.get(`https://ironbeer-api.herokuapp.com/beers/single/${id}`)
     .then(res => {
-      //this.setState({thebeer: response.data})
       this.setState({thebeer: res.data})
-      console.log(this.state.thebeer)
+      //console.log(this.state.thebeer)
     })
   }
 
@@ -21,15 +24,15 @@ class BeerDetails extends Component{
   render() {
   return(
     <div className="BeerDetails container">
-    {this.state.thebeer}
-       {/* <div className="card md-col-4">
+  
+       <div className="card md-col-4">
            <img className="card-img-top" src={this.state.thebeer.image_url} alt="Beer" />
            <div className="card-body">
             <h5 className="card-title">{this.state.thebeer.name}</h5>
              <p className="card-text">{this.state.thebeer.tagline}</p>
              <p className="card-text">Created By: {this.state.thebeer.contributed_by}</p>
            </div>
-         </div> */}
+         </div>
       </div>
   )
   }
