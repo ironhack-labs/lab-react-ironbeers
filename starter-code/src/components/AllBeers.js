@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class AllBeers extends Component {
@@ -19,7 +19,7 @@ class AllBeers extends Component {
     let list = this.state.beers.map((beer) => {
       return ( 
         
-        
+      <Link to={`/single/${beer._id}`}>
         <div className="card md-col-4">
           <img className="card-img-top" src={beer.image_url} alt="Beer" />
           <div className="card-body">
@@ -28,6 +28,7 @@ class AllBeers extends Component {
             <p className="card-text">Created By: {beer.contributed_by}</p>
           </div>
         </div>
+      </Link>
 
         )
     })

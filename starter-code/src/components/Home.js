@@ -9,6 +9,7 @@ class Home extends Component {
       <div className="Home">
         <Link to='/all'>All Beers</Link>
         <Link to='/random'>Random Beer</Link>
+        <Link to='/new-beer'>New</Link>
       </div>
     );
   }
