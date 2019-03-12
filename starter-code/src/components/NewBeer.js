@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
 import axios from 'axios'
+import navbar from '../components/Navbar'
 
 class NewBeer extends Component {
 
@@ -40,6 +40,7 @@ class NewBeer extends Component {
     render(){
         return(
             <div>
+              < navbar />
                 new beer
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" name="name" placeholder="name"/>

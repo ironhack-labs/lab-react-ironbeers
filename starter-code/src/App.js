@@ -16,6 +16,7 @@ class App extends Component {
         < Home />
       
           <Switch>
+           
               <Route exact path='/all' component={AllBeers} />
               <Route exact path='/random' component={RandomBeer} />
               <Route path='/single/:id' component={BeerDetails}></Route>

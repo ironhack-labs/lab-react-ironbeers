@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import AllBeers from '../components/AllBeers'
 import axios from 'axios';
+import navbar from '../components/Navbar'
 
 class BeerDetails extends Component{
   constructor(props){
@@ -24,7 +25,7 @@ class BeerDetails extends Component{
   render() {
   return(
     <div className="BeerDetails container">
-  
+    < navbar />
        <div className="card md-col-4">
            <img className="card-img-top" src={this.state.thebeer.image_url} alt="Beer" />
            <div className="card-body">

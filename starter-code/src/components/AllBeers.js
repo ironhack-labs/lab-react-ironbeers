@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import navbar from '../components/Navbar'
 
 class AllBeers extends Component {
 
@@ -39,6 +40,7 @@ class AllBeers extends Component {
   render() {
     return (
       <div className="AllBeers container">
+        < navbar />
         <div className="row"> {this.showBeers()} </div>
       </div>
     );
