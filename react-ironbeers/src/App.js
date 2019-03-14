@@ -6,6 +6,7 @@ import Beers from './components/Beers';
 import Homepage from './components/Homepage';
 import Beerdetails from './components/Beerdetails';
 import Randombeer from './components/Randombeer';
+import Newbeer from './components/Newbeer';
 
 
 class App extends Component {
@@ -18,6 +19,8 @@ class App extends Component {
           <Route exact path="/beers" component={Beers}/>
           <Route exact path="/beers/:id" component={Beerdetails}/>
           <Route exact path="/random-beer" component={Randombeer}/>
+          <Route exact path="/new-beer" component={Newbeer}/>
+
         </Switch>
       </div>
     );
