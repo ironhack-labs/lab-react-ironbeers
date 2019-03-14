@@ -1,0 +1,13 @@
+.beersList {
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+}
+
+.oneBeer {
+    width : 30px;
+
+
+}
