@@ -1,0 +1,30 @@
+/* .AllBeers {
+  width: 33%;
+} */
+
+.AllBeers-container {
+  margin: 0 auto;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 350px;
+  overflow: auto;
+}
+
+img {
+  height: 200px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+h3 {
+  text-decoration: none;
+  color: black;
+}

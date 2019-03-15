@@ -1,0 +1,13 @@
+.NavBar {
+  background-color: rgb(15, 227, 255);
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 40px;
+  width: 4vw;
+}

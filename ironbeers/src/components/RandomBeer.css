@@ -1,0 +1,15 @@
+.RandomBeer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 20px;
+}
+
+.image-randomBeer {
+  height: 350px;
+  width: 150px;
+  margin: 0 auto;
+}
