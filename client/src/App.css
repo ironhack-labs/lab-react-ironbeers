@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 400px;
+  margin: 30px auto;
 }
 
 .App-logo {
@@ -7,11 +9,14 @@
   height: 40vmin;
   pointer-events: none;
 }
-.nav-style {
-  text-align: right;
+
+.navlist{
+  list-style: none;
+  background-color: aquamarine;
 }
 
-.nav-style li {
+.nav-style {
+  text-align: center;
   list-style: none;
   display: inline;
   margin: 0 10px;
@@ -33,4 +38,9 @@
 
 .App-link {
   color: #61dafb;
+}
+
+
+img {
+  width: 100px;
 }
