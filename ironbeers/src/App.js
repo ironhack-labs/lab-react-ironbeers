@@ -14,12 +14,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-         <Apiservice/>
+       
         <Switch>
        
         <Route exact path='/' component={home} />
 
-        <Route path='/beers' component={Apiservice} />
+        <Route exact path='/beers' component={Apiservice} />
         <Route path='/newBeer' component={newBeer} />
         <Route path='/randomeBeers' component={randomeBeers} />
 

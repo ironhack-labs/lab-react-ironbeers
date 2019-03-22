@@ -23,7 +23,8 @@ class Apiservice extends Component {
 
     render() {
         return (
-            <div className="App">
+
+            <div className="beers">
                 {this.state.beers.map(beer =>(
                     <div key={beer._id}>
                 <h1>{beer.name}</h1>

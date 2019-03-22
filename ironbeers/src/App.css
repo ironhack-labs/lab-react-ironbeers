@@ -38,3 +38,12 @@
 .sections-home img{
   width: 50%
 }
+
+.beers{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%
+}
+.beers img{
+  height: 450px
+}
