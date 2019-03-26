@@ -12,12 +12,13 @@ class AllBeers extends Component {
 
     displayBeers = () =>{
         let list = this.state.beers.map((beer , index) =>{
-            return <div className ='col-lg-3 eachBeer'>
-                <img src ={beer.img_url} className = 'beerImg'></img>
-                <h4>{beer.name}</h4>
-                <h5>{beer.tagline}</h5>
-                <p>Created by: {beer.contributed_by}</p>
-            </div>
+            return (
+                <div key = {index} className ='col-lg-3'>
+                    <img src ={beer.img_url} alt = "beer" className='beerImg'></img>
+                    <h4>{beer.name}</h4>
+                    <h5>{beer.tagline}</h5>
+                    <p>Created by: {beer.contributed_by}</p>
+                </div>)
         })
         return list
     }
@@ -26,14 +27,16 @@ class AllBeers extends Component {
         axios.get("https://ironbeer-api.herokuapp.com/beers/all")
         .then(res => {
             this.setState({
-                beers:res.data
+                beers: res.data
             })
         })
     }
     render(){
         return(
             <div className="container">
-            {this.displayBeers}
+                <div className ="row">
+                    {this.displayBeers()}
+                </div>
             </div>
         )
     }
