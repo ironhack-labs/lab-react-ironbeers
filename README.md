@@ -7,7 +7,7 @@ Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mis
 <div style="display: flex; justify-content: center">
 <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
 </div>
- 
+  <!-- Just trying -->
 
 ## Requirements
 
