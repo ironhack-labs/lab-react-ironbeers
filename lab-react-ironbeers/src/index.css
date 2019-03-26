@@ -17,16 +17,16 @@ code {
   height: 150px;
   margin: 10px 0;
 }
-.nav-style {
+.navbarStyle {
   text-align: right;
 }
 
-.nav-style li {
+.navbarStyle li {
   list-style: none;
   display: inline;
   margin: 0 10px;
 }
 
-.nav-style a {
+.navbarStyle a {
   text-decoration: none;
 }

@@ -19,7 +19,7 @@ componentDidMount(){
         <Navbar/>
         <Switch>
           <Route exact path ='/beers' component = {AllBeers}/>
-          <Routh exact path ='/random-beer' component = {RandomBeer}/>
+          <Route exact path ='/random-beer' component = {RandomBeer}/>
         </Switch>      
       </div>
     );
