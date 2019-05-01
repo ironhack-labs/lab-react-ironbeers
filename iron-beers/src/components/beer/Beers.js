@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Beer from './Beer';
+import BeerFilter from './BeerFilter';
 
 class Beers extends Component {
     constructor(props){
@@ -18,16 +19,26 @@ class Beers extends Component {
         })
     
     }
+
+    getSearchValue = (value) => {
+      const searchBeer = value.toLowerCase();
+      axios.get(`https://api.punkapi.com/v2/beers?name=${searchBeer}`)
+        .then(responseFromApi => {
+          this.setState({
+            beers: responseFromApi.data
+          })
+        })
+    }
+
   render(){
       const {beers} = this.state;
-console.log(beers)
 
     return (
-      <div>
-     
-      
-          {beers.map(beer => <Beer {...beer} detail={`/beers/${beer.id}`} />)}
-      
+      <div className="container">
+      <div className="m-10">
+          <BeerFilter search={this.getSearchValue}/>
+          {beers.map(beer => <Beer key={beer.id} {...beer} detail={`/beers/${beer.id}`} />)}
+          </div>
       </div>
     );
   }

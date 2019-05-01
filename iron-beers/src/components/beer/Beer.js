@@ -11,18 +11,17 @@ class Beer extends Component {
   
   
   render(){
-      const {beers} = this.state;
       const {image_url, name, tagline, contributed_by, detail} = this.props;
     return (
-        <div class="box w">
-        <article class="media">
-          <div class="media-left">
-            <figure class="image is-32x32">
-              <img src={image_url} alt="Image"/>
+        <div className="box w">
+        <article className="media">
+          <div className="media-left">
+            <figure className="image is-32x32">
+              <img src={image_url} alt="Beer"/>
             </figure>
           </div>
-          <div class="media-content">
-            <div class="content">
+          <div className="media-content">
+            <div className="content">
               <p >
                 <strong className="is-size-4"><Link to={detail}>{name}</Link></strong>
                 <br/>

@@ -5,6 +5,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bulma": "^0.7.4",
+    "install": "^0.12.2",
+    "npm": "^6.9.0",
+    "query-string": "^6.5.0",
     "react": "^16.8.6",
     "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",

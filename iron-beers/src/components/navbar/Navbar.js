@@ -19,7 +19,7 @@ class Navbar extends Component {
       <ul className={`${!this.state.isOpen ? "is-invisible" : ""}`}>
         <li>
           <Link
-            to="/beers"
+            to="/"
             className="navbar-item has-text-centered"
             onClick={this.handleChange}
           >

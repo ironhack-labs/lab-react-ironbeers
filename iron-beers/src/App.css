@@ -1,8 +1,28 @@
 .beerLogo{
   width:50px;
-  height: 50px !important;
+  height: 200px;
+}
+.beer{
+  width:80px;
+  height: 350px;
 }
 
 .w{
   height: 200px;
+}
+.has-image-centered {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.is-justify-between{
+  justify-content: space-between;
+}
+.m-10{
+  margin: 10px;
+}
+.w-100{
+  width: 100%;
+  max-width: 500px;
 }
