@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Allbeers from "./Allbeers";
 import Home from "./Home";
 import BeerDetail from "./BeerDetail";
+import Form from "./Form";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/beers" component={Allbeers} />
         <Route path="/beer/:id" component={BeerDetail} />
         <Route path='/random' component={BeerDetail}/>
+        <Route path='/new' component={Form}/>
       </Switch>
     </React.Fragment>
   );

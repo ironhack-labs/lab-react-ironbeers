@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as registerServiceWorker from "./serviceWorker";
+import 'bulma/css/bulma.css';
 
 import { BrowserRouter as Router } from "react-router-dom";
 

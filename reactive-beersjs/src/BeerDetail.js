@@ -35,7 +35,10 @@ export default class BeerDetail extends Component {
       <div>
         <Navbar></Navbar>
         <p>{this.state.beer.name}</p>
-        <img src={this.state.beer.image_url}/>
+        <img src={this.state.beer.image_url} alt=''/>
+        <p>{this.state.beer.description}</p>
+        <p>{this.state.beer.contributed_by}</p>
+
       </div>
     )
   }

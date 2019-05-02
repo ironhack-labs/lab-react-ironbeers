@@ -15,7 +15,7 @@ export default class Home extends Component {
             <h2>Random beer</h2>
           </div>
         </Link>
-        <Link to="/new-beer">
+        <Link to="/new">
           <div>
             <h2>Add new beer</h2>
           </div>
