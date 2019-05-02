@@ -1,0 +1,25 @@
+.NewBeer{
+  display: flex;
+  flex-direction: column;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.NewBeer label{
+  font-size: 1.4rem;
+  margin-left: 1rem;
+}
+
+.NewBeer input{
+  padding: 1rem;
+  border: 1px solid hsl(210, 50%, 50%);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.NewBeer button{
+  padding: 1rem;
+  border: 1px solid #3336;
+  border-radius: .5rem;
+  cursor: pointer; 
+}

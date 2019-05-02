@@ -1,5 +1,10 @@
 .Allbeers{
   padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .Allbeers .Beer{

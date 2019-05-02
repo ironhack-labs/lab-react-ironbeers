@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
+import './NewBeer.css';
 
 export default class NewBeer extends Component {
   constructor(){
@@ -45,7 +46,7 @@ export default class NewBeer extends Component {
     }
 
     return (
-      <form>
+      <form className="NewBeer">
         <label htmlFor="name">Name</label>
         <input type="text" value={this.state.name} onChange={(e)=>this.handleField(e, 'name')}/>
         <label htmlFor="tagline">Tagline</label>
