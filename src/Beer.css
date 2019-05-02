@@ -16,6 +16,14 @@
   text-align: center;
 }
 
+.Beer h3 a{
+  text-decoration: none;
+  color: hsl(210, 75%, 35%);
+}
+.Beer h3 a:hover{
+  color: hsl(210, 75%, 15%);
+}
+
 .Beer p{
   color: #666;
   font-size: 1.4rem;
