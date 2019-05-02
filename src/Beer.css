@@ -1,0 +1,27 @@
+.Beer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Beer img{
+  height: 25rem;
+  padding: 1rem;
+}
+
+.Beer h3{
+  font-size: 2.4rem;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+.Beer p{
+  color: #666;
+  font-size: 1.4rem;
+}
+
+.Beer span{
+  font-size: 1.2rem;
+  padding: .5rem;
+}
