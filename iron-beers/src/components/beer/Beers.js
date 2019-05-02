@@ -22,7 +22,7 @@ class Beers extends Component {
 
     getSearchValue = (value) => {
       const searchBeer = value.toLowerCase();
-      axios.get(`https://api.punkapi.com/v2/beers?name=${searchBeer}`)
+      axios.get(`https://api.punkapi.com/v2/beers?beer_name=${searchBeer}`)
         .then(responseFromApi => {
           this.setState({
             beers: responseFromApi.data
