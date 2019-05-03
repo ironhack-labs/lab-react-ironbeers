@@ -1,0 +1,28 @@
+.container-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-links a {
+padding: 50px;
+text-decoration: none;
+border: 1px solid green;
+margin: 20px;
+}
+
+.beerImg {
+  height: 150px;
+}
+
+.beerList {
+  display: flex;
+  border: 1px solid green;
+}
+
+.beerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

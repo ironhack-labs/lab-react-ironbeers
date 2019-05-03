@@ -1,0 +1,29 @@
+.nav-style {
+  text-align: right;
+  background-color: aquamarine;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-style li {
+  list-style: none;
+  display: inline;
+  margin: 0 10px;
+  padding: 40px;
+}
+
+.nav-style a {
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+i {
+  padding: 15px;
+}
+
+i::before {
+  justify-content: center;
+  align-items: center;
+}
+
