@@ -17,7 +17,7 @@ class SingleBeer extends React.Component {
         .get(`http://localhost:5000/single/${beerId}`)
         .then(singleBeersPayload => {
           const theBeer = singleBeersPayload.data
-          console.log(singleBeersPayload.data)
+          // console.log(singleBeersPayload.data)
           this.setState({
             ...this.state,
             beer: theBeer
