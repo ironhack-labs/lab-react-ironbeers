@@ -1,0 +1,11 @@
+img {
+    height: 90px;
+    width: 35px;
+}
+
+.beer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
