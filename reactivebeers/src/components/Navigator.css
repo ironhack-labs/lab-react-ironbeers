@@ -3,3 +3,9 @@
   background-color: rgb(49, 156, 192);
   height: 70px;
 }
+
+.home {
+  padding: 20px;
+  background-color: black;
+  color: blue bold;
+}

@@ -1,17 +1,41 @@
 import React, { Component } from 'react'
-import './Beer.css';
+import axios from "axios";
+
 
 export default class Beer extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      beer: {}
+    }
+  }
+
+  componentDidMount(){
+    axios
+        .get(`http://localhost:5000/single/${this.props.match.params._id}`)
+        .then(beer => {
+            const oneBeer = beer.data
+            console.log(oneBeer)
+  
+            this.setState({
+                ...this.state,
+                beer: oneBeer
+            })
+        })
+  }
+ 
   render() {
+    console.log(this.state.beer)
+    var beer= this.state.beer
     return (
       <div className="beer">
             <div>
-            <img src={this.props.image_url}/>
+            <img src={beer.image_url}/>
             </div>
             <div>
-            <p>{this.props.name}</p>
-            <p>{this.props.tagline}</p>
-            <p>{this.props.contributed_by}</p>
+            <p>{beer.name}</p>
+            <p>{beer.tagline}</p>
+            <p>{beer.contributed_by}</p>
             </div>
            
       </div>

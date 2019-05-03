@@ -1,0 +1,8 @@
+.beer {
+  border: 1px solid black;
+  display: flex;
+}
+
+.beer img {
+  height: 200px;
+}

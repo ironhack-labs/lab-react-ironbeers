@@ -7,39 +7,27 @@ import Random from './Random';
 import NewBeer from './NewBeer';
 import ListBeers from './ListBeers'; 
 import Beer from './Beer'; 
+import './Home.css';
 
 
 export default class Home extends Component {
  
-
-
-// addNewTask() {
-//   if (this.state.newTaskText.trim().length === 0) return;
-
-//   axios
-//       .post("http://localhost:5000/task", {taskStr: this.state.newTaskText})
-//       .then(allTheTasks => {
-//           this.setState({
-//               ...this.state,
-//               tasks: allTheTasks.data,
-//               newTaskText: ""
-//           })
-//       })
-// }
 
   render() {
     return (
       <div>
         <Navigator>
         </Navigator>
+        <div className='linkscon'>
+    <div className='boton'><Link className="linkstop" to='/beers'>List of Beers</Link></div>
+    <div className='boton'><Link className="linkstop" to='/random'>Random Beer</Link></div>
+     </div>
+        
         {/* <Link className="" to={}>{}</Link>
-        <Link className="" to={}>{}</Link>
-        <Link className="" to={}>{}</Link>
-        <Link className="" to={}>{}</Link>
         <Link className="" to={}>{}</Link> */}
         <Switch>
-          <Route exact path='/all' component={ListBeers}/>
-          <Route exact path='	/single/:id' component={Beer}/>
+          <Route exact path='/beers' component={ListBeers}/>
+          <Route exact path='/beers/:_id' component={Beer}/>
           <Route exact path='/random' component={Random}/>
           <Route exact path='/new' component={NewBeer}/>
           <Route exact path='/search?q={query}' component={ListBeers}/>

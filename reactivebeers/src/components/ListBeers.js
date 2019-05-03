@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios";
-import Beer from './Beer'; 
+import './ListBeers.css';
+import { Link } from 'react-router-dom';
 
 export default class ListBeers extends Component {
   constructor(){
@@ -32,9 +33,19 @@ export default class ListBeers extends Component {
                         {
                             this.state.ListBeers.map((beer) => {
                                 return(
-                                  <Beer name={beer.name} image_url={beer.image_url}
-                                  contributed_by={beer.contributed_by}
-                                  tagline={beer.tagline}></Beer>
+                                  <div className='beer'>
+                                  <div>
+                                    <img src={beer.image_url}/>
+                                    </div>
+                                    <div>
+                                    <Link className="" to={`/beers/${beer._id}`}>{beer.name}</Link>
+                                    
+                                    <p>{beer.tagline}</p>
+                                       <p>{beer.contributed_by}</p>
+                                       </div>
+                                       </div>
+                                     
+                                  
                                 )
                             })
                         }
