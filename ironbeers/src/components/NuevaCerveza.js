@@ -12,20 +12,20 @@ export default class NuevaCerveza extends Component {
       mensaje: undefined
     };
   }
-  changeFormData(e, key) {
+  pillaLaInfo(e, key) {
     const newState = { ...this.state };
     newState[key] = e.target.value;
     newState.mensaje = ''
     this.setState(newState);
     console.log(this.state)
   }
-  collectBookInfo(e) {
+  teMandoUnaBirra(e) {
     e.preventDefault();
 
     this.setState({
         ...this.state
     }, function () {
-        axios.post("localhost:5000/books/new", this.state).then(
+        axios.post("localhost:5000/new", this.state).then(
             window.location.replace("http://localhost:3000/about")
         )
     })
@@ -42,7 +42,7 @@ export default class NuevaCerveza extends Component {
             name="name"
             placeholder="write a name"
             value={this.state.name}
-            onChange={e => this.changeFormData(e, "name")}
+            onChange={e => this.pillaLaInfo(e, "name")}
           />
         </p>
         <p>
@@ -52,7 +52,7 @@ export default class NuevaCerveza extends Component {
             name="tagline"
             placeholder="write a name"
             value={this.state.tagline}
-            onChange={e => this.changeFormData(e, "tagline")}
+            onChange={e => this.pillaLaInfo(e, "tagline")}
           />
         </p>
         <p>
@@ -62,7 +62,7 @@ export default class NuevaCerveza extends Component {
             name="image_url"
             placeholder="write a image_url"
             value={this.state.image_url}
-            onChange={e => this.changeFormData(e, "image_url")}
+            onChange={e => this.pillaLaInfo(e, "image_url")}
           />
         </p>
         <p>
@@ -72,11 +72,11 @@ export default class NuevaCerveza extends Component {
             name="contributed_by"
             placeholder="write a contributed_by"
             value={this.state.contributed_by}
-            onChange={e => this.changeFormData(e, "contributed_by")}
+            onChange={e => this.pillaLaInfo(e, "contributed_by")}
           />
         </p>
 
-        <button onClick={(e) => this.collectBookInfo(e)}>Collect book info!</button>
+        <button onClick={(e) => this.teMandoUnaBirra(e)}>Collect book info!</button>
       </div>
     );
   }
