@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import Home from '../components/Home.js'
-import AllBeers from '../components/AllBeers.js';
-import RandomBeers from '../components/RandomBeers.js'
-import NewBeer from '../components/NewBeer.js'
+import Home from './components/Home.js'
+import AllBeers from './components/AllBeers.js.js';
+import RandomBeers from './components/RandomBeers.js'
+import NewBeer from './components/NewBeer.js'
 import { Switch, Route } from 'react-router-dom';
 
 

@@ -24,6 +24,7 @@ export default class AllBeers extends Component {
     console.log(this.state.beers)
     return (
       <div>
+        {this.state.beers.map}
         <div>
             <img src={this.props.image_url}/>
             </div>
