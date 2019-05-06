@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.home-button {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,.6);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.home-button-all-beers{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/img/beers.png");
+}
+.home-button-random-beer{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/img/random-beer.png");
+}
+.home-button-new-beer{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/img/new-beer.png");
+}
+
+.Header {
+  display: block;
+  background-color: rgb(0, 204, 255);
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+
+
+.beer-card {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  text-align: left;
+}
+
+.beer-card img {
+  height: 100px;
+  width: 50px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.BeerDetail img {
+  height: 200px;
+}
