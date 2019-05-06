@@ -37,7 +37,7 @@ The available endpoints are the following:
 | GET    | /:id | { beer }        | Get the a single/specific beer      |
 | GET    | /random     | { beer }        | Get a random beer from the DB |
 | POST   | /new        | { message: "New beer successfully saved to database!"}| Create a new beer (the fields are specified in the instructions)|
-| GET    | /search?q=`{query}` | [beers] | Search the DB based on the beer name using RegEx based on the `query` and return the array with results |
+| GET    | /search?q=`{query}` | [beers] | Get beers from the DB whose name contains the search term. For example `/search?q=lager` searches for all beers with lager in the name. |
 
 On each iteration, we will explain which endpoint you should use!
 
@@ -54,7 +54,7 @@ The **IronBeers** project will include the following features:
 
 ## Instructions
 
-:exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design! As we said this is bonus, so it's up to you :+1: 
+:exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design! As we said this is bonus, so it's up to you. :+1: 
 
 ### Iteration 1: Create the App
 
