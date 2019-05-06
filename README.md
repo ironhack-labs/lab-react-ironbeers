@@ -84,7 +84,9 @@ On every view (except for the `home`), we should add a **header** with a `link` 
 
 ### Iteration 4: List the Beers
 
+
 On the `/beers` route, we should display all the beers from the database. So, in this case, you need to "hit" the API's route `https://ih-beer-api.herokuapp.com/beers` and the API will return an **array of beers**.
+
 
 *Hint*: The array of beers is array of objects. We strongly advise you to **console log the response** from the API so you can see the structure of it.
 
