@@ -20,7 +20,7 @@ export default function RandomBeer() {
 
   return (
     <div style={{marginLeft: "40%"}}>
-       <h1>All beers</h1>
+       <h1>Random beers</h1>
       <Card
         hoverable
         style={{ width: 240 }}
