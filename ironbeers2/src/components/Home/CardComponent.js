@@ -1,7 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {Card} from 'antd'
- function CardComponent({title, description, url,img}) {
+ 
+
+function CardComponent({title, description, url,img}) {
   return (
     <div>
       <Link to ={url}>
