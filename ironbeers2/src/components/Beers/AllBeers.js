@@ -6,6 +6,7 @@ export default class AllBeers extends Component {
   state = {
     beers: [] 
   }
+  
  componentDidMount () {
    axios 
    .get ('https://ih-beer-api.herokuapp.com/beers')

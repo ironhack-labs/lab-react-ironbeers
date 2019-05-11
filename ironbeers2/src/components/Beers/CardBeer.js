@@ -7,19 +7,21 @@ const { Meta } = Card;
 export default function CardBeer ({name, image_url,tagline }){
   return (
       <div>
+
         <Row type="flex" justify="center">
         <Col span={1}>
         <Link to ={'/'}>
         <Card
          hoverable
-         style={{ width:150 } }
-         cover={<img alt="example" src = {image_url} width="200px" height="500px" />}
-         
+         style={{ width:240}}
+         cover={<img alt="example" src = {image_url} style={{width: "100px", height:"60%", marginLeft: "30%"}} />} 
         >
+
         <Meta
         title= {name}
         description= {tagline}
-        />        
+        />   
+
         </Card>
         </Link>
         </Col>
