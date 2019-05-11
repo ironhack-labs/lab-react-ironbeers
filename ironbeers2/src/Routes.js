@@ -2,9 +2,10 @@ import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 import HomePage from './components/Home/HomePage'
 import AllBeer from './components/Beers/AllBeers'
-import DetailBeer from './components/Beers/DetailBeer'
 import NewBeer from './components/Beers/NewBeer'
 import RandomBeer from './components/Beers/RandomBeer'
+
+
 const Routes = () => (
   
   

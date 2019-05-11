@@ -9,10 +9,11 @@ function NavBar () {
     <Menu
     mode = "horizontal"
     theme = "dark"
+  selectedKeys =  "false"
     >
-      <Menu.Item key="Home">
+      <Menu.Item key="Home" >
       <Link to ={'/'}>
-       <Icon type="home" theme="twoTone"  />
+       <Icon type="home" theme="filled" />
        </Link>
       </Menu.Item>
     </Menu>
