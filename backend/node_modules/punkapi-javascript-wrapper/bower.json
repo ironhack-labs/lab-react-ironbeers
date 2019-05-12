@@ -1,0 +1,17 @@
+{
+  "name": "punkapi-javascript-wrapper",
+  "description": "A Javascript wrapper for the PunkAPI",
+  "main": "dist/punkapi-javascript-wrapper.js",
+  "authors": [
+    "Brett DeWoody <brettdewoody@gmail.com> (http://brettdewoody.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "punkapi",
+    "beer",
+    "javascript",
+    "wrapper",
+    "api"
+  ],
+  "homepage": "https://github.com/brettdewoody/punkapi-javascript-wrapper"
+}

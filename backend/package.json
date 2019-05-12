@@ -1,0 +1,19 @@
+{
+  "name": "starter_code",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.4",
+    "path": "^0.12.7",
+    "punkapi-javascript-wrapper": "^1.0.2"
+  },
+  "description": ""
+}
