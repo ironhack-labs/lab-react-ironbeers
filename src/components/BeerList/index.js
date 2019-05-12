@@ -21,20 +21,20 @@ class BeerList extends Component {
   }
 
   handleSearch = event => {
-    const { target: input } = event
-    const { name, value } = input
-    const endpoint = `https://ih-beer-api.herokuapp.com/beers/search?q=${value}`
+    const { target: input } = event;
+    const { name, value } = input;
+    const endpoint = `https://ih-beer-api.herokuapp.com/beers/search?q=${value}`;
 
     this.setState({
       [name]: value
-    })
+    });
 
     axios.get(endpoint).then(res => {
-      const { data: filteredBeers } = res
+      const { data: filteredBeers } = res;
 
-      this.setState({ filteredBeers })
-    })
-  }
+      this.setState({ filteredBeers });
+    });
+  };
 
   render() {
     const { beers, filter, filteredBeers } = this.state;
