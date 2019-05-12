@@ -1,0 +1,11 @@
+.thumb {
+  text-align: center;
+}
+
+.thumb img {
+  max-width: 64px;
+}
+
+article {
+  margin: 20px;
+}
