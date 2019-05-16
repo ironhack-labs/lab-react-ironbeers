@@ -1,0 +1,21 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+  body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+
+a {
+  text-decoration: none;
+  color: #00B7FF; }
+
+a:hover {
+  color: red; }
+
+ul, ol, li {
+  list-style: none; }
+/* #### */
+
