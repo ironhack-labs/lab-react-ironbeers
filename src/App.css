@@ -1,0 +1,42 @@
+
+
+.App {
+  text-align: center;
+
+}
+
+h1 {
+  text-align: center
+}
+
+nav {
+  width: 100vw;
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+}
+
+.homeimage {
+  width: 50px;
+}
+
+ul.container {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.beerslice {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.beerimg {
+  width: 200px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
