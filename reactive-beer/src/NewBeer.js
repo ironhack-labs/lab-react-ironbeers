@@ -27,25 +27,89 @@ class NewBeer extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{
+        margin: "20px 0"
+      }}>
+      <div style={{
+        width:"300px",
+        margin: "0 auto",
+        justifyContent:"center",
+        alignContent: "center",
+        alignItems: "center",
+        border: "2px solid lightblue",
+        padding: "0",
+    
+      }}>
         <form onSubmit={this.getnewbeer}>
-        <h3>Name</h3>
-        <input name="name" type="text"></input>
-        <h3>Tagline</h3>
-        <input name="tagLine" type="text"></input>
-        <h3>Description</h3>
-        <input name="description" type="text" ></input>
-        <h3>First Brewed</h3>
-        <input name="firstBrewed" type="text"></input>
-        <h3>Brewers Tips</h3>
-        <input name="brewersTips" type="text"></input>
-        <h3>Attenuation Level</h3>
-        <input name="attenuationLevel" type="number"></input>
-        <h3>Contributed By</h3>
-        <input name="contributedBy" type="text"></input>
+        <h3 style={{
+          backgroundColor:"lightblue",
+          margin: "0"
+        }}>Name</h3>
+        <input name="name" type="text" style={{
+          border: "2px solid black",
+          borderRadius: "20px",
+          padding: "10px 15px",
+          margin:"15px 0 0 0",
+          
+        }}></input>
+        <h3 style={{
+          backgroundColor:"lightblue"
+          
+        }}>Tagline</h3>
+        <input name="tagLine" type="text" style={{
+          border: "2px solid black",
+          borderRadius: "20px",
+          padding: "10px 15px"
+        }}></input>
+        <h3 style={{
+          backgroundColor:"lightblue"
+        }}>Description</h3>
+        <input name="description" type="text" style={{
+          border: "2px solid black",
+          borderRadius: "20px",
+          padding: "10px 15px"
+        }}></input>
+        <h3 style={{
+          backgroundColor:"lightblue"
+        }}>First Brewed</h3>
+        <input name="firstBrewed" type="text" style={{
+          border: "2px solid black",
+          borderRadius: "20px",
+          padding: "10px 15px"
+        }}></input>
+        <h3 style={{
+          backgroundColor:"lightblue"
+        }}>Brewers Tips</h3>
+        <input name="brewersTips" type="text" style={{
+          border: "2px solid black",
+          borderRadius: "20px",
+          padding: "10px 15px"
+        }}></input>
+        <h3 style={{
+          backgroundColor:"lightblue"
+        }}>Attenuation Level</h3>
+        <input name="attenuationLevel" type="number" style={{
+          border: "2px solid black",
+          borderRadius: "20px",
+          padding: "10px 15px"
+        }}></input>
+        <h3 style={{
+          backgroundColor:"lightblue"
+        }}>Contributed By</h3>
+        <input name="contributedBy" type="text" style={{
+          border: "2px solid black",
+          borderRadius: "20px",
+          padding: "10px 15px"
+        }}></input>
         <br></br>
-        <button>ADD NEW</button>
+        <button style={{
+          backgroundColor:"lightblue",
+          padding: "15px 50px",
+          borderRadius: "10px",
+          margin: "20px 0"
+        }}>ADD NEW</button>
         </form>
+      </div>
       </div>
     );
   }

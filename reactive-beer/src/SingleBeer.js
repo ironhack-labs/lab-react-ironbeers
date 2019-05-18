@@ -21,15 +21,37 @@ class SingleBeer extends Component {
 
   singleBeer = () => {
     return (
-    <div>
-    <img alt="" src={this.state.singleBeer.image_url} width="50"></img>
-    {this.state.singleBeer.name}
-    <p>{this.state.singleBeer.tagline}</p>
-    <p>{this.state.singleBeer.first_brewed}</p>
-    <p>{this.state.singleBeer.attenuation_level}</p>
-    <p>{this.state.singleBeer.description}</p>
-    <p>{this.state.singleBeer.contributed_by}</p>
-    </div>
+      <div style={{
+        margin: "20px"
+      }}>
+      <img alt="" src={this.state.singleBeer.image_url} width="50"></img>
+      <div style={{
+        display:"flex",
+        justifyContent:"space-between"
+      }}>
+      <h1>{this.state.singleBeer.name}</h1>
+      <h2 style={{
+        color:"lightgray"
+      }}>{this.state.singleBeer.attenuation_level}</h2>
+      </div>
+      <div style={{
+        display:"flex",
+        justifyContent:"space-between"
+      }}>
+      <h3 style={{
+        color:"lightgray"
+      }}>{this.state.singleBeer.tagline}</h3>
+      <h3><strong>{this.state.singleBeer.first_brewed}</strong></h3>
+      </div>
+      <div>
+      <p style={{
+        textAlign: "justify"
+      }}>{this.state.singleBeer.description}</p>
+      <p style={{
+        color:"lightgray"
+      }}>{this.state.singleBeer.contributed_by}</p>
+      </div>
+      </div>
     );
     
   };
@@ -37,7 +59,7 @@ class SingleBeer extends Component {
   render() {
     return (
       <div>
-        single!!!!
+        
         {this.singleBeer()}
       </div>
     );

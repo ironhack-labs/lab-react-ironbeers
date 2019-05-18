@@ -12,7 +12,17 @@ class App extends Component {
     return (
       <div className="App">
        
-        <Link to="/">Home</Link>
+        <Link to="/" >
+        <div style={{
+          backgroundColor:"lightblue",
+          padding: "10px 0",
+          margin: "0",
+          color: "black",
+          
+        }}>
+          <img src="./img/house.png" width="100"></img>
+        </div>
+        </Link>
        
         
 

@@ -19,14 +19,36 @@ class RandomBeer extends Component {
 
   randomBeer = () => {
     return (
-    <div>
+    <div style={{
+      margin: "20px"
+    }}>
     <img alt="" src={this.state.allBeers.image_url} width="50"></img>
-    {this.state.allBeers.name}
-    <p>{this.state.allBeers.tagline}</p>
-    <p>{this.state.allBeers.first_brewed}</p>
-    <p>{this.state.allBeers.attenuation_level}</p>
-    <p>{this.state.allBeers.description}</p>
-    <p>{this.state.allBeers.contributed_by}</p>
+    <div style={{
+      display:"flex",
+      justifyContent:"space-between"
+    }}>
+    <h1>{this.state.allBeers.name}</h1>
+    <h2 style={{
+      color:"lightgray"
+    }}>{this.state.allBeers.attenuation_level}</h2>
+    </div>
+    <div style={{
+      display:"flex",
+      justifyContent:"space-between"
+    }}>
+    <h3 style={{
+      color:"lightgray"
+    }}>{this.state.allBeers.tagline}</h3>
+    <h3><strong>{this.state.allBeers.first_brewed}</strong></h3>
+    </div>
+    <div>
+    <p style={{
+      textAlign: "justify"
+    }}>{this.state.allBeers.description}</p>
+    <p style={{
+      color:"lightgray"
+    }}>{this.state.allBeers.contributed_by}</p>
+    </div>
     </div>
     );
     
@@ -35,7 +57,7 @@ class RandomBeer extends Component {
   render() {
     return (
       <div>
-        random!!!
+       
         {this.randomBeer()}
       </div>
     );

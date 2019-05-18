@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+
+.home > h1{
+text-decoration: none;
+color:black;
+text-decoration-style: none;
+}
+
+.home > p {
+  padding: 0 15px;
+  color: black;
+  text-align: justify;
+  margin: 0 0 30px 0;
+
+}

@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import axios from "axios";
 import { Link} from "react-router-dom";
+//import style compon3ents
 
 
 class ListBeer extends Component {
@@ -22,15 +23,36 @@ componentDidMount () {
 showBeers =()=>{
 return this.state.allBeers.map(eachBeer => {
   return (
-   <Link to={`/beers/${eachBeer._id}`}>
-    <div>
-      <div>
+   <Link to={`/beers/${eachBeer._id}`} style={{textDecoration: "none"}}>
+    <div style={{
+      display: "flex",
+      margin:"10px",
+      borderBottom: "1px solid black",
+      padding: "10px"
+      
+    }}>
+      <div style={{
+        padding: "0 15px",
+        
+      }}>
       <img src={eachBeer.image_url} width='50' ></img>
       </div>
-      <div>
-      <li>{eachBeer.name}</li>
-      <p><strong>Created by:</strong>{eachBeer.contributed_by}</p>
+      <div style={{
+          color: "black",
+          display: "flex",
+          flexDirection:"column",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center"
+        
+      }}>
+      <h1>{eachBeer.name}</h1>
+      <h2 style={{
+        color: "lightgray"
+      }}>{eachBeer.tagline}</h2>
+      <p>{eachBeer.contributed_by}</p>
       </div>
+      
       </div>
       </Link>
   )
@@ -42,7 +64,6 @@ return this.state.allBeers.map(eachBeer => {
   render() {
     return (
       <div >
-        all
         {this.showBeers()}
       </div>
     );
