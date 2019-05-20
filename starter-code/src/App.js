@@ -1,45 +1,30 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
-import Home from './components/Home';
-import NewBeer from './components/NewBeer';
-import Beers from './components/Beers';
-import RandomBeer from './components/RandomBeer';
-import {Switch, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-
+import Home from './Home'
+import BeersList from './BeersList'
+import Beer from './Beer'
+import RandomBeer from './RandomBeer'
+import NewBeer from './NewBeer'
+import NavBar from './NavBar'
+import { Route, Switch } from 'react-router-dom'
 
 class App extends React.Component {
-
-  state={
-    allBeers:[],
-  }
-
-  /*componentDidMount(){
-    axios.get(`https://ih-beer-api.herokuapp.com/beers`).then(allBeers=>{
-      this.setState({allBeers:allBeers.data})
-    })
-
-  } */
-  
-  render(){
-  return (
-    <div className="App">
-      <h1>Iron Beers</h1>
-      <div>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/Beers' component={Beers} />
-          <Route exact path='/NewBeer' component={NewBeer} />
-          <Route exact path='/RandomBeer' component={RandomBeer} />
-        </Switch> 
-      
+  render() {
+    return (
+      <div className="App">
+        {/* <NavBar />
+        <Switch> */}
+        {/* <Route exact path='/' component={NavBar} />  */}
+        <Route exact path='/' component={Home} /> 
+        <Route exact path='/beers' component={BeersList} /> 
+        <Route exact path='/beers/:id' component={Beer} /> 
+        <Route exact path='/random-beer' component={RandomBeer} /> 
+        <Route exact path='/new-beer' component={NewBeer} /> 
+        {/* </Switch> */}
       </div>
-    </div>
-  );
+    );
+  }
 }
-}
-
 
 export default App;
