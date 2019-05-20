@@ -8,3 +8,10 @@ export const getBeers = () => {
     .then(res => res.data)
     .catch(err => err);
 };
+
+export const getBeer = (id) => {
+  return axios
+    .get(`${base_url}/${id}`)
+    .then(res => res.data)
+    .catch(err => err);
+};
