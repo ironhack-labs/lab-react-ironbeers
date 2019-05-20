@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => (
   <section className="uk-section uk-section-primary uk-section-xsmall uk-padding-remove-vertical">
@@ -16,9 +16,9 @@ const NavBar = () => (
         </div>
         <div className="uk-navbar-center">
           <div className="uk-navbar-center-left" />
-          <a className="uk-navbar-item uk-logo" href="#">
-            IronBeers
-          </a>
+          <Link to="/" className="uk-navbar-item uk-logo">
+            <span className="uk-icon-button" uk-icon="icon: home; ratio: 2" />
+          </Link>
           <div className="uk-navbar-center-right" />
         </div>
       </nav>
@@ -32,14 +32,14 @@ const NavBar = () => (
           />
           <ul className="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             <li className="uk-active">
-              <NavLink to="#">
+              <NavLink to="/all-beers">
                 <span className="uk-margin-small-right" uk-icon="icon: world" />
                 All Beers
               </NavLink>
             </li>
             <li className="uk-nav-divider" />
             <li className="uk-parent">
-              <NavLink to="#">
+              <NavLink to="/ranbom-beer">
                 <span className="uk-margin-small-right" uk-icon="icon: bolt" />
                 Random Beer
               </NavLink>
