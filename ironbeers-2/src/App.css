@@ -1,3 +1,11 @@
 .center{
  margin: 0 auto;
 }
+
+.img-fit{
+  width:10vw;
+}
+
+.card-fit{
+  width: 50%
+}
