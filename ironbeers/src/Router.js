@@ -7,9 +7,13 @@ import Beer from "./components/Beer";
 const Router = ({ beers }) => (
   <Switch>
     <Route exact path="/" render={props => <Home {...props} beers={beers} />} />
-    <Route exact path="/all-beers" render={props => <AllBeers {...props} beers={beers} />} />
+    <Route
+      exact
+      path="/all-beers"
+      render={props => <AllBeers {...props} beers={beers} />}
+    />
     <Route exact path="/beer/:id" render={props => <Beer {...props} />} />
-    <Route exact path="/random-beer" render={props => <Beer {...props} beers={beers} />} />
+    <Route exact path="/random-beer" render={props => <Beer {...props} />} />
   </Switch>
 );
 

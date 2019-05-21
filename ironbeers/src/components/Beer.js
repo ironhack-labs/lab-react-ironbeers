@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../common/NavBar";
-import { getBeer } from "../services/beers";
+import { getBeer, getRandomBeer } from "../services/beers";
 
 class Beer extends Component {
   state = {
@@ -9,17 +9,29 @@ class Beer extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    getBeer(id)
-      .then(beer => {
-        this.setState({ beer });
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    //id is received, get that beer
+    if (id){
+      getBeer(id)
+        .then(beer => {
+          this.setState({ beer });
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+    // otherwise, get a random beer
+    else{
+      getRandomBeer(id)
+        .then(beer => {
+          this.setState({ beer });
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
   }
   render() {
     const { beer } = this.state;
-    console.log(beer);
     const {
       image_url,
       name,

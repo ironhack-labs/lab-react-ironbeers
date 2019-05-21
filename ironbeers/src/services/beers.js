@@ -15,3 +15,10 @@ export const getBeer = (id) => {
     .then(res => res.data)
     .catch(err => err);
 };
+
+export const getRandomBeer = () => {
+  return axios
+    .get(`${base_url}/random`)
+    .then(res => res.data)
+    .catch(err => err);
+};
