@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => (
   <section className="uk-section uk-section-primary uk-section-xsmall uk-padding-remove-vertical">
-    <div className="uk-container">
+    <div className="uk-container uk-container-expand">
       <nav
         className="uk-navbar-container uk-navbar-transparent"
         uk-navbar="true"

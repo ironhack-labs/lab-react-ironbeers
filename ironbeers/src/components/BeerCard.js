@@ -10,9 +10,9 @@ const BeerCard = ({ image_url, name, tagline, contributed_by, _id }) => (
       <div className="uk-flex uk-flex-left uk-flex-middle uk-width-expand">
         <div className="uk-card-media-left uk-cover-container uk-width-1-3">
           <ul className="uk-thumbnav">
-            <a href="#">
+            <li>
               <img className="beerImg" src={image_url} alt={name} />
-            </a>
+            </li>
           </ul>
         </div>
         <div className="uk-width-2-3 uk-text-left">

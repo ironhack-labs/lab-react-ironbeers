@@ -26,23 +26,47 @@ class Beer extends Component {
       attenuation_level,
       tagline,
       description,
-      contributed_by
+      contributed_by,
+      first_brewed
     } = beer;
     return (
       <div>
         <NavBar />
         {beer && (
-          <div>
+          <div className="uk-container uk-container-small uk-padding-small">
             <div className="uk-card uk-card-default">
-              <div className="uk-card-media-top">
-                <img src={image_url} alt={name} />
+              <div className="uk-card-media-top uk-flex uk-flex-center">
+                <ul className="uk-thumbnav">
+                  <li>
+                    <img className="beerImg" src={image_url} alt={name} />
+                  </li>
+                </ul>
               </div>
               <div className="uk-card-body">
-                <h3 className="uk-card-title">{name}</h3>
-                <p>{attenuation_level}</p>
-                <p>{tagline}</p>
-                <p>{description}</p>
-                <p>{contributed_by}</p>
+                <table className="uk-table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h3 className="uk-card-title">{name}</h3>
+                      </td>
+                      <td>
+                        <p className="uk-text-muted">{attenuation_level}</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>{tagline}</p>
+                      </td>
+                      <td>
+                        <p className="uk-text-bold">{first_brewed}</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div className="uk-padding-small">
+                  <p className="uk-text-bold">{description}</p>
+                  <p className="uk-text-muted">{contributed_by}</p>
+                </div>
               </div>
             </div>
           </div>
