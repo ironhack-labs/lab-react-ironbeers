@@ -22,3 +22,10 @@ export const getRandomBeer = () => {
     .then(res => res.data)
     .catch(err => err);
 };
+
+export const postBeer = (beer) => {
+  return axios
+    .post(`${base_url}/new`,beer)
+    .then(res => res.data)
+    .catch(err => err);
+};
