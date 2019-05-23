@@ -1,0 +1,24 @@
+.Beer {
+  width:50%;
+  margin: 50px auto;
+ }
+.beerDetails{
+  display: flex;
+}
+
+.beerDetails .img-div{
+  width:30%;
+  height:200px;
+}
+
+.beerDetails img {
+  width:auto;
+  height:90%;
+}
+
+.description {
+  margin-left: 100px;
+  display:flex;
+  flex-direction: column;
+  text-align:left;
+}

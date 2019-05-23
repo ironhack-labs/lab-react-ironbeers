@@ -1,0 +1,20 @@
+.AboutBeer {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.AboutBeer .img-div{
+  width:200px;
+  height:200px;
+  margin: 0 auto;
+}
+
+.AboutBeer .img-div img{
+  height:100%;
+  width:auto;
+}
+
+.AboutBeer h1 {
+  display: inline-block;
+  margin-bottom: 20px;
+}
