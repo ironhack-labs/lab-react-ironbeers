@@ -1,13 +1,15 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 import { Card } from 'primereact/card';
 
 const Cards = (props) => {
 	const header = (
+		<Link to={props.link}>
 		<img
 			alt='Card'
 			src={process.env.PUBLIC_URL + props.img}
 		/>
+		</Link>
 	);
 	return (
 		<Card header={header}>
