@@ -1,0 +1,26 @@
+.home-image {
+  width: 100%;
+  height: auto;
+}
+
+.link-class {
+  text-decoration: none;
+  color: black;
+  margin: 100px 0;
+}
+
+.home-unit {
+  margin-bottom: 50px;
+}
+
+.home-unit-text {
+  margin: 20px 50px;
+}
+
+.home-unit-text h2{
+  font-size: 2.5rem;
+}
+.home-unit-text p {
+  font-size: 1.3rem;
+  color: grey
+}
