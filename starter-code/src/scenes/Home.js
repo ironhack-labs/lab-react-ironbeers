@@ -4,7 +4,7 @@ function Home() {
   return (
     <React.Fragment>
       <Cards name='All Beers' img='/beers.png' link = '/all'/>
-      <Cards name='Random Beer' img='/random-beer.png' link = '/random'/>
+      <Cards name='Random Beer' img='/random-beer.png' link = 'beer/random'/>
       <Cards name='New Beer' img='/new-beer.png' link = '/new'/>
     </React.Fragment>
   );
