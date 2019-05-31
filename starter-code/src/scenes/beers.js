@@ -4,14 +4,7 @@ import Navbar from '../components/navbar'
 import {Link} from 'react-router-dom'
 class Beers extends Component {
   state = {
-    beers : [
-      {
-        image_url: "https://images.punkapi.com/v2/2.png",
-        _id: "5ccc1e2caea376c9272c5a76",
-        id: 2,
-        name: "Trashy Blonde"
-      }
-    ], 
+    beers : [], 
     beer: ''
   }
   componentDidMount = () => {
@@ -23,16 +16,19 @@ class Beers extends Component {
   }
 
   render(){
-    return (
+    return !this.state.beers.length ? <Loading /> : (
       <Fragment >
         <Navbar />
         {this.state.beers.length}
         <ul className="list-group">
           {this.state.beers.map((e,i)=>(
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-              <Link to={`beers/${e._id}`}>{e.name}</Link>
+            <li key={i} className="list-group-item d-flex justify-content-between align-items-center">
+              <div>
+                <Link  to={`beers/${e._id}`}>{e.name}</Link>
+                <div>{e.description && e.description.substring(0,140)}</div>
+              </div>
               <div className="image-parent">
-                  <img src={e.image_url} class="img-fluid" alt={e.name} style={{maxWidth:'30px'}} />
+                  <img src={e.image_url} className="img-fluid" alt={e.name} style={{maxWidth:'30px'}} />
               </div>
             </li>
           ))}
@@ -41,5 +37,7 @@ class Beers extends Component {
     )
   }
 }
+const Loading = () => <div> ...Cargando</div>
+
 
 export default Beers
