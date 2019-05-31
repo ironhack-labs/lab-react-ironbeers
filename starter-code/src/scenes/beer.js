@@ -5,7 +5,12 @@ import Cards from '../components/Cards'
 
 class Beer extends Component {
   state = {
-    beer : {}
+    beer : {},
+    style: {
+      maxWidth: '50px', 
+      margin: 'auto', 
+      paddingTop: '2em'
+    }
   }
 
   componentDidMount () {
@@ -18,15 +23,18 @@ class Beer extends Component {
   }
 
   render (){
-    console.log(this.state.beer)
+    
     return (
       <Fragment>
         <Navbar />
-        <Cards 
-          name={this.state.beer.name} 
-          img={this.state.beer.image_url && this.state.beer.image_url } 
-          description = {this.state.beer.description && this.state.beer.description}
-        />
+        <div className="container pt-2">
+          <Cards 
+            name={this.state.beer.name} 
+            style={this.state.style}
+            img={this.state.beer.image_url && this.state.beer.image_url } 
+            description = {this.state.beer.description && this.state.beer.description}
+          />
+        </div>
       </Fragment>
     )
   }

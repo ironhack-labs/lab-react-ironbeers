@@ -2,9 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 const Cards = (props) => {
-	return (
-		<div className="card" style={{width:'100vw'}}>
-			<img className="card-img-top" src={process.env.PUBLIC_URL + props.img} alt="..." />
+	return  (
+		<div className="card" style={{width:'100%'}}>
+			<img className="card-img-top" style={props.style} src={process.env.PUBLIC_URL + props.img} alt="..." />
 			<div className="card-body">
 				<h5 className="card-title">{props.name}</h5>
 				<p className="card-text">{
