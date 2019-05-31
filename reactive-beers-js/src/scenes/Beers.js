@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
-import BeerService from '../services/BeerSevice'
+import BeerService from '../services/BeerService'
 import { Link } from 'react-router-dom'
 
 class Beers extends React.Component {

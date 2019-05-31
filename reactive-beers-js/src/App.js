@@ -3,6 +3,8 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Home from './scenes/Home'
 import Beers from './scenes/Beers'
+import SingleBeer from './scenes/SingleBeer'
+
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/beers" component={Beers} />
+        <Route exact path="/beers/:id" component={SingleBeer} />
         <Route exact path="/random-beer" component={Home} />
         <Route exact path="/new-beer" component={Home} />
       </Switch>
