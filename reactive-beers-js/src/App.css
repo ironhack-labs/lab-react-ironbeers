@@ -3,6 +3,10 @@
   height: auto;
 }
 
+.maximun-width {
+  width: 100%;
+}
+
 .link-class {
   text-decoration: none;
   color: black;
@@ -13,6 +17,7 @@
   background-color: rgb(0, 217, 255);
   height: 100px;
   text-align: center;
+  width: 100%;
 }
 
 .header-icon {
@@ -35,4 +40,52 @@
 .home-unit-text p {
   font-size: 1.3rem;
   color: grey
+}
+
+.beers-beer-wrapper {
+  height: 200px;
+  border-bottom: grey solid 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0; 
+}
+
+.beers-image-section {
+  width: 20%;
+}
+
+.beers-image-section img{
+  display: block;
+  margin: auto;
+  height: 160px;
+  width: auto;
+  max-width: 100%;
+}
+
+.beers-text-wrapper {
+  width: 78%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.beers-text-wrapper h2 {
+  font-size: 1.4rem;
+  color: black;
+}
+
+.beers-text-wrapper .p-tag {
+  font-size: 0.9rem;
+  color: grey;
+  font-weight: 700
+}
+.beers-text-wrapper p {
+  font-size: 0.6rem;
+  color: black;
 }
