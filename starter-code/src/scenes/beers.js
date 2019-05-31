@@ -1,8 +1,7 @@
 import React, {Component, Fragment} from 'react'
 import BeersService from '../services/BeersService'
 import Navbar from '../components/navbar'
-import {ListBox} from 'primereact/listbox'
-import Row from '../components/Row'
+import {Link} from 'react-router-dom'
 class Beers extends Component {
   state = {
     beers : [
@@ -27,15 +26,17 @@ class Beers extends Component {
     return (
       <Fragment >
         <Navbar />
-        <ListBox
-					value={this.state.beer}
-					filter={true}
-					options={this.state.beers}
-					onChange={e => this.setState({ beer: e.value })}
-					itemTemplate={Row}
-					style={{ width: '100vw'}}
-					listStyle={{ maxHeight: '100vh' }}
-				/>
+        {this.state.beers.length}
+        <ul className="list-group">
+          {this.state.beers.map((e,i)=>(
+            <li className="list-group-item d-flex justify-content-between align-items-center">
+              <Link to={`beers/${e._id}`}>{e.name}</Link>
+              <div className="image-parent">
+                  <img src={e.image_url} class="img-fluid" alt={e.name} style={{maxWidth:'30px'}} />
+              </div>
+            </li>
+          ))}
+        </ul>
       </Fragment>
     )
   }

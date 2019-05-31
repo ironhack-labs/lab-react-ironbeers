@@ -1,19 +1,11 @@
 import React from 'react'
-import {Menubar} from 'primereact/menubar'
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
-  const state = {
-			items: [
-				{ 
-          icon: 'pi pi-fw pi-home',
-          command: () => { window.location = "/" }
-         },
-			]
-		}
   return (
-  <div style={{width:'100%'}} >
-    <Menubar model={state.items}/>
-  </div>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand" to="/">Home</Link>
+    </nav>
 )}
 
 export default Navbar

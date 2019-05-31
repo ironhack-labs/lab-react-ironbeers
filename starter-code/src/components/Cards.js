@@ -1,24 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import { Card } from 'primereact/card';
 
 const Cards = (props) => {
-	const header = (
-		<Link to={props.link}>
-		<img
-			alt='Card'
-			src={process.env.PUBLIC_URL + props.img}
-		/>
-		</Link>
-	);
 	return (
-		<Card header={header}>
-			<h1>{props.name}</h1>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
-			consequuntur error repudiandae numquam deserunt quisquam repellat libero
-			asperiores earum nam nobis, culpa ratione quam perferendis esse,
-			cupiditate neque quas!
-		</Card>
-)};
+		<div className="card" style={{width:'100vw'}}>
+			<img className="card-img-top" src={process.env.PUBLIC_URL + props.img} alt="..." />
+			<div className="card-body">
+				<h5 className="card-title">{props.name}</h5>
+				<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<Link to={props.link} className="btn btn-primary">Check the Page</Link>
+			</div>
+		</div>
+	)
+};
 
 export default Cards
