@@ -9,6 +9,18 @@
   margin: 100px 0;
 }
 
+.header {
+  background-color: rgb(0, 217, 255);
+  height: 100px;
+  text-align: center;
+}
+
+.header-icon {
+  color: white;
+  font-size: 4rem;
+  margin-top: 13px;
+}
+
 .home-unit {
   margin-bottom: 50px;
 }
