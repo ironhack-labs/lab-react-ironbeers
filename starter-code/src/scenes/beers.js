@@ -19,12 +19,11 @@ class Beers extends Component {
     return !this.state.beers.length ? <Loading /> : (
       <Fragment >
         <Navbar />
-        {this.state.beers.length}
         <ul className="list-group">
           {this.state.beers.map((e,i)=>(
             <li key={i} className="list-group-item d-flex justify-content-between align-items-center">
               <div>
-                <Link  to={`beers/${e._id}`}>{e.name}</Link>
+                <Link  to={`beer/${e._id}`}>{e.name}</Link>
                 <div>{e.description && e.description.substring(0,140)}</div>
               </div>
               <div className="image-parent">

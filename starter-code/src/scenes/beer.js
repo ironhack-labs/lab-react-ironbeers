@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../components/navbar'
 
-const Random = () => (
+const Beer = () => (
   <Navbar />
 )
 
-export default Random
+export default Beer
