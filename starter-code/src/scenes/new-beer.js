@@ -2,6 +2,8 @@ import React, {Component, Fragment} from 'react'
 import Navbar from '../components/navbar'
 import BeerService from '../services/BeersService'
 import Field from '../components/field'
+import { Redirect } from 'react-router-dom'
+
 class New extends Component {
   state = {
     beer: {
@@ -13,31 +15,49 @@ class New extends Component {
       attenuation_level: 0,
       contributed_by: "",
     },
-    errors : {},
-    error: true
+    errors : {
+      name:  false,
+      tagline:  false,
+      description:  false,
+      first_brewed:  false,
+      brewers_tips:  false,
+      attenuation_level:  false,
+      contributed_by:  false,
+    },
+    error: true, 
+    redirect: false
   }
   handleChange = (name, field, error) => { 
-    const validation = !Object.values(this.state.errors).reduce((prv, crt)=> prv && crt, true)
+    // returns true if all the values are false. 
     this.setState({
       beer: {...this.state.beer, [name]: field},
-      errors: {...this.state.errors, [name]: error},
-      error: validation
+      errors: {...this.state.errors, [name]: !error},
+    }, () => {
+      const hasError = !Object.values(this.state.errors).reduce((prv, crt)=> prv && crt, true)
+      this.setState({error: hasError})
     })
-    console.log(validation)
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
     BeerService.newBeer(this.state.beer)
       .then(
-        res => console.log(res), //redirect. 
+        res => this.setState({redirect: true}), //redirect. 
         err => console.error(err)
       )
   }
 
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/all' />
+    }
+  }
+
   render () {
+    // console.log(this.state.errors)
     return (
       <Fragment>
+      {this.renderRedirect()}
       <Navbar />
       <div className="container">
         <form onSubmit={this.handleSubmit}>
@@ -67,7 +87,7 @@ class New extends Component {
             name = 'brewers_tips' label = 'Brewers Tips'
             />
           <Field  
-            validation = {value=>isNaN(value)}
+            validation = {value=> isNaN(value) || value.length <=1}
             handleParent = {(n, v, e)=>this.handleChange(n, v, e)}
             name = 'attenuation_level' label = 'Attenuation Level'
             />

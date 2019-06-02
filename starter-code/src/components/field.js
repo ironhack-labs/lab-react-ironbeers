@@ -10,13 +10,15 @@ class Field extends Component{
   handleBlur = () => this.setState({ touch: true })
   
   handleChange = (e) => {
-    const validate = this.props.validation(e.target.value)
+    const hasError = this.props.validation(e.target.value)
+    console.log(hasError)
+
     const {value} = e.target
     this.setState ({
       field: value,
-      error : validate
+      error : hasError
     })
-    this.props.handleParent(e.target.name, value, validate)
+    this.props.handleParent(e.target.name, value, hasError)
   }
 
   render (){
