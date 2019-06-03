@@ -13,8 +13,12 @@ const getBeer = id => http.get(`/${id}`)
 const getRandom = () => http.get('/random')
   .then(res => res.data)
 
+const newBeer = beer => http.post('/new', beer)
+  .then(res => res.data)
+
 export default {
   listBeers,
   getBeer,
   getRandom,
+  newBeer,
 }

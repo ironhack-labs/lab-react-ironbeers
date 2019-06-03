@@ -89,3 +89,25 @@
   font-size: 0.6rem;
   color: black;
 }
+
+.strong {
+  font-weight: 700
+}
+
+.form-group .br {
+  border-radius: 1.25rem
+}
+
+.button-form{
+  display: inline-block;
+  padding: 0.5rem;
+  margin-top: 10px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 1.25rem;
+  color: white;
+  background-color: rgb(0, 217, 255);
+  width: 100%;
+}
