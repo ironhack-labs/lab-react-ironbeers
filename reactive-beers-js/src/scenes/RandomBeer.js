@@ -8,9 +8,10 @@ class SingleBeer extends React.Component {
   }
 
   componentDidMount() {
-    BeerService.getBeer(this.props.match.params.id)
+    BeerService.getRandom()
       .then(
         beer => {
+          console.log(beer)
           this.setState({beer: beer})},
         error => console.error(error)
       )

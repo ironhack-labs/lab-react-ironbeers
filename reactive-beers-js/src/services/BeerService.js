@@ -10,7 +10,11 @@ const listBeers = () => http.get('/')
 const getBeer = id => http.get(`/${id}`)
   .then(res => res.data)
 
+const getRandom = () => http.get('/random')
+  .then(res => res.data)
+
 export default {
   listBeers,
   getBeer,
+  getRandom,
 }

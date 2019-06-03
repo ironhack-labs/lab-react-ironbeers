@@ -12,7 +12,6 @@ class Beers extends React.Component {
     BeerService.listBeers()
       .then(
         list => {
-          console.log(list)
           this.setState({beers: list})},
         error => console.error(error)
       )
