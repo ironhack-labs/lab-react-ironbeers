@@ -21,16 +21,18 @@ class SingleBeer extends React.Component {
     return (
       <div>
         <Header />
-        <div>
-          <img src={beer.image_url} alt=""></img>
-          <div>
-            <h2>{beer.name}</h2>
-            <p>{beer.attenuation_level}</p>
-            <p>{beer.tagline}</p>
-            <p>{beer.first_brewed}</p>
+        <div className="single-beer-wrapper">
+          <div className="single-beer-image-wrapper">
+            <img src={beer.image_url} alt="" />
           </div>
-          <p>{beer.description}</p>
-          <p>{beer.contributed_by}</p>
+          <div className="single-beer-title-wrapper">
+            <h2 className="left-item-top">{beer.name}</h2>
+            <p className="right-item-top">{beer.attenuation_level}</p>
+            <p className="left-item-bot">{beer.tagline}</p>
+            <p className="right-item-bot">{beer.first_brewed}</p>
+          </div>
+          <p className="single-beer-description">{beer.description}</p>
+          <p className="single-beer-contributor">{beer.contributed_by}</p>
         </div>
       </div>
     )

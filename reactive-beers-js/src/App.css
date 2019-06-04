@@ -15,15 +15,15 @@
 
 .header {
   background-color: rgb(0, 217, 255);
-  height: 100px;
+  height: 40px;
   text-align: center;
   width: 100%;
 }
 
 .header-icon {
   color: white;
-  font-size: 4rem;
-  margin-top: 13px;
+  font-size: 1.8rem;
+  margin-top: 7px;
 }
 
 .home-unit {
@@ -110,4 +110,58 @@
   color: white;
   background-color: rgb(0, 217, 255);
   width: 100%;
+}
+
+.single-beer-wrapper {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.single-beer-image-wrapper {
+  width: 100%;
+}
+
+.single-beer-image-wrapper img {
+  display: block;
+  width: auto;
+  height: 250px;
+  margin: auto;
+}
+
+.single-beer-title-wrapper {
+  margin: 15px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  padding: 0 10px;
+}
+
+.left-item-top {
+  width: 80%;
+  font-size: 1.7rem;
+}
+.left-item-bot {
+  width: 80%;
+  color: grey;
+}
+
+.right-item-top {
+  width: 20%;
+  color: grey;
+  font-size: 1.7rem;
+}
+.right-item-bot {
+  width: 20%;
+  font-weight: 700;
+}
+
+.single-beer-description{
+  padding: 0 10px;
+}
+
+.single-beer-contributor {
+  font-weight: 700;
 }

@@ -5,7 +5,13 @@ import { Link } from 'react-router-dom'
 
 class Beers extends React.Component {
   state = {
-    beers: []
+    beers: [],
+    inputText: ""
+  }
+
+  handleChange = e => {
+    BeerService.searchBeer(e.target.value)
+      .then(beers => this.setState({beers: beers}))
   }
 
   componentDidMount() {
@@ -37,6 +43,9 @@ class Beers extends React.Component {
       <div className="maximun-width">
         <Header />
         <div className="container">
+        <div className="form-group mt-3">
+          <input className="form-control br" onChange={this.handleChange}></input>
+        </div>
           {list}
         </div>
       </div>

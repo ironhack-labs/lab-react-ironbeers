@@ -16,9 +16,13 @@ const getRandom = () => http.get('/random')
 const newBeer = beer => http.post('/new', beer)
   .then(res => res.data)
 
+const searchBeer = txt => http.get(`/search?q=${txt}`)
+  .then(res => res.data)
+
 export default {
   listBeers,
   getBeer,
   getRandom,
   newBeer,
+  searchBeer,
 }
