@@ -22,7 +22,7 @@ class SingleBeer extends React.Component {
     return (
       <div>
         <Header />
-        <div className="single-beer-wrapper">
+        <div className="single-beer-wrapper container">
           <div className="single-beer-image-wrapper">
             <img src={beer.image_url} alt="" />
           </div>
