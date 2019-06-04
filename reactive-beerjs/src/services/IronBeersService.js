@@ -17,9 +17,13 @@ const RandomBeer = () => http.get('/random')
 const NewBeer = beer => http.post('/new',beer)
   .then(res => res)
 
+const filterBeer = query => http.get(`/search?q=${query}`)
+  .then(res => res.data)
+
   export default {
     BeerList,
     Beer,
     RandomBeer,
-    NewBeer
+    NewBeer,
+    filterBeer
   }

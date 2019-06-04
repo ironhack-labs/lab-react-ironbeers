@@ -8,7 +8,7 @@ const Beer = ({beer,i}) => {
         <div className="col d-flex flex-column align-items-start">
           <h6 className="text-dark">{beer.name}</h6>
           <p className='text-secondary'>{beer.tagline}</p>
-          <p className='text-dark small'><b>Created by</b> {beer['contributed_by'].split('<')[0]}</p>
+          <p className='text-dark small'><b>Created by</b> {beer.contributed_by}</p>
         </div>
       </Link>
 
