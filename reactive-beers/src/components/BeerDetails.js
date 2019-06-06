@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import Services from '../services/beer.services';
 import BeerInfo from './BeerInfo';
+import Services from '../services/beer.services';
 
 class BeerDetails extends Component {
 	constructor(props) {
@@ -14,7 +14,7 @@ class BeerDetails extends Component {
 
 	componentDidMount() {
 		this.services
-			.getRandomBeer(this.props.match.params.id)
+			.getBeer(this.props.match.params.id)
 			.then((beer) => this.setState({ beer }))
 			.catch((err) => console.log(err));
 	}

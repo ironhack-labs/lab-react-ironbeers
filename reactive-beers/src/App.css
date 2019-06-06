@@ -52,7 +52,6 @@ section.home {
 }
 
 .beer-list img {
-
   height: 150px;
 }
 
@@ -61,4 +60,15 @@ section.home {
   justify-content: space-between;
   border-bottom: 1px rgb(206, 206, 206) solid;
   padding: 30px 5px;
+}
+
+
+.beer-detail img {
+  margin: 0 auto;
+  height: 350px;
+}
+
+.beer-detail {
+  padding-top: 40px;
+
 }

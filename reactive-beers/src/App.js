@@ -8,6 +8,7 @@ import BeerList from './components/BeerList';
 import NewBeer from './components/NewBeer';
 import RandomBeer from './components/RandomBeer';
 import Home from './components/Home';
+import BeerDetails from './components/BeerDetails';
 
 class App extends Component {
 	constructor() {
@@ -21,6 +22,7 @@ class App extends Component {
 				<Route path="/beers" exact component={BeerList} />
 				<Route path="/random-beer" exact component={RandomBeer} />
 				<Route path="/new-beer" exact component={NewBeer} />
+				<Route path="/:id" exact component={BeerDetails} />
 			</Switch>
 		);
 	}
