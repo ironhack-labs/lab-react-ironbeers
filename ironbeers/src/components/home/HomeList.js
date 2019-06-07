@@ -1,7 +1,7 @@
 import React from 'react';
-import beersImg from '../img/beers.png';
-import newBeerImg from '../img/new-beer.png';
-import randomBeerImg from '../img/random-beer.png';
+import beersImg from '../../img/beers.png';
+import newBeerImg from '../../img/new-beer.png';
+import randomBeerImg from '../../img/random-beer.png';
 import { Link } from 'react-router-dom';
 
 const homeCategories = [
@@ -12,13 +12,13 @@ const homeCategories = [
   text: 'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualizar diseños y maquetas visuales.'
   },
   {
-    route:'new-beer',
+    route:'random-beer',
     img: newBeerImg,
     title: 'Random Beer',
     text: 'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualizar diseños y maquetas visuales.'
   },
   {
-    route:'random-beer',
+    route:'new-beer',
     img: randomBeerImg,
     title: 'New Beer',
     text: 'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualizar diseños y maquetas visuales.'
@@ -26,7 +26,6 @@ const homeCategories = [
 ]
 
 const HomeList = () => {
-  console.log(homeCategories[0].img)
   return (
     <div>
       {

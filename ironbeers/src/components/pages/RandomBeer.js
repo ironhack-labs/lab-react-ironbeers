@@ -1,8 +1,12 @@
 import React from 'react';
+import Header from '../Header';
 
 const Beers = () => {
   return (
-    <div>NUEVA CERVEZA!!</div>
+    <div>
+      <Header/>
+      Hola
+    </div>
   )
 }
 

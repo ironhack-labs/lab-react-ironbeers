@@ -1,22 +1,23 @@
 import React from 'react';
-import './App.css';
-import Home from './components/Home';
-import NewBeer from './components/NewBeer';
-import RandomBeer from './components/RandomBeer'
-import { Route, Switch } from 'react-router-dom';
-import Beers from './components/Beers';
+import { Route } from 'react-router-dom';
+import Home from './components/home/Home';
+import Beers from './components/pages/Beers';
+import NewBeer from './components/pages/NewBeer';
+import RandomBeer from './components/pages/RandomBeer';
 
-function App() {
-  return (
-    <div className="App">
-    <Switch>
-      <Route exact path='/' component={Home}/>
-      <Route exact path='/beers' component={Beers}/>
-      <Route exact path='/new-beer' component={NewBeer}/>
-      <Route exact path='/random-beer' component={RandomBeer}/>
-    </Switch>
-    </div>
-  );
+
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/beers' component={Beers} />
+        <Route exact path='/new-beer' component={NewBeer}/>
+        <Route exact path='/random-beer' component={RandomBeer}/>  
+      </div>
+    );
+  } 
 }
 
 export default App;
