@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+.beer-list ul li{
+  display: inline-block;
+  list-style: none;
+
+}
+.beer-list img{
+  width: 100px;
+}
+.beer-list {
+  text-align: center;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.home ol li a{
+  text-decoration: none;
+  color: #282c34
+}
+.home-link {
+  text-align: center;
+}
+.home-link a{
+  text-decoration: none;
+  color: #282c34;
+  font-size: 35px;
+}
+.home ol li{
+
+  margin: 35px;
+}
+.home {
+  font-size: 20px;
+}
+.home img{
+  width: 500px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
