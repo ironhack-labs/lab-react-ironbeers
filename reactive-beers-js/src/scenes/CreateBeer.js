@@ -62,7 +62,6 @@ class CreateBeer extends React.Component {
     attenuation_level: parseInt(this.state.data.attenuation_level),
     contributed_by: this.state.data.contributed_by,
     }
-    console.log(beer)
     BeerService.newBeer(beer)
       .then(
         res => this.setState({
@@ -90,7 +89,6 @@ class CreateBeer extends React.Component {
     }
 
     const disabled = Object.values(this.state.errors).some(el => el === true)
-    console.log(disabled)
     const myState = this.state.data
     if(this.state.redirect) {return <Home />}
     else {return ( 
