@@ -10,7 +10,14 @@ const listBeers = () => http.get('/beers')
 const detailBeer = (id) => http.get(`/beers/${id}`)
   .then(response => response.data)
 
+const randomBeer = () => http.get('/beers/random')
+  .then(response => response.data)
+
+const newBeer = (beer) => http.post('/beers/new', beer)
+
 export default {
   listBeers,
-  detailBeer
+  detailBeer,
+  randomBeer,
+  newBeer
 }
