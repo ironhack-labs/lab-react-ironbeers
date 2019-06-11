@@ -1,0 +1,104 @@
+html,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #39c3f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+
+.home {
+  color: white;
+  font-size: 3em;
+}
+
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.imageDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageLink {
+  width: 100%;
+}
+
+.descriptionLink {
+  padding: 1em;
+  color: black;
+}
+
+.beer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.beer > div {
+  width: 50%;
+}
+
+.beer-img {
+  width: 3em;
+}
+
+.beers > a {
+  text-decoration: none;
+  color: black;
+  border-bottom: black 1px solid;
+}
+
+.beerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.beerCard > img {
+  width: 2em;
+}
+
+.beerCard > span {
+  display: flex;
+}
+
+form {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  border-radius: 10px;
+}
+
+button {
+  width: 10em;
+  border-radius: 10px;
+  background: #39c3f7;
+  color: white;
+  padding: 5px;
+}
+
+.searchBar {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
