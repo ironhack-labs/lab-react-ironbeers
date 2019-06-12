@@ -1,26 +1,31 @@
 import React from 'react';
-import '../App.css';
 import { Switch, Route, Redirect } from 'react-router-dom'
-import Home from './Home'
-import BaseBeers from './BaseBeers'
-import NotFound from './misc/NotFound'
 
-function App() {
-  return (
+import Home from './misc/Home'
+import BeersList from './BeersList'
+import NotFound from './misc/NotFound'
+import RandomBeer from './RandomBeer';
+import DetailsBeer from './DetailsBeer';
+
+class App extends React.Component {
+
+  render() {
+    return (
       <div className="App">
-      <Switch>
-        <Route exact path='/home' component={Home} />
-        <Route exact path='/beers' component={BaseBeers} />
-        <Route exact path="/" component={() => (
+        <Switch>
+          <Route exact path='/home' component={Home} />
+          <Route exact path='/beers' component={BeersList} />
+          <Route exact path='/beers/:id' component={DetailsBeer} />
+          <Route exact path='/random-beer' component={RandomBeer} />
+          <Route exact path="/" component={() => (
             <Redirect to="/home" />
           )} />
 
-          <Route path="/" component={NotFound}/>
+          <Route path="/" component={NotFound} />
         </Switch>
-
-    <button className="btn btn-primary">prueba</button>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;

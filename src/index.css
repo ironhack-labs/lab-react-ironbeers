@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.image-item-beers {
+  height: 180px;
+  width: 110px;
+}
+
+.link-item-beers, .link-item-beers:hover, .link-item-beers:visited, .link-item-beers:active {
+  text-decoration: none;
+  color: black;
+}
+
+.link-item-beers .card {
+  transition: background-color 1s;
+}
+.link-item-beers:hover .card {
+  background-color: rgb(214, 214, 214)
+}
+
+.details-beer .card-img-top {
+  width: 25%;
+}
