@@ -13,7 +13,7 @@ class BeersList extends React.Component {
     beers: BeersData,
   }
 
-  componentWillMount() {
+  componentDidMount() {
 
     BeersServices.getBeers().then(
       beers => {

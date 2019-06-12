@@ -9,7 +9,7 @@ class DetailsBeer extends React.Component {
     beer: BeerData[0] // para poder modelas la vista en Movil
   }
 
-  componentWillMount(){
+  componentDidMount(){
     BeersServices.singleBeer(this.props.match.params.id).then(
       beer => this.setState({beer: beer.data}),
       error=> console.log(error)
