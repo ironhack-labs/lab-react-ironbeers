@@ -2,22 +2,44 @@ body {
   background: linear-gradient(to right, #e2e2e2, #c9d6ff);
 }
 
-.Nav {
+.Home {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding: 10px;
   background: rgba(33, 33, 114, 0.3);
   color: white;
+}
+
+.Home:hover {
+  background: rgba(33, 33, 114, 0.8);
+}
+
+.Home img {
+  width: 600px;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+.Home a {
   text-decoration: none;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   padding: 30px;
   align-items: flex-start;
-  position: absolute;
-  z-index: 9;
+  font-size: 15px;
+  margin: 200px 0 0 0;
 }
 
 .form input {
@@ -29,7 +51,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  margin: 100px 0 0 0;
 }
 
 .link {
@@ -37,29 +59,13 @@ body {
   text-align: center;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.one {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+  padding: 50px;
 }
 
 @keyframes App-logo-spin {

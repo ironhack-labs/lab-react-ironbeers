@@ -24,7 +24,8 @@ class Allbeers extends Component {
   render() {
     return (
       <div>
-        <AddNewBeer getData={() => this.getAllBeers()} />
+        <Link to="/">Home</Link>
+        {/* <AddNewBeer getData={() => this.getAllBeers()} /> */}
         <div className="allBeers">
           {this.state.listOfBeers.map(beer => {
             return (

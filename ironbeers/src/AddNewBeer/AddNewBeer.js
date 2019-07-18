@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class AddNewBeer extends Component {
   constructor(props) {
@@ -40,7 +41,8 @@ class AddNewBeer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
+        <Link to="/">Home</Link>
         <form className="form" onSubmit={this.handleFormSubmit}>
           <label>Name:</label>
           <input

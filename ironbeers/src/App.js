@@ -5,13 +5,12 @@ import Allbeers from "./AllBeers/Allbeers";
 import BeerDetail from "./BeerDetail/BeerDetail";
 import RandomBeer from "./RandomBeer/RandomBeer";
 import "./App.css";
+import AddNewBeer from "./AddNewBeer/AddNewBeer";
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <Home />
-
         <Switch>
           {/* <Route
             exact
@@ -20,9 +19,12 @@ export default class App extends Component {
               return <Allbeers />;
             }}
           /> */}
+          <Route exact path="/" component={Home} />
           <Route exact path="/beers" component={Allbeers} />
           <Route exact path="/detail/:id" component={BeerDetail} />
           <Route exact path="/random-beer" component={RandomBeer} />
+          <Route exact path="/new-beer" component={AddNewBeer} />
+          {/* <AddNewBeer getData={() => this.getAllBeers()} /> */}
           />
         </Switch>
       </div>

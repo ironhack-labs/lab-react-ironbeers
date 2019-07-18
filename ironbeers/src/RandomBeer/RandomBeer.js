@@ -24,12 +24,12 @@ class RandomBeer extends Component {
   }
 
   render() {
-    console.log(this.state.randomBeer.name);
     return (
-      <div>
+      <div className="one">
+        <Link to="/">Home</Link>
         <h1>{this.state.randomBeer.name}</h1>
         <img
-          style={{ width: "100px", height: "180px" }}
+          style={{ width: "300px", height: "500px" }}
           src={this.state.randomBeer.image_url}
           alt={this.state.randomBeer.name}
         />

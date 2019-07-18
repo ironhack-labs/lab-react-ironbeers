@@ -29,6 +29,7 @@ class BeerDetail extends Component {
   render() {
     return (
       <div>
+        <Link to="/">Home</Link>
         <h1>{this.state.name}</h1>
         <img
           style={{ width: "100px", height: "200px" }}
