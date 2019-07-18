@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import AddNewBeer from "../AddNewBeer/AddNewBeer";
 
 class Allbeers extends Component {
   constructor() {
@@ -23,12 +24,13 @@ class Allbeers extends Component {
   render() {
     return (
       <div>
-        <div style={{ width: "60%", float: "left" }}>
+        <AddNewBeer getData={() => this.getAllBeers()} />
+        <div className="allBeers">
           {this.state.listOfBeers.map(beer => {
             return (
               <div key={beer._id}>
                 <Link to={`/detail/${beer._id}`}>
-                  <h3>{beer.name}</h3>
+                  <h3 className="link">{beer.name}</h3>
                 </Link>
               </div>
             );

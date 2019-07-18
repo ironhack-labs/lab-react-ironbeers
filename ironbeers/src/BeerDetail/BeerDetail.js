@@ -31,7 +31,7 @@ class BeerDetail extends Component {
       <div>
         <h1>{this.state.name}</h1>
         <img
-          style={{ width: "100px", height: "180px" }}
+          style={{ width: "100px", height: "200px" }}
           src={this.state.image_url}
           alt={this.state.name}
         />

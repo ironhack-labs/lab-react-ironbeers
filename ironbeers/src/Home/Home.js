@@ -4,11 +4,15 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <nav>
-      <ul>
+      <ul className="Nav">
         <li>
           <Link to="/beers">All beers</Link>
+        </li>
+        <li>
           <Link to="/random-beer">Random Beer</Link>
-          {/* <Link to="/new-beer">New Beer</Link> */}
+        </li>
+        <li>
+          <Link to="/new-beer">New Beer</Link>
         </li>
       </ul>
     </nav>

@@ -1,3 +1,42 @@
+body {
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  background: rgba(33, 33, 114, 0.3);
+  color: white;
+  text-decoration: none;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: flex-start;
+  position: absolute;
+  z-index: 9;
+}
+
+.form input {
+  padding: 10px;
+}
+
+.allBeers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.link {
+  text-decoration: none;
+  text-align: center;
+}
+
 .App {
   text-align: center;
 }

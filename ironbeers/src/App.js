@@ -4,6 +4,7 @@ import Home from "./Home/Home";
 import Allbeers from "./AllBeers/Allbeers";
 import BeerDetail from "./BeerDetail/BeerDetail";
 import RandomBeer from "./RandomBeer/RandomBeer";
+import "./App.css";
 
 export default class App extends Component {
   render() {
