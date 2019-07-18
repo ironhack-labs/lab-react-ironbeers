@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import './RandomBeer.css'
 
 export default class RandomBeer extends Component {
   constructor() {
@@ -27,9 +28,9 @@ export default class RandomBeer extends Component {
     return (
       <div>
         <div>
-          <div style={{ width: '60%', float: "left" }}>
+          <div>
             <h1> {this.state.name}</h1>
-            <img src={this.state.image_url} alt={this.state.name} />
+            <img className="randomBeerImg" src={this.state.image_url} alt={this.state.name} />
             <p>{this.state.tagline}</p>
           </div>
           <div style={{ width: '40%', float: "right" }}>

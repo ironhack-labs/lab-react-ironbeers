@@ -23,7 +23,7 @@ class AddBeer extends Component {
 
     axios.post("http://localhost:5000/new", { name, tagline, image_url, contributed_by })
       .then((info) => {
-console.log(info)
+        console.log(info)
         // this.props.getData();
         this.setState({
           name: "",
@@ -49,6 +49,10 @@ console.log(info)
           <input type="text" name="name" value={this.state.name} onChange={e => this.handleChange(e)} />
           <label>tagline:</label>
           <textarea name="tagline" value={this.state.tagline} onChange={e => this.handleChange(e)} />
+          <label>image_url:</label>
+          <input type="text" name="image_url" value={this.state.image_url} onChange={e => this.handleChange(e)} />
+          <label>contributed_by:</label>
+          <input type="text" name="contributed_by" value={this.state.contributed_by} onChange={e => this.handleChange(e)} />
 
           <input type="submit" value="Submit" />
         </form>

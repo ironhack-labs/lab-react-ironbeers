@@ -1,0 +1,8 @@
+*{
+  box-sizing: border-box;
+}
+
+.randomBeerImg{
+  height: 150px;
+  width: 100px;
+}
