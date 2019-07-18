@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import HomeBtn from "../HomeBtn/HomeBtn";
 
 class RandomBeer extends Component {
   constructor() {
@@ -26,7 +27,7 @@ class RandomBeer extends Component {
   render() {
     return (
       <div className="one">
-        <Link to="/">Home</Link>
+        <HomeBtn />
         <h1>{this.state.randomBeer.name}</h1>
         <img
           style={{ width: "300px", height: "500px" }}
@@ -38,5 +39,5 @@ class RandomBeer extends Component {
     );
   }
 }
-
+//www.scalsys.com/1pngs/home-icon-png-transparent/home_icon_png_transparent_667603.jpg
 export default RandomBeer;

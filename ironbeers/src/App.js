@@ -24,7 +24,6 @@ export default class App extends Component {
           <Route exact path="/detail/:id" component={BeerDetail} />
           <Route exact path="/random-beer" component={RandomBeer} />
           <Route exact path="/new-beer" component={AddNewBeer} />
-          {/* <AddNewBeer getData={() => this.getAllBeers()} /> */}
           />
         </Switch>
       </div>

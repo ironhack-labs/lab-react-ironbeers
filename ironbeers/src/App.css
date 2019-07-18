@@ -1,29 +1,41 @@
 body {
   background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  animation: fade 0.5s;
 }
 
 .Home {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background: rgba(33, 33, 114, 0.3);
-  color: white;
-}
-
-.Home:hover {
-  background: rgba(33, 33, 114, 0.8);
+  color: rgba(35, 35, 165, 0.7);
 }
 
 .Home img {
-  width: 600px;
-  height: 300px;
+  width: 1000px;
+  height: 400px;
   border: 2px solid white;
   border-radius: 15px;
+  opacity: 0.7;
+  transition: opacity 1s;
 }
 
-.Home a {
-  text-decoration: none;
+.Home img:hover {
+  opacity: 1;
+}
+
+.Home li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.Home p {
+  width: 1000px;
+  font-size: 16px;
 }
 
 .container {
@@ -54,6 +66,18 @@ body {
   margin: 100px 0 0 0;
 }
 
+.allBeers a {
+  text-decoration: none;
+  color: rgba(35, 35, 165, 0.9);
+  border: 1px solid transparent;
+  border-radius: 15px;
+  opacity: 1;
+}
+
+.allBeers a:hover {
+  opacity: 1;
+}
+
 .link {
   text-decoration: none;
   text-align: center;
@@ -64,15 +88,27 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 50px;
 }
 
-@keyframes App-logo-spin {
+.homeBtn img {
+  opacity: 0.6;
+  transition: opacity 1s;
+  border: 0px solid transparent;
+  background: transparent;
+  padding: 0;
+  margin: 50px;
+}
+
+.homeBtn:hover {
+  opacity: 1;
+}
+
+@keyframes fade {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }

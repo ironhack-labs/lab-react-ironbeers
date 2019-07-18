@@ -9,16 +9,45 @@ const Home = () => {
     <nav>
       <ul className="Home">
         <li>
-          <img src={AllBeersPict} alt="All Beers" />
-          <Link to="/beers">All beers</Link>
+          <Link to="/beers">
+            <img src={AllBeersPict} alt="All Beers" />
+          </Link>
+          <h2>All Beers</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit eius odit, deserunt error repellat provident
+            laudantium architecto nesciunt veniam ducimus accusamus voluptate
+            enim non, unde quia nisi beatae reiciendis expedita? Blanditiis
+            velit laudantium veniam corporis.
+          </p>
         </li>
         <li>
-          <img src={RandomBeerPict} alt="All Beers" />
-          <Link to="/random-beer">Random Beer</Link>
+          <Link to="/random-beer">
+            <img src={RandomBeerPict} alt="Random Beer" />
+          </Link>
+          <h2>Random Beer</h2>
+          <p>
+            Molestias natus architecto iusto voluptatibus similique quis dolor
+            doloribus perferendis laboriosam possimus, ipsum quisquam quia,
+            eveniet distinctio sed tempora obcaecati accusantium eaque
+            blanditiis ipsa esse! Eos, itaque. Nemo, distinctio quasi sequi
+            ipsum quae dolore. Odit optio deserunt, cupiditate nam consequatur
+            dicta qui sed laborum voluptatibus, alias ducimus aspernatur
+            temporibus dolorem maiores iste sint laudantium. Reprehenderit.
+          </p>
         </li>
         <li>
-          <img src={NewBeerPict} alt="All Beers" />
-          <Link to="/new-beer">New Beer</Link>
+          <Link to="/new-beer">
+            <img src={NewBeerPict} alt="New Beer" />
+          </Link>
+          <h2>New Beer</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit eius odit, deserunt error repellat provident
+            laudantium architecto nesciunt veniam ducimus accusamus voluptate
+            enim non, unde quia nisi beatae reiciendis expedita? Blanditiis
+            velit laudantium veniam corporis.
+          </p>
         </li>
       </ul>
     </nav>

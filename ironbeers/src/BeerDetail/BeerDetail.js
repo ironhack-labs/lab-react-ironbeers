@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import HomeBtn from "../HomeBtn/HomeBtn";
 
 class BeerDetail extends Component {
   constructor(props) {
@@ -28,8 +29,8 @@ class BeerDetail extends Component {
 
   render() {
     return (
-      <div>
-        <Link to="/">Home</Link>
+      <div className="one">
+        <HomeBtn />
         <h1>{this.state.name}</h1>
         <img
           style={{ width: "100px", height: "200px" }}
