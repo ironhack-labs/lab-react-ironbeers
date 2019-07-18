@@ -7,6 +7,8 @@ const Home = () => {
       <ul>
         <li>
           <Link to="/beers">All beers</Link>
+          <Link to="/random-beer">Random Beer</Link>
+          {/* <Link to="/new-beer">New Beer</Link> */}
         </li>
       </ul>
     </nav>

@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./Home/Home";
 import Allbeers from "./AllBeers/Allbeers";
 import BeerDetail from "./BeerDetail/BeerDetail";
+import RandomBeer from "./RandomBeer/RandomBeer";
 
 export default class App extends Component {
   render() {
@@ -11,27 +12,16 @@ export default class App extends Component {
         <Home />
 
         <Switch>
-          <Route
+          {/* <Route
             exact
             path="/beers"
             render={() => {
               return <Allbeers />;
             }}
-          />
-          <Route
-            exact
-            path="/detail/:id"
-            render={() => {
-              return <Allbeers />;
-            }}
-          />
-          <Route
-            exact
-            path="/detail/:id"
-            render={props => {
-              var chosenBeer = props.match.params.chosenBeer;
-              return <BeerDetail movie={this.state.movies[chosenBeer]} />;
-            }}
+          /> */}
+          <Route exact path="/beers" component={Allbeers} />
+          <Route exact path="/detail/:id" component={BeerDetail} />
+          <Route exact path="/random-beer" component={RandomBeer} />
           />
         </Switch>
       </div>

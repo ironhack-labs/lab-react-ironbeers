@@ -30,7 +30,6 @@ class Allbeers extends Component {
                 <Link to={`/detail/${beer._id}`}>
                   <h3>{beer.name}</h3>
                 </Link>
-                {/* <p style={{maxWidth: '400px'}} >{project.description} </p> */}
               </div>
             );
           })}
@@ -41,7 +40,3 @@ class Allbeers extends Component {
 }
 
 export default Allbeers;
-
-// <div style={{width: '40%', float:"right"}}>
-// <AddProject getData={() => this.getAllProjects()}/> {/* <== !!! */}
-// </div>
