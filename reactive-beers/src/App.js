@@ -24,6 +24,7 @@ class App extends React.Component {
           </li>
         </ul>
         <Switch>
+          <Route exact path="/" component={BeersList} />
           <Route exact path="/beers" component={BeersList} />
           <Route path="/beers/:id" component={BeerDetails} />
           <Route exact path="/random-beer" component={RandomBeer} />
