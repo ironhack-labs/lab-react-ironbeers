@@ -32,8 +32,7 @@ const Home = () => {
             eveniet distinctio sed tempora obcaecati accusantium eaque
             blanditiis ipsa esse! Eos, itaque. Nemo, distinctio quasi sequi
             ipsum quae dolore. Odit optio deserunt, cupiditate nam consequatur
-            dicta qui sed laborum voluptatibus, alias ducimus aspernatur
-            temporibus dolorem maiores iste sint laudantium. Reprehenderit.
+            dicta qui sed laborum.
           </p>
         </li>
         <li>
