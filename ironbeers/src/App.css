@@ -1,6 +1,7 @@
 body {
   background: linear-gradient(to right, #e2e2e2, #c9d6ff);
   animation: fade 0.5s;
+  font-family: "Montserrat", sans-serif;
 }
 
 .Home {
@@ -54,8 +55,10 @@ body {
   margin: 200px 0 0 0;
 }
 
-.form input {
+.form input,
+.form textarea {
   padding: 10px;
+  margin: 20px;
 }
 
 .allBeers {
@@ -69,13 +72,17 @@ body {
 .allBeers a {
   text-decoration: none;
   color: rgba(35, 35, 165, 0.9);
-  border: 1px solid transparent;
-  border-radius: 15px;
-  opacity: 1;
 }
 
-.allBeers a:hover {
-  opacity: 1;
+.each {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  transition: all 0.5s ease;
+}
+.each:hover {
+  transform: scale(2, 2);
 }
 
 .link {
@@ -91,17 +98,33 @@ body {
   padding: 50px;
 }
 
-.homeBtn img {
-  opacity: 0.6;
+.homeBtn {
+  opacity: 0.5;
   transition: opacity 1s;
   border: 0px solid transparent;
   background: transparent;
   padding: 0;
-  margin: 50px;
+  margin: 20px;
 }
 
 .homeBtn:hover {
   opacity: 1;
+}
+
+.search {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.fix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fix input {
+  font-size: 15px;
 }
 
 @keyframes fade {
