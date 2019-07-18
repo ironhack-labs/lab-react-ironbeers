@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-class RandomBeer extends Component {
+class BeerDetails extends Component {
   constructor() {
     super();
     this.state = { beer: {} };
   }
 
   componentDidMount() {
+    let id = this.props.match.params.id;
     axios
-      .get(`https://ih-beer-api.herokuapp.com/beers/random`)
+      .get(`https://ih-beer-api.herokuapp.com/beers/${id}`)
       .then(response => {
         this.setState({ beer: response.data });
       })
@@ -21,7 +22,6 @@ class RandomBeer extends Component {
   render() {
     return (
       <div>
-        <h3>Random Beer:</h3>
         <h1>{this.state.beer.name}</h1>
         <p>{this.state.beer.tagline}</p>
         <p>{this.state.beer.description}</p>
@@ -30,4 +30,4 @@ class RandomBeer extends Component {
   }
 }
 
-export default RandomBeer;
+export default BeerDetails;

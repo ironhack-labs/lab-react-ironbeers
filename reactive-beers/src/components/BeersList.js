@@ -12,7 +12,6 @@ class BeersList extends Component {
 
   componentDidMount() {
     axios.get("https://ih-beer-api.herokuapp.com/beers").then(response => {
-      console.log(response);
       this.setState({ beers: response.data });
     });
   }
