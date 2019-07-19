@@ -17,11 +17,10 @@ class BeersList extends Component {
     });
   }
 
-  handleChange = e => {
-    console.log(e.target.value);
-    this.setState({ filterStr: e.target.value });
+  handleChange = text => {
+    this.setState({ filterStr: text });
     axios
-      .get(`https://ih-beer-api.herokuapp.com/beers/search?q=${e.target.value}`)
+      .get(`https://ih-beer-api.herokuapp.com/beers/search?q=${text}`)
       .then(response => {
         console.log(response.data);
         this.setState({ beers: response.data });
@@ -34,7 +33,7 @@ class BeersList extends Component {
         <input
           type="text"
           name="filterStr"
-          onChange={this.handleChange}
+          onChange={e => this.handleChange(e.target.value)}
           value={this.state.filterStr}
         />
         <div className="card-container">
