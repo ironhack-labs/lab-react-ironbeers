@@ -1,0 +1,32 @@
+.beer-list{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-top:50px;
+}
+
+.beer-item{
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.beer-item img{
+    height: 150px;
+}
+
+.beer-info{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.beer-info > *{
+    margin: 0;
+}
