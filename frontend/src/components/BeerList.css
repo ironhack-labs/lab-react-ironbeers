@@ -1,12 +1,14 @@
 .beer-list{
     width: 100vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-top:50px;
 }
 
 .beer-item{
-    width: 100vw;
+    width: 400px;
     height: 200px;
     display: flex;
     flex-direction: row;

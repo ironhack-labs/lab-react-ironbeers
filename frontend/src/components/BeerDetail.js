@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Header from "./Header";
+import {Card} from 'antd'
 
 export default class BeerDetail extends Component {
 	state = {
@@ -23,27 +24,27 @@ export default class BeerDetail extends Component {
 	render() {
 		const { image_url, name, attenuation_level, tagline, first_brewed, description, contributed_by } = this.state.beer;
 		return (
-			<div>
+			<div style={{ marginTop: "60px", display:'flex', justifyContent: 'center' }}>
 				<Header />
-				<div>
+				<Card style={{ width: '30%', display:'flex', flexDirection: 'column', justifyContent: 'space-evenly'}}>
 					<div>
-						<img src={image_url} alt={name} />
+						<img width='300px' src={image_url} alt={name} />
 					</div>
-					<div>
+					<div style={{ display:'flex', justifyContent: 'space-between', alignItems: 'center'}}>
 						<h1>{name}</h1>
 						<span>{attenuation_level}</span>
 					</div>
-					<div>
+					<div style={{ display:'flex', justifyContent: 'space-between', alignItems: 'center'}}>
 						<span>{tagline}</span>
 						<span>{first_brewed}</span>
 					</div>
-					<div>
-						<p>{description}</p>
+					<div style={{ display:'flex', justifyContent: 'flex-start', alignItems: 'center', marginTop: '20px'}}>
+						<p style={{textAlign: 'left'}}>{description}</p>
 					</div>
-					<div>
+					<div style={{ display:'flex', justifyContent: 'flex-end', alignItems: 'center', marginTop: '20px'}}>
 						<small>{contributed_by}</small>
 					</div>
-				</div>
+				</Card>
 			</div>
 		);
 	}

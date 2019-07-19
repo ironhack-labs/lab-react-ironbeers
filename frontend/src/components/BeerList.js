@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./BeerList.css";
 import Header from "./Header";
+import { Input, Card } from 'antd'
 
 export default class BeerList extends Component {
 	state = {
@@ -37,12 +38,12 @@ export default class BeerList extends Component {
 	render() {
 		const { beers } = this.state;
 		return (
-			<div style={{ marginTop: "50px" }}>
+			<div style={{ marginTop: "60px" }}>
 				<Header />
-				<input type="text" name="search" onChange={this.handleChange} value={this.state.search} />
+				<Input style={{width: '90%'}} type="text" name="search" onChange={this.handleChange} value={this.state.search} placeholder='search' />
 				<div className="beer-list">
 					{beers.map(beer => (
-						<div key={beer._id} onClick={() => this.props.history.push(`/beer/${beer._id}`)}>
+						<Card key={beer._id} onClick={() => this.props.history.push(`/beer/${beer._id}`)}>
 							<div className="beer-item">
 								<img src={beer.image_url} alt={beer.name} />
 								<div className="beer-info">
@@ -51,8 +52,7 @@ export default class BeerList extends Component {
 									<small>{beer.contributed_by}</small>
 								</div>
 							</div>
-							<hr />
-						</div>
+						</Card>
 					))}
 				</div>
 			</div>
