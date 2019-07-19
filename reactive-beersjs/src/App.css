@@ -69,9 +69,35 @@
   font-weight: 100;
 }
 
+.beer-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
+}
+
+.beer-item div img {
+  height: 150px;
+}
+
+.beer-item div:nth-child(1) {
+  width: 30%;
+}
+
+.beer-item div:nth-child(2) {
+  width: 70%;
+  text-align: left;
+}
+
 @media (min-width: 1025px) {
   .home-container a {
     width: 33.33%;
+  }
+
+  .beer-item div:nth-child(2) {
+    width: 30%;
   }
 }
 
