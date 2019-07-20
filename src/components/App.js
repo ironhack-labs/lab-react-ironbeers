@@ -5,10 +5,9 @@ import Home from "./pages/Home";
 import Beers from "./pages/Beers";
 import RandomBeer from "./pages/RandomBeer";
 import NewBeer from "./pages/NewBeer";
+import DetailBeer from "./pages/DetailBeer";
 
-import { Route, Switch, Link } from "react-router-dom";
-
-import { Row, Col, Container } from "reactstrap";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
@@ -21,6 +20,7 @@ function App() {
           <Route path="/beers" exact component={Beers} />
           <Route path="/random-beer" exact component={RandomBeer} />
           <Route path="/new-beer" component={NewBeer} />
+          <Route path="/beer-detail" component={DetailBeer} />
           <Route render={() => <h1>404</h1>} />
         </Switch>
     </div>

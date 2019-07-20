@@ -10,6 +10,8 @@ import HomeHeader from "../HomeHeader";
 export default function Beers() {
   const [beers, setBeers] = useState([]);
 
+  console.log("emptyBeers:", beers);
+
   useEffect(() => {
     axios.get("https://ih-beer-api.herokuapp.com/beers").then(response => {
       let myBeers = response.data.slice(6, 15);
@@ -23,6 +25,7 @@ export default function Beers() {
     <div className="Beers">
       <Container>
         <HomeHeader />
+        {beers.length === 0 && <h1>Fetching Beers...GluckGluckGluck</h1>}
         {beers.map((beer, i) => (
           <Beer
             key={i}
@@ -30,6 +33,7 @@ export default function Beers() {
             picUrl={beer.image_url}
             tagline={beer.tagline}
             contributor={beer.contributed_by}
+            beer = {beer}
           />
         ))}
       </Container>
