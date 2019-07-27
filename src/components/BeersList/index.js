@@ -1,41 +1,23 @@
 import React, { Component } from 'react';
 import Navbar from './../Navbar';
+import { Link } from 'react-router-dom';
 
 export default class BeerList extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// }
-	beerList = async () => {
-		try {
-			const response = await this.props.getAllBeers();
-			console.log(response);
-			return await response.data.map((beer, index) => {
-				console.log(beer);
-				return (
-					<div key={index}>
-						<h2>{beer.name}</h2>
-						<h3>{beer.tagline}</h3>
-						<p>{beer.tagline}</p>
+	beerList = () => {
+		return this.props.beers.map((eachB) => {
+			return (
+				<div key={eachB._id} className="each-beer">
+					<img src={eachB.image_url} alt="beerpic" />
+					<div className="beer-desc">
+						<Link to={`/beers/${eachB._id}`} className="homelink">
+							<h1>{eachB.name}</h1>
+						</Link>
+						<h4>{eachB.tagline}</h4>
+						<p>{eachB.description}</p>
 					</div>
-				);
-			});
-		} catch (error) {
-			return <h2>Something happend</h2>;
-		}
-
-		// this.props.getAllBeers().then((result) => {
-		// 	let resultArray = result.data.map((beer, index) => {
-		// 		console.log(beer);
-		// 		return (
-		// 			// <h3>hello</h3	>
-		// 			<div key={index}>
-		// 				<h2>{beer.name}</h2>
-		// 				<h3>{beer.tagline}</h3>
-		// 				<p>{beer.tagline}</p>
-		// 			</div>
-		// 		);
-		// 	});
-		// });
+				</div>
+			);
+		});
 	};
 
 	render() {

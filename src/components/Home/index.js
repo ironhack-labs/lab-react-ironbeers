@@ -7,7 +7,7 @@ export default class Home extends Component {
 			<div>
 				<div>
 					<NavLink className="text-dark" exact to="/beers">
-						<img src="/images/beers.png" class="img-fluid" alt="Beer" />
+						<img src="/images/beers.png" className="img-fluid" alt="Beer" />
 						<h2>All beers</h2>
 					</NavLink>
 					<p className="text-muted">
@@ -29,7 +29,11 @@ export default class Home extends Component {
 				</div>
 				<div>
 					<NavLink className="text-dark" exact to="/random-beer">
-						<img src="/images/random-beer.png" class="img-fluid" alt="Beer" />
+						<img
+							src="/images/random-beer.png"
+							className="img-fluid"
+							alt="Beer"
+						/>
 						<h2>Random Beer</h2>
 					</NavLink>
 					<p className="text-muted">
@@ -51,7 +55,7 @@ export default class Home extends Component {
 				</div>
 				<div>
 					<NavLink className="text-dark" exact to="/new-beer">
-						<img src="/images/new-beer.png" class="img-fluid" alt="Beer" />
+						<img src="/images/new-beer.png" className="img-fluid" alt="Beer" />
 						<h2>New Beer</h2>
 					</NavLink>
 					<p className="text-muted">

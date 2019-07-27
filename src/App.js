@@ -13,17 +13,23 @@ export default class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			// listOfBeers: [],
+			listOfBeers: [],
+			ready: false,
 		};
 	}
 
 	getAllBeers = async () => {
 		try {
-			return await axios.get('https://sample-api-ih.herokuapp.com');
+			const result = await axios.get('https://sample-api-ih.herokuapp.com');
+			this.setState({ listOfBeers: result.data, ready: true });
 		} catch (error) {
 			console.log(error);
 		}
 	};
+
+	componentDidMount() {
+		this.getAllBeers();
+	}
 
 	render() {
 		return (
@@ -35,7 +41,8 @@ export default class App extends Component {
 						render={(props) => (
 							<Home
 								{...props}
-								// allTheProjects={this.getAllBeers}
+								// beers={this.state.listOfBeers}
+								// ready={this.state.ready}
 							/>
 						)}
 					/>
@@ -43,7 +50,11 @@ export default class App extends Component {
 						exact
 						path="/beers"
 						render={(props) => (
-							<BeersList {...props} getAllBeers={this.getAllBeers} />
+							<BeersList
+								{...props}
+								beers={this.state.listOfBeers}
+								ready={this.state.ready}
+							/>
 						)}
 					/>
 					<Route
@@ -52,7 +63,8 @@ export default class App extends Component {
 						render={(props) => (
 							<SingleBeer
 								{...props}
-								// allTheProjects={this.state.listOfProjects}
+								beers={this.state.listOfBeers}
+								ready={this.state.ready}
 							/>
 						)}
 					/>
@@ -62,7 +74,8 @@ export default class App extends Component {
 						render={(props) => (
 							<RandomBeer
 								{...props}
-								// allTheProjects={this.state.listOfProjects}
+								beers={this.state.listOfBeers}
+								ready={this.state.ready}
 							/>
 						)}
 					/>
@@ -72,7 +85,8 @@ export default class App extends Component {
 						render={(props) => (
 							<NewBeer
 								{...props}
-								// allTheProjects={this.state.listOfProjects}
+								beers={this.state.listOfBeers}
+								ready={this.state.ready}
 							/>
 						)}
 					/>
