@@ -35,24 +35,29 @@ export default class App extends Component {
 
   createBeer = (e)=>{
     e.preventDefault();
-    // axios.post("https://sample-api-ih.herokuapp.com/new", this.state.newBeer)
-    // .then((res)=>{
-    //   console.log(res);
-    // })
-    // .catch((err)=>{
-    //   console.log(err);
-    // })
+    console.log(this.state.newBeer);
+    axios.post("https://sample-api-ih.herokuapp.com/new", this.state.newBeer)
+    .then((res)=>{
+      console.log(res);
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
   }
 
   getIronBeers = (beers)=>{
-    this.setState({beers: beers, ready: true});
+    let newBeers = beers.sort();
+    this.setState({beers: newBeers, ready: true});
   }
 
   getInputs = (e)=>{
     let attribute = e.target.name;
     let value = e.target.value;
-    this.setState({newBeer: { [attribute]: value}});
-    console.log(this.state.newBeer);
+    let newBeer = {...this.state.newBeer};
+
+    newBeer[attribute] = value;
+
+    this.setState({newBeer: newBeer});
   }
 
   render() {
