@@ -1,0 +1,9 @@
+.beerBox{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.images{
+  width:20%;
+}
