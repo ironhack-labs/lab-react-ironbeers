@@ -31,7 +31,7 @@ handleFormSubmit = (event) => {
 
     })
   .then( () => {
-    this.history.push('home');
+    this.props.history.push('/beers');
   })
   .catch( error => console.log(error) )
 }
