@@ -1,0 +1,26 @@
+.App {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 460px;
+  display: block;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navbar-item {
+  width: 100%;
+  justify-content: center;
+}
+
+.icon > i {
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,12 @@
+.new-beer-container {
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  color: black;
+  padding: 20px 20px;
+}
+
+.button, .input {
+  margin: 0 0 10px 0;
+}
+

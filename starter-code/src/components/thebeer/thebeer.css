@@ -1,0 +1,66 @@
+.single-beer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  color: black;
+}
+
+.single-beer-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.single-beer-image > img {
+  width: 180px;
+}
+.single-beer-name {
+  display: left;
+  font-size: 28px;
+}
+
+.single-beer-attenuation {
+  display: right;
+  font-size: 28px;
+  color: gray;
+  text-align: right;
+}
+
+.single-beer-tagline {
+  display: left;
+  font-size: 20px;
+  color: gray;
+  width: 350px;
+}
+
+.single-beer-brewed {
+  font-size: 12px;
+  color: black;
+  text-align: right;
+  font-weight: bold;
+}
+
+.single-beer-description {
+  display: left;
+  font-size: 16px;
+}
+
+
+.single-beer-contributor {
+  display: left;
+  font-size: 12px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0 10px;
+}

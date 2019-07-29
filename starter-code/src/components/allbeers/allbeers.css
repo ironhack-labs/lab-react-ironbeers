@@ -1,0 +1,36 @@
+.beer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
+.beer-left {
+  width: 80px;
+  margin: 20px 20px;
+}
+
+.beer-right {
+  width: 300px;
+  margin: 40px 10px 10px 10px;
+}
+
+.beer-name {
+  font-size: 24px;
+}
+
+.beer-name > a {
+  color: black;
+}
+
+.beer-tagline {
+  font-size: 18px;
+  color: gray;
+}
+
+.beer-contributor {
+  font-size: 12px;
+}
