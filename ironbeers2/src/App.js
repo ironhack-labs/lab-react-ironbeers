@@ -5,6 +5,7 @@ import BeerHome from "./components/beerhome/BeerHome.js"
 import BeerList from "./components/beerlist/BeerList.js"
 import EachBeer from "./components/eachbeer/EachBeer.js"
 import RandomBeer from "./components/randombeer/RandomBeer.js"
+import AddBeer from "./components/addbeer/AddBeer.js"
 import axios from 'axios';
 
 
@@ -48,6 +49,8 @@ class App extends Component {
         <Route exact path ="/beers" render={(props) => <BeerList {...props} allTheBeers={this.state.listOfBeers} ready = {this.state.ready}/>} />
         <Route exact path ="/random" render={(props) => <RandomBeer {...props} allTheBeers={this.state.listOfBeers} ready = {this.state.ready}/>} />
         <Route exact path ="/:id" render={(props) => <EachBeer {...props} allTheBeers={this.state.listOfBeers} ready = {this.state.ready}/>} />
+        <Route exact path ="/add-beer" render={(props) => <AddBeer {...props} allTheBeers={this.state.listOfBeers} ready = {this.state.ready}/>} />
+
       </Switch>
       </div>
     </div>
