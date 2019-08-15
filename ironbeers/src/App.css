@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+.home img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.home h1 {
+  font-size: 3em;
+}
+
+.link {
+  margin-left: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.8em;
+  display: block;
+}
+
+.back-to-home {
+  background-color: rgb(32, 116, 195);
+  color: white;
+  font-size: 2em;
+  display: block;
+}
+
+.show, .one {
+  margin: 20px 0;
+}
+
+.show img {
+  width: 25%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.one img {
+  width: 40%
+}
+
