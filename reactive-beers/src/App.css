@@ -1,0 +1,18 @@
+.hero-article img {
+	width: 100%;
+}
+
+nav {
+	font-size: 2em;
+	text-align: center;
+	height: 60px;
+	background: lightblue;
+}
+
+img.beer {
+	width: 50px;
+}
+
+img.beer-big {
+	width: 150px;
+}
