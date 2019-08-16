@@ -30,7 +30,7 @@ class Beers extends Component {
       <div>
         <h1>These are the beers</h1>
 
-        {this.state.beers ? this.state.beers.filter((elm, idx) => idx <= 20).map(elm => <img src={elm.description} alt="a" />) : "Waiting for the beers..."}
+        {this.state.beers ? this.state.beers.filter((elm, idx) => idx <= 20).map((elm, idx) => <img src={elm.image_url} alt={idx} />) : "Waiting for the beers..."}
 
       </div>
     )
