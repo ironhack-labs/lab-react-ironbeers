@@ -1,0 +1,197 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.fas.fa-home {
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+nav {
+  background-color: dodgerblue;
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+}
+
+.section {
+  width: 60%;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.section a {
+  text-decoration: none;
+  color: black;
+}
+
+.allbeer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+.beer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+  border-bottom: 2px solid grey;
+  width: 100%;
+  padding: 20px;
+}
+
+.beer h3 {
+  color: grey;
+  font-weight: bold;
+}
+
+.beerinfo {
+  width: 60%;
+}
+
+.beerinfo * {
+  margin: 10px 0;
+}
+
+.beer a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: black;
+}
+
+.beer img {
+  width: 10%;
+  margin: 0 20px;
+}
+
+.onebeer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 90px;
+  width: 80%;
+}
+
+.imgcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.onebeer img {
+  width: 10%;
+}
+
+.onebeer h1,
+.onebeer h2 {
+  width: 80%;
+}
+
+.onebeer h1,
+h2 {
+  font-weight: lighter;
+  font-size: 50px;
+}
+
+.firstbrew {
+  font-weight: bold;
+}
+
+.onebeer span {
+  width: 20%;
+}
+
+.attenuation {
+  color: grey;
+  font-size: 30px;
+}
+
+.onebeer p {
+  margin: 10px 0;
+}
+
+.contributor {
+  color: grey;
+  font-weight: bolder;
+}
+
+.addbeer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+input,
+button {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+input {
+  border: 1px solid rgb(209, 209, 209);
+}
+
+#description {
+  height: 200px;
+}
+
+label {
+  margin: 20px 0 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 30px;
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+}
