@@ -56,11 +56,11 @@ The **IronBeers** project will include the following features:
 
 :exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design! As we said this is bonus, so it's up to you. :+1:
 
-### Iteration 1: Create the App
+<!-- ### Iteration 1: Create the App
 
-Well, at this point, this comes natural: we will use `create-react-app` to build a new app. Feel free to name it as you wish, but if you need some inspiration, we called it **Reactive BeersJS**.
+Well, at this point, this comes natural: we will use `create-react-app` to build a new app. Feel free to name it as you wish, but if you need some inspiration, we called it **Reactive BeersJS**. -->
 
-### Iteration 2: Home Page
+### Iteration 1: Home Page
 
 Create a **Home Page**. This view should include three links to separate pages:
 
@@ -71,18 +71,18 @@ Create a **Home Page**. This view should include three links to separate pages:
 Feel free to design it however you wish, but here is how we did it:
 
 <div style="display: flex; justify-content: center">
-<img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png" height="600px" />
+  <img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png" height="600px" />
 </div>
 
-### Iteration 3: Header
+### Iteration 2: Header
 
 On every view (except for the `home`), we should add a **header** with a `link` to the root of the `app`.
 
 <div style="display: flex; justify-content: center">
-<img src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png" height="100px" />
+  <img src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png" height="100px" />
 </div>
 
-### Iteration 4: List the Beers
+### Iteration 3: List the Beers
 
 On the `/beers` route, we should display all the beers from the database. So, in this case, you need to "hit" the API's route `https://ih-beer-api.herokuapp.com/beers` and the API will return an **array of beers**.
 
@@ -96,13 +96,13 @@ You should display the following from each of the beers:
   - **Also, add the link to check the details of each beer. The link should navigate to `/beers/:beerId`.**
 
 <div style="display: flex; justify-content: center">
-<img src="https://user-images.githubusercontent.com/23629340/40706960-96223ade-63ef-11e8-9375-b7b6d091e716.png" height="600px" />
+  <img src="https://user-images.githubusercontent.com/23629340/40706960-96223ade-63ef-11e8-9375-b7b6d091e716.png" height="600px" />
 </div>
 
 The first time you call the API, it might take a bit to respond. It's hosted on Heroku, and it goes to sleep after 30 minutes, you know! :wink:
 
 
-### Iteration 5: Single Beer
+### Iteration 4: Single Beer
 
 When a user click on one of the beers, you should display a detailed view of it, including the following fields:
 
@@ -117,10 +117,10 @@ When a user click on one of the beers, you should display a detailed view of it,
 Again, we **strongly recommend to console log the response from the API**.
 
 <div style="display: flex; justify-content: center">
-<img src="https://user-images.githubusercontent.com/23629340/40707269-84bedd78-63f0-11e8-86c3-b14efb9323a7.png" height="600px" />
+  <img src="https://user-images.githubusercontent.com/23629340/40707269-84bedd78-63f0-11e8-86c3-b14efb9323a7.png" height="600px" />
 </div>
 
-### Iteration 6: Random Beer
+### Iteration 5: Random Beer
 
 On the `/random-beer` route, we will render a single beer that will be retrieved from the database. The endpoint will do all the job for us, all we need to do is to call `https://ih-beer-api.herokuapp.com/beers/random`. We should receive an object including all the info about a beer.
 The same way we did with the **Single Beer** view, we should render the following fields:
@@ -134,10 +134,10 @@ The same way we did with the **Single Beer** view, we should render the followin
   - `contributed_by`
 
 <div style="display: flex; justify-content: center">
-<img src="https://user-images.githubusercontent.com/23629340/40707457-05a22990-63f1-11e8-84b2-a86143b7b821.png" height="600px" />
+  <img src="https://user-images.githubusercontent.com/23629340/40707457-05a22990-63f1-11e8-84b2-a86143b7b821.png" height="600px" />
 </div>
 
-### Iteration 7: Create New Beer
+### Iteration 6: Create New Beer
 
 Finally, on the `/new-beer` route (remember, this is you react route, you're displaying the form on this route), we should render a form where user can create new beers. The `form` should include the following fields:
 
@@ -159,7 +159,7 @@ Since we didn't cover how to upload images yet, don't worry about it now - the A
 
 
 <div style="display: flex; justify-content: center">
-<img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
+  <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
 </div>
 
 ### (Extra) Bonus Iteration: Filter the Beers
