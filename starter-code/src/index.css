@@ -3,3 +3,29 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  text-align: center;
+}
+
+.section > h2 {
+  margin: 10px;
+  font-size: 32px;
+}
+
+.section > p {
+  font-size: 18px;
+}
+
+.section > div {
+  height: 280px;
+}
+
+.section > div > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
