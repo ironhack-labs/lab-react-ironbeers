@@ -39,3 +39,17 @@ export const getRandom = () => {
       });
   });
 };
+
+export const post = name => {
+  return new Promise((resolve, reject) => {
+    axios
+      .post(`https://ih-beer-api.herokuapp.com/beers/new`, { name })
+      .then(response => {
+        resolve(response.data);
+        console.log(response.data);
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
+};
