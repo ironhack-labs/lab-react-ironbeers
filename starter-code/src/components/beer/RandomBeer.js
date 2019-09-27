@@ -4,7 +4,7 @@ import { Button } from 'antd'
 import axios from 'axios';
 import BeerCard from '../beers/BeerCard';
 
-export default class BeerDetail extends Component {
+export default class RandomBeer extends Component {
   state = {
     beer: {}
   };
@@ -27,10 +27,10 @@ export default class BeerDetail extends Component {
     console.log(this.props);
     return (
       <div>
+        <h1>{beer.name}</h1>
         <Link to="/">
           <Button type="primary">Go back to Home</Button>
         </Link>
-        <h1>{beer.name}</h1>
         <BeerCard beer={beer} />
       </div>
     );

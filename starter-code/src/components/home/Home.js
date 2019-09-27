@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Typography, Button } from 'antd'
-
 const { Title, Paragraph } = Typography
 
 function Home() {
+
   return (
     <div width='100vw' height='100vh'>
       <Card hoverable
@@ -44,7 +44,7 @@ function Home() {
         </Link>
       </Card>
     </div>
-  );
+  )
 }
 
 export default Home
