@@ -3,3 +3,43 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+#main{
+  padding: 5%;
+}
+.beer-box{
+  box-sizing: border-box;
+  padding: 20px;
+}
+.beer-img-card{
+  height: 200px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  padding:20px;
+}
+.menu{
+  text-align: center;
+  color:#ffffff;
+  padding: 10px;
+}
+.detail-image{
+  height:250px;
+  display: block;
+  margin: 0 auto;
+  padding:5%;
+}
+.form-box{
+  padding: 30px;
+}
+.search{
+  margin:10px;
+}
+.home-image{
+  width: 100%;
+}
+.home-btn{
+  margin:10px 0px;
+}
+.detail-info{
+  padding:30px;
+}
