@@ -40,3 +40,9 @@
 .beer-name {
   font-size: 10px;
 }
+
+.beer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

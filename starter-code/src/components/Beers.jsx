@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-
 export default class Beers extends Component {
   state = {
     beers: []
@@ -26,7 +25,6 @@ export default class Beers extends Component {
   render() {
     return (
       <div>
-    
         {this.state.beers.map(beer => {
           return (
             <>
@@ -39,7 +37,13 @@ export default class Beers extends Component {
               >
                 <div key={beer._id}>
                   <Link to={`/beers/${beer._id}`}>
-                    {<img style={{ height: "200px" }} src={beer.image_url} />}
+                    {
+                      <img
+                        style={{ height: "200px" }}
+                        src={beer.image_url}
+                        alt="beer-img"
+                      />
+                    }
                   </Link>
                 </div>
 

@@ -13,7 +13,7 @@ export default class SingleBeer extends Component {
       .get(`https://ih-beer-api.herokuapp.com/beers/${beerId}`)
       .then(response => {
         const singleBeer = response.data;
-        console.log(response.data);
+        console.log("Axios response: ", response.data);
         this.setState({
           singleBeer: singleBeer
         });
@@ -42,6 +42,7 @@ export default class SingleBeer extends Component {
               <img
                 style={{ height: "200px" }}
                 src={this.state.singleBeer.image_url}
+                alt="beer-img"
               />
             }
           </div>
@@ -56,7 +57,9 @@ export default class SingleBeer extends Component {
             <strong>Attenuation Level </strong>
             <p>{this.state.singleBeer.attenuation_level}</p>
             <strong>Description </strong>
-            <p style={{ width: "300px" }}>{this.state.singleBeer.description}</p>
+            <p style={{ width: "300px" }}>
+              {this.state.singleBeer.description}
+            </p>
             <strong>Contributed by </strong>
             <p>{this.state.singleBeer.contributed_by}</p>
           </div>

@@ -32,7 +32,15 @@ export default class RandomBeer extends Component {
             margin: "30px 0"
           }}
         >
-          <div>{<img style={{ height: "200px" }} src={beer.image_url} />}</div>
+          <div>
+            {
+              <img
+                style={{ height: "200px" }}
+                src={beer.image_url}
+                alt="beer-img"
+              />
+            }
+          </div>
 
           <div>
             <strong>Name </strong>
