@@ -23,6 +23,20 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.link-to-beers {
+  margin: 20px 0;
+}
+
+.beer-name {
+  font-size: 10px;
 }
