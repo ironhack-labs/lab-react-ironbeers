@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/home/Home';
 import BeerAll from './components/beers/BeerAll';
-//import BeerForm from './components/beers/BeerForm';
-//import BeerRandom from './components/beers/BeerRandom';
+import BeerDetail from './components/beer/BeerDetail'
 
 
 const Router = () => (
@@ -11,8 +10,7 @@ const Router = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/beers" component={BeerAll} />
-      {/* <Route exact path="/beers/create" component={BeerForm} /> */}
-      {/* <Route exact path="/beers/random" component={BeerRandom} /> */}
+      <Route exact path="/beers/:id" component={BeerDetail} />
     </Switch>
   </BrowserRouter>
 );
