@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
-
+import { Route, Switch } from "react-router-dom";
+import Header from "./components/Header.jsx";
 import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/Home.jsx";
@@ -13,11 +13,16 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Home />
-        <Route exact path='/beers' component={AllBeers} />
-        <Route exact path='/beer/:jola' component={Beer} />
-        <Route exact path='/random-beer' component={Beer} />
-        <Route exact path='/new-beer' component={Form} />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <>
+            <Header />
+            <Route exact path='/beers' component={AllBeers} />
+            <Route exact path='/beer/:jola' component={Beer} />
+            <Route exact path='/random-beer' component={Beer} />
+            <Route exact path='/new-beer' component={Form} />
+          </>
+        </Switch>
       </div>
     );
   }
