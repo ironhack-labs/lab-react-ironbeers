@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import Navbar from '../Navbar';
+import React, { Component } from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
+import Navbar from '../Navbar'
 
 export default class BeersAll extends Component {
 
     state = {
         beers: []
     }
-
 
     getChelas = async () => {
         const response = await axios.get('https://ih-beer-api.herokuapp.com/beers')
@@ -31,7 +31,7 @@ export default class BeersAll extends Component {
                 { beers.length === 0 && <i className="button is-link is-loading">Loading</i> }
                     {
                         beers.map(beer => (
-                            <div key={beer._id} className="box">
+                            <Link to={`/beers/${beer._id}`} key={beer._id} className="box">
                                 <article className="media">
                                     <div className="media-left">
                                         <figure className="image is-32x32">
@@ -47,7 +47,7 @@ export default class BeersAll extends Component {
                                         </div>
                                     </div>
                                 </article>
-                            </div>
+                            </Link>
                         ))
                     }
                 </div>
