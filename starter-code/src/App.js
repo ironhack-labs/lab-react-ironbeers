@@ -1,18 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route } from "react-router-dom";
+
+import logo from "./logo.svg";
+import "./App.css";
+import Home from "./components/Home.jsx";
+import AllBeers from "./components/AllBeers.jsx";
+import axios from "axios";
+import Beer from "./components/Beer.jsx";
+import Form from "./components/Form.jsx";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='App'>
+        <Home />
+        <Route exact path='/beers' component={AllBeers} />
+        <Route exact path='/beer/:jola' component={Beer} />
+        <Route exact path='/random-beer' component={Beer} />
+        <Route exact path='/new-beer' component={Form} />
       </div>
     );
   }
