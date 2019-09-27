@@ -1,0 +1,17 @@
+@import "node_modules/bulmaswatch/default/bulmaswatch";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.field {
+
+  input,
+  .button,
+  .textarea {
+    border-radius: 24px;
+  }
+  
+}
