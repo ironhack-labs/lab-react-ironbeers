@@ -23,6 +23,20 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ant-menu-dark.ant-menu-horizontal {
+  display: flex;
+  justify-content: center;
+  background-color: #1890ff;
+}
+
+.ant-layout-header {
+  background-color: #1890ff;
 }
