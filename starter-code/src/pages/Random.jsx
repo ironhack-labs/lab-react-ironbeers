@@ -31,7 +31,7 @@ export default class Random extends Component {
       <Layout>
         <div className='row'>{loading ? <CardLoader /> : <BeerInfo beer={beer} />}</div>
         <div className='row'>
-          <div className='col-12'>
+          <div className='col-12 col-md-4'>
             <button className='btn btn-info' onClick={() => this.getRandomBeer()}>
               Get other beer
             </button>
