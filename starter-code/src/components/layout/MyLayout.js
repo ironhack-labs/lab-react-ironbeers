@@ -9,7 +9,7 @@ const MyLayout = ({children, noNav}) => {
   return (
     <>
       <Layout>
-        <Header>{!noNav ? <Navbar name={title} /> : null}</Header>
+        {!noNav ? <Header style={{backgroundColor: '#3dc4fc'}}><Navbar name={title} /></Header> : null}
         <Content>{children}</Content>
       </Layout>
     </>

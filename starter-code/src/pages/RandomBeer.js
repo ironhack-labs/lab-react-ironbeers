@@ -4,14 +4,13 @@ import MyLayout from "../components/layout/MyLayout";
 import {Col, Row} from "antd";
 import Beer from "../components/beer";
 
-export class BeerDetails extends Component {
+export class RandomBeer extends Component {
     state = {
         beer: {}
     };
 
     componentDidMount() {
-        const {id} = this.props.match.params;
-        axios.get(`https://ih-beer-api.herokuapp.com/beers/${id}`)
+        axios.get(`https://ih-beer-api.herokuapp.com/beers/random`)
             .then(({data}) => {
                 this.setState({
                     beer: data,
