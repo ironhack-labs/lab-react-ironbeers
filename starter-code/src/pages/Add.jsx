@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Layout from '../components/Layout/Layout'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export default class Add extends Component {
   state = {
@@ -28,7 +29,8 @@ export default class Add extends Component {
   handleSubmit = async e => {
     e.preventDefault()
     const url = `https://ih-beer-api.herokuapp.com/beers/new`
-    const response = await axios.post(url, this.state.newBeer)
+    await axios.post(url, this.state.newBeer)
+    Swal.fire('New beer added! 🍻', `${this.state.newBeer.name} has been successfully added to the database`, 'success')
     this.setState({
       newBeer: {
         name: '',
@@ -40,7 +42,6 @@ export default class Add extends Component {
         contributed_by: ''
       }
     })
-    console.log(response)
   }
 
   render() {

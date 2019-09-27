@@ -10,7 +10,8 @@
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
     "react-router-dom": "^5.1.0",
-    "react-scripts": "3.1.2"
+    "react-scripts": "3.1.2",
+    "sweetalert2": "^8.17.6"
   },
   "scripts": {
     "start": "react-scripts start",
