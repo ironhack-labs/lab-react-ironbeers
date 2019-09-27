@@ -10,7 +10,7 @@ export default class BeerAll extends Component {
     beers: []
   };
 
-  componentWillMount() {
+  componentDidMount() {
     axios
       .get('https://ih-beer-api.herokuapp.com/beers')
       .then(({ data }) => {

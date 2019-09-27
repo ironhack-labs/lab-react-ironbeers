@@ -9,10 +9,10 @@ export default class RandomBeer extends Component {
     beer: {}
   };
 
-  componentWillMount() {
+  componentDidMount() {
     console.log(this.props.match)
     axios
-      .get(`https://ih-beer-api.herokuapp.com/beers/${this.props.match.params.id}`)
+      .get(`https://ih-beer-api.herokuapp.com/beers/random`)
       .then(response => {
         console.log(response.data);
         this.setState({ beer: response.data });

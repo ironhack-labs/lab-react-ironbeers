@@ -9,7 +9,7 @@ export default class BeerDetail extends Component {
     beer: {}
   };
 
-  componentWillMount() {
+  componentDidMount() {
     console.log(this.props.match)
     axios
       .get(`https://ih-beer-api.herokuapp.com/beers/${this.props.match.params.id}`)
