@@ -7,6 +7,7 @@ import Beers from './Components/beers';
 import Random from './Components/randomBeer';
 import Details from './Components/beerDetaills';
 import NewBeer from './Components/newBeer';
+import SearchBar from './Components/searchBar';
 
 
 
@@ -14,19 +15,18 @@ class App extends Component {
 
   state = {
     beers: [],
+    clone: [],
     url: 'https://ih-beer-api.herokuapp.com/beers',
     randomBeer: [],
-
-
+    recentlyCreateBeer: "",
     name: "",
     tagline: "",
     firstBrewed: "",
     tips: "",
     attenuation: "",
     contributor: "",
-    description: ""
-
-
+    description: "",
+    query: ""
   }
 
 
@@ -42,7 +42,8 @@ class App extends Component {
       .then(response => {
         let beers = response.data.slice(5180)
         this.setState({
-          beers: beers
+          beers: beers,
+          clone: beers
         })
       })
   }
@@ -59,6 +60,7 @@ class App extends Component {
   createNewBeer = (e) => {
     e.preventDefault()
 
+
     let newBeer = {
       name: this.state.name,
       tagline: this.state.tagline,
@@ -69,22 +71,44 @@ class App extends Component {
       contributor: this.state.contributor
     }
 
+
+
     axios.post(`${this.state.url}/new`, newBeer)
       .then(res => console.log(res.data))
       .catch(err => console.log(err))
 
+    this.setState({
+      name: "",
+      tagline: "",
+      firstBrewed: "",
+      description: "",
+      tips: "",
+      attenuation: "",
+      contributor: "",
+      recentlyCreateBeer: newBeer
+    })
 
   }
 
   handleNewBeer = (e) => {
-
     this.setState({
       [e.target.name]: e.target.value
     })
 
-
   }
 
+
+  handleQuery = async (query) => {
+    await axios.get(`${this.state.url}/search?q=${query}`)
+      .then(res => {
+        const filtered = res.data.slice(1, 100)
+        !filtered ? this.setState({ beers: this.state.clone }) : this.setState({ beers: filtered })
+      })
+
+    this.setState({
+      query: query
+    })
+  }
 
 
   render() {
@@ -92,6 +116,11 @@ class App extends Component {
       <div className="App">
         <h3>Home Of Beers</h3>
         <NavBar />
+
+        <SearchBar
+          query={this.state.query}
+          onQuery={this.handleQuery}
+        />
 
         <Switch>
           <Route
