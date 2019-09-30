@@ -13,12 +13,34 @@ export class NewBeer extends Component {
     contributed_by: ""
   };
 
-  handleChange(event) {
+  handleChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
-  }
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    axios
+      .post("https://ih-beer-api.herokuapp.com/beers/new", this.state)
+      .then(res => {
+        console.log(res);
+        this.setState({
+          name: "",
+          tagline: "",
+          description: "",
+          first_brewed: "",
+          brewers_tips: "",
+          attenuation_level: "",
+          contributed_by: ""
+        });
+      })
+      .catch(err => {
+        throw new Error(err);
+      });
+  };
+
   render() {
     return (
       <div>
@@ -28,14 +50,14 @@ export class NewBeer extends Component {
             alt="Homelink"
           />
         </Link>
-        <form action="http://ih-beer-api.herokuapp.com/beers/new" method="POST">
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="">name</label> <br />
           <input
             type="text"
             id="name"
             name="name"
             value={this.state.name}
-            onChange={e => this.handleChange(e)}
+            onChange={this.handleChange}
           />{" "}
           <br />
           <label htmlFor="">tagline</label> <br />
@@ -44,7 +66,7 @@ export class NewBeer extends Component {
             id="tagline"
             name="tagline"
             value={this.state.tagline}
-            onChange={e => this.handleChange(e)}
+            onChange={this.handleChange}
           />{" "}
           <br />
           <label htmlFor="">description</label> <br />
@@ -55,7 +77,7 @@ export class NewBeer extends Component {
             value={this.state.description}
             cols="30"
             rows="10"
-            onChange={e => this.handleChange(e)}
+            onChange={this.handleChange}
           ></textarea>{" "}
           <br />
           <label htmlFor="">first_brewed</label> <br />
@@ -64,7 +86,7 @@ export class NewBeer extends Component {
             id="first_brewed"
             name="first_brewed"
             value={this.state.first_brewed}
-            onChange={e => this.handleChange(e)}
+            onChange={this.handleChange}
           />{" "}
           <br />
           <label htmlFor="">brewers_tips</label> <br />
@@ -73,7 +95,7 @@ export class NewBeer extends Component {
             id="brewers_tips"
             name="brewers_tips"
             value={this.state.brewers_tips}
-            onChange={e => this.handleChange(e)}
+            onChange={this.handleChange}
           />{" "}
           <br />
           <label htmlFor="">attenuation_level</label> <br />
@@ -82,7 +104,7 @@ export class NewBeer extends Component {
             id="attenuation_level"
             name="attenuation_level"
             value={this.state.attenuation_level}
-            onChange={e => this.handleChange(e)}
+            onChange={this.handleChange}
           />{" "}
           <br />
           <label htmlFor="">contributed_by</label> <br />
@@ -91,7 +113,7 @@ export class NewBeer extends Component {
             id="contributed_by"
             name="contributed_by"
             value={this.state.contributed_by}
-            onChange={e => this.handleChange(e)}
+            onChange={this.handleChange}
           />{" "}
           <br />
           <button
