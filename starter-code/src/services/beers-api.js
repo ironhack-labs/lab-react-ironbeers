@@ -1,31 +1,59 @@
 import axios from "axios";
 
-const beersService = axios.create({
-  baseURL: "https://ih-beer-api.herokuapp.com/beers"
+const beerService = axios.create({
+  baseURL: "/beers"
 });
 
-export const list = () => {
-  return new Promise((resolve, reject ) => {
-    beersService
-    .get("/beers?limit=50")
-    .then(response => {
-      resolve(response.data.results);
-    })
-    .catch(error => {
-      reject(error);
-    });
+export const getAllBeers = () => {
+  return new Promise((resolve, reject) => {
+    beerService
+      .get("/all")
+      .then(response => {
+        resolve(response.data);
+      })
+      .catch(error => {
+        reject(error);
+      });
   });
 };
 
-export const load = id => {
-  return new Promise ((resolve, reject) => {
-    beersService
-    .get(`/beers/${id}`)
-    .then(response => {
-      resolve(response.data);
-    })
-    .catch(error => {
-      reject(error);
-    });
+export const getOneBeer = id => {
+  return new Promise((resolve, reject) => {
+    beerService
+      .get(`/single/${id}`)
+      .then(response => {
+        resolve(response.data);
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
+};
+
+export const getRandomBeer = () => {
+  return new Promise((resolve, reject) => {
+    beerService
+      .get(`/random`)
+      .then(response => {
+        resolve(response.data);
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
+};
+
+export const addNewBeer = body => {
+  console.log("BODY", body);
+  return new Promise((resolve, reject) => {
+    beerService
+      .post("/new", body)
+      .then(response => {
+        console.log("RESPONSE:", response);
+        resolve(response.data);
+      })
+      .catch(error => {
+        reject("THE ERROR:", error);
+      });
   });
 };

@@ -1,20 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-function Nav() {
+export default function Nav() {
   return (
-    <NavLink exact to="/">
-      <div
-        style={{
-          marginLeft: "15%",
-          width: "70%",
-          background: "#3dc4fc",
-          height: "6vh",
-          textAlign: "center"
-        }}
-      ></div>
-    </NavLink>
+    <div>
+      <Navbar
+        className="d-flex justify-content-center"
+        bg="primary"
+        variant="dark"
+        expand="lg"
+      >
+        <Link to="/">
+          <Navbar.Brand> ☗ </Navbar.Brand>
+        </Link>
+      </Navbar>
+    </div>
   );
 }
-
-export default Nav;

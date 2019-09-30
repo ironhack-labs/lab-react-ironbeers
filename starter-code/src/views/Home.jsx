@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Table, Row, Col, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default class Home extends Component {
