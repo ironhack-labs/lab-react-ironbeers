@@ -7,8 +7,6 @@ import BeersView from "./views/Beers";
 import RandomView from "./views/RandomBeer";
 import NewView from "./views/NewBeer";
 
-import Navbar from "./components/Navbar";
-
 class App extends Component {
   render() {
     return (
