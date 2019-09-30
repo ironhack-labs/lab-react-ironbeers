@@ -22,6 +22,24 @@
   font-size: large;
 }
 
+.theBeerImg {
+  float: left;
+  margin-right: 30px;
+}
+
+.theBeerContainer {
+  height: 150px;
+  margin: 0px auto;
+}
+
+.theBeerText {
+  text-align: left;
+}
+
+.theBeerContainer > a {
+ text-decoration: none;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
