@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "../components/header";
 import { loadRandom } from "./../services/beerapi";
-import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
@@ -29,17 +29,26 @@ export default class RandomBeer extends Component {
     const beer = this.state.beer;
     return (
       beer && (
-        <div>
-          <Header />
-          <Container>
-            <Col className="mx-auto">
-              <Image className="w-25" src={beer.image_url}></Image>
-              <h1>{beer.name}</h1>
-              <p>{beer.tagline}</p>
-              <p>{beer.description}</p>
-            </Col>
-          </Container>
-        </div>
+        <Form>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+          </Form.Group>
+          <Form.Group controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
       )
     );
   }
