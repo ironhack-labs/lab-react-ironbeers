@@ -9,9 +9,9 @@ class HomePage extends React.Component{
             <img src="/images/beers.png" alt="allBeers"></img>
             <h2><Link to="/beers">All Beers</Link></h2>
             <img src="/images/random-beer.png" alt="allBeers"></img>
-            <h2>Random Beer</h2>
+            <h2><Link to="/random">Random Beer</Link></h2>
             <img src="/images/random-beer.png" alt="allBeers"></img>
-            <h2>New Beer</h2>
+            <h2><Link to="/new-beer">New Beer</Link></h2>
             </div>
         )
     }

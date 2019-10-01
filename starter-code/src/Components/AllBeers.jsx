@@ -8,7 +8,7 @@ displayAllBeers = () =>{
     let theList = this.props.beerList
 
    return theList.map(eachBeer => {
-     return (<Beer key={eachBeer._id} beerName={eachBeer.name} beerImg={eachBeer.image_url} beerTag={eachBeer.tagline} beerCreator={eachBeer.contributed_by} theId={eachBeer.id}/>)
+     return (<Beer key={eachBeer._id} beerName={eachBeer.name} beerImg={eachBeer.image_url} beerTag={eachBeer.tagline} beerCreator={eachBeer.contributed_by} theId={eachBeer._id}/>)
     })
 }
 

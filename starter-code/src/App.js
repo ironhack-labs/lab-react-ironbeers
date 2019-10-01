@@ -7,6 +7,8 @@ import AllBeers from './Components/AllBeers';
 import HomePage from './Components/HomePage';
 import axios from 'axios'
 import SingleBeer from './Components/SingleBeer';
+import RandomBeer from './Components/RandomBeer';
+import NewBeer from './Components/NewBeer';
 
 class App extends Component {
 
@@ -14,39 +16,45 @@ class App extends Component {
     super(props);
 
     this.state = {
-      beerList: []
+      beerList: [],
+      url: 'https://ih-beer-api.herokuapp.com/beers',
+      randomBeer: {}
     }
   }
 
-  componentDidMount(){
+  async componentDidMount(){
 
-    axios.get('https://ih-beer-api.herokuapp.com/beers')
+    const theData = await this.getBeers();
+
+    this.setState({
+      beerList: theData,
+  
+    })
+  }
+
+getBeers = async() => {
+
+ return await axios.get(this.state.url)
     .then(theData => {
-
-      this.setState({
-        beerList: theData.data
-      })
+      return theData.data.slice(0, 15)
+      
     }).catch((err) => {
       console.log(err)
     })
 
-
-  }
-
-
-
+}
 
   render() {
-    
-    console.log("THE BEER DATA IS")
-console.log(this.state.beerList)
+    console.log(this.state.randomBeer)
     return (
       <div className="App">
  
       <Switch>
       <Route exact path='/' component={HomePage}/>
       <Route exact path='/beers' render={(props) => <AllBeers {...props} beerList={this.state.beerList}/> }/>
-      <Route exact path='/beers/:beerId' render={(props) => <SingleBeer {...props} beerList={this.state.beerList}/> }/>
+      <Route exact path='/beers/:id' render={(props) => <SingleBeer {...props} beerList={this.state.beerList}/> }/>
+      <Route exact path='/random' render={(props) => <RandomBeer {...props} theUrl={this.state.url}/> } />
+      <Route exact path='/new-beer' render={(props) => <NewBeer {...props}  theUrl={this.state.url}/> } />
       </Switch>
 
       </div>
