@@ -71,3 +71,10 @@
   width: auto;
   height: 400px;
 }
+
+.add-beer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
