@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+nav {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  cursor: pointer;
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.beer {
+  width: 100vw;
+  display: flex;
+  padding: 50px;
+  background-color: #f7f7f7;
+  border-bottom: 2px solid #9b9b9b;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.beer-image {
+  height: 100px;
+  width: auto;
+}
+
+.beer-image2 {
+  height: 300px;
+  width: auto;
+}
+
+.beer-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+
+}
+
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
