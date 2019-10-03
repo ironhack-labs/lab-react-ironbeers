@@ -7,7 +7,6 @@ export default class Beer extends Component {
   render() {
     return (
       <div className="beer">
-      {console.log(this.props.beer)}
         <img src={this.props.beer.image_url} alt={this.props.beer.name}/>
         <h2 className="beer-name">{this.props.beer.name}</h2>
         <p className="beer-tagline">{this.props.beer.tagline}</p>
