@@ -1,0 +1,25 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.Home>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home p {
+  text-align: center;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Home img {
+  border-radius: 20px;
+}

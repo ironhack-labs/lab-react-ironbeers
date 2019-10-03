@@ -1,0 +1,14 @@
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar li {
+  margin: 60px;
+}
