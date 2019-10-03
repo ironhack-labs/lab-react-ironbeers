@@ -66,3 +66,8 @@
   text-decoration: none;
   color: blue;
 }
+
+.image-detail {
+  width: auto;
+  height: 400px;
+}
