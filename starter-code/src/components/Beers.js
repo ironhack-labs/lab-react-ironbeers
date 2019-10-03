@@ -19,7 +19,7 @@ export default class Beers extends Component {
     return (
       <div>
         <Header />
-        <img src="./images/beers.png" alt="" />
+        <img src="/images/beers.png" alt="" />
         <h1>All Beers</h1>
         <div className="beers-container">
           {this.state.beers.map((beer, i) => (

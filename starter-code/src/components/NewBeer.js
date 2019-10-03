@@ -6,7 +6,7 @@ export default class NewBeer extends Component {
     return (
       <div>
         <Header />
-        <img src="./images/new-beer.png" alt="" />
+        <img src="/images/new-beer.png" alt="" />
         <h1>New Beer</h1>
       </div>
     );
