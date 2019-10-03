@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 export default class Beers extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class Beers extends Component {
         <h1>Hello, I am the beers site</h1>
         <ul>
           {this.state.allBeers.map((beer, idx) => {
-            return <li key={idx}>{beer.name}</li>
+            return <li key={idx}><Link to={`/view/${beer._id}`}>{beer.name}</Link></li>
           })}
         </ul>
       </div>
