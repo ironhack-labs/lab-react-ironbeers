@@ -1,0 +1,19 @@
+{
+    "home": {
+        "sectionName" : "Home",
+        "path" :  "/"
+    },
+
+    "all": {
+        "sectionName" : "All Beers",
+        "path" :  "/beers"
+    },
+    "random": {
+        "sectionName": "Random Beer",
+        "path" : "/random-beer"
+    },
+    "new": {
+        "sectionName": "New Beer",
+        "path" : "/new-beer"
+    }
+}
