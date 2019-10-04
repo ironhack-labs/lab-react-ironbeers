@@ -1,0 +1,59 @@
+.beers-page .search-bar {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.beers-page .search-bar .input {
+  width: 250px;
+  transition: background-color .2s, width .2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.beers-page .search-bar .input:focus {
+  width: 350px;
+}
+
+.beers-page .beers-list {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+}
+
+.beers-page .beers-list li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.beers-page .beers-list li:not(:last-child) {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #D8D8D8;
+  padding-bottom: 1rem;
+}
+
+.beers-page .beers-list li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 2px solid #888888;
+  border-radius: 50%;
+  top: 0.4rem;
+  left: .5rem;
+  transition: .2s border-color;
+}
+
+.beers-page .beers-list li:hover::before {
+  border-color: #753a88;
+}
+
+.beers-page .beers-list a {
+  color: #888888;
+  display: block;
+  transition: color .2s;
+}
+
+.beers-page .beers-list a:hover {
+  color: #753a88;
+}

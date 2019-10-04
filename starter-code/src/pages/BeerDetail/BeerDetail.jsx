@@ -22,7 +22,6 @@ export default class BeerDetail extends Component {
   render() {
     return (
       <div>
-        <h1>Hello, I am the beer detail site</h1>
         <Beer beer={this.state.beer}/>
       </div>
     )

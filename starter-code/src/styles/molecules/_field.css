@@ -1,0 +1,12 @@
+.field {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.field:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.field .label {
+  margin-bottom: 0.5rem;
+}

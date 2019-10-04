@@ -1,0 +1,26 @@
+.home-card {
+  background-color: #FFFFFF;
+  padding: 1rem;
+  border-radius: 3px;
+  text-align: center;
+  transition: box-shadow .2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+}
+
+.home-card:hover {
+  box-shadow: 0 3px 9px rgba(0, 0, 0, .3);
+}
+
+.home-card img {
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+.home-card-title {
+  margin-bottom: 0.5rem;
+  color: #343434;
+}
+
+.home-card p {
+  color: #888888;
+}

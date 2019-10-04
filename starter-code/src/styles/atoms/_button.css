@@ -1,0 +1,17 @@
+.button {
+  padding: 0.5rem 1rem;
+  color: #888888;
+  background-color: #DDDDDD;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
+  transition: background-color .2s;
+}
+
+.button.primary {
+  background-color: #753a88;
+  color: #FFFFFF;
+}
+
+.button.primary:hover {
+  background-color: #721d8e;
+}

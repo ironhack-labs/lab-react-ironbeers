@@ -1,0 +1,21 @@
+.message {
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
+}
+
+.message-title {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  background-color: #753a88;
+  color: #FFFFFF;
+}
+
+.message-content {
+  padding: 1rem .5rem;
+  background-color: #FFFFFF;
+}
+
+.message-content p {
+  color: #888888;
+}

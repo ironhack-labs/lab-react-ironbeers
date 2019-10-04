@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./HomeCard.css"
 
 export default class HomeCard extends Component {
   render() {

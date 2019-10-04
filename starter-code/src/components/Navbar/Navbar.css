@@ -1,0 +1,21 @@
+.navbar {
+  background-color: #753a88;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-top: 5px solid #340961;
+}
+
+.navbar a {
+  color: #FFFFFFAA;
+  transition: color .2s;
+}
+
+.navbar a.active {
+  color: #FFFFFF;
+}
+
+.navbar a:not(:last-child) {
+  margin-right: 1rem;
+}

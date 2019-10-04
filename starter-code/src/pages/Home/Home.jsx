@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import HomeCard from './../../components/HomeCard/HomeCard'
 import {Link} from 'react-router-dom'
+import "./Home.css"
 
 export default class Home extends Component {
   constructor() {
@@ -30,7 +31,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Hello, I am the Home site</h1>
+        <h1>The home of the beers</h1>
         <ul className="home-cards">
           {this.homeLinks.map((homeLink, idx) => {
             return (

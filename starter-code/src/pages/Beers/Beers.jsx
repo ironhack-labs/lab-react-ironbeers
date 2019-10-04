@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import SearchBar from './../../components/SearchBar/SearchBar'
 import Message from './../../components/Message/Message'
+import "./Beers.css"
 
 export default class Beers extends Component {
   constructor(props) {
@@ -34,8 +35,8 @@ export default class Beers extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Hello, I am the beers site</h1>
+      <div className="beers-page">
+        <h1>Watching all beers</h1>
         <SearchBar filterText={(search) => this.applyFilter(search)} />
           {this.state.allBeersFiltered.length > 0
             ? <ul className="beers-list">

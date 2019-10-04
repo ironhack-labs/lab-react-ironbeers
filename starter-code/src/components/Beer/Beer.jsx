@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./Beer.css"
 
 export default class Beer extends Component {
   constructor(props) {

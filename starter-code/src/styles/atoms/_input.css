@@ -1,0 +1,13 @@
+.input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #E8E8E8;
+  transition: background-color .2s;
+  color: #888888;
+}
+
+.input:focus {
+  outline: none;
+  background-color: #E0E0E0;
+}

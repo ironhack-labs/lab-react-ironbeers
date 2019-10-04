@@ -1,0 +1,42 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #F8F8F8;
+  padding-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p, input {
+  font-size: 1rem;
+}
+
+button,
+input[type="button"],
+.button {
+  font-size: 1rem;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+}
