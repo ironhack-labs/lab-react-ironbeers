@@ -1,0 +1,17 @@
+.beerPartial {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+.beerPartial img {
+height: 100px;
+padding: 30px;
+}
+.beerPartial .beerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

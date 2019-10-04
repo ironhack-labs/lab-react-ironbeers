@@ -1,0 +1,12 @@
+.homeItems img {
+  width: 300px;
+  margin-top: 20px;
+}
+.homeItems h4 {
+  font-weight: bold;
+  padding: 10px 0;
+}
+.homeItems p {
+  font-size: 14px;
+  color: gray;
+}
