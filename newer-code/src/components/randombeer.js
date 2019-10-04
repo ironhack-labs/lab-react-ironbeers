@@ -14,7 +14,6 @@ export default class randombeer extends Component {
   }
 
   render() {
-    console.log(this.state.allBeers);
   
         return (
           <div className="ml-auto mr-auto mt-4 text-center">

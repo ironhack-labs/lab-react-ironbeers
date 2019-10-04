@@ -7,12 +7,12 @@ class beerdetails extends Component {
   };
   componentDidMount() {
     axios.get("https://api.punkapi.com/v2/beers").then(response => {
-      console.log(response.data[this.props.match.params.id - 1]);
       this.setState({ beers: response.data[this.props.match.params.id - 1] });
     });
   }
 
   render() {
+      
     return (
       <div className="ml-auto mr-auto mt-4 text-center">
         <div className="mx-auto text-center">

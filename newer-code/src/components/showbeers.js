@@ -11,14 +11,13 @@ export default class showbeers extends Component {
 
   componentDidMount() {
     axios.get("https://api.punkapi.com/v2/beers").then(response => {
-      console.log(response.data);
       this.setState({ beers: response.data });
     });
   }
   listBeers = () => {
     return this.state.beers.map((beer, i) => {
       return (
-        <div className="col-6 mt-4 mb-4">
+        <div key={i} className="col-6 mt-4 mb-4">
           <div className="row">
             <div className="col-4">
               <img width="40px" src={beer.image_url} alt={beer.name}/>
