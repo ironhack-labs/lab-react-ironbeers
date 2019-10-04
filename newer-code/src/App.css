@@ -1,0 +1,7 @@
+body {
+  width: 960px;
+  margin: 0 auto !important;
+}
+.stretch, .stretch div, .stretch img {
+  width: 100%;
+}
