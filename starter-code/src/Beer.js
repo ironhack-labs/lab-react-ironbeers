@@ -5,9 +5,9 @@ export default class beer extends Component {
     return (
       <div className="oneBeer">
         
-        <img src={this.props.image_url}></img>
-        <h2>{this.props.name}</h2>
-        <h3>{this.props.tagline}</h3>
+        <img src={this.props.random.image_url}></img>
+        <h2>{this.props.random.name}</h2>
+        <h3>{this.props.random.tagline}</h3>
       </div>
     )
   }
