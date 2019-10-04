@@ -1,28 +1,230 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+html,
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.46667;
+  color: #444;
+}
+
+a {
+  color: #444;
+  cursor: pointer;
+  text-decoration: none
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  color: #515151;
+}
+
+.title,
+.subtitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.subtitle {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  padding: 48px 64px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  height: 56px;
+}
+
+.nav-primary {
+  display: flex;
+  align-items: center;
+  background: #2e2f37;
+  padding: 1rem;
+}
+
+.nav-primary .user-avatar {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-primary a {
   color: white;
+  text-decoration: none;
+  margin-right: 1.2rem;
 }
 
-.App-title {
-  font-size: 1.5em;
+.nav-primary a:last-child {
+  margin-right: 0;
 }
 
-.App-intro {
-  font-size: large;
+li {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.flex-wrap {
+  flex-wrap: wrap;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+textarea {
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 0.25rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  background: #f0f0f0;
+}
+
+.form-group {
+  display: flex;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.form-group label {
+  width: 33%;
+}
+
+.form-group:last-of-type {
+  border-bottom: 0 !important;
+}
+
+.form label {
+  font-size: 16px;
+}
+
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #444;
+  color: #f0f0f0;
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  text-decoration: none;
+  color: #0057ff;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row__item {
+  width: 33.33%;
+}
+
+.row__item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.beer-img {
+  max-width: 36px;
+}
+
+.search-results-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.sub-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0.5rem 0;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 48px 24px;
+  }
+
+  .row__item {
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    padding: 48px 24px;
+  }
+
+  .row__item {
+    width: 50%;
+  }
+
+  .form-group {
+    display: block;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
