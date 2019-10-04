@@ -1,28 +1,33 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 100;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+a{
+  text-decoration: none;
+  color: black;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+.beers{
+  width: 50%;
+  margin: 0 auto;
+  box-shadow:  0 2px 0px 2px  lightgrey;
+  
 
-.App-title {
-  font-size: 1.5em;
 }
-
-.App-intro {
-  font-size: large;
+h2{
+  font-weight: 100;
+  margin-bottom: 5px;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.beers img{
+  width: 100%;
+  
+}
+.beers a > div{
+  padding-bottom: 20px;
+  padding:5px 10px;
+  
 }
