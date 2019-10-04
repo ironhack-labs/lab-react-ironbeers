@@ -12,7 +12,6 @@ export default class Beers extends Component {
   }
 
   componentDidMount() {
-    console.log("que pasa")
     axios.get("http://localhost:5000/all").then(res => {
       this.setState({ beers: res.data });
     });

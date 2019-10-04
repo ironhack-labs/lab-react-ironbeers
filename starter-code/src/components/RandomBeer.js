@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
 import axios from 'axios'
-import { Link, Redirect } from 'react-router-dom'
 
 export default class RandomBeer extends Component {
   constructor(props) {

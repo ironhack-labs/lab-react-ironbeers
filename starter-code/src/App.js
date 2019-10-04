@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./components/Home.js";
 import Beers from "./components/Beers.js";
 import RandomBeer from "./components/RandomBeer.js";

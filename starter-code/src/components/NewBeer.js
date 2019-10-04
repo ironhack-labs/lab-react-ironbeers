@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import Navbar from './Navbar'
+import React, { Component } from "react";
+import Navbar from "./Navbar";
 
 export default class NewBeer extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Navbar></Navbar>
-      </div>
-    )
+      </React.Fragment>
+    );
   }
 }

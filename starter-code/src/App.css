@@ -47,6 +47,23 @@
   width: 600px;
 }
 
+.beer-detail img, .beer-detail h1, .beer-detail h3 {
+  margin-bottom: 10px;
+}
+
 .beer-detail img {
   height: 400px;
+}
+
+.beer-detail h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.beer-detail h3 {
+  font-size: 20px;
+}
+
+.beer-detail p{
+  font-size: 16px;
 }
