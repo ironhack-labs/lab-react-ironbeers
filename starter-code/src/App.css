@@ -26,3 +26,17 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.oneBeer{
+  border: 2px solid black;
+  border-radius:20px;
+  margin: 50px;
+  padding:20px;
+  width: 500px;
+}
+
+.allBeers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

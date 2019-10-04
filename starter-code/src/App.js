@@ -1,18 +1,48 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import "./App.css";
+import AllBeers from "./AllBeers";
+import RandomBeer from './RandomBeer';
+import axios from "axios";
+import Home from "./Home";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      beers: [],
+      // random: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get("http://localhost:5000/all").then(allBeers => {
+      this.setState({
+        ...this.state,
+        beers: allBeers.data
+      });
+    });
+  }
+
+  // getRandomBeer() {
+  //   axios.get("http://localhost:5000/random").then(randomBeer => {
+  //     this.setState({
+  //       ...this.state,
+  //       random: randomBeer.data
+  //     });
+  //   });
+  // }
+
   render() {
+    // console.log(this.state.beers);
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        
+        <Switch>
+          <Route exact path="/" render={()=>{return <Home></Home>}}></Route>
+          <Route exact path="/AllBeers" render={()=>{return <AllBeers beers={this.state.beers}></AllBeers>}}></Route>
+          <Route exact path="/randomBeer" render={()=>{return <RandomBeer beers={this.state.random}></RandomBeer>}}></Route>
+        </Switch>
       </div>
     );
   }
