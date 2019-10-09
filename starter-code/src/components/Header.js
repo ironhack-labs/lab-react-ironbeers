@@ -5,10 +5,10 @@ export default class Header extends Component {
     return (
       <div>
 
-        <nav className="navbar navbar-dark bg-primary mb-3">
-          <div className="conatainer">
-            <div>
-            <Link style={{color:'white'}}to="/">HOME</Link> 
+        <nav  className="navbar navbar-dark bg-primary mb-3">
+          <div className="container">
+            <div style={{position:'absolute', left:'0', right:'0', fontSize:'2em'}} >
+            <Link style={{color:'white', }}to="/">HOME</Link> 
             </div>
           </div>
         </nav>

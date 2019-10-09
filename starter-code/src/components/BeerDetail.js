@@ -12,7 +12,7 @@ const showDetails = () => {
 
   return(
     <div>
-      <img src={beer.image_url} alt=""/>
+      <img style={{width:'100px'}} src={beer.image_url} alt=""/>
       <p>{beer.name}</p>
       <p>{beer.tagline}</p>
       <p>{beer.contributed_by}</p>

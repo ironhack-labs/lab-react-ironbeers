@@ -33,8 +33,9 @@ getRandomBeer () {
             <Header/>
             {this.state.ready &&
                                 <div>
-                                  <img src={this.state.randomBeer.image_url} alt=""/>
-                                  <p>{this.state.randomBeer.name}</p> 
+                                  <img style={{width:'200px'}}src={this.state.randomBeer.image_url} alt=""/>
+                                  <h4>{this.state.randomBeer.name}</h4> 
+                                  <p className="lead">{this.state.randomBeertagline}</p>
                                 </div>
             }
             {!this.state.ready &&

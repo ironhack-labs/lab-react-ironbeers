@@ -20,8 +20,9 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-      <div>
-        <input onChange={this.inputHandler} type="text" name="searchTerm" value={this.state.searchTerm} />
+      <div style={{marginBottom:'10px'}}>
+      <legend>Search</legend>
+        <input style={{ width:'40%', margin:'0 auto'}}className="form-control" onChange={this.inputHandler} type="text" name="searchTerm" value={this.state.searchTerm} />
       </div>
     )
   }

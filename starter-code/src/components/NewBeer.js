@@ -35,14 +35,14 @@ addBeer=(e)=>{
     return (
       <div>
         <Header />
-        <form onSubmit={this.addBeer} action="" method="posts">
+        <form style={{width:'60%', margin:'0 auto'}}onSubmit={this.addBeer} action="" method="posts">
           <legend>Name</legend>
-          <input onChange={this.inputHandler} type="text" name="name" value={this.state.name} id="name"/>
+          <input className="form-control" onChange={this.inputHandler} type="text" name="name" value={this.state.name} id="name"/>
           <legend>Tagline</legend>
-          <input onChange={this.inputHandler} type="text" name="tagline"  value={this.state.tagline} id="tagline"/>
+          <input className="form-control" onChange={this.inputHandler} type="text" name="tagline"  value={this.state.tagline} id="tagline"/>
           <legend>Description</legend>
-          <input onChange={this.inputHandler} type="text" name="description"  value={this.state.description} id="description"/>
-          <button>Add Beer</button>
+          <input className="form-control" onChange={this.inputHandler} type="text" name="description"  value={this.state.description} id="description"/>
+          <button style={{marginTop: '18px'}} className="btn btn-primary">Add New Beer</button>
         </form>
       </div>
     )

@@ -26,8 +26,8 @@ class App extends Component {
           .then(response=>{
             this.setState(
               {
-                allBeers: response.data.reverse().slice(0,50),
-                filteredBeers: response.data.reverse().slice(0,50),
+                allBeers: response.data.reverse().slice(0,20),
+                filteredBeers: response.data.reverse().slice(0,20),
                 ready:true,
               }
             ) 
@@ -37,16 +37,13 @@ class App extends Component {
 
 
     searchBeers=(beer)=>{
-
-      this.setState({
-        anabel:'anabel',
-      })
-      // axios.get(`https://ih-beer-api.herokuapp.com/beers/search?q=${beer}`)
-      //     .then(response => {
-      //       this.setState({
-      //         filteredBeers: response.data,
-      //       })
-      //     })
+      axios.get(`https://ih-beer-api.herokuapp.com/beers/search?q=${beer}`)
+          .then(response => {
+            this.setState({
+              filteredBeers: response.data,
+            })
+          })
+          .catch(err=>console.log(err))
     }
 
 
