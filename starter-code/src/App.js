@@ -37,6 +37,9 @@ class App extends Component {
 
 
     searchBeers=(beer)=>{
+
+      // e.preventDefault()
+      
       axios.get(`https://ih-beer-api.herokuapp.com/beers/search?q=${beer}`)
           .then(response => {
             this.setState({
@@ -52,7 +55,7 @@ class App extends Component {
       <div className="App">
       <Switch>  
         <Route exact path="/" component= { Home }/>
-        <Route exact path="/beers" component= {(props)=><Beers {...props} search={this.searchBeers} beers={this.state.filteredBeers} ready={this.state.ready}/> } />
+        <Route exact path="/beers" component= {(props)=><Beers {...props} search={this.searchBeers} beers={this.state.filteredBeers} ready={this.state.ready}/> } searchTerm={this.props.searchTerm}/>
         <Route exact path="/random-beer" component= {(props)=><RandomBeer {...props}  ready={this.state.ready}/>} />
         <Route exact path="/new-beer" component= {(props)=><NewBeer {...props} />} />
         <Route path="/beers/:id" component= {(props)=><BeerDetail {...props} beers={this.state.filteredBeers} />} />

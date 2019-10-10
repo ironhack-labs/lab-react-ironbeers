@@ -10,19 +10,19 @@ export default class SearchBar extends Component {
     }
   }
 
-  inputHandler = (e) => {
+  // inputHandler = (e) => {
+  //   // e.preventDefault();
+  //   this.setState(
+  //     {searchTerm: e.target.value})
 
-    this.setState(
-      {searchTerm: e.target.value},()=>{
-        this.props.search(this.state.searchTerm)
-      })
-  }
+  //     this.props.search(this.state.searchTerm)
+  // }
 
   render() {
     return (
       <div style={{marginBottom:'10px'}}>
       <legend>Search</legend>
-        <input style={{ width:'40%', margin:'0 auto'}}className="form-control" onChange={this.inputHandler} type="text" name="searchTerm" value={this.state.searchTerm} />
+        <input style={{ width:'40%', margin:'0 auto'}}className="form-control" onChange={(e) => this.props.search(e.target.value)}  type="text" name="searchTerm" value={this.props.searchTerm} />
       </div>
     )
   }

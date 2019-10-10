@@ -33,7 +33,11 @@ export default class  Beers extends Component {
       return (
             <div>
               <Header />
-              <SearchBar search={this.props.search}/>
+              <SearchBar 
+
+              search={this.props.search}
+              value={this.props.searchTerm}
+              />
                 {this.props.ready &&
                                     <div>
                                       {this.showBeers()}
