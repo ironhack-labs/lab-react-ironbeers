@@ -3,3 +3,57 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+header{
+  height: 10vh;
+  margin-bottom: 2em;
+}
+
+header img {
+  height: 10vh
+}
+
+.beer-img {
+  height: 15vh;
+  width: 8vw;
+  margin-left: 2em;
+}
+
+.beer-container {
+  border-bottom: 1px solid grey;
+}
+
+.single-container {
+  height: 100vh;
+}
+
+.single-beer {
+  height: 30vh;
+}
+
+@media only screen and (min-width: 1000px) {
+  .one {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .beer-img {
+    height: 30vh;
+    width: 5vw;
+    margin-left: 4em;
+    margin-bottom: 2em
+  }
+
+  .beer-container {
+    align-items: center;
+  }
+
+  .single-wrapper {
+    padding: 0 50px;
+  }
+
+  #new-form div {
+   width: 100vw;
+   margin-bottom: 1rem;
+  }
+}
