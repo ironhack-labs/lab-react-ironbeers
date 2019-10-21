@@ -28,7 +28,7 @@ Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mis
 
 ## Introduction
 
-We will be building a React app so the API (server) needs to be built somewhere for us, right? You are completely right, it's deployed on *heroku* and the root fo the API is: **`https://ih-beer-api.herokuapp.com/beers`**.
+We will be building a React app so the API (server) needs to be built somewhere for us, right? You are completely right, it's deployed on *heroku* and the root fo the API is: **`https://ih-beers-api.herokuapp.com/beers`**.
 The available endpoints are the following:
 
 | Method | Endpoint | Response (200)     | Action |
