@@ -40,11 +40,11 @@ class Beers extends Component {
             <>
             {this.state.foundBeers.length > 0 ? 
                <div>
-                <Header/>
+                <Header />
                     <Link to="/new-beer" className="btn btn-primary mr-2">Add a New Beer</Link>
                    <input type="text" placeholder="Search Your Favorite Beer" onChange={this.changeHandler}/>
                    {this.state.foundBeers.map(beer=>(
-                    <div className="d-flex beer-container m-3">
+                    <div className ="d-flex beer-container m-3">
                          <img src={beer.image_url} alt="beer-img" className="beer-img"></img>
                          <div className="d-flex flex-column justify-content-start align-items-start ml-3">
                              <h6>{beer.name}</h6>
@@ -56,7 +56,7 @@ class Beers extends Component {
                    ))}
                </div> 
             : <div>
-                <Header/>
+                <Header />
                 <Link to="/new-beer" className="btn btn-primary mr-2">Add a New Beer</Link>
                 <input type="text" placeholder="Search Your Favorite Beer" onChange={this.changeHandler}/>
                 {this.state.beers.map(beer => (

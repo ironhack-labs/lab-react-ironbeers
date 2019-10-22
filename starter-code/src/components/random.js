@@ -23,7 +23,7 @@ class Single extends Component {
         return(
             <div className="single-container">
                 <Header/>
-                <img src={this.state.beer.image_url} class="single-beer"/>
+                <img src={this.state.beer.image_url} class="single-beer" alt=""/>
                 <div className="d-flex">
                     <span className="font-weight-bold">{this.state.beer.name}</span>
                     <span className="ml-auto lead text-secondary">{this.state.beer.attenuation_level}</span>

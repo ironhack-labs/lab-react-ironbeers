@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import Beer from "../images/beers.png";
 import Random from "../images/random-beer.png";
 import New from "../images/new-beer.png";
+import Header from "../components/header";
 
 class Home extends Component{
     render(){
         return(
             <div className="home-container">
+                <Header />
                 <div className="one">
                     <img src={Beer} alt="beer"></img>
                     <Link to="/beers">All Beers</Link>
