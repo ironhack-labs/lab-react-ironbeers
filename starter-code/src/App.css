@@ -76,5 +76,8 @@ p, h3{
   height: 100%;
 }
 
+.img-beer-single > img{
+ height: 50vh;
+}
 
 

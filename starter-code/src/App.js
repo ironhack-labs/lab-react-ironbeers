@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/home';
 import NavBar from './components/navBar';
 import Beers from './components/beers';
+import BeersDetails from './components/singleBeer';
 import AddBeers from './components/addBeer';
 import { Switch, Route } from 'react-router-dom';
 
@@ -15,8 +16,9 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route path='/beers' component={Beers}/>
-          <Route path='/new-beer' component={AddBeers}/>
+          <Route exact path='/beers' component={Beers}/>
+          <Route exact path='/beers/:id' component={BeersDetails}/>
+          <Route exact path='/new-beer' component={AddBeers}/>
         </Switch>
       </div>
     );
