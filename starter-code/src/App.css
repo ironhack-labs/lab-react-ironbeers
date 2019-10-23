@@ -80,4 +80,27 @@ p, h3{
  height: 50vh;
 }
 
+form{
+  padding: 20px;
+}
+
+.input-form{
+  display: flex;
+  flex-direction: column;
+  padding-bottom:10px ;
+  align-items: flex-start;
+}
+.input-form > input{
+  border-radius: 5px;
+  border: 1px solid rgb(222, 220, 220);
+  width: 100%;
+  height: 30px;
+}
+
+.input-form > textarea{
+  border-radius: 5px;
+  border: 1px solid rgb(222, 220, 220);
+  width: 100%;
+  height: 60px;
+}
 

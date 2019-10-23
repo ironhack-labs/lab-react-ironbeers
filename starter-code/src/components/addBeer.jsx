@@ -5,19 +5,20 @@ class AddBeers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      tagline: "",
-      description: "",
-      first_brewed: "",
-      brewers_tips: "",
-      attenuation_level: "",
-      contributed_by:""
+      name: " ",
+      tagline: " ",
+      description: " ",
+      first_brewed: " ",
+      brewers_tips: " ",
+      attenuation_level: 0,
+      contributed_by:" "
     };
+    this.handleFormSubmit = this.handleFormSubmit.bind(this)
   }
 
   handleFormSubmit = event => {
     event.preventDefault();
-    const {
+    let {
       name,
       tagline,
       description,
@@ -25,7 +26,14 @@ class AddBeers extends Component {
       brewers_tips,
       attenuation_level,
       contributed_by
-    } = this.status;
+    } = this.state;
+    console.log(name,
+      tagline,
+      description,
+      first_brewed,
+      brewers_tips,
+      attenuation_level,
+      contributed_by)
     axios
       .post("https://ih-beers-api.herokuapp.com/beers/new", {
         name,
@@ -37,14 +45,13 @@ class AddBeers extends Component {
         contributed_by
       })
       .then(() => {
-        // this.props.getData();
-        this.setState({ name: "",
-        tagline: "",
-        description: "",
-        first_brewed: "",
-        brewers_tips: "",
-        attenuation_level: "",
-        contributed_by:"" });
+        this.setState({ name: " ",
+        tagline: " ",
+        description: " ",
+        first_brewed: " ",
+        brewers_tips: " ",
+        attenuation_level: 0,
+        contributed_by:" " });
       })
       .catch(error => console.log(error));
   };
@@ -58,26 +65,33 @@ class AddBeers extends Component {
     return (
       <div>
         <form onSubmit={this.handleFormSubmit}>
-          <label>Name:</label>
+          <div className="input-form">
+          <label>Name</label>
           <input
             type="text"
             name="name"
             value={this.state.name}
             onChange={e => this.handleChange(e)}
           />
-          <label>Tagline:</label>
+          </div>
+          <div className="input-form">
+          <label>Tagline</label>
           <input
             type="text"
             name="tagline"
             value={this.state.tagline}
             onChange={e => this.handleChange(e)}
           />
-          <label>Description:</label>
+          </div>
+          <div className="input-form">
+          <label>Description</label>
           <textarea
             name="description"
             value={this.state.description}
             onChange={e => this.handleChange(e)}
           />
+          </div>
+          <div className="input-form">
           <label>First brewed:</label>
           <input
             type="text"
@@ -85,6 +99,8 @@ class AddBeers extends Component {
             value={this.state.first_brewed}
             onChange={e => this.handleChange(e)}
           />
+          </div>
+          <div className="input-form">
           <label>Brewers tips:</label>
           <input
             type="text"
@@ -92,6 +108,8 @@ class AddBeers extends Component {
             value={this.state.brewers_tips}
             onChange={e => this.handleChange(e)}
           />
+          </div>
+          <div className="input-form">
           <label>Attenuation level:</label>
           <input
             type="number"
@@ -99,6 +117,8 @@ class AddBeers extends Component {
             value={this.state.attenuation_level}
             onChange={e => this.handleChange(e)}
           />
+          </div>
+          <div className="input-form">
           <label>Contributed by:</label>
           <input
             type="text"
@@ -106,7 +126,8 @@ class AddBeers extends Component {
             value={this.state.contributed_by}
             onChange={e => this.handleChange(e)}
           />
-          <input type="submit" value="Submit" />
+          </div>
+          <input type="submit" value="Add New" />
         </form>
       </div>
     );
