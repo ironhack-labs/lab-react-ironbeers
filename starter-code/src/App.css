@@ -31,9 +31,50 @@
 .navbar{
   background-color: #3dc4fc;
   height: 60px;
+  width: 100vw;
 }
 
 .imgNav{
-  height: 50px;
-  padding: 5px;
+  height: 40px;
+  padding: 10px;
 }
+
+.container{
+  /* width: 100px; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  
+}
+
+
+.home-card{
+  width: 100vw;
+  align-self: center;
+}
+
+
+.home-card img {
+  max-width:100%;
+  height:auto;
+}
+
+p, h3{
+  color: gray;
+}
+
+.beers-card{
+  display: flex;
+  height: 20vh;
+  padding:20px;
+  border-bottom: 1px solid rgb(220, 218, 218);
+}
+
+.img-beer>img{
+  height: 100%;
+}
+
+
+
