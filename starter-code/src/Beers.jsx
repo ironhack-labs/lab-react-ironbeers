@@ -20,10 +20,6 @@ export default class Beers extends Component {
   componentDidMount() {
     this.getBeers();
   }
-  //  image_url
-  // name
-  // tagline
-  // contributed_by
   render() {
     return (
       <div>
@@ -31,13 +27,15 @@ export default class Beers extends Component {
         <br />
         {this.state.beers.length !== 0
           ? this.state.beers.map(beer => (
-              <div>
-                <img src={beer.image_url} />
-                <h2>{beer.name}</h2>
-                <h3>{beer.tagline}</h3>
-                <p>{beer.contributed_by}</p>
-                <hr />
-              </div>
+              <Link key={beer._id} to={`/beers/${beer._id}`}>
+                <div>
+                  <img src={beer.image_url} />
+                  <h2>{beer.name}</h2>
+                  <h3>{beer.tagline}</h3>
+                  <p>{beer.contributed_by}</p>
+                  <hr />
+                </div>
+              </Link>
             ))
           : null}
       </div>
