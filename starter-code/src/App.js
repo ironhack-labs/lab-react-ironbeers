@@ -13,8 +13,8 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/beers" component={Beers} />
           <Route path="/beers/:id" component={Beer} />
-          {/* <Route path="/random-beer" component={Random} /> 
-          <Route path="/new-beer" component={NewBeer} /> */}
+          <Route path="/random-beer" render={() => <Beer match={{ params: { id: "random" } }} />} />
+          {/* <Route path="/new-beer" component={NewBeer} /> */}
         </Switch>
       </div>
     );
