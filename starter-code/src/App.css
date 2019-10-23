@@ -85,3 +85,20 @@ align-items: center;
   height: 120px;
   padding-right: 30px;
 }
+
+.img-detail{
+  height: 220px;
+  padding-bottom: 20px;
+}
+
+.container-detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.btn-detail{
+padding-top: 30px;
+}

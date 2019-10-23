@@ -17,6 +17,9 @@ getAllBeers = () =>{
       listOfBeers: responseFromApi.data
     })
   })
+  .catch((err)=>{
+    console.log(err)
+})
 }
 
 componentDidMount() {
@@ -29,7 +32,7 @@ componentDidMount() {
         <Navbar />
         <div>
         {this.state.listOfBeers.map(beers =>  {
-        return <div className='container-list'><img className='img-list' src={beers.image_url}/> <span> <Link key={beers._id} style={{ textDecoration: 'none' }}><h3>{beers.name}</h3></Link> <p>{beers.tagline}</p> <sub>created by: {beers.contributed_by}</sub> 
+        return <div className='container-list'><img className='img-list' src={beers.image_url}/> <span> <Link  to={`/beers/${beers._id}`} key={beers._id} style={{ textDecoration: 'none' }}><h3>{beers.name}</h3></Link><p>{beers.tagline}</p> <sub>created by: {beers.contributed_by}</sub> 
         </span></div>}
           )}
           
