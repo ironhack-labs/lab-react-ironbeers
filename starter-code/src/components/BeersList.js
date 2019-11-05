@@ -2,13 +2,21 @@ import React from 'react';
 import Header from './Header';
 import CardBeersList from './CardBeersList';
 import axios from 'axios';
+import Search from './Search'
 
 class BeersList extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      beers: []
+      beers: [],
+      searchTerm: ''
     }
+  }
+
+  onSearchChange = searchTerm => {
+    this.setState({
+      searchTerm: searchTerm
+    })
   }
 
   componentDidMount(){
@@ -21,10 +29,13 @@ class BeersList extends React.Component {
   }
 
     render(){
+      const filterBeers = this.state.beers.filter(beer => beer.name.startsWith(this.state.searchTerm))
+
       return (
         <div>
           <Header />
-          {this.state.beers.map(beer => 
+          <Search searchTerm={this.state.searchTerm} onSearchChange={this.onSearchChange}/>
+          {filterBeers.map(beer => 
           <CardBeersList img={beer.image_url} 
           name={beer.name} 
           tagline={beer.tagline} 
