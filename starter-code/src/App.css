@@ -26,3 +26,64 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.card-image img{
+  object-fit: cover;
+}
+
+.home-container .card {
+  padding-bottom: 30px;
+}
+
+.navbar-brand {
+  height: 10%;
+  width: auto;
+  background-color: #3EC4FC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-brand img {
+  width: 35px;
+  height: 35px;
+}
+
+.BeersCard {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.BeersCard img {
+  height: 250px;
+  width: auto;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.beerCard-content {
+  width: 300px;
+}
+
+.beer-details{
+  font-weight: bold;
+}
+
+.singleBeerCard img {
+  height: 350px;
+  width: auto;
+}
+
+.new-beer-form {
+  margin: 20px;
+  padding: 20px;
+}
+
+
+
