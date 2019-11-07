@@ -1,32 +1,51 @@
-// import React, { Component } from "react";
-// import axios from "axios";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-// class Home extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       beers: []
-//     };
-//   }
+class Home extends Component {
+  render() {
+    return (
+      <div>
+        <header className="App-header">
+          <h1 className="App-title">Ironbeers</h1>
+        </header>
+        <br />
+        <div className="container-fluid" style={{ width: "50%" }}>
+          <div className="card mb-3">
+            <img className="card-img-top" src="/images/beers.png" alt="" />
+            <div className="card-body">
+              <Link to="/beers" style={{ textDecoration: "none" }}>
+                <h5 className="card-title">List of Beers</h5>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="container-fluid" style={{ width: "50%" }}>
+          <div className="card mb-3">
+            <img
+              className="card-img-top"
+              src="/images/random-beer.png"
+              alt=""
+            />
+            <div className="card-body">
+              <Link to={`/beers/random-beer`}>
+                <h5 className="card-title">Random beers</h5>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="container-fluid" style={{ width: "50%" }}>
+          <div className="card mb-3">
+            <img className="card-img-top" src="/images/new-beer.png" alt="" />
+            <div className="card-body">
+              <Link to="/new-beer">
+                <h5 className="card-title">Create New Beer</h5>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
-//   componentDidMount() {
-//     axios.get("https://ih-beers-api2.herokuapp.com/beers").then(response => {
-//       this.setState({ beers: response.data });
-//     });
-//   }
-
-//   render() {
-//     return (
-//       <div className="Home">
-//         {this.state.beers.map(beer => (
-//           <li>
-//             {" "}
-//             <h1>{beer.name}</h1>
-//           </li>
-//         ))}
-//       </div>
-//     );
-//   }
-// }
-
-// export default Home;
+export default Home;

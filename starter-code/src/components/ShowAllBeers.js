@@ -30,7 +30,8 @@ class ShowAllBeers extends Component {
 
             <Card.Body>
               <Card.Title>{beer.name}</Card.Title>
-              <Card.Text>{beer.description}</Card.Text>
+              <Card.Text>{beer.tagline}</Card.Text>
+              <Card.Text>{beer.contributed_by}</Card.Text>
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
