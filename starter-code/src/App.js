@@ -4,7 +4,7 @@ import './App.css';
 import ListBeers from './components/ListBeers';
 import RandomBeer from './components/RandomBeer';
 import OneBeer from './components/OneBeer';
-import NewBeer from './components/OneBeer';
+import NewBeer from './components/NewBeer';
 import Home from './components/Home';
 // import countries from "./countries.json";
 // import BeerDetail from './components/BeerDetail'
@@ -20,12 +20,9 @@ class App extends Component {
 
           <Route exact path='/beers' component={ListBeers} />
           <Route path='/random-beer' component={RandomBeer} />
-          {/* Route component is responsible for passing props that 
-        include the route parameters (in this case: 'id') */}
           <Route path='/beers/:_id' component={OneBeer} />
           <Route path='/new-beer' component={NewBeer} />
         </Switch>
-        {/* < ListBeers beers={beers} /> */}
       </div>
     );
   }
