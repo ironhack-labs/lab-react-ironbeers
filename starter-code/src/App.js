@@ -19,10 +19,6 @@ class App extends Component {
           <Route path="/beers/:_id" component={BeersDetails} />
           <Route path="/random-beer" component={RandomBeer} />
           <Route path="/new-beer" component={NewBeer} />
-
-          {/* <Route path="/new-beer" component={NewBeer} /> */}
-
-          {/* <Route path='/shoes/color' component={About}/> */}
         </Switch>
       </div>
     );

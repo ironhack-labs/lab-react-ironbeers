@@ -16,15 +16,31 @@ class NewBeer extends Component {
     };
   }
 
-  handleFormSubmit = () => {
+  handleFormSubmit = e => {
     e.preventDefault();
 
-    axios.post("", this.state).then(res => {
-      console.log(res.data);
-    });
+    axios
+      .post("https://ih-beers-api2.herokuapp.com/beers/new", this.state)
+      .then(res => {
+        if (res.status <= 400) {
+          // browserHistory.push("http://localhost:3000/beers");
+          this.props.history.push("/beers");
+        } else {
+          alert("something went wrong");
+        }
+      })
+      .catch(error => {
+        console.log("something is really wrong", error);
+      });
 
     this.setState({
-      name: ""
+      name: "",
+      tagline: "",
+      description: "",
+      firstBrewed: 0,
+      brewersTips: "",
+      attenuationLevel: "",
+      contributedBy: ""
     });
   };
 
@@ -37,6 +53,7 @@ class NewBeer extends Component {
   }
 
   render() {
+    // console.log(this.props.history.push());
     return (
       <div>
         <Nav />
@@ -45,7 +62,7 @@ class NewBeer extends Component {
             <label for="exampleFormControlInput1">Name</label>
             <input
               name="name"
-              type="email"
+              type="text"
               value={this.state.name}
               className="form-control"
               id="exampleFormControlInput1"
@@ -59,7 +76,7 @@ class NewBeer extends Component {
             <input
               name="tagline"
               value={this.state.tagline}
-              type="email"
+              type="text"
               className="form-control"
               id="exampleFormControlInput1"
               placeholder="Enter Tagline"
@@ -71,6 +88,7 @@ class NewBeer extends Component {
             <label for="exampleFormControlTextarea1">Description</label>
             <textarea
               className="form-control"
+              type="text"
               name="description"
               value={this.state.description}
               id="exampleFormControlTextarea1"
@@ -83,7 +101,7 @@ class NewBeer extends Component {
           <div className="form-group">
             <label for="exampleFormControlInput1">First Brewed</label>
             <input
-              type="email"
+              type="text"
               value={this.state.firstBrewed}
               name="firstBrewed"
               className="form-control"
@@ -96,7 +114,7 @@ class NewBeer extends Component {
           <div className="form-group">
             <label for="exampleFormControlInput1">Brewers Tips</label>
             <input
-              type="email"
+              type="text"
               value={this.state.brewersTips}
               name="brewersTips"
               className="form-control"
@@ -122,7 +140,7 @@ class NewBeer extends Component {
           <div className="form-group">
             <label for="exampleFormControlInput1">Contributed by</label>
             <input
-              type="email"
+              type="text"
               value={this.state.contributedBy}
               name="contributedBy"
               className="form-control"
