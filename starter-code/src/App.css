@@ -114,3 +114,60 @@
 .reset-a{
   all: unset;
 }
+
+.beerpage-beer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.beerpage-beer img{
+  width: 30vw;
+  max-width: 200px;
+}
+
+.beerpage{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.beername-div{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.beername-div-info{
+  display: inline;
+}
+
+.beername-div-info h1{
+  font-size: 2em;
+  margin-bottom: -15px;
+}
+
+.beername-div-info h2{
+  font-size: 1.5em;
+  color: #7a7a7a
+}
+
+.beerpage-ps p, .beerpage-ps div{
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.attenuation{
+  padding-left: 15px;
+}
+
+.grey{
+  color: #979797
+}
+
+.bold{
+  font-weight: bold;
+}

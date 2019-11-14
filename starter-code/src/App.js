@@ -7,6 +7,7 @@ import {Link, Route, Switch} from 'react-router-dom'
 import All from './All'
 import Random from './beer'
 import Beer from './beer'
+import Random from './random'
 
 
 class App extends Component {

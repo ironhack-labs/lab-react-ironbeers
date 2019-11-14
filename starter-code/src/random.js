@@ -1,10 +1,15 @@
 import React from 'react'
 
-export default function Beer(props) {
+export default function Random(props) {
 
-    let theBeer = props.beers.find((each)=>{
-        return each._id == props.match.params.id;
+    let beerArray = props.beers.map((each)=>{
+        return each.
     })
+
+    for(let i = 0; i < beerArray.length; i++){
+
+    }
+
 
     console.log(props.beers, theBeer)
 
