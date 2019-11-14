@@ -53,6 +53,11 @@
   width: 100%;
 }
 
+.beer-img-container{
+    display: inline-block;
+    overflow: hidden;
+}
+
 .allbeer-link{
   font-style: none;
   color: black;
@@ -170,4 +175,50 @@
 
 .bold{
   font-weight: bold;
+}
+
+.theForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.input{
+  border: 1px solid grey;
+  height: 50px;
+  width: 90%;
+  border-radius: 10px;
+}
+
+.theButton{
+  font-size: 1.5em;
+  padding: 5px;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 768px){
+  .whole{
+    display: flex;
+  }
+
+  .whole-containers{
+    width: 33vw;
+  }
+  
+  .whole h1, .whole p, .whole a{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .whole h1, .whole a{
+    font-size: 10vw;
+  }
+  
+  .whole p{
+    font-size: 3vw;
+  }
 }

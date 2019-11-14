@@ -7,7 +7,7 @@ import {Link, Route, Switch} from 'react-router-dom'
 import All from './All'
 import Random from './beer'
 import Beer from './beer'
-import Random from './random'
+import NewBeer from './newBeer'
 
 
 class App extends Component {
@@ -31,12 +31,14 @@ class App extends Component {
         gotten:true
       })
   }  
-    
-
-  render() {
+  componentDidMount(){
     if(!this.state.gotten){
       this.getBeers()
     }
+  }
+
+  render() {
+    
     console.log('hello')
     return (
       <div className="App">
@@ -54,8 +56,14 @@ class App extends Component {
           <Route exact path="/" render ={props => 
           <Home 
           {...props}
+          beers = {this.state.beers}
             /> } />
 
+          <Route exact path="/newbeer" render ={props => 
+          <NewBeer
+          {...props}
+          beers = {this.state.beers}
+            /> } />
 
 
           <Route exact path="/all" render ={ props => 
@@ -73,6 +81,12 @@ class App extends Component {
 
           <Route exact path="/beer/:id" render ={ props => 
           <Beer
+          {...props}
+          beers = {this.state.beers}
+            /> } />
+
+          <Route exact path="/beer/:id" render ={ props => 
+          <Random
           {...props}
           beers = {this.state.beers}
             /> } />

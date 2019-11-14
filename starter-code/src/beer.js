@@ -6,7 +6,6 @@ export default function Beer(props) {
         return each._id == props.match.params.id;
     })
 
-    console.log(props.beers, theBeer)
 
         return (
             <div className="beerpage">

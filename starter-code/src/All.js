@@ -31,9 +31,8 @@ export default class All extends React.Component {
         })
     }
 
-    render() {
 
-        console.log(this.props.beers)
+    render() {
         return (
             <div>
                 {this.displayAll()}
