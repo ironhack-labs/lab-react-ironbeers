@@ -47,7 +47,11 @@ export default class App extends Component {
             path="/random"
             render={props => <Random {...props} theBeer={this.state.random} />}
           />/>
-          <Route path="/newbeer" component={NewBeer} />
+          <Route
+            axact
+            path="/newbeer"
+            render={props => <NewBeer {...props} />}
+          />
           <Route
             exact
             path="/beers/:thisID"
