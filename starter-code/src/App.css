@@ -26,3 +26,27 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+nav {
+  height: 80px; 
+  width: 100vw;
+  background-color: coral;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navLink {
+  border: 5px solid white;
+  width: 31vw;
+  height: 60px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}

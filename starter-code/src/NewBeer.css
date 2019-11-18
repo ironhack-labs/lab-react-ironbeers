@@ -1,0 +1,17 @@
+.addBeer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15%;
+}
+
+.inputfield{
+    height: 30px;
+    width: 300px;
+    margin: 10px;
+}
+
+.submit {
+    width: 60px;
+    height: 60px;
+}
