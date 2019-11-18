@@ -18,8 +18,6 @@ export default class newBeer extends Component {
 
     addBeer = (e) =>{
 
-        e.preventDefault();
-
         console.log(e.target.children, 'posting')
 
         axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`,  this.state)
