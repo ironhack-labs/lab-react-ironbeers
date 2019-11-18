@@ -12,7 +12,8 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    allBeers: {}
+    allBeers: {},
+    random: {}
   };
 
   componentDidMount() {
@@ -37,7 +38,9 @@ class App extends Component {
           <Route
             exact
             path="/beers/random-beer"
-            render={props => <Random {...props} />}
+            render={props => (
+              <Random {...props} allBeers={this.state.allBeers} />
+            )}
           />
           <Route
             exact
@@ -47,7 +50,9 @@ class App extends Component {
           <Route
             exact
             path="/beers/:id"
-            render={props => <SingleBeer {...props} />}
+            render={props => (
+              <SingleBeer {...props} allBeers={this.state.allBeers} />
+            )}
           />
         </Switch>
       </div>

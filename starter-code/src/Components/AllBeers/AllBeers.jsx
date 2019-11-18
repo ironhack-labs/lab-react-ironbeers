@@ -12,9 +12,13 @@ export default function AllBeers(props) {
     return beers.map((eachBeer, i) => {
       return (
         <div className="container">
-          <img src={eachBeer.image_url} alt="" />
+          <img
+            className="list-image"
+            src={eachBeer.image_url}
+            alt={eachBeer.name}
+          />
           <Link to={`beers/${eachBeer._id}`}>
-            <h2 key={i}>{eachBeer.name}</h2>
+            <h2>{eachBeer.name}</h2>
           </Link>
           <quote>{eachBeer.tagline}</quote>
           <p>{eachBeer.contributed_by}</p>
