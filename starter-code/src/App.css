@@ -1,28 +1,69 @@
-.App {
-  text-align: center;
+
+
+p, h1{
+  width:705px;
+}
+p{
+  color:grey;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.navbar {
+  overflow: hidden;
+  background-color:#48C4FC;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.Home-icon{
+  width:50px;
+  margin-left: 50%;
+  margin-right: auto;
+
+}
+.Home-page, .single-beer{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-.App-title {
-  font-size: 1.5em;
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
 }
 
-.App-intro {
-  font-size: large;
+.single-beer{
+  margin-top:100px;
+}
+form{
+  display:flex;
+  flex-direction: column;
+  margin:100px;
+  width:400px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input, textarea{
+  width:300px;
+  margin-bottom:30px;
+  border-radius:12px;
+}
+input{
+  height:20px;
+}
+
+label{
+  width:200px
+}
+.submit-btn{
+padding-bottom:30px;
+padding-top:5px;
+font-size: 15px;
+text-align:center;
+background-color:#48C4FC;
+color:white;
 }
