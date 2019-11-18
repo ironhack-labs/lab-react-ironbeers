@@ -18,9 +18,11 @@ export default class newBeer extends Component {
 
     addBeer = (e) =>{
 
-        console.log(e.target.children)
+        e.preventDefault();
 
-        axios.post(`https://ih-beers-api2.herokuapp.com/beers`,  this.state)
+        console.log(e.target.children, 'posting')
+
+        axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`,  this.state)
         .then((res) => {
           console.log(res)
         }).catch(err=> console.error(err))
@@ -40,7 +42,7 @@ export default class newBeer extends Component {
         console.log('called')
         return (
             <div>
-                <form className="theForm" onSubmit = {this.addBeer}>
+                <form className="theForm" onSubmit = {this.addBeer} >
                     <h2>Name:</h2>
                         <input type="text" name="name" onChange={this.updateState} className="input"/>
                     <h2>Tagline:</h2>
