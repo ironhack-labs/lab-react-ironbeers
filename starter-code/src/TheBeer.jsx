@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class TheBeer extends React.Component {
   render() {
@@ -13,6 +14,9 @@ export default class TheBeer extends React.Component {
           {theBeer.name}
         </h3>
         {theBeer.description}
+        <Link to="/">
+          <button className="btn btn-warning">Home</button>
+        </Link>
       </div>
     );
   }

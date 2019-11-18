@@ -6,7 +6,7 @@ import NewBeer from "./NewBeer";
 import Random from "./Random";
 import TheBeer from "./TheBeer";
 
-const [data, random_data] = [
+const [data, random_data, new_beer] = [
   "https://ih-beers-api2.herokuapp.com/beers",
   "https://ih-beers-api2.herokuapp.com/beers/random",
 ];
