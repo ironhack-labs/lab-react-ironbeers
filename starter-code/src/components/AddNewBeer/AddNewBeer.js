@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import HomeHeader from "../HomeHeader/HomeHeader";
 
 export default class AddNewBeer extends Component {
   constructor() {
@@ -57,6 +58,7 @@ export default class AddNewBeer extends Component {
   render() {
     return (
       <div>
+      <HomeHeader />
       <h1>{this.state.message}</h1>
         <form className="container" onSubmit={this.submitNewBeer}>
           <label htmlFor="name">Name</label>

@@ -3,3 +3,12 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.tagline {
+  color: gray;
+  font-size: 16px;
+}
+
+.name {
+  font-size: 24px;
+}

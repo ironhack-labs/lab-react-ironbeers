@@ -4,12 +4,14 @@ import List from "./components/List/List";
 import Single from "./components/Single/Single";
 import Random from "./components/Random/Random";
 import AddNewBeer from "./components/AddNewBeer/AddNewBeer";
-import { Link, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
 import axios from "axios";
 
 class App extends Component {
   state = {
     theBeers: null,
+    showHeader: true,
     ready: false
   };
 
@@ -28,21 +30,13 @@ class App extends Component {
       });
   }
 
-  render() {
+  render() { 
     if (this.state.ready) {
       return (
         <div className="App">
-          <Link to="/list/" className="btn btn-lg btn-outline-dark">
-            List of Beers
-          </Link>
-          <Link to="/random/" className="btn btn-lg btn-outline-dark">
-            Random Beer
-          </Link>
-          <Link to="/new/" className="btn btn-lg btn-outline-dark">
-            Add a Beer
-          </Link>
-
           <Switch>
+
+            <Route exact path="/" component={Header} />
             <Route
               exact
               path="/list/"
