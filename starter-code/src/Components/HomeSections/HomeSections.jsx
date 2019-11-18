@@ -9,7 +9,7 @@ export default function HomeSections(props) {
     <div className="container">
       <img src={`/images/${props.src}`} />
       <div className="home-textarea">
-        <Link to={`/beers`}>
+        <Link to={`/beers${props.link}`}>
           <h2>{props.title}</h2>
         </Link>
         <p>{props.text}</p>
