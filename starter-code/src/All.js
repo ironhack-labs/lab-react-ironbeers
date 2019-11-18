@@ -21,7 +21,7 @@ export default class All extends React.Component {
                             {each.tagline}
                         </p>
                         <p className="beer-owner">
-                            <span className="theSpan">Created by:</span> {each.name}
+                            <span className="theSpan">Created by:</span> {each.contributed_by}
                         </p>
                     </div>
                 </div>
