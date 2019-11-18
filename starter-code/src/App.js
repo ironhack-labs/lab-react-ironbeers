@@ -6,13 +6,19 @@ import NewBeer from "./NewBeer";
 import Random from "./Random";
 import TheBeer from "./TheBeer";
 
-const data = "https://ih-beers-api2.herokuapp.com/beers";
+const [data, random_data] = [
+  "https://ih-beers-api2.herokuapp.com/beers",
+  "https://ih-beers-api2.herokuapp.com/beers/random",
+];
+
 export default class App extends Component {
   state = {
     beers: [],
+    random: {},
   };
   componentDidMount = () => {
     axios.get(data).then(allb => this.setState({ beers: allb.data }));
+    axios.get(random_data).then(randomb => this.setState({ random: randomb }));
   };
   render() {
     return (
@@ -36,7 +42,11 @@ export default class App extends Component {
             path="/beers"
             render={props => <Beers {...props} beers={this.state.beers} />}
           />/>
-          <Route path="/random" component={Random} />
+          <Route
+            exact
+            path="/random"
+            render={props => <Random {...props} theBeer={this.state.random} />}
+          />/>
           <Route path="/newbeer" component={NewBeer} />
           <Route
             exact
