@@ -1,28 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
-
 .App-title {
   font-size: 1.5em;
 }
-
 .App-intro {
   font-size: large;
 }
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.homeiconbar {
+  background-color: mediumseagreen;
+  color: white;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.homeiconbar img {
+  width: 50px;
+}
+.home a {
+  text-decoration: none;
+}
+.home h2 {
+  font-size: 1.8em;
+  padding: 10px 0;
+  font-weight: 500;
+  color: black;
+}
+.home h2, .home p {
+  text-align: left;
+}
+.home p {
+  color: darkgray;
+  margin-bottom: 35px;
+  font-weight: 300;
+}
+.home img {
+  width: 100%;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.allbeerlist a {
+  text-decoration: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid darkgray;
+  display: block;
+}
+.beerboxcontainer {
+  width: 60%;
+  margin: 0 auto;
+}
+.beerbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.beerimgbox {
+  width: 20%;
+  height: 150px;
+}
+.beerimgbox img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.beercontentbox {
+  text-align: left;
+  width: 79%;
+}
+.beercontentbox h2, .beercontentbox h3 {
+  font-weight: 300;
+  padding-bottom: 8px;
+}
+.beercontentbox h2, .beercontentbox p {
+  color: black;
+}
+.beercontentbox h3 {
+  color: darkgray;
+}
+.singlebeerbox {
+  padding: 30px 0;
+}
+.singlebeerimg {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.singlebeerimg img {
+  max-width: 200px;
+  max-height: 300px;
+}
+.beer-details {
+  width: 100%;
+}
+.beer-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.beer-row h2, .beer-row h4 {
+  font-weight: 300;
+}
+.beer-details p {
+  text-align: left;
+}
+.graycolor {
+  color: darkgray;
+}
+.beerform {
+  width: 400px;
+  text-align: left;
+  margin: 0 auto;
+}
+.fieldgroup {
+  margin-bottom: 10px;
+}
+.fieldgroup label, .fieldgroup input {
+  display: block;
+}
+.fieldgroup label {
+  margin-bottom: 5px;
+}
+.fieldgroup input {
+  border-radius: 12px;
+  border: 1px solid darkseagreen;
+  padding: 10px 12px;
+  font-size: 1.3em;
+  box-sizing: border-box;
+}
+.beerform input {
+  width: 100%;
+}
+input[type=submit] {
+  width: 100%;
+  border-radius: 12px;
+  background-color: darkseagreen;
+  padding: 10px 12px;
+  font-size: 1.3em;
+  cursor: pointer;
+}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@media all and (max-width: 767px) {
+  .beerimgbox {
+    margin-right: 8px;
+  }
+  .beercontentbox h2, .beercontentbox h3 {
+    font-size: 1.2em;
+  }
+  .beerboxcontainer {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .beer-row {
+    justify-content: space-between;
+  }
 }
