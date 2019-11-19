@@ -3,3 +3,32 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.homeLink {
+  border: 1px solid black;
+  padding: 5px;
+  border-color: black;
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.allBeer {
+  background-image: url("./images/beers.png");
+}
+.randomBeer {
+  background-image: url("./images/random-beer.png");
+}
+.newBeer {
+  background-image: url("./images/new-beer.png");
+}
+
+.homeButton {
+  background-image: url("./images/home-button.png");
+  width: 100vw;
+  height: 500px;
+  background-repeat: no-repeat;
+}
