@@ -33,8 +33,7 @@ export default function SingleBeer(props) {
       });
     }
   };
-  //   let beer = thisBeer();
-  //   console.log(beer);
+
   return (
     <div>
       <Nav />
