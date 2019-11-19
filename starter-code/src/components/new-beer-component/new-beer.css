@@ -1,0 +1,73 @@
+.new-beer-page {
+    height:100vh;
+    width:100vw;
+    color:black;
+    margin-top: 8%;
+    display:flex;
+    justify-content: center;
+}
+h3 {
+    font-size: 30px !important;
+    font-weight: bold !important;
+    text-align: center;
+}
+.form-section {
+    height: 80vh;
+    width: 50vw;
+    box-shadow: 10px 10px 10px 10px #aaaaaa;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+form {
+    width: 40vw;
+    padding: 5px;
+    
+}
+.field-group {
+    width: 40vw;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.fields {
+    text-align: left;
+    width: 36vw;
+    height: 10vh;
+}
+input {
+    width: 18vw;
+    height: 6vh;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    float: right;
+}
+input::placeholder {
+    text-align: center;
+}
+input[type=submit]{
+border: solid 4px black;
+background-color:rgb(224, 169, 49);
+color: black;
+font-weight: bold;
+font-size: 20px;
+width: 10vw;
+}
+input[type=submit]:hover, input[type=submit]:active {
+    background-color:rgb(73, 43, 4);;
+    color: white;
+    }
+label {
+    font-size: 20px;
+    font-weight: bold;
+ 
+   
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

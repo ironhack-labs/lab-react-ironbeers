@@ -1,0 +1,36 @@
+.beer-specific {
+    height:80vh;
+    width:100vw;
+    color: black;
+    margin-top: 20%;
+}
+.beer-self {
+    height: 50vh;
+    width: 100vw;
+    color:black;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+.beer-self img {
+    height: 80vh;
+    width: 10vw;
+}
+.beer-det {
+    width: 30vw;
+}
+.homeIcon{
+    border: solid 1px rgb(224, 169, 49);
+    position: fixed;
+    bottom: 97%;
+    right: 1%;
+    z-index: 4;
+    background-color:rgb(224, 169, 49);
+    height: 3vh;
+    width: 10vw;
+}
+.homeIcon img {
+    height: 10vh;
+    width: 5vw;
+}

@@ -1,0 +1,20 @@
+.random-beer-page {
+    height:100vh;
+    width:100vw;
+    color:black;
+    margin-top: 20%;
+}
+.homeIcon{
+    border: solid 1px rgb(224, 169, 49);
+    position: fixed;
+    bottom: 97%;
+    right: 1%;
+    z-index: 4;
+    background-color:rgb(224, 169, 49);
+    height: 3vh;
+    width: 10vw;
+}
+.homeIcon img {
+    height: 10vh;
+    width: 5vw;
+}

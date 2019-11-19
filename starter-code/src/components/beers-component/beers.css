@@ -1,0 +1,45 @@
+.beers-page {
+    height: 100%;
+    width: 100%;
+    color: black;
+    margin-top: 8%;
+   
+}
+.homeIcon{
+    border: solid 1px rgb(224, 169, 49);
+    position: fixed;
+    bottom: 97%;
+    right: 1%;
+    z-index: 4;
+    background-color:rgb(224, 169, 49);
+    height: 3vh;
+    width: 10vw;
+}
+.beers-page img {
+    height: 10vh;
+    width: 5vw;
+}
+.beer-list-content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.beer {
+    height: 30vh;
+    width: 40vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    
+}
+.beer img {
+    height: 20vh;
+    width: 5vw;
+}
+.con {
+    width: 20vw;
+}

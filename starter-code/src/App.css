@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .App-logo {
@@ -20,6 +24,18 @@
 
 .App-intro {
   font-size: large;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  background-color:rgb(224, 169, 49);
+  height: 10vh;
+  box-shadow: 5px 10px 8px #888888;
+}
+h1{
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
