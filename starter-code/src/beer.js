@@ -11,7 +11,9 @@ export default function Beer(props) {
             <div className="beerpage">
                 <div>
                     <div className="beerpage-beer">
+                    {theBeer && theBeer.image_url &&
                         <img src={theBeer.image_url} alt="beer" />
+                    }
                     </div>
                 </div>
                 <div className="beername-div">
