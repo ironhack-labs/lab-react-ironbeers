@@ -2,4 +2,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+a,
+h1 {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  background-color: aqua;
 }
