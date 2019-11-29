@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function NavBar() {
     return (
         <div>
-            <nav>
+            <nav style={{backgroundColor: "deepskyblue"}}>
             <Link to='/'>
             	
 
