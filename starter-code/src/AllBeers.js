@@ -1,28 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
-class Search extends Component {
-
-    handleChange = event =>{
-        this.props.setQuery(event.target.value)
-    }
-
-    render(){
-        return (
-          <div>
-            <input
-              className="form-control"
-              placeholder="Search Beer"
-              type="text"
-              name="query"
-              value={this.props.query}
-              onChange={this.handleChange}
-            />
-          </div>
-        );
-    }
-}
+import Search from "./Search"
 
 export default class AllBeers extends Component {
   state = {
