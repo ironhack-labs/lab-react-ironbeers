@@ -11,7 +11,7 @@ export default class FormUser extends React.Component {
                    attenuationLevel: 0,
                    contributedBy: ""
                  };
-                 
+
                  handleChange = event => {
                    this.setState({ [event.target.name]: event.target.value });
                 
@@ -56,77 +56,88 @@ export default class FormUser extends React.Component {
                      contributedBy
                    } = this.state;
                    return (
-                     <form onSubmit={this.handleSubmit}>
-                       <label>
-                         Name
+                     <form style={{padding: "4vh"}}onSubmit={this.handleSubmit}>
+                       <div className="form-group">
+                         <label htmlFor="formGroupExampleInput1">Name</label>
                          <input
+                           className="form-control"
                            type="text"
                            name="name"
                            onChange={this.handleChange}
                            value={name}
                          />
-                       </label>
-                       <br />
-                       <label>
-                         Tagline
+                       </div>
+                       <div className="form-group">
+                         <label htmlFor="formGroupExampleInput1">Tagline</label>
                          <input
+                           className="form-control"
                            type="text"
                            name="tagline"
                            onChange={this.handleChange}
                            value={tagline}
                          />
-                       </label>
-                       <br />
-                       <label>
-                         Description
-                         <input
+                       </div>
+                       <div className="form-group">
+                         <label htmlFor="exampleFormControlTextarea1">
+                           Description
+                         </label>
+                         <textarea
+                           className="form-control"
                            type="text"
                            name="description"
                            onChange={this.handleChange}
                            value={description}
+                           id="exampleFormControlTextarea1"
+                           rows="3"
                          />
-                       </label>
-                       <br />
-                       <label>
-                         Firstbrewed
+                       </div>
+                       <div className="form-group">
+                         <label htmlFor="formGroupExampleInput1">
+                           Firstbrewed
+                         </label>
                          <input
+                           className="form-control"
                            type="text"
                            name="firstbrewed"
                            onChange={this.handleChange}
                            value={firstbrewed}
                          />
-                       </label>
-                       <br />
-                       <label>
-                         BrewersTip
+                       </div>
+                       <div className="form-group">
+                         <label htmlFor="formGroupExampleInput1">BrewersTip</label>
                          <input
+                           className="form-control"
                            type="text"
                            name="brewersTip"
                            onChange={this.handleChange}
                            value={brewersTip}
                          />
-                       </label>
-                       <br />
-                       <label>
-                         attenuationLevel
+                       </div>
+                       <div className="form-group">
+                         <label htmlFor="formGroupExampleInput1">
+                           attenuationLevel
+                         </label>
                          <input
-                           type="text"
+                           className="form-control"
+                           type="number"
                            name="attenuationLevel"
                            onChange={this.handleChange}
                            value={attenuationLevel}
                          />
-                       </label>
-
-                       <label>
-                         Contributed By
+                       </div>
+                       <div className="form-group">
+                         <label htmlFor="formGroupExampleInput1">
+                           Contributed By
+                         </label>
                          <input
-                           style={{ border: "1px solid black" }}
+                           className="form-control"
                            type="text"
                            name="contributedBy"
                            value={contributedBy}
                            onChange={this.handleChange}
                          />
-                       </label>
+                       </div>
+
                        <button type="submit">Submit</button>
                      </form>
                    );

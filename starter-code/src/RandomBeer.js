@@ -32,15 +32,28 @@ export default class RandomBeer extends Component {
     const beer = this.state.beer;
     console.log("RENDER", beer);
     return (
-      <div>
-        <img style={{ height: "40vh" }} src={beer.image_url} alt="beerpic" />
-        <h3>{beer.name}</h3>
-        <h4>{beer.tagline}</h4>
-
-        <p>{beer.first_brewed}</p>
-        <p>{beer.attenuation_level}</p>
-        <p>{beer.description}</p>
-        <p>{beer.contributed_by}</p>
+      <div className="singleBeer">
+        <img
+          style={{ height: "35vh", paddingBottom: "2vh" }}
+          src={beer.image_url}
+          alt="beerpic"
+        />
+        <div className="elementsFromBeer">
+          <h1>{beer.name}</h1>
+          <h2 style={{ color: "rgb(174,174,174)" }}>
+            {beer.attenuation_level}
+          </h2>
+        </div>
+        <div className="elementsFromBeer">
+          <p style={{ color: "rgb(174,174,174)" }}>{beer.tagline}</p>
+          <p>
+            <strong>{beer.first_brewed}</strong>
+          </p>
+        </div>
+        <p style={{ textAlign: "left" }}>{beer.description}</p>
+        <p style={{ color: "rgb(174,174,174)", textAlign: "left" }}>
+          {beer.contributed_by}
+        </p>
       </div>
     );
   }

@@ -7,13 +7,16 @@ import AllBeers from "./AllBeers"
 import SingleBeer from "./SingleBeer"
 import RandomBeer from "./RandomBeer"
 import NewBeer from "./NewBeer"
+import { Icon } from "react-icons-kit";
+import { home } from "react-icons-kit/icomoon/home";
+
 
 
 class Header extends Component{
   render(){
     return (
-      <nav style={{backgroundColor: "blue", height: "3vh"}}>
-        <Link to={"/"}><img src="" alt=""/>Link</Link>
+      <nav style={{backgroundColor: "rgb(0,196,252)", height: "6vh", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+        <Link style={{color: "white"}} to={"/"}><img src="" alt=""/><Icon size={32} icon={home} /></Link>
       </nav>
     )
   }

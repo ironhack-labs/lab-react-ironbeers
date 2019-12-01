@@ -26,3 +26,76 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.imgHome {
+  width: 100%;
+  height: auto
+}
+
+.features a {
+  color: black;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.features h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0.5vh 0 0 2vh;
+}
+
+.features p {
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 2vh;
+
+}
+
+.BeerListing {
+  display: flex;
+    align-items: center;
+    padding: 3vh;
+    border-bottom: 1px solid gray;
+}
+
+.BeerListing div {
+    text-align: left;
+    padding-left: 4vh;
+}
+
+.BeerListing h3 {
+  font-size:  1rem;
+  color: black
+}
+
+.BeerListing p {
+  font-size: 0.8rem;
+  color: black
+}
+
+.singleBeer {
+  padding: 5vh 2vh 0 2vh;
+}
+
+.singleBeer p {
+ font-size: 0.8rem
+}
+
+.elementsFromBeer 
+  {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+      background-color: rgb(0,196,252);
+    color: white;
+    border-radius: 10px;
+    padding: 0.5vh 2vh;
+    margin-bottom: 2vh;
+}
+
+
+

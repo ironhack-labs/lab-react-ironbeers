@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default class AllBeers extends Component {
   state = {
-    beers: []
+    beers: [],
+    query: ""
   };
 
   componentDidMount() {
@@ -28,15 +29,17 @@ export default class AllBeers extends Component {
         {this.state.beers.map(beer => {
           return (
             <Link key={beer._id} to={`/beers/${beer._id}`}>
-              <div>
+              <div className="BeerListing">
                 <img
-                  style={{ height: "40vh" }}
+                  style={{ height: "20vh" }}
                   src={beer.image_url}
                   alt="beerpic"
                 />
-                <h3>{beer.name}</h3>
-                <h4>{beer.tagline}</h4>
-                <p>Created by {beer.contributed_by}</p>
+                <div>
+                  <h3>{beer.name}</h3>
+                  <p style={{ color: "gray" }}>{beer.tagline}</p>
+                  <p>Created by {beer.contributed_by}</p>
+                </div>
               </div>
             </Link>
           );
