@@ -2,11 +2,40 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+class Search extends Component {
+
+    handleChange = event =>{
+        this.props.setQuery(event.target.value)
+    }
+
+    render(){
+        return (
+          <div>
+            <input
+              className="form-control"
+              placeholder="Search Beer"
+              type="text"
+              name="query"
+              value={this.props.query}
+              onChange={this.handleChange}
+            />
+          </div>
+        );
+    }
+}
+
 export default class AllBeers extends Component {
   state = {
     beers: [],
     query: ""
   };
+
+  setQuery = query => {
+      this.setState({
+        query: query
+      })
+    }          
+      
 
   componentDidMount() {
     axios
@@ -24,9 +53,17 @@ export default class AllBeers extends Component {
   }
 
   render() {
+      let beers;
+      if (this.state.query === ""){
+        beers = this.state.beers
+      }
+      else {
+          beers = this.state.beers.filter(el => el.name.toLowerCase().includes(this.state.query.toLowerCase()) )
+      }
     return (
       <div>
-        {this.state.beers.map(beer => {
+          <Search setQuery={this.setQuery} query={this.state.query}/>
+        {beers.map(beer => {
           return (
             <Link key={beer._id} to={`/beers/${beer._id}`}>
               <div className="BeerListing">
