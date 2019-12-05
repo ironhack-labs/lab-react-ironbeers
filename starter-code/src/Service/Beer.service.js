@@ -9,5 +9,5 @@ export default class Services {
 
   getAllBeers = () => this.service.get("/");
   getOneBeer = id => this.service.get(`/${id}`);
-//   postBeer = beer => this.service.post("/new", beer);
+  postBeer = beer => this.service.post("/new", beer);
 }
