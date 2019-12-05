@@ -1,28 +1,21 @@
+body {
+  background-image: radial-gradient(#fff,#ccc);
+}
+
 .App {
   text-align: center;
+  width: 50vw;
+  margin: 0 auto;
+  border: 1px solid #666;
+  padding-top: 20px;
+  background-color: #eee;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+a {
+  text-decoration: none;
+  color: #666;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+p {
   padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
