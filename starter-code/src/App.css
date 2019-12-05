@@ -47,3 +47,9 @@
 .list{
   margin: 0 auto;
 }
+
+.card-img-top{
+  margin: 0 auto;
+  max-width:20%;
+  height:auto;
+}
