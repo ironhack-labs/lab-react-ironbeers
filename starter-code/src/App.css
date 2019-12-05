@@ -22,6 +22,33 @@
   font-size: large;
 }
 
+#root .navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar a{
+  line-height: 0;
+}
+
+.navbar img{
+  height: 32px;
+}
+
+.beer-item figure{
+  width: 128px;
+}
+.beer-item img{max-height: 200px}
+
+.beer-item .media-left{
+  margin-right: 32px
+}
+
+
+.beer-detail img{max-height: 400px}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
