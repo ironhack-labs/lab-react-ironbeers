@@ -6,6 +6,7 @@ import Nav from './Header';
 export default class AllBeers extends Component {
     state = {
         beers: [],
+        search: '',
     }
     componentDidMount() {
         axios.get("https://ih-beers-api2.herokuapp.com/beers")
@@ -13,10 +14,32 @@ export default class AllBeers extends Component {
             this.setState({beers: response.data})
         })
     }
+    handleChange(event) {
+        event.preventDefault();
+
+
+        let { name, value } = event.target;
+    
+        this.setState( { [name]: value } );
+
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${this.state.search}`)
+            .then( (data) => {
+                this.setState({beers: data.data})
+            })
+            .catch( (err) => console.log(err))
+      }
     render() {
         return (
             <div className = 'allbeers'>
                 <Nav />
+
+                <input
+                    type = 'text' 
+                    name = 'search' 
+                    className = 'searchinput'
+                    value = {this.state.search}
+                    onChange = {(e) => this.handleChange(e)}>    
+                </input>
                 <ul>
                 {this.state.beers.map((beer, i) => {
                     let contributor = beer.contributed_by.substring(0, beer.contributed_by.indexOf('<'));

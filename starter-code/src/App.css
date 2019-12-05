@@ -180,3 +180,6 @@ ul {
   border: 0.5px solid black;
   border-radius: 30px;
 }
+.searchinput {
+  border: 1px solid black;
+}
