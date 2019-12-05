@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  width: 68vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
 }
 
 .App-logo {
@@ -26,3 +32,83 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.navigation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(94, 94, 204);
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.stack{
+  border: 1px solid black;
+  
+}
+
+.introText{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.marginpage{
+  margin-top: 15vh;
+}
+
+.eachBeer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 80vw;
+}
+
+.justbeer{
+  height: 20vh;
+}
+
+.oneServesa{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.oneServesa>img{
+  height: 40vh;
+  width: 7vw;
+}
+
+.topbeer{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h2{
+  color: grey;
+  font-size: 20px;
+}
+
+.leftside{
+  display:flex;
+  flex-direction:column;
+  width: 70%;
+}
+
+.rightside{
+  display:flex;
+  flex-direction:column;
+  width: 30%;
+}
+
