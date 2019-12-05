@@ -26,3 +26,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.card-image {
+  width: 50px;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+ 
+  
+}
+
+.card-container h2,h3,p {
+  text-decoration: none;
+}
