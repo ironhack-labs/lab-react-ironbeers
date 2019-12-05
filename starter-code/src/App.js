@@ -6,7 +6,6 @@ import BeersList from "./Components/BeersList";
 import SingleBeer from "./Components/SingleBeer";
 import RandomBeer from "./Components/RandomBeer";
 import NewBeer from "./Components/NewBeer";
-import axios from "axios";
 
 class App extends Component {
   constructor(){
