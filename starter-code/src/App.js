@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { Switch, Route } from 'react-router-dom'
+
+import { Container, Row, Button, Navbar, Form, Nav, FormControl } from 'react-bootstrap'
+
+import NavBar from './components/NavBar';
+import Home from './components/beers/Home';
+import BeerDetails from './components/beers/Beer-details';
+import BeerRandom from './components/beers/Beer-random';
+import BeerForm from './components/beers/BeerForm'
+
+import BeerList from "./components/beers/Beer-list"
 
 class App extends Component {
   render() {
     return (
+
+      <>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <NavBar />
+
+      <Switch>
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/beers" component={BeerList}/>
+      <Route path="/beers/:id" component={BeerDetails} />
+      <Route path="/beers/random" component={BeerRandom} />
+      <Route path="/beers/form" component={BeerForm} />
+
+
+    </Switch>
+    </div>
+    </>
+
     );
   }
 }

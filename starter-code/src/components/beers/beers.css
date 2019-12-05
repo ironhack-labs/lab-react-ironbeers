@@ -1,0 +1,14 @@
+.beer-card {
+  padding: 0 50px;
+  margin: 20px 0
+}
+
+.beer-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+ }
+
+ .beer-details img {
+    width: 100% 
+   }
