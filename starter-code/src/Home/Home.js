@@ -6,7 +6,7 @@ export default class Home extends Component {
     return (
       <React.Fragment>
         <Link to={"/beers"}>
-          <div>
+          <div className="home-wrapper">
             <img src="./images/beers.png" alt="beers" />
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
@@ -17,7 +17,7 @@ export default class Home extends Component {
           </div>
         </Link>
         <Link to={"/random-beer"}>
-          <div>
+          <div className="home-wrapper">
             <img src="./images/random-beer.png" alt="beers" />
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
@@ -28,7 +28,7 @@ export default class Home extends Component {
           </div>
         </Link>
         <Link to={"/new-beer"}>
-          <div>
+          <div className="home-wrapper">
             <img src="./images/new-beer.png" alt="beers" />
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus

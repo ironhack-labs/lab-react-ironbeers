@@ -1,6 +1,9 @@
 body {
   background-image: radial-gradient(#fff,#ccc);
   color: #666;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 .App {
@@ -9,6 +12,10 @@ body {
   margin: 0 auto;
   border: 2px solid #bbb;
   background-color: #eee;
+}
+
+.home-wrapper img{
+  width: 100%;
 }
 
 a {
@@ -27,4 +34,70 @@ header {
 header img {
   height: 80px;
   padding: 10px;
+}
+
+.little-beer-wrapper {
+  border-bottom: 2px solid #bbb;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+}
+
+.little-beer-wrapper img {
+  height: 150px;
+  padding: .5rem;
+}
+
+
+.little-text-wrapper h3 {
+  color: black;
+}
+
+.little-text-wrapper p {
+  text-align: left;
+}
+.little-text-wrapper p.citation {
+  font-size: .5rem;
+}
+
+.single-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-wrapper img {
+  height: 200px;
+  margin: 4rem 0 1rem 0
+}
+
+.single-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.text-info {
+  width: 75%;
+  text-align: left;
+}
+
+.text-info h2 {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.numeric-info {
+  width: 25%;
+text-align: right;
+}
+
+.description {
+  color: black;
+}
+
+.contributor {
+  font-size : .7rem;
 }

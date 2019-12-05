@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./reset.css"
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Home from "./Home/Home.js";
@@ -21,22 +22,35 @@ class App extends Component {
           <Route
             exact
             path="/beers"
-            render={() => {
-              return <React.Fragment><Header></Header><BeerList></BeerList></React.Fragment>;
-            }}
+            render={() =>  
+                  <React.Fragment>
+                    <Header></Header>
+                    <BeerList></BeerList>
+                  </React.Fragment>
+            }
           />
           <Route
             exact
             path="/random-beer"
             render={() => {
-              return <React.Fragment><Header></Header><BeerDetail beer={"una birra random"}></BeerDetail></React.Fragment>;
+              return (
+                <React.Fragment>
+                  <Header></Header>
+                  <BeerDetail></BeerDetail>
+                </React.Fragment>
+              );
             }}
           />
-          <Route 
+          <Route
             exact
             path="/new-beer"
             render={() => {
-              return <React.Fragment><Header></Header><h1>Una birra 404</h1></React.Fragment>;
+              return (
+                <React.Fragment>
+                  <Header></Header>
+                  <h1>Una birra 404</h1>
+                </React.Fragment>
+              );
             }}
           />
           <Route
@@ -44,7 +58,12 @@ class App extends Component {
             path="/beers/:id"
             render={props => {
               let beerId = props.match.params.id;
-              return <React.Fragment><Header></Header><BeerDetail beer={beerId}></BeerDetail></React.Fragment>;
+              return (
+                <React.Fragment>
+                  <Header></Header>
+                  <BeerDetail beer={beerId}></BeerDetail>
+                </React.Fragment>
+              );
             }}
           />
         </Switch>
