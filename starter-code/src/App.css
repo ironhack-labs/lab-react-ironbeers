@@ -1,7 +1,54 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 .App {
   text-align: center;
 }
-
+* {
+  text-decoration: none;
+  color: black;
+  font-family: 'Lato', sans-serif;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -25,4 +72,111 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.homescreen {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: left;
+}
+.homescreen img {
+  width: 100vw;
+  height: auto;
+}
+.homescreen Link:visited {
+  text-decoration: none;
+}
+.homescreen h1 {
+  font-size: 25px;
+  margin-left: 15px;
+  margin-top: 0;
+}
+.homescreen p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.headerbar {
+  background-color: #3DC4FC;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 60px;
+}
+.headerbar img {
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
+}
+.allbeers {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+.allbeerelement {
+  display: flex;
+  flex-direction: row;
+}
+.allbeerelement img {
+  height: 125px;
+  width: auto;
+}
+.allbeerelement h1 {
+  font-size: 20px;
+}
+.allbeerelementtext {
+  margin-left: 25px;
+  text-align: left;
+}
+.allbeerelement h2 {
+  font-size: 15px;
+}
+ul {
+  list-style: none;
+  margin-left: 15px;
+}
+.singlebeer {
+  margin-left: 20px;
+  margin-right: 15px;
+}
+.singlebeer img {
+  width: 25vw;
+  height: auto;
+  max-height: 300px;
+  margin-top: 30px;
+}
+.singlebeerheader {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  text-align: left;
+  justify-content: space-between;
+  margin-top: 15px;
+  /* margin-bottom: 10px; */
+}
+.singlebeerheader div {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+.singlebeerheader h1 {
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+.singlebeerdesc {
+  text-align: left;
+}
+.singlebeercreator {
+  margin-top: 10px;
+  text-align: left;
+}
+.addbeerform {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.addbeerform input {
+  border: 0.5px solid black;
+  border-radius: 30px;
 }
