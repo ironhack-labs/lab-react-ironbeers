@@ -34,6 +34,7 @@ export default class BeersList extends Component {
           {this.state.beerList.map((beer, idx) => {
             return (
               <div key={idx}>
+                  <Link to={"/beers/" + beer._id} >
                 <img
                   
                   src={beer.image_url}
@@ -43,6 +44,7 @@ export default class BeersList extends Component {
                 <h2>{beer.name}</h2>
                 <h3>{beer.tagline}</h3>
                 <h5>Contributed by: {beer.contributed_by}</h5>
+                </Link>
               </div>
             );
           })}

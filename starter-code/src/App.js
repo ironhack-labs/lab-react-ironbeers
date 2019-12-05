@@ -9,6 +9,21 @@ import NewBeer from "./Components/NewBeer";
 import axios from "axios";
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state={
+      beerSel:[]
+    }
+  }
+  setBeer(data){
+
+    let beer = data.data
+    console.log(beer)
+    this.setState = ({
+      ...this.state,
+      beerSel: beer
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -30,8 +45,9 @@ class App extends Component {
           <Route
             exact
             path="/beers/:beerId"
-            render={() => {
-              return <SingleBeer></SingleBeer>;
+            render={(props) => {
+              let beerID = props.match.params.beerId;
+              return <SingleBeer beer={props.match.params.beerId}></SingleBeer>
             }}
           />
           <Route
