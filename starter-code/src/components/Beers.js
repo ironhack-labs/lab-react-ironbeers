@@ -30,14 +30,16 @@ class Beers extends Component {
           <br></br>
           <p>blablabla</p>
           <br></br>
+          <Link to="/form">Add Beer</Link>
+          <br></br>
           <Link to="/">Home</Link> <br></br>
           <Link to="/random-beer">Random Beer</Link> <br></br>
           <Link to="/new-beer">New Beer</Link> <br></br>
           <h1> List of Beers</h1>
           <Row>
-              {this.state.beer.map((beer, idx) => (
-                <BeerCard key={idx} {...beer} />
-              ))}
+            {this.state.beer.map((beer, idx) => (
+              <BeerCard key={idx} {...beer} />
+            ))}
           </Row>
         </Container>
       </>
