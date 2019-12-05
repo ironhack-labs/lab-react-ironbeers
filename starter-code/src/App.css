@@ -1,13 +1,13 @@
 body {
   background-image: radial-gradient(#fff,#ccc);
+  color: #666;
 }
 
 .App {
   text-align: center;
   width: 50vw;
   margin: 0 auto;
-  border: 1px solid #666;
-  padding-top: 20px;
+  border: 2px solid #bbb;
   background-color: #eee;
 }
 
@@ -18,4 +18,13 @@ a {
 
 p {
   padding: 20px;
+}
+
+header {
+  background-color: #0f88c9;
+}
+
+header img {
+  height: 80px;
+  padding: 10px;
 }
