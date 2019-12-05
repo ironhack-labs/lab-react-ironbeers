@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  max-width:600px;
+  margin:0 auto;
 }
 
 .App-logo {
@@ -25,4 +27,50 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.nav{
+  height:50px;
+  width:100%;
+  max-width:600px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: rgb(3, 106, 150);
+  position:fixed;
+  top:0;
+  left:auto;
+  right:auto;
+
+}
+
+.page{
+  margin-top:70px;
+}
+
+.beer-preview{
+  display:flex;
+  justify-content: flex-start;
+  margin: 40px 0;
+  border-bottom: 2px solid rgb(165, 165, 165);
+}
+
+.beer-preview:first-child{
+  border-bottom: 2px solid rgb(165, 165, 165);
+  border-top: 2px solid rgb(165, 165, 165);
+}
+
+.beer-preview img{
+  height:150px;
+}
+
+.beer-preview div{
+  margin:20px 0;
+}
+.beer-preview div:first-of-type{
+  width:200px;
+}
+
+.beer-preview div:last-of-type{
+  text-align: left;
 }
