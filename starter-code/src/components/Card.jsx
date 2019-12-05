@@ -6,6 +6,7 @@ export default class Card extends Component {
         return (
             <div>
                 <NavBar></NavBar>
+                <h1>{this.props.beerID}</h1>
             </div>
         )
     }

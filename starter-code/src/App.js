@@ -28,13 +28,14 @@ class App extends Component {
             <Route
               exact
               path="/:beerID"
-              render={() => {
-                return <Card></Card>;
+              render={(props) => {
+                var chosenBeer = props.match.params.beerID;
+                return <Card beerID={chosenBeer}></Card>;
               }}
             />
             <Route
               path="/random-beer"
-              render={() => {
+              render={(props) => {
                 return <Card></Card>;
               }}
             />

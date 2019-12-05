@@ -30,3 +30,20 @@
 .home{
   max-height: 40px;
 }
+.card{
+  max-width: 540px;
+
+}
+
+.card-img{
+  max-width:20%;
+  height:auto;
+}
+
+.card-body{
+  text-align: justify;
+}
+
+.list{
+  margin: 0 auto;
+}
