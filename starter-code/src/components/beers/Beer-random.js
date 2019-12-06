@@ -38,7 +38,7 @@ class BeerRandom extends Component {
                             <br/>
                             <p><strong>Descripción:</strong> {this.state.beer.description}</p>
                             <hr></hr>
-                            <Link to="/beers" className="btn btn-dark">Volver</Link>
+                            <Link to="/beers" className="btn btn-danger">Volver</Link>
                         </Col>
                         <Col md={{ span: 4, offset: 2 }}>
                             <img src={this.state.beer.image_url} alt={this.state.beer.name}></img>

@@ -13,7 +13,7 @@ const BeerCard = ({ _id, name, tagline, contributed_by, image_url }) => {
             <h3>{name}</h3>
             <p>{tagline}</p>
             <br></br>
-            <Link className="btn btn-sm btn-dark" to={`/beers/${_id}`}>Ver detalles</Link>
+            <Link className="btn btn-sm btn-danger" to={`/beers/${_id}`}>Ver detalles</Link>
         </Col >
     )
 }

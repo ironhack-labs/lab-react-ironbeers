@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import BeerCard from '../beers/BeerCard';
 import BeerForm from '../beers/BeerForm'
 
+import './beers.css';
 
 
 
@@ -39,7 +40,7 @@ class BeerList extends React.Component {
             <section>
 
                 <Container>
-                <Button variant="dark" onClick={this.handleShow}>Nueva cervecita</Button>
+                <Button className="navBar" variant="danger" onClick={this.handleShow}>Nueva cervecita</Button>
 
                     <Row>
                         {this.state.beers.map(beer => <BeerCard key={beer._id} {...beer} />)}
@@ -48,7 +49,7 @@ class BeerList extends React.Component {
 
                 <Modal show={this.state.showModalWindow} onHide={this.handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Nueva montaña rusa</Modal.Title>
+                        <Modal.Title>Nueva cervecitaaaaaaaaa</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <BeerForm closeModalWindow={this.handleClose} updateBeersList={this.updateBeersList} />

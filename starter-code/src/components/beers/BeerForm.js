@@ -38,6 +38,19 @@ class BeerForm extends Component {
         })
     }
 
+    // handleSubmit = e => {
+    //     e.preventDefault();
+    //     this._service
+    //       .postBeer(this.state)
+    //       .then(x => alert('You have add a new Beer, press "Back" to Go in Beers View'))
+    //       .catch(err => console.log(err));
+    //   };
+    
+    //   handleInputChange = e => {
+    //     let { name, value } = e.target;
+    //     this.setState({ [name]: value });
+    //   };
+
     render() {
         return (
             <Form onSubmit={this.handleSubmit}>
@@ -65,7 +78,7 @@ class BeerForm extends Component {
                     <Form.Label>Imagen URL</Form.Label>
                     <Form.Control type="text" name="image_url" onChange={this.handleInputChange} value={this.state.image_url} />
                 </Form.Group>
-                <Button variant="dark" type="submit">Crear cervecita</Button>
+                <Button variant="danger" type="submit">Crear cervecita</Button>
             </Form>
         )
     }
