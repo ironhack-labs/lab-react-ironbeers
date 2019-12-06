@@ -12,9 +12,9 @@ class RandomBeer extends Component {
   }
 
   componentDidMount = () => {
-    const beerId = this.props.match.params.id;
+    // const beer = this.props.match.params.id;
     this.service
-      .getOneBeer(beerId)
+      .getRandomBeer()
       .then(theBeer => this.setState({ beer: theBeer.data }))
       .catch(err => console.log(err));
   };
