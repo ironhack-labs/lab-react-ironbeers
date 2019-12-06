@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import Navbar from "../../components/Navbar";
+import BeersService from '../../services/BeersService';
+const beersService = new BeersService()
 export default class NewBeer extends Component {
     state = {
         form: {
@@ -16,7 +17,7 @@ export default class NewBeer extends Component {
 
     submitNewBeer = async () => {
         const { form } = this.state
-        await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", form)
+        await beersService.createBeers(form)
         this.props.history.push(`/beers/`)
     }
 
@@ -30,9 +31,6 @@ export default class NewBeer extends Component {
         });
     };
 
-    form = async e => {
-        e.preventDefault();
-    };
 
     render() {
         const { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = this.state.form;
