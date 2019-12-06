@@ -1,19 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Navbar from "./components/navbar";
+import "./App.css";
+import BeerList from "./components/beer-list";
+import BeerDetail from "./components/beer-detail";
+import BeerRandom from "./components/beer-random";
+// import { Container, Row, Button, Modal } from "react-bootstrap";
+import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <>
+        <Navbar />
+        {/* <BeerList /> */}
+        <Switch>
+          <Route exact path="/" component={BeerList} />
+          <Route path="/beers/:id" component={BeerDetail} />
+          <Route path="/beers/random" component={BeerRandom} />
+          {/* <Route path="/form" component={CoasterForm} /> */}
+        </Switch>
+      </>
     );
   }
 }
