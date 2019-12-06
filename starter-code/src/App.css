@@ -1,5 +1,13 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  width: 50vw;
+  height: 100vh;
 }
 
 .App-logo {
@@ -8,10 +16,9 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  border: 1px solid black;
+  width: 50vw;
+  visibility: hidden;
 }
 
 .App-title {
@@ -23,6 +30,29 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  border: 1px solid black;
+  width: 50vw;
+}
+
+img {
+  width: 50vw;
+}
+
+h2 {
+  text-align: left;
+  margin-left: 10px;
+}
+
+p {
+  text-align: left;
+  margin-left: 10px;
 }
