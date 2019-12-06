@@ -22,16 +22,16 @@ class App extends Component {
       <NavBar />
 
       <Switch>
-      <Route exact path="/" component={Home}/>
-      <Route exact path="/beers" component={BeerList}/>
-      <Route exact path="/beers/:id" component={BeerDetails} />
-      <Route exact path="/beers/random" component={BeerRandom} />
-      <Route exact path="/beers/new" component={BeerForm} />
 
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/beers" component={BeerList}/>
+        <Route path="/beers/new" component={BeerForm} />
+        <Route path="/beers/:id" component={BeerDetails} />
+        <Route path="/beers/random" component={BeerRandom} />
 
-    </Switch>
-    </div>
-    </>
+      </Switch>
+      </div>
+      </>
 
     );
   }
