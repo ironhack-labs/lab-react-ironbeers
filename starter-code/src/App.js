@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import { Navbar, Form, Nav, Button, FormControl } from 'react-bootstrap'
+import { Navbar, Nav, Button, FormControl } from 'react-bootstrap'
 import BeerList from "./components/Beers"
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import BeerRandom from './components/Beer-random'
 
 // import CoasterList from "./components/coasters/Coaster-list"
@@ -17,10 +17,10 @@ class App extends Component {
 
   <Navbar bg="primary" variant="dark">
     <Navbar.Brand href="/">IronBeers</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="/">Beers</Nav.Link>
-      <Nav.Link href="/random">Random Beer</Nav.Link>
-      <Nav.Link href="#pricing">New Beer</Nav.Link>
+    <Nav className="mr-auto color">
+      <Link className="color" to="/">Beers</Link>
+      <Link className="color" to="/random">Random Beer</Link>
+      <Link className="color" to="#pricing">New Beer</Link>
     </Nav>
   </Navbar>
 
