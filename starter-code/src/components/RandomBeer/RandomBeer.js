@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import { IndividualBeer } from "../../styles/componentStyles"; 
+
 
 export default class RandomBeer extends Component {
 	state = {
@@ -14,9 +16,13 @@ export default class RandomBeer extends Component {
 	render(){
 		const {beer} = this.state
 		return(
-			<>
-				<h2>{beer.name}</h2>
-			</>
+			<IndividualBeer>
+			<img src={beer.image_url} alt={beer.name}/>
+			<h2>{beer.name} <span>{beer.attenuation_level}</span></h2>
+			<h4>{beer.tagline} <span>{beer.first_brewed}</span></h4>
+			<p>{beer.description}</p>
+			<small>{beer.contributed_by}</small>
+		</IndividualBeer>
 		)
 	}
 }

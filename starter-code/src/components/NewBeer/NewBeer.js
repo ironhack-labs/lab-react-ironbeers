@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import { FormContainer } from "../../styles/componentStyles"; 
+
 
 
 export default class NewBeer extends Component {
@@ -14,19 +16,12 @@ export default class NewBeer extends Component {
 			contributed_by: ""
 		}
 	}
-
-
-		// const 
-		// await axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`,
-		// this.setState({ data }))
 	
 	submitNewBeer = async() =>{
 		const {form} = this.state
 	  await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", form)
 		this.props.history.push(`/beers/`)
 	}
-
-
 
 	inputChange = ({ target: { value, name } }) => {
     this.setState({
@@ -47,7 +42,7 @@ export default class NewBeer extends Component {
 	render(){
     const { name, tagline, description,first_brewed,brewers_tips, attenuation_level, contributed_by  } = this.state.form;
 		return(
-			<>
+			<FormContainer>
 			<label>Name </label>
 			<input  onChange={this.inputChange} name="name" placeholder="name" type="text" value={name}/>
 			<br/>
@@ -70,7 +65,7 @@ export default class NewBeer extends Component {
 			<input  onChange={this.inputChange} name="contributed_by" placeholder="Contributed by" type="text" value={contributed_by} />
 			<br/>
 			<button onClick={this.submitNewBeer} type="submit">Submit</button>
-			</>
+			</FormContainer>
 		)
 	}
 }

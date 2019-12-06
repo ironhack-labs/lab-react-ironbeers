@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { BeersContainer, TextBeerContainer } from "../../styles/componentStyles"; 
+
 
 export default class AllBeers extends Component {
 	state = {
@@ -19,12 +21,14 @@ export default class AllBeers extends Component {
 			{data.map((beer)=>{
 					return (
 						<Link  key={beer._id} to={`/beers/${beer._id}`}>
-							<div>
-								<h2>{beer.name}</h2>
-								<h4>{beer.tagline}</h4>
+							<BeersContainer>
 								<img src={beer.image_url} alt={beer.name}/>
-								<p>Created by: {beer.contributed_by}</p>
-							</div>
+								<TextBeerContainer>
+									<h2>{beer.name}</h2>
+									<h4>{beer.tagline}</h4>
+									<p>Created by: {beer.contributed_by}</p>
+								</TextBeerContainer>
+							</BeersContainer>
 						</Link>
 					)
 			})}

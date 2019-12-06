@@ -9,19 +9,21 @@ export default class Home extends Component {
 			<CardContainer>
 				<Link to="/beers">
 					<StyledCard>
-						all beers
+					<h2>all beers</h2>
+					
+						{/* <img src="../../../../public/images/beers.png" alt="beers"/> */}
 					</StyledCard>
 				</Link>
         
 				<Link to="/new-beer">
 					<StyledCard>
-						New Beer
+					<h2>New Beer</h2>	
 					</StyledCard>
 				</Link>
 					
 				<Link to="/random-beer">
 					<StyledCard>
-						Random Beer
+					<h2>Random Beer</h2>
 					</StyledCard>
 				</Link>
 
