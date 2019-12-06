@@ -26,3 +26,39 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.beer-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.beer-card {
+  padding: 0 50px;
+  margin: 20px 0
+}
+
+.beer-card h3 {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.beer-card p {
+  font-size: .8em;
+  margin-bottom: 0;
+}
+
+
+.beer-card small {
+  font-size: .7em;
+}
+
+.beer-details img {
+ width: 100% 
+}
+.random {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+
+}
