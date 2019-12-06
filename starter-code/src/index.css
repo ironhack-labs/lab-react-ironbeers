@@ -3,3 +3,37 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+h1, h2, h3, h4 {
+  font-weight: 100;
+  margin: 20px 0;
+}
+
+section {
+  margin: 50px 0
+}
+
+.beer-card img {
+  width: 25%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.beer-card {
+  padding: 0 50px;
+  margin: 20px 0
+}
+
+.beer-card h3 {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.beer-card p {
+  font-size: .8em;
+  margin-bottom: 0;
+}
+
+.beer-card small {
+  font-size: .7em;
+}
