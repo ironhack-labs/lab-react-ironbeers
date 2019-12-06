@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Router from './Router'
 import registerServiceWorker from './registerServiceWorker';
+import GlobalStyles from "./styles/GlobalStyles";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+ReactDOM.render(
+	<>
+		<GlobalStyles />
+		<Router />
+	</>,
+document.getElementById('root'));
+
 registerServiceWorker();
