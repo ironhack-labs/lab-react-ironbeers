@@ -1,0 +1,23 @@
+.single-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beer-title {
+    color: black;
+}
+
+.beer-description {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.single-beer-container {
+    margin-top: 3rem;
+    width: 40rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

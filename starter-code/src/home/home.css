@@ -1,0 +1,40 @@
+.anchor-container {
+  background: rgb(112, 9, 9);
+  padding: 1rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+}
+
+.home-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  padding: 2rem;
+}
+
+.home-anchor {
+  color: white;
+  font-weight: bold;
+}
+
+.title-container {
+  background-image: url("https://embassybar.com.au/wp-content/uploads/2017/05/cropped-Web-Header.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main-title {
+    color: white;
+    font-size: 6rem;
+    width: 40rem;
+    margin-top: 7rem;
+    margin-left: 5rem;
+}

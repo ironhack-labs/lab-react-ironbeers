@@ -1,0 +1,11 @@
+.header {
+    background: rgb(112, 9, 9);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-image {
+    width: 3rem;
+}
