@@ -7,8 +7,8 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
+.top {
+  background-color: teal;
   height: 150px;
   padding: 20px;
   color: white;
@@ -25,4 +25,23 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.go-home{
+  height: 100px;
+  width: 100px;
+  color: white;
+}
+
+.all-beers{
+  color:black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.material-icons{
+  padding-top: 20px;
+  font-size: 102px;
 }
