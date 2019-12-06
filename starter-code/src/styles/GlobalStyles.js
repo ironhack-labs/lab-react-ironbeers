@@ -1,7 +1,8 @@
-  
-import { createGlobalStyle } from "styled-components";
+  import {
+    createGlobalStyle
+  } from "styled-components";
 
-const GlobalStyles = createGlobalStyle`
+  const GlobalStyles = createGlobalStyle `
 html, body{
   margin: 0;
   padding: 0;
@@ -15,6 +16,9 @@ body{
   position: relative;
   margin-top: 80px;
 }
+a{
+  text-decoration:none;
+}
 `;
 
-export default GlobalStyles;
+  export default GlobalStyles;
