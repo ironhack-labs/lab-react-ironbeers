@@ -7,16 +7,19 @@ import beerDetails from "./components/BeerDetails";
 import NewBeer from './components/NewBeer';
 import RandomBeer from "./components/RandomBeer";
 
+import { Link } from "react-router-dom";
+
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="/">IronBeers</Navbar.Brand>
+          <Navbar.Brand to="/">IronBeers</Navbar.Brand>
           <Nav className="ml-auto">
-            <Nav.Link href="/">All Bears</Nav.Link>
-            <Nav.Link href="/random">Random Beers</Nav.Link>
-            <Nav.Link href="/new">New Beer</Nav.Link>
+            <Link to="/">All Bears</Link>
+            <Link to="/random">Random Beers</Link>
+            <Link to="/new">New Beer</Link>
           </Nav>
         </Navbar>
         <Switch className="cuerpo">
