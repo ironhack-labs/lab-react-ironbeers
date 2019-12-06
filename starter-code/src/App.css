@@ -1,28 +1,21 @@
-.App {
-  text-align: center;
+.row img{
+  height: 100%;
+  width: 80%;
+  object-fit: cover;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.row h2,h3{
+  font-size: 0.7em;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.justone img{
+  height: 180px;
+  width: 100px;
+  object-fit: cover;
 }
-
-.App-title {
-  font-size: 1.5em;
+.home img{
+  height: 180px;
+  width:100%;
+  object-fit: cover;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.home h2{
+  font-size: 1.3em;
 }
