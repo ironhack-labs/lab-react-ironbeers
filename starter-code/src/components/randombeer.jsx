@@ -29,7 +29,9 @@ class RandomBeer extends Component {
           <img src="/images/new-beer.png" alt="cerveza" />
         </div>
         {!beerToShow && (
-          <h1 className="loading-text">SATAN SATAN SATAN SATAN SATAN</h1>
+          <center>
+            <h1 className="loading-text">SATAN SATAN SATAN SATAN SATAN</h1>
+          </center>
         )}
         {beerToShow && (
           <div className="single-beer-card">

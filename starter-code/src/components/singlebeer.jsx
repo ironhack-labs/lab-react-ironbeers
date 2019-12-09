@@ -37,6 +37,7 @@ class SingleBeer extends Component {
           <div className="single-beer-card">
             <img src={beerToShow.image_url} alt="" />
             <h1>{beerToShow.name}</h1>
+            <p>{beerToShow.tagline}</p>
           </div>
         )}
       </div>
