@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 	return (
-		<nav className='navbar navbar-dark bg-primary mb-3'>
-			<div className='container'>
+		<nav className='navbar navbar-dark bg-primary' style={{ width: '100%' }}>
+			<div className='container d-flex justify-content-center'>
 				<Link className='navbar-brand' to={'/'}>
-					Home
+					<img src='/images/home-icon-silhouette.png' alt='Home' />
 				</Link>
 			</div>
 		</nav>
