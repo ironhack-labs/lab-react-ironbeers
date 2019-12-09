@@ -23,6 +23,26 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img {
+  width: 400px;
+}
+
+.allbeers img {
+  width: 60px;
+}
+
+a {
+  color: inherit;
+}
+
+.single-beer img {
+  width: 60px;
 }

@@ -1,19 +1,46 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import { BrowserRouter, Switch, Route, withRouter } from "react-router-dom";
+import axios from "axios";
+
+//import Navbar from "./components/Navbar";
+import Home from "./views/Home";
+import Allbeers from "./views/Allbeers";
+import Newbeer from "./views/Newbeer";
+import Randombeer from "./views/Randombeer";
+import Singlebeer from "./views/Singlebeer";
+//import Axios from "axios";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      beers: []
+    };
+  }
+
+  /*   componentDidMount() {
+    axios.get(
+      "https://ih-beers-api2.herokuapp.com/beers".then(response => {
+        this.setState({ beers: response.data });
+      })
+    );
+  } */
+
   render() {
+    const HomeWithRouter = withRouter(Home);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <BrowserRouter>
+        <main>
+          <Switch>
+            <Route path='/randombeer' component={Randombeer} />
+            <Route path='/new-beer' component={Newbeer} />
+            <Route path='/beers/:id' component={Singlebeer} />
+            <Route path='/beers' component={Allbeers} />
+            <Route path='/' component={HomeWithRouter} />
+          </Switch>
+        </main>
+      </BrowserRouter>
     );
   }
 }
