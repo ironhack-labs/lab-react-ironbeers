@@ -1,0 +1,13 @@
+.all-beers{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-beer{
+    width: 30%;
+}
+
+.card-beer img{
+    height: 200px;
+} 
