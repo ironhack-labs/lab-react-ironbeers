@@ -1,0 +1,22 @@
+.whole {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(241, 224, 224);
+}
+
+.all-beers {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.random-beer {
+  margin-bottom: 50px;
+}
+
+.new-beer {
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: large;
+}
