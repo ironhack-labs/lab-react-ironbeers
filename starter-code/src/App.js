@@ -1,18 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+//import AppRoutes from "./routes";
+//import Navbar from "./components/Navbar";
+import "./App.css";
+
+import HomeView from "./views/HomeView";
+import BeerListView from "./views/BeerListView";
+import RandomBeer from "./components/RandomBeer";
+import NewBeer from "./components/NewBeer";
+import SingleBeer from "./components/SingleBeer";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={HomeView} />
+            <Route path="/beers" component={BeerListView} />
+            <Route path="/random-beer" component={RandomBeer} />
+            <Route path="/new-beer" component={NewBeer} />
+            <Route path="/beer/:id" component={SingleBeer} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
