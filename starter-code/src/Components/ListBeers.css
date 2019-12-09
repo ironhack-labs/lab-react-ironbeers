@@ -1,0 +1,23 @@
+body {
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 3em;
+}
+
+.listBeersContainer {
+  display: flex;
+  justify-content: center;
+}
+
+li { 
+  text-decoration: none;
+
+}
+
+ul { 
+  list-style: none;
+}
+
+/* .smallContainer { 
+  border: 5px, solid, pink;
+} */
