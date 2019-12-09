@@ -1,28 +1,41 @@
-.App {
+body{
+top: 0px;
+padding: 0px;
+margin: 0px;
+display: flex;
+align-content: center;
+flex-direction: column;
+width: 100vw;
+
+}
+
+.App * {
+  width: 100% ;
   text-align: center;
+  display: flex;
+  align-content: center;
+
+
+  
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.ImgBox{
+  display: flex;
+  align-content: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.beersBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20vw;
+  text-decoration: none;
+
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.barra{
+  background-color: #62ccfc;
+  display: flex;
+  justify-content: center;
 }
