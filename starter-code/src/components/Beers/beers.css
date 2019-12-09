@@ -1,0 +1,22 @@
+.beer-box {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+  justify-content: center;
+  width: 40%;
+  margin: 40px auto;
+}
+
+.beer-img {
+  border: 1px solid red;
+  margin-right: 10px;
+}
+
+.beer-info {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
