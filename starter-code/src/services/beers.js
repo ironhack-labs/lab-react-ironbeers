@@ -11,3 +11,11 @@ export const fetchAll = async () => {
   }
 };
 
+export const fetchOne = async id => {
+  try {
+    const res = await axios.get(baseUrl + "/beers/" + id);
+    return res.data;
+  } catch (err) {
+    throw err;
+  }
+};

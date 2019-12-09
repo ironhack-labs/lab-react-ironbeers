@@ -11,7 +11,6 @@ const AllBeers = () => {
     (async function () {
       const data = await fetchAllBeers();
       setBeers(data);
-      console.log(data)
     })();
   }, []);
 

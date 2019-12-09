@@ -4,6 +4,7 @@ import Home from "./views/Home";
 import NewBeer from "./views/NewBeer";
 import RandomBeer from "./views/RandomBeer";
 import AllBeers from "./views/AllBeers";
+import SingleBeer from "./views/SingleBeer";
 import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
         <Route path="/random-beer">
           <RandomBeer />
         </Route>
+        <Route path="/beers/:id" component={SingleBeer}/>
         <Route path="/beers">
           <AllBeers />
         </Route>
