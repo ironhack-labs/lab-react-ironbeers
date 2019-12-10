@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class RandomBeer extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             RandomBeers: []
         }
@@ -19,15 +19,16 @@ class RandomBeer extends Component {
     }
 
     render() {
+        const random = this.state.RandomBeers
          return (
             <div>
-            <img className = 'beer-image' src={this.response.image_url} alt='randombeer'/> 
-            <h4>{this.response.name}</h4>
-            <p>{this.response.tagline}</p>
-            <p>{this.response.first_brewed}</p>
-            <p>{this.response.attenuation_level}</p>
-            <p>{this.response.description}</p>
-            <p>Contributed by:{this.response.contributed_by}</p>
+            <img className = 'beer-image' src={random.image_url} alt='randombeer'/> 
+            <h4>{random.name}</h4>
+            <p>{random.tagline}</p>
+            <p>{random.first_brewed}</p>
+            <p>{random.attenuation_level}</p>
+            <p>{random.description}</p>
+            <p>Contributed by:{random.contributed_by}</p>
             </div>
          )}
             
