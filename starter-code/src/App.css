@@ -1,28 +1,44 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', 'Merriweather', serif;
+}
+
+header {
+  height: 4em;
+  width: 100%;
+  background-color: skyblue;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.home section img {
+  width: 100%;
+  height: auto;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h3 {
+  font-family: 'Merriweather';
 }
 
-.App-title {
-  font-size: 1.5em;
+.section-content {
+  max-width: 92%;
+  margin: 0 auto;
 }
 
-.App-intro {
-  font-size: large;
+.beer-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 2em auto;
+  /* justify-content: center; */
+  padding: 1em;
+  height: 10rem;
+  border-bottom: 0.1em solid gray;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.beer-list img {
+  height: 6rem;
 }
