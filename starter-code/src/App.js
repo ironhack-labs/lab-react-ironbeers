@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Beer from './components/Beer';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
+import SingleBeer from './components/SingleBeer';
 //import axios from 'axios';
 
 
@@ -17,6 +18,7 @@ class App extends Component {
         <a href='/'><ion-icon name="home"></ion-icon></a>
         </header>
         <Switch>
+        <Route exact path='/Beer/:id' component={SingleBeer} />
           <Route exact path='/' component={Home} />
           <Route exact path='/Beer' component={Beer} />
           <Route exact path='/RandomBeer' component={RandomBeer} />

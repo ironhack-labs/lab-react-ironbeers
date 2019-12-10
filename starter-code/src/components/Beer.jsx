@@ -27,7 +27,7 @@ class Beer extends Component {
                     return (
                         <div>
                             <img className = 'beer-image' src={beer.image_url}/> 
-                            <Link to='/:_id'><p><h4>{beer.name}</h4></p></Link>
+                            <Link to={`/Beer/${beer._id}`}><p><h4>{beer.name}</h4></p></Link>
                             <span>{beer.tagline}</span>
                             <p>Contributed by:{beer.contributed_by}</p>
                         </div>
