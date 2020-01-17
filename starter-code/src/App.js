@@ -6,18 +6,7 @@ import {Link, Route} from "react-router-dom";
 import 'bulma/css/bulma.css';
 
 class App extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      // beers=[]
-    }
-  }
-  componentDidMount(){
-    axios.get("https://ih-beers-api2.herokuapp.com/beers")
-    .then(response =>{
-      this.setState({beers:response.data})
-    })
-  }
+  
   render() {
     return (
       <div className="App">
@@ -31,4 +20,4 @@ class App extends Component {
 
 export default App;
 
-//npm install axios react-router-dom query string bulma font-awesome bulma-helpers --s
+//npm install axios react-router-dom query string bulma font-awesome bulma-helpers node-sass--s

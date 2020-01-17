@@ -9,6 +9,7 @@
     "bulma": "^0.8.0",
     "bulma-helpers": "^0.3.8",
     "font-awesome": "^4.7.0",
+    "node-sass": "^4.13.1",
     "query": "^0.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
