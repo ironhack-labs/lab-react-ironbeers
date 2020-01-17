@@ -3,9 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "axios": "^0.19.1",
+    "bootstrap": "^4.4.1",
+    "bulma": "^0.8.0",
+    "bulma-helpers": "^0.3.8",
+    "font-awesome": "^4.7.0",
+    "query": "^0.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.2"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.3.0",
+    "string": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
