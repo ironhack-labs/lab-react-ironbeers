@@ -58,9 +58,11 @@ class App extends Component {
   _getRandomBeer(){
     return this.state.beers[Math.floor(this.state.beers.length*Math.random())];
   }
-  _getBeers(){
+  _getBeers(search){
     // source: https://stackoverflow.com/questions/17781472/how-to-get-a-subset-of-a-javascript-objects-properties
-    return this.state.beers.map((beer)=>this._getBeerInfo(beer));
+    return this.state.beers
+            .filter((beer)=>{return(!search||beer.name.toLowerCase().includes(search));})
+            .map((beer)=>this._getBeerInfo(beer));
   }
 
   _addBeer(beer){

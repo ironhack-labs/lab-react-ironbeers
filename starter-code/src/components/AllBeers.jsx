@@ -7,15 +7,23 @@ export class AllBeers extends Component {
     constructor(props){
         super(props);
         this.state={
-            beers:this.props.getBeers()
+            beers:this.props.getBeers(null)
         };
+        this._searchForBeers=this._searchForBeers.bind(this);
+    }
+
+    _searchForBeers(e){
+        this.setState({
+            beers:this.props.getBeers(e.target.value.toLowerCase())
+        });
     }
 
     /* let's assume the props contain all the beer information */
     render() {
         return(<div>
             <div className='App-link-home'><Link to='/'>Home</Link></div>
-            <div>
+            <div class='App-form'>
+                <input type='text' placeholder='search' onChange={this._searchForBeers}/>
                 <table>
                     <thead>
                         <tr>
