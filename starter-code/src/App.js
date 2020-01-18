@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Homepage from "./components/Homepage"
 import BeersList from "./components/pages/BeersList"
+import SingleBeer from "./components/pages/SingleBeer"
 import {Route} from "react-router-dom";
 import 'bulma/css/bulma.css';
 
@@ -12,6 +13,8 @@ class App extends Component {
       <div className="App">
           <Route exact path="/" component={Homepage}></Route>
           <Route exact path="/beers" component={BeersList}></Route>
+          <Route exact path="/beers/:beerId" component={SingleBeer}></Route>
+
       </div>
     );
   }

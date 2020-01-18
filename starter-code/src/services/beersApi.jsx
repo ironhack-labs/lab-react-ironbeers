@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const load = data =>
+export const loadBeersList = data =>
   new Promise((resolve, reject) => {
     axios
       .get(`https://ih-beers-api2.herokuapp.com/beers`)

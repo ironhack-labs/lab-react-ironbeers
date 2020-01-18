@@ -1,36 +1,49 @@
 import React, { Component } from 'react';
-import Beer from "./Beer"
-import axios from "axios";
+import { loadBeersList } from './../../services/beersApi';
 import Navbar from "../Navbar"
+import "./Styles.css"
+import { Link } from 'react-router-dom';
 
 
 export class BeersList extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      beers:[]
-    }
-  }
-  componentDidMount(){
-    axios.get("https://ih-beers-api2.herokuapp.com/beers")
-    .then(response =>{
-      this.setState({beers:response.data})
-    })
-  }
+  constructor() {
+		super();
+		this.state = {
+			beers: []
+		};
+	}
+
+	componentDidMount() {
+		loadBeersList()
+			.then(beers => {
+				this.setState({
+					beers
+				});
+			})
+			.catch(error => {
+				console.log(error);
+				console.log('Error in service.');
+			});
+	}
+
     render() {
  
         return (
             <div>
             <Navbar/>
                 {this.state.beers.map(beer => (
-            <Beer
-                key={beer._id}
-                id={beer._id}
-                image={beer.image_url}
-                name = {beer.name}
-                tagline={beer.tagline}
-                contributed_by={beer.contributed_by}
-            />
+                  <Link to={`/beers/${beer._id}`}>
+                     <div className="box columns is-vcentered is-centered has-margin-top-10 has-margin-bottom-10 has-margin-left-100 has-margin-right-100">
+                        <div className="column is-2">
+                          <img src={beer.image_url} alt="" className="image-height"/>  
+                        </div>
+                        <div className="column is-5 has-text-left">
+                          <h1 className="is-size-3 has-text-black">{beer.name}</h1>
+                          <h2 className="is-size-4 has-text-grey-light">{beer.tagline}</h2>
+                          <p className="is-size-7 has-text-black"><b>Created by:</b> {beer.contributed_by}</p> 
+                        </div>
+                     </div>
+                  </Link>
 ))
 }
             </div>
