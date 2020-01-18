@@ -5,8 +5,10 @@ import "./Navbar.css"
 export default function Navbar () {
     return (
         <Link to={"/"}>
-        <div className = "navbar is-info has-padding-top-10 has-padding-bottom-10">
-               <i className="fas fa-home icon is-large has-image-centered"></i>
+        <div className="columns is-vcentered navbar is-info">
+        <div className = "column">
+               <i className="fas fa-home icon is-large has-margin-top-10"></i>
+        </div>
         </div>
         </Link>
     );

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Beers from "./components/Beers"
-import axios from "axios";
-import {Link, Route} from "react-router-dom";
+import Homepage from "./components/Homepage"
+import BeersList from "./components/pages/BeersList"
+import {Route} from "react-router-dom";
 import 'bulma/css/bulma.css';
 
 class App extends Component {
@@ -10,9 +10,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      
-          <Route exact path="/" component={Beers}></Route>
- 
+          <Route exact path="/" component={Homepage}></Route>
+          <Route exact path="/beers" component={BeersList}></Route>
       </div>
     );
   }
