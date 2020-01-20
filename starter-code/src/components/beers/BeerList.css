@@ -1,0 +1,11 @@
+.beer {
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.beer>img {
+    height: 100px;
+}
