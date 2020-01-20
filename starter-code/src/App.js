@@ -3,7 +3,7 @@ import './App.css';
 import Homepage from "./components/Homepage"
 import BeersList from "./components/pages/BeersList"
 import SingleBeer from "./components/pages/SingleBeer"
-import RandomBeer from "./components/pages/RandomBeer"
+import NewBeer from "./components/pages/NewBeer"
 import {Route} from "react-router-dom";
 import 'bulma/css/bulma.css';
 
@@ -14,8 +14,8 @@ class App extends Component {
       <div className="App">
           <Route exact path="/" component={Homepage}></Route>
           <Route exact path="/beers" component={BeersList}></Route>
-          <Route exact path="/beers/:beerId" component={SingleBeer}></Route>
-          <Route exact path="/beers/random-beer" component={RandomBeer}></Route>
+          <Route exact path="/beers/new" component={NewBeer}></Route>
+          <Route exact path="/beers/detail/:beerId" component={SingleBeer}></Route>
       </div>
     );
   }
@@ -23,4 +23,4 @@ class App extends Component {
 
 export default App;
 
-//npm install axios react-router-dom query string bulma font-awesome bulma-helpers node-sass--s
+//npm install axios react-router-dom query string bulma font-awesome bulma-helpers node-sass qs dotenv --s

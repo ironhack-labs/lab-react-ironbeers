@@ -24,6 +24,7 @@ export class SingleBeer extends Component {
                 })
 			})
 		}
+		
 	render() {
 		const aBeer = this.state.beer
 		return (

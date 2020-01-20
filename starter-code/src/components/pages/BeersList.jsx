@@ -32,7 +32,7 @@ export class BeersList extends Component {
             <div>
             <Navbar/>
                 {this.state.beers.map(beer => (
-                  <Link to={`/beers/${beer._id}`}>
+                  <Link to={`/beers/detail/${beer._id}`}>
                      <div className="box columns is-vcentered is-centered has-margin-top-10 has-margin-bottom-10 has-margin-left-100 has-margin-right-100">
                         <div className="column is-2">
                           <img src={beer.image_url} alt="" className="image-height"/>  

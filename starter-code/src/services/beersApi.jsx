@@ -3,7 +3,7 @@ import axios from 'axios';
 export const loadBeersList = data =>
   new Promise((resolve, reject) => {
     axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers`)
+      .get(`${process.env.REACT_APP_API}/beers`)
       .then(response => {
         resolve(response.data);
       })
@@ -15,7 +15,7 @@ export const loadBeersList = data =>
   export const loadSingleBeer = id =>
   new Promise((resolve, reject) => {
     axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers/` + id)
+      .get(`${process.env.REACT_APP_API}/beers/` + id)
       .then(response => {
         console.log(response.data);
         resolve(response.data);
@@ -30,7 +30,7 @@ export const loadBeersList = data =>
   export const loadRandomBeer = id =>
   new Promise((resolve, reject) => {
     axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+      .get(`${process.env.REACT_APP_API}/beers/random`)
       .then(response => {
         console.log(response.data);
         resolve(response.data);
