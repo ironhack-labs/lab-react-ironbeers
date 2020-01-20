@@ -52,8 +52,8 @@ this.inputOnChangeHandler = this.inputOnChangeHandler.bind(this);
         return (
         <div className="columns">
          <div className="column is-half is-offset-3">
-                <div className="container has-padding-left-30 has padding-right-30">
-                    <h2 className="is-size-2 has-padding-25">Add a new beer</h2>
+         <h2 className="is-size-2 has-padding-25 has-text-centered">Add a new beer</h2>
+                <div className="container has-padding-left-30 has padding-right-30 has-text-left">
                     <label>Name:</label>
                     <div className="field">
                     <div className="control">

@@ -27,7 +27,7 @@ export class SingleBeer extends Component {
 		const aBeer = this.state.beer
 		return (
 		<div className="columns">
-			<div className="column is-one-third is-offset-4 box is-vcentered is-centered has-margin-top-20 has-margin-bottom-10 ">
+			<div className="column is-one-third is-offset-4 box is-vcentered is-centered has-margin-top-20 has-margin-bottom-10">
 			<img src={aBeer.image_url} alt="" className="image-height-single-beer has-margin-bottom-40"/>
 
 			<div className="columns">
