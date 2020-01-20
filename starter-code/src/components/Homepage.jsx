@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from "./Navbar"
 import { Link } from 'react-router-dom';
 import 'bulma-helpers/css/bulma-helpers.min.css'
 
@@ -7,7 +6,6 @@ export class Homepage extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
                 <div className="column is-half is-offset-one-quarter is-paddingless">
                 <Link exact to='/beers'>
                     <div className="box has-margin-top-40 has-margin-bottom-40 has-text-left is-paddingless">

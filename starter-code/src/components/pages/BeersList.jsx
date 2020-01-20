@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { loadBeersList } from './../../services/beersApi';
-import Navbar from "../Navbar"
 import "./Styles.css"
 import { Link } from 'react-router-dom';
 
@@ -30,7 +29,6 @@ export class BeersList extends Component {
  
         return (
             <div>
-            <Navbar/>
                 {this.state.beers.map(beer => (
                   <Link to={`/beers/detail/${beer._id}`}>
                      <div className="box columns is-vcentered is-centered has-margin-top-10 has-margin-bottom-10 has-margin-left-100 has-margin-right-100">

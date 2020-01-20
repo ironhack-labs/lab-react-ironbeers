@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { loadRandomBeer } from './../../services/beersApi';
 import "./Styles.css"
-import Navbar from "../Navbar"
-
 
 export class SingleBeer extends Component {
 	constructor(props) {
@@ -28,8 +26,6 @@ export class SingleBeer extends Component {
 	render() {
 		const aBeer = this.state.beer
 		return (
-		<div>
-		<Navbar/>
 		<div className="columns">
 			<div className="column is-one-third is-offset-4 box is-vcentered is-centered has-margin-top-20 has-margin-bottom-10 ">
 			<img src={aBeer.image_url} alt="" className="image-height-single-beer has-margin-bottom-40"/>
@@ -49,7 +45,6 @@ export class SingleBeer extends Component {
 			<p className="has-text-grey has-text-weight-bold is-size-7">{aBeer.contributed_by}</p>
 			</div>
         </div>
-		</div>
 		</div>
 		);
 	}

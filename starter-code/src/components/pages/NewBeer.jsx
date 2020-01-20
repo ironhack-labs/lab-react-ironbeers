@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from '../Navbar';
 import axios from 'axios';
 import qs from "qs";
 
@@ -24,7 +23,7 @@ this.inputOnChangeHandler = this.inputOnChangeHandler.bind(this);
     console.log(this.state.beer);
     axios({
       method: "POST",
-      url: "https://ih-beers-api.herokuapp.com/beers/new",
+      url: `${process.env.REACT_APP_API}/beers/new`,
       data: qs.stringify(this.state.beer),
       headers: {
         "content-type": "application/x-www-form-urlencoded"
@@ -51,10 +50,10 @@ this.inputOnChangeHandler = this.inputOnChangeHandler.bind(this);
     render() {
 
         return (
-            <div>
-                <Navbar/>
+        <div className="columns">
+         <div className="column is-half is-offset-3">
                 <div className="container has-padding-left-30 has padding-right-30">
-                    <h2>Add a new beer</h2>
+                    <h2 className="is-size-2 has-padding-25">Add a new beer</h2>
                     <label>Name:</label>
                     <div className="field">
                     <div className="control">
@@ -143,7 +142,8 @@ this.inputOnChangeHandler = this.inputOnChangeHandler.bind(this);
                     <button className="button is-link" onClick={this.handleAddBeerSubmit}>Submit</button>
                     </div>
                 </div>
-            </div>
+                </div>
+                </div>
         );
     }
 }

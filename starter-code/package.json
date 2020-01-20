@@ -10,6 +10,7 @@
     "bulma-helpers": "^0.3.8",
     "dotenv": "^8.2.0",
     "font-awesome": "^4.7.0",
+    "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "qs": "^6.9.1",
     "query": "^0.2.0",
