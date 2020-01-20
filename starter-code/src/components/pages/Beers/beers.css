@@ -1,0 +1,10 @@
+.beers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.loading {
+  text-align: center;
+  color: grey;
+}

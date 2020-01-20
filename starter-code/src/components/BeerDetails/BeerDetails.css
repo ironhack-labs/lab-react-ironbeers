@@ -1,0 +1,17 @@
+.beerdetails {
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 1000px;
+  padding: 5%;
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 8px lightgrey;
+}
+
+.beerdetails img {
+  max-height: 600px;
+  margin: 10px 0;
+}
+
+.beerdetails h3 {
+  color: grey;
+}

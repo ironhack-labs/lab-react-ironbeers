@@ -1,0 +1,13 @@
+.BeerCard img {
+  height: 200px;
+}
+
+.BeerCard {
+  text-align: center;
+  margin-bottom: 40px;
+  text-decoration: none;
+  width: 400px;
+  border: 1px solid lightgrey;
+  box-shadow: 2px 2px 8px lightgrey;
+  margin: 10px;
+}

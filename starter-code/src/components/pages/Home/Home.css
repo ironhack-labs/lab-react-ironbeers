@@ -1,0 +1,13 @@
+.hometext {
+  text-decoration: none;
+  color: rgb(53, 53, 53);
+  padding-left: 25px;
+}
+
+.homeimages img {
+  width: 100%;
+}
+
+.homesegment {
+  margin-bottom: 5%;
+}
