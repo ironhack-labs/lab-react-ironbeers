@@ -1,0 +1,28 @@
+.Home {
+  border: 1px solid lightgray;
+  width: 48rem;
+}
+
+.Home .beers {
+  display: inline-block;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Home .w {
+  width: 100%;
+  text-align: left;
+}
+
+.Home .data {
+  padding: 0 2rem 1rem;
+}
+
+.Home h1{
+  color: black;
+  margin: 0;
+}
+
+.Home p {
+  color: gray;
+}
