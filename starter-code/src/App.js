@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Home from './components/home';
+import Beers from './components/beers';
+import RandomBeer from './components/randombeer';
+import OneBeer from './components/onebeer';
+import NewBeer from './components/newbeer';
+import { Route, Switch } from 'react-router-dom';
 class App extends Component {
+
+  state = {
+    name: null
+  }
+
+  changeState = (name, value) => {
+    this.setState({
+      [name]: value
+    })
+  };
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Switch>
+          <Route exact path='/' component={ Home }/>
+          <Route path='/beers' component={ Beers }/>
+          <Route path='/randombeer' component={ RandomBeer }/>
+          <Route path='/onebeer/:id' component={ OneBeer }/>
+          <Route path='/newbeer' render={ () => <NewBeer name={this.changeState}/>}/>
+        </Switch>
       </div>
     );
   }
