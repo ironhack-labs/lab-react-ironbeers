@@ -9,7 +9,9 @@ class Beers extends Component {
             <div>
                 <Link to='/'> <Header /></Link>
                 {this.props.beers.map((beer, i) => {
-                    return <Beer key={i} name={beer.name} tagline={beer.tagline} img={beer.image_url} />
+                    return <Link to={`/${beer._id}`} >
+                        <Beer key={i}  name={beer.name} tagline={beer.tagline} img={beer.image_url} />
+                    </Link>
                 })
                 }
             </div>
