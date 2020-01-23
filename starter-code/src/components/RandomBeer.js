@@ -1,13 +1,24 @@
 import React from 'react'
 import Navbar from './Navbar';
+import BeerDetail from './BeerDetail'
+import {random} from '../services/BeerService'
+import ShowBeer from './ShowBeer';
 
-const RandomBeer = () => {
-  return (
-    <div className="RandomBeer">
-      <Navbar/>
-      aa
-    </div>
-  )
+class RandomBeer extends React.Component {
+  state = {
+    beer: {}
+  }
+
+  componentDidMount() {
+    random()
+      .then(beer => this.setState({ beer }))
+  }
+
+  render() {
+    return (
+      <ShowBeer beer={this.state.beer}/>
+    )
+  }
 }
 
 export default RandomBeer

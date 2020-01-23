@@ -5,7 +5,7 @@ import './Home.css'
 const Home = () => {
   return (
     <div className="Home">
-      <div className="AllBeers">
+      <div className="AllBeers fit">
         <Link to="/beers" className="beers">
           <img alt='' src='/images/beers.png' className="w"></img>
           <div className="w data">
@@ -14,7 +14,7 @@ const Home = () => {
           </div>
         </Link>
       </div>
-      <div className="RandomBeer">
+      <div className="RandomBeer fit">
         <Link to="/random-beer" className="beers">
           <img alt='' src='/images/random-beer.png' className="w"></img>
           <div className="w data">
@@ -23,7 +23,7 @@ const Home = () => {
           </div>
         </Link>
       </div>
-      <div className="NewBeer">
+      <div className="NewBeer fit">
         <Link to="/new-beer" className="beers">
           <img alt='' src='/images/new-beer.png' className="w"></img>
           <div className="w data">

@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar';
 import Beer from './Beer'
 import { list } from '../services/BeerService'
+import './BeerList.css'
 
 class BeerList extends React.Component {
   state = {
@@ -16,7 +17,14 @@ class BeerList extends React.Component {
     return(
       <div className="BeerList container">
         <Navbar/>
-        {this.state.beers.map((beer, i) => <Beer beer={beer} key={i}/>)}
+        <div className="container nav-offset">
+          {this.state.beers.map((beer, i) => (
+            <div key={i}>
+              <Beer beer={beer}/>
+              <hr></hr>
+            </div>
+          ))}
+        </div>
       </div>
     )
   }

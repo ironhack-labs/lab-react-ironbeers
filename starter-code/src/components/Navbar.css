@@ -1,0 +1,8 @@
+.navbar-expand-lg {
+  justify-content: center !important;
+}
+
+.navbar i {
+  color: white;
+  font-size: 2rem;
+}

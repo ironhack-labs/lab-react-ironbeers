@@ -1,0 +1,25 @@
+.Beer img {
+  height: 8rem;
+}
+
+.Beer .info {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Beer .tag {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+.Beer p {
+  color: gray;
+  margin: 0;
+}
+
+.Beer .tagline {
+  font-size: 0.9rem;
+}

@@ -1,15 +1,25 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import './Beer.css'
+
+const creatorName = (name) => {
+  const arrName = name.split('')
+  let i = 0
+
+  while (i<arrName.length && arrName[i+1]!=='<') i++;
+
+  return arrName.slice(0,i).join('')
+}
 
 const Beer = ({beer}) => {
   return (
     <div className="Beer">
-      <Link to={`/beers/${beer._id}`} className="d-flex">
-        <img alt="" src={beer.image_url} width="50px"></img>
-        <div>
-          <h3>{beer.name}</h3>
-          <p>{beer.tagline}</p>
-          <p><b>Created by: </b>{beer.contributed_by}</p>
+      <Link to={`/beers/${beer._id}`} className="tag">
+        <img alt="" src={beer.image_url} className="col-3"></img>
+        <div className="info col-9">
+          <h5>{beer.name}</h5>
+          <p className="tagline">{beer.tagline}</p>
+          <small><b>Created by: </b>{creatorName(beer.contributed_by)}</small>
         </div>
       </Link>
     </div>

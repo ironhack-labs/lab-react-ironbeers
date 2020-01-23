@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
 import {detail} from '../services/BeerService'
+import ShowBeer from './ShowBeer'
 
 class BeerDetail extends React.Component {
   state = {
@@ -14,15 +14,7 @@ class BeerDetail extends React.Component {
 
   render() {
     return (
-      <div className="BeerDetail">
-          <Navbar/>
-          <img alt="" src={this.state.beer.image_url} width="50px"></img>
-          <div>
-            <h3>{this.state.beer.name}</h3>
-            <p>{this.state.beer.tagline}</p>
-            <p><b>Created by: </b>{this.state.beer.contributed_by}</p>
-          </div>
-      </div>
+      <ShowBeer beer={this.state.beer}/>
     )
   }
 }
