@@ -23,6 +23,43 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card {
+  width: 500px;
+  height: 300px;
+  text-align: left;
+}
+
+.card-image {
+  width: 500px;
+  height: 170px;
+}
+
+#image {
+  width: 500px;
+  height: 170px;
+}
+
+#header {
+  width: 500px;
+  height: 80px;
+  text-align: left;
+}
+
+#cardBeer {
+
+  height: 170px;
+}
+
+#beer-img {
+width: 80px;
+height: 128px;
+
 }
