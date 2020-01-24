@@ -9,7 +9,7 @@ class Beers extends Component {
             <div>
                 <Link to='/'> <Header /></Link>
                 {this.props.beers.map((beer, i) => {
-                    return <Link to={`/${beer._id}`} >
+                    return <Link to={`/beers/${beer._id}`} >
                         <Beer key={i}  name={beer.name} tagline={beer.tagline} img={beer.image_url} />
                     </Link>
                 })
