@@ -1,8 +1,9 @@
 import React from 'react';
+import NavBar from './navbar'
 
 const AllBeers = () => (
   <div>
-    <h1>Hello</h1>
+    <NavBar/>
   </div>
 )
 
