@@ -16,7 +16,7 @@ class BeerList extends React.Component {
   render() {
     return(
       <div className="BeerList container">
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className="container nav-offset">
           {this.state.beers.map((beer, i) => (
             <div key={i}>

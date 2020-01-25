@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom'
 import './Beer.css'
 
 const creatorName = (name) => {
+  //debugger
+  if (!name) return ''
+
   const arrName = name.split('')
   let i = 0
 
