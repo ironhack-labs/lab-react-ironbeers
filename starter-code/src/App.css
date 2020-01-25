@@ -26,3 +26,12 @@
   text-decoration: none;
   color: rgb(48, 47, 47);
 }
+
+.random-beer-display img {
+  height: 50vh;
+  width: auto;
+}
+
+.random-beer-display {
+  padding-top: 5vh;
+}
