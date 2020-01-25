@@ -29,7 +29,7 @@ class HomePage extends Component {
         <div class="card" style={{ width: 400 }}>
           <img src="./images/random-beer.png" class="card-img-top" />
           <div class="card-body">
-            <Link class="card-title" to={"/allbeers"}>
+            <Link class="card-title" to={"/randombeer"}>
               <h3>Random Beer</h3>
             </Link>
             <p class="card-text">

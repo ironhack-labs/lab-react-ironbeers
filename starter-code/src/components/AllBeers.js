@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import Navbar from './Navbar'
+import '../App.css';
 
 class AllBeers extends Component {
     constructor(props) {
@@ -28,20 +30,24 @@ class AllBeers extends Component {
 
     render() { 
         return (
+          
             <div>
+               <Navbar />
+               <div className='vini'>
             { this.state.listOfBeers.map( beer => {
                 return (
                     <div class="card" style={{ width: 400 }}>
                     <img src={beer.image_url} class="card-img-top" />
                     <div class="card-body">
+                      <h3 class="card-title">{beer.name}</h3>
                       <p class="card-text">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                      {beer.description}
                       </p>
                     </div>
                     </div>
                 )})
               }
+              </div>
               </div>
           );
     }
