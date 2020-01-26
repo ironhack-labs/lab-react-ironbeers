@@ -15,6 +15,7 @@ class ListBeers extends Component {
 
   handleChange(event) {
     const { value } = event.target;
+    this.props.searchBeer(value);
     this.setState({
       searchBeer: value,
     });
@@ -26,7 +27,7 @@ class ListBeers extends Component {
         <Navbar />
         <input type="text" placeholder="Search for a beer" onChange={this.handleChange} value={this.state.searchBeer}/>
         {
-          this.props.allBeers.length > 0 && this.props.allBeers.filter(Beer => Beer.name.toLowerCase().includes(this.state.searchBeer.toLowerCase())).map((eachBeer, idx) => {
+          this.props.allBeers.length > 0 && this.props.allBeers.map((eachBeer, idx) => {
             return (
               <div key={idx} className="all-beers">
               <Link to={`/beers/${eachBeer._id}`} className='home-links'>
