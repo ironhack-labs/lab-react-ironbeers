@@ -70,3 +70,10 @@
 .contributor {
   font-size: 13px;
 }
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

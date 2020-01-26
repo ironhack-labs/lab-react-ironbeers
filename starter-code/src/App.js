@@ -19,6 +19,7 @@ class App extends Component {
 
     this.getRandomBeer = this.getRandomBeer.bind(this);
     this.getSingleBeer = this.getSingleBeer.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -66,6 +67,21 @@ class App extends Component {
       .catch(err => console.log('Error getting the beers', err));
   }
 
+  handleFormSubmit(data) {
+
+    const { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = data;
+
+    // console.log(name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by)
+
+    const IronBeers = axios.create({
+      baseURL: 'https://ih-beers-api2.herokuapp.com/beers',
+    });
+
+    IronBeers.post('/new', { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by })
+      .then(message => console.log(message))
+      .catch(err => console.log('Error getting the beers', err));
+  }
+
   render() {
     return (
       <div className="App">
@@ -74,7 +90,7 @@ class App extends Component {
           <Route exact path='/beers' render={(props) => <ListBeers allBeers={this.state.allBeers} {...props} /> } />
           <Route exact path='/beers/:beerId' render={(props) => <SingleBeer getBeer={this.getSingleBeer} theBeer={this.state.theBeer} {...props} /> } />
           <Route exact path='/random-beer' render={(props) => <SingleBeer isRandom getRandom={this.getRandomBeer} randomBeer={this.state.randomBeer} {...props} /> } />
-          <Route exact path='/new-beer' component={ NewBeer } />
+          <Route exact path='/new-beer' render={(props) => <NewBeer handleFormSubmit={this.handleFormSubmit} {...props} /> } />
         </Switch>
       </div>
     );
