@@ -5,14 +5,28 @@ import { Link } from 'react-router-dom';
 class ListBeers extends Component {
   constructor(props) {
     super(props);
+
+    this.state={
+      searchBeer: '',
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    const { value } = event.target;
+    this.setState({
+      searchBeer: value,
+    });
   }
 
   render() {
     return (
       <div>
         <Navbar />
+        <input type="text" placeholder="Search for a beer" onChange={this.handleChange} value={this.state.searchBeer}/>
         {
-          this.props.allBeers.length > 0 && this.props.allBeers.map((eachBeer, idx) => {
+          this.props.allBeers.length > 0 && this.props.allBeers.filter(Beer => Beer.name.toLowerCase().includes(this.state.searchBeer.toLowerCase())).map((eachBeer, idx) => {
             return (
               <div key={idx} className="all-beers">
               <Link to={`/beers/${eachBeer._id}`} className='home-links'>
@@ -25,8 +39,8 @@ class ListBeers extends Component {
                   </div>
                 </div>
               </Link>
-            <hr></hr>
-            </div>
+              <hr></hr>
+              </div>
             )
           })
         }
