@@ -14,9 +14,11 @@ class App extends Component {
     this.state = {
       allBeers: [],
       randomBeer: {},
+      theBeer: {},
     };
 
     this.getRandomBeer = this.getRandomBeer.bind(this);
+    this.getSingleBeer = this.getSingleBeer.bind(this);
   }
 
   componentDidMount() {
@@ -46,16 +48,31 @@ class App extends Component {
           randomBeer: randomBeerData,
         });
       })
-      .catch(err => console.log('Error getting all beers', err));
+      .catch(err => console.log('Error getting random beers', err));
+  }
+
+  getSingleBeer(id) {
+    const IronBeers = axios.create({
+      baseURL: 'https://ih-beers-api2.herokuapp.com/beers',
+    });
+
+    IronBeers.get(`/${id}`)
+      .then(theBeer => {
+        let theBeerData = theBeer.data;
+        this.setState({
+          theBeer: theBeerData,
+        });
+      })
+      .catch(err => console.log('Error getting the beers', err));
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
         <Switch>
           <Route exact path='/' component={ Home } />
-          <Route exact path='/beers' component={ ListBeers } />
+          <Route exact path='/beers' render={(props) => <ListBeers allBeers={this.state.allBeers} {...props} /> } />
+          <Route exact path='/beers/:beerId' render={(props) => <SingleBeer getBeer={this.getSingleBeer} theBeer={this.state.theBeer} {...props} /> } />
           <Route exact path='/random-beer' render={(props) => <SingleBeer isRandom getRandom={this.getRandomBeer} randomBeer={this.state.randomBeer} {...props} /> } />
           <Route exact path='/new-beer' component={ NewBeer } />
         </Switch>

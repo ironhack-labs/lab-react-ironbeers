@@ -35,3 +35,38 @@
 .random-beer-display {
   padding-top: 5vh;
 }
+
+.beer-box img {
+  height: 20vh;
+  width: auto;
+}
+
+.beer-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  text-align: left;
+  margin: 30px 40px;
+  
+}
+
+.each-beer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.tagline {
+  color: gray;
+  font-size: 20px;
+}
+
+.beer-name {
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.contributor {
+  font-size: 13px;
+}

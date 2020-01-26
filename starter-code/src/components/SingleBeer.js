@@ -7,8 +7,12 @@ class SingleBeer extends Component {
   }
 
   componentDidMount() {
-    this.props.getRandom();
-    console.log(this.props.randomBeer);
+    if (this.props.randomBeer) {
+      return this.props.getRandom();
+    } else {
+      let beerId = this.props.match.params.beerId;
+      this.props.getBeer(beerId);
+    }
   }
 
   render() {
@@ -29,11 +33,22 @@ class SingleBeer extends Component {
             </div>
           )
           :
-          (
-            <div>
-              <h1> Not Random</h1>
-            </div>
-          )
+            this.props.theBeer ?
+            (
+              <div className='random-beer-display'>
+              <img src={this.props.theBeer.image_url} alt=""/>
+              <h1> { this.props.theBeer.name } </h1>
+              <span>{this.props.theBeer.attenuation_level}</span>
+              <h3> {this.props.theBeer.tagline}</h3>
+              <span>{this.props.theBeer.first_brewed}</span>
+              <p>{this.props.theBeer.description}</p>
+              <p>{this.props.theBeer.contributed_by}</p>
+              </div>
+            )
+            :
+            (
+              <h3> Error loading beer </h3>
+            )
         }
       </div>
     )
