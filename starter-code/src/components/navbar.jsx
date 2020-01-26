@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './navbar.css'
 
 const NavBar = () => (
-<div className="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
-  <ul className="navbar-nav">
-    <li className="nav-item active">
-      <a className="nav-link" href="/">Home <span className="sr-only"></span></a>
-    </li>
-  </ul>
-</div>
+  <div class="d-flex justify-content-center align-items-center px-md-4 mb-3 bg-info shadow-sm">
+    <Link to="/">
+      <img className='img-home' src="../images/home.png" alt="Home" />
+    </Link>
+  </div>
 )
 
 export default NavBar;
