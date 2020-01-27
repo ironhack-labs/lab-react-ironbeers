@@ -1,0 +1,37 @@
+.beer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 .5rem 2.3rem .5rem;
+  border: 1px solid black;
+  padding: 5px;
+  max-width: 350px;
+}
+
+.beer-info {
+  margin-bottom: .2em;
+}
+
+.beer .image-container {
+  height: 12rem;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 100px;
+  height: auto;
+  margin-right: 2em;
+}
+
+@media only screen and (max-width: 560px) {
+  .beer {
+    flex-direction: column;
+  }
+  .beer-info {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 80px
+  }
+}

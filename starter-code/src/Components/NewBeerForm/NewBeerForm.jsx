@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
+import NavBar from '../NavBar/Navbar'
 
 export default class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.state = {}
+    this.state = {};
   }
-  
+
   render() {
     return (
-      <h1>oi</h1>
+      <div>
+        <NavBar />
+        <h1>oi</h1>
+      </div>
     );
   }
 }

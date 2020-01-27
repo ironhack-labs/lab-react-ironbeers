@@ -1,7 +1,7 @@
 /* Universal Styles */
 html {
   font-size: 18px;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 0 auto;
 }
 
@@ -22,14 +22,12 @@ input:focus {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  background: #000;
 }
 
-.image-container img {
+/* .image-container img {
   width: 100%;
-}
+} */
 
-/* App Styles */
 
 .App {
   font-family: 'Work Sans', sans-serif;

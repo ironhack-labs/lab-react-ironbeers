@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import NavBar from '../NavBar/Navbar'
+
 export default function Home() {
   return (
     <div className="home-list">

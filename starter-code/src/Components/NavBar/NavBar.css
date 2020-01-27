@@ -4,4 +4,8 @@
   text-align: center;
   width: 100%;
   font-size: 1.5em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

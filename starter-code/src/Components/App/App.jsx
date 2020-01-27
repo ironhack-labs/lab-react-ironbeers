@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-
-import Navbar from '../NavBar/Navbar';
 import BeersList from '../BeersList/BeersList';
 import SingleBeer from '../SingleBeer/SingleBeer';
 import NewBeerForm from '../NewBeerForm/NewBeerForm';
@@ -14,8 +12,10 @@ export default class App extends Component {
     this.state = {
       beers: [],
       randomBeer: {},
+      singleBeer: {},
     };
     this.getRandomBeer = this.getRandomBeer.bind(this);
+    this.getSingleBeerById = this.getSingleBeerById.bind(this);
   }
 
   componentDidMount = async () => {
@@ -44,13 +44,45 @@ export default class App extends Component {
       });
   }
 
+  async getSingleBeerById(id) {
+    try {
+      const response = await axios.get(
+        `https://ih-beers-api2.herokuapp.com/beers/${id}`
+      );
+      this.setState({
+        singleBeer: response.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/beers" component={BeersList} />
+          <Route
+            exact
+            path="/beers"
+            render={(props) => {
+              return <BeersList beersList={this.state.beers} {...props} />;
+            }}
+          />
+          <Route
+            exact
+            path="/beers/:id"
+            render={(props) => {
+              return (
+                <SingleBeer
+                isRandom={false}
+                  getSingleBeer={this.getSingleBeerById}
+                  singleBeer={this.state.singleBeer}
+                  {...props}
+                />
+              );
+            }}
+          />
           <Route
             exact
             path="/random-beer"
@@ -59,6 +91,7 @@ export default class App extends Component {
                 <SingleBeer
                   getRandomBeer={this.getRandomBeer}
                   randomBeer={this.state.randomBeer}
+                  isRandom
                   {...props}
                 />
               );

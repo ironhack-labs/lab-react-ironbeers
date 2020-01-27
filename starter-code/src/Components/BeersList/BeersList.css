@@ -1,0 +1,7 @@
+.beers-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  margin: 4.4rem 10%;
+}
