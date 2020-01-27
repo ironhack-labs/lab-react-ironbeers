@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Switch, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar';
 
-import ListBeers from './Components/ListBeers';
-import SingleBeer from './Components/SingleBeer';
-import NewBeerForm from './Components/NewBeerForm';
-
-import Home from './Components/Home';
+import Navbar from '../NavBar/Navbar';
+import BeersList from '../BeersList/BeersList';
+import SingleBeer from '../SingleBeer/SingleBeer';
+import NewBeerForm from '../NewBeerForm/NewBeerForm';
+import Home from '../Home/Home';
+import './App.css';
 import axios from 'axios';
 export default class App extends Component {
   constructor(props) {
@@ -16,7 +15,7 @@ export default class App extends Component {
       beers: [],
       randomBeer: {},
     };
-    this.getRandomBeer = this.getRandomBeer.bind(this)
+    this.getRandomBeer = this.getRandomBeer.bind(this);
   }
 
   componentDidMount = async () => {
@@ -43,21 +42,25 @@ export default class App extends Component {
       .catch((error) => {
         console.log(error);
       });
-  };
+  }
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/beers" component={ListBeers} />
+          <Route exact path="/beers" component={BeersList} />
           <Route
             exact
             path="/random-beer"
             render={(props) => {
               return (
-                <SingleBeer getRandomBeer={this.getRandomBeer} randomBeer={this.state.randomBeer} {...props} />
+                <SingleBeer
+                  getRandomBeer={this.getRandomBeer}
+                  randomBeer={this.state.randomBeer}
+                  {...props}
+                />
               );
             }}
           />
