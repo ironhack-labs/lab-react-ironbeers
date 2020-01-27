@@ -1,43 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import './App.css';
 import Home from './Home';
 import { Switch, Route } from 'react-router-dom';
-import AllBeers from './components/beers';
+import AllBeers from './components/all-beers';
 import RandomBeer from './components/random-beer';
 import NewBeer from './components/new-beer';
-import { render } from 'react-dom';
-import axios from 'axios';
+// import { render } from 'react-dom';
 
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      beers: []
-    }
-    console.log(this.beers)
-  }
+const App= () => (
 
-  componentDidMount() {
-    axios.get('https://ih-beers-api2.herokuapp.com/beers')
-      .then(response => {
-        this.setState({ beers: response.data })
-      })
-  }
+  <div className="App">
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route path='/beers' component={AllBeers} />
+      <Route path='/random-beer' component={RandomBeer} />
+      <Route path='/new-beer' component={NewBeer} />
+    </Switch>
+  </div>
+)
 
-  render() {
-    return (
-
-      <div className="App">
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/beers' component={AllBeers} />
-          <Route path='/random-beer' component={RandomBeer} />
-          <Route path='/new-beer' component={NewBeer} />
-        </Switch>
-      </div>
-    )
-  }
-}
 
 export default App;
