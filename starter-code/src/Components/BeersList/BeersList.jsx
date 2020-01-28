@@ -6,6 +6,7 @@ import BeerLine from '../BeerLine/BeerLine';
 import './BeersList.css';
 
 export default function BeersList(props) {
+  console.log(props);
   const { beersList } = props;
 
   return (
@@ -14,9 +15,11 @@ export default function BeersList(props) {
       {beersList.map((beer, i) => {
         return (
           <Link
+            key={i}
+            onClick={() => props.getSingleBeer(beer._id)}
             to={`/beers/${beer._id}`}
           >
-            <BeerLine key={i} beer={beer} />
+            <BeerLine beer={beer} />
           </Link>
         );
       })}

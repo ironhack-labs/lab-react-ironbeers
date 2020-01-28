@@ -15,6 +15,7 @@ export default class App extends Component {
     };
     this.getRandomBeer = this.getRandomBeer.bind(this);
     this.getSingleBeerById = this.getSingleBeerById.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
   componentDidMount = async () => {
@@ -29,6 +30,35 @@ export default class App extends Component {
       console.log(error);
     }
   };
+
+  // função copiada do repo da @giurop
+  handleFormSubmit(data) {
+    const {
+      name,
+      tagline,
+      description,
+      first_brewed,
+      brewers_tips,
+      attenuation_level,
+      contributed_by,
+    } = data;
+
+    const IronBeers = axios.create({
+      baseURL: 'https://ih-beers-api2.herokuapp.com/beers',
+    });
+
+    IronBeers.post('/new', {
+      name,
+      tagline,
+      description,
+      first_brewed,
+      brewers_tips,
+      attenuation_level,
+      contributed_by,
+    })
+      .then((message) => console.log(message))
+      .catch((err) => console.log('Error getting the beers', err));
+  }
 
   getRandomBeer() {
     axios
@@ -72,7 +102,13 @@ export default class App extends Component {
             exact
             path="/beers"
             render={(props) => {
-              return <BeersList beersList={this.state.beers} {...props} />;
+              return (
+                <BeersList
+                  beersList={this.state.beers}
+                  getSingleBeer={this.getSingleBeerById}
+                  {...props}
+                />
+              );
             }}
           />
           <Route
@@ -80,11 +116,7 @@ export default class App extends Component {
             path="/beers/:id"
             render={(props) => {
               return (
-                <SingleBeer
-                  getSingleBeer={this.getSingleBeerById}
-                  singleBeer={this.state.singleBeer}
-                  {...props}
-                />
+                <SingleBeer singleBeer={this.state.singleBeer} {...props} />
               );
             }}
           />
@@ -97,7 +129,14 @@ export default class App extends Component {
               );
             }}
           />
-          <Route exact path="/new-beer" component={NewBeerForm} />
+          <Route exact path="/new-beer" render={(props) => {
+            return (
+              <NewBeerForm
+              handleFormSubmit={this.handleFormSubmit}
+              {...props}
+               />
+            )
+          }} />
         </Switch>
       </div>
     );
