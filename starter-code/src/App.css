@@ -1,3 +1,7 @@
 .main_container {
   padding-top: 80px;
 }
+
+.btn-primary {
+  background-color: #3dc4fc;
+}

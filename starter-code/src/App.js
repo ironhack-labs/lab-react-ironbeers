@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import BeerList from './components/BeerList'
-import { Switch, Route, Redirect, useParams } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Home from './components/Home';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
@@ -21,6 +21,8 @@ class App extends Component {
             <Route exact path="/beers/:id" component={BeerDisplay}/>
             <Route exact path="/random-beer" component={RandomBeer}/>
             <Route exact path="/new-beer" component={NewBeer}/>
+
+            <Redirect to="/"/>
           </Switch>
           </div>
       </div>
