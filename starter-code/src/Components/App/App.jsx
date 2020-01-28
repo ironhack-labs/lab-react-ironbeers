@@ -11,7 +11,6 @@ export default class App extends Component {
     super(props);
     this.state = {
       beers: [],
-      randomBeer: {},
       singleBeer: {},
     };
     this.getRandomBeer = this.getRandomBeer.bind(this);
@@ -35,8 +34,9 @@ export default class App extends Component {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers/random')
       .then((response) => {
+        console.log('random beer ok: ', response.data);
         this.setState({
-          randomBeer: response,
+          singleBeer: response.data,
         });
       })
       .catch((error) => {
@@ -61,7 +61,13 @@ export default class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/"
+            render={(props) => {
+              return <Home getRandomBeer={this.getRandomBeer} {...props} />;
+            }}
+          />
           <Route
             exact
             path="/beers"
@@ -75,7 +81,6 @@ export default class App extends Component {
             render={(props) => {
               return (
                 <SingleBeer
-                isRandom={false}
                   getSingleBeer={this.getSingleBeerById}
                   singleBeer={this.state.singleBeer}
                   {...props}
@@ -88,12 +93,7 @@ export default class App extends Component {
             path="/random-beer"
             render={(props) => {
               return (
-                <SingleBeer
-                  getRandomBeer={this.getRandomBeer}
-                  randomBeer={this.state.randomBeer}
-                  isRandom
-                  {...props}
-                />
+                <SingleBeer singleBeer={this.state.singleBeer} {...props} />
               );
             }}
           />
