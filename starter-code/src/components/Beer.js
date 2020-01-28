@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import './Beer.css'
 
 const creatorName = (name) => {
-  //debugger
   if (!name) return ''
 
   const arrName = name.split('')
@@ -16,13 +15,20 @@ const creatorName = (name) => {
 
 const Beer = ({beer}) => {
   return (
-    <div className="Beer">
+    <div className="card mb-3">
       <Link to={`/beers/${beer._id}`} className="tag">
-        <img alt="" src={beer.image_url} className="col-3"></img>
-        <div className="info col-9">
-          <h5>{beer.name}</h5>
-          <p className="tagline">{beer.tagline}</p>
-          <small><b>Created by: </b>{creatorName(beer.contributed_by)}</small>
+        <div className="row no-gutters align-items-center">
+          <div className="col-md-3 text-center card-body">
+            <img className="card-img" alt="" src={beer.image_url}></img>
+          </div>
+          <div className="info col-md-9">
+            <div className="card-body">
+              <h4 className="card-title">{beer.name}</h4>
+              <p className="card-text">{beer.tagline}</p>
+              <small className="text-muted"><b>Created by: </b>{creatorName(beer.contributed_by)}</small>
+            </div>
+          </div>
+
         </div>
       </Link>
     </div>

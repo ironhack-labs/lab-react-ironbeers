@@ -23,3 +23,17 @@
 .Beer .tagline {
   font-size: 0.9rem;
 }
+
+.card {border: 1px solid rgba(0, 0, 0, 0.06);}
+.card:hover {
+  background-color:  rgba(0, 0, 0, 0.06);
+  transition: all .3s ease-out;
+}
+.card img { max-width: 60px; }
+.card a {
+  text-decoration: none;
+  color: initial;
+}
+.card a:hover{
+  text-decoration: none;
+}

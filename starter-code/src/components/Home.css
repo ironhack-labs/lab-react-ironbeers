@@ -1,6 +1,7 @@
 .Home {
   border: 1px solid lightgray;
   width: 48rem;
+  margin: 0 auto;
 }
 
 .Home .beers {

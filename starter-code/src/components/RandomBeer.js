@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar';
 import BeerDetail from './BeerDetail'
 import {random} from '../services/BeerService'
 import ShowBeer from './ShowBeer';

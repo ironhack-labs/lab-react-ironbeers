@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import BeerList from './components/BeerList'
-import {Switch, Route, Redirect} from 'react-router-dom'
+import { Switch, Route, Redirect, useParams } from 'react-router-dom'
 import Home from './components/Home';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
@@ -12,9 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
-          <Navbar/>
-        
+        {window.location.pathname !== "/" ? <Navbar/> : null}
 
         <div className="container main_container">
           <Switch>
