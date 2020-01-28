@@ -5,3 +5,9 @@
   /* border: 1px solid black; */
   margin: 4.4rem 10%;
 }
+
+.search-field {
+  width: 100%;
+  height: 3em;
+  font-size: 2em;
+}
