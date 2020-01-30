@@ -34,3 +34,9 @@
   justify-content: flex-start;
   
 }
+
+.RandomButton{
+  background-color: green;
+  color: black;
+  font-size: 30px;
+}

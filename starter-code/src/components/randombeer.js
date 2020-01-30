@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export default class randombeer extends Component {
@@ -31,7 +30,7 @@ export default class randombeer extends Component {
         console.log(this.state.randombeer.name)
         return (
             <div ClassName="Randomizer">
-            <button onClick={this.randomBeer}>Random Trigger</button>
+            <div><button className='RandomButton' onClick={this.randomBeer}>Random Trigger</button></div><br />
                 <img src={this.state.randombeer.image_url} alt="NoPic" />
                 <h1>{this.state.randombeer.name}</h1>
                 <p>{this.state.randombeer.tagline}</p><br/>
