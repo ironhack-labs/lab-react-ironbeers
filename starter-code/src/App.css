@@ -26,3 +26,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+li {
+  list-style-type: none;
+}
+
+.beer-container img {
+  height: 100px;
+  width: auto;
+}
