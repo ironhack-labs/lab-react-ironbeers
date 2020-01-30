@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+li {
+  list-style-type: none;
+}
+
+.image {
+  height: 100px;
+  width:  auto; 
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
