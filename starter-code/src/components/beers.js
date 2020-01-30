@@ -25,7 +25,7 @@ export default class beers extends Component {
                 this.state.beers.map((beer, index) => 
                     <div key={index} ClassName="Beers">
                         <div ClassName="Infos">
-                            <Link to={`/beers/:beerId`} ClassName="BeerDetails"> {beer.name} </Link><br/>
+                            <Link to={`/beers/${beer._id}`} ClassName="BeerDetails"> {beer.name} </Link><br/>
                             {beer.tagline}<br/>
                             Created by: <b>{beer.contributed_by.split(" ").slice(0, 2).join(' ')}</b><br/>
                         </div>

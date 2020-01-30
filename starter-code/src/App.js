@@ -6,6 +6,7 @@ import newbeer from './components/newbeer';
 import main from './components/main';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './components/navbar';
+import beerinfo from './components/beerinfo';
 
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
       <BrowserRouter>
       <header className="App-header"><NavBar /></header>
         <Switch>
+          <Route exact path='/beers/:id' component={beerinfo} />
           <Route exact path ='/' component={main} />
           <Route exact path='/beers' component={beers} />
           <Route exact path='/randombeer' component={randombeer} />
