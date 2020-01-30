@@ -26,3 +26,39 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.beerListImg{
+  width: 300px;
+}
+
+.banner{
+  width: 600px;
+  
+}
+
+.oneBeer {
+  /*Containe for the Bier on beers.js */
+display: flex;
+align-content: center;
+border: grey 2px solid;
+margin-left: 40px;
+margin-bottom: 10px;
+}
+
+.beerDetails {
+display: flex;
+flex-direction: column;
+}
+
+.oneBeerListImage {
+  width: 70px;
+  /* Das Bierbild*/
+}
+
+.imageContainer {
+  /* Container um das Image in beers.js*/
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 150px;
+}
