@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  text-decoration: none;
 }
 
 .App-logo {
@@ -25,4 +26,23 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.oneBeerDetail {
+  display: flex;
+  border: 1px solid lightgray;
+  padding: 12px;
+  color: black;
+}
+
+.oneBeerDetail img {
+  width: 40px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.oneBeerDetail div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
