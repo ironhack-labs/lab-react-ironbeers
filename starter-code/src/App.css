@@ -29,9 +29,15 @@
 
 li {
   list-style-type: none;
+  text-decoration: none;
 }
 
 .beer-container img {
   height: 100px;
   width: auto;
 }
+.beer-container {
+  text-align: center;
+}
+
+
