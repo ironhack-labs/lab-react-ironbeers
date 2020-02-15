@@ -8,6 +8,7 @@ const BeerList = props => {
         key={element._id}
         className="list-group-item list-group-item-action"
         to={"/" + element._id}
+        onClick={() => props.detailsfetch(element._id)}
       >
         <div className="BeerList">
           <img src={element.image_url} alt="beer" height="30%" />
