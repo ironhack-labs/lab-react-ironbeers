@@ -2,27 +2,47 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* ================================== Beer List =================================================== */
+
+.BeerList {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.BeerDetails {
+  display: flex;
+  flex-direction: column;
 }
 
-.App-title {
-  font-size: 1.5em;
+.Main-Display {
+  display: flex;
+  margin-top: 10vh;
 }
 
-.App-intro {
-  font-size: large;
+.imageBox {
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.BeerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  margin: 20px;
+}
+
+.beer {
+  width: 80%;
+}
+
+.beer p {
+  text-align: justify;
 }
