@@ -43,7 +43,9 @@ class App extends Component {
           </ListGroup>
 
           <Switch>
+            <Route exact path="/" render={props => <BeerDetails {...props} />} />
             <Route exact path="/:id" render={props => <BeerDetails {...props} />} />
+            <Route exact path="/random" render={props => <BeerDetails {...props} />} />
           </Switch>
         </div>
       </div>

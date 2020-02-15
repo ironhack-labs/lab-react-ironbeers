@@ -18,6 +18,17 @@ class BeerDetails extends React.Component {
       });
     }
   }
+
+  componentDidUpdate(prevProps) {
+    if (this.props !== prevProps) {
+      console.log("did update");
+      axios.get("https://ih-beers-api2.herokuapp.com/beers/random").then(response => {
+        console.log(response);
+        this.setState({ foundBeer: response.data });
+      });
+    }
+  }
+
   render() {
     const beer = this.state.foundBeer;
     return (
