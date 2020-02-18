@@ -2,14 +2,28 @@ import React, { Component } from "react";
 import axios from "axios";
 import BeerList from "./components/Beerlist";
 import BeerDetails from "./components/BeerDetails";
+import AddBeer from "./components/AddBeer";
 import { Navbar, ListGroup, Nav } from "react-bootstrap";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 
 class App extends Component {
   state = {
+    visibility: false,
     beers: [],
     foundBeer: []
+  };
+
+  showForm = () => {
+    if (this.state.visibility === true) {
+      this.setState({
+        visibility: false
+      });
+    } else {
+      this.setState({
+        visibility: true
+      });
+    }
   };
 
   componentDidMount() {
@@ -34,6 +48,12 @@ class App extends Component {
     });
   };
 
+  addBeerHandler = newBeer => {
+    const beersCopy = [...this.state.beers];
+    beersCopy.unshift(newBeer);
+    this.setState({ beers: beersCopy });
+  };
+
   render() {
     return (
       <div className="App">
@@ -41,37 +61,45 @@ class App extends Component {
           <Navbar.Brand href="/">Ironbeers</Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link onClick={this.getRandomBeer}>Random Beer</Nav.Link>
-            <Nav.Link href="#newbeer">Add Beer</Nav.Link>
+            <Nav.Link onClick={this.showForm}>Add Beer</Nav.Link>
           </Nav>
         </Navbar>
-        <div className="Main-Display">
-          <ListGroup
-            variant="flush"
-            className="col-5"
-            style={{ maxHeight: "90vh", overflow: "scroll" }}
-          >
-            <ListGroup.Item>
-              <BeerList beers={this.state.beers} detailsfetch={this.getBeerDetails} />
-            </ListGroup.Item>
-          </ListGroup>
+        <div className="container">
+          {this.state.visibility && (
+            <div className="add-beer-form">
+              <AddBeer addBeer={this.addBeerHandler} />
+            </div>
+          )}
 
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={props => <BeerDetails {...props} beer={this.state.foundBeer} />}
-            />
-            <Route
-              exact
-              path="/:id"
-              render={props => <BeerDetails {...props} beer={this.state.foundBeer} />}
-            />
-            <Route
-              exact
-              path="/random"
-              render={props => <BeerDetails {...props} beer={this.state.foundBeer} />}
-            />
-          </Switch>
+          <div className="Main-Display">
+            <ListGroup
+              variant="flush"
+              className="col-5"
+              style={{ maxHeight: "90vh", overflow: "scroll" }}
+            >
+              <ListGroup.Item>
+                <BeerList beers={this.state.beers} detailsfetch={this.getBeerDetails} />
+              </ListGroup.Item>
+            </ListGroup>
+
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={props => <BeerDetails {...props} beer={this.state.foundBeer} />}
+              />
+              <Route
+                exact
+                path="/:id"
+                render={props => <BeerDetails {...props} beer={this.state.foundBeer} />}
+              />
+              <Route
+                exact
+                path="/random"
+                render={props => <BeerDetails {...props} beer={this.state.foundBeer} />}
+              />
+            </Switch>
+          </div>
         </div>
       </div>
     );

@@ -46,3 +46,26 @@
 .beer p {
   text-align: justify;
 }
+
+.container {
+  position: relative;
+  top: 100px;
+}
+
+.add-beer-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-beer-form input textarea {
+  margin: 20px;
+}
+
+.inputButton {
+  margin: 20px 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
