@@ -1,76 +1,70 @@
 import React, { Component } from "react";
-import { Form, Button } from "react-bootstrap";
+import axios from "axios";
 
 class AddBeer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      tagline: "",
-      details: "",
-      creator: ""
+      newBeer: {
+        name: "",
+        tagline: "",
+        description: "",
+        first_brewed: "",
+        brewers_tips: "",
+        attenuation_level: 0,
+        contributed_by: ""
+      }
     };
   }
 
-  handleChange = event => {
+  changeHandler = event => {
     let { name, value } = event.target;
-    this.setState({ [name]: value });
+    let cacheBeer = this.state.newBeer;
+    cacheBeer[name] = value;
+    this.setState({ newBeer: cacheBeer });
   };
 
-  handleFormSubmit = event => {
+  handleSubmit = event => {
     event.preventDefault();
-    const newBeer = {
-      name: this.state.name,
-      tagline: this.state.tagline,
-      details: this.state.details,
-      creator: this.state.creator
-    };
-    this.props.addBeer(newBeer);
-    this.setState({
-      name: "",
-      tagline: "",
-      details: "",
-      creator: ""
-    });
+    axios
+      .post("https://ih-beers-api2.herokuapp.com/beers/new", this.state.newBeer)
+      .then(response => {
+        console.log(response);
+      });
   };
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit}>
-        <label>Name:</label>
-        <input
-          type="text"
-          name="name"
-          value={this.state.name}
-          onChange={e => this.handleChange(e)}
-        />
+      <form onSubmit={this.handleSubmit}>
+        <label htmlFor="name">Name</label>
+        <input name="name" type="text" onChange={this.changeHandler} />
 
-        <label>Tagline:</label>
-        <input
-          type="text"
-          name="tagline"
-          value={this.state.tagline}
-          onChange={e => this.handleChange(e)}
-        />
+        <label htmlFor="tagline">Tagline</label>
 
-        <label>Details:</label>
-        <textarea
-          type="text"
-          rows="3"
-          name="details"
-          checked={this.state.details}
-          onChange={e => this.handleChange(e)}
-        />
+        <input name="tagline" type="text" onChange={this.changeHandler} />
 
-        <label>Creator:</label>
-        <input
-          type="text"
-          name="creator"
-          value={this.state.creator}
-          onChange={e => this.handleChange(e)}
-        />
+        <label htmlFor="description">Description</label>
 
-        <input className="inputButton" type="submit" value="Submit" />
+        <input name="description" type="text" onChange={this.changeHandler} />
+
+        <label htmlFor="first_brewed">First Brewed</label>
+
+        <input name="first_brewed" type="text" onChange={this.changeHandler} />
+
+        <label htmlFor="brewers_tips">Brewers Tips</label>
+
+        <input name="brewers_tips" type="text" onChange={this.changeHandler} />
+
+        <label htmlFor="attenuation_level">Attenuation Level</label>
+
+        <input name="attenuation_level" type="number" onChange={this.changeHandler} />
+
+        <label htmlFor="contributed_by">Contributed By</label>
+
+        <input name="contributed_by" type="text" onChange={this.changeHandler} />
+        <br />
+
+        <button type="submit">ADD NEW</button>
       </form>
     );
   }

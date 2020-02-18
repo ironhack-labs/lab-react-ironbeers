@@ -52,19 +52,26 @@
   top: 100px;
 }
 
+.add-beer-form {
+  z-index: 10;
+  position: absolute;
+  width: 60%;
+  top: -10vh;
+  left: 20%;
+  padding: 40px;
+  border: solid 1px black;
+  background-color: white;
+  border-radius: 20px;
+}
+
 .add-beer-form form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.add-beer-form input textarea {
-  margin: 20px;
-}
-
 .inputButton {
   margin: 20px 500px;
-
   display: flex;
   justify-content: center;
   align-items: center;
