@@ -1,28 +1,40 @@
 .App {
   text-align: center;
+  margin: 5vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* img {
+  width: max-content;
+} */
+
+nav{
+  background-color: #3DC4FC;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.beerDiv{
+  /* display: flex;
+  flex-direction: row; */
+  display: grid;
+  justify-content: left;
+  grid-template-columns: repeat(2, minmax(100px,200px));
+  grid-gap: 10px;
+  padding: 10px 10px 50px 10px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.beerImg{
+  padding-right: 20px;
+
 }
 
-.App-intro {
-  font-size: large;
+.beerStuff{
+  padding: 10px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+/* 
+nav > Link > img{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+} */
