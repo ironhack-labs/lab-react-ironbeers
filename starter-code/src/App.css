@@ -1,13 +1,47 @@
-.App img{
-    height: 250px;
+.App {
+    font-family: "OpenSans";
 }
 
-.App div.beers {
-    border: 1px black;
+.App img.ab {
+    width: 100px;
+    margin: auto;
+    padding: 15px;
 }
 
 .beers {
     max-height: 90vh;
     overflow: scroll;
-    text-align: center;
+    text-align: left;
+}
+
+.item {
+    border-width: 1px black;
+}
+
+.description {
+    margin-left: 24px;
+}
+
+Link {
+    text-decoration: none
+}
+
+.logo {
+    max-width: 10vh;
+}
+
+.card-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px
+}
+
+.card-title {
+    padding-top: 5px;
+    text-align: left
+}
+
+.single {
+    display: flex;
+    justify-content: center;
 }
