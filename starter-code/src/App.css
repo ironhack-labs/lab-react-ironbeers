@@ -26,3 +26,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.backgdheader {
+  background-color: aqua;
+  width: 50%;
+}
+
+.backgdheader img {
+  width: 50px;
+  padding: 15px 0;
+}
