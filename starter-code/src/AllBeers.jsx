@@ -19,7 +19,7 @@ class AllBeers extends Component {
   showTheBeers = () => {
     return this.state.beers.map(eachBeer => {
       return (
-        <div className="container row beers">
+        <div className="container row">
           <img alt={eachBeer.name} src={eachBeer.image_url} />
           <div className="col">
             <div className="row">{eachBeer.name}</div>
@@ -32,11 +32,7 @@ class AllBeers extends Component {
   };
 
   render() {
-    return (
-      <div>
-        {this.showTheBeers()}
-      </div>
-    ); 
+    return <div className="beers">{this.showTheBeers()}</div>; 
         
   }
 }

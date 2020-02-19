@@ -5,3 +5,9 @@
 .App div.beers {
     border: 1px black;
 }
+
+.beers {
+    max-height: 90vh;
+    overflow: scroll;
+    text-align: center;
+}
