@@ -1,35 +1,57 @@
 .App {
   text-align: center;
-  margin: 5vh;
+  margin: 0 5vh;
 }
-
-/* img {
-  width: max-content;
-} */
 
 nav{
   background-color: #3DC4FC;
 }
 
+/* nav > Link > img{
+  display: flex;
+  justify-content: center;
+} */
+
 .beerDiv{
-  /* display: flex;
-  flex-direction: row; */
   display: grid;
   justify-content: left;
-  grid-template-columns: repeat(2, minmax(100px,200px));
-  grid-gap: 10px;
-  padding: 10px 10px 50px 10px;
+  grid-template-columns: repeat(2, minmax(20vh,40vh));
+  grid-gap: 2vh;
+  padding: 2vh 2vh 5vh 2vh;
 }
 
 .beerImg{
-  padding-right: 20px;
-
+  padding-right: 3vh;
 }
 
 .beerStuff{
-  padding: 10px;
   text-align: left;
 }
+
+.beerRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 3vh;
+}
+
+.singleImg{
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.newBeerForm{
+  padding:5vh;
+}
+
+.form-group{
+  text-align: left;
+  /* font-weight: 900; */
+}
+
+/* Link {
+  text-decoration: none;
+} */
 
 /* 
 nav > Link > img{

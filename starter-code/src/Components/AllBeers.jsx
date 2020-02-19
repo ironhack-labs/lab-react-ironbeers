@@ -1,37 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios'
+
 
 class AllBeers extends Component {
 
-    state = {
-        beers: [], 
-      }
-    
-    componentDidMount(){
-    
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/`).then(res => { //This takes time 
-            this.setState({
-              beers:res.data 
-            }) 
-        })
-    }
-   
     showBeers = () => {
-        let allBeers = [...this.state.beers]
+        let allBeers = [...this.props.beers]
         return allBeers.map(eachBeer => {
             return (
             <React.Fragment>
-                <div className="beerDiv">
-                    <div className="beerImg">
-                        <img src= {eachBeer.image_url} height="250" alt=""/>
+                <Link to={`/beers/${eachBeer._id}`} style={{ textDecoration: 'none', color: '#000000', }} >
+                    <div className="beerDiv">
+                        <div className="beerImg">
+                            <img src= {eachBeer.image_url} height="250vh" alt=""/>
+                        </div>
+                        <div className="beerStuff">
+                            <h4>{eachBeer.name}</h4>
+                            <h6><i>{eachBeer.tagline}</i></h6>
+                            <p><b>Created by: </b>{eachBeer.contributed_by.slice(0,10)}</p>
+                        </div>
                     </div>
-                    <div className="beerStuff">
-                        <h4>{eachBeer.name}</h4>
-                        <h6><i>{eachBeer.tagline}</i></h6>
-                        <p><b>Created by: </b>{eachBeer.contributed_by.slice(0,10)}</p>
-                    </div>
-                </div>
+                    <hr></hr>
+                </Link>
             </React.Fragment>
             )
 
@@ -39,7 +29,7 @@ class AllBeers extends Component {
     }
 
     render() {
-        console.log(this.state.beers)
+        
         return (
             <div>
 
