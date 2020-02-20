@@ -26,3 +26,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.nav-main {
+  background-color:rgb(45, 197, 250);
+  height: 70px;
+  box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}
