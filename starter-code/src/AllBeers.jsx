@@ -7,7 +7,7 @@ class AllBeers extends Component {
     console.log(this.props.beers);
     return this.props.beers.map((eachBeer, i) => {
       return (
-        <React.Fragment>
+        <div className="beers">
           <Link
             key={i}
             to={`/BeerDetails/${this.props.beers[i]._id}`}
@@ -28,13 +28,18 @@ class AllBeers extends Component {
               </div>
             </div>
           </Link>
-        </React.Fragment>
+        </div>
       );
     });
   };
 
   render() {
-    return <div className="beers">{this.showTheBeers()}</div>;
+    return (
+      // this.props.ready ? (this.showTheBeers()) : (`Loading...`)
+      <div className='beers'>
+        {this.showTheBeers()}
+      </div>
+      )
   }
 }
 

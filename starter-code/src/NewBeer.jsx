@@ -8,7 +8,6 @@ class NewBeer extends Component {
     }
     
     addNewBeer = (e) => {
-        console.log(`hitting the spot?`)
         e.preventDefault();
         Axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`, this.state)
                 .then(res => console.log(res))
@@ -67,7 +66,7 @@ class NewBeer extends Component {
               <div className="form-group">
                 <label name="first_brewed">First Brewed: (Date)</label>
                 <input
-                  type="text"
+                  type="date"
                   name="first_brewed"
                   className="form-control"
                   onChange={this.handleInput}
@@ -100,10 +99,11 @@ class NewBeer extends Component {
                   onChange={this.handleInput}
                 />
               </div>
-              <input
+              <button
                 type="submit"
-                className="btn btn-success"
-              />
+                className="btn btn-success">
+                  Add New
+                </button>
             </form>
           </div>
         );
