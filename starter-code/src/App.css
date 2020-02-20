@@ -1,3 +1,9 @@
+*  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -25,4 +31,36 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+#beer-container {
+  display: flex;
+  flex-wrap: wrap;
+  width:100vw;
+  padding: 5vw;
+}
+
+.beer-item {
+  width: 20vw;
+  margin-right: 2vw;
+  margin-bottom: 5vh;
+}
+
+.beer-item img {
+  max-height: 20vh;
+}
+
+#header-main {
+  width: 100vw;
+  height: 8vh;
+  background-color: #3DC4FC;
+  
+}
+
+#header-main p {
+  text-decoration: none;
+  color:white;
+  line-height: 8vh;
+  font-size: 4vh;
+  font-weight: bold;
 }
