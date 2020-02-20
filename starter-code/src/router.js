@@ -3,11 +3,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 //import Beer from "./pages/Beer";//trae una
-//import Beers from "./pages/Beers";//trae todas
+import Beers from "./pages/Beers";//trae todas
 //import CreateBeer from "./pages/CreateBeer";//crea una
 
 const Beer=()=><h1>Beer</h1>
-const Beers=()=><h1>Beers</h1>
+
 const NewBeer=()=><h1>Create Beer</h1>
 const RandomBeer=()=><h1>Random Beer</h1>
 

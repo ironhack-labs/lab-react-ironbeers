@@ -6,8 +6,8 @@ const beersService = axios.create({
   baseURL
 });
 
-/*export const getAllBeers = async () => {
-  const { data } = await beersService.get();
+export const getAllBeers = async () => {
+  const {data}  = await beersService.get();
   return data;
 };
 export const getBeer = async beerId => {
@@ -19,4 +19,3 @@ export const createBeer = async (title, description) => {
   const { data } = await beersService.post("/", { title, description });
   return data;
 };
-*/
