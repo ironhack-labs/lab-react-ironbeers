@@ -1,58 +1,67 @@
 import React, { Component } from 'react';
-import NavBar from '../NavBar'
+import NavBar from '../NavBar';
+import axios from 'axios'
 
 class NewBeer extends Component {
 
     state = {
-       
+        name: "",
+        tagline: "",
+        description: "",
+        firstBrewed: "",
+        brewersTips: "",
+        attentuationLevel: 0,
+        contributedBy: ""
     }
 
     addNewBeer = (e) => {
         e.preventDefault()
-        
+
+        axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`, this.state)
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+
     }
 
-    // Axios.post(`https://ih-beers-api2.herokuapp.com/beers`, this.state).then
+    handleInput = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+    })
+    }
 
-    // handleInput = (e) => {
-    //     this.setState([
-    //         [e.target.name]: e.target.value
-    //     ])
-    // }
-
-
+   
     render() {
         return (
             <div>
                 <NavBar />
                 <form onSubmit={this.addNewBeer}>
   <div className="form-group">
-    <label htmlFor="exampleInputEmail1">Name</label>
-    <input type="email" name ='' className="form-control" onChange={this.handleInput}/>
+    <label>Name</label>
+    <input type="text" name ='name' className="form-control" onChange={this.handleInput}/>
   </div>
   <div className="form-group">
-    <label htmlFor="exampleInputEmail1">Tagline</label>
-    <input type="email" className="form-control"/>
+    <label>Tagline</label>
+    <input type="text" name ='tagline' className="form-control" onChange={this.handleInput}/>
   </div>
   <div className="form-group has-success">
-  <label htmlFor="exampleInputEmail1">Description</label>
-    <textarea type="email" className="form-control input-lg" rows="10"/>
+  <label>Description</label>
+    <textarea type="text" name ='description' className="form-control input-lg" rows="10" onChange={this.handleInput}/>
   </div>
   <div className="form-group">
-  <label htmlFor="exampleInputEmail1">First Brewed</label>
-    <input type="email" className="form-control"/>
+  <label>First Brewed</label>
+    <input type="text" name ='firstBrewed' className="form-control" onChange={this.handleInput}/>
     </div>
     <div className="form-group">
-  <label htmlFor="exampleInputEmail1">Brewers Tips</label>
-    <input type="email" className="form-control"/>
+  <label>Brewers Tips</label>
+    <input type="text" name ='brewerTips' className="form-control" onChange={this.handleInput}/>
     </div>
     <div className="form-group">
-  <label htmlFor="exampleInputEmail1">Attenuation Level</label>
-    <input type="number" className="form-control"/>
+  <label>Attenuation Level</label>
+    <input type="number" name ='attenuationLevel' className="form-control" onChange={this.handleInput}/>
     </div>
     <div className="form-group">
-  <label htmlFor="exampleInputEmail1">Contributed By</label>
-    <input type="email" className="form-control"/>
+  <label>Contributed By</label>
+    <input type="text" name ='contributedBy' className="form-control" onChange={this.handleInput}/>
     </div>
     <button type="submit" className="btn btn-primary">Submit</button>
 </form>
