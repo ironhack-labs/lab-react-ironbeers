@@ -7,7 +7,7 @@ class AllBeers extends Component {
     console.log(this.props.beers);
     return this.props.beers.map((eachBeer, i) => {
       return (
-        <div className="beers">
+        
           <Link
             key={i}
             to={`/BeerDetails/${this.props.beers[i]._id}`}
@@ -28,7 +28,6 @@ class AllBeers extends Component {
               </div>
             </div>
           </Link>
-        </div>
       );
     });
   };
@@ -36,7 +35,7 @@ class AllBeers extends Component {
   render() {
     return (
       // this.props.ready ? (this.showTheBeers()) : (`Loading...`)
-      <div className='beers'>
+      <div className='col-10 offset-1 beers'>
         {this.showTheBeers()}
       </div>
       )
