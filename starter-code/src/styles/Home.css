@@ -1,0 +1,29 @@
+.home {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+.home-cont {
+    text-align: left;
+}
+
+.home-cont img {
+    width: 100%;
+}
+
+.title {
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 0 15px;
+    color: rgb(65, 62, 62);
+}
+
+.home-cont p {
+    margin: 0;
+    padding: 0 15px 10px 15px;
+    color: grey;
+    text-align: justify;
+    font-size: 0.7em;
+}
+
