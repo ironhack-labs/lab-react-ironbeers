@@ -37,3 +37,29 @@
   width: 50px;
   padding: 15px 0;
 }
+
+.beer-container {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  text-decoration: none;
+}
+
+.beer-container img {
+  width: 145px;
+  height: 270px;
+}
+
+.beer-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.beer-description h2, p {
+  color: #000;
+}
+
+.beer-description h3 {
+  color: #bfbdbd;
+}
