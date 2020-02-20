@@ -2,24 +2,21 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
-import axios from 'axios';
+import axios from "axios";
 import BeerDetails from "./BeerDetails";
-import Home from './Home'
+import Home from "./Home";
 import AllBeers from "./AllBeers";
 import RandomBeer from "./RandomBeer";
 import NewBeer from "./NewBeer";
 import logo from "./logo.svg";
 // import SHA256 from "crypto-js";
 
-
 class App extends Component {
-  
   state = {
     beers: []
   };
 
   componentDidMount() {
-    console.log('app')
     axios.get(`https://ih-beers-api2.herokuapp.com/beers/`).then(res => {
       //This takes some time by the time it gets back
       this.setState({
@@ -80,7 +77,7 @@ class App extends Component {
                 paddingTop: "10px"
               }}
               className="nav-item"
-              to={`/NewBeers`}
+              to={`/NewBeer`}
             >
               New Beer
             </Link>
@@ -102,7 +99,7 @@ class App extends Component {
           <Route
             exact
             path="/NewBeer"
-            render={props => <NewBeer {...props} />}
+            render={props => <NewBeer beers={this.state.beers} {...props} />}
           />
           <Route
             exact
@@ -118,14 +115,6 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-
-
-
-
-
 
 // class Block {
 //   constructor(timestamp, data) {

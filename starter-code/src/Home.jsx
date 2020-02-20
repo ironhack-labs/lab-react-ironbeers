@@ -72,7 +72,7 @@ class Home extends Component {
                 paddingTop: "10px"
               }}
               className="nav-item"
-              to={`/NewBeers`}
+              to={`/NewBeer`}
             >
               <div className="card">
                 <img

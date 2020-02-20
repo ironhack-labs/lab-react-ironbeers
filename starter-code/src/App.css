@@ -14,16 +14,8 @@
     text-align: left;
 }
 
-.item {
-    border-width: 1px black;
-}
-
 .description {
     margin-left: 24px;
-}
-
-Link {
-    text-decoration: none
 }
 
 .logo {
@@ -37,6 +29,7 @@ Link {
 }
 
 .card-title {
+    padding-left: 20px;
     padding-top: 5px;
     text-align: left
 }
