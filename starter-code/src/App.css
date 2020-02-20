@@ -26,3 +26,48 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+nav#nav-main{
+  width:100%;
+  height: 50px;
+  background-color: #00B7FF;
+  color: white;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+NavLink {
+  color: darkgreen;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.img-beer{
+  width: 75px;
+}
+
+.beer1 {
+  width: 70%;
+  margin: auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.beer11 {
+  width: 30%;
+  margin: auto;
+}
+.beer12 {
+  width: 60%;
+  margin: auto;
+}
+
+.beer12 ul {
+  text-align: left;
+}
+.beer12 ul li {
+  text-align: left;
+}
