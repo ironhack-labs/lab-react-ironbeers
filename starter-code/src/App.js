@@ -14,10 +14,10 @@ export default class App extends Component {
       <div className="App">
         <header>
           <nav className="flex">
-            <NavLink to="/">
+            <NavLink to="/new-beer">
               <FontAwesome className="" name="home" /> Home
             </NavLink>
-            <NavLink to="/new-beer">
+            <NavLink to="/">
               <FontAwesome className="" name="beer" /> Beers
             </NavLink>
             <NavLink to="/my-beers">
