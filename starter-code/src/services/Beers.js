@@ -19,3 +19,8 @@ export const createBeer = async (title, description) => {
   const { data } = await beersService.post("/", { title, description });
   return data;
 };
+
+export const randomBeer = async () => {
+  const { data } = await beersService.get("/random");
+  return data;
+};
