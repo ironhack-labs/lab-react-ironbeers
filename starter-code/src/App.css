@@ -26,3 +26,109 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.allbeers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 50%;
+  margin: auto;
+}
+
+a {
+  align-self: flex-start;
+}
+
+p {
+  text-align: justify;
+}
+
+#nav-main {
+  background-color: rgb(30, 151, 221);
+  color: white;
+  width: 49%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 50%;
+  margin: auto;
+}
+
+.fa {
+  font-size: 8vh;
+  color: white;
+}
+
+.displaybeers {
+  display: flex;
+  margin-bottom: 5vh;
+  border-bottom: solid 1px grey;
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+  margin: auto;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+}
+
+.displaybeers img {
+  width: 15vh;
+  height: 40vh;
+  margin-left: 10vh;
+  margin-right: 5vw;
+}
+
+.nametagcontributed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 5vh;
+}
+
+.tag {
+  color: grey;
+  font-size: 3vh;
+}
+
+.contributed {
+  font-style: bold;
+  font-size: 2vh;
+}
+
+.linksinglebeer:link {
+  text-decoration: none;
+  color: black
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form input {
+  width: 30%;
+  height: 5vh;
+  margin-bottom: 1vh;
+  border-radius: 2vh;
+
+}
+
+.form .input {
+  width: 30%;
+  height: 15vh;
+}
+
+.form button {
+  background-color: rgb(11, 182, 224);
+  height: 5vh;
+  width: 30vw;
+  color: white;
+  border-radius: 5vh;
+}
