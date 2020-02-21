@@ -1,0 +1,31 @@
+.beerId-page{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: inherit;
+}
+
+.beerId-box {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.beerId-img{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    margin-right: 3rem;
+}
+
+.beerId-img img{
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.beerId-info{
+    width: 60%;
+}

@@ -1,0 +1,29 @@
+.home-page{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    width: 80%;
+}
+
+.home-box img{
+    margin-bottom: 2em;
+}
+
+.home-box a{
+    text-decoration: none;
+    color: darkslategrey;
+    font-size: 3em;
+}
+
+.home-box p{
+    text-align: justify;
+    line-height: 150%;
+}

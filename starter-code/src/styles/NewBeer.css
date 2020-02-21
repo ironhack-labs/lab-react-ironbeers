@@ -1,0 +1,88 @@
+.new-page{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+form div{
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: darkslategrey;
+    border-radius: 1rem;
+    padding: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+form label{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: floralwhite;
+    padding-right: 1rem;
+}
+
+form input{
+    width: 70%;
+    background: darkslategrey;
+    border: none;
+    border-radius: 1em;
+    color: floralwhite;
+    font-size: 1em;
+    padding-left: 1em;
+    outline: none;
+}
+
+form input::placeholder{
+    color: floralwhite;
+    opacity: 0.5;
+}
+
+form textarea{
+    width: 70%;
+    background: darkslategrey;
+    border: none;
+    border-radius: 1em;
+    color: floralwhite;
+    font-size: 1em;
+    padding-left: 1em;
+    outline: none;
+    height: 100%;
+}
+
+form textarea::placeholder{
+    color: floralwhite;
+    opacity: 0.5;
+}
+
+.textarea{
+    height: 100px;
+    align-items: baseline;
+}
+
+form button{
+    background-color: darkslategrey;
+    color: floralwhite;
+    font-size: 1em;
+    border-radius: 1em;
+    padding: 10px;
+    margin: 30px;
+    outline: none;
+    cursor: pointer;
+}
+
+.pop-ok, .pop-fail{
+    margin-bottom: 2em;
+    font-style: italic;
+}
