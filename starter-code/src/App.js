@@ -6,7 +6,7 @@ import { Link, Route, Switch } from "react-router-dom";
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div class="home">
         <Link to="/beers">
           <img src="/images/beers.png" alt="all-beers" />
         </Link>
@@ -195,15 +195,15 @@ class RandomBeer extends Component {
   }
 }
 
-class NewBeer extends Component {
-  render() {
-    return (
-      <div>
-        <NavBar />
-      </div>
-    );
-  }
-}
+// class NewBeer extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <NavBar />
+//       </div>
+//     );
+//   }
+// }
 
 class App extends Component {
   render() {
@@ -214,7 +214,7 @@ class App extends Component {
           <Route path="/beers/:beerId" component={BeerDetail} />
           <Route path="/beers" component={AllBeers} />
           <Route path="/random-beer" component={RandomBeer} />
-          <Route path="/new-beer" component={NewBeer} />
+          {/* <Route path="/new-beer" component={NewBeer} /> */}
         </Switch>
       </div>
     );
