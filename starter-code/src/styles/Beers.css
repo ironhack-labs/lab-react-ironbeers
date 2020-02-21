@@ -1,0 +1,42 @@
+.beers-cont {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.beer-cont {
+   width: 100vw;
+   height: 200px;
+   display: flex;
+   align-items: center;
+   justify-content: justify;
+   text-align: left;
+   contain: content;
+   color: grey;
+   border-bottom: 1px solid grey;
+   padding:0 20px;
+}
+
+.beer-cont img {
+    height: 90px;
+    margin-right: 20px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.beer-cont h2 {
+    font-size: 1em;
+    color: rgb(54, 52, 52);
+}
+
+.beer-cont h3 {
+    font-size: 0.9em;
+}
+
+.beer-cont p {
+    font-size: 0.7em;
+}

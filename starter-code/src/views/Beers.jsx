@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import APIEndpoint from "../api/Handler"
+import {Link } from 'react-router-dom'
+
+import "./../styles/Beers.css"
 
 export default class Beers extends Component {
 
@@ -17,10 +20,18 @@ export default class Beers extends Component {
       }
 
     render() {
+        {console.log(this.state.beers)}
         return this.state.beers.length? (
-            <div>
+            <div className="beers-cont">
                 {this.state.beers.map((beer,i) => (
-                    <div key={i}>{beer.name}</div>
+                    <div className="beer-cont" key={i}>
+                        <img src={beer.image_url} alt='beer'/>
+                        <div>
+                            <Link to={`/beers/${beer._id}`} className="link" ><h2>{beer.name}</h2></Link>
+                            <h3>{beer.tagline}</h3>
+                            <p>{beer.contributed_by}</p>
+                        </div>
+                    </div>
                 ))}
             </div>
         ) : (

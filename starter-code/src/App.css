@@ -31,4 +31,8 @@
   background-color:rgb(45, 197, 250);
   height: 70px;
   box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+  width: 100vw;
+  position: fixed;
+  top:0;
+  z-index: 2;
 }

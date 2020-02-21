@@ -5,7 +5,7 @@ import Home from "./views/Home"
 import Beers from "./views/Beers"
 import NewBeer from "./views/NewBeer"
 import RandomBeer from "./views/RandomBeer"
-// import SingleBeer from "./views/SingleBeer"
+import SingleBeer from "./views/SingleBeer"
 import NotFound from "./views/NotFound"
 
 import NavMain from "./components/NavMain"
@@ -23,6 +23,7 @@ class App extends Component {
         <Route path="/new-beer" component={NewBeer} />
         <Route path="/random-beer/:id" component={RandomBeer} />
         <Route path="*" component={NotFound} />
+        <Route path="/beers/:id" component={SingleBeer} />
       </Switch>
         
       </div>
