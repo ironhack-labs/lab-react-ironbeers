@@ -6,7 +6,7 @@ export default class Beer extends Component {
         beer:{}
     }
     async componentDidMount(){
-        const data= await getBeer()
+        const data= await getBeer(this.props.beerId)
     this.setState({beer:{...data}})
         }
     render() {

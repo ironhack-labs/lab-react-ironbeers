@@ -21,6 +21,6 @@ const beerService = axios.create({
   };
   
   export const getBeer = async (beerId) => {
-    const { data } = await beerService.get();
+    const { data } = await beerService.get(`/${beerId}`);
     return data;
   };
