@@ -1,10 +1,12 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+}
+img {
+  max-width: 100%;
 }
 
 .App-header {
@@ -36,6 +38,7 @@
   height: 200px;
   width: 400px;
   padding: 1rem;
+  margin: 1rem;
 }
 .beer-card img {
   flex: 1 1 25%;
@@ -44,4 +47,12 @@
 }
 .beer-card .card-body {
   flex: 1 1 75%;
+}
+
+.home .card {
+  margin: 1rem;
+}
+
+.container {
+  max-width: 960px;
 }
