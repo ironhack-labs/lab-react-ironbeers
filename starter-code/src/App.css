@@ -1,28 +1,180 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+
+/* HOME */
+.page {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.main-link {
+    height: 100%;
+    text-decoration: none;
+}
+.main-link>img {
+    width:100%;
+    height:auto;
+}
+.main-link>div {
+    padding: 0 20px 20px 20px;
+}
+.main-link>div>h1 {
+    color: rgb(104, 104, 104);
+}
+.main-link>div>p {
+    color: rgb(153, 153, 153);
+    text-align: justify;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/* NAV BAR */
+.nav {
+    width: 100vw;
+}
+.nav img {
+    width: 100%;
+    height: auto;
 }
 
-.App-title {
-  font-size: 1.5em;
+/* BEERS */
+.beersContainer {
+    padding: 0 10px;
+}
+.beerLink {
+    text-decoration: none;
+}
+.beerBox {
+    display: flex;
+    border-bottom: solid 0.5px lightgrey;
+    padding: 5% 3%;
+}
+.beerImg {
+    width: 20%;
+    margin: auto 0;
+}
+.beerImg>img {
+    width: 100%;
+    height: auto;
+}
+.beerIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+.beerIntro>h3 {
+    color: rgb(158, 158, 158);
+    padding-top: 7%;
+    padding-bottom: 3%;
+}
+.beerIntro>p, h2 {
+    color: black;
+}
+.beerIntro>p>span {
+    font-weight: bold;
 }
 
-.App-intro {
-  font-size: large;
+
+/* SINGLE BEER */ 
+
+.displayBeer {
+    margin: 35px 15px
+}
+.displayBeer>img {
+    width: 25%;
+    height:auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.beerHeader {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px
+}
+.beerTitle, .beerNumber{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.beerTitle>p:first-child {
+    width: 60%;
+    font-size: 23px;
+}
+.beerTitle>p:last-child {
+    font-size: 23px;
+    color: rgb(158, 158, 158);
+    font-weight: bold;
+}
+.beerNumber>p:first-child {
+    width: 60%;
+    font-size: 18px;
+    color: rgb(158, 158, 158);
+}
+.beerNumber>p:last-child {
+    font-size: 18px;
+    font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.beerDescription {
+    text-align: justify;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.beerAuthor {
+    font-weight: bold;
+    color: rgb(158, 158, 158);
+    font-size: 14px;
+}
+
+
+/* NEW BEER */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 30px;
+}
+
+.label {
+    padding-left: 2%;
+    font-weight: bold;
+}
+
+.input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 100px;
+    border: solid 0.5px lightgray;
+}
+
+.textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 0.5px lightgray;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 100px;
+    border: 0.5px;
+    background-color: rgb(86, 189, 253);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* BONUS */
+
+.searchBar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 0.5px;
+    font-style: oblique;
 }
