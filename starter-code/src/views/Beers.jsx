@@ -20,7 +20,7 @@ export default class Beers extends Component {
       }
 
     render() {
-        {console.log(this.state.beers)}
+        // {console.log(this.state.beers)}
         return this.state.beers.length? (
             <div className="beers-cont">
                 {this.state.beers.map((beer,i) => (

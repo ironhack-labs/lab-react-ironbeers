@@ -1,0 +1,22 @@
+.oneBeer-cont {
+    margin-top: 70px;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.oneBeer-cont img {
+    width: 80px;
+}
+
+.table {
+    height: 100%;
+    text-align: left;
+    padding: 20px;
+}
+
+.table tr {
+    height: 50px;
+}

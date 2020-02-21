@@ -19,11 +19,11 @@ class App extends Component {
       <NavMain/>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/beers" component={Beers} />
+        <Route exact path="/beers" component={Beers} />
         <Route path="/new-beer" component={NewBeer} />
         <Route path="/random-beer/:id" component={RandomBeer} />
+        <Route exact path="/beers/:id" component={SingleBeer} />
         <Route path="*" component={NotFound} />
-        <Route path="/beers/:id" component={SingleBeer} />
       </Switch>
         
       </div>
