@@ -14,6 +14,11 @@ const beerService = axios.create({
     const { data } = await beerService.get(`/${beerId}`);
     return data;
   };*/
+
+  export const randomBeer = async () => {
+    const { data } = await beerService.get("/random");
+    return data;
+  };
   
   export const createBeer = async (title, description) => {
     const { data } = await beerService.post("/", { title, description });
