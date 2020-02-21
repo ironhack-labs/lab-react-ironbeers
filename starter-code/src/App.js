@@ -9,6 +9,8 @@ import NewBeer from './views/NewBeer'
 import RandomBeer from './views/RandomBeer'
 import NotFound from './views/NotFound'
 
+import { FaBeer } from 'react-icons/fa';
+
 
 class App extends Component {
   render() {
@@ -16,7 +18,7 @@ class App extends Component {
       
       <div className="App">
           <header id="header-main">
-          <NavLink exact to="/"><p>Home</p></NavLink>
+          <NavLink exact to="/"><div id="home-icon"><FaBeer size={40} /></div></NavLink>
         </header>
         <Switch>
           <Route exact path="/" component={Home}/>

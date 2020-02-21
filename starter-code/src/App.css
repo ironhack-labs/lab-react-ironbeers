@@ -2,59 +2,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-#beer-container {
   display: flex;
-  flex-wrap: wrap;
-  width:100vw;
-  padding: 5vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
 }
 
-.beer-item {
-  width: 20vw;
-  margin-right: 2vw;
-  margin-bottom: 5vh;
-}
-
-.beer-item img {
-  max-height: 20vh;
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
 }
 
 #header-main {
   width: 100vw;
   height: 8vh;
   background-color: #3DC4FC;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vw;
 }
 
 #header-main p {
@@ -63,4 +37,170 @@
   line-height: 8vh;
   font-size: 4vh;
   font-weight: bold;
+}
+
+/* white: #f7f9f9;
+light-blue: #2081c3;
+dark-blue: #0a2c42;
+grey: #bfbfbf; */
+
+.ref {
+  text-decoration: none;
+  color: #f7f9f9;
+  padding: 20px 0 20px 50px;
+}
+
+#all-beers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#beers-container {
+  width: 100vw;
+  margin: 5vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#beers-container a {
+  text-decoration: none;
+}
+
+.beer {
+  width: 15vw;
+  border: 1px solid lightgrey;
+  background-color: lightgrey;
+  border-radius: 2px;
+  margin: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.ref-beer {
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text {
+  margin: 1vw;
+  text-align: center;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.img-beer {
+  max-width: 4vw;
+  margin: 1vw;
+}
+
+
+.text-add {
+  margin: 1vw;
+  text-align: left;
+}
+
+.beers-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.beers-header input {
+  width: 20vw;
+  height: 5vh;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  padding: 1vw;
+}
+
+
+h1 {
+  font-size: 4vh;
+  margin: 1vw;
+  font-style: normal;
+}
+
+.home-div {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2vw;
+  text-align: justify;
+  font-style: italic;
+
+}
+
+#home a {
+  text-decoration: none;
+  color: black;
+}
+
+#header-main a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 4vh;
+  margin: 2vw;
+  margin-bottom: 2vw;
+  font-style: normal;
+}
+
+.input-form {
+  width: 20vw;
+  height: 5vh;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 0.5vw;
+  margin: 0.5vw;
+}
+
+.text-form {
+  width: 20vw;
+  height: 10vh;
+  padding: 0.5vw;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 0.5vw;
+}
+
+#btn-form {
+  width: 20vw;
+  height: 5vh;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin: 0.5vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  color: black
+}
+
+#form-div {
+  width: 30vw;
+  height: 80vh;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+#home-icon {
+  color: white;
 }

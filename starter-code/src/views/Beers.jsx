@@ -21,7 +21,7 @@ export default class Beers extends Component {
         axios.get(`${this.state.APIurl}/search?q=${e.target.value}`)
         .then(APIRes => {
             this.setState({beers: APIRes.data})
-            this.setState({message: "no result found"})
+            this.setState({message: "No result found, sorry..."})
         })
         .catch(APIErr=>console.log(APIErr))
     }
@@ -29,21 +29,21 @@ export default class Beers extends Component {
     render() {
 
         return (
-            <div>
-            <div>
-                <h1>All Beers</h1>
-                <input type="text" onChange={this.filterBeers}></input>
+            <div id="all-beers">
+            <div className="beers-header">
+                <h2>All Beers</h2>
+                <input type="text" onChange={this.filterBeers} placeholder="What are you looking for..."></input>
             </div>
             {this.state.beers.length ?
             <div>
-                <div id="beer-container">
+                <div id="beers-container">
                     {this.state.beers.map(beer => (
                         <Link to={`/beer/${beer._id}`}>
-                        <div className="beer-item">
-                            <img src={beer.image_url}/>
-                            <h3>{beer.name}</h3>
-                            <h5>{beer.tagline}</h5>
-                            <p>Created by: {beer.contributed_by}</p>
+                        <div className="beer ref-beer">
+                            <img className="img-beer" src={beer.image_url}/>
+                            <h3 className="ref-beer">{beer.name}</h3>
+                            <h5 className="text">{beer.tagline}</h5>
+                            <p className="text">Created by: {beer.contributed_by}</p>
                         </div>
                         </Link>
                     ))}

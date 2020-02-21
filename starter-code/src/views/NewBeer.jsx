@@ -9,45 +9,45 @@ export default class NewBeer extends Component {
 
     render() {
         return (
-            <div>
+            <div id="form-div">
+                <h2>Add a new beer</h2>
                 <form action={this.state.APIurl} method="post">
 
                     <div>
-                        <label>Name</label>
-                        <input type="text" name="name"></input>
+                        {/* <label className="label-form">Name</label> */}
+                        <input className="input-form" type="text" name="name" placeholder="Name"></input>
                     </div>
 
                     <div>
-                        <label>Tagline</label>
-                        <input type="text" name="tagline"></input>
+                        {/* <label className="label-form">Tagline</label> */}
+                        <input className="input-form" type="text" name="tagline" placeholder="Tagline"></input>
                     </div>
 
                     <div>
-                        <label>Description</label>
-                        <textarea name="description"></textarea>
+                        <textarea className="text-form" name="description" placeholder="Add a description here..."></textarea>
                     </div>
 
                     <div>
-                        <label>First Brewed</label>
-                        <input type="text" name="first_brewed"></input>
+                        {/* <label className="label-form">First Brewed</label> */}
+                        <input className="input-form" type="text" name="first_brewed" placeholder="First brewed"></input>
                     </div>
 
                     <div>
-                        <label>Brewers Tips</label>
-                        <input type="text" name="brewers_tips"></input>
+                        {/* <label className="label-form">Brewers Tips</label> */}
+                        <input className="input-form" type="text" name="brewers_tips" placeholder="Brewers tips"></input>
                     </div>
 
                     <div>
-                        <label>Attenuation Level</label>
-                        <input type="number" name="attenuation_level"></input>
+                        {/* <label className="label-form">Attenuation Level</label> */}
+                        <input className="input-form" type="number" name="attenuation_level" placeholder="Attenuation level"></input>
                     </div>
 
                     <div>
-                        <label>Contributed by</label>
-                        <input type="text" name="contributed_by"></input>
+                        {/* <label className="label-form">Contributed by</label> */}
+                        <input className="input-form" type="text" name="contributed_by" placeholder="Contributed by"></input>
                     </div>
 
-                    <button type="submit">Add new beer</button>
+                    <button id="btn-form" type="submit">Let's go!</button>
 
                 </form>
             </div>

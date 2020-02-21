@@ -19,8 +19,8 @@ export default class RandomBeer extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Beer</h1>
+            <div className="beers-header">
+                <h2>Beer</h2>
                 <div className="beer-item">
                     <BeerComponent beer={this.state.beer}/> 
                 </div>

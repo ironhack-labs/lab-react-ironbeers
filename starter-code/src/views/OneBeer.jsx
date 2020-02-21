@@ -19,9 +19,9 @@ export default class OneBeer extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Beer</h1>
-                <div className="beer-item">
+            <div className="beers-header">
+                <h2>Beer</h2>
+                <div>
                     <BeerComponent beer={this.state.beer}/> 
                 </div>
             </div>
