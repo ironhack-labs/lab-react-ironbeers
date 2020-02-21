@@ -36,3 +36,16 @@
   top:0;
   z-index: 2;
 }
+
+.form {
+  margin-top: 100px;
+  display: grid;
+  grid-template-rows: repeat(auto,1fr);
+  align-items: left;
+  height: 70vh;
+  padding: 0 20px;
+}
+
+.form input {
+  margin: 5px 0px;
+}

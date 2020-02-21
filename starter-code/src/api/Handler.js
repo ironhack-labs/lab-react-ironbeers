@@ -12,4 +12,8 @@ export default class APIHandler {
   get(endpoint, params) {
     return this.handler.get(endpoint);
   }
+
+  post(endpoint, params){
+    return this.handler.post(endpoint, params);
+  }
 }

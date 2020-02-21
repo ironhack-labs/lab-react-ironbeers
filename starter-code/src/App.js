@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Switch, Route} from "react-router-dom"
+import 'bulma/css/bulma.css'
 
 import Home from "./views/Home"
 import Beers from "./views/Beers"
@@ -20,9 +21,9 @@ class App extends Component {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/beers" component={Beers} />
-        <Route path="/new-beer" component={NewBeer} />
-        <Route path="/random-beer/:id" component={RandomBeer} />
+        <Route path="/random-beer" component={RandomBeer} />
         <Route exact path="/beers/:id" component={SingleBeer} />
+        <Route path="/new-beer" component={NewBeer} />
         <Route path="*" component={NotFound} />
       </Switch>
         
