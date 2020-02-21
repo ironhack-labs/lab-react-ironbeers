@@ -19,7 +19,7 @@ const router = () => {
           <Route path="/" component={Home} exact />
           <Route path="/beers/create" component={CreateNewBeer} exact />
           <Route path="/beers" component={Beer} exact />
-          <Route path="/random-beer" component={RandomBeer} exact />
+          <Route path="/random" component={RandomBeer} exact />
           
         </Switch>
       </BrowserRouter>

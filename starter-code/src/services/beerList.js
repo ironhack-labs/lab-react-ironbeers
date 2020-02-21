@@ -20,3 +20,7 @@ const beerService = axios.create({
     return data;
   };
   
+  export const getBeer = async (beerId) => {
+    const { data } = await beerService.get();
+    return data;
+  };

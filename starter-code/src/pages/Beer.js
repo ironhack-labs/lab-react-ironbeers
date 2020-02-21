@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import {randomBeer} from "../services/beerList"
+import {getBeer} from "../services/beerList"
 
 export default class Beer extends Component {
     state={
         beer:{}
     }
     async componentDidMount(){
-        const data= await randomBeer()
+        const data= await getBeer()
     this.setState({beer:{...data}})
         }
     render() {
