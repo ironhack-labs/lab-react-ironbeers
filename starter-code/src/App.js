@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import { Switch, Route } from "react-router-dom";
 
+import Home from "./views/Home";
 import Beers from "./views/Beers";
 import RandomBeer from "./views/Random-beer";
 import NewBeer from "./views/New-beer";
@@ -18,7 +19,8 @@ function App() {
 
         <Switch>
           {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
-          <Route exact path="/" component={Beers} />
+          <Route exact path="/" component={Home} />
+          <Route path="/beers" component={Beers} />
           <Route path="/random-beer" component={RandomBeer} />
           <Route path="/new-beer" component={NewBeer} />
           <Route path="/one-beer/:beerId" component={OneBeer} />
