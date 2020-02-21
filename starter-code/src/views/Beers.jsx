@@ -5,7 +5,8 @@ import {Link} from 'react-router-dom'
 export default class Beers extends Component {
     state = {
         beers: [],
-        APIurl: "https://ih-beers-api2.herokuapp.com/beers"
+        APIurl: "https://ih-beers-api2.herokuapp.com/beers",
+        message: "Page loading"
     }
 
     componentDidMount() {
@@ -16,15 +17,25 @@ export default class Beers extends Component {
         .catch(APIErr=>console.log(APIErr))
     }
 
-
+    filterBeers = (e) => {
+        axios.get(`${this.state.APIurl}/search?q=${e.target.value}`)
+        .then(APIRes => {
+            this.setState({beers: APIRes.data})
+            this.setState({message: "no result found"})
+        })
+        .catch(APIErr=>console.log(APIErr))
+    }
 
     render() {
 
-
         return (
-            this.state.beers.length ?
+            <div>
             <div>
                 <h1>All Beers</h1>
+                <input type="text" onChange={this.filterBeers}></input>
+            </div>
+            {this.state.beers.length ?
+            <div>
                 <div id="beer-container">
                     {this.state.beers.map(beer => (
                         <Link to={`/beer/${beer._id}`}>
@@ -39,7 +50,8 @@ export default class Beers extends Component {
                 </div>
             </div> 
             :
-            <p>Page Loading</p>
+            <p>{this.state.message}</p>}
+            </div>
         )
         
     }
