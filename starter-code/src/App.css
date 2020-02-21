@@ -26,3 +26,27 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+#header {
+  background-color: lightblue;
+  height: 10vh;
+  width: 100vw;
+}
+
+
+#beers-list-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#beers-list-container img {
+  max-width: 100vw;
+  height: 30vh;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
