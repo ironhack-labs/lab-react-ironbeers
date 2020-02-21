@@ -1,7 +1,10 @@
 .home {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    margin-top: 70px;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    z-index: 100;
 }
 
 .home-cont {

@@ -1,9 +1,13 @@
 .beers-cont {
-    margin-top: 70px;
+    margin-top: 90px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+}
+
+.beers-cont input {
+    width: 90vw;
 }
 
 .beer-cont {

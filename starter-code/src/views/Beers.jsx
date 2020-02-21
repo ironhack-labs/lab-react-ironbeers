@@ -7,7 +7,8 @@ import "./../styles/Beers.css"
 export default class Beers extends Component {
 
     state = {
-        beers:[]
+        beers:[],
+        search:""
     }
 
     api = new APIEndpoint()
@@ -19,11 +20,30 @@ export default class Beers extends Component {
           .catch(apiErr => console.error(apiErr));
       }
 
+    handleSearch = (e) => {
+        this.setState({search:e.target.value})
+    }
+
+    filterArr = () => {
+        var filteredBeers = this.state.beers.filter(beer => beer.name.toLowerCase().match(this.state.search.toLowerCase()));
+
+        return filteredBeers;
+    }
+
     render() {
         // {console.log(this.state.beers)}
-        return this.state.beers.length? (
+        return this.filterArr().length? (
             <div className="beers-cont">
-                {this.state.beers.map((beer,i) => (
+            <input
+                type="text"
+                name="search"
+                value={this.state.search}
+                onChange={this.handleSearch}
+                className="input is-info"
+                placeholder="Search"
+            />
+            
+                {this.filterArr().map((beer,i) => (
                     <div className="beer-cont" key={i}>
                         <img src={beer.image_url} alt='beer'/>
                         <div>
