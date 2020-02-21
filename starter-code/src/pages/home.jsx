@@ -24,15 +24,28 @@ export default class home extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <Link to='/beers'>
-          <Card>All Beers</Card>
+          <Card>
+            <Card.Img variant='top' src='./images/beers.png' />
+            <Card.Body>
+              <Card.Title>All beers</Card.Title>
+            </Card.Body>
+          </Card>
         </Link>
         <Link to={`/beers/${this.state.randomBeer}`}>
-          <Card>Random Beer</Card>
+          <Card>
+            <Card.Img variant='top' src='./images/random-beer.png' />
+            <Card.Body>
+              <Card.Title>Random Beer</Card.Title>
+            </Card.Body>
+          </Card>
         </Link>
         <Link>
-          <Card>New Beer</Card>
+          <Card.Img variant='top' src='./images/new-beer.png' />
+          <Card.Body>
+            <Card.Title>Random Beer</Card.Title>
+          </Card.Body>
         </Link>
       </div>
     );
