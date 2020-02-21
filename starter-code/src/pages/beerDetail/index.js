@@ -24,6 +24,8 @@ class BeerDetail extends Component {
             image={this.state.beer.image_url}
             name={this.state.beer.name}
             tagline={this.state.beer.tagline}
+            first_brewed={this.state.beer.first_brewed}
+            attenuation_level={this.state.beer.attenuation_level}
             description={this.state.beer.description}
             contributed_by={this.state.beer.contributed_by}
          />

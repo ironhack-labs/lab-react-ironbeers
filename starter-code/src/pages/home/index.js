@@ -24,15 +24,17 @@ render(){
        <p>Lorem Ipsum jkngkdfnvknfndknvdknkdjnvfdvdvdinvfdivkjdnfvkdjnvidnvidnj</p>
         </div>
         </Link>
-
-        <div className='newBeer'>
-       <img src='./images/new-beer.png'></img>
+        
+        < Link to={'/random-beer'}>
+        <div className='randomBeer'>
+       <img src='./images/random-beer.png'></img>
        <h1>Random Beer</h1>
        <p>Lorem Ipsum jkngkdfnvknfndknvdknkdjnvfdvdvdinvfdivkjdnfvkdjnvidnvidnj</p>
         </div>
+        </Link>
 
-        <div className='randomBeer'>
-       <img src='./images/random-beer.png'></img>
+        <div className='newBeer'>
+       <img src='./images/new-beer.png'></img>
        <h1>New Beer</h1>
        <p>Lorem Ipsum jkngkdfnvknfndknvdknkdjnvfdvdvdinvfdivkjdnfvkdjnvidnvidnj</p>
         </div>
