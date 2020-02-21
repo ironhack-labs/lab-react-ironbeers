@@ -27,13 +27,13 @@ render(){
 
         <div className='newBeer'>
        <img src='./images/new-beer.png'></img>
-       <h1>All beers</h1>
+       <h1>Random Beer</h1>
        <p>Lorem Ipsum jkngkdfnvknfndknvdknkdjnvfdvdvdinvfdivkjdnfvkdjnvidnvidnj</p>
         </div>
 
         <div className='randomBeer'>
        <img src='./images/random-beer.png'></img>
-       <h1>All beers</h1>
+       <h1>New Beer</h1>
        <p>Lorem Ipsum jkngkdfnvknfndknvdknkdjnvfdvdvdinvfdivkjdnfvkdjnvidnvidnj</p>
         </div>
         </>
