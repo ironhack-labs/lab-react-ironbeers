@@ -7,6 +7,7 @@ export default function NavMain() {
             <NavLink exact to="/">Beers</NavLink>
             <NavLink to="/random-beer">Random-beer</NavLink>
             <NavLink to="/new-beer">New-beer</NavLink>
+            <NavLink to="/filter-beer">Filter-beer</NavLink>
         </nav>
     );
 }

@@ -6,6 +6,7 @@ import Beers from "./views/Beers";
 import RandomBeer from "./views/Random-beer";
 import NewBeer from "./views/New-beer";
 import OneBeer from "./views/One-beer";
+import FilterBeer from "./views/Filter-beer";
 
 import NavMain from "./components/NavMain";
 import "./App.css";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/random-beer" component={RandomBeer} />
           <Route path="/new-beer" component={NewBeer} />
           <Route path="/one-beer/:beerId" component={OneBeer} />
+          <Route path="/filter-beer" component={FilterBeer} />
         </Switch>
       </div>
   );

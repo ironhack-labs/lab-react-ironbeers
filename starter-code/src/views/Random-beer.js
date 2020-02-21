@@ -10,7 +10,6 @@ export default class RandomBeer extends Component {
     };
 
     componentDidMount() {
-
         axios
             .get(this.state.APIEndpoint)
             .then(apiRes =>  {

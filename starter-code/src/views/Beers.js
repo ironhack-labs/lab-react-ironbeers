@@ -17,11 +17,7 @@ export default class Beers extends Component {
     }
 
     render() {
-        console.log(this.state.beers);
-
-
-
-        return this.state.beers.length ? (
+             return this.state.beers.length ? (
 
                 <div className="page">
                     <h1 className="title">Beers</h1>

@@ -38,10 +38,6 @@ export default class NewBeer extends Component {
         axios
             .post(this.state.APIEndpoint, newBeer)
             .then(apiRes =>  {
-                console.log("________________________");
-                console.log(apiRes);
-                console.log(apiRes.data);
-                console.log("________________________");
             })
 
             .catch(apiErr => console.error(apiErr));
