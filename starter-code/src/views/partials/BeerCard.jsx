@@ -1,7 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const BeerCard = ({beer}) => {
   return (
+    <NavLink exact to={`/beers/${beer._id}`}>
     <div className="beerCard">
 
       <div className="beerCardImage">
@@ -15,6 +17,7 @@ const BeerCard = ({beer}) => {
       </div>
 
     </div>
+    </NavLink>
   )
 }
 

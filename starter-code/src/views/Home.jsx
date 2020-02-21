@@ -12,7 +12,7 @@ const Home = (props) => {
       </div>
       </NavLink>
 
-      <NavLink exact to="/random-beer">
+      <NavLink exact to="/random">
       <img src="/images/random-beer.png" alt="Random beer" />
       <div className="marginContainer">
         <h2>Random beer</h2>
@@ -20,7 +20,7 @@ const Home = (props) => {
       </div>
       </NavLink>
 
-      <NavLink exact to="/new-beer">
+      <NavLink exact to="/new">
       <img src="/images/new-beer.png" alt="New beer" />
       <div className="marginContainer">
         <h2>New beer</h2>

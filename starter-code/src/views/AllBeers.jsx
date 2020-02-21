@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import BeerCard from './partials/BeerCard';
-
-// import { NavLink } from 'react-router-dom'
 import axios from 'axios';
 
 class AllBeers extends Component {

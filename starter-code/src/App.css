@@ -1,9 +1,17 @@
-.page {}
-
 .page a {  color:black; text-decoration: none; }
 
-.is-hidden { display:none; }
 
+/* GENERAL */
+.marginContainer { margin:0 20px; }
+.is-hidden { display:none; }
+.flexAppart {
+  display:flex;
+  justify-content: space-between;
+  margin:20px 0;
+}
+.altColor { color:#777; }
+
+/* HEADER */
 .headerMain {
   display: flex;
   align-items: center;
@@ -21,8 +29,7 @@
   height: 30px;
 }
 
-.marginContainer { margin:0 20px; }
-
+/* BEER CARD */
 .beerCard {
   display:flex;
   margin:20px 0;
@@ -45,4 +52,51 @@
 }
 .beerCard .beerCardDetails {
   margin-left:30px;
+}
+
+/* BEER DETAILS */
+.beerDetails {
+  margin:20px;
+  font-size:1.2rem;
+}
+
+.beerDetailsImage {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:200px;
+}
+
+.beerDetails img {
+  display:block;
+  height:100%;
+  width:auto;
+}
+
+/* NEW BEER FORM */
+.newbeer {
+  margin:20px;
+}
+.formEntry {
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.formEntry input {
+  display:block;
+  height: 30px;
+  border:1px solid #777;
+  border-radius: 5px;
+}
+
+.formEntry.submitButton { display: flex; justify-content: center; align-items: center; }
+.formEntry.submitButton button {
+    display: block;
+    background: #03a9f4;
+    border: 1px solid #777;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
