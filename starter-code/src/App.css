@@ -29,6 +29,20 @@
   height: 30px;
 }
 
+/* ALL BEERS */
+.searchBar {
+  width: 100%;
+  box-sizing: border-box;
+  padding:0 20px;
+  margin: 10px 0;
+}
+.searchBar input {
+  width:100%;
+  height:30px;
+  border:1px solid #777;
+  border-radius: 5px;
+}
+
 /* BEER CARD */
 .beerCard {
   display:flex;
