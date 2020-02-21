@@ -12,7 +12,6 @@ export default class Beers extends Component {
     this.setState({
       beers
     });
-    console.log(this.state);
   }
 
   render() {
