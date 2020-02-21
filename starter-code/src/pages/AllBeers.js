@@ -14,7 +14,6 @@ class AllBeers extends Component {
         this.setState({
             beers
         })
-        console.log(this.state)
     }
 
     render() {
@@ -29,8 +28,8 @@ class AllBeers extends Component {
                                 image={beer.image_url}
                                 title={beer.name}
                                 paragraph={beer.description}
-                        />
-                        </Link>
+                            />
+                       </Link>
             })}
             </>
         )

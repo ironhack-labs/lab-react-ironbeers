@@ -14,13 +14,13 @@ const Home = () => {
         <Link to={'/randombeer'}>
             <DisplayCard 
                 image={'/images/random-beer.png'}
-                title='All beers'
+                title='Random Beer'
                 paragraph='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.'/>
         </Link>
         <Link to={'/newbeer'}>
             <DisplayCard 
                 image={'/images/new-beer.png'}
-                title='All beers'
+                title='New Beer'
                 paragraph='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.'/>
         </Link>
         </>
