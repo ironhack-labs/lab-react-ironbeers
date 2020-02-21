@@ -10,6 +10,9 @@ function Router() {
         <Switch>
             <Route exact path='/' component={Home}/>
             <Route exact path='/beers' component={Beers}/>
+            <Route exact path='/beers/:id' component={Beers}/>
+            <Route exact path='/random-beer' component={Beers}/>
+            <Route exact path='/new-beer' component={Beers}/>
         </Switch>
         </BrowserRouter>
     )

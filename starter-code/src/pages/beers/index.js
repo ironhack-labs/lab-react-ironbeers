@@ -11,8 +11,9 @@ class Beers extends Component {
 
 async componentDidMount() {
     const {data} = await axios.get('https://ih-beers-api2.herokuapp.com/beers')
+    console.log(data)
 
-    this.setState({beers: [...data.results]})
+    this.setState({beers: [...data]})
 }
 
 render(){
@@ -25,14 +26,15 @@ render(){
 
         }}>
            
-      {this.state.beers.map(beer => (
-          <Card key={beer.id}>
-         <img src={beer.image_url} alt={beer.name} />
-      <Link to={`/beers/${beer.id}`}>{beer.name}</Link>
-      <p>{beer.tagline}</p>
-      <p>{beer.contributed_by}</p>
-          </Card>
-      ))}
+      {this.state.beers.map((beer,index) => {
+          return <Link key={index} to={`/beers/${beer._id}`}> 
+            <Card  
+            image={beer.image_url}
+            title={beer.name}
+            description={beer.description}
+         />
+          </Link>
+})}
 
         </div>
     )
