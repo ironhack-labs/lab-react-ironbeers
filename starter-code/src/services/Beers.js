@@ -15,8 +15,22 @@ export const getBeer = async beerId => {
   return data;
 };
 
-export const createBeer = async (title, description) => {
-  const { data } = await beersService.post("/", { title, description });
+export const createBeer = async (name,
+  tagline,
+  description,
+  first_brewed,
+  brewer_tips,
+  attenuation_level,
+  contributed_by
+  ) => {
+  const { data } = await beersService.post("/new", { name,
+    tagline,
+    description,
+    first_brewed,
+    brewer_tips,
+    attenuation_level,
+    contributed_by
+    });
   return data;
 };
 

@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 function Header() {
     return (
         <nav>
-            <NavLink to="/"><span><i className="fas fa-home"></i></span>Home</NavLink> 
+            <NavLink to="/"><a href='/' ><img alt="home" src="https://lh3.googleusercontent.com/proxy/0qDsG9GlNQeT09FuLDTWfVeynuBLdRcMB0OYiqpZFEXjONY-9nH3YiHsdJSzaWZihDA76ulh_UUiZoFbMOjrvcL9nnWb4mXXfnyd7uH3pVgqumohW4RzGO6E_X_DIu4"/></a></NavLink> 
         </nav>
     )
 }

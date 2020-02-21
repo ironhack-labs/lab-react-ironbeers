@@ -1,9 +1,88 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   font-family: sans-serif;
 }
 
+.Card{
+  display:flex;
+  flex-direction: column;
+}
+
+.Card img{
+  width: 100%;
+  background-size: contain;
+  height: 50vh;
+
+}
+.Card a{
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+nav{
+  background-color:#1CACFF;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+nav img{
+  width: 5vh;
+}
 .cardBeers{
-  
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+.cardBeers img{
+  height: 30vh;
+  margin-right: 10px;
+}
+.cardBeers span{
+font-weight: bold;
+}
+
+.gray{
+  color:#949697;
+  font-weight: bold;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+#beer{
+  display: flex;
+  flex-direction: column;
+}
+#beer img{
+  height: 30vh;
+  width: 10vw;
+  margin:10px auto
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form input{
+  border-radius: 50px;
+  width:50vw;
+  border: 1px solid gray;
+  height: 5vh;
+  padding: 5px;
+}
+form label{
+  margin:10px;
+}
+#crea{
+  background-color:#1CACFF;
+  color: aliceblue;
+  border: none;
+}
+#description{
+  height: 20vh;
 }
