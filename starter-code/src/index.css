@@ -3,3 +3,16 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.beerItem {
+  display: flex;
+  font-size: .8rem;
+}
+
+.beerItem .tagline {
+  color: silver;
+}
+.beerItem > img {
+  height: 100px;
+  width: auto;
+}

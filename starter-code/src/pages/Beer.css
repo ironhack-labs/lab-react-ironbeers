@@ -1,0 +1,50 @@
+.beerGallery{
+    width: 90vw;
+    height: auto;
+    display: flex ;
+    flex-flow:row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;    
+    box-sizing: border-box;
+
+ }
+
+ .beerItem{
+     margin: 2%;
+     height: 20vh;
+     width: 25vw;
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: center;
+     text-align: center;
+
+     
+     box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+
+
+
+ }
+ .beerItem h2{
+     font-size: .9rem;
+     text-align: center;
+ }
+ .containerinfo{
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: flex-start;
+
+ }
+.beerItem>img{
+    height: 15vh;
+    width: 10%;
+}
+p{
+    font-size: .8rem;
+    text-align: justify;
+    margin: 2%;
+    display: flex;
+    flex-flow: column;
+    
+}

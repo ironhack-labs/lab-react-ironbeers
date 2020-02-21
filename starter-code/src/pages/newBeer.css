@@ -1,0 +1,31 @@
+*{
+    margin: .3%;
+    border: transparent;
+    
+}
+
+
+.containerNew{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    width: 60vw;
+    margin: 0 auto;
+}
+input {
+    text-align: center;
+    padding: 1%;
+    height: 6vh;
+    margin: .2% auto;
+    width: 80%;
+    box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+
+
+
+}
+button{
+    width: 35vw;
+    height: 10vh;
+    margin: 2% auto;
+
+}

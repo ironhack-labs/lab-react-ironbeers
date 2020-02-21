@@ -1,0 +1,26 @@
+.generalContainerDetail{
+    width: 70vw;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+
+
+}
+
+
+.generalContainerDetail img{
+    height: 50vh;
+    width: 7vw;
+    margin: 0 auto;
+}
+div{
+    margin: 2%;
+
+}
+a{
+    width: 80;
+    display: block;
+    text-align: center;
+}
