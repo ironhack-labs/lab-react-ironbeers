@@ -4,3 +4,18 @@ body {
   font-family: sans-serif;
 }
 
+@media screen and (max-width: 992px) {
+  .navbar img {
+    width: 100vw;
+    height: 8vh;
+  }
+  .home-page {
+    width: 100vw;
+  }
+  .home-page img {
+    width: 100vw;
+  }
+  .home-page h2, p {
+    color: black;
+  }
+}

@@ -19,18 +19,20 @@ class AllBeers extends Component {
     render() {
         return (
             <>
-            <NavBar />
-            <h1>All Beers</h1>
-            {this.state.beers.map((beer, index) => {
-                //Siempre poner el key al primer elemento que aparezca.
-                return <Link key={index} to={`/beer/${beer._id}`}>
-                            <DisplayCard
-                                image={beer.image_url}
-                                title={beer.name}
-                                paragraph={beer.description}
-                            />
-                       </Link>
-            })}
+            <div className="allbeers">
+                <NavBar />
+                    <h1>All Beers</h1>
+                        {this.state.beers.map((beer, index) => {
+                        //Siempre poner el key al primer elemento que aparezca.
+                        return <Link key={index} to={`/beer/${beer._id}`}>
+                                    <DisplayCard
+                                    image={beer.image_url}
+                                    title={beer.name}
+                                    paragraph={beer.description}
+                                />
+                                </Link>
+                })}
+            </div>
             </>
         )
     }
