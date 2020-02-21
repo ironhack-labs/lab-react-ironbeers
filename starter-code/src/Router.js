@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Beers from './components/Beers'
 import RandomBeer from './components/RandomBeer'
 import NewBeer from './components/NewBeer'
+import BeerId from './components/BeerId'
 
 //const Home=()=> <h1>Si imprime????</h1>
 
@@ -15,6 +16,7 @@ const Router = () => {
 <Switch>
 <Route path="/" component={Home} exact />
 <Route path="/beers" component={Beers} exact />
+<Route path="/beers/:beerId" component={BeerId} exact />
 <Route path="/random-beer" component={RandomBeer} exact />
 <Route path="/new-beer" component={NewBeer} exact />
 </Switch>

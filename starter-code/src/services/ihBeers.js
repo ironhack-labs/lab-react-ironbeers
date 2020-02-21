@@ -11,12 +11,20 @@ export const getAllBeers=async()=>{
     return data;
 };
 
+export const getAllBeersSize=async()=>{
+    const {data}=await myService.get();
+    return data.length;
+}
+
 export const getBeer=async beerID=>{
     const {data}=await myService.get(`/${beerID}`);
     return data;
 };
 
-export const createNewBeer=async (name,tagline,first_brewed,description,brewed_tips,attenuation_level,contributed_by)=>{
-    const {data}=await myService.post('/',{name,tagline,first_brewed,description,brewed_tips,attenuation_level,contributed_by})
+export const createBeer=async (name,tagline,first_brewed,description,brewed_tips,attenuation_level,contributed_by)=>{
+    const {data}=await myService.post('/new',{name,tagline,first_brewed,description,brewed_tips,attenuation_level,contributed_by})
     return data
 };
+
+
+

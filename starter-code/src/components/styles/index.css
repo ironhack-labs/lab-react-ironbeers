@@ -1,0 +1,136 @@
+body{
+background-color: rgb(240, 240, 240);
+margin:0;
+padding:0;
+}
+
+
+.Nav{
+    background-color:#3dc4fc;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Nav img{
+    width: 60px;
+}
+
+.Home, .AllBeers, .Form{
+margin:0;
+margin-bottom: 50px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+.Home article{
+width: 80%;
+border: 2px solid rgb(126, 126, 126);
+background-color:  rgb(150, 150, 150);
+border-radius: 50px;
+margin: 18px 0;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+.Home article:hover{
+    background-color: #8ac51d;
+}
+.Home img{
+    width: 100%;
+    margin: 25px 0 0 0;
+    border-radius: 50px;
+}
+
+.Home a{
+    width: 95%;
+}
+.Home h1{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.Home p{
+    text-align: justify;
+    margin:20px;
+}
+@media (min-width: 500px) {
+    .AllBeers article{
+        width: 30%;
+        margin:50px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        }
+}
+@media (max-width: 500px) {
+    .AllBeers article{
+        width: 90%;
+        margin:50px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        }
+}
+
+.AllBeers img{
+    height: 250px;
+    justify-self: start;
+}
+
+.descB{
+    width: 250px;
+    margin-left:20px ;
+}
+
+
+.Form label{
+    margin: 25px; 
+
+}
+
+.btnNew{
+    padding: 10px 25px;
+    background-color: rgb(75, 212, 75);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 18px;
+}
+
+.btnNew:hover{
+    background-color: rgb(7, 133, 7);
+}
+
+.BeerDetail{
+margin:50px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+.BeerDetail img{
+height: 450px;
+margin: 0;
+}
+
+@media (min-width: 500px) {
+    .BeerDetail p{
+        text-align: justify;
+        width: 50%;
+    }
+}
+@media (max-width: 500px) {
+    .BeerDetail p{
+        text-align: justify;
+        width: 95%;
+    }
+}
+

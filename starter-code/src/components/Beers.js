@@ -19,19 +19,20 @@ async componentDidMount(){
 
     render() {
         return (
-            <div>
-            {console.log(this.state.beers)}
+            <div className="AllBeers">
+           
                 {this.state.beers && (this.state.beers.map((beer,i)=>(
                  <article>
                      <div>
-                         <Link><img alt="beer" src={beer.image_url}></img></Link>
-                     </div>
-                     <div>
+                         <Link to={`/beers/${beer._id}`}><img alt="beer" src={beer.image_url}></img></Link>
+                         </div>
+                     <div className="descB">
                          <h1>{beer.name}</h1>
                          <h2>{beer.tagline}</h2>
                          <h3>{beer.contributed_by}</h3>
                      </div>
-                 </article>   
+                 </article>  
+                 
                 )))}
             </div>
         )
