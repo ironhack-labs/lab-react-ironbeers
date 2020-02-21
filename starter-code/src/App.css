@@ -22,7 +22,32 @@
   font-size: large;
 }
 
+.beer-list-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  width: 30vw;
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.beer-list-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.beer-list-container > img {
+  height: 20vh;
+}
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
