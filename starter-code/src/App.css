@@ -23,6 +23,25 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.beer-card {
+  display: flex;
+  height: 200px;
+  width: 400px;
+  padding: 1rem;
+}
+.beer-card img {
+  flex: 1 1 25%;
+  height: auto;
+  width: 25%;
+}
+.beer-card .card-body {
+  flex: 1 1 75%;
 }

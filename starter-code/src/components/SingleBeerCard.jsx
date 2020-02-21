@@ -24,12 +24,8 @@ export default class SingleBeer extends Component {
   render() {
     return (
       <Link to={`/beers/${this.state.id}`}>
-        <Card>
-          <Card.Img
-            variant='top'
-            src={this.state.image}
-            style={{ height: '100px', width: '50px' }}
-          />
+        <Card className='beer-card flex-row'>
+          <Card.Img variant='top' src={this.state.image} />
           <Card.Body>
             <Card.Title>{this.state.name}</Card.Title>
             <Card.Text>
