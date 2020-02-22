@@ -3,3 +3,18 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.nav img{
+  width: 50px;
+  height: auto;
+  
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: aqua;
+  
+}
