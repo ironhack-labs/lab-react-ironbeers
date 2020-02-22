@@ -1,28 +1,160 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: darkslategray;
+  transition: letter-spacing 1s;
+}
+
+a:hover {
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+body {
+  font-family: "Poppins", "Courier New", Courier, monospace;
+}
+
+.NavLink {
+  font-size: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.home h1 {
+  margin-top: 10px;
+}
+
+.box {
+  padding: 10px;
+  /* border: 1px solid #e5e5e5; */
+  box-shadow: 5px 5px 5px 5px #e5e5e5;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.grey {
+  color: #acaaaa;
+}
+
+/* PAGE : ALL BEERS */
+.beer {
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 5px 5px 5px #e5e5e5;
+  margin: 10px auto;
+  display: flex;
+}
+
+.beer-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.beer-image {
+  width: 20%;
+}
+
+.beer-image img {
+  height: 200px;
+  margin: 10px;
+}
+
+.beer-title {
+  font-size: 1.5rem;
+}
+
+/* PAGE ONE-BEER */
+.one-beer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
   padding: 20px;
-  color: white;
+  width: 75vw;
+  /* border: 1px solid #e5e5e5; */
+  box-shadow: 3px 3px 10px 3px #e5e5e5;
 }
 
-.App-title {
-  font-size: 1.5em;
+.one-beer-image {
+  height: 40vh;
+  align-self: center;
 }
 
-.App-intro {
-  font-size: large;
+.one-beer-image img {
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.one-beer-infos {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.one-beer-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+/* PAGE NEW BEER */
+.new-beer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 3px 3px 10px 3px #e5e5e5;
+}
+
+.new-beer h1 {
+  margin: 20px auto;
+}
+
+.new-beer input {
+  width: 50%;
+  height: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2%/50%;
+  box-shadow: 3px 3px 5px #e5e5e5;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.new-beer textarea {
+  width: 50%;
+  height: 100px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2%/10%;
+  box-shadow: 3px 3px 5px #e5e5e5;
+  margin-bottom: 10px;
+}
+
+.new-beer button {
+  width: 100px;
+  height: 40px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  box-shadow: 3px 3px 5px #e5e5e5;
+  border-radius: 10%/20%;
 }
