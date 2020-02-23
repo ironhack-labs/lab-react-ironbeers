@@ -6,8 +6,9 @@
 
 .grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   padding-top: 150px;
+
 }
 
 .beer-box{
@@ -21,6 +22,7 @@
 .flex{
   display: flex;
 }
+
 nav{
   justify-content: space-around;
   align-items: center;
@@ -31,7 +33,9 @@ nav{
 
 header{
   position: fixed;
-  background: url("https://source.unsplash.com/2000x150/?beer");
+  z-index: 1000;
+  /* background: url("https://source.unsplash.com/2000x150/?beer"); */
+  background-color: black;
   background-size: cover;
   height: 150px;
   width: 100vw;
@@ -42,5 +46,7 @@ header{
 
 }
 
-.horizontale img{
+.grid>div.horizontale:first-child{
+  padding-top: -200px;
 }
+

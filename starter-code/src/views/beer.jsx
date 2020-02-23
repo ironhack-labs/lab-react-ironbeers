@@ -3,11 +3,10 @@ import APIHandler from "./../api/Handler";
 // import { Link } from "react-router-dom";
 
 const api = new APIHandler();
-console.log(api);
 
 export default class beers extends Component {
   state = {
-    beer: "",
+    beer: null,
   };
   componentDidMount() {
     api

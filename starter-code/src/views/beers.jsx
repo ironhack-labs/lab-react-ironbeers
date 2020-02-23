@@ -3,7 +3,6 @@ import APIHandler from "./../api/Handler";
 import { Link } from "react-router-dom";
 
 const api = new APIHandler();
-console.log(api);
 
 export default class beers extends Component {
   state = {
@@ -19,14 +18,11 @@ export default class beers extends Component {
       .catch(apiErr => console.error(apiErr));
   }
 
-  //   beerClicked = (e) => console.log(e.target.id)
-  //   onClick={(e) => e.target.id ? this.beerClicked(e) :""}
-
   render() {
     return this.state.beers
       ? this.state.beers.map((b, i) => (
-          <Link to={"/beers/" + b._id}>
-            <div key={i} className="beer-box flex">
+          <Link key={i} to={"/beers/" + b._id}>
+            <div  className="beer-box flex">
               <img id={b._id} src={b.image_url} alt={b.name + " image"} />
               <div>
                 <h2 id={b._id} className="name">
@@ -41,13 +37,13 @@ export default class beers extends Component {
                         0,
                         b.contributed_by.search("<") - 1
                       )
-                    : ""}
+                    : "" }
                 </p>
               </div>
             </div>
           </Link>
         ))
-      : "";
+      : <img src="https://media.giphy.com/media/3s39mJ7zXU94mfAq4W/giphy.gif" alt="wait" srcset="string"/>
   }
 }
 

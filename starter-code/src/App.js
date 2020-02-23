@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
 import { Switch, Route, NavLink } from "react-router-dom";
-import newBeer from "./views/new-beer";
+import home from "./views/home";
 import beers from "./views/beers";
 import randomBeer from "./views/random-beer";
-import favoriteBeers from "./views/favorite-beers";
+import newBeer from "./views/new-beer";
 import FontAwesome from "react-fontawesome";
 import beer from "./views/beer";
+import 'bulma/css/bulma.css'
 
 export default class App extends Component {
   render() {
@@ -14,14 +15,14 @@ export default class App extends Component {
       <div className="App">
         <header>
           <nav className="flex">
-            <NavLink to="/new-beer">
+            <NavLink to="/">
               <FontAwesome className="" name="home" /> Home
             </NavLink>
-            <NavLink to="/">
+            <NavLink to="/beers">
               <FontAwesome className="" name="beer" /> Beers
             </NavLink>
-            <NavLink to="/my-beers">
-              <FontAwesome className="" name="star" /> Favorites
+            <NavLink to="/new-beer">
+              <FontAwesome className="" name="star" /> New beer
             </NavLink>
             
             <NavLink to="/random"><FontAwesome className="" name="question" /> Random</NavLink>
@@ -29,9 +30,9 @@ export default class App extends Component {
         </header>
         <div className="main-content grid">
           <Switch>
-            <Route exact path="/" component={beers} />
+            <Route exact path="/" component={home} />
             <Route path="/new-beer" component={newBeer} />
-            <Route path="/my-beers" component={favoriteBeers} />
+            <Route path="/beers" component={beers} />
             <Route path="/beers/:id" component={beer} />
             <Route path="*" component={randomBeer} />
           </Switch>

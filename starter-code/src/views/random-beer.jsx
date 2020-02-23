@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import APIHandler from "./../api/Handler";
 
 const api = new APIHandler();
-console.log(api);
 
 export default class randomBeer extends Component {
     state = {
@@ -25,7 +24,7 @@ export default class randomBeer extends Component {
     
           return (
             this.state.beer ? 
-            <div className="beer-box flex">
+            <div className="beer-box flex random">
                 <img id={this.state.beer._id} src={this.state.beer.image_url} alt={this.state.beer.name + " image"} />
             <div>
               <h2 id={this.state.beer._id} className="name">
