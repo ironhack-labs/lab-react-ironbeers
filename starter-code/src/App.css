@@ -1,28 +1,182 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+a {
+  text-decoration: none;
+  color: rgb(79, 79, 79);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body{
+  margin:0;
+  padding: 0;
+  font-family: Poppins;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+h2 {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-wrapper {
+  display: flex;
+  flex-direction : column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box p {
+  margin-bottom: 40px;
+}
+
+nav {
+  background-color: black;
   color: white;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-title {
-  font-size: 1.5em;
+nav h3 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 30px;
 }
 
-.App-intro {
-  font-size: large;
+.all-beers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.box-beer {
+  display: flex;
+  margin-right: 20px;
+  margin-top: 10px; 
+}
+
+.img-beer img {
+  height: 250px;
+  margin-right: 20px;
+}
+
+.beer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px
+}
+
+.all-beers a {
+  display: flex;
+  width: 20%;
+  border:1px solid grey;
+  box-shadow: 1px 1px lightgrey;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px
+}
+
+.box-info-beer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pic-beer img {
+  height: 500px;
+}
+
+.unique-beer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.unique-beer-info li:nth-child(1) {
+  font-size: 30px;
+}
+
+.unique-beer-info li:nth-child(2) {
+  /* font-size: 30px; */
+  color: grey
+}
+
+.unique-beer-info li:nth-child(3) {
+  font-weight: bold
+}
+
+.unique-beer-info li:nth-child(6) {
+  color: grey;
+  font-size: 14px
+}
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-form h1 {
+  margin-top: 50px;
+}
+
+.form {
+  box-shadow: 1px 1px lightgrey;
+  padding: 30px 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgrey;
+  
+  
+}
+
+.form input {
+  width: 300px;
+  margin-bottom: 20px;
+  height: 30px;
+}
+
+.form label{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.form textarea {
+  width: 300px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.btn-create {
+  padding: 15px 115px;
+  background-color: black;
+  color: white;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.msg {
+  color: white;
+  background-color: black;
+  padding : 30px 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
