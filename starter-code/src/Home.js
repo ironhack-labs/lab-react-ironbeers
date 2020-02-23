@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, NavLink, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
@@ -23,7 +23,7 @@ class Home extends Component {
               <img
                 style={{ width: "100vw" }}
                 src="../images/beers.png"
-                alt="Beer image"
+                alt=""
               />
             </div>
             <h2>All Beers</h2>
@@ -41,7 +41,7 @@ class Home extends Component {
               <img
                 style={{ width: "100vw" }}
                 src="../images/random-beer.png"
-                alt="Beer image"
+                alt=""
               />
             </div>
             <h2>Random Beer</h2>
@@ -59,7 +59,7 @@ class Home extends Component {
               <img
                 style={{ width: "100vw" }}
                 src="../images/new-beer.png"
-                alt="Beer image"
+                alt=""
               />
             </div>
             <h2>New Beer</h2>

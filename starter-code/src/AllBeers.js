@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, NavLink, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 class AllBeers extends Component {
@@ -23,11 +23,7 @@ class AllBeers extends Component {
           return (
             <div className="beer-item" key={beer._id}>
               <div>
-                <img
-                  className="beer-image"
-                  src={beer.image_url}
-                  alt="Beer image"
-                />
+                <img className="beer-image" src={beer.image_url} alt="" />
               </div>
               <div className="beer-info">
                 <h4>{beer.name}</h4>

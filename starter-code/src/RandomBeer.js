@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from "axios";
 
 class RandomBeer extends Component {
@@ -26,7 +26,7 @@ class RandomBeer extends Component {
             <img
               className="beer-image-detail"
               src={this.state.beer.image_url}
-              alt="Beer image"
+              alt=""
             />
           </div>
           <div className="beer-info-detail">
