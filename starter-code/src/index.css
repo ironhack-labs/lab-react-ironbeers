@@ -3,3 +3,10 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+a{
+  color: black
+}
+a:hover{
+  color: black;
+  text-decoration: none;
+}

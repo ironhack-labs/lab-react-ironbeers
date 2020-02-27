@@ -1,0 +1,20 @@
+[
+    {
+        "url": "/beers",
+        "img": "./images/beers.png",
+        "title": "All Beers",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "url": "/random-beer",
+        "img": "./images/random-beer.png",
+        "title": "Random Beers",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "url": "/new-beer",
+        "img": "./images/new-beer.png",
+        "title": "New Beers",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+]
