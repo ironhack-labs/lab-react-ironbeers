@@ -1,28 +1,83 @@
-.App {
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(0, 135, 252);
+  display: flex;
+  justify-content: center;
+}
+
+.headerlogo {
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.box {
+  height: 40vh;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.backgroundimage {
+  height: 20vh;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.linktext {
+  text-decoration: none;
+  color: black;
 }
 
-.App-title {
-  font-size: 1.5em;
+.beers {
+  background-image: url(./assets/beers.png);
 }
 
-.App-intro {
-  font-size: large;
+.newbeer {
+  background-image: url(./assets/new-beer.png);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.randombeer {
+  background-image: url(./assets/random-beer.png);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImg {
+  height: 20vh;
+  margin-right: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+
+.fullCardImg {
+  height: 50vh;
+  margin-right: 30px;
+}
+
+.formWidth {
+  text-align: center;
+  width: 30vw;
+}
+
+.formField {
+  margin: 20px;
 }
