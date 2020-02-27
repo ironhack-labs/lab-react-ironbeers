@@ -1,11 +1,7 @@
 import React from "react";
 import "./Beers.css";
-import axios from "axios";
-
-// import axios from "axios";
 
 class BeerDetail extends React.Component {
-
   render() {
     return (
       <div>

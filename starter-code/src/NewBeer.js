@@ -1,8 +1,6 @@
 import React from "react";
 import "./Beers.css";
-import axios from "axios";
 
-// import axios from "axios";
 
 class NewBeer extends React.Component {
   render() {
