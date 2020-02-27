@@ -6,24 +6,25 @@ import OneBeer from "./OneBeer";
 class Beers extends Component {
   render() {
     let arrBeers = this.props.beers;
-    console.log(this.props);
     return (
       <div className="beers">
         <div className="barNav">
           <Link to="/">
-            <h2>All Beers</h2>
+            <h2>🏠</h2>
           </Link>
         </div>
         <div>
           <ul>
             {arrBeers.map((beer, idx) => (
-              <OneBeer
-                key={idx}
-                image_url={beer.image_url}
-                name={beer.name}
-                tagline={beer.tagline}
-                contributed_by={beer.contributed_by}
-              ></OneBeer>
+              <Link to={`/beer/${beer._id}`}>
+                <OneBeer
+                  key={beer._id}
+                  image_url={beer.image_url}
+                  name={beer.name}
+                  tagline={beer.tagline}
+                  contributed_by={beer.contributed_by}
+                ></OneBeer>
+              </Link>
             ))}
           </ul>
         </div>

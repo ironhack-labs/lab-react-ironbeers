@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from './Homepage/HomePage'
 import Beers from './Beers/Beers';
 import axios from 'axios';
+import OneBeer from './Beers/OneBeer';
 
 class App extends Component {
   state = {
@@ -29,6 +30,14 @@ class App extends Component {
             render={props => {
               return (
                 <Beers beers={this.state.beers}></Beers>
+              );
+            }}
+          />
+          <Route path='/beer/:id'
+            render={props => {
+              return (
+
+                <OneBeer beers={this.state.beers.find(props.match.params.id)}></OneBeer>
               );
             }}
           />
