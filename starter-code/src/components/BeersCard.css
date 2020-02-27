@@ -1,0 +1,9 @@
+.card-beer img {
+    width: 100px;
+    object-fit: cover;
+}
+
+.card-beer {
+    margin-bottom: 20px;
+    align-items: center;
+}
