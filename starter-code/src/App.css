@@ -1,28 +1,10 @@
-.App {
-  text-align: center;
-}
+/* #root {
+  max-width: 320px;
+  height: 600px;
+  overflow-y: scroll;
+} */
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
+.card img {
   height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  object-fit: cover;
 }
