@@ -1,0 +1,25 @@
+
+.Allbeer{
+    border: 1px solid rgb(173, 171, 171);
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(175, 174, 174);
+    margin: 50px;
+}
+
+.Allbeer img {
+    height: 200px;
+    color: black;
+    margin-top:20px;
+}
+
+.Allbeer h2 {
+    font-size: 25px;
+}
+
+.Allbeer h3 {
+    font-size: 18px;
+}
+
+.Allbeer p {
+    font-size: 12px;
+}
