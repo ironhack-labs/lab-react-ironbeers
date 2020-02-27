@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import BeersList from './components/pages/beersList'
+import RandomBeer from './components/pages/randomBeer'
+import BeerDetails from './components/pages/beerDeatils'
+import BeerForm from './components/pages/newBeer'
+import HomePage from './components/pages/home'
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+import { Switch, Route } from 'react-router-dom'
+
+function App() {
+  return (
+    <>
+      <Switch>
+        <Route exact path="/" render={() => <HomePage />} />
+        <Route path="/beers" render={() => <BeersList />} />
+        <Route path="/random-beer" render={() => <RandomBeer />} />
+        <Route path="/details/:id" render={match => <BeerDetails {...match} />} />
+        <Route path="/add-beer" render={() => <BeerForm />} />
+      </Switch>
+    </>
+  )
+
 }
 
-export default App;
+export default App

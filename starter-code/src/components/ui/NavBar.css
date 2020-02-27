@@ -1,0 +1,9 @@
+.nav-home img{
+    width: 70px;
+    margin: 20px;   
+}
+
+.nav-home{
+    background-color: #3ec3fc;
+    text-align: center;
+}
