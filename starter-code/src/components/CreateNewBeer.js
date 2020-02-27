@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import BeerServices from '../services/beers.services'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import NavHome from './NavBar'
 
 
 class BeerForm extends Component {
@@ -44,6 +45,8 @@ class BeerForm extends Component {
     render() {
 
         return (
+            <>
+             <NavHome></NavHome>
             <Form onSubmit={this.handleSubmit}>
                 <Form.Group>
                     <Form.Label>Nombre</Form.Label>
@@ -77,6 +80,7 @@ class BeerForm extends Component {
 
                 <Button variant="dark" type="submit">Create new Beer</Button>
             </Form>
+            </>
         )
     }
 }
