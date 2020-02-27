@@ -1,0 +1,15 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+}
+
+.Home a {
+  width: 100vh;
+}
+
+.Home img {
+    width: 100%;
+}
