@@ -9,5 +9,7 @@ export default class BeerServices {
     }
 
     getAllBeers = () => this.service.get('/beers').then(response => response.data)
+    getBeerDetails = id => this.service.get(`/beers/${id}`).then(response => response.data)
+
 
 }

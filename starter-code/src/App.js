@@ -6,6 +6,8 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom'
 import Home from './components/home'
 import BeersList from './components/BeersList'
+import BeerDetails from './components/BeerDetails'
+
 
 import Header from './components/ui/header'
 
@@ -20,9 +22,10 @@ function App() {
         <Route exact path="/" render={() => <Home />} />
         <Route exact path="/beers" render={() => <BeersList />} />
 
-        {/* <Route path="/detalles/:id" render={match => <CoasterDetails {...match} />} />
-        <Route path="/signup" render={() => <Signup />} />
-        <Route path="/login" render={() => <Login />} /> */}
+        <Route path="/beer/:id" render={match => <BeerDetails {...match} />} />
+
+        {/* <Route path="/signup" render={() => <Signup />} />
+          <Route path="/login" render={() => <Login />} /> */}
       </Switch>
 
     </main>

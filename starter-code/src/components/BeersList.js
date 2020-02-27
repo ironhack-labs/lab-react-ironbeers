@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import BeerServices from '../services/beers.services'
 
 import BeerCard from './BeerCard'
+import Container from 'react-bootstrap/Container'
 
-import Row from 'react-bootstrap/Row'
 
 class BeersList extends Component {
 
@@ -16,7 +16,7 @@ class BeersList extends Component {
         this.services = new BeerServices()
     }
 
-    // componentDidMount = () => this.getAllBeers()
+    componentDidMount = () => this.getAllBeers()
 
     getAllBeers = () => {
         this.services.getAllBeers()
@@ -27,17 +27,17 @@ class BeersList extends Component {
     render() {
         console.log(this.state.beers)
         return (
-            <div>
+            <Container className="mt-5">
 
                 <h1>Beers list</h1>
 
 
-                <Row>
+                <ul className="list-unstyled">
                     {this.state.beers.map(elm => <BeerCard key={elm._id} {...elm} />)}
-                </Row>
+                </ul>
 
 
-            </div>
+            </Container>
         )
     }
 }
