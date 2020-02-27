@@ -1,18 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import HomePage from './Homepage/HomePage'
+import Beers from './Beers/Beers';
+import axios from 'axios';
 
 class App extends Component {
+  state = {
+    beers: []
+  }
+
+  componentDidMount() {
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers`)
+      .then(response => response.data)
+      .then((allBeers) => {
+        this.setState({ beers: allBeers })
+      });
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route
+            exact
+            path="/beers"
+            render={props => {
+              return (
+                <Beers beers={this.state.beers}></Beers>
+              );
+            }}
+          />
+          <Route path='/random-beer' component={Beers} />
+          <Route path='/new-beer' component={Beers} />
+        </Switch>
+
       </div>
     );
   }
