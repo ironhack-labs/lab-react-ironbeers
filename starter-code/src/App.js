@@ -20,6 +20,14 @@ class App extends Component {
         beers: beers.data
       });
     });
+    this.getRandomBeer();
+  }
+  getRandomBeer() {
+    axios.get("https://ih-beers-api2.herokuapp.com/beers/random").then(beer => {
+      this.setState({
+        beerRandom: beer.data
+      });
+    });
   }
   getById(id) {
     axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`).then(beer => {
@@ -29,9 +37,11 @@ class App extends Component {
       });
     });
   }
+  addBeer(e) {
+    console.log(e);
+  }
 
   render() {
-    console.log(this.state.beers);
     return (
       <div className="App">
         <Switch>
@@ -47,8 +57,16 @@ class App extends Component {
               />
             )}
           ></Route>
-          <Route exact path="/random-beer" component={RandomBeer}></Route>
-          <Route exact path="/new-beer" component={NewBeer}></Route>
+          <Route
+            exact
+            path="/random-beer"
+            render={() => <SingleBeer beer={this.state.beerRandom} />}
+          ></Route>
+          <Route
+            exact
+            path="/new-beer"
+            render={() => <NewBeer addBeeer={e => this.addBeer(e)} />}
+          ></Route>
           <Route
             exact
             path="/beers/:id"
