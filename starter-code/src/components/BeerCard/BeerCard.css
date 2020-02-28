@@ -1,0 +1,11 @@
+.BeerCard {
+    text-decoration: none;
+    color: #212121;
+    padding: 1rem;
+    display: block;
+  }
+  
+  .BeerCard img {
+    max-height: 20rem;
+    object-fit: cover;
+  }
