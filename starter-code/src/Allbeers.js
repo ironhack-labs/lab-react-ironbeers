@@ -17,7 +17,8 @@ state ={
         <h2>Hola estoy en All Beers</h2>
 
          <div className="beercard">
-         
+         {/* 
+         Si yo comento esto la aplicación tira pero me gustaría saber hacer el map
          {this.state.beers.map((beer, idx) => {
              {key=idx}
             <img src={this.props.dataFromParent[idx].image_url}/>
@@ -25,7 +26,7 @@ state ={
             <h3>{this.props.dataFromParent[idx].tagline}</h3>
             
          })
-         }
+         } */}
          
         </div>
 
