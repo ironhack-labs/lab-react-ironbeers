@@ -1,0 +1,10 @@
+.Beers {
+    display: flex;
+    border-bottom: 3px solid black;
+    align-items: center;
+    width: 30%;
+}
+.Beers img {
+    width: 5vw;
+    height: auto;
+}
