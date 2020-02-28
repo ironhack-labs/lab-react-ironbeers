@@ -1,0 +1,27 @@
+.home img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.home p {
+    width: 40%;
+}
+
+.home h2 {
+    color: black;
+}
+
+.home a {
+    text-decoration: none;
+    color: grey;
+}
+
+.home a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.home h2:hover {
+    color: black;
+    text-decoration: none;
+}

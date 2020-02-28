@@ -1,0 +1,11 @@
+.Details {
+    text-align: center;
+}
+
+.Details img {
+
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    height: 300px;
+}

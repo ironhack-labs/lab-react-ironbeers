@@ -1,0 +1,8 @@
+.card-beer img {
+    width: 100px;
+    height: 250px;
+}
+
+.card-beer {
+    display: flex;
+}
