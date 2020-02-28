@@ -6,7 +6,8 @@ export default class NewBeer extends Component {
         return (
             <div>
                 <Nav></Nav>
-                <form action="https://ih-beers-api2.herokuapp.com/beers/new" method="post">
+                {/* El cabron de Alejandro lo sacó asi <form action="https://ih-beers-api2.herokuapp.com/beers/new" method="post"> */} 
+                <form>
                     <label>Name:</label>  
                     <input
                         type="text"
