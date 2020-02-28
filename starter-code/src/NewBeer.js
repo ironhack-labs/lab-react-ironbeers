@@ -6,14 +6,14 @@ export default class NewBeer extends Component {
         return (
             <div>
                 <Nav></Nav>
-                <form action="">
+                <form action="https://ih-beers-api2.herokuapp.com/beers/new" method="post">
                     <label>Name:</label>  
                     <input
                         type="text"
                         placeholder="Name"
                         id="name"
                         name="name"
-                        value=""
+                        
                     />
                     <label>Tagline:</label>  
                     <input
@@ -21,7 +21,7 @@ export default class NewBeer extends Component {
                         placeholder="Tagline"
                         id="tagline"
                         name="tagline"
-                        value=""
+                      
                     />
                     <label>Description:</label>  
                     <textarea
@@ -29,7 +29,7 @@ export default class NewBeer extends Component {
                         placeholder="Description"
                         id="description"
                         name="description"
-                        value=""
+                        
                     />
                     <button type="submit"> Add Beer </button>
                 </form>
