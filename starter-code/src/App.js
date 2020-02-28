@@ -20,21 +20,15 @@ allbeers:[]
   }
 
 
-componentDidMount() {
-    axios.get("https://ih-beers-api2.herokuapp.com/beers")
-    .then(allBeers => {
-        this.setState({...this.state, allBeers})
-    })
-}
 
-// getAllBeers = () =>{
-//     axios.get(`https://ih-beers-api2.herokuapp.com/beers`)
-//     .then(responseFromApi => {
-//       this.setState({
-//         allBeers: responseFromApi.data
-//       })
-//     })
-//   }
+getAllBeers = () =>{
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers`)
+    .then(responseFromApi => {
+      this.setState({
+        allBeers: responseFromApi.data
+      })
+    })
+  }
 
 //   componentDidMount() {
 //     this.getAllBeers();
@@ -80,11 +74,12 @@ componentDidMount() {
        }}
        />
        <Route exact path="/beers"
-      render={() => {
-        return(
-       <Beers></Beers>
-       );
-       }}
+      // render={() => {
+      //   return(
+      //  <Beers></Beers>
+      //  );
+      //  }}
+      component={Beers}
        />
 
        
