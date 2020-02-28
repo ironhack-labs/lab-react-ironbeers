@@ -1,0 +1,51 @@
+.App {
+    padding: 0;
+    margin: 0;
+}
+
+.separator {
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(189, 185, 185);
+    margin: 30px 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.img-list {
+    max-height: 100px;
+}
+
+.name {
+    text-align: left;
+    font-size: 20px;
+    padding-top: 10px;
+    margin-bottom: 3px;
+}
+
+.tagline {
+    text-align: left;
+    font-size: 14px;
+    color: rgb(142, 141, 141);
+    margin-bottom: 2px
+}
+
+.created-by {
+    text-align: left;
+    font-size: 10px;
+}
+
+.link {
+    color: black;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
