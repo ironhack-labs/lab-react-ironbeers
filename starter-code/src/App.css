@@ -2,18 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
 .App-title {
   font-size: 1.5em;
 }
@@ -22,7 +10,76 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.navbar {
+  height: 50px;
+  background-color: rgb(101, 195, 247);
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #00000040;
+  padding-bottom: 40px;
+}
+
+.menu-item img {
+  object-fit: cover;
+}
+
+.beers-list {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.beer-overview {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  border-bottom: 1px solid #00000040;
+}
+
+.beer-overview-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.beer-overview img {
+  height: 250px;
+  margin-right: 30px;
+}
+
+.beer-details {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.beer-details img {
+  height: 350px;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header-info-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.beer-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
