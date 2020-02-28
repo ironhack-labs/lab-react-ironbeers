@@ -18,8 +18,9 @@ class BeerForm extends Component {
                 brewers_tips: '',
                 attenuation_level: 0,
                 contributed_by: ''
-            }
+            },
         }
+        this.message = "New beer successfully saved to database!"
     }
 
     finishAction = () => {
@@ -43,6 +44,18 @@ class BeerForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.postBeer()
+        alert(this.message)
+        this.setState({
+            beer: {
+                name: '',
+                tagline: '',
+                description: '',
+                first_brewed: '',
+                brewers_tips: '',
+                attenuation_level: 0,
+                contributed_by: ''
+            }
+        })
     }
 
     render() {
