@@ -28,7 +28,7 @@ class NewBeer extends Component {
   handleSubmit= event => {
     event.preventDefault();
     axios
-      .post(`https://ironbeer-api2.herokuapp.com/beers/new`, this.state)
+      .post(`https://ih-beers-api2.herokuapp.com/beers/new`, this.state)
       .then(e => console.log(e));
   };
 
