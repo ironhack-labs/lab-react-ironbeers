@@ -1,18 +1,43 @@
-import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
+import React from "react";
 import Beerlist from "./Beerlist";
 
+class Allbeers extends React.Component {
 
-const Allbeers = () => {
+state ={
+ beers:this.props.dataFromParent
+}
+  render() {
     return (
-        <section>
-           
-                <h2><Link to="/">Home</Link></h2>       
-                <h1>Hola estoy en Allbeers</h1>
-                <Beerlist></Beerlist>
 
-        </section>
-    )
+      <div>
+      {/* The data from parent is: {this.props.dataFromParent}  */}
+        <h1><Link to="/">Home</Link></h1>       
+        <h2>Hola estoy en All Beers</h2>
+
+         <div className="beercard">
+         
+         {this.state.beers.map((beer, idx) => {
+             {key=idx}
+            <img src={this.props.dataFromParent[idx].image_url}/>
+            <h2>{this.props.dataFromParent[idx].name}</h2>
+            <h3>{this.props.dataFromParent[idx].tagline}</h3>
+            
+         })
+         }
+         
+        </div>
+
+         
+      </div>
+    );
+  }
 }
 
 export default Allbeers;
+
+{/* ESte primero sí lo piota
+    <img src={this.props.dataFromParent[0].image_url}/>
+         <h2>{this.props.dataFromParent.name}</h2>
+         <h3>{this.props.dataFromParent.tagline}</h3> */}

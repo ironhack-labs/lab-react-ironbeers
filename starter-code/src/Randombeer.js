@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 
 
 const Randombeer = () => {
+    
     return (
         <section>
-            <ul>
-                <li><Link to="/">Home</Link></li>       
-                <h1>Hola estoy en Randombeer</h1>
-            </ul>
+                <h1><Link to="/">Home</Link></h1>       
+                <h2>Hola estoy en Randombeer</h2>
         </section>
     )
 }
