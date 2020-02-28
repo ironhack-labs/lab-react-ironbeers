@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 class NewBeer extends Component {
   handleSubmit(e) {
-    let data = new FormData(e.target);
-    console.log(data);
     console.log(this.props);
     e.preventDefault();
+    let data = new FormData(e.target);
+    console.log(data);
     this.props.addBeeer(data);
   }
 
@@ -22,6 +22,7 @@ class NewBeer extends Component {
             <div className="control">
               <input
                 name="name"
+                htmlFor="name"
                 className="input"
                 type="text"
                 value="name"
@@ -34,6 +35,7 @@ class NewBeer extends Component {
             <div className="control">
               <input
                 name="tagline"
+                htmlFor="tagline"
                 className="input"
                 type="text"
                 value="tagline"
@@ -46,6 +48,7 @@ class NewBeer extends Component {
             <div className="control">
               <input
                 name="description"
+                htmlFor="description"
                 className="input"
                 type="text"
                 value="description"
@@ -58,6 +61,7 @@ class NewBeer extends Component {
             <div className="control">
               <input
                 name="first_brewed"
+                htmlFor="first_brewed"
                 className="input"
                 type="text"
                 value="first_brewed"
@@ -70,6 +74,7 @@ class NewBeer extends Component {
             <div className="control">
               <input
                 name="brewers_tips"
+                htmlFor="brewers_tips"
                 className="input"
                 type="text"
                 value="brewers_tips"
@@ -82,6 +87,7 @@ class NewBeer extends Component {
             <div className="control">
               <input
                 name="attenuation_level"
+                nahtmlForme="attenuation_level"
                 className="input"
                 type="number"
                 value="1"
@@ -94,6 +100,7 @@ class NewBeer extends Component {
             <div className="control">
               <input
                 name="contributed_by"
+                htmlFor="contributed_by"
                 className="input"
                 type="text"
                 value="contributed_by"
