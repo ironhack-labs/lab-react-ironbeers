@@ -19,7 +19,20 @@
 }
 
 .App-intro {
-  font-size: large;
+  font-size: small;
+  color: gray;
+}
+
+.NavB {
+  background-color: #03dbfc; /* Green */
+  border: none;
+  color: white;
+  padding: 25px 400px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 70px;
+
 }
 
 @keyframes App-logo-spin {
