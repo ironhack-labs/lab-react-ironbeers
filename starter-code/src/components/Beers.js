@@ -4,6 +4,7 @@ import BeerCard from './BeerCard'
 
 export default class Beers extends Component {
     render() {
+        console.log(this.props.beerslist)
         return (
             <div>
                 <Nav />

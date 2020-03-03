@@ -1,26 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 
-import axios from 'axios';
-
-const BeerCard = ({detail: {url}}) => {
-
-    let [data, setData] = useState({})
-
-    useEffect(() => {
-        axios.get(url)
-            .then(res => {
-                setData(res.data)
-            })
-            .catch(err => console.error(err))
-    }, [])
+const BeerCard = (props) => {
 
     return (
+        
         <div>
-            <h4>{data.name}</h4>
-            <img src={data.image_url && data.image_url} alt=""/>
+            <Fragment>
+                <img src={props.detail.image_url} alt="" height="100px"/>
+                <h4>{props.detail.name}</h4>
+                <p>{props.detail.tagline}</p>
+                <p>{props.detail.contributed_by}</p>
+            </Fragment>
         </div>
     )
 }
-
 
 export default BeerCard;
