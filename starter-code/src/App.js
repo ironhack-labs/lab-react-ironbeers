@@ -5,6 +5,7 @@ import './App.css';
 import axios from 'axios';
 import Beers from './components/Beers'
 import Home from './components/Home'
+import BeerDetail from './components/BeerDetail';
 
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
         <Switch>
         <Route exact path='/' render={() => <Home />} />
           <Route exact path='/beers' render={() => <Beers beerslist={this.state.beerslist} />} />
+          <Route exact path='/beer-detail' render={() => <BeerDetail beerslist={this.state.beerslist} />} />
           {/* <Route path='/random-beer' component={Random_beer} /> */}
         </Switch>
       </div>
