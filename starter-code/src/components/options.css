@@ -1,0 +1,12 @@
+.option{
+  overflow: hidden;
+  border:1px solid black;
+  padding: 4px;
+  margin:10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+
+}
+.option:hover{
+  cursor: pointer;
+}
