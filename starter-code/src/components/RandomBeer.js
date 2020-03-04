@@ -1,7 +1,8 @@
 import React from "react";
+import CompleteBeer from "./CompleteBeer";
 
 const RandomBeer = () => {
-  return <div></div>;
+  return <CompleteBeer random={true} />;
 };
 
 export default RandomBeer;

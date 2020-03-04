@@ -33,7 +33,7 @@ class App extends Component {
               return (
                 <Fragment>
                   <Header />
-                  <RandomBeer random={true} />
+                  <RandomBeer />
                 </Fragment>
               );
             }}
@@ -57,7 +57,7 @@ class App extends Component {
               return (
                 <Fragment>
                   <Header />
-                  <CompleteBeer {...props} />
+                  <CompleteBeer {...props} random={false} />
                 </Fragment>
               );
             }}
