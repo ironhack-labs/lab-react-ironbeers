@@ -10,7 +10,8 @@ import BeerDetail from './components/BeerDetail';
 
 class App extends Component {
   state = {
-    beerslist: []
+    beerslist: [],
+    beer:[]
   }
 
   componentDidMount() {
@@ -25,9 +26,9 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-        <Route exact path='/' render={() => <Home />} />
+          <Route exact path='/' render={() => <Home />} />
           <Route exact path='/beers' render={() => <Beers beerslist={this.state.beerslist} />} />
-          <Route exact path='/beer-detail' render={() => <BeerDetail beerslist={this.state.beerslist} />} />
+          <Route exact path='/beer-detail/:idx' render={match => <BeerDetail {...match} />} />
           {/* <Route path='/random-beer' component={Random_beer} /> */}
         </Switch>
       </div>

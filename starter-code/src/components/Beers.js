@@ -11,7 +11,7 @@ export default class Beers extends Component {
                 <h3>Lista de Cervezas</h3>
                 {
                     this.props.beerslist.map((e, i) => {
-                        return <BeerCard detail={e} key={i} />
+                        return <BeerCard detail={e} id={i} key={i} />
                     })
                 }
                 

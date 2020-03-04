@@ -24,10 +24,11 @@
 }
 
 .NavB {
-  background-color: #03dbfc; /* Green */
+  background-color: #03dbfc;
   border: none;
   color: white;
-  padding: 25px 400px;
+  padding: 25px;
+  width: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
