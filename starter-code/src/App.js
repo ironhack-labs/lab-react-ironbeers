@@ -7,6 +7,7 @@ import Beer from "./HomePage/Beer";
 import RandomBeer from "./HomePage/RandomBeer";
 import AllBeers from "./HomePage/AllBeers";
 import NewBeer from "./HomePage/NewBeer";
+
 class App extends Component {
   render() {
     return (
@@ -18,10 +19,10 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <HomeLink />
               </Switch>
-              <Route exact path="/beers" component={AllBeers} />
-              <Route exact path="/random-beer" component={RandomBeer} />
-              <Route exact path="/new-beer" component={NewBeer} />
-              <Route path="/beers/:beerId" component={Beer} />
+                <Route exact path="/beers" component={AllBeers} />
+                <Route exact path="/random-beer" component={RandomBeer} />
+                <Route exact path="/new-beer" component={NewBeer} />
+                <Route path="/beers/:beerId" component={Beer} />
             </div>
           </div>
         </div>

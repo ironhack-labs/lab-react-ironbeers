@@ -8,7 +8,8 @@ class AllBeers extends Component {
   };
 
   componentDidMount() {
-    axios.get("https://ih-beers-api2.herokuapp.com/beers").then(response => {
+    axios.get("https://ih-beers-api2.herokuapp.com/beers")
+    .then(response => {
         console.log(response.data);
         this.setState({
         beerList: response.data
