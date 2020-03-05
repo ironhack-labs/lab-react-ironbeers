@@ -15,7 +15,7 @@ class NewBeer extends Component {
     handleChange = event => {
         console.log(event.target.name, event.target.value);
         this.setState({
-        event.target.name]: event.target.value
+        [event.target.name]: event.target.value
         });
     };
 
