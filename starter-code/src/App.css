@@ -23,6 +23,85 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+a,
+a:hover,
+a:active,
+h2 {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  color: gray;
+  text-decoration: none;
+}
+
+.beer-item {
+  display: flex;
+  justify-content: flex-start;
+  margin: 4% 4%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid gray;
+}
+
+.beer-image {
+  width: 15vw;
+}
+
+.beer-info {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2% 4%;
+  padding: 1%;
+}
+
+.single-beer-container {
+  margin: 4% 4%;
+}
+
+.beer-image-detail {
+  width: 25vw;
+}
+
+.beer-info-detail {
+}
+
+.headline-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subheadline-container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin: 5% 2% 2% 2%;
+}
+
+.form-group label {
+  display: flex;
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 5%;
+}
+
+.form-group button {
+  width: 80vw;
+  margin-bottom: 5%;
 }

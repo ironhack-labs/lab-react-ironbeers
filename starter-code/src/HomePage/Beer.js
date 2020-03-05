@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-class RandomBeer extends Component {
+class Beer extends Component {
   state = {
     beer: {}
   };
 
   componentDidMount() {
-    axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
-        .then(response => {
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.beerId}`
+      )
+      .then(response => {
         console.log(response.data);
         this.setState({
           beer: response.data
@@ -46,4 +47,4 @@ class RandomBeer extends Component {
   }
 }
 
-export default RandomBeer;
+export default Beer;
