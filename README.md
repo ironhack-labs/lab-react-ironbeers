@@ -4,9 +4,9 @@
 
 Since beer is one of the most consumed drinks between Ironhackers 🍻, our mission here is to create an app to showcase some of the best-handcrafted beers, but not just that - to save some as well so the rest of Ironhack community is informed 😌. Our end goal is creating something like this:
 
-<div style="display: flex; justify-content: center">
-<img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
-</div>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
+</p>
 
 ## Requirements
 
@@ -55,7 +55,13 @@ The **IronBeers** project will include the following features:
 
 ## Instructions
 
-:exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design! As we said this is bonus, so it's up to you. :+1:
+:exclamation: In this Lab, we will ask you to shoot for the stars: as a **bonus** focus on **mobile first** design! This is bonus, so it's up to you on how deep you go. :+1:
+
+To get started, you should install `react-router-dom` and `axios`, to structure your routing logic and make calls to the external API, respectively.
+
+```bash
+npm install react-router-dom
+```
 
 ### Iteration 1: Home Page
 
@@ -65,11 +71,11 @@ Create a **Home Page**. This view should include three links to separate pages:
 - `/random-beer`
 - `/new-beer`
 
-Feel free to design it however you wish, but in case you want to do it the way we did it, you can find the following images in `public/images` folder:
+Feel free to design it however you wish, but in case you want to do it the way we did it, you can find the following images in the `/public/images` folder:
 
-<div style="display: flex; justify-content: center">
-  <img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png" height="600px" />
-</div>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65∏-538fb59f79ab.png" height="600px" />
+</p>
 
 ### Iteration 2: Header
 
@@ -93,9 +99,9 @@ You should display the following from each of the beers:
 - `contributed_by`
 - **Also, add the link to check the details of each beer. The link should navigate to `/beers/:beerId`.**
 
-<div style="display: flex; justify-content: center">
+<p align="center">
   <img src="https://user-images.githubusercontent.com/23629340/40706960-96223ade-63ef-11e8-9375-b7b6d091e716.png" height="600px" />
-</div>
+</p>
 
 The first time you call the API, it might take a bit to respond. It's hosted on Heroku, and it goes to sleep after 30 minutes, you know! :wink:
 
@@ -113,9 +119,9 @@ When a user click on one of the beers, you should display a detailed view of it,
 
 Again, we **strongly recommend to console log the response from the API**.
 
-<div style="display: flex; justify-content: center">
+<p align="center">
   <img src="https://user-images.githubusercontent.com/23629340/40707269-84bedd78-63f0-11e8-86c3-b14efb9323a7.png" height="600px" />
-</div>
+</p>
 
 ### Iteration 5: Random Beer
 
@@ -130,9 +136,9 @@ The same way we did with the **Single Beer** view, we should render the followin
 - `description`
 - `contributed_by`
 
-<div style="display: flex; justify-content: center">
+<p align="center">
   <img src="https://user-images.githubusercontent.com/23629340/40707457-05a22990-63f1-11e8-84b2-a86143b7b821.png" height="600px" />
-</div>
+</p>
 
 ### Iteration 6: Create New Beer
 
@@ -154,9 +160,9 @@ Notice that the fields on the `body` should have those specific **names** so the
 _What could go wrong?_: You inputted string instead of number in the _attenuation_level_ field and the server sent you **500** error.
 Since we didn't cover how to upload images yet, don't worry about it now - the API will assign a random image to the new beer. :beer:
 
-<div style="display: flex; justify-content: center">
+<p align="center">
   <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
-</div>
+</p>
 
 ### (Extra) Bonus Iteration: Filter the Beers
 
