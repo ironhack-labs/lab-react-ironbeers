@@ -1,17 +1,34 @@
 import React from "react";
-import logo from "../public/images/logo.svg";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "../public/styles/App.css";
+import Beers from "./Beers";
+import RandomBeer from "./RandomBeer";
+import NewBeer from "./NewBeer";
 
 export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Welcome to React</h1>
-      </header>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
+    <>
+      <Router>
+        <div>
+          <nav>
+            <Link to="/beers" style={{ textDecoration: "none" }}>
+              <Beers />
+            </Link>
+            <Link to="/random-beer" style={{ textDecoration: "none" }}>
+              <RandomBeer />
+            </Link>
+
+            <Link to="/new-beer" style={{ textDecoration: "none" }}>
+              <NewBeer />
+            </Link>
+          </nav>
+          <Switch>
+            <Route path="/beers"></Route>
+            <Route path="/random-beer"></Route>
+            <Route path="/new-beer"></Route>
+          </Switch>
+        </div>
+      </Router>
+    </>
   );
 };
