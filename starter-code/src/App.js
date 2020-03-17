@@ -1,17 +1,12 @@
 import React from "react";
-import logo from "../public/images/logo.svg";
-import "../public/styles/App.css";
+import { BrowserRouter } from "react-router-dom";
+import { Layout } from "./layout/layout";
+import { Contain } from "./components/contain";
 
-export const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Welcome to React</h1>
-      </header>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
-  );
-};
+export const App = () => (
+  <BrowserRouter>
+    <Layout>
+      <Contain />
+    </Layout>
+  </BrowserRouter>
+);
