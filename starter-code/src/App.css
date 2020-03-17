@@ -25,6 +25,7 @@ h1 {
   height: 50px;
 }
 
-.header .link {
+.header i {
   color: white;
+  font-size: xx-large;
 }

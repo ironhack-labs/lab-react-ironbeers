@@ -5,8 +5,8 @@ import "../App.css";
 export const Header = () => {
   return (
     <nav className="header">
-      <Link className="link" to="/">
-        HOME
+      <Link to="/">
+        <i className="fa fa-home"></i>
       </Link>
     </nav>
   );
