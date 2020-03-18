@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Beer } from "./pages/Beers";
+import { RandomBeer } from "./pages/Random-beer";
+import { NewBeer } from "./pages/New-beer";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
-
-export default App;
+export const App = () => {
+  return (
+    <div>
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/beers" component={Beer}></Route>
+        <Route exact path="/random-beer" component={RandomBeer}></Route>
+        <Route exact path="/new-beer" component={NewBeer}></Route>
+      </Switch>
+    </div>
+  );
+};
