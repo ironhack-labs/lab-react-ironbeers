@@ -1,6 +1,11 @@
+// dependencies
 import React from 'react';
+
+// local modules
 import { Options } from '../components/Options';
-import { Container } from '../styles/HomePage';
+
+// styled components
+import { Container } from '../styles/PageContent';
 
 export const Home = () => {
   return (

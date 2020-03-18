@@ -1,9 +1,14 @@
+// dependencies
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+// local modules
 import beers from '../../public/images/beers.png';
 import randomBeer from '../../public/images/random-beer.png';
 import newBeer from '../../public/images/new-beer.png';
-import { Card } from '../styles/HomePage';
-import { Link } from 'react-router-dom';
+
+// styled components
+import { Card } from '../styles/PageContent';
 
 export const Options = () => {
   const options = [
