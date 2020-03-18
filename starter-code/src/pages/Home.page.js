@@ -20,7 +20,7 @@ const pages = [
     link: "/random-beer"
   },
   {
-    title: "All beers",
+    title: "New beer",
     img: newBeer,
     message: "Click here to add a new and spectacular beer",
     link: "/new-beer"
@@ -39,7 +39,8 @@ export const HomePage = () => {
     <Container>
       {pages.map((e, i) => {
         return (
-          <Link to={e.link} key={i}>
+          // try to remove classname and do it with styled-components
+          <Link to={e.link} key={i} className="link">
             <Card {...e} key={i} />
           </Link>
         );
