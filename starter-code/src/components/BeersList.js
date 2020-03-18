@@ -1,5 +1,10 @@
+// dependencies
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
+// styled components
+import { BeerCard, BeersContainer, ImgContainer } from '../styles/PageContent';
 
 export const BeersList = () => {
   const [beers, setBeers] = useState([]);
@@ -18,21 +23,26 @@ export const BeersList = () => {
   const formatName = str => str.replace(/<.*>/, '');
 
   return (
-    <div>
+    <BeersContainer>
       {beers.length === 0 ? (
         <p>Loading...</p>
       ) : (
         beers.map((beer, i) => {
           return (
-            <div key={i}>
-              <img src={beer.image_url} />
-              <h3>{beer.name}</h3>
-              <p>{beer.tagline}</p>
-              <p>Created by: {formatName(beer.contributed_by)}</p>
-            </div>
+            <BeerCard key={i}>
+              <ImgContainer>
+                <img src={beer.image_url} />
+              </ImgContainer>
+
+              <div>
+                <Link to="/">{beer.name}</Link>
+                <p>{beer.tagline}</p>
+                <p>Created by: {formatName(beer.contributed_by)}</p>
+              </div>
+            </BeerCard>
           );
         })
       )}
-    </div>
+    </BeersContainer>
   );
 };
