@@ -21,35 +21,29 @@ export const App = () => {
   return (
     <>
       <Router>
+        <Container>
+          <nav>
+            <Link to="/beers" style={{ textDecoration: "none" }}>
+              <CardBeers />
+            </Link>
+            <Link to="/random-beer" style={{ textDecoration: "none" }}>
+              <CardRandomBeer />
+            </Link>
+            <Link to="/new-beer" style={{ textDecoration: "none" }}>
+              <NewBeer />
+            </Link>
+          </nav>
+        </Container>{" "}
         <Switch>
-          <Container>
-            <nav>
-              <Link to="/beers" style={{ textDecoration: "none" }}>
-                <CardBeers />
-              </Link>
-              <Link to="/random-beer" style={{ textDecoration: "none" }}>
-                <CardRandomBeer />
-              </Link>
-              <Link to="/new-beer" style={{ textDecoration: "none" }}>
-                <NewBeer />
-              </Link>
-            </nav>
-            <div>
-              <Route exact path="/beers">
-                <Navbar />
-              </Route>
-            </div>
-            <div>
-              <Route exact path="/random-beer">
-                <Navbar />
-              </Route>
-            </div>
-            <div>
-              <Route exact path="/new-beer">
-                <Navbar />
-              </Route>
-            </div>
-          </Container>{" "}
+          <Route path="/beers">
+            <Beers />
+          </Route>
+          <Route path="/random-beer">
+            <Navbar />
+          </Route>
+          <Route path="/new-beer">
+            <Navbar />
+          </Route>
         </Switch>
       </Router>
     </>

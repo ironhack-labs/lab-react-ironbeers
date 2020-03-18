@@ -6,7 +6,6 @@ import CardRandomBeer from "./components/CardRandomBeer";
 import NewBeer from "./NewBeer";
 import Navbar from "./components/Navbar";
 import styled from "styled-components";
-import Beers from "./Beers";
 
 const Container = styled.div`
   display: flex;
@@ -33,10 +32,11 @@ const Home = () => {
         <Switch>
           <div>
             <Route path="/home" />
+            <Home />
           </div>
           <div>
             <Route exact path="/beers">
-              <Navbar />
+              <DataBeers />
             </Route>
           </div>
           <div>
