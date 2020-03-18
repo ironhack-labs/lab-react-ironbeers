@@ -2,7 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Main } from "./layouts/Main";
-import { Home } from "./pages/Home.page";
+import { HomePage } from "./pages/Home.page";
+import { ListPage } from "./pages/List.page";
+import { DetailPage } from "./pages/Detail.page";
+import { CreatePage } from "./pages/Create.page";
 
 import "./App.css";
 
@@ -10,7 +13,10 @@ export const App = () => (
   <Router>
     <Main>
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={HomePage} />
+        <Route path="/list" component={ListPage} />
+        <Route path="/detail" component={DetailPage} />
+        <Route path="/create" component={CreatePage} />
       </Switch>
     </Main>
   </Router>

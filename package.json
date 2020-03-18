@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lorem-ipsum": "^2.0.3",
     "parcel": "^1.12.4",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
