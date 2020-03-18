@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 class AllBeer extends Component {
   constructor() {
@@ -19,11 +20,11 @@ class AllBeer extends Component {
           <div>
             {this.state.beer.map(beer => (
               <div className="prueba">
-                <Link to={`/${beer._id}`} key={beer._id}>
+                <Link className="link" to={`/${beer._id}`} key={beer._id}>
                   <img src={beer.image_url} alt={beer.name}></img>
-                  <h3>{beer.name}</h3>
-                  <p>{beer.tagline}</p>
-                  <p>{beer.contributed_by}</p>
+                  <h3>{`Name: ${beer.name}`}</h3>
+                  <p>{`Tagline: ${beer.tagline}`}</p>
+                  <p>{`Contributed By: ${beer.contributed_by}`}</p>
                   <hr></hr>
                 </Link>
               </div>

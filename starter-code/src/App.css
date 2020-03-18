@@ -29,3 +29,7 @@ h1 {
   color: white;
   font-size: xx-large;
 }
+
+.prueba img {
+  width: 10%;
+}
