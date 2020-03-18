@@ -31,7 +31,7 @@ export const Options = () => {
       <Card key={i}>
         <img src={opt.image} />
         <div>
-          <Link to={opt.link}>{opt.title}</Link>
+          <Link to={opt.link || '/'}>{opt.title}</Link>
           <p>{opt.description}</p>
         </div>
       </Card>

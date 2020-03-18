@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Home as HomePage } from './pages/Home';
 import { Layout } from './layouts/Layout';
 import { GlobalStyle } from './styles/Global';
+import { BeersList } from './components/BeersList';
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
         <Layout>
           <Switch>
             <Route path="/" exact component={HomePage} />
+            <Route path="/beers" exact component={BeersList} />
           </Switch>
         </Layout>
       </Router>

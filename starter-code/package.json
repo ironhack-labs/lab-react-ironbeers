@@ -1,16 +1,21 @@
 {
-	"name": "ironbeers",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@styled-icons/typicons": "^10.0.0",
-		"parcel": "^1.12.4",
-		"react": "^16.13.0",
-		"react-dom": "^16.13.0",
-		"react-router-dom": "^5.1.2",
-		"styled-components": "^5.0.1"
-	},
-	"scripts": {
-		"start": "parcel index.html"
-	}
+  "name": "ironbeers",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@styled-icons/typicons": "^10.0.0",
+    "axios": "^0.19.2",
+    "parcel": "^1.12.4",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.0.1"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7"
+  }
 }
