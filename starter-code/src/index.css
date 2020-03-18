@@ -10,3 +10,9 @@ body {
   color: #ccc;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}

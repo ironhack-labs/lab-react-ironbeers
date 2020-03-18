@@ -19,6 +19,9 @@ const Wrapper = styled.div`
     margin: 0px 20px;
     font-size: 1.5rem;
   }
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
 `;
 
 const Image = styled.img`
