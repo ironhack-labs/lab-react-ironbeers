@@ -1,26 +1,15 @@
 import React from "react";
-import RandomBeerImg from "../public/images/random-beer.png";
+import beersImg from "../public/images/beers.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar";
+import CardBeers from "./components/CardBeers";
 
-//Cambiamos el nombre del componente App por Home
-const RandomBeer = function() {
+const RandomBeers = function() {
   return (
-    <div className="card" style={{ width: "24rem" }}>
-      <img
-        src={RandomBeerImg}
-        className="card-img-top"
-        alt="RandomBeerPicture"
-      />
-      <div className="card-body">
-        <h1 className="card-title" style={{ color: "black" }}>
-          Random Beer
-        </h1>
-        <p className="card-text" style={{ color: "grey" }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex
-          necessitatibus laudantium aliquam assumenda eaque nostrum enim
-        </p>
-      </div>
-    </div>
+    <>
+      <Navbar />
+    </>
   );
 };
 
-export default RandomBeer;
+export default RandomBeers;
