@@ -35,7 +35,7 @@ export const BeersList = () => {
               </ImgContainer>
 
               <div>
-                <Link to="/">{beer.name}</Link>
+                <Link to={`/beers/${beer._id}`}>{beer.name}</Link>
                 <p>{beer.tagline}</p>
                 <p>Created by: {formatName(beer.contributed_by)}</p>
               </div>
