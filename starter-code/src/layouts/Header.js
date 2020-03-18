@@ -11,8 +11,8 @@ const Box = styled.div`
 `;
 
 const Image = styled.img`
-  width: 25vw;
-  padding: 5%;
+  width: 50px;
+  padding: 10px;
 `;
 
 export const Header = () => {
