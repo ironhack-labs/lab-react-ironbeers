@@ -1,11 +1,14 @@
+// dependencies
 import React from 'react';
+
+// local modules
 import { Header } from './Header';
 
 export const Layout = ({ children }) => {
   return (
-    <div>
+    <>
       <Header />
       <div>{children}</div>
-    </div>
+    </>
   );
 };

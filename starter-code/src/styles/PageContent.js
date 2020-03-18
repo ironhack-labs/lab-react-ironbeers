@@ -5,6 +5,17 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
+export const BeersContainer = styled(Container)`
+  flex-wrap: wrap;
+`;
+
+export const ImgContainer = styled(Container)`
+  width: 100%;
+  height: 10em;
+  img {
+    object-fit: contain;
+  }
+`;
 export const Card = styled.div`
   width: 30%;
   border: 0.2em solid #f3d2c1;
@@ -21,4 +32,8 @@ export const Card = styled.div`
     text-decoration: none;
     color: #001858;
   }
+`;
+
+export const BeerCard = styled(Card)`
+  height: fit-content;
 `;

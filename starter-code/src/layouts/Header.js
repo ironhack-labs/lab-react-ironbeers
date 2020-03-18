@@ -1,7 +1,10 @@
+// dependencies
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Navbar, Title, NavbarLinks } from '../styles/Navbar';
 import { Beer } from '@styled-icons/typicons';
+
+// styled components
+import { Navbar, Title, NavbarLinks } from '../styles/Navbar';
 
 export const Header = () => {
   return (
