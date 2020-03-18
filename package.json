@@ -1,0 +1,14 @@
+{
+  "name": "ironbeers",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "parcel": "^1.12.4",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "scripts": {
+    "start": "parcel public/index.html"
+  }
+}
