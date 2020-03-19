@@ -8,6 +8,7 @@ const Box = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
+  z-index: 900;
   display: flex;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.9);

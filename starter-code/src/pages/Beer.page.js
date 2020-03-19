@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Layout } from "../layouts/Layout";
 import axios from "axios";
 import { BeerCard } from "../components/BeerCard";
 import styled from "styled-components";
+import { LoadingContext } from "../../lib/loading.api";
 
 const Container = styled.div`
   width: 60%;
@@ -18,14 +19,18 @@ const api = axios.create({
 
 export const BeerPage = () => {
   const [beers, setBeers] = useState();
+  const { setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
     api.get("/beers").then(res => {
       const data = res.data;
       setBeers(data);
+      setLoading(false);
     });
-  }, []);
-  console.log(beers);
+    return setLoading(true);
+  }, [setLoading]);
+
+  //console.log(beers);
   return (
     <Layout>
       <Container>

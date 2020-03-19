@@ -50,7 +50,6 @@ const Image = styled.img`
 `;
 
 export const BeerCard = props => {
-  console.log(props);
   return (
     <Container>
       <ImageContainer>
