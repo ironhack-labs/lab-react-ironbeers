@@ -32344,20 +32344,27 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var HomeCard = function HomeCard(_ref) {
-  var img = _ref.img,
+  var link = _ref.link,
+      img = _ref.img,
       header = _ref.header,
       text = _ref.text;
-  return _react.default.createElement("div", null, _react.default.createElement("img", {
+  return _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
+    to: link
+  }, _react.default.createElement("img", {
     src: img
-  }), _react.default.createElement("h2", null, header), _react.default.createElement("p", null, text));
+  })), _react.default.createElement(_reactRouterDom.Link, {
+    to: link
+  }, _react.default.createElement("h2", null, header)), _react.default.createElement("p", null, text));
 };
 
 var _default = HomeCard;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"public/images/beers.png":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"public/images/beers.png":[function(require,module,exports) {
 module.exports = "/beers.ffc5675d.png";
 },{}],"public/images/new-beer.png":[function(require,module,exports) {
 module.exports = "/new-beer.0e92cd9b.png";
@@ -32392,14 +32399,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var HomePage = function HomePage() {
   console.log(_text.default.home);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_HomeCard.default, {
+    link: "/beers",
     img: _beers.default,
     header: "All Beers",
     text: _text.default.home
   }), _react.default.createElement(_HomeCard.default, {
+    link: "/beers/random",
     img: _randomBeer.default,
     header: "Random Beer",
     text: _text.default.home
   }), _react.default.createElement(_HomeCard.default, {
+    link: "beers/new",
     img: _newBeer.default,
     header: "New Beer",
     text: _text.default.home
@@ -32408,7 +32418,28 @@ var HomePage = function HomePage() {
 
 var _default = HomePage;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../components/HomeCard":"src/components/HomeCard.jsx","../../public/images/beers.png":"public/images/beers.png","../../public/images/new-beer.png":"public/images/new-beer.png","../../public/images/random-beer.png":"public/images/random-beer.png","../../public/data/text.json":"public/data/text.json"}],"src/components/NavBar.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components/HomeCard":"src/components/HomeCard.jsx","../../public/images/beers.png":"public/images/beers.png","../../public/images/new-beer.png":"public/images/new-beer.png","../../public/images/random-beer.png":"public/images/random-beer.png","../../public/data/text.json":"public/data/text.json"}],"src/layouts/Home.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Home = function Home(_ref) {
+  var children = _ref.children;
+  return _react.default.createElement("div", null, children);
+};
+
+var _default = Home;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"public/images/beers-home.png":[function(require,module,exports) {
+module.exports = "/beers-home.831d8350.png";
+},{}],"src/components/NavBar.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32420,23 +32451,22 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _beersHome = _interopRequireDefault(require("../../public/images/beers-home.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var NavBar = function NavBar() {
-  return _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
+  return _react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, "Home")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/beers"
-  }, "Beers")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/beers/new"
-  }, "New")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/beers/random"
-  }, "Random")));
+  }, _react.default.createElement("img", {
+    src: _beersHome.default,
+    alt: "header"
+  }));
 };
 
 var _default = NavBar;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/layouts/Header.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../../public/images/beers-home.png":"public/images/beers-home.png"}],"src/layouts/Section.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32450,34 +32480,14 @@ var _NavBar = _interopRequireDefault(require("../components/NavBar"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Header = function Header() {
-  return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null));
-};
-
-var _default = Header;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../components/NavBar":"src/components/NavBar.jsx"}],"src/layouts/Main.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Main = function Main(_ref) {
+var Section = function Section(_ref) {
   var children = _ref.children;
-  return _react.default.createElement("div", {
-    className: "main-container"
-  }, children);
+  return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), children);
 };
 
-var _default = Main;
+var _default = Section;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"src/App.jsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components/NavBar":"src/components/NavBar.jsx"}],"src/App.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32499,33 +32509,41 @@ var _RandomBeer = _interopRequireDefault(require("./pages/RandomBeer"));
 
 var _HomePage = _interopRequireDefault(require("./pages/HomePage"));
 
-var _Header = _interopRequireDefault(require("./layouts/Header"));
+var _Home = _interopRequireDefault(require("./layouts/Home"));
 
-var _Main = _interopRequireDefault(require("./layouts/Main"));
+var _Section = _interopRequireDefault(require("./layouts/Section"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_Main.default, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/",
     exact: true,
-    component: _HomePage.default
+    component: function component() {
+      return _react.default.createElement(_Home.default, null, _react.default.createElement(_HomePage.default, null));
+    }
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/beers",
     exact: true,
-    component: _Beers.default
+    component: function component() {
+      return _react.default.createElement(_Section.default, null, _react.default.createElement(_Beers.default, null));
+    }
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/beers/new",
-    component: _NewBeer.default
+    component: function component() {
+      return _react.default.createElement(_Section.default, null, _react.default.createElement(_NewBeer.default, null));
+    }
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/beers/random",
-    component: _RandomBeer.default
-  }))));
+    component: function component() {
+      return _react.default.createElement(_Section.default, null, _react.default.createElement(_RandomBeer.default, null));
+    }
+  })));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./App.css":"src/App.css","./pages/Beers":"src/pages/Beers.jsx","./pages/NewBeer":"src/pages/NewBeer.jsx","./pages/RandomBeer":"src/pages/RandomBeer.jsx","./pages/HomePage":"src/pages/HomePage.jsx","./layouts/Header":"src/layouts/Header.jsx","./layouts/Main":"src/layouts/Main.jsx"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./App.css":"src/App.css","./pages/Beers":"src/pages/Beers.jsx","./pages/NewBeer":"src/pages/NewBeer.jsx","./pages/RandomBeer":"src/pages/RandomBeer.jsx","./pages/HomePage":"src/pages/HomePage.jsx","./layouts/Home":"src/layouts/Home.jsx","./layouts/Section":"src/layouts/Section.jsx"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -32569,7 +32587,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65162" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64473" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -5,19 +5,47 @@ import Beers from "./pages/Beers";
 import NewBeer from "./pages/NewBeer";
 import RandomBeer from "./pages/RandomBeer";
 import HomePage from "./pages/HomePage";
-import Header from "./layouts/Header";
-import Main from "./layouts/Main";
+import Home from "./layouts/Home";
+import Section from "./layouts/Section";
 
 const App = () => (
   <Router>
-    <Main>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/beers" exact component={Beers} />
-        <Route path="/beers/new" component={NewBeer} />
-        <Route path="/beers/random" component={RandomBeer} />
-      </Switch>
-    </Main>
+    <Switch>
+      <Route
+        path="/"
+        exact
+        component={() => (
+          <Home>
+            <HomePage />
+          </Home>
+        )}
+      />
+      <Route
+        path="/beers"
+        exact
+        component={() => (
+          <Section>
+            <Beers />
+          </Section>
+        )}
+      />
+      <Route
+        path="/beers/new"
+        component={() => (
+          <Section>
+            <NewBeer />
+          </Section>
+        )}
+      />
+      <Route
+        path="/beers/random"
+        component={() => (
+          <Section>
+            <RandomBeer />
+          </Section>
+        )}
+      />
+    </Switch>
   </Router>
 );
 
