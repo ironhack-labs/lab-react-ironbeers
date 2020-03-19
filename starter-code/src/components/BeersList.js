@@ -36,8 +36,12 @@ export const BeersList = () => {
 
               <div>
                 <Link to={`/beers/${beer._id}`}>{beer.name}</Link>
-                <p>{beer.tagline}</p>
-                <p>Created by: {formatName(beer.contributed_by)}</p>
+                <p className="light">{beer.tagline}</p>
+                <p>
+                  <span> Created by: </span>
+                  {(beer.contributed_by && formatName(beer.contributed_by)) ||
+                    'unknown'}
+                </p>
               </div>
             </BeerCard>
           );
