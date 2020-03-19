@@ -39,6 +39,12 @@ export const ImgContainer = styled(Container)`
 
 export const BeerCard = styled(Card)`
   height: fit-content;
+  span {
+    font-weight: 700;
+  }
+  p.light {
+    color: #97ade7;
+  }
 `;
 
 // Beer detail
@@ -50,7 +56,9 @@ export const BeerDetailCard = styled.div`
   color: #172c66;
   width: 70%;
   margin: 0 auto;
-
+  h3 {
+    font-size: 1.5rem;
+  }
   div.content {
     width: 100%;
     div {
@@ -66,6 +74,25 @@ export const BeerDetailCard = styled.div`
     img {
       height: 30em;
     }
+  }
+
+  a {
+    margin-top: 1em;
+    border: 0.1em solid #f582ae;
+    border-radius: 1em;
+    text-decoration: none;
+    color: #172c66;
+    padding: 0.5em 1em;
+    &:hover {
+      background-color: #f582ae;
+      color: #fff;
+    }
+  }
+  span {
+    color: #97ade7;
+  }
+  svg {
+    vertical-align: bottom;
   }
 
   @media (max-width: 768px) {

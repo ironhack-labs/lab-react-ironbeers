@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { ArrowBack } from '@styled-icons/typicons';
+
+// styled components
 import { BeerDetailCard } from '../styles/PageContent';
 
 export const BeerDetail = props => {
@@ -27,16 +30,24 @@ export const BeerDetail = props => {
       <div className="content">
         <div>
           <h3>{beer.name}</h3>
-          <p>{beer.attenuation_level}</p>
+          <span>{beer.attenuation_level}</span>
         </div>
         <div>
-          <p>{beer.tagline}</p>
+          <span>{beer.tagline}</span>
           <p>{beer.first_brewed}</p>
         </div>
         <p>{beer.description}</p>
-        <p>{beer.contributed_by}</p>
-        <Link to="/beers">Back to beers list</Link>
-        <Link to="/">Back to home</Link>
+        <span>{beer.contributed_by}</span>
+        <div>
+          <Link to="/beers">
+            <ArrowBack size="20" />
+            Back to beers list
+          </Link>
+          <Link to="/">
+            <ArrowBack size="20" />
+            Back to home
+          </Link>
+        </div>
       </div>
     </BeerDetailCard>
   );
