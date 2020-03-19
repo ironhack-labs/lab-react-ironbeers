@@ -26,12 +26,6 @@ const Wrapper = styled.div`
     font-size: 2rem;
     font-weight: 400;
   }
-  p {
-    color: #ccc;
-    padding: 0;
-    margin: 0px 20px;
-    font-size: 1.5rem;
-  }
   @media (max-width: 768px) {
     width: 80%;
   }
@@ -49,6 +43,22 @@ const Image = styled.img`
   height: 100%;
 `;
 
+const Imperative = styled.p`
+  color: #000;
+  padding: 0;
+  margin: 0px 20px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 10px 0 0;
+`;
+
+const SubTitle = styled.p`
+  color: #ccc;
+  padding: 10px 0 0;
+  margin: 0px 20px;
+  font-size: 1.2rem;
+`;
+
 export const BeerCard = props => {
   return (
     <Container>
@@ -57,7 +67,8 @@ export const BeerCard = props => {
       </ImageContainer>
       <Wrapper>
         <h4>{props.name}</h4>
-        <p>{props.tagline}</p>
+        <SubTitle>{props.tagline}</SubTitle>
+        <Imperative>{props.contributed_by}</Imperative>
       </Wrapper>
     </Container>
   );
