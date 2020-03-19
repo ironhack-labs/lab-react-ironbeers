@@ -5,6 +5,7 @@ import { BeerPage } from "../pages/Beer.page";
 import { withLoading } from "../../lib/withLoading";
 import { SingleBeer } from "../pages/SingleBeer.page.js";
 import { RandomBeer } from "../pages/RandomBeer.page.js";
+import { NewBeer } from "../pages/NewBeer.page";
 
 export const App = withLoading(() => {
   return (
@@ -14,6 +15,7 @@ export const App = withLoading(() => {
         <Route path="/beers" component={BeerPage} />
         <Route path="/beer/:id" component={SingleBeer} />
         <Route path="/random-beer" component={RandomBeer} />
+        <Route path="/new-beer" component={NewBeer} />
       </Switch>
     </Router>
   );
