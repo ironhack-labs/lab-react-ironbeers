@@ -1,9 +1,14 @@
 import React from 'react';
+import Header from './../components/Header';
 
 const ListBeersPage = () => {
 
   return(
-    <p>List Beers Page</p>
+    <div>
+      <Header/>
+      <p>List Beers Page</p>
+    </div>
+
   );
 }
 

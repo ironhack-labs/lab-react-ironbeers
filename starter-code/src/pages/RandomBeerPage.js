@@ -1,9 +1,13 @@
 import React from 'react';
+import Header from './../components/Header';
 
 const RandomBeerPage = () => {
 
   return(
-    <p>Random Beer Page</p>
+    <div>
+      <Header/>
+      <p>Random Beer Page</p>
+    </div>
   );
 }
 

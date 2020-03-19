@@ -1,9 +1,13 @@
 import React from 'react';
+import Header from './../components/Header';
 
 const NewBeerPage = () => {
 
   return(
-    <p>New Beer Page</p>
+    <div>
+      <Header/>
+      <p>New Beer Page</p>
+    </div>
   );
 }
 
