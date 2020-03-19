@@ -1,5 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+/* --- UI Framework --- */
+
 import { Navbar, Nav } from "react-bootstrap";
+
+/* --- Images --- */
 import logo from "/public/images/house.svg";
 
 export const Header = () => {
@@ -7,13 +13,17 @@ export const Header = () => {
     <>
       <Nav className="justify-content-center navbar" activeKey="/home">
         <Navbar.Brand href="/">
-          <img
-            alt="home"
-            src={logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />
+          <Link to="/">
+            <a>
+              <img
+                alt="home"
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />
+            </a>
+          </Link>
         </Navbar.Brand>
       </Nav>
     </>

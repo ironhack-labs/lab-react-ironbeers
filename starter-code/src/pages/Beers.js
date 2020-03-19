@@ -1,6 +1,11 @@
 import React from "react";
-import Header from "/src/layout/Header";
+import { Header } from "../layout/Header";
 
 export const Beers = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <p>hi I'm beers page</p>
+    </>
+  );
 };

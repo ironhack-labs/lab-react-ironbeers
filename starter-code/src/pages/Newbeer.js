@@ -1,5 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
+import { Header } from "../layout/Header";
 
 export const Newbeer = () => {
-  <p>I'm newbeer page</p>;
+  return (
+    <>
+      <Header />
+      <p>hi I'm new beers page</p>
+    </>
+  );
 };

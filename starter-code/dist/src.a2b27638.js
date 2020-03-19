@@ -46553,16 +46553,57 @@ exports.Home = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Beercards = require("/src/components/Beercards");
+var _Beercards = require("../components/Beercards");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Home = () => {
-  return _react.default.createElement(_Beercards.Beercards, null);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Beercards.Beercards, null), ";");
 };
 
 exports.Home = Home;
-},{"react":"node_modules/react/index.js","/src/components/Beercards":"src/components/Beercards.js"}],"src/pages/Beers.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components/Beercards":"src/components/Beercards.js"}],"public/images/house.svg":[function(require,module,exports) {
+module.exports = "/house.5ff8afcf.svg";
+},{}],"src/layout/Header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Header = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _reactBootstrap = require("react-bootstrap");
+
+var _house = _interopRequireDefault(require("/public/images/house.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* --- UI Framework --- */
+
+/* --- Images --- */
+const Header = () => {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactBootstrap.Nav, {
+    className: "justify-content-center navbar",
+    activeKey: "/home"
+  }, _react.default.createElement(_reactBootstrap.Navbar.Brand, {
+    href: "/"
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, _react.default.createElement("a", null, _react.default.createElement("img", {
+    alt: "home",
+    src: _house.default,
+    width: "30",
+    height: "30",
+    className: "d-inline-block align-top"
+  }))))));
+};
+
+exports.Header = Header;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","/public/images/house.svg":"public/images/house.svg"}],"src/pages/Beers.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46572,14 +46613,16 @@ exports.Beers = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _Header = require("../layout/Header");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Beers = () => {
-  return _react.default.createElement(Header, null);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Header.Header, null), _react.default.createElement("p", null, "hi I'm beers page"));
 };
 
 exports.Beers = Beers;
-},{"react":"node_modules/react/index.js"}],"src/pages/Randombeer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/pages/Randombeer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46587,18 +46630,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Randombeer = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _Header = require("../layout/Header");
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Randombeer = () => {
-  return _react.default.createElement("p", null, "I'm Randombeer page");
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Header.Header, null), _react.default.createElement("p", null, "hi I'm random beers page"));
 };
 
 exports.Randombeer = Randombeer;
-},{"react":"node_modules/react/index.js"}],"src/pages/Newbeer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/pages/Newbeer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46606,18 +46649,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Newbeer = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+var _Header = require("../layout/Header");
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Newbeer = () => {
-  _react.default.createElement("p", null, "I'm newbeer page");
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Header.Header, null), _react.default.createElement("p", null, "hi I'm new beers page"));
 };
 
 exports.Newbeer = Newbeer;
-},{"react":"node_modules/react/index.js"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46711,7 +46754,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41109" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40755" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
