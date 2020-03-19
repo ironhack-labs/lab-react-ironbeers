@@ -11,7 +11,6 @@ import "./App.css";
 
 /* --- Components --- */
 
-import { Layout } from "./layout/Layout";
 import { Home } from "./pages/Home";
 import { Beers } from "./pages/Beers";
 import { Randombeer } from "./pages/Randombeer";
@@ -19,7 +18,6 @@ import { Newbeer } from "./pages/Newbeer";
 
 const App = () => (
   <Router>
-    <Layout />
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/beers" component={Beers} />

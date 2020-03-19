@@ -46502,60 +46502,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Accordion":"node_modules/react-bootstrap/esm/Accordion.js","./AccordionToggle":"node_modules/react-bootstrap/esm/AccordionToggle.js","./AccordionCollapse":"node_modules/react-bootstrap/esm/AccordionCollapse.js","./Alert":"node_modules/react-bootstrap/esm/Alert.js","./Badge":"node_modules/react-bootstrap/esm/Badge.js","./Breadcrumb":"node_modules/react-bootstrap/esm/Breadcrumb.js","./BreadcrumbItem":"node_modules/react-bootstrap/esm/BreadcrumbItem.js","./Button":"node_modules/react-bootstrap/esm/Button.js","./ButtonGroup":"node_modules/react-bootstrap/esm/ButtonGroup.js","./ButtonToolbar":"node_modules/react-bootstrap/esm/ButtonToolbar.js","./Card":"node_modules/react-bootstrap/esm/Card.js","./CardColumns":"node_modules/react-bootstrap/esm/CardColumns.js","./CardDeck":"node_modules/react-bootstrap/esm/CardDeck.js","./CardImg":"node_modules/react-bootstrap/esm/CardImg.js","./CardGroup":"node_modules/react-bootstrap/esm/CardGroup.js","./Carousel":"node_modules/react-bootstrap/esm/Carousel.js","./CarouselItem":"node_modules/react-bootstrap/esm/CarouselItem.js","./CloseButton":"node_modules/react-bootstrap/esm/CloseButton.js","./Col":"node_modules/react-bootstrap/esm/Col.js","./Collapse":"node_modules/react-bootstrap/esm/Collapse.js","./Dropdown":"node_modules/react-bootstrap/esm/Dropdown.js","./DropdownButton":"node_modules/react-bootstrap/esm/DropdownButton.js","./DropdownItem":"node_modules/react-bootstrap/esm/DropdownItem.js","./Fade":"node_modules/react-bootstrap/esm/Fade.js","./Form":"node_modules/react-bootstrap/esm/Form.js","./FormControl":"node_modules/react-bootstrap/esm/FormControl.js","./FormCheck":"node_modules/react-bootstrap/esm/FormCheck.js","./Switch":"node_modules/react-bootstrap/esm/Switch.js","./FormGroup":"node_modules/react-bootstrap/esm/FormGroup.js","./FormLabel":"node_modules/react-bootstrap/esm/FormLabel.js","./FormText":"node_modules/react-bootstrap/esm/FormText.js","./Container":"node_modules/react-bootstrap/esm/Container.js","./Image":"node_modules/react-bootstrap/esm/Image.js","./Figure":"node_modules/react-bootstrap/esm/Figure.js","./InputGroup":"node_modules/react-bootstrap/esm/InputGroup.js","./Jumbotron":"node_modules/react-bootstrap/esm/Jumbotron.js","./ListGroup":"node_modules/react-bootstrap/esm/ListGroup.js","./ListGroupItem":"node_modules/react-bootstrap/esm/ListGroupItem.js","./Media":"node_modules/react-bootstrap/esm/Media.js","./Modal":"node_modules/react-bootstrap/esm/Modal.js","./ModalBody":"node_modules/react-bootstrap/esm/ModalBody.js","./ModalDialog":"node_modules/react-bootstrap/esm/ModalDialog.js","./ModalFooter":"node_modules/react-bootstrap/esm/ModalFooter.js","./ModalTitle":"node_modules/react-bootstrap/esm/ModalTitle.js","./Nav":"node_modules/react-bootstrap/esm/Nav.js","./Navbar":"node_modules/react-bootstrap/esm/Navbar.js","./NavbarBrand":"node_modules/react-bootstrap/esm/NavbarBrand.js","./NavDropdown":"node_modules/react-bootstrap/esm/NavDropdown.js","./NavItem":"node_modules/react-bootstrap/esm/NavItem.js","./NavLink":"node_modules/react-bootstrap/esm/NavLink.js","./Overlay":"node_modules/react-bootstrap/esm/Overlay.js","./OverlayTrigger":"node_modules/react-bootstrap/esm/OverlayTrigger.js","./PageItem":"node_modules/react-bootstrap/esm/PageItem.js","./Pagination":"node_modules/react-bootstrap/esm/Pagination.js","./Popover":"node_modules/react-bootstrap/esm/Popover.js","./PopoverContent":"node_modules/react-bootstrap/esm/PopoverContent.js","./PopoverTitle":"node_modules/react-bootstrap/esm/PopoverTitle.js","./ProgressBar":"node_modules/react-bootstrap/esm/ProgressBar.js","./ResponsiveEmbed":"node_modules/react-bootstrap/esm/ResponsiveEmbed.js","./Row":"node_modules/react-bootstrap/esm/Row.js","./SafeAnchor":"node_modules/react-bootstrap/esm/SafeAnchor.js","./Spinner":"node_modules/react-bootstrap/esm/Spinner.js","./SplitButton":"node_modules/react-bootstrap/esm/SplitButton.js","./Tab":"node_modules/react-bootstrap/esm/Tab.js","./TabContainer":"node_modules/react-bootstrap/esm/TabContainer.js","./TabContent":"node_modules/react-bootstrap/esm/TabContent.js","./Table":"node_modules/react-bootstrap/esm/Table.js","./TabPane":"node_modules/react-bootstrap/esm/TabPane.js","./Tabs":"node_modules/react-bootstrap/esm/Tabs.js","./ThemeProvider":"node_modules/react-bootstrap/esm/ThemeProvider.js","./ToggleButton":"node_modules/react-bootstrap/esm/ToggleButton.js","./ToggleButtonGroup":"node_modules/react-bootstrap/esm/ToggleButtonGroup.js","./Tooltip":"node_modules/react-bootstrap/esm/Tooltip.js","./Toast":"node_modules/react-bootstrap/esm/Toast.js","./ToastBody":"node_modules/react-bootstrap/esm/ToastBody.js","./ToastHeader":"node_modules/react-bootstrap/esm/ToastHeader.js"}],"public/images/house.svg":[function(require,module,exports) {
-module.exports = "/house.5ff8afcf.svg";
-},{}],"src/layout/Header.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Header = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactBootstrap = require("react-bootstrap");
-
-var _house = _interopRequireDefault(require("/public/images/house.svg"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const Header = () => {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_reactBootstrap.Nav, {
-    className: "justify-content-center navbar",
-    activeKey: "/home"
-  }, _react.default.createElement(_reactBootstrap.Navbar.Brand, {
-    href: "/"
-  }, _react.default.createElement("img", {
-    alt: "home",
-    src: _house.default,
-    width: "30",
-    height: "30",
-    className: "d-inline-block align-top"
-  }))));
-};
-
-exports.Header = Header;
-},{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","/public/images/house.svg":"public/images/house.svg"}],"src/layout/Layout.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Layout = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _Header = require("./Header");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const Layout = () => {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Header.Header, null));
-};
-
-exports.Layout = Layout;
-},{"react":"node_modules/react/index.js","./Header":"src/layout/Header.js"}],"public/images/beers.png":[function(require,module,exports) {
+},{"./Accordion":"node_modules/react-bootstrap/esm/Accordion.js","./AccordionToggle":"node_modules/react-bootstrap/esm/AccordionToggle.js","./AccordionCollapse":"node_modules/react-bootstrap/esm/AccordionCollapse.js","./Alert":"node_modules/react-bootstrap/esm/Alert.js","./Badge":"node_modules/react-bootstrap/esm/Badge.js","./Breadcrumb":"node_modules/react-bootstrap/esm/Breadcrumb.js","./BreadcrumbItem":"node_modules/react-bootstrap/esm/BreadcrumbItem.js","./Button":"node_modules/react-bootstrap/esm/Button.js","./ButtonGroup":"node_modules/react-bootstrap/esm/ButtonGroup.js","./ButtonToolbar":"node_modules/react-bootstrap/esm/ButtonToolbar.js","./Card":"node_modules/react-bootstrap/esm/Card.js","./CardColumns":"node_modules/react-bootstrap/esm/CardColumns.js","./CardDeck":"node_modules/react-bootstrap/esm/CardDeck.js","./CardImg":"node_modules/react-bootstrap/esm/CardImg.js","./CardGroup":"node_modules/react-bootstrap/esm/CardGroup.js","./Carousel":"node_modules/react-bootstrap/esm/Carousel.js","./CarouselItem":"node_modules/react-bootstrap/esm/CarouselItem.js","./CloseButton":"node_modules/react-bootstrap/esm/CloseButton.js","./Col":"node_modules/react-bootstrap/esm/Col.js","./Collapse":"node_modules/react-bootstrap/esm/Collapse.js","./Dropdown":"node_modules/react-bootstrap/esm/Dropdown.js","./DropdownButton":"node_modules/react-bootstrap/esm/DropdownButton.js","./DropdownItem":"node_modules/react-bootstrap/esm/DropdownItem.js","./Fade":"node_modules/react-bootstrap/esm/Fade.js","./Form":"node_modules/react-bootstrap/esm/Form.js","./FormControl":"node_modules/react-bootstrap/esm/FormControl.js","./FormCheck":"node_modules/react-bootstrap/esm/FormCheck.js","./Switch":"node_modules/react-bootstrap/esm/Switch.js","./FormGroup":"node_modules/react-bootstrap/esm/FormGroup.js","./FormLabel":"node_modules/react-bootstrap/esm/FormLabel.js","./FormText":"node_modules/react-bootstrap/esm/FormText.js","./Container":"node_modules/react-bootstrap/esm/Container.js","./Image":"node_modules/react-bootstrap/esm/Image.js","./Figure":"node_modules/react-bootstrap/esm/Figure.js","./InputGroup":"node_modules/react-bootstrap/esm/InputGroup.js","./Jumbotron":"node_modules/react-bootstrap/esm/Jumbotron.js","./ListGroup":"node_modules/react-bootstrap/esm/ListGroup.js","./ListGroupItem":"node_modules/react-bootstrap/esm/ListGroupItem.js","./Media":"node_modules/react-bootstrap/esm/Media.js","./Modal":"node_modules/react-bootstrap/esm/Modal.js","./ModalBody":"node_modules/react-bootstrap/esm/ModalBody.js","./ModalDialog":"node_modules/react-bootstrap/esm/ModalDialog.js","./ModalFooter":"node_modules/react-bootstrap/esm/ModalFooter.js","./ModalTitle":"node_modules/react-bootstrap/esm/ModalTitle.js","./Nav":"node_modules/react-bootstrap/esm/Nav.js","./Navbar":"node_modules/react-bootstrap/esm/Navbar.js","./NavbarBrand":"node_modules/react-bootstrap/esm/NavbarBrand.js","./NavDropdown":"node_modules/react-bootstrap/esm/NavDropdown.js","./NavItem":"node_modules/react-bootstrap/esm/NavItem.js","./NavLink":"node_modules/react-bootstrap/esm/NavLink.js","./Overlay":"node_modules/react-bootstrap/esm/Overlay.js","./OverlayTrigger":"node_modules/react-bootstrap/esm/OverlayTrigger.js","./PageItem":"node_modules/react-bootstrap/esm/PageItem.js","./Pagination":"node_modules/react-bootstrap/esm/Pagination.js","./Popover":"node_modules/react-bootstrap/esm/Popover.js","./PopoverContent":"node_modules/react-bootstrap/esm/PopoverContent.js","./PopoverTitle":"node_modules/react-bootstrap/esm/PopoverTitle.js","./ProgressBar":"node_modules/react-bootstrap/esm/ProgressBar.js","./ResponsiveEmbed":"node_modules/react-bootstrap/esm/ResponsiveEmbed.js","./Row":"node_modules/react-bootstrap/esm/Row.js","./SafeAnchor":"node_modules/react-bootstrap/esm/SafeAnchor.js","./Spinner":"node_modules/react-bootstrap/esm/Spinner.js","./SplitButton":"node_modules/react-bootstrap/esm/SplitButton.js","./Tab":"node_modules/react-bootstrap/esm/Tab.js","./TabContainer":"node_modules/react-bootstrap/esm/TabContainer.js","./TabContent":"node_modules/react-bootstrap/esm/TabContent.js","./Table":"node_modules/react-bootstrap/esm/Table.js","./TabPane":"node_modules/react-bootstrap/esm/TabPane.js","./Tabs":"node_modules/react-bootstrap/esm/Tabs.js","./ThemeProvider":"node_modules/react-bootstrap/esm/ThemeProvider.js","./ToggleButton":"node_modules/react-bootstrap/esm/ToggleButton.js","./ToggleButtonGroup":"node_modules/react-bootstrap/esm/ToggleButtonGroup.js","./Tooltip":"node_modules/react-bootstrap/esm/Tooltip.js","./Toast":"node_modules/react-bootstrap/esm/Toast.js","./ToastBody":"node_modules/react-bootstrap/esm/ToastBody.js","./ToastHeader":"node_modules/react-bootstrap/esm/ToastHeader.js"}],"public/images/beers.png":[function(require,module,exports) {
 module.exports = "/beers.ffc5675d.png";
 },{}],"public/images/random-beer.png":[function(require,module,exports) {
 module.exports = "/random-beer.d42a50af.png";
@@ -46628,7 +46575,7 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Beers = () => {
-  return _react.default.createElement("div", null, _react.default.createElement("p", null, "hello beerpage"));
+  return _react.default.createElement(Header, null);
 };
 
 exports.Beers = Beers;
@@ -46686,8 +46633,6 @@ require("bootstrap/dist/css/bootstrap.min.css");
 
 require("./App.css");
 
-var _Layout = require("./layout/Layout");
-
 var _Home = require("./pages/Home");
 
 var _Beers = require("./pages/Beers");
@@ -46703,7 +46648,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* --- Styling --- */
 
 /* --- Components --- */
-const App = () => _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_Layout.Layout, null), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+const App = () => _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
   path: "/",
   exact: true,
   component: _Home.Home
@@ -46720,7 +46665,7 @@ const App = () => _react.default.createElement(_reactRouterDom.BrowserRouter, nu
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","./App.css":"src/App.css","./layout/Layout":"src/layout/Layout.js","./pages/Home":"src/pages/Home.js","./pages/Beers":"src/pages/Beers.js","./pages/Randombeer":"src/pages/Randombeer.js","./pages/Newbeer":"src/pages/Newbeer.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","./App.css":"src/App.css","./pages/Home":"src/pages/Home.js","./pages/Beers":"src/pages/Beers.js","./pages/Randombeer":"src/pages/Randombeer.js","./pages/Newbeer":"src/pages/Newbeer.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));

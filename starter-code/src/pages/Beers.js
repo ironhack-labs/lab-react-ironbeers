@@ -1,9 +1,6 @@
 import React from "react";
+import Header from "/src/layout/Header";
 
 export const Beers = () => {
-  return (
-    <div>
-      <p>hello beerpage</p>
-    </div>
-  );
+  return <Header />;
 };
