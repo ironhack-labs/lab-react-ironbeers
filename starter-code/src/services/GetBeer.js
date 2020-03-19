@@ -1,6 +1,19 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+
+//CONSULTA AXIOS EN COMPONENTE FUNCIONAL
+
+// const AllBeer = () => {
+//   const [beer, setBeer] = useState({beer:[esto esta asi para que funcionase con lo que he puesto en las clases]})
+
+//   useEffect(() => {
+//       fetch("https://ih-beers-api2.herokuapp.com/beers")
+//         .then(response => response.json())
+//         .then(beersArray => setBeer({ beer: beersArray }));
+//   },[])
+//   return (blabla)
+// }
 
 class AllBeer extends Component {
   constructor() {
@@ -20,7 +33,7 @@ class AllBeer extends Component {
           <div>
             {this.state.beer.map(beer => (
               <div className="prueba">
-                <Link className="link" to={`/${beer._id}`} key={beer._id}>
+                <Link className="link" to={`/beer/${beer._id}`} key={beer._id}>
                   <img src={beer.image_url} alt={beer.name}></img>
                   <h3>{`Name: ${beer.name}`}</h3>
                   <p>{`Tagline: ${beer.tagline}`}</p>
