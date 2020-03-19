@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 const NewBeer = () => {
-  return <div>NewBeer</div>;
+  return <Navbar></Navbar>;
 };
 
 export default NewBeer;

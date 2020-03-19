@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 const RandomBeer = () => {
-  return <div>RandomBeer</div>;
+  return <Navbar></Navbar>;
 };
 
 export default RandomBeer;

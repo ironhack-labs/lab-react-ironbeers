@@ -7,24 +7,14 @@ import RandomBeer from "./components/RandomBeer";
 import NewBeer from "./components/NewBeer";
 
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <Home/>
-//       </div>
-//     );
-//   }
-// }
 const App = () => (
   <Router>
-    <Home>
     <Switch>
-      <Route path="/beers" exact components={() => <AllBeers/>}/>
-      <Route path="/random-beer" exact components={() => <RandomBeer/>}/>
-      <Route path="/new-beer" exact components={() => <NewBeer/>}/>
+      <Route path="/" exact component={Home}/>
+      <Route path="/beers" component={() => <AllBeers/>}/>
+      <Route path="/random-beer" component={() => <RandomBeer/>}/>
+      <Route path="/new-beer" component={() => <NewBeer/>}/>
     </Switch>
-    </Home>
   </Router>
 );
 export default App;
