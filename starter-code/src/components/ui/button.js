@@ -1,22 +1,30 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const LinkWrapper = styled.div`
-  margin-bottom: 20px;
+const Btn = styled(Link)`
+  display: block;
+  padding: 15px;
+  background-color: #111e6c;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    color: #f5f5f5;
+  }
+  & > span {
+    display: block;
+    text-align: center;
+  }
 `;
 
-const MyButton = ({ path, children }) => {
+const Button = ({ path, children }) => {
   return (
-    <LinkWrapper>
-      <Link to={path}>
-        <Button size="lg" className="w-100">
-          {children}
-        </Button>
-      </Link>
-    </LinkWrapper>
+    <Btn to={path}>
+      <span>{children}</span>
+    </Btn>
   );
 };
 
-export default MyButton;
+export default Button;
