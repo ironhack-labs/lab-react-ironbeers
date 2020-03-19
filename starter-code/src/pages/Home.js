@@ -1,10 +1,6 @@
 import React from "react";
+import { Beercards } from "/src/components/Beercards";
 
 export const Home = () => {
-  return (
-    <>
-      <h1>FeedMe!</h1>
-      <p>Una sencilla SPA de alimentación</p>
-    </>
-  );
+  return <Beercards />;
 };

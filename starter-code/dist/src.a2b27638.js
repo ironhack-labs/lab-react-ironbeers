@@ -46555,7 +46555,48 @@ const Layout = () => {
 };
 
 exports.Layout = Layout;
-},{"react":"node_modules/react/index.js","./Header":"src/layout/Header.js"}],"src/pages/Home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Header":"src/layout/Header.js"}],"public/images/beers.png":[function(require,module,exports) {
+module.exports = "/beers.ffc5675d.png";
+},{}],"public/images/random-beer.png":[function(require,module,exports) {
+module.exports = "/random-beer.d42a50af.png";
+},{}],"public/images/new-beer.png":[function(require,module,exports) {
+module.exports = "/new-beer.0e92cd9b.png";
+},{}],"src/components/Beercards.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Beercards = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactBootstrap = require("react-bootstrap");
+
+var _beers = _interopRequireDefault(require("/public/images/beers.png"));
+
+var _randomBeer = _interopRequireDefault(require("/public/images/random-beer.png"));
+
+var _newBeer = _interopRequireDefault(require("/public/images/new-beer.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* --- Images --- */
+const Beercards = () => {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", null, _react.default.createElement(_reactBootstrap.Card, null, _react.default.createElement(_reactBootstrap.Card.Img, {
+    variant: "top",
+    src: _beers.default
+  }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Text, null, "Some quick example text to build on the card title and make up the bulk of the card's content.")))), _react.default.createElement("div", null, _react.default.createElement(_reactBootstrap.Card, null, _react.default.createElement(_reactBootstrap.Card.Img, {
+    variant: "top",
+    src: _randomBeer.default
+  }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Text, null, "Some quick example text to build on the card title and make up the bulk of the card's content.")))), _react.default.createElement("div", null, _react.default.createElement(_reactBootstrap.Card, null, _react.default.createElement(_reactBootstrap.Card.Img, {
+    variant: "top",
+    src: _newBeer.default
+  }), _react.default.createElement(_reactBootstrap.Card.Body, null, _react.default.createElement(_reactBootstrap.Card.Text, null, "Some quick example text to build on the card title and make up the bulk of the card's content.")))));
+};
+
+exports.Beercards = Beercards;
+},{"react":"node_modules/react/index.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","/public/images/beers.png":"public/images/beers.png","/public/images/random-beer.png":"public/images/random-beer.png","/public/images/new-beer.png":"public/images/new-beer.png"}],"src/pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46565,14 +46606,16 @@ exports.Home = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _Beercards = require("/src/components/Beercards");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Home = () => {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h1", null, "FeedMe!"), _react.default.createElement("p", null, "Una sencilla SPA de alimentaci\xF3n"));
+  return _react.default.createElement(_Beercards.Beercards, null);
 };
 
 exports.Home = Home;
-},{"react":"node_modules/react/index.js"}],"src/pages/Beers.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","/src/components/Beercards":"src/components/Beercards.js"}],"src/pages/Beers.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
