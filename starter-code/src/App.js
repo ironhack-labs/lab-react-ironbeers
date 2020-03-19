@@ -7,6 +7,9 @@ export const App = () => {
     <Router>
       <Switch>
         <Route path="/" exact component={Home}></Route>
+        <Route path="/beers" component={Home}></Route>
+        <Route path="/random-beer" component={Home}></Route>
+        <Route path="/new-beer" component={Home}></Route>
       </Switch>
     </Router>
   );
