@@ -13,10 +13,7 @@ export const HomePage = () => {
       <Link to={"/list"} className="list-group-item list-group-item-action">
         <Section image={beerImage} title="All Beers" />
       </Link>
-      <Link
-        to={"/detail/:id"}
-        className="list-group-item list-group-item-action"
-      >
+      <Link to={"/random"} className="list-group-item list-group-item-action">
         <Section image={newBeerImage} title="Random Beer" />
       </Link>
       <Link to={"/create"} className="list-group-item list-group-item-action">

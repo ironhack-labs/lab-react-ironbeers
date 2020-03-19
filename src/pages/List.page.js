@@ -10,13 +10,10 @@ export const ListPage = () => {
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchListBeers = () =>
+  useEffect(() => {
     getBeers()
       .then(list => setList(list))
       .finally(() => setLoading(false));
-
-  useEffect(() => {
-    fetchListBeers();
   }, []);
 
   return (

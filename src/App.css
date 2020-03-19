@@ -48,3 +48,25 @@ body {
   align-items: center;
   background: rgba(255, 255, 255, 0.5);
 }
+
+.Item img {
+  height: 30vh;
+  width: 15%;
+}
+
+.Item .wrapper-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 0 2.5vh 0;
+}
+
+.Item .wrapper-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Item .card-text {
+  padding-top: 2.5vh;
+}

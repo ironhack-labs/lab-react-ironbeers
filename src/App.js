@@ -15,7 +15,11 @@ export const App = () => (
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/list" component={ListPage} />
-        <Route path="/detail" component={DetailPage} />
+        <Route path="/random" component={DetailPage} />
+        <Route
+          path="/detail/:id"
+          component={({ match }) => <DetailPage id={match.params.id} />}
+        />
         <Route path="/create" component={CreatePage} />
       </Switch>
     </Main>
