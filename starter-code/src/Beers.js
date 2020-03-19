@@ -25,22 +25,16 @@ const Beers = function() {
           >
             <div className="row no-gutters">
               <div className="col-md-4">
-                <Link
-                  key={beer._id}
-                  to="{beer._id}"
-                  style={{ textDecoration: "none" }}
-                >
-                  <img
-                    style={{ width: "40px", height: "7rem" }}
-                    src={beer.image_url}
-                    className="card-img mt-4 ml-4"
-                    alt="Beer Picture"
-                  />
-                </Link>
+                <img
+                  style={{ width: "40px", height: "7rem" }}
+                  src={beer.image_url}
+                  className="card-img mt-4 ml-4"
+                  alt="Beer Picture"
+                />
               </div>
               <div className="col-md-8">
                 <div className="card-body">
-                  <h5 className="card-title">{beer._id}</h5>
+                  <h5 className="card-title">{beer.name}</h5>
                   <p
                     className="card-text"
                     style={{
