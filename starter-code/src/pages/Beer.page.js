@@ -22,12 +22,13 @@ export const BeerPage = () => {
   const { setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
+    console.log("beer page effect");
+    setLoading(true);
     api.get("/beers").then(res => {
       const data = res.data;
-      setBeers(data);
       setLoading(false);
+      setBeers(data);
     });
-    return setLoading(true);
   }, [setLoading]);
 
   //console.log(beers);

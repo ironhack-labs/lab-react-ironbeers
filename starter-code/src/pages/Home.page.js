@@ -1,11 +1,10 @@
-import React, { useEffect, useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "../components/Card";
 import beers from "../../public/images/beers.png";
 import randomBeer from "../../public/images/random-beer.png";
 import newBeer from "../../public/images/new-beer.png";
 import styled from "styled-components";
-import { LoadingContext } from "../../lib/loading.api";
 
 const pages = [
   {
@@ -36,10 +35,6 @@ const Container = styled.div`
 `;
 
 export const HomePage = () => {
-  const { setLoading } = useContext(LoadingContext);
-  useEffect(() => {
-    setLoading(false);
-  }, [setLoading]);
   return (
     <Container>
       {pages.map((e, i) => {
