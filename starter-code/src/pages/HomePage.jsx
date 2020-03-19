@@ -9,9 +9,9 @@ const HomePage = () => {
   console.log(text.home);
   return (
     <>
-      <HomeCard img={beers} header="All Beers" text={text.home} />
-      <HomeCard img={randomBeer} header="Random Beer" text={text.home} />
-      <HomeCard img={newBeer} header="New Beer" text={text.home} />
+      <HomeCard link="/beers" img={beers} header="All Beers" text={text.home} />
+      <HomeCard link="/beers/random" img={randomBeer} header="Random Beer" text={text.home} />
+      <HomeCard link="beers/new" img={newBeer} header="New Beer" text={text.home} />
     </>
   );
 };
