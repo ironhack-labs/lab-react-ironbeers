@@ -28311,21 +28311,79 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js":[function(require,module,exports) {
-function _taggedTemplateLiteral(strings, raw) {
-  if (!raw) {
-    raw = strings.slice(0);
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
 
-  return Object.freeze(Object.defineProperties(strings, {
-    raw: {
-      value: Object.freeze(raw)
-    }
-  }));
+  return bundleURL;
 }
 
-module.exports = _taggedTemplateLiteral;
-},{}],"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel/src/builtins/bundle-url.js"}],"public/styles/App.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32222,84 +32280,26 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel/src/builtins/bundle-url.js"}],"public/styles/App.css":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"node_modules/bootstrap/dist/css/bootstrap.min.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/bootstrap/dist/css/bootstrap.min.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+},{"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js":[function(require,module,exports) {
+function _taggedTemplateLiteral(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"public/images/casa.png":[function(require,module,exports) {
+  return Object.freeze(Object.defineProperties(strings, {
+    raw: {
+      value: Object.freeze(raw)
+    }
+  }));
+}
+
+module.exports = _taggedTemplateLiteral;
+},{}],"public/images/casa.png":[function(require,module,exports) {
 module.exports = "/casa.0fa186e4.png";
 },{}],"node_modules/shallowequal/index.js":[function(require,module,exports) {
 //
@@ -36220,57 +36220,7 @@ var useFetch = function useFetch(url) {
 
 var _default = useFetch;
 exports.default = _default;
-},{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js"}],"src/components/UI/Data.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
-
-var _react = _interopRequireDefault(require("react"));
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject2() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  font-size: 32px;\n  font-weight: bold;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  text-align: center;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-var DataContainer = _styledComponents.default.div(_templateObject());
-
-var Number = _styledComponents.default.p(_templateObject2());
-
-var Data = function Data(_ref) {
-  var name = _ref.name,
-      tagline = _ref.tagline,
-      description = _ref.description,
-      image = _ref.image;
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(DataContainer, null, _react.default.createElement(Number, null, name), _react.default.createElement("div", null, tagline), _react.default.createElement("div", null, description)));
-};
-
-var _default = Data;
-exports.default = _default;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/UI/FlexContainer.js":[function(require,module,exports) {
+},{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js"}],"src/components/UI/AllBeers.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36285,7 +36235,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: flex;\n  align-items: end;\n  flex-direction: column;\n"]);
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 3rem;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36294,10 +36244,11 @@ function _templateObject() {
   return data;
 }
 
-var _default = _styledComponents.default.div(_templateObject());
+var Cards = _styledComponents.default.div(_templateObject());
 
+var _default = Cards;
 exports.default = _default;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/DataBeers.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/Beers.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36307,43 +36258,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Data = _interopRequireDefault(require("./components/UI/Data"));
-
-var _FlexContainer = _interopRequireDefault(require("./components/UI/FlexContainer"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var DataBeers = function DataBeers(_ref) {
-  var image = _ref.image,
-      name = _ref.name,
-      tagline = _ref.tagline,
-      first_brewed = _ref.first_brewed,
-      attenuation_level = _ref.attenuation_level,
-      description = _ref.description,
-      contributed_by = _ref.contributed_by;
-  return _react.default.createElement(_FlexContainer.default, null, _react.default.createElement(_Data.default, {
-    title: "Name",
-    name: name
-  }), _react.default.createElement(_Data.default, {
-    title: "tagline",
-    tagline: tagline
-  }), _react.default.createElement(_Data.default, {
-    title: "description",
-    description: description
-  }));
-};
-
-var _default = DataBeers;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","./components/UI/Data":"src/components/UI/Data.js","./components/UI/FlexContainer":"src/components/UI/FlexContainer.js"}],"src/Beers.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
+var _reactRouterDom = require("react-router-dom");
 
 require("bootstrap/dist/css/bootstrap.min.css");
 
@@ -36351,7 +36266,7 @@ var _Navbar = _interopRequireDefault(require("./components/Navbar"));
 
 var _useFetch2 = _interopRequireDefault(require("./components/hooks/useFetch"));
 
-var _DataBeers = _interopRequireDefault(require("./DataBeers"));
+var _AllBeers = _interopRequireDefault(require("./components/UI/AllBeers"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36361,53 +36276,59 @@ var Beers = function Beers() {
       loading = _useFetch.loading;
 
   if (loading) {
-    return _react.default.createElement("div", null, "Cargando las de cervezas...");
+    return _react.default.createElement(_AllBeers.default, null, "Cargando las de cervezas...");
   }
 
-  return _react.default.createElement("div", null, _react.default.createElement(_Navbar.default, null), data.map(function (beer, i) {
-    return _react.default.createElement("div", {
+  return _react.default.createElement(_AllBeers.default, null, _react.default.createElement(_Navbar.default, null), data.map(function (beer, i) {
+    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
       key: i,
-      className: "card mb-3",
+      className: "card",
       style: {
-        maxWidth: "24rem",
-        height: "20rem"
+        width: "24rem",
+        height: "11rem"
       }
     }, _react.default.createElement("div", {
       className: "row no-gutters"
     }, _react.default.createElement("div", {
       className: "col-md-4"
+    }, _react.default.createElement(_reactRouterDom.Link, {
+      key: beer._id,
+      to: "{beer._id}",
+      style: {
+        textDecoration: "none"
+      }
     }, _react.default.createElement("img", {
       style: {
-        width: "100px",
-        height: "18rem"
+        width: "40px",
+        height: "7rem"
       },
       src: beer.image_url,
-      className: "card-img",
+      className: "card-img mt-4 ml-4",
       alt: "Beer Picture"
-    })), _react.default.createElement("div", {
+    }))), _react.default.createElement("div", {
       className: "col-md-8"
     }, _react.default.createElement("div", {
       className: "card-body"
     }, _react.default.createElement("h5", {
       className: "card-title"
-    }, beer.name), _react.default.createElement("p", {
+    }, beer._id), _react.default.createElement("p", {
       className: "card-text",
       style: {
-        height: "12rem",
+        maxHeight: "12rem",
         overflow: "hidden",
         texOverflow: "ellipsis"
       }
-    }, beer.description), _react.default.createElement("p", {
+    }, beer.tagline), _react.default.createElement("p", {
       className: "card-text"
     }, _react.default.createElement("small", {
       className: "text-muted"
-    }, beer.contributed_by))))));
+    }, beer.contributed_by)))))));
   }));
 };
 
 var _default = Beers;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","./components/Navbar":"src/components/Navbar.js","./components/hooks/useFetch":"src/components/hooks/useFetch.js","./DataBeers":"src/DataBeers.js"}],"public/images/new-beer.png":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","./components/Navbar":"src/components/Navbar.js","./components/hooks/useFetch":"src/components/hooks/useFetch.js","./components/UI/AllBeers":"src/components/UI/AllBeers.js"}],"public/images/new-beer.png":[function(require,module,exports) {
 module.exports = "/new-beer.0e92cd9b.png";
 },{}],"src/NewBeer.js":[function(require,module,exports) {
 "use strict";
@@ -36597,7 +36518,86 @@ var LinksBeers = function LinksBeers() {
 
 var _default = LinksBeers;
 exports.default = _default;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","./CardBeers":"src/components/CardBeers.js","./CardRandomBeer":"src/components/CardRandomBeer.js","../NewBeer":"src/NewBeer.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/Home.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","./CardBeers":"src/components/CardBeers.js","./CardRandomBeer":"src/components/CardRandomBeer.js","../NewBeer":"src/NewBeer.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/pages/BeerDetail.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+require("bootstrap/dist/css/bootstrap.min.css");
+
+var _Navbar = _interopRequireDefault(require("../components/Navbar"));
+
+var _useFetch2 = _interopRequireDefault(require("../components/hooks/useFetch"));
+
+var _AllBeers = _interopRequireDefault(require("../components/UI/AllBeers"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var BeerDetail = function BeerDetail() {
+  var _useFetch = (0, _useFetch2.default)("https://ih-beers-api2.herokuapp.com/beers"),
+      data = _useFetch.data,
+      loading = _useFetch.loading;
+
+  if (loading) {
+    return _react.default.createElement(_AllBeers.default, null, "Cargando las de cerveza...");
+  }
+
+  return _react.default.createElement(_reactRouterDom.Link, {
+    to: "/beer-detail",
+    style: {
+      textDecoration: "none"
+    }
+  }, _react.default.createElement(_AllBeers.default, null, _react.default.createElement(_Navbar.default, null), data.map(function (beer, i) {
+    return _react.default.createElement("div", {
+      key: i,
+      className: "card",
+      style: {
+        width: "24rem",
+        height: "11rem"
+      }
+    }, _react.default.createElement("div", {
+      className: "row no-gutters"
+    }, _react.default.createElement("div", {
+      className: "col-md-4"
+    }, _react.default.createElement("img", {
+      style: {
+        width: "40px",
+        height: "7rem"
+      },
+      src: beer.image_url,
+      className: "card-img mt-4 ml-4",
+      alt: "Beer Picture"
+    })), _react.default.createElement("div", {
+      className: "col-md-8"
+    }, _react.default.createElement("div", {
+      className: "card-body"
+    }, _react.default.createElement("h5", {
+      className: "card-title"
+    }, beer.name), _react.default.createElement("p", {
+      className: "card-text",
+      style: {
+        maxHeight: "12rem",
+        overflow: "hidden",
+        texOverflow: "ellipsis"
+      }
+    }, beer.tagline), _react.default.createElement("p", {
+      className: "card-text"
+    }, _react.default.createElement("small", {
+      className: "text-muted"
+    }, beer.contributed_by))))));
+  })));
+};
+
+var _default = BeerDetail;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","../components/Navbar":"src/components/Navbar.js","../components/hooks/useFetch":"src/components/hooks/useFetch.js","../components/UI/AllBeers":"src/components/UI/AllBeers.js"}],"src/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36619,6 +36619,8 @@ var _Navbar = _interopRequireDefault(require("./components/Navbar"));
 
 var _LinksBeers = _interopRequireDefault(require("./components/LinksBeers"));
 
+var _BeerDetail = _interopRequireDefault(require("./pages/BeerDetail"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Home = function Home() {
@@ -36632,6 +36634,9 @@ var Home = function Home() {
     path: "/beers",
     component: _Beers.default
   }), _react.default.createElement(_reactRouterDom.Route, {
+    path: "/:id",
+    component: _BeerDetail.default
+  }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/random-beer",
     component: _Navbar.default
   }), _react.default.createElement(_reactRouterDom.Route, {
@@ -36642,7 +36647,7 @@ var Home = function Home() {
 
 var _default = Home;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../public/styles/App.css":"public/styles/App.css","./Beers":"src/Beers.js","./NewBeer":"src/NewBeer.js","./components/Navbar":"src/components/Navbar.js","./components/LinksBeers":"src/components/LinksBeers.js"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../public/styles/App.css":"public/styles/App.css","./Beers":"src/Beers.js","./NewBeer":"src/NewBeer.js","./components/Navbar":"src/components/Navbar.js","./components/LinksBeers":"src/components/LinksBeers.js","./pages/BeerDetail":"src/pages/BeerDetail.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36650,38 +36655,20 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.App = void 0;
 
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
-
 var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
 
 require("../public/styles/App.css");
 
 var _Home = _interopRequireDefault(require("./Home"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: flex;\n  justify-content: center;\n  margin-top: 3em;\n  align-items: center;\n  flex-direction: column-reverse;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-var Container = _styledComponents.default.div(_templateObject());
 
 var App = function App() {
   return _react.default.createElement(_Home.default, null);
 };
 
 exports.App = App;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../public/styles/App.css":"public/styles/App.css","./Home":"src/Home.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"node_modules/bootstrap/dist/css/bootstrap.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../public/styles/App.css":"public/styles/App.css","./Home":"src/Home.js"}],"node_modules/bootstrap/dist/css/bootstrap.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -36732,7 +36719,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51886" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54799" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

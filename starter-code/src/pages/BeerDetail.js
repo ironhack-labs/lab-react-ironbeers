@@ -1,23 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/Navbar";
-import useFetch from "./components/hooks/useFetch";
-import Cards from "./components/UI/AllBeers";
+import Navbar from "../components/Navbar";
+import useFetch from "../components/hooks/useFetch";
+import Cards from "../components/UI/AllBeers";
 
-const Beers = function() {
+const BeerDetail = () => {
   const { data, loading } = useFetch(
     "https://ih-beers-api2.herokuapp.com/beers"
   );
   if (loading) {
-    return <Cards>Cargando las de cervezas...</Cards>;
+    return <Cards>Cargando las de cerveza...</Cards>;
   }
 
   return (
-    <Cards>
-      <Navbar />
-      {data.map((beer, i) => (
-        <>
+    <Link to="/beer-detail" style={{ textDecoration: "none" }}>
+      <Cards>
+        <Navbar />
+        {data.map((beer, i) => (
           <div
             key={i}
             className="card"
@@ -25,22 +25,16 @@ const Beers = function() {
           >
             <div className="row no-gutters">
               <div className="col-md-4">
-                <Link
-                  key={beer._id}
-                  to="{beer._id}"
-                  style={{ textDecoration: "none" }}
-                >
-                  <img
-                    style={{ width: "40px", height: "7rem" }}
-                    src={beer.image_url}
-                    className="card-img mt-4 ml-4"
-                    alt="Beer Picture"
-                  />
-                </Link>
+                <img
+                  style={{ width: "40px", height: "7rem" }}
+                  src={beer.image_url}
+                  className="card-img mt-4 ml-4"
+                  alt="Beer Picture"
+                />
               </div>
               <div className="col-md-8">
                 <div className="card-body">
-                  <h5 className="card-title">{beer._id}</h5>
+                  <h5 className="card-title">{beer.name}</h5>
                   <p
                     className="card-text"
                     style={{
@@ -58,10 +52,10 @@ const Beers = function() {
               </div>
             </div>
           </div>
-        </>
-      ))}
-    </Cards>
+        ))}
+      </Cards>
+    </Link>
   );
 };
 
-export default Beers;
+export default BeerDetail;
