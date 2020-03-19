@@ -13,14 +13,45 @@ const Beers = function() {
   }
 
   return (
-    <>
+    <div>
       <Navbar />
-      <DataBeers
-        name={data[0].name}
-        tagline={data[0].tagline}
-        description={data[0].description}
-      />
-    </>
+      {data.map((beer, i) => (
+        <div
+          key={i}
+          className="card mb-3"
+          style={{ maxWidth: "24rem", height: "20rem" }}
+        >
+          <div className="row no-gutters">
+            <div className="col-md-4">
+              <img
+                style={{ width: "100px", height: "18rem" }}
+                src={beer.image_url}
+                className="card-img"
+                alt="Beer Picture"
+              />
+            </div>
+            <div className="col-md-8">
+              <div className="card-body">
+                <h5 className="card-title">{beer.name}</h5>
+                <p
+                  className="card-text"
+                  style={{
+                    height: "12rem",
+                    overflow: "hidden",
+                    texOverflow: "ellipsis"
+                  }}
+                >
+                  {beer.description}
+                </p>
+                <p className="card-text">
+                  <small className="text-muted">{beer.contributed_by}</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
