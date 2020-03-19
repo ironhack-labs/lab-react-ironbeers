@@ -26,7 +26,7 @@ export const RandomBeer = props => {
   const { setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
-    console.log("random beer page effect");
+    //console.log("random beer page effect");
     setLoading(true);
     api.get(`/beers/random`).then(res => {
       const data = res.data;

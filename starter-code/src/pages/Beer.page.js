@@ -23,7 +23,7 @@ export const BeerPage = () => {
   const { setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
-    console.log("beer page effect");
+    //console.log("beer page effect");
     setLoading(true);
     api.get("/beers").then(res => {
       const data = res.data;

@@ -7,10 +7,11 @@ import { LoadingContext } from "../../lib/loading.api";
 
 const Container = styled.div`
   display: flex;
-  align-self: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 80%;
+  height: 100%;
   padding: 40px;
   margin: 50px auto 0;
   @media (max-width: 768px) {
@@ -27,7 +28,7 @@ export const SingleBeer = props => {
   const { id } = props.match.params;
 
   useEffect(() => {
-    console.log("single beer page effect");
+    //console.log("single beer page effect");
     setLoading(true);
     api.get(`/beers/${id}`).then(res => {
       const data = res.data;
