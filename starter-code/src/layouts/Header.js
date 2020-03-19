@@ -4,10 +4,14 @@ import styled from "styled-components";
 import icon from "../../public/images/beer.svg";
 
 const Box = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
+  z-index: 900;
   display: flex;
   justify-content: center;
-  background-color: #34dde3;
+  background-color: rgba(255, 255, 255, 0.9);
 `;
 
 const Image = styled.img`

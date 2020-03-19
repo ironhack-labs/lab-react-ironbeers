@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.2",
     "components": "^0.1.0",
     "parcel": "^1.12.4",
     "react": "^16.13.0",
