@@ -70,3 +70,7 @@ body {
 .Item .card-text {
   padding-top: 2.5vh;
 }
+
+.create-form {
+  padding: 2.5vh 5vw;
+}
