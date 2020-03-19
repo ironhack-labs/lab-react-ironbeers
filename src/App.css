@@ -15,3 +15,36 @@ body {
   width: 10%;
   color: #fff;
 }
+
+.ItemList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+
+.ItemList .tagline {
+  font-size: 1.2em;
+}
+
+.ItemList img {
+  padding: 15%;
+  width: 60px;
+}
+
+.ItemList .wrapper-img {
+  width: 20%;
+}
+
+.ItemList .wrapper-info {
+  width: 80%;
+}
+
+.wrapper-loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+}

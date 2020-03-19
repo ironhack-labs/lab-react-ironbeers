@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+import { Link } from "react-router-dom";
+import { ItemList } from "../components/ItemList";
 
 import { getBeers } from "../../lib/beer.api";
+import { Loading } from "../components/Loading";
 
 export const ListPage = () => {
-  getBeers().then(e => {
-    console.log(e);
-    return null;
-  });
-  return <p>LIST</p>;
+  const [list, setList] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchListBeers = () =>
+    getBeers()
+      .then(list => setList(list))
+      .finally(() => setLoading(false));
+
+  useEffect(() => {
+    fetchListBeers();
+  }, []);
+
+  return (
+    <>
+      {loading && <Loading />}
+      <div className="list-group">
+        {list.map(e => (
+          <Link
+            key={e._id}
+            to={`/detail/${e._id}`}
+            className="list-group-item list-group-item-action"
+          >
+            <ItemList>{e}</ItemList>
+          </Link>
+        ))}
+      </div>
+    </>
+  );
 };
