@@ -26,3 +26,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+header {
+  background-color: #2ec4fa;
+width: 100%;
+height: 50px;
+position: fixed;
+top: 0px;
+left: 0px;
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+align-items: center;
+}
+
+.icon {
+  color: #FFFFFF;
+}
