@@ -1,35 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 20px;
-  h4 {
-    color: #000;
-    padding: 0;
-    margin: 1rem 20px 0;
-    font-size: 2rem;
-    font-weight: 400;
-  }
-  p {
-    color: #ccc;
-    padding: 0;
-    margin: 0px 20px;
-    font-size: 1.5rem;
-  }
-  @media (max-width: 768px) {
-    width: 80%;
-  }
-`;
-
 const ImageContainer = styled.div`
   width: 100%;
-  height: 400px;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    height: 30vh;
+  }
 `;
 
 const Image = styled.img`
@@ -50,23 +30,46 @@ const Block = styled.div`
   align-items: flex-start;
 `;
 
+const Title = styled.h3`
+  color: #000;
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0px;
+`;
+
+const SubTitle = styled.p`
+  color: #ccc;
+  padding: 0;
+  margin: 0px;
+  font-size: 1.5rem;
+`;
+
+const Imperative = styled.p`
+  color: #000;
+  padding: 0;
+  margin: 0px;
+  font-size: 1rem;
+  font-weight: 700;
+`;
+
 export const Beer = props => {
   return (
     <>
       <ImageContainer>
         <Image src={props.image_url} />
       </ImageContainer>
-      <Line>
-        <p>{props.name}</p>
-        <p>{props.attenuation_level}</p>
+      <Line style={{ marginTop: 50 }}>
+        <Title>{props.name}</Title>
+        <SubTitle>{props.attenuation_level}</SubTitle>
       </Line>
       <Line>
-        <p>{props.tagline}</p>
-        <p>{props.first_brewed}</p>
+        <SubTitle>{props.tagline}</SubTitle>
+        <Imperative>{props.first_brewed}</Imperative>
       </Line>
       <Block>
         <p>{props.description}</p>
-        <p>{props.contributed_by}</p>
+        <Imperative>{props.contributed_by}</Imperative>
       </Block>
     </>
   );
