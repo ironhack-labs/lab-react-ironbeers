@@ -10,22 +10,18 @@ import logo from "/public/images/house.svg";
 
 export const Header = () => {
   return (
-    <>
-      <Nav className="justify-content-center navbar" activeKey="/home">
-        <Navbar.Brand href="/">
-          <Link to="/">
-            <a>
-              <img
-                alt="home"
-                src={logo}
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-              />
-            </a>
-          </Link>
-        </Navbar.Brand>
-      </Nav>
-    </>
+    <Nav className="justify-content-center navbar" activeKey="/home">
+      <Navbar.Brand>
+        <Link to="/">
+          <img
+            alt="home"
+            src={logo}
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />
+        </Link>
+      </Navbar.Brand>
+    </Nav>
   );
 };
