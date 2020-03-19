@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { HomePage } from "../pages/Home.page";
 import { BeerPage } from "../pages/Beer.page";
 import { withLoading } from "../../lib/withLoading";
-import { SingleBeer } from "../pages/SingleBeer.page";
+import { SingleBeer } from "../pages/SingleBeer.page.js";
+import { RandomBeer } from "../pages/RandomBeer.page.js";
 
 export const App = withLoading(() => {
   return (
@@ -12,6 +13,7 @@ export const App = withLoading(() => {
         <Route path="/" exact component={HomePage} />
         <Route path="/beers" component={BeerPage} />
         <Route path="/beer/:id" component={SingleBeer} />
+        <Route path="/random-beer" component={RandomBeer} />
       </Switch>
     </Router>
   );
