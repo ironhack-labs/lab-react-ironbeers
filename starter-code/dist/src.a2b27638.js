@@ -35250,7 +35250,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: block;\n  margin: 0 auto;\n  max-width: 1024px;\n  width: 100%;\n  h1 {\n    color: #3c3c3c;\n    font-size: 32px;\n    text-align: center;\n  }\n"]);
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: block;\n  margin: 0 auto;\n  max-width: 768px;\n  width: 100%;\n  h1 {\n    color: #3c3c3c;\n    font-size: 32px;\n    text-align: center;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -35358,7 +35358,7 @@ var _reactRouterDom = require("react-router-dom");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: block;\n  width: 100%;\n  margin: 20px 0 50px;\n  a {\n    display: block;\n    color: #3e3e3e;\n    text-decoration: none;\n    opacity: 0.75;\n    transition: all 1s ease;\n  }\n  &:hover a {\n    transition: all 1s ease;\n    opacity: 1;\n  }\n  .box-img,\n  img {\n    width: 100%;\n    display: block;\n    max-width: 100%;\n  }\n  h2 {\n    font-size: 30px;\n    text-align: left;\n    margin: 20px 0 10px;\n  }\n  p {\n    font-size: 16px;\n    line-height: 22px;\n    text-align: justify;\n  }\n"]);
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: block;\n  width: 100%;\n  margin: 20px 0 50px;\n  a {\n    display: block;\n    color: #3e3e3e;\n    text-decoration: none;\n    opacity: 1;\n    transition: all 1s ease;\n  }\n  &:hover a {\n    transition: all 1s ease;\n    opacity: 0.6;\n  }\n  .box-img,\n  img {\n    width: 100%;\n    display: block;\n    max-width: 100%;\n  }\n  h2 {\n    font-size: 30px;\n    text-align: left;\n    margin: 20px 0 10px;\n  }\n  p {\n    font-size: 16px;\n    line-height: 22px;\n    text-align: justify;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37844,7 +37844,7 @@ var listAllBeers = /*#__PURE__*/function () {
 
           case 2:
             res = _context.sent;
-            console.log("data", res.data);
+            console.log("listAllBeers --> data", res.data);
             return _context.abrupt("return", res.data);
 
           case 5:
@@ -37867,7 +37867,7 @@ exports.listAllBeers = listAllBeers;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CountryContextProvider = exports.CountryContext = void 0;
+exports.BeersContextProvider = exports.BeersContext = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
@@ -37881,34 +37881,32 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log("listAllBeers", _auth.listAllBeers);
-var CountryContext = (0, _react.createContext)();
-exports.CountryContext = CountryContext;
+var BeersContext = (0, _react.createContext)();
+exports.BeersContext = BeersContext;
 
-var CountryContextProvider = function CountryContextProvider(props) {
+var BeersContextProvider = function BeersContextProvider(props) {
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      tas = _useState2[0],
-      setTas = _useState2[1];
+      beers = _useState2[0],
+      setBeers = _useState2[1];
 
-  var fetchTAs = function fetchTAs() {
-    return (0, _auth.listAllBeers)().then(function (tas) {
-      return setTas(tas);
+  var fetchBeers = function fetchBeers() {
+    return (0, _auth.listAllBeers)().then(function (beers) {
+      return setBeers(beers);
     });
   };
 
   (0, _react.useEffect)(function () {
-    fetchTAs(); // IMPORTANT: This is executed on component unmount (when the component disappears)
+    fetchBeers(); // IMPORTANT: This is executed on component unmount (when the component disappears)
   }, []);
-  console.log("fetchTAs en", fetchTAs);
-  return _react.default.createElement(CountryContext.Provider, {
+  return _react.default.createElement(BeersContext.Provider, {
     value: {
-      fetchTAs: fetchTAs
+      beers: beers
     }
   }, props.children);
 };
 
-exports.CountryContextProvider = CountryContextProvider;
+exports.BeersContextProvider = BeersContextProvider;
 },{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","../../lib/auth.api":"lib/auth.api.js"}],"src/pages/Details.Page.js":[function(require,module,exports) {
 "use strict";
 
@@ -37926,11 +37924,11 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var DetailsPage = function DetailsPage() {
-  var _useContext = (0, _react.useContext)(_beers.CountryContext),
-      fetchTAs = _useContext.fetchTAs;
+  var _useContext = (0, _react.useContext)(_beers.BeersContext),
+      beers = _useContext.beers;
 
-  console.log(fetchTAs(), "hdashdlkasndkl");
-  return _react.default.createElement("div", null, "fetchTAs");
+  console.log("Contexto en details page", beers);
+  return _react.default.createElement("div", null, "beers");
 };
 
 exports.DetailsPage = DetailsPage;
@@ -37959,16 +37957,62 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ListPage = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _beers = require("../contexto/beers.Context");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ListPage = function ListPage() {
-  return _react.default.createElement("div", null, "hola");
+function _templateObject() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: block;\n  border-bottom: 2px solid #979797;\n  padding-bottom: 25px;\n  margin-bottom: 25px;\n  width: 100%;\n  a {\n    align-items: center;\n    color: #3e3e3e;\n    display: flex;\n    justify-content: space-evenly;\n    opacity: 1;\n    text-decoration: none;\n    transition: all 1s ease;\n    .box-img {\n      width: 25%;\n      img {\n        display: block;\n        margin: 0 auto;\n        max-height: 260px;\n        max-width: 65%;\n      }\n    }\n    .box-contain {\n      padding-left: 10px;\n      width: 75%;\n      h2 {\n        color: #000;\n        font-family: Arial, Helvetica, sans-serif;\n        font-weight: 100;\n        font-size: 36px;\n      }\n      p {\n        color: #979797;\n        font-size: 22px;\n        &.special-p {\n          font-size: 16px;\n          color: #000;\n          font-weight: 700;\n          span {\n            color: #979797;\n            font-weight: 400;\n          }\n        }\n      }\n    }\n  }\n  &:hover a {\n    transition: all 1s ease;\n    opacity: 0.5;\n  }\n\n  @media (max-width: 480px) {\n    a {\n      flex-flow: column;\n      .box-img img {\n        max-width: 100%;\n      }\n      .box-contain {\n        padding-left: 10px;\n      }\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var BeersListItem = _styledComponents.default.li(_templateObject());
+
+var ListPage = function ListPage(_ref) {
+  var children = _ref.children;
+
+  var _useContext = (0, _react.useContext)(_beers.BeersContext),
+      beers = _useContext.beers;
+
+  console.log("Contexto en details page", beers);
+  return _react.default.createElement("ul", null, beers.map(function (beer, i) {
+    return _react.default.createElement(BeersListItem, {
+      key: i
+    }, _react.default.createElement(_reactRouterDom.Link, {
+      to: "/beer-details/".concat(beer._id)
+    }, _react.default.createElement("div", {
+      className: "box-img"
+    }, _react.default.createElement("img", {
+      src: beer.image_url,
+      title: beer.name,
+      alt: beer.name
+    })), _react.default.createElement("div", {
+      className: "box-contain"
+    }, _react.default.createElement("h2", null, beer.name), _react.default.createElement("p", null, beer.tagline), _react.default.createElement("p", {
+      className: "special-p"
+    }, "Created by: ", _react.default.createElement("span", null, beer.contributed_by)))));
+  }));
 };
 
 exports.ListPage = ListPage;
-},{"react":"node_modules/react/index.js"}],"src/App.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../contexto/beers.Context":"src/contexto/beers.Context.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37976,7 +38020,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.App = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
@@ -37994,12 +38038,10 @@ var _List = require("./pages/List.Page");
 
 var _beers = require("./contexto/beers.Context");
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_beers.CountryContextProvider, null, _react.default.createElement(_layout.Layout, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_beers.BeersContextProvider, null, _react.default.createElement(_layout.Layout, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/",
     exact: true,
     component: function component() {
@@ -38071,7 +38113,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54356" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62197" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

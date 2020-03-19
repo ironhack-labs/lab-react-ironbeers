@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Layout } from "./layout/layout";
 import "../public/styles/reset.css";
@@ -6,12 +6,12 @@ import { HomePage } from "./pages/Home.Page";
 import { DetailsPage } from "./pages/Details.Page";
 import { NewPage } from "./pages/New.Page";
 import { ListPage } from "./pages/List.Page";
-import { CountryContextProvider } from "./contexto/beers.Context";
+import { BeersContextProvider } from "./contexto/beers.Context";
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <CountryContextProvider>
+      <BeersContextProvider>
         <Layout>
           <Switch>
             <Route path="/" exact component={() => <HomePage />} />
@@ -24,7 +24,7 @@ export const App = () => {
             <Route path="/new-beer" exact component={() => <NewPage />} />
           </Switch>
         </Layout>
-      </CountryContextProvider>
+      </BeersContextProvider>
     </BrowserRouter>
   );
 };

@@ -1,20 +1,19 @@
 import React, { createContext, useState, useEffect } from "react";
 import { listAllBeers } from "../../lib/auth.api";
 
-console.log("listAllBeers", listAllBeers);
-export const CountryContext = createContext();
-export const CountryContextProvider = props => {
-  const [tas, setTas] = useState([]);
-  const fetchTAs = () => listAllBeers().then(tas => setTas(tas));
+export const BeersContext = createContext();
+export const BeersContextProvider = props => {
+  const [beers, setBeers] = useState([]);
+  const fetchBeers = () => listAllBeers().then(beers => setBeers(beers));
 
   useEffect(() => {
-    fetchTAs();
+    fetchBeers();
     // IMPORTANT: This is executed on component unmount (when the component disappears)
   }, []);
-  console.log("fetchTAs en", fetchTAs);
+
   return (
-    <CountryContext.Provider value={{ fetchTAs }}>
+    <BeersContext.Provider value={{ beers }}>
       {props.children}
-    </CountryContext.Provider>
+    </BeersContext.Provider>
   );
 };

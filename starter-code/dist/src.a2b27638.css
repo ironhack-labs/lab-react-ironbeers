@@ -26,7 +26,8 @@ header,
 footer,
 body,
 section,
-div {
+div,
+ul {
   box-sizing: border-box;
 }
 
@@ -463,6 +464,11 @@ template {
 
 [hidden] {
   display: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 

@@ -10,12 +10,12 @@ const ModuleSectionCol = styled.section`
     display: block;
     color: #3e3e3e;
     text-decoration: none;
-    opacity: 0.75;
+    opacity: 1;
     transition: all 1s ease;
   }
   &:hover a {
     transition: all 1s ease;
-    opacity: 1;
+    opacity: 0.6;
   }
   .box-img,
   img {
