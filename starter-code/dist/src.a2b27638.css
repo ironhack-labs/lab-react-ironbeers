@@ -8,7 +8,23 @@ body {
   width: 100vh;
 }
 .main-container div {
-  width: 705px;
+  width: 375px;
+}
+.beer-img-container {
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  width: 100px;
+  margin: 20px 0;
+}
+.beer-img {
+  height: 100%;
+}
+.card-body {
+  width: 85%;
+}
+.navbar-img {
+  width: 100vw;
 }
 a {
   text-decoration: none;
