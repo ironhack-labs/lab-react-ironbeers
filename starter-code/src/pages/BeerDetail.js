@@ -4,15 +4,12 @@ import { Header } from "../components/Header";
 
 export const BeerDetail = props => {
   const { id } = props.match.params;
-  console.log(id);
   const [beer, setBeer] = useState([]);
-  console.log(beer);
 
   const listAllBeers = async () => {
     const res = await axios.get(
       `https://ih-beers-api2.herokuapp.com/beers/${id}`
     );
-    console.log(res.data);
     return res.data;
   };
 

@@ -33,7 +33,7 @@ class AllBeer extends Component {
           <div>
             {this.state.beer.map(beer => (
               <div className="prueba">
-                <Link className="link" to={`/beer/${beer._id}`} key={beer._id}>
+                <Link className="link" to={`/beer/${beer._id}`} key={beer.i}>
                   <img src={beer.image_url} alt={beer.name}></img>
                   <h3>{`Name: ${beer.name}`}</h3>
                   <p>{`Tagline: ${beer.tagline}`}</p>
