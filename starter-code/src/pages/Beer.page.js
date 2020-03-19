@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "../layouts/Layout";
 import axios from "axios";
 import { BeerCard } from "../components/BeerCard";
@@ -37,7 +38,15 @@ export const BeerPage = () => {
       <Container>
         {beers &&
           beers.map((e, i) => {
-            return <BeerCard key={i} {...e}></BeerCard>;
+            return (
+              <Link
+                to={`/beer/${e._id}`}
+                key={i}
+                style={{ textDecoration: "none" }}
+              >
+                <BeerCard key={i} {...e}></BeerCard>
+              </Link>
+            );
           })}
       </Container>
     </Layout>
