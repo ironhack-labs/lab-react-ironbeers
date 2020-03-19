@@ -17,7 +17,7 @@ const Home = () => {
           <Route exact path="/" component={() => <LinksBeers />} />
           <Route path="/beers" component={Beers} />
           <Route path="/random-beer" component={RandomBeers} />
-          <Route path="/:id" component={BeerDetail} />
+          <Route path="/beer-detail/:id" component={BeerDetail} />
           <Route path="/new-beer" component={Navbar} />
         </Switch>
       </Router>

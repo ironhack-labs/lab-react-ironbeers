@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 
 const useFetch = url => {
   const [loading, setLoading] = useState(true);
-  const [deaths, setDeaths] = useState(null);
-  const [recovered, setRecovered] = useState(null);
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -20,6 +18,7 @@ const useFetch = url => {
     }
     fetchData();
   }, [url]);
+  console.log(url);
   return { data, loading };
 };
 
