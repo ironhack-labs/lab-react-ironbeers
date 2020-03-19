@@ -13,7 +13,7 @@ const LoadingWrapper = styled.div`
   z-index: 10000;
   background: rgba(255, 255, 255, 1);
   img {
-    width: 100px;
+    width: 400px;
   }
 `;
 
