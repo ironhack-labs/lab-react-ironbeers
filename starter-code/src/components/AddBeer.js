@@ -16,11 +16,12 @@ export const AddBeer = () => {
     contributed_by: ''
   });
 
-  const addNewBeer = () => {
-    axios
-      .post('https://ih-beers-api2.herokuapp.com/beers/new', beer)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+  const addNewBeer = async () => {
+    try {
+      await axios.post('https://ih-beers-api2.herokuapp.com/beers/new', beer);
+    } catch (err) {
+      console.log('Creation of beer bailed ', err);
+    }
   };
 
   const handleSubmit = e => {
