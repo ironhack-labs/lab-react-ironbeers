@@ -21,7 +21,8 @@ export const Options = () => {
     {
       title: 'Random beer',
       image: randomBeer,
-      description: 'Get a random beer from the list'
+      description: 'Get a random beer from the list',
+      link: 'beers/random'
     },
     {
       title: 'New beer',

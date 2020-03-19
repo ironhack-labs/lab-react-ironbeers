@@ -20,7 +20,7 @@ export const App = () => {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/beers" exact component={BeersPage} />
-            <Route path="/beers/:beerId" exact component={BeerDetailPage} />
+            <Route path="/beers/:id" exact component={BeerDetailPage} />
           </Switch>
         </Layout>
       </Router>
