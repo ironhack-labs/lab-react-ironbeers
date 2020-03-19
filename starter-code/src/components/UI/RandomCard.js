@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-const Cards = styled.div`
+const RandomCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
 `;
-export default Cards;
+
+export default RandomCard;
