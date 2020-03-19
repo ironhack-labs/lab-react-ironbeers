@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 import { BeerDetailCard } from '../styles/PageContent';
 
 export const BeerDetail = props => {
-  const { beerId } = props.match.params;
+  const { id } = props.match.params;
   const [beer, setBeer] = useState({});
 
   useEffect(() => {
-    const fetchData = async () => {
-      const url = `https://ih-beers-api2.herokuapp.com/beers/${beerId}`;
+    const fetchData = async endpoint => {
+      const url = `https://ih-beers-api2.herokuapp.com/beers/${endpoint}`;
       const response = await axios.get(url);
       console.log('beer found ', response.data);
       setBeer(response.data);
     };
 
-    fetchData();
+    fetchData(id);
   }, []);
 
   return (
@@ -35,7 +35,8 @@ export const BeerDetail = props => {
         </div>
         <p>{beer.description}</p>
         <p>{beer.contributed_by}</p>
-        <Link to="/beers">Back to list</Link>
+        <Link to="/beers">Back to beers list</Link>
+        <Link to="/">Back to home</Link>
       </div>
     </BeerDetailCard>
   );
