@@ -7,11 +7,10 @@ import { LoadingContext } from "../../lib/loading.api";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  align-self: center;
   flex-direction: column;
   align-items: center;
   width: 80%;
-  height: 100%;
   padding: 40px;
   margin: 50px auto 0;
   @media (max-width: 768px) {
@@ -22,15 +21,14 @@ const api = axios.create({
   baseURL: "https://ih-beers-api2.herokuapp.com"
 });
 
-export const SingleBeer = props => {
+export const RandomBeer = props => {
   const [beer, setBeer] = useState();
   const { setLoading } = useContext(LoadingContext);
-  const { id } = props.match.params;
 
   useEffect(() => {
-    //console.log("single beer page effect");
+    //console.log("random beer page effect");
     setLoading(true);
-    api.get(`/beers/${id}`).then(res => {
+    api.get(`/beers/random`).then(res => {
       const data = res.data;
       console.log(data);
       setLoading(false);
