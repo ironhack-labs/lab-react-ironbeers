@@ -1,23 +1,38 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
 const Input = styled.input`
-  color: #000;
+  width: 100%;
+  color: #2f2f2f;
   padding: 10px;
-  border-bottom: 1px solid #000;
+  margin: 10px;
+  border: none;
+  border-bottom: 1px solid #d7c9aa;
+  text-align: center;
+  font-family: "Quicksand";
+  :focus {
+    outline: none;
+  }
 `;
 
 const Button = styled.button`
-  background-color: #3e3e3f;
-  color: #fff;
+  margin: 20px 0;
+  width: 40%;
+  background-color: #d7c9aa;
+  color: #2f2f2f;
   border-radius: 5px;
-  border: 1px solid orange;
+  padding: 10px;
+  border: 1px solid #d7c9aa;
+  font-size: 1rem;
+  font-family: "Quicksand";
+`;
+
+const Form = styled.form`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
 `;
 
 export const CreateBeerForm = ({ handleSubmit }) => {
@@ -30,7 +45,7 @@ export const CreateBeerForm = ({ handleSubmit }) => {
   const [contributed_by, setContributor] = useState("");
 
   return (
-    <form
+    <Form
       onSubmit={e => {
         e.preventDefault();
         handleSubmit(
@@ -44,53 +59,52 @@ export const CreateBeerForm = ({ handleSubmit }) => {
         );
       }}
     >
-      <Container>
-        <Input
-          type="text"
-          value={name}
-          placeholder="name"
-          onChange={e => setName(e.target.value)}
-        />
-        <Input
-          type="text"
-          value={tagline}
-          placeholder="tagline"
-          onChange={e => setTagline(e.target.value)}
-        />
-        <Input
-          type="text"
-          value={description}
-          placeholder="description"
-          onChange={e => setDescription(e.target.value)}
-        />
-        <Input
-          type="text"
-          value={first_brewed}
-          placeholder="brewedAt"
-          onChange={e => setBrewedAt(e.target.value)}
-        />
-        <Input
-          type="text"
-          value={brewers_tips}
-          placeholder="tips"
-          onChange={e => setTips(e.target.value)}
-        />
-        <Input
-          type="text"
-          value={attenuation_level}
-          placeholder="level"
-          onChange={e => setLevel(e.target.value)}
-        />
-        <Input
-          type="text"
-          value={contributed_by}
-          placeholder="contributor"
-          onChange={e => setContributor(e.target.value)}
-        />
-        <Button type="submit" className="btn btn-primary">
-          Submit
-        </Button>
-      </Container>
-    </form>
+      <Input
+        type="text"
+        value={name}
+        placeholder="name"
+        onChange={e => setName(e.target.value)}
+      />
+      <Input
+        type="text"
+        value={tagline}
+        placeholder="tagline"
+        onChange={e => setTagline(e.target.value)}
+      />
+      <Input
+        type="text"
+        value={description}
+        placeholder="description"
+        onChange={e => setDescription(e.target.value)}
+      />
+      <Input
+        type="text"
+        value={first_brewed}
+        placeholder="brewedAt"
+        onChange={e => setBrewedAt(e.target.value)}
+      />
+      <Input
+        type="text"
+        value={brewers_tips}
+        placeholder="tips"
+        onChange={e => setTips(e.target.value)}
+      />
+      <Input
+        type="number"
+        value={attenuation_level}
+        placeholder={0.0}
+        step="0.1"
+        onChange={e => setLevel(e.target.value)}
+      />
+      <Input
+        type="text"
+        value={contributed_by}
+        placeholder="contributor"
+        onChange={e => setContributor(e.target.value)}
+      />
+      <Button type="submit" className="btn btn-primary">
+        Submit
+      </Button>
+    </Form>
   );
 };
