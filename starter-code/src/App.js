@@ -6,16 +6,25 @@ import { HomePage } from "./pages/Home.Page";
 import { DetailsPage } from "./pages/Details.Page";
 import { NewPage } from "./pages/New.Page";
 import { ListPage } from "./pages/List.Page";
+import { BeersContextProvider } from "./contexto/beers.Context";
 
-export const App = () => (
-  <BrowserRouter>
-    <Layout>
-      <Switch>
-        <Route path="/" exact component={() => <HomePage />} />
-        <Route path="/beers" exact component={() => <ListPage />} />
-        <Route path="/random-beer" exact component={() => <DetailsPage />} />
-        <Route path="/new-beer" exact component={() => <NewPage />} />
-      </Switch>
-    </Layout>
-  </BrowserRouter>
-);
+export const App = () => {
+  return (
+    <BrowserRouter>
+      <BeersContextProvider>
+        <Layout>
+          <Switch>
+            <Route path="/" exact component={() => <HomePage />} />
+            <Route path="/beers" exact component={() => <ListPage />} />
+            <Route
+              path="/random-beer"
+              exact
+              component={() => <DetailsPage />}
+            />
+            <Route path="/new-beer" exact component={() => <NewPage />} />
+          </Switch>
+        </Layout>
+      </BeersContextProvider>
+    </BrowserRouter>
+  );
+};

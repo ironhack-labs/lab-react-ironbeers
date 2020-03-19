@@ -6,7 +6,7 @@ import styled from "styled-components";
 const ContainerSection = styled.section`
   display: block;
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 768px;
   width: 100%;
   h1 {
     color: #3c3c3c;
