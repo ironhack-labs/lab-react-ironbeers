@@ -14,8 +14,8 @@ const BeerList = () => {
     <Section url={"/"}>
       {beers &&
         beers.map(beer => (
-          <Link to={`/beers/${beer._id}`}>
-            <BeerListItem key={beer._id} {...beer} onClick={e => getBeers(`/beers/${beer._id}`)} />
+          <Link key={beer._id} to={`/beers/${beer._id}`}>
+            <BeerListItem {...beer} onClick={e => getBeers(`/beers/${beer._id}`)} />
           </Link>
         ))}
     </Section>
