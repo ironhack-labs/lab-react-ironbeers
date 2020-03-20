@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HomePage from './pages/HomePage';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ListBeersPage  from './pages/ListBeersPage';
 import NewBeerPage  from './pages/NewBeerPage';
 import RandomBeerPage  from './pages/RandomBeerPage';
