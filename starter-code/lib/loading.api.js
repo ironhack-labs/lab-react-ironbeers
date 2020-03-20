@@ -13,18 +13,6 @@ export const isLoading = () => {
   return loadingState.loading;
 };
 
-export const doneLoading = () => {
-  const loadingState = useContext(LoadingContext);
-  loadingState.setLoading(false);
-  return loadingState.loading;
-};
-
-export const startLoading = () => {
-  const loadingState = useContext(LoadingContext);
-  loadingState.setLoading(true);
-  return loadingState.loading;
-};
-
 export const addBeer = async (
   name,
   tagline,
@@ -46,6 +34,12 @@ export const addBeer = async (
   });
   //console.log(res.data);
   return res.data;
+};
+
+export const retrieveList = async () => {
+  const res = await api.get("/beers");
+  const data = res.data;
+  return data;
 };
 
 export const searchBeer = async q => {

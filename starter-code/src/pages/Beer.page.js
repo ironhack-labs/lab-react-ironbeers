@@ -6,7 +6,7 @@ import { BeerCard } from "../components/BeerCard";
 import styled from "styled-components";
 import { LoadingContext } from "../../lib/loading.api";
 import { Input } from "../components/Form.js";
-import { searchBeer } from "../../lib/loading.api.js";
+import { searchBeer, retrieveList } from "../../lib/loading.api.js";
 
 const Container = styled.div`
   width: 60%;
@@ -28,8 +28,7 @@ export const BeerPage = () => {
   useEffect(() => {
     //console.log("beer page effect");
     setLoading(true);
-    api.get("/beers").then(res => {
-      const data = res.data;
+    retrieveList().then(data => {
       setLoading(false);
       setBeers(data);
     });
