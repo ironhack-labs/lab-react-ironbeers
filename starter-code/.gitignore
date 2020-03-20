@@ -8,6 +8,13 @@
 # testing
 /coverage
 
+#parcel
+.cache
+dist
+
+#vscode
+.vscode
+
 # production
 /build
 
