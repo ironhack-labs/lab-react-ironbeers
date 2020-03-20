@@ -16,7 +16,3 @@ export const App = () => (
     </Switch>
   </Router>
 );
-
-NewBeers;
-RandomBeers;
-Beers;
