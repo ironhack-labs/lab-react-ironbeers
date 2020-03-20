@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-export const Input = styled.input`
+const Input = styled.input`
   width: 100%;
   color: #2f2f2f;
   padding: 10px;
@@ -28,11 +28,13 @@ const Button = styled.button`
 `;
 
 const Form = styled.form`
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 60%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const CreateBeerForm = ({ handleSubmit }) => {

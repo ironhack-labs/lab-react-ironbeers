@@ -4,7 +4,6 @@ import { Layout } from "../layouts/Layout";
 import { BeerCard } from "../components/BeerCard";
 import styled from "styled-components";
 import { LoadingContext } from "../../lib/loading.api";
-import { Input } from "../components/Form.js";
 import { searchBeer, retrieveList } from "../../lib/loading.api.js";
 
 const Container = styled.div`
@@ -12,6 +11,20 @@ const Container = styled.div`
   margin: 100px auto 0;
   @media (max-width: 768px) {
     width: 90%;
+  }
+`;
+
+const Input = styled.input`
+  width: 100%;
+  color: #2f2f2f;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #d7c9aa;
+  text-align: center;
+  font-family: "Quicksand";
+  :focus {
+    outline: none;
   }
 `;
 
