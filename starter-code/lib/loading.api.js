@@ -48,6 +48,12 @@ export const retrieveRandom = async () => {
   return data;
 };
 
+export const retrieveSingle = async id => {
+  const res = await api.get(`/beers/${id}`);
+  const data = res.data;
+  return data;
+};
+
 export const searchBeer = async q => {
   const res = await api.get(`/beers/search?q=${q}`);
   return res.data;
