@@ -8,6 +8,7 @@ import LinksBeers from "./components/LinksBeers";
 import BeerDetail from "./pages/BeerDetail";
 import RandomBeers from "./RandomBeer";
 import Cards from "../src/components/UI/AllBeers";
+import FormBeer from "./pages/FormBeer";
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
           <Route path="/beers" component={Beers} />
           <Route path="/random-beer" component={RandomBeers} />
           <Route path="/beer-detail/:id" component={BeerDetail} />
-          <Route path="/new-beer" component={Navbar} />
+          <Route path="/new-beer" component={FormBeer} />
         </Switch>
       </Router>
     </Cards>
