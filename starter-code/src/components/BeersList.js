@@ -20,7 +20,6 @@ export const BeersList = () => {
   useEffect(() => {
     (async () => {
       const results = await fetchAllBeers();
-      console.log(results);
       setBeers(results);
     })();
   }, []);
@@ -29,7 +28,7 @@ export const BeersList = () => {
     e.persist();
     const { value } = e.target;
     const results = await searchBeer(value);
-    console.log('search result ', results);
+
     value ? setSearch(true) : setSearch(false);
     setBeers(results);
   };

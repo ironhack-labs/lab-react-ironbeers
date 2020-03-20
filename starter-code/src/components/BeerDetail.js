@@ -16,7 +16,6 @@ export const BeerDetail = props => {
   useEffect(() => {
     (async () => {
       const results = await fetchSingleBeer(id);
-      console.log('beer found ', results);
       setBeer(results);
     })();
   }, []);

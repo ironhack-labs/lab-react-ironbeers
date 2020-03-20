@@ -11,20 +11,14 @@ export const fetchAllBeers = async () => {
 
 export const fetchSingleBeer = async endpoint => {
   const { data } = await beersService.get(`/${endpoint}`);
-  console.log('searching for', endpoint);
   return data;
 };
 
 export const searchBeer = async query => {
   const { data } = await beersService.get(`/search?q=${query}`);
-  console.log('search input', query);
   return data;
 };
 
 export const addNewBeer = async data => {
-  try {
-    await beersService.post('/new', data);
-  } catch (err) {
-    console.log('Creation of beer failed ', err);
-  }
+  await beersService.post('/new', data);
 };

@@ -21,7 +21,6 @@ export const AddBeer = () => {
   const handleSubmit = e => {
     e.preventDefault();
     addNewBeer(beer);
-    console.log('added new beer ', beer);
 
     // clear inputs after submit
     setNewBeer({
