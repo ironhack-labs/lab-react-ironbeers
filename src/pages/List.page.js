@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ItemList } from "../components/ItemList";
 
-import { getBeers } from "../../lib/beer.api";
+import { getBeers, searchBeers } from "../../lib/beer.api";
 import { Loading } from "../components/Loading";
+import { SearchBar } from "../components/SearchBar";
 
 export const ListPage = () => {
   const [list, setList] = useState([]);
@@ -16,9 +17,16 @@ export const ListPage = () => {
       .finally(() => setLoading(false));
   }, []);
 
+  const handleSearch = async query => {
+    const res = await searchBeers(query);
+    if (res.status === 200) setList(res.data);
+    else console.log(res.data.message);
+  };
+
   return (
     <>
       {loading && <Loading />}
+      <SearchBar setSearch={query => handleSearch(query)} />
       <div className="list-group">
         {list.map(e => (
           <Link
