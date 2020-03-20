@@ -42,7 +42,7 @@ export const NewBeer = withRouter(({ history }) => {
         attenuation_level <= 0 ||
         contributed_by === ""
       ) {
-        throw new Error("Oye, rellena todos los campos");
+        throw new Error("Hey, remeber to fill in all the fields");
       }
       await addBeer(
         name,
