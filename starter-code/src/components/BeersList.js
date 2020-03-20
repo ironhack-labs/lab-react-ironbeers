@@ -4,7 +4,13 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 // styled components
-import { BeerCard, BeersContainer, ImgContainer } from '../styles/PageContent';
+import {
+  BeerCard,
+  BeersContainer,
+  ImgContainer,
+  InputContainer
+} from '../styles/PageContent';
+import { Input } from '../styles/Form';
 
 export const BeersList = () => {
   const [beers, setBeers] = useState([]);
@@ -29,7 +35,13 @@ export const BeersList = () => {
 
   return (
     <>
-      <input type="text" onChange={handleSearch} />
+      <InputContainer>
+        <Input
+          type="text"
+          onChange={handleSearch}
+          placeholder="Search beer..."
+        />
+      </InputContainer>
       <BeersContainer>
         {beers.length === 0 ? (
           <p>Loading...</p>
