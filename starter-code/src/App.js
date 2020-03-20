@@ -4,16 +4,20 @@ import './App.css';
 import ListBeersPage  from './pages/ListBeersPage';
 import NewBeerPage  from './pages/NewBeerPage';
 import RandomBeerPage  from './pages/RandomBeerPage';
-import { Route } from 'react-router-dom';
+import BeerPage from './pages/BeerPage';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route exact path='/' component={HomePage}/>
-        <Route exact path='/beers' component={ListBeersPage}/>
-        <Route exact path='/random-beer' component={RandomBeerPage}/>
-        <Route exact path='/new-beer' component={NewBeerPage}/>
+        <Switch>
+          <Route exact path='/' component={HomePage}/>  
+          <Route exact path='/beers' component={ListBeersPage}/>
+          <Route exact path='/random-beer' component={RandomBeerPage}/>
+          <Route exact path='/new-beer' component={NewBeerPage}/>
+          <Route exact path='/:id' component={BeerPage}/> 
+        </Switch>   
       </div>
     );
   }
