@@ -12,10 +12,10 @@ display:flex;
 padding: 2vh 2vw;
 justify-content:space-between;
 width:100%;
-height:20vh;
+height:15vh;
 color:black;
 img {
-    height:20vh;
+    height:15vh;
     width:auto;
 }
 .beerPic{
@@ -27,6 +27,9 @@ img {
 .beerInfo {
     width:70vw;
 } 
+h4 {
+    margin:5px 0;
+}
 `
 
 
@@ -41,13 +44,13 @@ const BeerPage = () => {
         <Header />
         {loading && <Loading />}
         {beers.map((b, i) => (
-            <Link to={`/beers/:${b._id}`} style={{ textDecoration: 'none' }} key={i}>
+            <Link to={`/beers/${b._id}`} style={{ textDecoration: 'none' }} key={i}>
                 <BeerStyle>
                     <div className="beerPic">
                         <img src={b.image_url} alt={b.name} />
                     </div>
                     <div className="beerInfo">
-                        <h3>{b.name}</h3>
+                        <h2>{b.name}</h2>
                         <h4>{b.tagline}</h4>
                         <p>Created by: {_.replace(b.contributed_by, /<.*?>/g, '')}</p >
                     </div>
