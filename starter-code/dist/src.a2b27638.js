@@ -48477,28 +48477,20 @@ const Newbeer = () => {
 };
 
 exports.Newbeer = Newbeer;
-},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/pages/BeersInfo.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/components/BeerDet.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.BeerId = void 0;
+exports.Beerdet = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
-var _beers = require("../lib/beers.api");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-const BeerId = props => {
-  const id = props.match.params.id;
-  const [beer, setBeer] = (0, _react.useState)({});
-  (0, _react.useEffect)(() => {
-    (0, _beers.beerDetails)(id).then(beer => setBeer(beer));
-  }, [id]);
+const Beerdet = props => {
+  const beer = props.beer;
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "div"
   }, _react.default.createElement("div", {
@@ -48520,8 +48512,38 @@ const BeerId = props => {
   }, beer.contributed_by)));
 };
 
+exports.Beerdet = Beerdet;
+},{"react":"node_modules/react/index.js"}],"src/pages/BeersInfo.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.BeerId = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _beers = require("../lib/beers.api");
+
+var _BeerDet = require("../components/BeerDet");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const BeerId = props => {
+  const id = props.match.params.id;
+  const [beer, setBeer] = (0, _react.useState)({});
+  (0, _react.useEffect)(() => {
+    (0, _beers.beerDetails)(id).then(beer => setBeer(beer));
+  }, [id]);
+  return _react.default.createElement(_BeerDet.Beerdet, {
+    beer: beer
+  });
+};
+
 exports.BeerId = BeerId;
-},{"react":"node_modules/react/index.js","../lib/beers.api":"src/lib/beers.api.js"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../lib/beers.api":"src/lib/beers.api.js","../components/BeerDet":"src/components/BeerDet.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
