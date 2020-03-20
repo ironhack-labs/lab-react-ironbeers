@@ -34,7 +34,7 @@ export const NewBeer = () => {
 
     const createBeer = async data => {
       console.log("dentrpo de la funcion", data);
-      const response = await beersApi.post(`/beers/new/`, beerData);
+      const response = await beersApi.post(`/beers/new`, data);
       return response.data;
     };
 
@@ -52,7 +52,7 @@ export const NewBeer = () => {
   function handleChangeTagLine(event) {
     setTagline(event.target.value);
   }
-  function handleChangeMessage(event) {
+  function handleChangeDescription(event) {
     setDescription(event.target.value);
   }
   function handleChangeFirstBrewed(event) {
@@ -95,7 +95,7 @@ export const NewBeer = () => {
           <textarea
             className="formulary"
             value={description}
-            onChange={handleChangeMessage}
+            onChange={handleChangeDescription}
           ></textarea>
         </div>
         <div className="formularyFather">
