@@ -39,7 +39,7 @@ export const Home = () => (
         himenaeos.
       </Ipsum>
     </Link>
-    <Link to="beer-random">
+    <Link to="RandomBeers">
       <Image src={BeerRandomImg} alt="Random beer" />
       <MenuTitle>Random beer</MenuTitle>
       <Ipsum>
@@ -49,7 +49,7 @@ export const Home = () => (
         himenaeos.
       </Ipsum>
     </Link>
-    <Link to="new-beer">
+    <Link to="NewBeers">
       <Image src={NewBeerImg} alt="New beer" />
       <MenuTitle>New beer</MenuTitle>
       <Ipsum>
