@@ -5,12 +5,16 @@ const service = axios.create({baseURL: 'https://ih-beers-api2.herokuapp.com/beer
 export const getAllBeers = async () => {
 
   const res = await service.get('/');
-  console.log(res.data);
   return res.data;
 }
 
 export const getBeer = async (id) => {
   const res = await service.get('/' + id);
-  console.log("GetBeer " + res.data.name);
+  return res.data;
+}
+
+export const getRandomBeer = async (id) => {
+  const res = await service.get('/random');
+  console.log("RandomBeer " + res.data.name);
   return res.data;
 }

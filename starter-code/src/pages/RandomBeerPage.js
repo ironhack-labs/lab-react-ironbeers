@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from './../components/Header';
+import BeerDetail from './../components/BeerDetail';
+import {getRandomBeer} from './../services/beerService';
 
 const RandomBeerPage = () => {
+  const [beer, setBeer] = useState('');
+
+  useEffect(() => {
+    getRandomBeer().then(beer => setBeer(beer));
+  }, []);
 
   return(
     <div>
       <Header/>
-      <p>Random Beer Page</p>
+      <BeerDetail beer={beer}/>
     </div>
   );
 }
