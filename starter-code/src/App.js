@@ -4,7 +4,7 @@ import { Layout } from "./layout/layout";
 import "../public/styles/reset.css";
 import { HomePage } from "./pages/Home.Page";
 import { DetailsPage } from "./pages/Details.Page";
-import { NewPage } from "./pages/New.Page";
+import { NewBeer } from "./pages/New.Page";
 import { ListPage } from "./pages/List.Page";
 import { BeersContextProvider } from "./contexto/beers.Context";
 
@@ -19,7 +19,7 @@ export const App = () => {
             <Route path={`/random-beer`} exact component={DetailsPage} />
             } />
             <Route path="/details-beer/:id" component={DetailsPage} />
-            <Route path="/new-beer" exact component={() => <NewPage />} />
+            <Route path="/new-beer" exact component={() => <NewBeer />} />
           </Switch>
         </Layout>
       </BeersContextProvider>
