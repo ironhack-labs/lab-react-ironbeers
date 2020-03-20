@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
 
-class App extends Component {
-  render() {
+
+import Home from './components/Home'
+import Beers from './components/Beers'
+import RandomBeer from './components/RandomBeer'
+import NewBeer from './components/NewBeer'
+
+const App = () => {
     return (
+      <>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"></link>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route path='/beers' component={Beers}/>
+            <Route path='/random-beer' component={RandomBeer}/>
+            <Route path='/new-beer' component={NewBeer}/>
+          </Switch>
+       
       </div>
+      </>
     );
   }
-}
+
 
 export default App;
