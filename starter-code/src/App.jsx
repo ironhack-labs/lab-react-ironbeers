@@ -9,16 +9,16 @@ import { FormContextProvider } from "./api/beer.api";
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/beers" exact component={Beers} />
-        <FormContextProvider>
+    <FormContextProvider>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/beers" exact component={Beers} />
           <Route path="/beers/new" component={NewBeer} />
-        </FormContextProvider>
-        <Route path="/beers/:id" component={BeerDetail} />
-      </Switch>
-    </Router>
+          <Route path="/beers/:id" component={BeerDetail} />
+        </Switch>
+      </Router>
+    </FormContextProvider>
   );
 };
 

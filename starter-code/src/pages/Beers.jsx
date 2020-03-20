@@ -6,10 +6,10 @@ import Section from "../layouts/Section";
 
 const Beers = () => {
   const [beers, setBeers] = useState(false);
+
   useEffect(() => {
     getBeers("/beers").then(data => setBeers(data));
   }, []);
-  console.log(beers);
 
   return (
     <Section url={"/"}>

@@ -10,13 +10,17 @@ export const getBeers = async url => {
   return res.data;
 };
 
-export const addBeer = beer => {
-  console.log("ADD BEER", beer);
-  // await beerApi.post("/beers/new", beer);
+export const addBeer = async beer => {
+  console.log("ADD BEER API");
+  const res = await beerApi.post("/beers/new", beer);
+  return res.data;
 };
-export const FormContextProvider = ({ children }) => {
-  const [state, setState] = useState({ name: "", tagline: "", description: "", first_brewed: "", brewers_tips: "", attenuation_level: "", contributed_by: "" });
 
+export const initialState = { name: "", tagline: "", description: "", first_brewed: "", brewers_tips: "", attenuation_level: "", contributed_by: "" };
+
+export const FormContextProvider = ({ children }) => {
+  const [state, setState] = useState(initialState);
+  console.log("PROVIDER STATE", state);
   const handleChange = e => {
     console.log(e);
     const id = e.target.id;

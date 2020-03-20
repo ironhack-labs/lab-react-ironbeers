@@ -1,6 +1,6 @@
 import React from "react";
 
-const BeerListItem = ({ _id, image_url, name, tagline, contributed_by }) => {
+const BeerListItem = ({ image_url, name, tagline, contributed_by }) => {
   return (
     <div className="container">
       <div className="row">
