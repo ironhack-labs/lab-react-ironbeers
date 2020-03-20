@@ -5,6 +5,7 @@ import { Beer } from "./pages/Beers";
 import { RandomBeer } from "./pages/Random-beer";
 import { BeerDetail } from "./pages/BeerDetail";
 import { NewBeer } from "./pages/New-beer";
+import "./App.css";
 
 export const App = () => {
   return (
