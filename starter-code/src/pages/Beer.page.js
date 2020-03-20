@@ -64,7 +64,7 @@ export const BeerPage = () => {
     });
   }, [setLoading]);
 
-  const handleSearch = async q => {
+  const handleSearch = async (q, opt = false) => {
     setSearch(q);
     const res = await searchBeer(q);
     if (q) {
@@ -72,9 +72,20 @@ export const BeerPage = () => {
     } else {
       setSuggestions([]);
     }
-    // this is for updating the beer list directly
-    //setBeers(res);
+    // this is for updating the beer list directly when called with an opt parameter
+    if (opt === true) {
+      setBeers(res);
+      setSearch("");
+      setSuggestions([]);
+    }
   };
+
+  const handleEnter = async e => {
+    if (e.key === "Enter") {
+      await handleSearch(e.target.value, true);
+    }
+  };
+
   return (
     <Layout>
       <Container>
@@ -84,6 +95,7 @@ export const BeerPage = () => {
             value={search}
             placeholder="Type a beer name..."
             onChange={e => handleSearch(e.target.value)}
+            onKeyDown={e => handleEnter(e)}
           />
 
           <List>
