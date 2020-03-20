@@ -5,5 +5,10 @@ const getBeers = async () => {
     return res.data;
 };
 
+export const getBeerById = async (beerId) => {
+    const res = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`);
+    return res.data;
+}
+
 
 export default getBeers;
