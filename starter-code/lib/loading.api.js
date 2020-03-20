@@ -13,18 +13,6 @@ export const isLoading = () => {
   return loadingState.loading;
 };
 
-export const doneLoading = () => {
-  const loadingState = useContext(LoadingContext);
-  loadingState.setLoading(false);
-  return loadingState.loading;
-};
-
-export const startLoading = () => {
-  const loadingState = useContext(LoadingContext);
-  loadingState.setLoading(true);
-  return loadingState.loading;
-};
-
 export const addBeer = async (
   name,
   tagline,
@@ -34,7 +22,7 @@ export const addBeer = async (
   attenuation_level,
   contributed_by
 ) => {
-  console.log("add Beer");
+  //console.log("add Beer");
   const res = await api.post("/beers/new", {
     name,
     tagline,
@@ -44,6 +32,29 @@ export const addBeer = async (
     attenuation_level,
     contributed_by
   });
-  console.log(res.data);
+  //console.log(res.data);
+  return res.data;
+};
+
+export const retrieveList = async () => {
+  const res = await api.get("/beers");
+  const data = res.data;
+  return data;
+};
+
+export const retrieveRandom = async () => {
+  const res = await api.get("/beers/random");
+  const data = res.data;
+  return data;
+};
+
+export const retrieveSingle = async id => {
+  const res = await api.get(`/beers/${id}`);
+  const data = res.data;
+  return data;
+};
+
+export const searchBeer = async q => {
+  const res = await api.get(`/beers/search?q=${q}`);
   return res.data;
 };

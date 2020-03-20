@@ -1,25 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Layout } from "../layouts/Layout";
-import axios from "axios";
 import { Beer } from "../components/Beer.js";
 import styled from "styled-components";
-import { LoadingContext } from "../../lib/loading.api";
+import { LoadingContext, retrieveRandom } from "../../lib/loading.api";
 
 const Container = styled.div`
   display: flex;
-  align-self: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 80%;
+  height: 80vh;
   padding: 40px;
   margin: 50px auto 0;
   @media (max-width: 768px) {
   }
 `;
-
-const api = axios.create({
-  baseURL: "https://ih-beers-api2.herokuapp.com"
-});
 
 export const RandomBeer = props => {
   const [beer, setBeer] = useState();
@@ -28,9 +24,7 @@ export const RandomBeer = props => {
   useEffect(() => {
     //console.log("random beer page effect");
     setLoading(true);
-    api.get(`/beers/random`).then(res => {
-      const data = res.data;
-      console.log(data);
+    retrieveRandom().then(data => {
       setLoading(false);
       setBeer(data);
     });
