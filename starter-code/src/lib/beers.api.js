@@ -16,7 +16,7 @@ export const getRandomBeer = async () => {
 }
 
 export const addNewBeer = async (beer) => {
-    const res = await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", beer);
+    await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", beer);
     return;
 }
 
