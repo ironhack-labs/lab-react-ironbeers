@@ -19,3 +19,8 @@ export const randomBeer = async () => {
   const res = await beersApi.get(`/beers/random`);
   return res.data;
 };
+
+export const createBeer = async data => {
+  const res = await beersApi.post(`/beers/new`, data);
+  return res.data;
+};

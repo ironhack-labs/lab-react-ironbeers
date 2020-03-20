@@ -3,7 +3,7 @@ import { randomBeer } from "../../lib/BeersApi";
 import { Header } from "../components/Header";
 import { SingleBeer } from "../components/SingleBeer";
 
-export const RandomBeers = () => {
+export const RandomBeer = () => {
   const [beer, setBeer] = useState({});
 
   useEffect(() => {
