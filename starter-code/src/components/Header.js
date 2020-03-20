@@ -4,10 +4,10 @@ import "../App.css";
 
 export const Header = () => {
   return (
-    <nav className="header">
-      <Link to="/">
+    <Link className="link" to="/">
+      <nav className="header">
         <i className="fa fa-home"></i>
-      </Link>
-    </nav>
+      </nav>
+    </Link>
   );
 };

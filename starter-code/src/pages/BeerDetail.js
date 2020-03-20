@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Header } from "../components/Header";
 
-export const RandomBeer = props => {
+export const BeerDetail = props => {
+  const { id } = props.match.params;
   const [beer, setBeer] = useState([]);
 
   const listAllBeers = async () => {
     const res = await axios.get(
-      `https://ih-beers-api2.herokuapp.com/beers/random`
+      `https://ih-beers-api2.herokuapp.com/beers/${id}`
     );
     return res.data;
   };
