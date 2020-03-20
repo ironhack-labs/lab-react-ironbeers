@@ -16,11 +16,9 @@ export const App = () => {
           <Switch>
             <Route path="/" exact component={() => <HomePage />} />
             <Route path="/beers" exact component={() => <ListPage />} />
-            <Route
-              path="/random-beer"
-              exact
-              component={() => <DetailsPage />}
-            />
+            <Route path={`/random-beer`} exact component={DetailsPage} />
+            } />
+            <Route path="/details-beer/:id" component={DetailsPage} />
             <Route path="/new-beer" exact component={() => <NewPage />} />
           </Switch>
         </Layout>

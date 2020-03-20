@@ -1,18 +1,21 @@
 import React, { createContext, useState, useEffect } from "react";
-import { listAllBeers } from "../../lib/auth.api";
+import { listAllBeers, randomBeer } from "../../lib/auth.api";
 
 export const BeersContext = createContext();
 export const BeersContextProvider = props => {
+  //Obtenr todas las cervezas
   const [beers, setBeers] = useState([]);
   const fetchBeers = () => listAllBeers().then(beers => setBeers(beers));
 
   useEffect(() => {
     fetchBeers();
-    // IMPORTANT: This is executed on component unmount (when the component disappears)
   }, []);
 
+  //Obtener id cerveza
+  const getBeers = code => beers.filter(beer => beer._id === code)[0];
+
   return (
-    <BeersContext.Provider value={{ beers }}>
+    <BeersContext.Provider value={{ beers, getBeers, randomBeer }}>
       {props.children}
     </BeersContext.Provider>
   );

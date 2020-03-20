@@ -35250,7 +35250,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: block;\n  margin: 0 auto;\n  max-width: 768px;\n  width: 100%;\n  h1 {\n    color: #3c3c3c;\n    font-size: 32px;\n    text-align: center;\n  }\n"]);
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: block;\n  margin: 0 auto;\n  max-width: 768px;\n  padding: 0 10px;\n  width: 100%;\n  h1 {\n    color: #3c3c3c;\n    font-size: 32px;\n    text-align: center;\n  }\n  @media (max-width: 480px) {\n    padding: 0 20px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37820,7 +37820,7 @@ module.exports = require('./lib/axios');
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.listAllBeers = void 0;
+exports.randomBeer = exports.listAllBeers = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
@@ -37831,6 +37831,7 @@ var _axios = _interopRequireDefault(require("axios"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var url = "https://ih-beers-api2.herokuapp.com/beers";
+var urlRandom = "https://ih-beers-api2.herokuapp.com/beers/random";
 
 var listAllBeers = /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
@@ -37844,10 +37845,9 @@ var listAllBeers = /*#__PURE__*/function () {
 
           case 2:
             res = _context.sent;
-            console.log("listAllBeers --> data", res.data);
             return _context.abrupt("return", res.data);
 
-          case 5:
+          case 4:
           case "end":
             return _context.stop();
         }
@@ -37861,6 +37861,35 @@ var listAllBeers = /*#__PURE__*/function () {
 }();
 
 exports.listAllBeers = listAllBeers;
+
+var randomBeer = /*#__PURE__*/function () {
+  var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+    var res;
+    return _regenerator.default.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return _axios.default.get(urlRandom);
+
+          case 2:
+            res = _context2.sent;
+            return _context2.abrupt("return", res.data);
+
+          case 4:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function randomBeer() {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+exports.randomBeer = randomBeer;
 },{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","axios":"node_modules/axios/index.js"}],"src/contexto/beers.Context.js":[function(require,module,exports) {
 "use strict";
 
@@ -37885,6 +37914,7 @@ var BeersContext = (0, _react.createContext)();
 exports.BeersContext = BeersContext;
 
 var BeersContextProvider = function BeersContextProvider(props) {
+  //Obtenr todas las cervezas
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
       beers = _useState2[0],
@@ -37897,17 +37927,63 @@ var BeersContextProvider = function BeersContextProvider(props) {
   };
 
   (0, _react.useEffect)(function () {
-    fetchBeers(); // IMPORTANT: This is executed on component unmount (when the component disappears)
-  }, []);
+    fetchBeers();
+  }, []); //Obtener id cerveza
+
+  var getBeers = function getBeers(code) {
+    return beers.filter(function (beer) {
+      return beer._id === code;
+    })[0];
+  };
+
   return _react.default.createElement(BeersContext.Provider, {
     value: {
-      beers: beers
+      beers: beers,
+      getBeers: getBeers,
+      randomBeer: _auth.randomBeer
     }
   }, props.children);
 };
 
 exports.BeersContextProvider = BeersContextProvider;
-},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","../../lib/auth.api":"lib/auth.api.js"}],"src/pages/Details.Page.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","../../lib/auth.api":"lib/auth.api.js"}],"lib/Loading.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Loading = void 0;
+
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100vw;\n  height: 100vh;\n  top: 0;\n  left: 0;\n  position: fixed;\n  z-index: 10000;\n  background: rgba(0, 0, 0, 0.85);\n  img {\n    width: 150px;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var LoadingWrapper = _styledComponents.default.div(_templateObject());
+
+var Loading = function Loading() {
+  return _react.default.createElement(LoadingWrapper, null, _react.default.createElement("img", {
+    src: "https://media.giphy.com/media/KKCuBooszlPG0/giphy.gif",
+    title: "Loading",
+    alt: "Loading"
+  }));
+};
+
+exports.Loading = Loading;
+},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/pages/Details.Page.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37915,24 +37991,65 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DetailsPage = void 0;
 
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+
 var _react = _interopRequireWildcard(require("react"));
 
 var _beers = require("../contexto/beers.Context");
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _Loading = require("../../lib/Loading");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var DetailsPage = function DetailsPage() {
-  var _useContext = (0, _react.useContext)(_beers.BeersContext),
-      beers = _useContext.beers;
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  console.log("Contexto en details page", beers);
-  return _react.default.createElement("div", null, "beers");
+function _templateObject() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  align-items: center;\n  display: flex;\n  flex-flow: wrap;\n  justify-content: space-between;\n  .box-img {\n    margin-bottom: 25px;\n    width: 100%;\n    img {\n      display: block;\n      margin: 0 auto;\n      max-width: 150px;\n      max-height: 300px;\n    }\n  }\n  h2 {\n    box-sizing: border-box;\n    color: #000;\n    font-family: Arial, Helvetica, sans-serif;\n    font-weight: 100;\n    font-size: 40px;\n    margin: 0 0 10px;\n    width: 80%;\n    & + p {\n      display: inline-block;\n      color: #979797;\n      font-size: 36px;\n      margin: 0;\n      text-align: right;\n      margin: 0 0 10px;\n      width: 20%;\n    }\n  }\n  h3 {\n    box-sizing: border-box;\n    color: #979797;\n    font-size: 22px;\n    margin: 0;\n    width: 80%;\n    & + p {\n      width: 20%;\n      text-align: right;\n      margin: 0;\n    }\n  }\n  p {\n    color: #3e3e3e;\n    font-size: 16px;\n    line-height: 24px;\n    margin: 20px 0;\n\n    &:last-child {\n      font-weight: 700;\n      color: #979797;\n    }\n  }\n\n  @media (max-width: 480px) {\n    h2 {\n      font-size: 30px;\n      padding-right: 10px;\n    }\n    h3 {\n      font-size: 20px;\n      padding-right: 10px;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var DetailsContainer = _styledComponents.default.div(_templateObject());
+
+var DetailsPage = function DetailsPage(props) {
+  var _useContext = (0, _react.useContext)(_beers.BeersContext),
+      getBeers = _useContext.getBeers,
+      randomBeer = _useContext.randomBeer;
+
+  var _useState = (0, _react.useState)({}),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      beerRandom = _useState2[0],
+      setBeerRandom = _useState2[1];
+
+  (0, _react.useEffect)(function () {
+    randomBeer().then(function (beerRandom) {
+      return setBeerRandom(beerRandom);
+    });
+  }, []);
+  var beerId = props.match.params.id || beerRandom._id;
+  var beer = getBeers(beerId);
+  if (!beer) return _react.default.createElement(_Loading.Loading, null);
+  return _react.default.createElement(DetailsContainer, null, _react.default.createElement("div", {
+    className: "box-img"
+  }, _react.default.createElement("img", {
+    src: beer.image_url,
+    title: beer.name,
+    alt: beer.name
+  })), _react.default.createElement("h2", null, beer.name), _react.default.createElement("p", null, beer.attenuation_level), _react.default.createElement("h3", null, beer.tagline), _react.default.createElement("p", null, beer.first_brewed), _react.default.createElement("p", null, beer.description), _react.default.createElement("p", null, beer.contributed_by));
 };
 
 exports.DetailsPage = DetailsPage;
-},{"react":"node_modules/react/index.js","../contexto/beers.Context":"src/contexto/beers.Context.js"}],"src/pages/New.Page.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","../contexto/beers.Context":"src/contexto/beers.Context.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../lib/Loading":"lib/Loading.js"}],"src/pages/New.Page.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37967,6 +38084,8 @@ var _beers = require("../contexto/beers.Context");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _Loading = require("../../lib/Loading");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -37985,18 +38104,16 @@ function _templateObject() {
 
 var BeersListItem = _styledComponents.default.li(_templateObject());
 
-var ListPage = function ListPage(_ref) {
-  var children = _ref.children;
-
+var ListPage = function ListPage() {
   var _useContext = (0, _react.useContext)(_beers.BeersContext),
       beers = _useContext.beers;
 
-  console.log("Contexto en details page", beers);
+  if (beers.length == 0) return _react.default.createElement(_Loading.Loading, null);
   return _react.default.createElement("ul", null, beers.map(function (beer, i) {
     return _react.default.createElement(BeersListItem, {
       key: i
     }, _react.default.createElement(_reactRouterDom.Link, {
-      to: "/beer-details/".concat(beer._id)
+      to: "/details-beer/".concat(beer._id)
     }, _react.default.createElement("div", {
       className: "box-img"
     }, _react.default.createElement("img", {
@@ -38012,7 +38129,7 @@ var ListPage = function ListPage(_ref) {
 };
 
 exports.ListPage = ListPage;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../contexto/beers.Context":"src/contexto/beers.Context.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/App.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../contexto/beers.Context":"src/contexto/beers.Context.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../lib/Loading":"lib/Loading.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38056,9 +38173,10 @@ var App = function App() {
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/random-beer",
     exact: true,
-    component: function component() {
-      return _react.default.createElement(_Details.DetailsPage, null);
-    }
+    component: _Details.DetailsPage
+  }), "} />", _react.default.createElement(_reactRouterDom.Route, {
+    path: "/details-beer/:id",
+    component: _Details.DetailsPage
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/new-beer",
     exact: true,
@@ -38113,7 +38231,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62197" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50298" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BeersContext } from "../contexto/beers.Context";
 import styled from "styled-components";
+import { Loading } from "../../lib/Loading";
 
 const BeersListItem = styled.li`
   display: block;
@@ -68,14 +69,16 @@ const BeersListItem = styled.li`
   }
 `;
 
-export const ListPage = ({ children }) => {
+export const ListPage = () => {
   const { beers } = useContext(BeersContext);
-  console.log("Contexto en details page", beers);
+
+  if (beers.length == 0) return <Loading />;
+
   return (
     <ul>
       {beers.map((beer, i) => (
         <BeersListItem key={i}>
-          <Link to={`/beer-details/${beer._id}`}>
+          <Link to={`/details-beer/${beer._id}`}>
             <div className="box-img">
               <img src={beer.image_url} title={beer.name} alt={beer.name} />
             </div>

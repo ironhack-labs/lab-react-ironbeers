@@ -7,11 +7,15 @@ const ContainerSection = styled.section`
   display: block;
   margin: 0 auto;
   max-width: 768px;
+  padding: 0 10px;
   width: 100%;
   h1 {
     color: #3c3c3c;
     font-size: 32px;
     text-align: center;
+  }
+  @media (max-width: 480px) {
+    padding: 0 20px;
   }
 `;
 
