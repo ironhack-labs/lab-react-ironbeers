@@ -28343,28 +28343,85 @@ var Home = function Home() {
   return _react.default.createElement("div", {
     id: "container"
   }, _react.default.createElement("a", {
-    href: "#"
+    href: "/beers"
   }, _react.default.createElement("div", {
-    class: "home-containers"
+    className: "home-containers"
   }, _react.default.createElement("img", {
     src: _beers.default
   }), _react.default.createElement("div", null, _react.default.createElement("h2", null, "All Beers"), _react.default.createElement("p", null, "Lorem ipsum...")))), _react.default.createElement("a", {
-    href: "#"
+    href: "/random-beer"
   }, _react.default.createElement("div", {
-    class: "home-containers"
+    className: "home-containers"
   }, _react.default.createElement("img", {
     src: _newBeer.default
   }), _react.default.createElement("div", null, _react.default.createElement("h2", null, "Random Beers"), _react.default.createElement("p", null, "Lorem ipsum...")))), _react.default.createElement("a", {
-    href: "#"
+    href: "/new-beer"
   }, _react.default.createElement("div", {
-    class: "home-containers"
+    className: "home-containers"
   }, _react.default.createElement("img", {
     src: _randomBeer.default
   }), _react.default.createElement("div", null, _react.default.createElement("h2", null, "New Beer"), _react.default.createElement("p", null, "Lorem ipsum...")))));
 };
 
 exports.Home = Home;
-},{"react":"node_modules/react/index.js","../../public/images/beers.png":"public/images/beers.png","../../public/images/new-beer.png":"public/images/new-beer.png","../../public/images/random-beer.png":"public/images/random-beer.png"}],"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../../public/images/beers.png":"public/images/beers.png","../../public/images/new-beer.png":"public/images/new-beer.png","../../public/images/random-beer.png":"public/images/random-beer.png"}],"src/pages/Beers.page.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.AllBeers = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var AllBeers = function AllBeers() {
+  return _react.default.createElement("div", null, "ALL BEERS");
+};
+
+exports.AllBeers = AllBeers;
+},{"react":"node_modules/react/index.js"}],"src/pages/Random.page.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.RandomBeer = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var RandomBeer = function RandomBeer() {
+  return _react.default.createElement("div", null, "RANDOM BEER");
+};
+
+exports.RandomBeer = RandomBeer;
+},{"react":"node_modules/react/index.js"}],"src/pages/New.page.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NewBeer = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var NewBeer = function NewBeer() {
+  return _react.default.createElement("div", null, "NEW BEERS");
+};
+
+exports.NewBeer = NewBeer;
+},{"react":"node_modules/react/index.js"}],"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32261,7 +32318,57 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/App.js":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/layouts/header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Header = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+  return _react.default.createElement("header", null, _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, "Home")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/beers"
+  }, "All Beers")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/random-beer"
+  }, "Random Beer")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/new-beer"
+  }, "New Beer"))));
+};
+
+exports.Header = Header;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/layouts/layout.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Layout = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _header = require("./header");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Layout = function Layout(_ref) {
+  var children = _ref.children;
+  console.log(children);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_header.Header, null), _react.default.createElement("div", {
+    className: "ctn-body"
+  }, children));
+};
+
+exports.Layout = Layout;
+},{"react":"node_modules/react/index.js","./header":"src/layouts/header.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32273,29 +32380,37 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Home = require("./pages/Home.page");
 
+var _Beers = require("./pages/Beers.page");
+
+var _Random = require("./pages/Random.page");
+
+var _New = require("./pages/New.page");
+
+var _layout = require("./layouts/layout");
+
 var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/",
     exact: true,
     component: _Home.Home
-  }), _react.default.createElement(_reactRouterDom.Route, {
+  }), _react.default.createElement(_layout.Layout, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/beers",
-    component: _Home.Home
+    component: _Beers.AllBeers
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/random-beer",
-    component: _Home.Home
+    component: _Random.RandomBeer
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/new-beer",
-    component: _Home.Home
-  })));
+    component: _New.NewBeer
+  }))));
 };
 
 exports.App = App;
-},{"react":"node_modules/react/index.js","./pages/Home.page":"src/pages/Home.page.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./pages/Home.page":"src/pages/Home.page.js","./pages/Beers.page":"src/pages/Beers.page.js","./pages/Random.page":"src/pages/Random.page.js","./pages/New.page":"src/pages/New.page.js","./layouts/layout":"src/layouts/layout.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));

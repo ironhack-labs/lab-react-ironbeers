@@ -6,8 +6,8 @@ import randomBeer from "../../public/images/random-beer.png";
 export const Home = () => {
   return (
     <div id="container">
-      <a href="#">
-        <div class="home-containers">
+      <a href="/beers">
+        <div className="home-containers">
           <img src={imgBeers}></img>
           <div>
             <h2>All Beers</h2>
@@ -15,8 +15,8 @@ export const Home = () => {
           </div>
         </div>
       </a>
-      <a href="#">
-        <div class="home-containers">
+      <a href="/random-beer">
+        <div className="home-containers">
           <img src={newBeer}></img>
           <div>
             <h2>Random Beers</h2>
@@ -24,8 +24,8 @@ export const Home = () => {
           </div>
         </div>
       </a>
-      <a href="#">
-        <div class="home-containers">
+      <a href="/new-beer">
+        <div className="home-containers">
           <img src={randomBeer}></img>
           <div>
             <h2>New Beer</h2>
