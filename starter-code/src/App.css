@@ -33,6 +33,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.btn {
+  background-color: #3ec4fc;
+  border: none;
+}
 
 @keyframes App-logo-spin {
   from {
