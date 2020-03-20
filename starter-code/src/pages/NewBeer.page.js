@@ -7,11 +7,12 @@ import { Layout } from "../layouts/Layout.js";
 
 const Container = styled.div`
   display: flex;
-  align-self: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 80%;
-  padding: 40px;
+  height: 80vh;
+  padding: 40px 0;
   margin: 50px auto 0;
   @media (max-width: 768px) {
   }

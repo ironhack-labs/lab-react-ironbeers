@@ -18,11 +18,12 @@ const Input = styled.input`
   width: 100%;
   color: #2f2f2f;
   padding: 10px 0;
-  margin: 10px 0;
+  margin: 5px 0 20px 0;
   border: none;
   border-bottom: 1px solid #d7c9aa;
   text-align: center;
   font-family: "Quicksand";
+  font-size: 1rem;
   :focus {
     outline: none;
   }
@@ -54,7 +55,7 @@ export const BeerPage = () => {
         <Input
           type="text"
           value={search}
-          placeholder="search a beer"
+          placeholder="Type a beer name..."
           onChange={e => handleSearch(e.target.value)}
         />
         {beers &&
