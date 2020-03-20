@@ -1,7 +1,9 @@
 // dependencies
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+
+// local modules
+import { fetchAllBeers, searchBeer } from '../services/beersService';
 
 // styled components
 import {
@@ -16,23 +18,20 @@ export const BeersList = () => {
   const [beers, setBeers] = useState([]);
   const [isSearching, setSearch] = useState(false);
   useEffect(() => {
-    const fetchData = async () => {
-      const url = 'https://ih-beers-api2.herokuapp.com/beers';
-      const response = await axios.get(url);
-      setBeers(response.data);
-    };
-    fetchData();
+    (async () => {
+      const results = await fetchAllBeers();
+      console.log(results);
+      setBeers(results);
+    })();
   }, []);
 
   const handleSearch = async e => {
     e.persist();
     const { value } = e.target;
-    const { data } = await axios.get(
-      `https://ih-beers-api2.herokuapp.com/beers/search?q=${value}`
-    );
-    console.log('search result ', data);
+    const results = await searchBeer(value);
+    console.log('search result ', results);
     value ? setSearch(true) : setSearch(false);
-    setBeers(data);
+    setBeers(results);
   };
 
   const formatName = str => str.replace(/<.*>/, '');

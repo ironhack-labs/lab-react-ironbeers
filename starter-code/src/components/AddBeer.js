@@ -1,6 +1,8 @@
 // dependencies
 import React, { useState } from 'react';
-import axios from 'axios';
+
+// local modules
+import { addNewBeer } from '../services/beersService';
 
 // styled components
 import { Form, Input } from '../styles/Form';
@@ -16,17 +18,9 @@ export const AddBeer = () => {
     contributed_by: ''
   });
 
-  const addNewBeer = async () => {
-    try {
-      await axios.post('https://ih-beers-api2.herokuapp.com/beers/new', beer);
-    } catch (err) {
-      console.log('Creation of beer bailed ', err);
-    }
-  };
-
   const handleSubmit = e => {
     e.preventDefault();
-    addNewBeer();
+    addNewBeer(beer);
     console.log('added new beer ', beer);
   };
 
