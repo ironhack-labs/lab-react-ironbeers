@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Row, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -19,6 +19,11 @@ const StyledCard = styled.div`
       max-height: 180px;
     }
   }
+  .details {
+    .author {
+      color: #0a7a06;
+    }
+  }
 `;
 
 export const ItemCard = props => {
@@ -33,12 +38,11 @@ export const ItemCard = props => {
             <Col className="details" xs={8}>
               <h3>{props.name}</h3>
               <p>{props.tag}</p>
-              <p>
+              <p className="author">
                 <b>Created by: </b>
                 {props.author}
               </p>
               <Link to={`/beers/${props.id}`}>READ MORE </Link>
-              {console.log("ID --->>>", props.id)}
             </Col>
           </Row>
         </Col>
