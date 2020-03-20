@@ -1,1 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap");
+
+.container {
+  overflow-x: hidden;
+  margin-top: 11vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 11pt;
+}
+
+p {
+  font-weight: 100;
+  font-size: 9pt;
+  margin: 0;
+  margin-bottom: 3vh;
+  color: grey;
+  font-weight: 100;
+}
+h2 {
+  font-weight: 300;
+  font-size: 13pt;
+  margin-bottom: 0;
+  margin-top: 1vh;
+}
