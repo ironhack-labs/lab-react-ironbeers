@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Section from "../layouts/Section";
+import BeerCard from "../components/BeerCard";
+import { getBeers } from "../api/beer.api";
 
-const BeerDetail = beer => {
-  return (
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">
-          Go somewhere
-        </a>
-      </div>
-    </div>
-  );
+const BeerDetail = props => {
+  const id = props.match.params.id;
+  const [beer, setBeer] = useState(false);
+  useEffect(() => {
+    getBeers(`/beers/${id}`).then(data => setBeer(data));
+  }, []);
+
+  console.log("ID", id);
+  return <Section url={"/beers"}>{beer && <BeerCard {...{ ...beer }} />}</Section>;
 };
 
 export default BeerDetail;

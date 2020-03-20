@@ -5,61 +5,19 @@ import BeerList from "./pages/BeerList";
 import NewBeer from "./pages/NewBeer";
 import RandomBeer from "./pages/RandomBeer";
 import HomePage from "./pages/HomePage";
-import Home from "./layouts/Home";
-import Section from "./layouts/Section";
-import BeerCard from "./components/BeerCard";
-import { getBeers, BeerContextProvider } from "./api/beer.api";
+import BeerDetail from "./pages/BeerDetail";
 
 const App = () => {
   return (
-    <BeerContextProvider>
-      <Router>
-        <Switch>
-          <Route
-            path="/"
-            exact
-            component={() => (
-              <Home>
-                <HomePage />
-              </Home>
-            )}
-          />
-          <Route
-            path="/beers"
-            exact
-            component={() => (
-              <Section>
-                <BeerList />
-              </Section>
-            )}
-          />
-          <Route
-            path="/beers/new"
-            component={() => (
-              <Section>
-                <NewBeer />
-              </Section>
-            )}
-          />
-          <Route
-            path="/beers/random"
-            component={() => (
-              <Section>
-                <RandomBeer />
-              </Section>
-            )}
-          />
-          <Route
-            path={"/beers/card"}
-            component={() => (
-              <Section>
-                <BeerCard />
-              </Section>
-            )}
-          />
-        </Switch>
-      </Router>
-    </BeerContextProvider>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/beers" exact component={BeerList} />
+        <Route path="/beers/new" component={NewBeer} />
+        <Route path="/beers/random" component={RandomBeer} />
+        <Route path="/beers/:id" component={BeerDetail} />
+      </Switch>
+    </Router>
   );
 };
 

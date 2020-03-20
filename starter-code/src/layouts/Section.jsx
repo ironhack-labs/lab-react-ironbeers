@@ -1,10 +1,11 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 
-const Section = ({ children }) => {
+const Section = ({ url, children }) => {
+  console.log(url);
   return (
     <div>
-      <NavBar />
+      <NavBar {...{ url }} />
       {children}
     </div>
   );

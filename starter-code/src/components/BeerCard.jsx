@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
-import { getBeers, BeerContext } from "../api/beer.api";
+import React from "react";
 
-const BeerCard = props => {
-  const { beer } = useContext(BeerContext);
-  console.log(beer);
+const BeerCard = beer => {
+  console.log("BEER CARD", beer);
 
   return (
     <div className="card w-auto beer-card">

@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
-import { BeerContext } from "../api/beer.api";
+import React from "react";
+import { getBeers } from "../api/beer.api";
 
 const BeerListItem = ({ _id, image_url, name, tagline, contributed_by }) => {
-  const { getBeers } = useContext(BeerContext);
   return (
     <div className="container" onClick={() => getBeers(`/beers/${_id}`)}>
       <div className="row">
