@@ -45,6 +45,25 @@ export const BeerCard = styled(Card)`
   p.light {
     color: #97ade7;
   }
+  @media (max-width: 1024px) {
+    width: 40%;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+`;
+
+export const InputContainer = styled(Container)`
+  padding: 2em;
+  @media (max-width: 1024px) {
+    padding: 2em 4.3em;
+  }
+  @media (max-width: 768px) {
+    padding: 2em 3em;
+  }
+  @media (max-width: 425px) {
+    padding: 2em 1em;
+  }
 `;
 
 // Beer detail
