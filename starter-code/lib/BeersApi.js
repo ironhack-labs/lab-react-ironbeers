@@ -25,7 +25,7 @@ export const createBeer = async data => {
   return res.data;
 };
 
-// export const searchBeer = async query => {
-//   const res = await beersApi.get(`/beers/search?q=${query}`);
-//   return res.data;
-// };
+export const searchBeer = async query => {
+  const res = await beersApi.get(`/beers/search?q=${query}`);
+  return res.data;
+};

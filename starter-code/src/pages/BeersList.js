@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { beersList } from "../../lib/BeersApi";
+import { beersList, searchBeer } from "../../lib/BeersApi";
 import { Header } from "../components/Header";
 
 export const Beers = () => {
@@ -10,9 +10,23 @@ export const Beers = () => {
     beersList().then(list => setList(list));
   }, []);
 
+  const [search, setSearch] = useState("");
+
+  const handleSearchBeer = e => {
+    searchBeer(e.target.value).then(list => setList(list));
+    setSearch(e.target.value);
+  };
+
   return (
     <>
       <Header />
+      <input
+        type="text"
+        id="search"
+        value={search}
+        placeholder="Search beers"
+        onChange={handleSearchBeer}
+      />
       <ul>
         {list.map(beer => (
           <li key={beer._id}>
