@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../layouts/Layout";
-import axios from "axios";
 import { BeerCard } from "../components/BeerCard";
 import styled from "styled-components";
 import { LoadingContext } from "../../lib/loading.api";
@@ -15,10 +14,6 @@ const Container = styled.div`
     width: 90%;
   }
 `;
-
-const api = axios.create({
-  baseURL: "https://ih-beers-api2.herokuapp.com"
-});
 
 export const BeerPage = () => {
   const [beers, setBeers] = useState();
