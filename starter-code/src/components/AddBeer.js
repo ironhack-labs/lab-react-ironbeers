@@ -1,9 +1,11 @@
 // dependencies
 import React, { useState } from 'react';
-import axios from 'axios';
+
+// local modules
+import { addNewBeer } from '../services/beersService';
 
 // styled components
-import { Form } from '../styles/Form';
+import { Form, Input } from '../styles/Form';
 
 export const AddBeer = () => {
   const [beer, setNewBeer] = useState({
@@ -16,25 +18,27 @@ export const AddBeer = () => {
     contributed_by: ''
   });
 
-  const addNewBeer = async () => {
-    try {
-      await axios.post('https://ih-beers-api2.herokuapp.com/beers/new', beer);
-    } catch (err) {
-      console.log('Creation of beer bailed ', err);
-    }
-  };
-
   const handleSubmit = e => {
     e.preventDefault();
-    addNewBeer();
-    console.log('added new beer ', beer);
+    addNewBeer(beer);
+
+    // clear inputs after submit
+    setNewBeer({
+      name: '',
+      tagline: '',
+      description: '',
+      first_brewed: '',
+      brewers_tips: '',
+      attenuation_level: '',
+      contributed_by: ''
+    });
   };
 
   return (
     <Form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name: </label>
-        <input
+        <Input
           type="text"
           id="name"
           value={beer.name}
@@ -43,7 +47,7 @@ export const AddBeer = () => {
       </div>
       <div>
         <label htmlFor="Tagline">Tagline: </label>
-        <input
+        <Input
           type="text"
           id="Tagline"
           value={beer.tagline}
@@ -52,7 +56,7 @@ export const AddBeer = () => {
       </div>
       <div>
         <label htmlFor="Description">Description: </label>
-        <input
+        <Input
           type="text"
           id="Description"
           value={beer.description}
@@ -61,7 +65,7 @@ export const AddBeer = () => {
       </div>
       <div>
         <label htmlFor="first_brewed">Date of first brew: </label>
-        <input
+        <Input
           type="text"
           id="first_brewed"
           value={beer.first_brewed}
@@ -70,7 +74,7 @@ export const AddBeer = () => {
       </div>
       <div>
         <label htmlFor="brewers_tips">Some tips for brewers: </label>
-        <input
+        <Input
           type="text"
           id="brewers_tips"
           value={beer.brewers_tips}
@@ -79,7 +83,7 @@ export const AddBeer = () => {
       </div>
       <div>
         <label htmlFor="attenuation_level">Level of attenuation: </label>
-        <input
+        <Input
           type="number"
           id="attenuation_level"
           value={beer.attenuation_level}
@@ -90,7 +94,7 @@ export const AddBeer = () => {
       </div>
       <div>
         <label htmlFor="contributed_by">Created by: </label>
-        <input
+        <Input
           type="text"
           id="contributed_by"
           value={beer.contributed_by}

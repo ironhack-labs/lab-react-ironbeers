@@ -8,7 +8,7 @@ import randomBeer from '../../public/images/random-beer.png';
 import newBeer from '../../public/images/new-beer.png';
 
 // styled components
-import { Card } from '../styles/PageContent';
+import { Card, ImgContainer } from '../styles/PageContent';
 
 export const Options = () => {
   const options = [
@@ -32,13 +32,15 @@ export const Options = () => {
     }
   ];
 
-  return options.map((opt, i) => {
+  return options.map(({ image, link, title, description }, i) => {
     return (
       <Card key={i}>
-        <img src={opt.image} />
-        <div>
-          <Link to={opt.link}>{opt.title}</Link>
-          <p>{opt.description}</p>
+        <ImgContainer>
+          <img src={image} />
+        </ImgContainer>
+        <div className="content">
+          <Link to={link}>{title}</Link>
+          <p>{description}</p>
         </div>
       </Card>
     );

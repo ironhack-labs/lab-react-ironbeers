@@ -3,12 +3,14 @@ import React from 'react';
 
 // local modules
 import { Header } from './Header';
+import { Footer } from './Footer';
 
 export const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div>{children}</div>
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };

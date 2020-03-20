@@ -1,8 +1,10 @@
 // dependencies
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { ArrowBack } from '@styled-icons/typicons';
+
+// local modules
+import { fetchSingleBeer } from '../services/beersService';
 
 // styled components
 import { BeerDetailCard } from '../styles/PageContent';
@@ -12,14 +14,10 @@ export const BeerDetail = props => {
   const [beer, setBeer] = useState({});
 
   useEffect(() => {
-    const fetchData = async endpoint => {
-      const url = `https://ih-beers-api2.herokuapp.com/beers/${endpoint}`;
-      const response = await axios.get(url);
-      console.log('beer found ', response.data);
-      setBeer(response.data);
-    };
-
-    fetchData(id);
+    (async () => {
+      const results = await fetchSingleBeer(id);
+      setBeer(results);
+    })();
   }, []);
 
   return (

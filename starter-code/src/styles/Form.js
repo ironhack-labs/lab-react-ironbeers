@@ -5,7 +5,6 @@ export const Form = styled.form`
   justify-content: center;
   flex-wrap: wrap;
   padding: 3.5em;
-  color: #172c66;
   div {
     display: flex;
     margin: 1em;
@@ -16,25 +15,12 @@ export const Form = styled.form`
     margin: 1em;
     min-width: fit-content;
   }
-  input {
-    color: #172c66;
-    font-size: 1rem;
-    padding: 0.5em;
-    border-radius: 2em;
-    border: 0.1em solid #8bd3dd;
-    outline: none;
-    width: 100%;
-    &:focus {
-      box-shadow: 0 0 0.3em 0.2em #8bd3dd;
-    }
-  }
   div.btn-container {
     width: 100%;
     display: flex;
     justify-content: center;
     button {
       border: 0.1em solid #f582ae;
-      color: #172c66;
       padding: 0.5em 1em;
       font-size: 1.2rem;
       cursor: pointer;
@@ -70,5 +56,19 @@ export const Form = styled.form`
     div {
       width: 100%;
     }
+  }
+`;
+
+export const Input = styled.input`
+  color: #172c66;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  border: 0.1em solid #8bd3dd;
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    box-shadow: 0 0 0.3em 0.2em #8bd3dd;
   }
 `;
