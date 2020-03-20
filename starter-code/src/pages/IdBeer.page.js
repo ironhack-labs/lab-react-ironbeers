@@ -4,6 +4,7 @@ import { Layout } from "../layouts/layout";
 
 export const IdBeer = props => {
   const id = props.match.params.id;
+  console.log(id);
   const [beer, setBeer] = useState({});
 
   useEffect(() => {
@@ -14,13 +15,13 @@ export const IdBeer = props => {
     <>
       <Layout />
       <div>
-        <img src={beer.img_url} />
-        <h3>{beer.name}</h3>
-        <p>{beer.attenuation_level}</p>
-        <p>{beer.tagline}</p>
-        <p>{beer.first_brewed}</p>
-        <p>{beer.description}</p>
-        <p>{beer.contributed_by}</p>
+        <img src={beer.image_url} />
+        <h3>Name: {beer.name}</h3>
+        <p>Attenuation: {beer.attenuation_level}</p>
+        <p>Tagline: {beer.tagline}</p>
+        <p>First Brewer: {beer.first_brewed}</p>
+        <p>Description: {beer.description}</p>
+        <p>Contributed: {beer.contributed_by}</p>
       </div>
     </>
   );

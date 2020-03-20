@@ -34852,13 +34852,101 @@ module.exports.default = axios;
 
 },{"./utils":"node_modules/axios/lib/utils.js","./helpers/bind":"node_modules/axios/lib/helpers/bind.js","./core/Axios":"node_modules/axios/lib/core/Axios.js","./core/mergeConfig":"node_modules/axios/lib/core/mergeConfig.js","./defaults":"node_modules/axios/lib/defaults.js","./cancel/Cancel":"node_modules/axios/lib/cancel/Cancel.js","./cancel/CancelToken":"node_modules/axios/lib/cancel/CancelToken.js","./cancel/isCancel":"node_modules/axios/lib/cancel/isCancel.js","./helpers/spread":"node_modules/axios/lib/helpers/spread.js"}],"node_modules/axios/index.js":[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"lib/ApiBeer.js":[function(require,module,exports) {
+},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"src/layouts/header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.singleBeer = exports.listBeer = void 0;
+exports.Header = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+  return _react.default.createElement("header", null, _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, "Home")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/new-beer"
+  }, "New Beer"))));
+};
+
+exports.Header = Header;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/layouts/layout.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Layout = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _header = require("./header");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Layout = function Layout(_ref) {
+  var children = _ref.children;
+  console.log(children);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_header.Header, null), _react.default.createElement("div", {
+    className: "ctn-body"
+  }, children));
+};
+
+exports.Layout = Layout;
+},{"react":"node_modules/react/index.js","./header":"src/layouts/header.js"}],"src/pages/IdBeer.page.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.IdBeer = void 0;
+
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _ApiBeer = require("../../lib/ApiBeer");
+
+var _layout = require("../layouts/layout");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IdBeer = function IdBeer(props) {
+  var id = props.match.params.id;
+  console.log(id);
+
+  var _useState = (0, _react.useState)({}),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      beer = _useState2[0],
+      setBeer = _useState2[1];
+
+  (0, _react.useEffect)(function () {
+    (0, _ApiBeer.singleBeer)(id).then(function (beer) {
+      return setBeer(beer);
+    });
+  }, [id]);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_layout.Layout, null), _react.default.createElement("div", null, _react.default.createElement("img", {
+    src: beer.image_url
+  }), _react.default.createElement("h3", null, "Name: ", beer.name), _react.default.createElement("p", null, "Attenuation: ", beer.attenuation_level), _react.default.createElement("p", null, "Tagline: ", beer.tagline), _react.default.createElement("p", null, "First Brewer: ", beer.first_brewed), _react.default.createElement("p", null, "Description: ", beer.description), _react.default.createElement("p", null, "Contributed: ", beer.contributed_by)));
+};
+
+exports.IdBeer = IdBeer;
+},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","../../lib/ApiBeer":"lib/ApiBeer.js","../layouts/layout":"src/layouts/layout.js"}],"lib/ApiBeer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.newBeer = exports.randomBeer = exports.singleBeer = exports.listBeer = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
@@ -34867,6 +34955,8 @@ var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/
 var _react = _interopRequireDefault(require("react"));
 
 var _axios = _interopRequireDefault(require("axios"));
+
+var _IdBeer = require("../src/pages/IdBeer.page");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34931,57 +35021,65 @@ var singleBeer = /*#__PURE__*/function () {
 }();
 
 exports.singleBeer = singleBeer;
-},{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","react":"node_modules/react/index.js","axios":"node_modules/axios/index.js"}],"src/layouts/header.js":[function(require,module,exports) {
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Header = void 0;
+var randomBeer = /*#__PURE__*/function () {
+  var _ref3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
+    var response;
+    return _regenerator.default.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return api.get("/beers/random");
 
-var _react = _interopRequireDefault(require("react"));
+          case 2:
+            response = _context3.sent;
+            return _context3.abrupt("return", response.data);
 
-var _reactRouterDom = require("react-router-dom");
+          case 4:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  return function randomBeer() {
+    return _ref3.apply(this, arguments);
+  };
+}();
 
-var Header = function Header() {
-  return _react.default.createElement("header", null, _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/"
-  }, "Home")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/beers"
-  }, "All Beers")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/random-beer"
-  }, "Random Beer")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/new-beer"
-  }, "New Beer"))));
-};
+exports.randomBeer = randomBeer;
 
-exports.Header = Header;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/layouts/layout.js":[function(require,module,exports) {
-"use strict";
+var newBeer = /*#__PURE__*/function () {
+  var _ref4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4(info) {
+    var response;
+    return _regenerator.default.wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            _context4.next = 2;
+            return api.post("/beers/new", info);
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Layout = void 0;
+          case 2:
+            response = _context4.sent;
+            return _context4.abrupt("return", response.data);
 
-var _react = _interopRequireDefault(require("react"));
+          case 4:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4);
+  }));
 
-var _header = require("./header");
+  return function newBeer(_x2) {
+    return _ref4.apply(this, arguments);
+  };
+}();
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Layout = function Layout(_ref) {
-  var children = _ref.children;
-  console.log(children);
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_header.Header, null), _react.default.createElement("div", {
-    className: "ctn-body"
-  }, children));
-};
-
-exports.Layout = Layout;
-},{"react":"node_modules/react/index.js","./header":"src/layouts/header.js"}],"src/pages/Beers.page.js":[function(require,module,exports) {
+exports.newBeer = newBeer;
+},{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","react":"node_modules/react/index.js","axios":"node_modules/axios/index.js","../src/pages/IdBeer.page":"src/pages/IdBeer.page.js"}],"src/pages/Beers.page.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35036,18 +35134,55 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.RandomBeer = void 0;
 
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
 var _react = _interopRequireWildcard(require("react"));
+
+var _ApiBeer = require("../../lib/ApiBeer");
+
+var _layout = require("../layouts/layout");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var RandomBeer = function RandomBeer() {
-  return _react.default.createElement("div", null, "RANDOM BEER");
+  var _useState = (0, _react.useState)({}),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      beer = _useState2[0],
+      setBeer = _useState2[1];
+
+  (0, _react.useEffect)(function () {
+    (0, _ApiBeer.randomBeer)().then(function (beer) {
+      return setBeer(beer);
+    });
+  }, []);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_layout.Layout, null), _react.default.createElement("div", null, _react.default.createElement("img", {
+    src: beer.image_url
+  }), _react.default.createElement("h3", null, "Name: ", beer.name), _react.default.createElement("p", null, "Attenuation: ", beer.attenuation_level), _react.default.createElement("p", null, "Tagline: ", beer.tagline), _react.default.createElement("p", null, "First Brewer: ", beer.first_brewed), _react.default.createElement("p", null, "Description: ", beer.description), _react.default.createElement("p", null, "Contributed: ", beer.contributed_by)));
 };
 
 exports.RandomBeer = RandomBeer;
-},{"react":"node_modules/react/index.js"}],"src/pages/New.page.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","../../lib/ApiBeer":"lib/ApiBeer.js","../layouts/layout":"src/layouts/layout.js"}],"node_modules/@babel/runtime/helpers/defineProperty.js":[function(require,module,exports) {
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty;
+},{}],"src/pages/New.page.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35055,24 +35190,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.NewBeer = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var NewBeer = function NewBeer() {
-  return _react.default.createElement("div", null, "NEW BEERS");
-};
-
-exports.NewBeer = NewBeer;
-},{"react":"node_modules/react/index.js"}],"src/pages/IdBeer.page.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.IdBeer = void 0;
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
@@ -35088,26 +35206,96 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var IdBeer = function IdBeer(props) {
-  var id = props.match.params.id;
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-  var _useState = (0, _react.useState)({}),
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+var NewBeer = function NewBeer() {
+  var _useState = (0, _react.useState)({
+    name: "",
+    tagline: "",
+    description: "",
+    first_brewed: "",
+    brewers_tips: "",
+    attenuation_level: "",
+    contributed_by: ""
+  }),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
       beer = _useState2[0],
       setBeer = _useState2[1];
 
-  (0, _react.useEffect)(function () {
-    (0, _ApiBeer.singleBeer)(id).then(function (beer) {
-      return setBeer(beer);
-    });
-  }, [id]);
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_layout.Layout, null), _react.default.createElement("div", null, _react.default.createElement("img", {
-    src: beer.img_url
-  }), _react.default.createElement("h3", null, beer.name), _react.default.createElement("p", null, beer.attenuation_level), _react.default.createElement("p", null, beer.tagline), _react.default.createElement("p", null, beer.first_brewed), _react.default.createElement("p", null, beer.description), _react.default.createElement("p", null, beer.contributed_by)));
+  var handleInputChange = function handleInputChange(e) {
+    var id = e.target.id;
+    var value = e.target.value;
+    setBeer(_objectSpread({}, beer, (0, _defineProperty2.default)({}, id, value)));
+  };
+
+  var handleSubmit = function handleSubmit(e) {
+    e.preventDefault();
+
+    var formData = _objectSpread({}, beer);
+
+    (0, _ApiBeer.newBeer)(formData);
+  };
+
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_layout.Layout, null), _react.default.createElement("form", {
+    onSubmit: handleSubmit
+  }, _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "name"
+  }, "Name: "), _react.default.createElement("input", {
+    type: "text",
+    id: "name",
+    value: beer.name,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "Tagline"
+  }, "Tagline: "), _react.default.createElement("input", {
+    type: "text",
+    id: "tagline",
+    value: beer.tagline,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "Description"
+  }, "Description: "), _react.default.createElement("input", {
+    type: "text",
+    id: "description",
+    value: beer.description,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "first_brewed"
+  }, "Date of first brew: "), _react.default.createElement("input", {
+    type: "text",
+    id: "first_brewed",
+    value: beer.first_brewed,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "brewers_tips"
+  }, "Some tips for brewers: "), _react.default.createElement("input", {
+    type: "text",
+    id: "brewers_tips",
+    value: beer.brewers_tips,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "attenuation_level"
+  }, "Level of attenuation: "), _react.default.createElement("input", {
+    type: "number",
+    id: "attenuation_level",
+    value: beer.attenuation_level,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "contributed_by"
+  }, "Created by: "), _react.default.createElement("input", {
+    type: "text",
+    id: "contributed_by",
+    value: beer.contributed_by,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("button", {
+    type: "submit"
+  }, "ADD NEW"))));
 };
 
-exports.IdBeer = IdBeer;
-},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","../../lib/ApiBeer":"lib/ApiBeer.js","../layouts/layout":"src/layouts/layout.js"}],"src/App.js":[function(require,module,exports) {
+exports.NewBeer = NewBeer;
+},{"@babel/runtime/helpers/defineProperty":"node_modules/@babel/runtime/helpers/defineProperty.js","@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","../../lib/ApiBeer":"lib/ApiBeer.js","../layouts/layout":"src/layouts/layout.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35138,6 +35326,7 @@ var App = function App() {
     component: _Home.Home
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/beers",
+    exact: true,
     component: _Beers.AllBeers
   }), _react.default.createElement(_reactRouterDom.Route, {
     path: "/beers/:id",
@@ -35196,7 +35385,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39423" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38893" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

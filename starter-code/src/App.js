@@ -11,7 +11,7 @@ export const App = () => {
     <Router>
       <Switch>
         <Route path="/" exact component={Home}></Route>
-        <Route path="/beers" component={AllBeers}></Route>
+        <Route path="/beers" exact component={AllBeers}></Route>
         <Route path="/beers/:id" component={IdBeer}></Route>
         <Route path="/random-beer" component={RandomBeer}></Route>
         <Route path="/new-beer" component={NewBeer}></Route>
