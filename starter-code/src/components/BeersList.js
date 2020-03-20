@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 // styled components
 import {
   BeerCard,
-  BeersContainer,
+  Container,
   ImgContainer,
   InputContainer
 } from '../styles/PageContent';
@@ -42,7 +42,7 @@ export const BeersList = () => {
           placeholder="Search beer..."
         />
       </InputContainer>
-      <BeersContainer>
+      <Container>
         {beers.length === 0 ? (
           <p>Loading...</p>
         ) : (
@@ -66,7 +66,7 @@ export const BeersList = () => {
             );
           })
         )}
-      </BeersContainer>
+      </Container>
     </>
   );
 };

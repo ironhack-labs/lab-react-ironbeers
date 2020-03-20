@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const Card = styled.div`
@@ -11,9 +12,8 @@ export const Card = styled.div`
   border: 0.2em solid #f3d2c1;
   border-radius: 1em;
   overflow: hidden;
-  margin: 3em 1em;
-
-  div {
+  margin: 2em 1em;
+  div.content {
     padding: 1em;
     color: #001858;
   }
@@ -22,16 +22,19 @@ export const Card = styled.div`
     text-decoration: none;
     color: #001858;
   }
+  @media (max-width: 1024px) {
+    width: 40%;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 // Beers list
-export const BeersContainer = styled(Container)`
-  flex-wrap: wrap;
-`;
-
 export const ImgContainer = styled(Container)`
   width: 100%;
   height: 10em;
+  flex-wrap: nowrap;
   img {
     object-fit: contain;
   }
@@ -39,17 +42,15 @@ export const ImgContainer = styled(Container)`
 
 export const BeerCard = styled(Card)`
   height: fit-content;
+  div {
+    padding: 1em;
+    color: #001858;
+  }
   span {
     font-weight: 700;
   }
   p.light {
     color: #97ade7;
-  }
-  @media (max-width: 1024px) {
-    width: 40%;
-  }
-  @media (max-width: 425px) {
-    width: 100%;
   }
 `;
 
