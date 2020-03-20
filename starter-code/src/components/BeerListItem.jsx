@@ -1,9 +1,8 @@
 import React from "react";
-import { getBeers } from "../api/beer.api";
 
 const BeerListItem = ({ _id, image_url, name, tagline, contributed_by }) => {
   return (
-    <div className="container" onClick={() => getBeers(`/beers/${_id}`)}>
+    <div className="container">
       <div className="row">
         <div className="col-2 beer-img-container">
           <img src={image_url} className="beer-img" alt={`${name} image`} />
