@@ -55,7 +55,6 @@ const BeerDetail = props => {
     const res = await axios.get(
       `https://ih-beers-api2.herokuapp.com/beers/${id}`
     );
-    console.log(res.data);
     return res.data;
   };
   useEffect(() => {

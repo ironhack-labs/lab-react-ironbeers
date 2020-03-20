@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import useFetch from "./components/hooks/useFetch";
@@ -16,15 +16,12 @@ const Beers = function() {
   return (
     <Cards>
       <Navbar />
-      {data.map((beer, i) => (
-        <>
-          <div
-            key={i}
-            className="card"
-            style={{ width: "24rem", height: "11rem" }}
-          >
+      {data.map(beer => (
+        <React.Fragment key={beer._id}>
+          <div className="card" style={{ width: "24rem", height: "11rem" }}>
             <Link
               to={`/beer-detail/${beer._id}`}
+              key={beer.i}
               style={{ textDecoration: "none" }}
             >
               <div className="row no-gutters">
@@ -36,7 +33,7 @@ const Beers = function() {
                     alt="Beer Picture"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8" key={beer.i}>
                   <div className="card-body">
                     <h5 className="card-title">{beer.name}</h5>
                     <p
@@ -59,7 +56,7 @@ const Beers = function() {
               </div>
             </Link>
           </div>
-        </>
+        </React.Fragment>
       ))}
     </Cards>
   );
