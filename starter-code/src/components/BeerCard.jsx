@@ -1,22 +1,22 @@
 import React from "react";
 
-const BeerCard = ({ image_url, name, tagline, contributed_by }) => {
-  console.log(image_url);
+const BeerCard = beer => {
+  console.log("BEER CARD", beer);
+
   return (
-    <div className="container">
-      <div className="row beer-card">
-        <div className="col-2 beer-img-container">
-          <img src={image_url} className="beer-img" alt={`${name} image`} />
-        </div>
-        <div className="col-8">
-          <div className="card-body">
-            <h5 className="card-title">{name}</h5>
-            <p className="card-text">{tagline}</p>
-            <p className="card-text">
-              <small className="text-muted">{contributed_by}</small>
-            </p>
-          </div>
-        </div>
+    <div className="card w-auto beer-card">
+      <img src={beer.image_url} className="mx-auto my-5 h-50" alt={`${beer.image_url} image`} />
+      <div className="card-body">
+        <h5 className="card-title">{beer.name}</h5>
+        <span>{beer.attenuation_level}</span>
+        <h6 className="card-title">{beer.tagline}</h6>
+        <span>
+          <b>{beer.first_brewed}</b>
+        </span>
+        <p className="card-text">{beer.description}</p>
+        <p className="card-text">
+          <small className="text-muted">{beer.contributed_by}</small>
+        </p>
       </div>
     </div>
   );
