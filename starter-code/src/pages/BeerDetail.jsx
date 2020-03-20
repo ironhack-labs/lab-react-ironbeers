@@ -4,13 +4,14 @@ import BeerCard from "../components/BeerCard";
 import { getBeers } from "../api/beer.api";
 
 const BeerDetail = props => {
-  const id = props.match.params.id;
+  const url = props.match.params.id;
+  console.log("url", url, "PROPS", props);
   const [beer, setBeer] = useState(false);
   useEffect(() => {
-    getBeers(`/beers/${id}`).then(data => setBeer(data));
+    getBeers(`/beers/${url}`).then(data => setBeer(data));
   }, []);
 
-  console.log("ID", id);
+  console.log("url", url);
   return <Section url={"/beers"}>{beer && <BeerCard {...{ ...beer }} />}</Section>;
 };
 

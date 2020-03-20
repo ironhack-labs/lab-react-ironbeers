@@ -7,7 +7,6 @@ import text from "../../public/data/text.json";
 import Home from "../layouts/Home";
 
 const HomePage = () => {
-  console.log(text.home);
   return (
     <Home>
       <HomeCard link="/beers" img={beers} header="All Beers" text={text.home} />
