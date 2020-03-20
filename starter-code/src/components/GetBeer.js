@@ -42,7 +42,7 @@ const AllBeer = () => {
       </form>
       {beer.map(beer => (
         <div key={beer._id} className="prueba">
-          <Link className="link" to={`/beer/${beer._id}`} key={beer.i}>
+          <Link className="link" to={`/beer-detail/${beer._id}`} key={beer.i}>
             <img
               style={{ width: "60px", height: "100px" }}
               src={beer.image_url}

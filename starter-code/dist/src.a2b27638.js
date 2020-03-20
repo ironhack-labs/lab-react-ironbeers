@@ -37919,7 +37919,7 @@ var AllBeer = function AllBeer() {
       className: "prueba"
     }, _react.default.createElement(_reactRouterDom.Link, {
       className: "link",
-      to: "/beer/".concat(beer._id),
+      to: "/beer-detail/".concat(beer._id),
       key: beer.i
     }, _react.default.createElement("img", {
       style: {
@@ -38959,7 +38959,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61749" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65499" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
