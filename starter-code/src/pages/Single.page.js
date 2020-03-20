@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { flechSingleBeer } from "../../lib/beers.api";
+import { Item } from "../components/Item";
 
 export const SinglePage = props => {
   const id = props.match.params.id;
@@ -10,8 +11,15 @@ export const SinglePage = props => {
   if (beer.length == 0) return <div>Loading...</div>;
   return (
     <>
-      <h2>SINGLE BEER</h2>
-      <p>{beer.name}</p>
+      <Item
+        src={beer.image_url}
+        name={beer.name}
+        tag={beer.tagline}
+        level={beer.attenuation_level}
+        date={beer.first_brewed}
+        description={beer.description}
+        author={beer.contributed_by}
+      />
     </>
   );
 };

@@ -22,7 +22,6 @@ export const ListPage = props => {
               tag={beer.tagline}
               author={beer.contributed_by}
             />
-            {console.log("ID --->>>", beer._id)}
           </li>
         ))}
       </ul>
