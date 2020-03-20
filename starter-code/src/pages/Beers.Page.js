@@ -1,3 +1,6 @@
 import React from "react";
+import { Header } from "../components/Header";
 
-export const Beers = () => <div>Beers</div>;
+export const Beers = () => {
+  return <Header></Header>;
+};
