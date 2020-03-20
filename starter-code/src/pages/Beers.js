@@ -21,6 +21,8 @@ export const Beers = () => {
 
   return (
     <>
+      <Header />
+
       {beersList.map(beer => (
         <div key={beer._id}>
           <Card style={{ width: "18rem" }}>

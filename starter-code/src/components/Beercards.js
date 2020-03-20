@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Img } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 /* --- Images --- */
 
@@ -12,8 +13,11 @@ export const Beercards = () => {
     <>
       <div>
         <Card>
-          <Card.Img variant="top" src={beers} />
+          <Link to="/beers">
+            <Card.Img variant="top" src={beers} />
+          </Link>
           <Card.Body>
+            <h2>All Beers</h2>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -23,8 +27,11 @@ export const Beercards = () => {
       </div>
       <div>
         <Card>
-          <Card.Img variant="top" src={random} />
+          <Link to="/random-beers">
+            <Card.Img variant="top" src={random} />
+          </Link>
           <Card.Body>
+            <h2>Random Beer</h2>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
@@ -34,8 +41,11 @@ export const Beercards = () => {
       </div>
       <div>
         <Card>
-          <Card.Img variant="top" src={newbeers} />
+          <Link to="/create-beer">
+            <Card.Img variant="top" src={newbeers} />
+          </Link>
           <Card.Body>
+            <h2>Create Beer</h2>
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.

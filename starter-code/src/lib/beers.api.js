@@ -5,7 +5,7 @@ const instance = axios.create({
 });
 
 export const listAllBeers = async () => {
-  const res = await instance.get("/beers");
+  const res = await instance.get(`beers`);
   return res.data;
 };
 
