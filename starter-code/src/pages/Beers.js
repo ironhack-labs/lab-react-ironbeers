@@ -2,7 +2,7 @@ import React, { useEffect, useState, Component } from "react";
 import { Link } from "react-router-dom";
 
 /* --- UI Framework --- */
-import styled from "styled-components";
+import { Card, Button, ListGroup, ListGroupItem } from "react-bootstrap";
 
 /* --- Components --- */
 
@@ -22,12 +22,20 @@ export const Beers = () => {
   return (
     <>
       {beersList.map(beer => (
-        <Link to={`/beers/${beer._id}`}>
-          <img src={beer.image_url} alt={beer.name} />
-          <h2>{beer.name}</h2>
-          <p>{beer.tagline}</p>
-          <small>{beer.contributed_by}</small>
-        </Link>
+        <div key={beer._id}>
+          <Card style={{ width: "18rem" }}>
+            <Link to={`/beers/${beer._id}`}>
+              <Card.Img variant="top" src={beer.image_url} alt={beer.name} />
+            </Link>
+            <Card.Body>
+              <Card.Title>{beer.name}</Card.Title>
+              <Card.Text>{beer.tagline}</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem> {beer.contributed_by}</ListGroupItem>
+            </ListGroup>
+          </Card>
+        </div>
       ))}
     </>
   );
