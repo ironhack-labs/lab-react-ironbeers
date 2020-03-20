@@ -1,10 +1,21 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import styled from "styled-components";
+
+const StyledFooter = styled.footer`
+  background: #0a7a06;
+  padding: 50px 0;
+  p {
+    text-align: center;
+    color: #ffffff;
+  }
+`;
 
 export const Footer = () => {
   return (
     <>
-      <p>FOOTER</p>
+      <StyledFooter>
+        <p>© 2020 Iron Beers</p>
+      </StyledFooter>
     </>
   );
 };

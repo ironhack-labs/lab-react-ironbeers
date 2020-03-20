@@ -4,13 +4,30 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   margin: 40px 0 28px 0;
 }
+
+h3 {
+  font-size: 18px;
+}
 main {
   margin-top: 92px;
+}
+button,
+a {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style-type: none;
 }
 
 .App {

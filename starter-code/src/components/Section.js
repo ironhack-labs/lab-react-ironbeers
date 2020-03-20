@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledSection = styled.div`
   padding: 40px 0;
@@ -56,6 +57,7 @@ export const SectionHome = props => {
           <Col className="details" xs={12} lg={6}>
             <h2>{props.sectionTitle}</h2>
             <p>{props.sectionDescription}</p>
+            <Link to={props.sectionLink}>{props.sectionC2a}</Link>
           </Col>
         </Row>
       </Col>
