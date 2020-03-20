@@ -18,23 +18,32 @@ export const NewBeer = () => {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const data = [];
-    data.push(
-      { name },
-      { tagline },
-      { description },
-      { first_brewed },
-      { brewers_tips },
-      { attenuation_level },
-      { contributed_by }
-    );
+    // const data = [];
+    // data.push(
+    //   { name },
+    //   { tagline },
+    //   { description },
+    //   { first_brewed },
+    //   { brewers_tips },
+    //   { attenuation_level },
+    //   { contributed_by }
+    // );
 
-    const beerData = { ...data };
+    let beerData = {
+      name,
+      tagline,
+      description,
+      first_brewed,
+      brewers_tips,
+      attenuation_level,
+      contributed_by
+    };
     console.log(beerData);
 
     const createBeer = async data => {
       console.log("dentrpo de la funcion", data);
       const response = await beersApi.post(`/beers/new`, data);
+      console.log(response.data);
       return response.data;
     };
 

@@ -91,3 +91,12 @@ h1 {
   margin-left: 20px;
   font-size: x-large;
 }
+
+.search {
+  width: 75%;
+  height: 50px;
+  margin-left: 12.5%;
+  text-align: center;
+  margin-top: 1%;
+  font-size: larger;
+}

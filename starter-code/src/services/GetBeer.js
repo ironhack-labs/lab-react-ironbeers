@@ -35,6 +35,7 @@ export const AllBeer = () => {
     <div>
       <form onSubmit={e => e.preventDefault()}>
         <input
+          className="search"
           name="search"
           placeholder="Search a beer"
           value={search}
