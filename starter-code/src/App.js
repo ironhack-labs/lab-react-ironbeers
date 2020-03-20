@@ -6,6 +6,7 @@ import { HomePage } from "./pages/Home.page";
 import { ListPage } from "./pages/List.page";
 import { RamdomPage } from "./pages/Random.page";
 import { NewPage } from "./pages/New.page";
+import { SinglePage } from "./pages/Single.page";
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/beers" exact component={ListPage} />
+          <Route path="/beers/:id" component={SinglePage} />
           <Route path="/random-beer" exact component={RamdomPage} />
           <Route path="/new-beer" exact component={NewPage} />
         </Switch>

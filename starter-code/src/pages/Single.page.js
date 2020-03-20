@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { flechSingleBeer } from "../../lib/beers.api";
 
-export const SinglePage = () => {
+export const SinglePage = props => {
+  const id = props.match.params.id;
+  const [beer, setBeer] = useState([]);
+  useEffect(() => {
+    flechSingleBeer(id).then(beer => setBeer(beer));
+  }, []);
+  if (beer.length == 0) return <div>Loading...</div>;
   return (
     <>
-      <p>SINGLE</p>
+      <h2>SINGLE BEER</h2>
+      <p>{beer.name}</p>
     </>
   );
 };
