@@ -7,7 +7,9 @@ const LoadingWrapper = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  top: 0;
+  left: 0;
+  position: fixed;
   z-index: 10000;
   background: rgba(0, 0, 0, 0.85);
   img {
