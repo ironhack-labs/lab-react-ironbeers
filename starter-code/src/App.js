@@ -1,25 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Layout } from "./layouts/Layout";
+
 import { HomePage } from "./pages/Home.page";
-import logo from "../public/images/logo.svg";
+import { ListPage } from "./pages/List.page";
+import { RamdomPage } from "./pages/Random.page";
+import { NewPage } from "./pages/New.page";
 
 export const App = () => {
-  // <div className="App">
-  //   <header className="App-header">
-  //     <img src={logo} className="App-logo" alt="logo" />
-  //     <h1 className="App-title">Welcome to React</h1>
-  //   </header>
-  //   <p className="App-intro">
-  //     To get started, edit <code>src/App.js</code> and save to reload.
-  //   </p>
-  // </div>
-
   return (
     <Router>
       <Layout>
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/beers" exact component={ListPage} />
+          <Route path="/random-beer" exact component={RamdomPage} />
+          <Route path="/new-beer" exact component={NewPage} />
         </Switch>
       </Layout>
     </Router>

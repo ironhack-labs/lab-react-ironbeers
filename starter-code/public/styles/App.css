@@ -12,6 +12,12 @@ h2 {
 main {
   margin-top: 92px;
 }
+button,
+a {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+}
 
 .App {
   text-align: center;
