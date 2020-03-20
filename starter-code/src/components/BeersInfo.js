@@ -5,6 +5,7 @@ const Beer = styled.div`
   padding: 20px;
 
   .image {
+    margin-top:30px;
     text-align: center;
     img {
       height: 250px;

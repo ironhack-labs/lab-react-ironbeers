@@ -11,11 +11,11 @@ import NewBeer from "./components/NewBeer";
 const App = () => (
   <Router>
     <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/beers" component={() => <AllBeers />} />
-      <Route path="/beers/:id" component={() => <BeerId />} />
-      <Route path="/random-beer" component={() => <RandomBeer />} />
-      <Route path="/new-beer" component={() => <NewBeer />} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/beers" component={AllBeers} />
+      <Route path="/beers/:id" component={BeerId} />
+      <Route path="/random-beer" component={RandomBeer} />
+      <Route path="/new-beer" component={NewBeer} />
     </Switch>
   </Router>
 );
