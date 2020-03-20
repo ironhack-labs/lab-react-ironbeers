@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
 import useFetch from "./components/hooks/useFetch";
 import Cards from "./components/UI/AllBeers";
+import GetBeers from "../src/components/GetBeer";
 
 const Beers = function() {
   const { data, loading } = useFetch(
@@ -16,48 +17,7 @@ const Beers = function() {
   return (
     <Cards>
       <Navbar />
-      {data.map(beer => (
-        <React.Fragment key={beer._id}>
-          <div className="card" style={{ width: "24rem", height: "11rem" }}>
-            <Link
-              to={`/beer-detail/${beer._id}`}
-              key={beer.i}
-              style={{ textDecoration: "none" }}
-            >
-              <div className="row no-gutters">
-                <div className="col-md-4">
-                  <img
-                    style={{ width: "40px", height: "7rem" }}
-                    src={beer.image_url}
-                    className="card-img mt-4 ml-4"
-                    alt="Beer Picture"
-                  />
-                </div>
-                <div className="col-md-8" key={beer.i}>
-                  <div className="card-body">
-                    <h5 className="card-title">{beer.name}</h5>
-                    <p
-                      className="card-text"
-                      style={{
-                        maxHeight: "12rem",
-                        overflow: "hidden",
-                        texOverflow: "ellipsis"
-                      }}
-                    >
-                      {beer.tagline}
-                    </p>
-                    <p className="card-text">
-                      <small className="text-muted">
-                        {beer.contributed_by}
-                      </small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </React.Fragment>
-      ))}
+      <GetBeers />
     </Cards>
   );
 };
