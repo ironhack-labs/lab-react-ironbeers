@@ -28311,63 +28311,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"node_modules/@babel/runtime/helpers/arrayWithHoles.js":[function(require,module,exports) {
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-module.exports = _arrayWithHoles;
-},{}],"node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":[function(require,module,exports) {
-function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
-
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-module.exports = _iterableToArrayLimit;
-},{}],"node_modules/@babel/runtime/helpers/nonIterableRest.js":[function(require,module,exports) {
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
-}
-
-module.exports = _nonIterableRest;
-},{}],"node_modules/@babel/runtime/helpers/slicedToArray.js":[function(require,module,exports) {
-var arrayWithHoles = require("./arrayWithHoles");
-
-var iterableToArrayLimit = require("./iterableToArrayLimit");
-
-var nonIterableRest = require("./nonIterableRest");
-
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
-}
-
-module.exports = _slicedToArray;
-},{"./arrayWithHoles":"node_modules/@babel/runtime/helpers/arrayWithHoles.js","./iterableToArrayLimit":"node_modules/@babel/runtime/helpers/iterableToArrayLimit.js","./nonIterableRest":"node_modules/@babel/runtime/helpers/nonIterableRest.js"}],"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35488,7 +35432,63 @@ var HomePage = function HomePage() {
 };
 
 exports.HomePage = HomePage;
-},{"react":"node_modules/react/index.js","../components/ColHomeContain":"src/components/ColHomeContain.js","../../public/images/beers.png":"public/images/beers.png","../../public/images/random-beer.png":"public/images/random-beer.png","../../public/images/new-beer.png":"public/images/new-beer.png"}],"node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components/ColHomeContain":"src/components/ColHomeContain.js","../../public/images/beers.png":"public/images/beers.png","../../public/images/random-beer.png":"public/images/random-beer.png","../../public/images/new-beer.png":"public/images/new-beer.png"}],"node_modules/@babel/runtime/helpers/arrayWithHoles.js":[function(require,module,exports) {
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+module.exports = _arrayWithHoles;
+},{}],"node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":[function(require,module,exports) {
+function _iterableToArrayLimit(arr, i) {
+  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
+    return;
+  }
+
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+module.exports = _iterableToArrayLimit;
+},{}],"node_modules/@babel/runtime/helpers/nonIterableRest.js":[function(require,module,exports) {
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+}
+
+module.exports = _nonIterableRest;
+},{}],"node_modules/@babel/runtime/helpers/slicedToArray.js":[function(require,module,exports) {
+var arrayWithHoles = require("./arrayWithHoles");
+
+var iterableToArrayLimit = require("./iterableToArrayLimit");
+
+var nonIterableRest = require("./nonIterableRest");
+
+function _slicedToArray(arr, i) {
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
+}
+
+module.exports = _slicedToArray;
+},{"./arrayWithHoles":"node_modules/@babel/runtime/helpers/arrayWithHoles.js","./iterableToArrayLimit":"node_modules/@babel/runtime/helpers/iterableToArrayLimit.js","./nonIterableRest":"node_modules/@babel/runtime/helpers/nonIterableRest.js"}],"node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -37820,7 +37820,7 @@ module.exports = require('./lib/axios');
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.listAllBeers = void 0;
+exports.randomBeer = exports.listAllBeers = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 
@@ -37831,6 +37831,7 @@ var _axios = _interopRequireDefault(require("axios"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var url = "https://ih-beers-api2.herokuapp.com/beers";
+var urlRandom = "https://ih-beers-api2.herokuapp.com/beers/random";
 
 var listAllBeers = /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
@@ -37860,6 +37861,35 @@ var listAllBeers = /*#__PURE__*/function () {
 }();
 
 exports.listAllBeers = listAllBeers;
+
+var randomBeer = /*#__PURE__*/function () {
+  var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+    var res;
+    return _regenerator.default.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return _axios.default.get(urlRandom);
+
+          case 2:
+            res = _context2.sent;
+            return _context2.abrupt("return", res.data);
+
+          case 4:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function randomBeer() {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+exports.randomBeer = randomBeer;
 },{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","axios":"node_modules/axios/index.js"}],"src/contexto/beers.Context.js":[function(require,module,exports) {
 "use strict";
 
@@ -37884,6 +37914,7 @@ var BeersContext = (0, _react.createContext)();
 exports.BeersContext = BeersContext;
 
 var BeersContextProvider = function BeersContextProvider(props) {
+  //Obtenr todas las cervezas
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
       beers = _useState2[0],
@@ -37895,31 +37926,72 @@ var BeersContextProvider = function BeersContextProvider(props) {
     });
   };
 
+  (0, _react.useEffect)(function () {
+    fetchBeers();
+  }, []); //Obtener id cerveza
+
   var getBeers = function getBeers(code) {
     return beers.filter(function (beer) {
       return beer._id === code;
     })[0];
   };
 
-  (0, _react.useEffect)(function () {
-    fetchBeers();
-  }, []);
   return _react.default.createElement(BeersContext.Provider, {
     value: {
       beers: beers,
-      getBeers: getBeers
+      getBeers: getBeers,
+      randomBeer: _auth.randomBeer
     }
   }, props.children);
 };
 
 exports.BeersContextProvider = BeersContextProvider;
-},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","../../lib/auth.api":"lib/auth.api.js"}],"src/pages/Details.Page.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","../../lib/auth.api":"lib/auth.api.js"}],"lib/Loading.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Loading = void 0;
+
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100vw;\n  height: 100vh;\n  top: 0;\n  left: 0;\n  position: fixed;\n  z-index: 10000;\n  background: rgba(0, 0, 0, 0.85);\n  img {\n    width: 150px;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var LoadingWrapper = _styledComponents.default.div(_templateObject());
+
+var Loading = function Loading() {
+  return _react.default.createElement(LoadingWrapper, null, _react.default.createElement("img", {
+    src: "https://media.giphy.com/media/KKCuBooszlPG0/giphy.gif",
+    title: "Loading",
+    alt: "Loading"
+  }));
+};
+
+exports.Loading = Loading;
+},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/pages/Details.Page.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.DetailsPage = void 0;
+
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
 
@@ -37928,6 +38000,8 @@ var _react = _interopRequireWildcard(require("react"));
 var _beers = require("../contexto/beers.Context");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _Loading = require("../../lib/Loading");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -37949,10 +38023,22 @@ var DetailsContainer = _styledComponents.default.div(_templateObject());
 
 var DetailsPage = function DetailsPage(props) {
   var _useContext = (0, _react.useContext)(_beers.BeersContext),
-      getBeers = _useContext.getBeers;
+      getBeers = _useContext.getBeers,
+      randomBeer = _useContext.randomBeer;
 
-  var beerId = props.match.params.id;
+  var _useState = (0, _react.useState)({}),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      beerRandom = _useState2[0],
+      setBeerRandom = _useState2[1];
+
+  (0, _react.useEffect)(function () {
+    randomBeer().then(function (beerRandom) {
+      return setBeerRandom(beerRandom);
+    });
+  }, []);
+  var beerId = props.match.params.id || beerRandom._id;
   var beer = getBeers(beerId);
+  if (!beer) return _react.default.createElement(_Loading.Loading, null);
   return _react.default.createElement(DetailsContainer, null, _react.default.createElement("div", {
     className: "box-img"
   }, _react.default.createElement("img", {
@@ -37963,7 +38049,7 @@ var DetailsPage = function DetailsPage(props) {
 };
 
 exports.DetailsPage = DetailsPage;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","../contexto/beers.Context":"src/contexto/beers.Context.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/pages/New.Page.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","../contexto/beers.Context":"src/contexto/beers.Context.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../lib/Loading":"lib/Loading.js"}],"src/pages/New.Page.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37998,6 +38084,8 @@ var _beers = require("../contexto/beers.Context");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _Loading = require("../../lib/Loading");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -38020,6 +38108,7 @@ var ListPage = function ListPage() {
   var _useContext = (0, _react.useContext)(_beers.BeersContext),
       beers = _useContext.beers;
 
+  if (beers.length == 0) return _react.default.createElement(_Loading.Loading, null);
   return _react.default.createElement("ul", null, beers.map(function (beer, i) {
     return _react.default.createElement(BeersListItem, {
       key: i
@@ -38040,44 +38129,7 @@ var ListPage = function ListPage() {
 };
 
 exports.ListPage = ListPage;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../contexto/beers.Context":"src/contexto/beers.Context.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"lib/Loading.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Loading = void 0;
-
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
-
-var _react = _interopRequireDefault(require("react"));
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100vw;\n  height: 100vh;\n  position: absolute;\n  z-index: 10000;\n  background: rgba(0, 0, 0, 0.85);\n  img {\n    width: 150px;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-var LoadingWrapper = _styledComponents.default.div(_templateObject());
-
-var Loading = function Loading() {
-  return _react.default.createElement(LoadingWrapper, null, _react.default.createElement("img", {
-    src: "https://media.giphy.com/media/KKCuBooszlPG0/giphy.gif",
-    title: "Loading",
-    alt: "Loading"
-  }));
-};
-
-exports.Loading = Loading;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/App.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../contexto/beers.Context":"src/contexto/beers.Context.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","../../lib/Loading":"lib/Loading.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38085,9 +38137,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.App = void 0;
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
@@ -38105,26 +38155,10 @@ var _List = require("./pages/List.Page");
 
 var _beers = require("./contexto/beers.Context");
 
-var _Loading = require("../lib/Loading");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  var _useState = (0, _react.useState)(true),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isLoading = _useState2[0],
-      setLoading = _useState2[1];
-
-  (0, _react.useEffect)(function () {
-    setTimeout(function () {
-      setLoading(false);
-    }, 3000);
-  });
-  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_beers.BeersContextProvider, null, isLoading && _react.default.createElement(_Loading.Loading, null), !isLoading && _react.default.createElement(_layout.Layout, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_beers.BeersContextProvider, null, _react.default.createElement(_layout.Layout, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     path: "/",
     exact: true,
     component: function component() {
@@ -38137,6 +38171,10 @@ var App = function App() {
       return _react.default.createElement(_List.ListPage, null);
     }
   }), _react.default.createElement(_reactRouterDom.Route, {
+    path: "/random-beer",
+    exact: true,
+    component: _Details.DetailsPage
+  }), "} />", _react.default.createElement(_reactRouterDom.Route, {
     path: "/details-beer/:id",
     component: _Details.DetailsPage
   }), _react.default.createElement(_reactRouterDom.Route, {
@@ -38149,7 +38187,7 @@ var App = function App() {
 };
 
 exports.App = App;
-},{"@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./layout/layout":"src/layout/layout.js","../public/styles/reset.css":"public/styles/reset.css","./pages/Home.Page":"src/pages/Home.Page.js","./pages/Details.Page":"src/pages/Details.Page.js","./pages/New.Page":"src/pages/New.Page.js","./pages/List.Page":"src/pages/List.Page.js","./contexto/beers.Context":"src/contexto/beers.Context.js","../lib/Loading":"lib/Loading.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./layout/layout":"src/layout/layout.js","../public/styles/reset.css":"public/styles/reset.css","./pages/Home.Page":"src/pages/Home.Page.js","./pages/Details.Page":"src/pages/Details.Page.js","./pages/New.Page":"src/pages/New.Page.js","./pages/List.Page":"src/pages/List.Page.js","./contexto/beers.Context":"src/contexto/beers.Context.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -38193,7 +38231,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63004" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50298" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { BeersContext } from "../contexto/beers.Context";
 import styled from "styled-components";
+import { Loading } from "../../lib/Loading";
 
 const DetailsContainer = styled.div`
   align-items: center;
@@ -72,9 +73,18 @@ const DetailsContainer = styled.div`
 `;
 
 export const DetailsPage = props => {
-  const { getBeers } = useContext(BeersContext);
-  const beerId = props.match.params.id;
+  const { getBeers, randomBeer } = useContext(BeersContext);
+
+  const [beerRandom, setBeerRandom] = useState({});
+
+  useEffect(() => {
+    randomBeer().then(beerRandom => setBeerRandom(beerRandom));
+  }, []);
+
+  const beerId = props.match.params.id || beerRandom._id;
   const beer = getBeers(beerId);
+
+  if (!beer) return <Loading />;
 
   return (
     <DetailsContainer>

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BeersContext } from "../contexto/beers.Context";
 import styled from "styled-components";
+import { Loading } from "../../lib/Loading";
 
 const BeersListItem = styled.li`
   display: block;
@@ -70,6 +71,8 @@ const BeersListItem = styled.li`
 
 export const ListPage = () => {
   const { beers } = useContext(BeersContext);
+
+  if (beers.length == 0) return <Loading />;
 
   return (
     <ul>
