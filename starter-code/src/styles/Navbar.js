@@ -23,5 +23,14 @@ export const NavbarLinks = styled.div`
     &:hover {
       border-bottom: 0.1em solid #8bd3dd;
     }
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+  svg {
+    display: none;
+    @media (max-width: 425px) {
+      display: initial;
+    }
   }
 `;

@@ -1,7 +1,7 @@
 // dependencies
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Beer } from '@styled-icons/typicons';
+import { Beer, ThMenu } from '@styled-icons/typicons';
 
 // styled components
 import { Navbar, Title, NavbarLinks } from '../styles/Navbar';
@@ -39,6 +39,7 @@ export const Header = () => {
           >
             Add beer
           </NavLink>
+          <ThMenu size="30" />
         </NavbarLinks>
       </Navbar>
     </header>
