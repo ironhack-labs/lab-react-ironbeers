@@ -1,11 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Home } from "./pages/Home.Page";
 
-const App = () => <div>Iron Beers</div>;
-
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("root");
-  ReactDOM.render(<App />, root);
-});
+export const App = () => <div>ironbeers</div>;
 
 export default App;

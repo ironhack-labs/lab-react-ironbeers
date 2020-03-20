@@ -6,9 +6,15 @@
   "dependencies": {
     "parcel": "^1.12.4",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.0.1"
   },
   "scripts": {
     "start": "parcel index.html"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0"
   }
 }
