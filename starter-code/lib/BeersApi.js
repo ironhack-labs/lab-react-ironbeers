@@ -14,3 +14,8 @@ export const beerDetail = async id => {
   const res = await beersApi.get(`/beers/${id}`);
   return res.data;
 };
+
+export const randomBeer = async () => {
+  const res = await beersApi.get(`/beers/random`);
+  return res.data;
+};
