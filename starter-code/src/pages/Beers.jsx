@@ -16,7 +16,11 @@ const Beers = () => {
       {beers &&
         beers.map(beer => (
           <Link key={beer._id} to={`/beers/${beer._id}`}>
+<<<<<<< HEAD:starter-code/src/pages/Beers.jsx
             <BeerListItem {...beer} />
+=======
+            <BeerListItem {...beer} onClick={e => getBeers(`/beers/${beer._id}`)} />
+>>>>>>> b7fb0734861e05a0c44a7bfed304694f48628b2b:starter-code/src/pages/BeerList.jsx
           </Link>
         ))}
     </Section>
