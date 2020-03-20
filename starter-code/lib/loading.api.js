@@ -34,7 +34,7 @@ export const addBeer = async (
   attenuation_level,
   contributed_by
 ) => {
-  console.log("add Beer");
+  //console.log("add Beer");
   const res = await api.post("/beers/new", {
     name,
     tagline,
@@ -44,6 +44,11 @@ export const addBeer = async (
     attenuation_level,
     contributed_by
   });
-  console.log(res.data);
+  //console.log(res.data);
+  return res.data;
+};
+
+export const searchBeer = async q => {
+  const res = await api.get(`/beers/search?q=${q}`);
   return res.data;
 };

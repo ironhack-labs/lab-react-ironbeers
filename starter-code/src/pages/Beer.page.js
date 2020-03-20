@@ -5,6 +5,8 @@ import axios from "axios";
 import { BeerCard } from "../components/BeerCard";
 import styled from "styled-components";
 import { LoadingContext } from "../../lib/loading.api";
+import { Input } from "../components/Form.js";
+import { searchBeer } from "../../lib/loading.api.js";
 
 const Container = styled.div`
   width: 60%;
@@ -20,6 +22,7 @@ const api = axios.create({
 
 export const BeerPage = () => {
   const [beers, setBeers] = useState();
+  const [search, setSearch] = useState("");
   const { setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
@@ -32,10 +35,23 @@ export const BeerPage = () => {
     });
   }, [setLoading]);
 
+  const handleSearch = async q => {
+    setSearch(q);
+    const res = await searchBeer(q);
+    //console.log(res);
+    setBeers(res);
+  };
+
   //console.log(beers);
   return (
     <Layout>
       <Container>
+        <Input
+          type="text"
+          value={search}
+          placeholder="search a beer"
+          onChange={e => handleSearch(e.target.value)}
+        />
         {beers &&
           beers.map((e, i) => {
             return (
