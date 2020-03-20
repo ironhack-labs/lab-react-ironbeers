@@ -42,6 +42,12 @@ export const retrieveList = async () => {
   return data;
 };
 
+export const retrieveRandom = async () => {
+  const res = await api.get("/beers/random");
+  const data = res.data;
+  return data;
+};
+
 export const searchBeer = async q => {
   const res = await api.get(`/beers/search?q=${q}`);
   return res.data;
