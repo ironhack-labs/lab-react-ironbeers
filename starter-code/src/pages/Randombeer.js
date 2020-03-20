@@ -1,11 +1,13 @@
-import React from "react";
-import { Header } from "../layout/Header";
+import React, { useEffect, useState } from "react";
+import { randomBeer } from "../lib/beers.api";
+import { Beerdet } from "../components/BeerDet";
 
 export const Randombeer = () => {
-  return (
-    <>
-      <Header />
-      <p>hi I'm random beers page</p>
-    </>
-  );
+  const [beer, setBeer] = useState({});
+
+  useEffect(() => {
+    randomBeer().then(beer => setBeer(beer));
+  }, []);
+
+  return <Beerdet beer={beer} />;
 };

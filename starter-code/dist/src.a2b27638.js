@@ -48439,13 +48439,13 @@ const Beers = () => {
 };
 
 exports.Beers = Beers;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","../layout/Header":"src/layout/Header.js","../lib/beers.api":"src/lib/beers.api.js"}],"src/pages/Randombeer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-bootstrap":"node_modules/react-bootstrap/esm/index.js","../layout/Header":"src/layout/Header.js","../lib/beers.api":"src/lib/beers.api.js"}],"src/components/BeerDet.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Randombeer = void 0;
+exports.Beerdet = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -48453,12 +48453,60 @@ var _Header = require("../layout/Header");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+const Beerdet = props => {
+  const beer = props.beer;
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Header.Header, null), _react.default.createElement("div", null, _react.default.createElement("div", {
+    className: "div"
+  }, _react.default.createElement("div", {
+    className: "divImagen"
+  }, _react.default.createElement("img", {
+    className: "imagen",
+    src: beer.image_url,
+    alt: beer.name
+  })), _react.default.createElement("div", null, _react.default.createElement("div", {
+    className: "blockDetails"
+  }, _react.default.createElement("h3", null, beer.name), _react.default.createElement("h3", {
+    className: "colorGray"
+  }, beer.attenuation_level)), _react.default.createElement("div", {
+    className: "blockDetails"
+  }, _react.default.createElement("h3", {
+    className: "colorGray"
+  }, beer.tagline), _react.default.createElement("h3", null, _react.default.createElement("b", null, beer.first_brewed)))), _react.default.createElement("h4", null, beer.description), _react.default.createElement("h4", {
+    className: "colorGray"
+  }, beer.contributed_by))));
+};
+
+exports.Beerdet = Beerdet;
+},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/pages/Randombeer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Randombeer = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _beers = require("../lib/beers.api");
+
+var _BeerDet = require("../components/BeerDet");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 const Randombeer = () => {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Header.Header, null), _react.default.createElement("p", null, "hi I'm random beers page"));
+  const [beer, setBeer] = (0, _react.useState)({});
+  (0, _react.useEffect)(() => {
+    (0, _beers.randomBeer)().then(beer => setBeer(beer));
+  }, []);
+  return _react.default.createElement(_BeerDet.Beerdet, {
+    beer: beer
+  });
 };
 
 exports.Randombeer = Randombeer;
-},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/pages/Newbeer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../lib/beers.api":"src/lib/beers.api.js","../components/BeerDet":"src/components/BeerDet.js"}],"src/pages/Newbeer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48477,43 +48525,7 @@ const Newbeer = () => {
 };
 
 exports.Newbeer = Newbeer;
-},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/components/BeerDet.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Beerdet = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const Beerdet = props => {
-  const beer = props.beer;
-  return _react.default.createElement("div", null, _react.default.createElement("div", {
-    className: "div"
-  }, _react.default.createElement("div", {
-    className: "divImagen"
-  }, _react.default.createElement("img", {
-    className: "imagen",
-    src: beer.image_url,
-    alt: beer.name
-  })), _react.default.createElement("div", null, _react.default.createElement("div", {
-    className: "blockDetails"
-  }, _react.default.createElement("h3", null, beer.name), _react.default.createElement("h3", {
-    className: "colorGray"
-  }, beer.attenuation_level)), _react.default.createElement("div", {
-    className: "blockDetails"
-  }, _react.default.createElement("h3", {
-    className: "colorGray"
-  }, beer.tagline), _react.default.createElement("h3", null, _react.default.createElement("b", null, beer.first_brewed)))), _react.default.createElement("h4", null, beer.description), _react.default.createElement("h4", {
-    className: "colorGray"
-  }, beer.contributed_by)));
-};
-
-exports.Beerdet = Beerdet;
-},{"react":"node_modules/react/index.js"}],"src/pages/BeersInfo.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/pages/BeersInfo.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
