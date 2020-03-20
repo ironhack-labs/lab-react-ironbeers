@@ -14,3 +14,8 @@ export const flechSingleBeer = async id => {
   const response = await instance.get(`/beers/${id}`);
   return response.data;
 };
+
+export const flechRandomBeer = async () => {
+  const response = await instance.get(`/beers/random`);
+  return response.data;
+};
