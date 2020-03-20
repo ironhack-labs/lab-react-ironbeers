@@ -15,6 +15,21 @@ export const getBeer = async (id) => {
 
 export const getRandomBeer = async (id) => {
   const res = await service.get('/random');
-  console.log("RandomBeer " + res.data.name);
+  return res.data;
+}
+
+export const addBeer = async (beer) => {
+  const {name, tagline, attenuation_level, first_brewed, description, contributed_by } = beer;
+
+  const res = await service.post('/new', {
+    name, 
+    tagline, 
+    attenuation_level, 
+    first_brewed, 
+    description, 
+    contributed_by
+  });
+
+  console.log("New Beer " + res);
   return res.data;
 }
