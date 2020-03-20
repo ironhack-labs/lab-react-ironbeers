@@ -5,7 +5,7 @@ body {
 }
 .root {
   margin: auto;
-  width: 100vh;
+  width: 100vw;
 }
 .main-container div {
   width: 375px;
@@ -19,6 +19,9 @@ body {
 }
 .beer-img {
   height: 100%;
+}
+.beer-card {
+  height: 100vh;
 }
 .card-body {
   width: 85%;
