@@ -12,7 +12,7 @@ const BeerDetail = props => {
   }, []);
 
   console.log("url", url);
-  return <Section url={"/beers"}>{beer && <BeerCard {...{ ...beer }} />}</Section>;
+  return <Section url={url === "random" ? "/" : "/beers"}>{beer && <BeerCard {...{ ...beer }} />}</Section>;
 };
 
 export default BeerDetail;
