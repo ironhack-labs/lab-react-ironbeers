@@ -5,7 +5,6 @@ export const Form = styled.form`
   justify-content: center;
   flex-wrap: wrap;
   padding: 3.5em;
-  color: #172c66;
   div {
     display: flex;
     margin: 1em;
@@ -22,7 +21,6 @@ export const Form = styled.form`
     justify-content: center;
     button {
       border: 0.1em solid #f582ae;
-      color: #172c66;
       padding: 0.5em 1em;
       font-size: 1.2rem;
       cursor: pointer;

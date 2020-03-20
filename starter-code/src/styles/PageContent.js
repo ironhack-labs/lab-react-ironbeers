@@ -15,12 +15,11 @@ export const Card = styled.div`
   margin: 2em 1em;
   div.content {
     padding: 1em;
-    color: #001858;
   }
   a {
     font-size: 1.5rem;
     text-decoration: none;
-    color: #001858;
+    border-bottom: 0.1em solid #8bd3dd;
   }
   @media (max-width: 1024px) {
     width: 40%;
@@ -44,7 +43,6 @@ export const BeerCard = styled(Card)`
   height: fit-content;
   div {
     padding: 1em;
-    color: #001858;
   }
   span {
     font-weight: 700;
@@ -73,7 +71,6 @@ export const BeerDetailCard = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2em;
-  color: #172c66;
   width: 70%;
   margin: 0 auto;
   h3 {
@@ -101,7 +98,6 @@ export const BeerDetailCard = styled.div`
     border: 0.1em solid #f582ae;
     border-radius: 1em;
     text-decoration: none;
-    color: #172c66;
     padding: 0.5em 1em;
     &:hover {
       background-color: #f582ae;

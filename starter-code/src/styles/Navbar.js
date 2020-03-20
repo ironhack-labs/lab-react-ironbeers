@@ -9,7 +9,6 @@ export const Navbar = styled.nav`
   a {
     margin-right: 2em;
     text-decoration: none;
-    color: #172c66;
   }
 `;
 

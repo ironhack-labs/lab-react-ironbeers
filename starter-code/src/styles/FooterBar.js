@@ -7,7 +7,6 @@ export const FooterBar = styled.footer`
   padding: 1em;
   background: #f7e0d4;
   font-size: 0.8rem;
-  color: #172c66;
   a:visited {
     color: #172c66;
   }

@@ -14,6 +14,7 @@ import { Input } from '../styles/Form';
 
 export const BeersList = () => {
   const [beers, setBeers] = useState([]);
+  const [isSearching, setSearch] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const url = 'https://ih-beers-api2.herokuapp.com/beers';
@@ -24,10 +25,13 @@ export const BeersList = () => {
   }, []);
 
   const handleSearch = async e => {
+    e.persist();
+    const { value } = e.target;
     const { data } = await axios.get(
-      `https://ih-beers-api2.herokuapp.com/beers/search?q=${e.target.value}`
+      `https://ih-beers-api2.herokuapp.com/beers/search?q=${value}`
     );
     console.log('search result ', data);
+    value ? setSearch(true) : setSearch(false);
     setBeers(data);
   };
 
@@ -43,8 +47,10 @@ export const BeersList = () => {
         />
       </InputContainer>
       <Container>
-        {beers.length === 0 ? (
+        {beers.length === 0 && !isSearching ? (
           <p>Loading...</p>
+        ) : beers.length === 0 && isSearching ? (
+          <p>No results found, try again</p>
         ) : (
           beers.map((beer, i) => {
             return (
