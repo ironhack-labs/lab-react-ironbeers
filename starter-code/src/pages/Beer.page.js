@@ -38,11 +38,9 @@ export const BeerPage = () => {
   const handleSearch = async q => {
     setSearch(q);
     const res = await searchBeer(q);
-    //console.log(res);
     setBeers(res);
   };
 
-  //console.log(beers);
   return (
     <Layout>
       <Container>

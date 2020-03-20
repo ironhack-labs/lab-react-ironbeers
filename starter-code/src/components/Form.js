@@ -62,31 +62,31 @@ export const CreateBeerForm = ({ handleSubmit }) => {
       <Input
         type="text"
         value={name}
-        placeholder="name"
+        placeholder="Name"
         onChange={e => setName(e.target.value)}
       />
       <Input
         type="text"
         value={tagline}
-        placeholder="tagline"
+        placeholder="Tagline"
         onChange={e => setTagline(e.target.value)}
       />
       <Input
         type="text"
         value={description}
-        placeholder="description"
+        placeholder="Description"
         onChange={e => setDescription(e.target.value)}
       />
       <Input
         type="text"
         value={first_brewed}
-        placeholder="brewedAt"
+        placeholder="First batch brewed at..."
         onChange={e => setBrewedAt(e.target.value)}
       />
       <Input
         type="text"
         value={brewers_tips}
-        placeholder="tips"
+        placeholder="Brewers tips"
         onChange={e => setTips(e.target.value)}
       />
       <Input
@@ -99,12 +99,10 @@ export const CreateBeerForm = ({ handleSubmit }) => {
       <Input
         type="text"
         value={contributed_by}
-        placeholder="contributor"
+        placeholder="Contributed by"
         onChange={e => setContributor(e.target.value)}
       />
-      <Button type="submit" className="btn btn-primary">
-        Submit
-      </Button>
+      <Button type="submit">Submit</Button>
     </Form>
   );
 };

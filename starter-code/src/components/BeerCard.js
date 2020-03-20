@@ -68,7 +68,9 @@ export const BeerCard = props => {
       <Wrapper>
         <h4>{props.name}</h4>
         <SubTitle>{props.tagline}</SubTitle>
-        <Imperative>{props.contributed_by}</Imperative>
+        <Imperative>
+          <b>Contributor:</b> {props.contributed_by}
+        </Imperative>
       </Wrapper>
     </Container>
   );

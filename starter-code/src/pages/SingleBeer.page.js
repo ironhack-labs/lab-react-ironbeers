@@ -32,7 +32,7 @@ export const SingleBeer = props => {
     setLoading(true);
     api.get(`/beers/${id}`).then(res => {
       const data = res.data;
-      console.log(data);
+      //console.log(data);
       setLoading(false);
       setBeer(data);
     });
