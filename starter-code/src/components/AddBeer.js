@@ -22,6 +22,17 @@ export const AddBeer = () => {
     e.preventDefault();
     addNewBeer(beer);
     console.log('added new beer ', beer);
+
+    // clear inputs after submit
+    setNewBeer({
+      name: '',
+      tagline: '',
+      description: '',
+      first_brewed: '',
+      brewers_tips: '',
+      attenuation_level: '',
+      contributed_by: ''
+    });
   };
 
   return (
