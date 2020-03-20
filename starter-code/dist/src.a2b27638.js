@@ -36238,279 +36238,7 @@ var Cards = _styledComponents.default.div(_templateObject());
 
 var _default = Cards;
 exports.default = _default;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/Beers.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-require("bootstrap/dist/css/bootstrap.min.css");
-
-var _Navbar = _interopRequireDefault(require("./components/Navbar"));
-
-var _useFetch2 = _interopRequireDefault(require("./components/hooks/useFetch"));
-
-var _AllBeers = _interopRequireDefault(require("./components/UI/AllBeers"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Beers = function Beers() {
-  var _useFetch = (0, _useFetch2.default)("https://ih-beers-api2.herokuapp.com/beers"),
-      data = _useFetch.data,
-      loading = _useFetch.loading;
-
-  if (loading) {
-    return _react.default.createElement(_AllBeers.default, null, "Cargando las de cervezas...");
-  }
-
-  return _react.default.createElement(_AllBeers.default, null, _react.default.createElement(_Navbar.default, null), data.map(function (beer) {
-    return _react.default.createElement(_react.default.Fragment, {
-      key: beer._id
-    }, _react.default.createElement("div", {
-      className: "card",
-      style: {
-        width: "24rem",
-        height: "11rem"
-      }
-    }, _react.default.createElement(_reactRouterDom.BrowserRouter, {
-      to: "/beer-detail/".concat(beer._id),
-      key: beer.i,
-      style: {
-        textDecoration: "none"
-      }
-    }, _react.default.createElement("div", {
-      className: "row no-gutters"
-    }, _react.default.createElement("div", {
-      className: "col-md-4"
-    }, _react.default.createElement("img", {
-      style: {
-        width: "40px",
-        height: "7rem"
-      },
-      src: beer.image_url,
-      className: "card-img mt-4 ml-4",
-      alt: "Beer Picture"
-    })), _react.default.createElement("div", {
-      className: "col-md-8",
-      key: beer.i
-    }, _react.default.createElement("div", {
-      className: "card-body"
-    }, _react.default.createElement("h5", {
-      className: "card-title"
-    }, beer.name), _react.default.createElement("p", {
-      className: "card-text",
-      style: {
-        maxHeight: "12rem",
-        overflow: "hidden",
-        texOverflow: "ellipsis"
-      }
-    }, beer.tagline), _react.default.createElement("p", {
-      className: "card-text"
-    }, _react.default.createElement("small", {
-      className: "text-muted"
-    }, beer.contributed_by))))))));
-  }));
-};
-
-var _default = Beers;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","./components/Navbar":"src/components/Navbar.js","./components/hooks/useFetch":"src/components/hooks/useFetch.js","./components/UI/AllBeers":"src/components/UI/AllBeers.js"}],"public/images/new-beer.png":[function(require,module,exports) {
-module.exports = "/new-beer.0e92cd9b.png";
-},{}],"src/NewBeer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _newBeer = _interopRequireDefault(require("../public/images/new-beer.png"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var NewBeer = function NewBeer() {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "card",
-    style: {
-      width: "24rem"
-    }
-  }, _react.default.createElement("img", {
-    src: _newBeer.default,
-    className: "card-img-top",
-    alt: "NewBeerPicture"
-  }), _react.default.createElement("div", {
-    className: "card-body"
-  }, _react.default.createElement("h2", {
-    className: "card-title",
-    style: {
-      color: "black"
-    }
-  }, "New Beer"), _react.default.createElement("p", {
-    className: "card-text",
-    style: {
-      color: "grey"
-    }
-  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex necessitatibus laudantium aliquam assumenda eaque nostrum enim"))));
-};
-
-var _default = NewBeer;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../public/images/new-beer.png":"public/images/new-beer.png"}],"public/images/beers.png":[function(require,module,exports) {
-module.exports = "/beers.ffc5675d.png";
-},{}],"src/components/CardBeers.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _beers = _interopRequireDefault(require("../../public/images/beers.png"));
-
-require("bootstrap/dist/css/bootstrap.min.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var CardBeers = function CardBeers() {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    className: "card",
-    style: {
-      width: "24rem"
-    }
-  }, _react.default.createElement("img", {
-    src: _beers.default,
-    className: "card-img-top",
-    alt: "BeersPicture"
-  }), _react.default.createElement("div", {
-    className: "card-body"
-  }, _react.default.createElement("h2", {
-    className: "card-title",
-    style: {
-      color: "black"
-    }
-  }, "All Beers"), _react.default.createElement("p", {
-    className: "card-text",
-    style: {
-      color: "grey"
-    }
-  }, "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus et veritatis consectetur quidem qui. Eius facilis odit assumenda dolore"))));
-};
-
-var _default = CardBeers;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../../public/images/beers.png":"public/images/beers.png","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"public/images/random-beer.png":[function(require,module,exports) {
-module.exports = "/random-beer.d42a50af.png";
-},{}],"src/components/CardRandomBeer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _randomBeer = _interopRequireDefault(require("../../public/images/random-beer.png"));
-
-require("bootstrap/dist/css/bootstrap.min.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var CardRandomBeer = function CardRandomBeer() {
-  return _react.default.createElement("div", {
-    className: "card",
-    style: {
-      width: "24rem"
-    }
-  }, _react.default.createElement("img", {
-    src: _randomBeer.default,
-    className: "card-img-top",
-    alt: "RandomBeerPicture"
-  }), _react.default.createElement("div", {
-    className: "card-body"
-  }, _react.default.createElement("h2", {
-    className: "card-title",
-    style: {
-      color: "black"
-    }
-  }, "Random Beer"), _react.default.createElement("p", {
-    className: "card-text",
-    style: {
-      color: "grey"
-    }
-  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex necessitatibus laudantium aliquam assumenda eaque nostrum enim")));
-};
-
-var _default = CardRandomBeer;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../../public/images/random-beer.png":"public/images/random-beer.png","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"src/components/LinksBeers.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
-
-var _react = _interopRequireDefault(require("react"));
-
-var _CardBeers = _interopRequireDefault(require("./CardBeers"));
-
-var _CardRandomBeer = _interopRequireDefault(require("./CardRandomBeer"));
-
-var _NewBeer = _interopRequireDefault(require("../NewBeer"));
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-var _reactRouterDom = require("react-router-dom");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: flex;\n  justify-content: center;\n  margin-top: 3em;\n  flex-direction: column-reverse;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-var Container = _styledComponents.default.div(_templateObject());
-
-var LinksBeers = function LinksBeers() {
-  return _react.default.createElement(Container, null, _react.default.createElement("nav", null, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/beers",
-    style: {
-      textDecoration: "none"
-    }
-  }, _react.default.createElement(_CardBeers.default, null)), _react.default.createElement(_reactRouterDom.Link, {
-    to: "/random-beer",
-    style: {
-      textDecoration: "none"
-    }
-  }, _react.default.createElement(_CardRandomBeer.default, null)), _react.default.createElement(_reactRouterDom.Link, {
-    to: "/new-beer",
-    style: {
-      textDecoration: "none"
-    }
-  }, _react.default.createElement(_NewBeer.default, null))));
-};
-
-var _default = LinksBeers;
-exports.default = _default;
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","./CardBeers":"src/components/CardBeers.js","./CardRandomBeer":"src/components/CardRandomBeer.js","../NewBeer":"src/NewBeer.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -38064,7 +37792,377 @@ module.exports.default = axios;
 
 },{"./utils":"node_modules/axios/lib/utils.js","./helpers/bind":"node_modules/axios/lib/helpers/bind.js","./core/Axios":"node_modules/axios/lib/core/Axios.js","./core/mergeConfig":"node_modules/axios/lib/core/mergeConfig.js","./defaults":"node_modules/axios/lib/defaults.js","./cancel/Cancel":"node_modules/axios/lib/cancel/Cancel.js","./cancel/CancelToken":"node_modules/axios/lib/cancel/CancelToken.js","./cancel/isCancel":"node_modules/axios/lib/cancel/isCancel.js","./helpers/spread":"node_modules/axios/lib/helpers/spread.js"}],"node_modules/axios/index.js":[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"src/pages/BeerDetail.js":[function(require,module,exports) {
+},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"src/components/GetBeer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _axios = _interopRequireDefault(require("axios"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AllBeer = function AllBeer() {
+  var _useState = (0, _react.useState)([]),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      beer = _useState2[0],
+      setBeer = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(""),
+      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
+      search = _useState4[0],
+      setSearch = _useState4[1];
+
+  var beers = /*#__PURE__*/function () {
+    var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+      var res;
+      return _regenerator.default.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return _axios.default.get("https://ih-beers-api2.herokuapp.com/beers/");
+
+            case 2:
+              res = _context.sent;
+              return _context.abrupt("return", res.data);
+
+            case 4:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function beers() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  (0, _react.useEffect)(function () {
+    beers().then(function (beer) {
+      return setBeer(beer);
+    });
+    console.log(beer);
+  }, []);
+
+  var searchBeers = /*#__PURE__*/function () {
+    var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2(query) {
+      var response;
+      return _regenerator.default.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return _axios.default.get("https://ih-beers-api2.herokuapp.com/beers/search?q=".concat(query));
+
+            case 2:
+              response = _context2.sent;
+              return _context2.abrupt("return", response.data);
+
+            case 4:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function searchBeers(_x) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var handleSearch = function handleSearch(e) {
+    var query = e.target.value;
+    searchBeers(query).then(function (beer) {
+      return setBeer(beer);
+    });
+    setSearch(query);
+  };
+
+  if (!beer[0] && !search) return _react.default.createElement("p", null, "Loading...");
+  return _react.default.createElement("div", {
+    style: {
+      width: "24rem"
+    }
+  }, _react.default.createElement("form", {
+    onSubmit: function onSubmit(e) {
+      return e.preventDefault();
+    }
+  }, _react.default.createElement("input", {
+    className: "search",
+    name: "search",
+    placeholder: "Search a beer",
+    value: search,
+    onChange: handleSearch
+  })), beer.map(function (beer) {
+    return _react.default.createElement("div", {
+      key: beer._id,
+      className: "prueba"
+    }, _react.default.createElement(_reactRouterDom.Link, {
+      className: "link",
+      to: "/beer/".concat(beer._id),
+      key: beer.i
+    }, _react.default.createElement("img", {
+      style: {
+        width: "60px",
+        height: "100px"
+      },
+      src: beer.image_url,
+      alt: beer.name
+    }), _react.default.createElement("h3", null, "Name: ".concat(beer.name)), _react.default.createElement("p", null, "Tagline: ".concat(beer.tagline)), _react.default.createElement("p", null, "Contributed By: ".concat(beer.contributed_by)), _react.default.createElement("hr", null)));
+  }));
+};
+
+var _default = AllBeer;
+exports.default = _default;
+},{"@babel/runtime/regenerator":"node_modules/@babel/runtime/regenerator/index.js","@babel/runtime/helpers/asyncToGenerator":"node_modules/@babel/runtime/helpers/asyncToGenerator.js","@babel/runtime/helpers/slicedToArray":"node_modules/@babel/runtime/helpers/slicedToArray.js","react":"node_modules/react/index.js","axios":"node_modules/axios/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/Beers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+require("bootstrap/dist/css/bootstrap.min.css");
+
+var _Navbar = _interopRequireDefault(require("./components/Navbar"));
+
+var _useFetch2 = _interopRequireDefault(require("./components/hooks/useFetch"));
+
+var _AllBeers = _interopRequireDefault(require("./components/UI/AllBeers"));
+
+var _GetBeer = _interopRequireDefault(require("../src/components/GetBeer"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Beers = function Beers() {
+  var _useFetch = (0, _useFetch2.default)("https://ih-beers-api2.herokuapp.com/beers"),
+      data = _useFetch.data,
+      loading = _useFetch.loading;
+
+  if (loading) {
+    return _react.default.createElement(_AllBeers.default, null, "Cargando las de cervezas...");
+  }
+
+  return _react.default.createElement(_AllBeers.default, null, _react.default.createElement(_Navbar.default, null), _react.default.createElement(_GetBeer.default, null));
+};
+
+var _default = Beers;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","./components/Navbar":"src/components/Navbar.js","./components/hooks/useFetch":"src/components/hooks/useFetch.js","./components/UI/AllBeers":"src/components/UI/AllBeers.js","../src/components/GetBeer":"src/components/GetBeer.js"}],"public/images/new-beer.png":[function(require,module,exports) {
+module.exports = "/new-beer.0e92cd9b.png";
+},{}],"src/NewBeer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _newBeer = _interopRequireDefault(require("../public/images/new-beer.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var NewBeer = function NewBeer() {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+    className: "card",
+    style: {
+      width: "24rem"
+    }
+  }, _react.default.createElement("img", {
+    src: _newBeer.default,
+    className: "card-img-top",
+    alt: "NewBeerPicture"
+  }), _react.default.createElement("div", {
+    className: "card-body"
+  }, _react.default.createElement("h2", {
+    className: "card-title",
+    style: {
+      color: "black"
+    }
+  }, "New Beer"), _react.default.createElement("p", {
+    className: "card-text",
+    style: {
+      color: "grey"
+    }
+  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex necessitatibus laudantium aliquam assumenda eaque nostrum enim"))));
+};
+
+var _default = NewBeer;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../public/images/new-beer.png":"public/images/new-beer.png"}],"public/images/beers.png":[function(require,module,exports) {
+module.exports = "/beers.ffc5675d.png";
+},{}],"src/components/CardBeers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _beers = _interopRequireDefault(require("../../public/images/beers.png"));
+
+require("bootstrap/dist/css/bootstrap.min.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CardBeers = function CardBeers() {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+    className: "card",
+    style: {
+      width: "24rem"
+    }
+  }, _react.default.createElement("img", {
+    src: _beers.default,
+    className: "card-img-top",
+    alt: "BeersPicture"
+  }), _react.default.createElement("div", {
+    className: "card-body"
+  }, _react.default.createElement("h2", {
+    className: "card-title",
+    style: {
+      color: "black"
+    }
+  }, "All Beers"), _react.default.createElement("p", {
+    className: "card-text",
+    style: {
+      color: "grey"
+    }
+  }, "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus et veritatis consectetur quidem qui. Eius facilis odit assumenda dolore"))));
+};
+
+var _default = CardBeers;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../public/images/beers.png":"public/images/beers.png","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"public/images/random-beer.png":[function(require,module,exports) {
+module.exports = "/random-beer.d42a50af.png";
+},{}],"src/components/CardRandomBeer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _randomBeer = _interopRequireDefault(require("../../public/images/random-beer.png"));
+
+require("bootstrap/dist/css/bootstrap.min.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CardRandomBeer = function CardRandomBeer() {
+  return _react.default.createElement("div", {
+    className: "card",
+    style: {
+      width: "24rem"
+    }
+  }, _react.default.createElement("img", {
+    src: _randomBeer.default,
+    className: "card-img-top",
+    alt: "RandomBeerPicture"
+  }), _react.default.createElement("div", {
+    className: "card-body"
+  }, _react.default.createElement("h2", {
+    className: "card-title",
+    style: {
+      color: "black"
+    }
+  }, "Random Beer"), _react.default.createElement("p", {
+    className: "card-text",
+    style: {
+      color: "grey"
+    }
+  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex necessitatibus laudantium aliquam assumenda eaque nostrum enim")));
+};
+
+var _default = CardRandomBeer;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../public/images/random-beer.png":"public/images/random-beer.png","bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css"}],"src/components/LinksBeers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _CardBeers = _interopRequireDefault(require("./CardBeers"));
+
+var _CardRandomBeer = _interopRequireDefault(require("./CardRandomBeer"));
+
+var _NewBeer = _interopRequireDefault(require("../NewBeer"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  display: flex;\n  justify-content: center;\n  margin-top: 3em;\n  flex-direction: column-reverse;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var Container = _styledComponents.default.div(_templateObject());
+
+var LinksBeers = function LinksBeers() {
+  return _react.default.createElement(Container, null, _react.default.createElement("nav", null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/beers",
+    style: {
+      textDecoration: "none"
+    }
+  }, _react.default.createElement(_CardBeers.default, null)), _react.default.createElement(_reactRouterDom.Link, {
+    to: "/random-beer",
+    style: {
+      textDecoration: "none"
+    }
+  }, _react.default.createElement(_CardRandomBeer.default, null)), _react.default.createElement(_reactRouterDom.Link, {
+    to: "/new-beer",
+    style: {
+      textDecoration: "none"
+    }
+  }, _react.default.createElement(_NewBeer.default, null))));
+};
+
+var _default = LinksBeers;
+exports.default = _default;
+},{"@babel/runtime/helpers/taggedTemplateLiteral":"node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","react":"node_modules/react/index.js","./CardBeers":"src/components/CardBeers.js","./CardRandomBeer":"src/components/CardRandomBeer.js","../NewBeer":"src/NewBeer.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/pages/BeerDetail.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38861,7 +38959,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58442" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61749" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
