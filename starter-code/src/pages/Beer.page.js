@@ -5,6 +5,7 @@ import { BeerCard } from "../components/BeerCard";
 import styled from "styled-components";
 import { LoadingContext } from "../../lib/loading.api";
 import { searchBeer, retrieveList } from "../../lib/loading.api.js";
+import { Suggestions } from "../components/Suggestion";
 
 const Container = styled.div`
   width: 60%;
@@ -29,9 +30,29 @@ const Input = styled.input`
   }
 `;
 
+const ListContainer = styled.div`
+  position: relative;
+  margin: 0;
+  width: 100%;
+`;
+
+const List = styled.ul`
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  top: 29px;
+  left: 0;
+  background-color: rgba(215, 201, 170, 0.7);
+  z-index: 10;
+  list-style: none;
+  text-align: center;
+`;
+
 export const BeerPage = () => {
   const [beers, setBeers] = useState();
   const [search, setSearch] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+
   const { setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
@@ -46,18 +67,33 @@ export const BeerPage = () => {
   const handleSearch = async q => {
     setSearch(q);
     const res = await searchBeer(q);
-    setBeers(res);
+    if (q) {
+      setSuggestions(res);
+    } else {
+      setSuggestions([]);
+    }
+    // this is for updating the beer list directly
+    //setBeers(res);
   };
-
   return (
     <Layout>
       <Container>
-        <Input
-          type="text"
-          value={search}
-          placeholder="Type a beer name..."
-          onChange={e => handleSearch(e.target.value)}
-        />
+        <ListContainer>
+          <Input
+            type="text"
+            value={search}
+            placeholder="Type a beer name..."
+            onChange={e => handleSearch(e.target.value)}
+          />
+
+          <List>
+            {suggestions &&
+              suggestions.map((e, i) => {
+                return <Suggestions key={i} {...e} />;
+              })}
+          </List>
+        </ListContainer>
+
         {beers &&
           beers.map((e, i) => {
             return (
