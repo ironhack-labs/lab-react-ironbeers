@@ -7,7 +7,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
     return(
     <header>
-        <FontAwesomeIcon icon={faHome} className="icon" />
+        <Link to="/"><FontAwesomeIcon icon={faHome} className="icon" /></Link>
     </header> 
     ) 
 }
