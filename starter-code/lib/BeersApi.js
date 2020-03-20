@@ -6,7 +6,7 @@ const beersApi = axios.create({
 });
 
 export const beersList = async () => {
-  const res = await beersApi.get("/beers");
+  const res = await beersApi.get(`/beers`);
   return res.data;
 };
 
@@ -20,7 +20,7 @@ export const randomBeer = async () => {
   return res.data;
 };
 
-export const newBeer = async data => {
+export const createBeer = async data => {
   const res = await beersApi.post(`/beers/new`, data);
   return res.data;
 };
