@@ -10,5 +10,10 @@ export const getBeerById = async (beerId) => {
     return res.data;
 }
 
+export const getRandomBeer = async () => {
+    const res = await axios.get("https://ih-beers-api2.herokuapp.com/beers/random");
+    return res.data;
+}
+
 
 export default getBeers;
