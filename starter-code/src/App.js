@@ -16,7 +16,7 @@ import { NewBeer } from './pages/NewBeer';
 export const App = () => {
 
     return (
-        <Router>
+        <Router onUpdate={() => window.scrollTo(0, 0)} >
             <Layout>
                 <Switch>
                     <Route path="/" exact component={() => <Home />} />

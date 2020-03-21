@@ -10,7 +10,7 @@ export const BeerDetails = ({ random }) => {
         random ?
             getRandomBeer().then(res => setBeer(res)) :
             getBeer(beerId).then(res => setBeer(res));
-    }, []);
+    }, [beerId, random]);
 
     return (
         <>

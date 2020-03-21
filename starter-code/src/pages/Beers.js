@@ -1,19 +1,30 @@
 import React, { useState, useEffect } from 'react';
 
 // Service
-import { getAllBeers } from "../service";
+import { getAllBeers, searchBeer } from "../service";
 
 // Components
 import { BeerCard } from '../components/Beer';
 
 export const Beers = () => {
-    const [beers, setBeer] = useState();
+    const [beers, setBeers] = useState();
+    const [filter, setFilter] = useState('');
+
     useEffect(() => {
-        getAllBeers().then(res => { setBeer(res) })
+        getAllBeers().then(res => { setBeers(res) })
     }, []);
+
+    const handleFilter = (e) => {
+        setFilter(e.target.value);
+        searchBeer(e.target.value).then(res => { setBeers(res) })
+    }
 
     return (
         <>
+            <div className="form-group mt-4">
+                <input type="text" className="form-control" placeholder="Search by beer name..." value={filter} onChange={e => handleFilter(e)} required />
+            </div>
+
             {beers && beers.map((beer, i) => {
                 return (
                     <BeerCard
