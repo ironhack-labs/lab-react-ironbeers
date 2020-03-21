@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 
 const BtnDecoration = styled(Link)`
-  position: absolute;
+  position: fixed;
   background: url("https://www.cervezaslavirgen.com/wp-content/uploads/2017/12/vaso_peque2.jpg");
   background-size: cover;
   width: 50px;
