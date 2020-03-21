@@ -19,3 +19,8 @@ export const flechRandomBeer = async () => {
   const response = await instance.get(`/beers/random`);
   return response.data;
 };
+
+export const addNewBeer = async data => {
+  const response = await instance.post(`/beers/new`, data);
+  return response.data;
+};
