@@ -21,6 +21,7 @@ export const App = () => {
                     <Route path="/" exact component={() => <Home />} />
                     <Route path="/beers/:beerId" component={() => <BeerDetails />} />
                     <Route path="/beers" component={() => <Beers />} />
+                    <Route path="/random-beer" component={() => <BeerDetails random={true} />} />
                 </Switch>
             </Layout>
         </Router>
