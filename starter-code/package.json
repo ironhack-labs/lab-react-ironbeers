@@ -1,31 +1,27 @@
 {
-  "name": "ironbeers",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.2"
-  },
+  "name": "starter-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "components": "^0.1.0",
+    "parcel": "^1.12.4",
+    "react": "^16.13.0",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.0.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.8.3"
   }
 }
