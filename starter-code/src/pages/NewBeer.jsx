@@ -10,6 +10,7 @@ const NewBeer = withRouter(({ history }) => {
   const handleSubmit = e => {
     e.preventDefault();
     const data = { ...state };
+    data.attenuation_level = Number(data.attenuation_level);
     addBeer(data).then(e => {
       setState(initialState);
       history.push("/");
