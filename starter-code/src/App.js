@@ -1,9 +1,10 @@
 import React from 'react'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Home from "./components/home"
-//import Beers from "./components/beers"
 import HomeBtn from "./components/ui/homeButton"
+import Beers from "./components/beers"
+import Home from "./components/Home"
 
 const App = () => {
 
@@ -14,7 +15,7 @@ const App = () => {
 
         <Switch>
           <Route path="/" exact component={Home} />
-          {/* <Route path="/beers" component={Beers} /> */}
+          <Route path="/beers" component={Beers} />
         </Switch>
 
       </Router>
