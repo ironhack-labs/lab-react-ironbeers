@@ -1,4 +1,9 @@
 export const formatContributor = (contributor) => {
-  return contributor !== undefined ? contributor.substring(0, contributor.indexOf('<') -2) : '';
+  console.log("Contribuyente " + contributor);
+  return contributor !== undefined 
+  ? (contributor.indexOf('<') === -1) 
+  ? contributor 
+  : contributor.substring(0, contributor.indexOf('<') -2) 
+  : '';
 };
 

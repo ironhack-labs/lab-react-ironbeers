@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import Header from './../components/Header';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 import {addBeer} from './../services/beerService';
 
 
@@ -29,24 +32,51 @@ const NewBeerPage = () => {
   return(
     <div>
       <Header/>
+      <br/>
+      <Container style={{textAlign: 'left'}}>
+        <Form onSubmit={handleSubmit} >
+          <Form.Group controlId="name">
+            <Form.Label>Name</Form.Label>
+            <Form.Control type="text" placeholder="Name of beer" value={name} onChange={(e) => setName(e.target.value)}/>
+          </Form.Group>
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='name'>Name</label>
-        <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)}></input>
-        <label htmlFor='tagline'>Tag Line</label>
-        <input type="text" id="tagline" value={tagline} onChange={(e) => setTagline(e.target.value)}></input>
-        <label htmlFor='description'>Description</label>
-        <input type="text" id="description" value={description} onChange={(e) => setDescription(e.target.value)}></input>
-        <label htmlFor='first_brewed'>First Brewed</label>
-        <input type="text" id="first_brewed" value={first_brewed} onChange={(e) => setFirstBrewed(e.target.value)}></input>
-        <label htmlFor='brewers_tips'>Brewers Tips</label>
-        <input type="text" id="brewers_tips" value={brewers_tips} onChange={(e) => setBrewersTips(e.target.value)}></input>
-        <label htmlFor='attenuation_level'>Attenuation Level</label>
-        <input type="number" id="attenuation_level" value={attenuation_level} onChange={(e) => setAttenuationLevel(e.target.value)}></input>
-        <label htmlFor='contributed_by'>Contributed By</label>
-        <input type="text" id="contributed_by" value={contributed_by} onChange={(e) => setContributedBy(e.target.value)}></input>
-        <button type='submit'>Submit</button>
-      </form>
+          <Form.Group controlId="tagline">
+            <Form.Label>Tag-line</Form.Label>
+            <Form.Control type="text" placeholder="Tag-line" value={tagline} onChange={(e) => setTagline(e.target.value)}/>
+          </Form.Group>
+
+          <Form.Group controlId="description">
+            <Form.Label>Description</Form.Label>
+            <Form.Control as="textarea" rows="3" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)}/>
+          </Form.Group>
+
+          <Form.Group controlId="first_brewed">
+            <Form.Label>First brewed</Form.Label>
+            <Form.Control type="text" placeholder="First brewed" value={first_brewed} onChange={(e) => setFirstBrewed(e.target.value)}/>
+          </Form.Group>
+
+          <Form.Group controlId="brewers_tips">
+            <Form.Label>Brewers tips</Form.Label>
+            <Form.Control type="text" placeholder="Brewers tips" value={brewers_tips} onChange={(e) => setBrewersTips(e.target.value)}/>
+          </Form.Group>
+
+          <Form.Group controlId="attenuation_level">
+            <Form.Label>Attenuation level</Form.Label>
+            <Form.Control type="number" placeholder="Attenuation level" value={attenuation_level} onChange={(e) => setAttenuationLevel(e.target.value)}/>
+          </Form.Group>
+
+          <Form.Group controlId="contributed_by">
+            <Form.Label>Contributed by</Form.Label>
+            <Form.Control type="text" placeholder="Contributed by" value={contributed_by} onChange={(e) => setContributedBy(e.target.value)}/>
+          </Form.Group>
+
+          <div style={{textAlign: 'center'}}>
+            <Button variant="primary" type="submit" >
+              ADD NEW
+            </Button>
+          </div>
+        </Form>
+      </Container>
     </div>
   );
 }
