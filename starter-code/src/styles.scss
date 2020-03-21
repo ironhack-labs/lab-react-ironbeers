@@ -8,6 +8,9 @@ img {
     @extend .img-fluid;
 }
 
+.main-content {
+    min-height: calc(100vh - 125px);
+}
 
 /*
 *   LINK CARD
@@ -72,9 +75,53 @@ img {
 
 
 /*
+*   BEER DETAILS
+* -------------------------------------------- */
+
+.beer-details {
+    @extend .mb-4;
+    line-height: 1.35;
+
+    &__img-wrapper {
+        @extend .text-center, .my-5;
+    }
+
+    &__header {
+        @extend .d-flex, .flex-wrap, .mb-4;
+    }
+        &__header__name {
+            @extend .font-weight-normal;
+            flex: 1 0 80%;
+            font-size: 34px;
+            margin-bottom: 0;
+        }
+        &__header__attenuation_level {
+            @extend .text-right, .text-secondary;
+            font-size: 36px;
+            flex: 1 0 20%;
+        }
+        &__header__tagline {
+            @extend .text-secondary;
+            font-size: 20px;
+            flex: 1 0 80%;
+        }
+        &__header__first-brewed {
+            @extend .font-weight-bold, .align-self-center;
+            font-size: 14px;
+        }
+    &__body {
+        font-size: 17px;
+    }
+    &__footer small {
+        @extend .font-weight-bold, .text-secondary;
+        font-size: 14px;
+    }
+}
+
+/*
 *   FOOTER
 * -------------------------------------------- */
 
-footer {
-
+.main-footer {
+    @extend .p-2, .bg-dark, .text-white, .text-center;
 }
