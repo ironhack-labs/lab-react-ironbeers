@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer } from "react";
 import FormGroup from "../components/UI/FormGroup";
 import Label from "../components/UI/Label";
 import Navbar from "../components/Navbar";

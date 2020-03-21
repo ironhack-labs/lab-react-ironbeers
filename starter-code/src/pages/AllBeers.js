@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Card from "../components/UI/CardBeer.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const AllBeer = () => {
   const [beer, setBeer] = useState([]);
@@ -11,7 +13,6 @@ const AllBeer = () => {
   };
   useEffect(() => {
     beers().then(beer => setBeer(beer));
-    console.log(beer);
   }, []);
 
   const searchBeers = async query => {
@@ -27,33 +28,34 @@ const AllBeer = () => {
     setSearch(query);
   };
 
-  if (!beer[0] && !search) return <p>Loading...</p>;
+  if (!beer[0] && !search) return <p>Cargando cervezas...</p>;
 
   return (
-    <div style={{ width: "24rem" }}>
+    <div style={{ width: "24rem", border: "2px solid lightgrey" }}>
       <form onSubmit={e => e.preventDefault()}>
         <input
-          className="search"
+          style={{ width: "22rem" }}
+          className="rounded-pill mt-2 mb-3"
           name="search"
-          placeholder="Search a beer"
+          placeholder="Search your beer"
           value={search}
           onChange={handleSearch}
         />
       </form>
       {beer.map(beer => (
-        <div key={beer._id} className="prueba">
-          <Link className="link" to={`/beer/${beer._id}`} key={beer.i}>
+        <Card key={beer._id}>
+          <Link to={`/beer-detail/${beer._id}`} key={beer.i}>
             <img
-              style={{ width: "60px", height: "100px" }}
+              className="mt-3 mb-2"
+              style={{ width: "60px", height: "160px" }}
               src={beer.image_url}
               alt={beer.name}
             ></img>
-            <h3>{`Name: ${beer.name}`}</h3>
-            <p>{`Tagline: ${beer.tagline}`}</p>
-            <p>{`Contributed By: ${beer.contributed_by}`}</p>
-            <hr></hr>
           </Link>
-        </div>
+          <h3>{`Name: ${beer.name}`}</h3>
+          <p>{`Tagline: ${beer.tagline}`}</p>
+          <p>{`Contributed By: ${beer.contributed_by}`}</p>
+        </Card>
       ))}
     </div>
   );

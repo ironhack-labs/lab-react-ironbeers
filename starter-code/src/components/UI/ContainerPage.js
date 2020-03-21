@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-const Cards = styled.div`
+const ContainerPage = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 0.5rem;
+  text-align: center;
 `;
-export default Cards;
+export default ContainerPage;

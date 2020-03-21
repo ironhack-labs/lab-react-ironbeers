@@ -1,10 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
-import Navbar from "./components/Navbar";
-import useFetch from "./components/hooks/useFetch";
-import Cards from "./components/UI/AllBeers";
-import RandomCard from "./components/UI/RandomCard";
+import Navbar from "../components/Navbar";
+import useFetch from "../components/hooks/useFetch";
+import ContainerPage from "../components/UI/ContainerPage";
+import RandomCard from "../components/UI/RandomCard";
 
 const RandomBeerCard = styled.div`
   width: 26rem;
@@ -12,7 +12,7 @@ const RandomBeerCard = styled.div`
 
 const BeerImg = styled.img`
   width: 4rem;
-  height: 15rem;
+  height: 13rem;
   display: flex;
   align-self: center;
 `;
@@ -59,7 +59,7 @@ const RandomBeers = function() {
 
   return (
     <>
-      <Cards>
+      <ContainerPage>
         <Navbar />
         <RandomBeerCard className="card-deck">
           <div className="card">
@@ -102,7 +102,7 @@ const RandomBeers = function() {
             </div>
           </div>
         </RandomBeerCard>
-      </Cards>
+      </ContainerPage>
     </>
   );
 };

@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../components/Navbar";
-import Cards from "../components/UI/AllBeers";
-import axios from "axios";
+import ContainerPage from "../components/UI/ContainerPage";
 import styled from "styled-components";
 import useFetch from "../components/hooks/useFetch";
 
@@ -13,7 +11,7 @@ const RandomBeerCard = styled.div`
 
 const BeerImg = styled.img`
   width: 4rem;
-  height: 15rem;
+  height: 13rem;
   display: flex;
   align-self: center;
 `;
@@ -50,34 +48,20 @@ const Footer = styled.small`
 
 const BeerDetail = props => {
   const { id } = props.match.params;
-  const [beer, setbeer] = useState({});
-  const ListBeers = async () => {
-    const res = await axios.get(
-      `https://ih-beers-api2.herokuapp.com/beers/${id}`
-    );
-    return res.data;
-  };
-  useEffect(() => {
-    ListBeers().then(beer => setbeer(beer));
-  }, []);
-
-  /*const BeerDetail = props => {
-  const { id } = props.match.params;
   const url = `https://ih-beers-api2.herokuapp.com/beers/${id}`;
   const { data, loading } = useFetch(url);
   if (loading) {
-    return <Cards>Cargando las de cerveza...</Cards>;
+    return <ContainerPage>Cargando las de cerveza...</ContainerPage>;
   }
-  */
 
   return (
     <>
-      <Cards>
+      <ContainerPage>
         <Navbar />
         <RandomBeerCard className="card-deck">
           <div className="card">
             <BeerImg
-              src={beer.image_url}
+              src={data.image_url}
               className="card-img-top mt-5"
               alt="Random Beer picture"
             />
@@ -85,10 +69,10 @@ const BeerDetail = props => {
               <ItemsPlaced className="card-body">
                 <div style={{ maxWidth: "15rem" }}>
                   <Tittle>
-                    {beer.name}
+                    {data.name}
                     <b />
                   </Tittle>
-                  <Subtittle className="card-title">{beer.tagline}</Subtittle>
+                  <Subtittle className="card-title">{data.tagline}</Subtittle>
                 </div>
                 <div>
                   <Subtittle
@@ -96,24 +80,24 @@ const BeerDetail = props => {
                     className="card-title"
                   >
                     {" "}
-                    {beer.attenuation_level}
+                    {data.attenuation_level}
                   </Subtittle>
                   <FontSize>
-                    {beer.first_brewed}
+                    {data.first_brewed}
                     <b />
                   </FontSize>
                 </div>
               </ItemsPlaced>
               <Description className="card-text">
-                {beer.description}
+                {data.description}
               </Description>
             </div>
             <div>
-              <Footer>{beer.contributed_by}</Footer>
+              <Footer>{data.contributed_by}</Footer>
             </div>
           </div>
         </RandomBeerCard>
-      </Cards>
+      </ContainerPage>
     </>
   );
 };

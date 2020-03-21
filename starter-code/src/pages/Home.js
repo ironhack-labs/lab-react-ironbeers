@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "../public/styles/App.css";
+import "../../public/styles/App.css";
 import Beers from "./Beers";
-import NewBeer from "./NewBeer";
-import Navbar from "./components/Navbar";
-import LinksBeers from "./components/LinksBeers";
-import BeerDetail from "./pages/BeerDetail";
+import NewBeer from "../NewBeer";
+import Navbar from "../components/Navbar";
+import LinksBeers from "../components/LinksBeers";
+import BeerDetail from "./BeerDetail";
 import RandomBeers from "./RandomBeer";
-import Cards from "../src/components/UI/AllBeers";
-import FormBeer from "./pages/FormBeer";
+import ContainerPage from "../components/UI/ContainerPage";
+import FormBeer from "./FormBeer";
 
 const Home = () => {
   return (
-    <Cards>
+    <ContainerPage>
       <Router>
         <Switch>
           <Route exact path="/" component={() => <LinksBeers />} />
@@ -22,7 +22,7 @@ const Home = () => {
           <Route path="/new-beer" component={FormBeer} />
         </Switch>
       </Router>
-    </Cards>
+    </ContainerPage>
   );
 };
 
