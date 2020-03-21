@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Header from './../components/Header';
-import {getAllBeers} from './../services/beerService';
+import SearchBar from './../components/SearchBar';
+import {getAllBeers, getFilteredBeer} from './../services/beerService';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -10,6 +11,12 @@ import { StyledH1, StyledH2, StyledLink} from './../styles/Styles'
 
 const ListBeersPage = () => {
   const [beers, setBeers] = useState([]); 
+  const [searchName, setSearchName] = useState('');
+
+  const filterBeer = (pattern) => {
+    setSearchName(pattern);
+    getFilteredBeer(pattern).then(beers => setBeers(beers));
+  }
 
   useEffect(()=> {
     getAllBeers().then(beers => setBeers(beers));
@@ -18,6 +25,7 @@ const ListBeersPage = () => {
   return(
     <div>
       <Header/>
+      <SearchBar {...{searchName, filterBeer}}/>
       <br/>
       {
         beers.map( beer => {

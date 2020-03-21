@@ -33,3 +33,9 @@ export const addBeer = async (beer) => {
   console.log("New Beer " + res);
   return res.data;
 }
+
+export const getFilteredBeer = async (pattern) => {
+  const res = await service.get(`/search?q=${pattern}`);
+  console.log(res.data)
+  return res.data;
+}
