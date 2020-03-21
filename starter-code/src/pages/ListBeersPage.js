@@ -1,22 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import Header from './../components/Header';
 import {getAllBeers} from './../services/beerService';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Avatar from '@material-ui/core/Avatar';
-import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: '100%',
-  },
-}));
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import { formatContributor } from './../lib/Utils';
+import { StyledH1, StyledH2, StyledLink} from './../styles/Styles'
 
 const ListBeersPage = () => {
-  const classes = useStyles();
   const [beers, setBeers] = useState([]); 
 
   useEffect(()=> {
@@ -26,25 +18,31 @@ const ListBeersPage = () => {
   return(
     <div>
       <Header/>
+      <br/>
       {
         beers.map( beer => {
           return(
-            <List className={classes.root} key={beer._id}>
-              <Link to={beer._id}>
-                <ListItem alignItems="flex-start">
-                  <ListItemAvatar>
-                    <Avatar variant="square"  alt={beer.name}  src={beer.image_url} />
-                  </ListItemAvatar>
-                  <ListItemText primary={beer.name} 
-                  secondary={beer.tagline
-/*                     <div>
-                      <div>{beer.tagline}</div>
-                      <div>Created by: {beer.contributed_by}</div>
-                    </div> */
-                  }/>
-                </ListItem>
-              </Link>  
-            </List>
+            <Container key={beer._id} className='mt-6'>
+                <StyledLink to={beer._id}>
+                <Row className="align-items-center">
+                  <Col xs={4} md={4}>
+                  <Image src={beer.image_url} alt={beer.name} style={{width: '40%'}} fluid/>
+                  </Col>
+                  <Col xs={8} md={8} >
+                    <Row >
+                      <StyledH1>{beer.name}</StyledH1>
+                    </Row>
+                    <Row>
+                      <StyledH2>{beer.tagline}</StyledH2>
+                    </Row>
+                    <Row>
+                      <p style={{textAlign: 'left'}}><strong>Created by:</strong> {formatContributor(beer.contributed_by)}</p>
+                    </Row>
+                  </Col>
+                </Row>
+                <hr></hr>
+                </StyledLink>
+            </Container>
           );
         })}
     </div>
