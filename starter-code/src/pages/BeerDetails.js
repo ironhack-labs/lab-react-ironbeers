@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { getBeer } from '../service';
+import { getBeer, getRandomBeer } from '../service';
 import { useParams } from "react-router-dom";
 
-export const BeerDetails = () => {
+export const BeerDetails = ({ random }) => {
     const [beer, setBeer] = useState();
     const { beerId } = useParams();
 
     useEffect(() => {
-        getBeer(beerId).then(res => setBeer(res));
+        random ?
+            getRandomBeer().then(res => setBeer(res)) :
+            getBeer(beerId).then(res => setBeer(res));
     }, []);
 
     return (
