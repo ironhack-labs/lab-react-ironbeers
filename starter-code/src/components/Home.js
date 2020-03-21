@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
@@ -16,8 +16,8 @@ const Container = styled.div`
 
 const Section = styled.section`
   width: 100vw;
-  height: 33%;
-  background-color: lavenderblush;
+  height: 33vh;
+  background-color: white;
 `;
 
 const ImgBeers = styled.div`
@@ -51,22 +51,16 @@ const Home = () => {
         </Link>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-          elementum lectus, rutrum mattis nunc. Vivamus tempor turpis massa, sit
-          amet bibendum elit rhoncus id. Nam vitae pharetra sapien. Suspendisse
-          vel neque sem. Pellentesque porta finibus dolor, id lobortis velit
-          posuere eget.
+          elementum lectus, rutrum mattis nunc.
         </p>
       </Section>
       <Section>
         <Link to="/random-beer">
-          <ImgRandom></ImgRandom> <h2>Random Beers</h2>{" "}
+          <ImgRandom></ImgRandom> <h2>Random Beers</h2>
         </Link>
         <p>
           Donec at quam sodales, consectetur purus id, viverra libero. Fusce
-          varius enim eu elit facilisis efficitur. Pellentesque nulla quam,
-          rutrum id auctor ut, convallis vitae leo. Donec facilisis, sem non
-          ultrices venenatis, metus sapien volutpat purus, vel viverra arcu odio
-          porta mauris.
+          varius enim eu elit facilisis efficitur.
         </p>
       </Section>
       <Section>
@@ -76,9 +70,7 @@ const Home = () => {
         </Link>
         <p>
           Fusce varius enim eu elit facilisis efficitur. Pellentesque nulla
-          quam, rutrum id auctor ut, convallis vitae leo. Donec facilisis, sem
-          non ultrices venenatis, metus sapien volutpat purus, vel viverra arcu
-          odio porta mauris.
+          quam, rutrum id auctor ut, convallis vitae leo.
         </p>
       </Section>
     </Container>
