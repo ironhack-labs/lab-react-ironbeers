@@ -12,7 +12,7 @@ export const Header = () => {
         currentLocation !== '/' && <header className="bg-primary">
             <div className="container pt-1 pb-2 text-center">
                 <Link to="/">
-                    <img src={iconHome} width="20" alt="" />
+                    <img src={iconHome} width="22" alt="" />
                 </Link>
             </div>
         </header>
