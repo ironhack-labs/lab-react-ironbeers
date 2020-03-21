@@ -9,12 +9,13 @@ import { Layout } from './layouts/Layout';
 import { Home } from './pages/Home';
 
 export const App = () => {
+
     return (
-        <Layout>
-            <Router>
+        <Router>
+            <Layout>
                 <Route path="/" exact component={() => <Home />}></Route>
-            </Router>
-        </Layout>
+            </Layout>
+        </Router>
     );
 }
 

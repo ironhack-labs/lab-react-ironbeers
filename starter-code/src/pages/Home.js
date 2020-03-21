@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Images
+import beers from '../images/beers.png'
+import randomBeer from '../images/random-beer.png'
+import newBeer from '../images/new-beer.png'
+
 export const Home = () => {
     return (
         <div className="row">
             <section className="beer-card">
                 <Link to="/beers">
-                    <img className="beer-card__image" src="https://raw.githubusercontent.com/Chakstor/lab-react-ironbeers/master/starter-code/public/images/beers.png" alt="" />
+                    <img className="beer-card__image" src={beers} alt="" />
                 </Link>
                 <div className="beer-card__text">
                     <h2>All Beers</h2>
@@ -15,7 +20,7 @@ export const Home = () => {
             </section>
             <section className="beer-card">
                 <Link to="/random-beer">
-                    <img className="beer-card__image" src="https://raw.githubusercontent.com/Chakstor/lab-react-ironbeers/master/starter-code/public/images/random-beer.png" alt="" />
+                    <img className="beer-card__image" src={randomBeer} alt="" />
                 </Link>
                 <div className="beer-card__text">
                     <h2>Random Beer</h2>
@@ -24,7 +29,7 @@ export const Home = () => {
             </section>
             <section className="beer-card">
                 <Link to="/new-beer">
-                    <img className="beer-card__image" src="https://raw.githubusercontent.com/Chakstor/lab-react-ironbeers/master/starter-code/public/images/new-beer.png" alt="" />
+                    <img className="beer-card__image" src={newBeer} alt="" />
                 </Link>
                 <div className="beer-card__text">
                     <h2>New Beer</h2>

@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+
+// Components
+import { Header } from './Header';
 
 export const Layout = ({ children }) => {
     return (
         <>
+            <Header />
             <main>
                 <div className="container">
                     {children}
