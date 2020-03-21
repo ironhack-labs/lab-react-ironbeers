@@ -1,0 +1,80 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+/*
+*   GENERAL
+* -------------------------------------------- */
+
+img {
+    @extend .img-fluid;
+}
+
+
+/*
+*   LINK CARD
+* -------------------------------------------- */
+
+.link-card {
+    margin-bottom: 15px;
+
+    &__image {
+        margin-bottom: 15px;
+    }
+    &__text {
+        @extend .col-12;
+    }
+}
+
+
+/*
+*   BEER CARD
+* -------------------------------------------- */
+
+.beer-card {
+    @extend .d-flex;
+    line-height: normal;
+    border-bottom: 1px solid #DBDBDB;
+
+    a {
+        text-decoration: none;
+    }
+
+    &__image-wrapper {
+        @extend .mb-0, .py-4;
+        flex: 0 1 30%;
+        text-align: center;
+
+        img {
+            max-height: 170px;
+        }
+    }
+
+    &__content {
+        @extend .d-flex, .flex-column, .justify-content-center;
+        flex: 0 1 70%;
+        padding-left: 15px;
+    }
+
+    .beer-name {
+        @extend .mt-4, .text-dark;
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    .beer-tagline {
+        @extend .mb-1, .text-secondary;
+        font-size: 18px;
+    }
+
+    .beer-contributed {
+        @extend .text-dark;
+    }
+}
+
+
+/*
+*   FOOTER
+* -------------------------------------------- */
+
+footer {
+
+}
