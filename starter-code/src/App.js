@@ -11,6 +11,7 @@ import { Layout } from './layouts/Layout';
 import { Home } from './pages/Home';
 import { Beers } from './pages/Beers';
 import { BeerDetails } from './pages/BeerDetails';
+import { NewBeer } from './pages/NewBeer';
 
 export const App = () => {
 
@@ -22,6 +23,7 @@ export const App = () => {
                     <Route path="/beers/:beerId" component={() => <BeerDetails />} />
                     <Route path="/beers" component={() => <Beers />} />
                     <Route path="/random-beer" component={() => <BeerDetails random={true} />} />
+                    <Route path="/new-beer" component={() => <NewBeer />} />
                 </Switch>
             </Layout>
         </Router>
