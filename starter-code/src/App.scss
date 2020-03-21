@@ -7,6 +7,14 @@ header, footer {
   align-items: center !important;
 }
 
+a {
+  text-decoration: none !important;
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none !important;
+    }
+}
+
 header {
   background-color: #2ec4fa;
 }
@@ -34,6 +42,34 @@ main {
 .rounded-top {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+}
+
+.beer-item {
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.beer-item-img {
+  height: 200px;
+  width: auto;
+}
+
+.beer-item-descr {
+  h3 {
+    font-size: 22px;
+    color: #111;
+  }
+  h4 {
+    font-size: 18px;
+    color: #777;
+    font-weight: 100;
+  }
+  p {
+    font-size: 12px;
+    color: #222;
+  }
 }
 
 footer p {
