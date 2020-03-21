@@ -1,0 +1,34 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+/*
+*   GENERAL
+* -------------------------------------------- */
+
+img {
+    @extend .img-fluid;
+}
+
+
+/*
+*   APP CLASSES
+* -------------------------------------------- */
+
+.beer-card {
+    margin-bottom: 15px;
+
+    &__image {
+        margin-bottom: 15px;
+    }
+    &__text {
+        @extend .col-12;
+    }
+}
+
+
+/*
+*   FOOTER
+* -------------------------------------------- */
+
+footer {
+
+}
