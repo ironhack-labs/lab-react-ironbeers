@@ -7,13 +7,13 @@ import { getAllBeers } from "../service";
 import { BeerCard } from '../components/Beer';
 
 export const Beers = () => {
-    const [beers, setBeer] = useState([]);
+    const [beers, setBeer] = useState();
     useEffect(() => {
         getAllBeers().then(res => { setBeer(res) })
     }, []);
 
     return (
-        <div>
+        <>
             {beers && beers.map((beer, i) => {
                 return (
                     <BeerCard
@@ -26,6 +26,6 @@ export const Beers = () => {
                     />
                 )
             })}
-        </div>
+        </>
     );
 };

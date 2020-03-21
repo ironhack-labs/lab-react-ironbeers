@@ -8,3 +8,8 @@ export const getAllBeers = async () => {
     const res = await axiosConfig.get('/beers');
     return res.data;
 };
+
+export const getBeer = async (id) => {
+    const res = await axiosConfig.get(`/beers/${id}`);
+    return res.data;
+};
