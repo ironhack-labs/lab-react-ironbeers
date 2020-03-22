@@ -18,10 +18,10 @@ const App = () => {
         
           <Switch>
             <Route exact path='/' component={Home}/>
+            <Route path='/beers/:id' component={BeerDetail}/>
             <Route path='/beers' component={Beers}/>
             <Route path='/random-beer' component={RandomBeer}/>
             <Route path='/new-beer' component={NewBeer}/>
-            <Route path='/beers/:id' component={BeerDetail}/>
           </Switch>
        
       </div>
