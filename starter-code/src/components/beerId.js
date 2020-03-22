@@ -15,9 +15,6 @@ class BeerId extends Component {
   componentDidMount() {
     const { match: { params } } = this.props;
 
-    console.log("Params gives us {beerId: 5daf440ccbc5d2fd7d19ebdd}", params)
-    console.log("We need the following info   first_brewed   description contributed_by")
-
     axios.get(`https://ih-beers-api2.herokuapp.com/beers/${params.beerId}`)
       .then(response => {
         console.log("API response in Beer ID!!!!!!", response)
