@@ -7,6 +7,9 @@ import './styles.scss';
 // Layout
 import { Layout } from './layouts/Layout';
 
+// Components
+import ScrollToTop from './components/helpers/ScrollToTop';
+
 // Pages
 import { Home } from './pages/Home';
 import { Beers } from './pages/Beers';
@@ -16,7 +19,8 @@ import { NewBeer } from './pages/NewBeer';
 export const App = () => {
 
     return (
-        <Router>
+        <Router onUpdate={() => window.scrollTo(0, 0)} >
+            <ScrollToTop />
             <Layout>
                 <Switch>
                     <Route path="/" exact component={() => <Home />} />
