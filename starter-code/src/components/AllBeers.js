@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 import { Beers, searchBeers } from "../lib/BeersApi";
 import styled from "styled-components";
 
@@ -70,7 +69,6 @@ const AllBeers = () => {
 
   return (
     <>
-    <Navbar></Navbar>
       <form onSubmit={e => e.preventDefault()}>
         <Input
           name="search"

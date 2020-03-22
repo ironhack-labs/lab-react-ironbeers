@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { beerDetails } from "../lib/BeersApi";
 import BeerInfo from "./BeersInfo";
-import Navbar from "./Navbar";
 
 const BeerId = props => {
   const id = props.match.params.id;
@@ -15,7 +14,6 @@ const BeerId = props => {
 
   return (
     <>
-    <Navbar/>
   <BeerInfo beer={beer}></BeerInfo>
   </>
   )
