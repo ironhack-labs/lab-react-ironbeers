@@ -5,6 +5,8 @@ import { getAllBeers, searchBeer } from "../service";
 
 // Components
 import { BeerCard } from '../components/Beer';
+import { Loading } from '../components/helpers/Loading';
+import { FormMessage } from '../components/FormMessage';
 
 export const Beers = () => {
     const [beers, setBeers] = useState();
@@ -25,18 +27,26 @@ export const Beers = () => {
                 <input type="text" className="form-control" placeholder="Search by beer name..." value={filter} onChange={e => handleFilter(e)} required />
             </div>
 
-            {beers && beers.map((beer, i) => {
-                return (
-                    <BeerCard
-                        key={i}
-                        id={beer._id}
-                        image={beer.image_url}
-                        name={beer.name}
-                        tagline={beer.tagline}
-                        contributed={beer.contributed_by}
+            {beers ?
+                beers.length ?
+                    beers.map((beer, i) => {
+                        return (
+                            <BeerCard
+                                key={i}
+                                id={beer._id}
+                                image={beer.image_url}
+                                name={beer.name}
+                                tagline={beer.tagline}
+                                contributed={beer.contributed_by}
+                            />
+                        )
+                    }) :
+                    <FormMessage
+                        message={`No results for "${filter}". Please try again.`}
+                        type="danger"
                     />
-                )
-            })}
+                :
+                <Loading />}
         </>
     );
 };
