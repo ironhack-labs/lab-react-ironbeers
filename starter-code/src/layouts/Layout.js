@@ -2,21 +2,20 @@ import React from 'react';
 
 // Components
 import { Header } from './Header';
+import { Footer } from './Footer';
 
 export const Layout = ({ children }) => {
     return (
         <>
             <Header />
-            <main>
+
+            <main className="main-content">
                 <div className="container">
                     {children}
                 </div>
             </main>
-            <footer>
-                <div className="container">
-                    <small>&copy;2020 - IronBeers</small>
-                </div>
-            </footer>
+
+            <Footer />
         </>
     )
 }

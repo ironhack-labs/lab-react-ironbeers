@@ -8,6 +8,70 @@ img {
     @extend .img-fluid;
 }
 
+.main-content {
+    min-height: calc(100vh - 101px);
+}
+
+
+/*
+*   LOADING
+* -------------------------------------------- */
+
+.loading-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes ldio-5s9dlkch3no {
+    0% { transform: translate(-50%,-50%) rotate(0deg); }
+    100% { transform: translate(-50%,-50%) rotate(360deg); }
+}
+.ldio-5s9dlkch3no div {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border: 6px solid #337ab7;
+    border-top-color: transparent;
+    border-radius: 50%;
+}
+.ldio-5s9dlkch3no div {
+    animation: ldio-5s9dlkch3no 1s linear infinite;
+    top: 50px;
+    left: 50px
+}
+.loadingio-spinner-rolling-czixhl7lh9 {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+}
+.ldio-5s9dlkch3no {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(0.6);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+}
+.ldio-5s9dlkch3no div {
+    box-sizing: content-box;
+}
+
+
+/*
+*   MAIN HEADER
+* -------------------------------------------- */
+.main-header {
+    @extend
+        .container,
+        .pt-1,
+        .pb-2,
+        .mb-4,
+        .text-center;
+}
 
 /*
 *   LINK CARD
@@ -72,9 +136,85 @@ img {
 
 
 /*
+*   BEER DETAILS
+* -------------------------------------------- */
+
+.beer-details {
+    @extend .mb-4;
+    line-height: 1.35;
+
+    &__img-wrapper {
+        @extend .text-center, .mb-5;
+    }
+
+    &__header {
+        @extend .d-flex, .flex-wrap, .mb-4;
+    }
+        &__header__name {
+            @extend .font-weight-normal;
+            flex: 1 0 80%;
+            font-size: 34px;
+            margin-bottom: 0;
+        }
+        &__header__attenuation_level {
+            @extend .text-right, .text-secondary;
+            font-size: 36px;
+            flex: 1 0 20%;
+        }
+        &__header__tagline {
+            @extend .text-secondary;
+            font-size: 20px;
+            flex: 1 0 80%;
+        }
+        &__header__first-brewed {
+            @extend .font-weight-bold, .align-self-center;
+            font-size: 14px;
+        }
+    &__body {
+        font-size: 17px;
+    }
+    &__footer small {
+        @extend .font-weight-bold, .text-secondary;
+        font-size: 14px;
+    }
+}
+
+
+/*
+*   FORM
+* -------------------------------------------- */
+
+.new-beer-form {
+    @extend .my-5;
+
+    .form-group label {
+        @extend .font-weight-bold, .pl-2;
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .form-control,
+    .btn-submit {
+        border-radius: 20px;
+    }
+
+    .btn-submit {
+        @extend .text-uppercase;
+        width: 100%;
+        height: 45px;
+        border-radius: 30px;
+    }
+}
+
+
+/*
 *   FOOTER
 * -------------------------------------------- */
 
-footer {
-
+.main-footer {
+    @extend
+        .p-2,
+        .bg-dark,
+        .text-white,
+        .text-center;
 }
