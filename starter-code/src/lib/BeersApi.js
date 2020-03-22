@@ -11,12 +11,16 @@ export const Beers = async () => {
 
 export const beerDetails = async id => {
   const response = await beersApi.get(`/beers/${id}`);
-  console.log(response);
   return response.data;
 };
 
 export const randomBeer = async () => {
   const response = await beersApi.get("/beers/random");
+  return response.data;
+}
+
+export const createBeer = async data => {
+  const response = await beersApi.post(`/beers/new`, data);
   return response.data;
 }
 
