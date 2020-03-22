@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
 import styled from "styled-components";
 import { createBeer } from "../lib/BeersApi";
 
@@ -54,7 +53,6 @@ const NewBeer = () => {
   };
   return (
     <>
-    <Navbar></Navbar>
       <Form onSubmit={handleSubmit}>
         <Input
           name="name"
