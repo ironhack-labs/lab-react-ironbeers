@@ -65,7 +65,7 @@ const AllBeers = () => {
               <Info>
                 <h2>{beer.name}</h2>
                 <p>{beer.tagline}</p>
-                <small>{beer.contributed_by}</small>
+                <small>Created by: {beer.contributed_by}</small>
               </Info>
             </Link>
           </Item>
