@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import Layout from './Layout'
 import axios from "axios";
 import { Container, Row, Col } from 'react-bootstrap';
+import { getRandomBeer } from '../service/api'
 
 const RandomBeer = (props) => {
 
     const [beer, setBeer] = useState([]);
     useEffect(() => {
         
-        getRandomBeer.then(beer => setBeer(beer.data))
+        getRandomBeer().then(beer => setBeer(beer))
         
     }, []);
 

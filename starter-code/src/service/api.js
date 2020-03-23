@@ -23,3 +23,8 @@ export const postNewBeer = async (data) => {
     const res = await request.post(`/new`, data);
     return res.data;
 }
+
+export const getSearch = async (query) => {
+    const res = await request.get(`/search?q=${query}`)
+    return res.data;
+}
