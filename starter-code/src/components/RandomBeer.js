@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import { randomBeer } from "../api/BeersApi";
+import BeerCard from "./BeerCard";
 
-const AllBeers = () => {
+const RandomBeer = () => {
+  const [beer, setBeer] = useState({});
+
+  useEffect(() => {
+    randomBeer().then(beer => setBeer(beer));
+  }, []);
+
   return (
-    <div>
-      <Navbar /> <p>RandomBeer</p>
-    </div>
+    <>
+      <Navbar></Navbar>
+      <BeerCard beer={beer}></BeerCard>;
+    </>
   );
 };
 
-export default AllBeers;
+export default RandomBeer;
