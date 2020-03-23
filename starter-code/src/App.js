@@ -14,7 +14,7 @@ import "./App.css";
 import { Home } from "./pages/Home";
 import { Beers } from "./pages/Beers";
 import { Randombeer } from "./pages/Randombeer";
-import { Newbeer } from "./pages/Newbeer";
+import { NewBeer } from "./pages/Newbeer";
 import { BeerId } from "./pages/BeersInfo";
 
 const App = () => (
@@ -22,9 +22,9 @@ const App = () => (
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/beers" exact component={Beers} />
-      <Route path="/random-beers" component={Randombeer} />
-      <Route path="/new-beer" component={Newbeer} />
       <Route path="/beers/:id" component={BeerId} />
+      <Route path="/random-beers" component={Randombeer} />
+      <Route path="/create-beer" component={NewBeer} />
     </Switch>
   </Router>
 );

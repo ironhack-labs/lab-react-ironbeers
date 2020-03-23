@@ -48495,7 +48495,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-const Randombeer = () => {
+const Randombeer = props => {
   const [beer, setBeer] = (0, _react.useState)({});
   (0, _react.useEffect)(() => {
     (0, _beers.randomBeer)().then(beer => setBeer(beer));
@@ -48512,20 +48512,106 @@ exports.Randombeer = Randombeer;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Newbeer = void 0;
+exports.NewBeer = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _Header = require("../layout/Header");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _beers = require("../lib/beers.api");
 
-const Newbeer = () => {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Header.Header, null), _react.default.createElement("p", null, "hi I'm new beers page"));
-};
+var _reactRouterDom = require("react-router-dom");
 
-exports.Newbeer = Newbeer;
-},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js"}],"src/pages/BeersInfo.js":[function(require,module,exports) {
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const NewBeer = (0, _reactRouterDom.withRouter)(({
+  history
+}) => {
+  const [beer, setBeer] = (0, _react.useState)({
+    name: "",
+    tagline: "",
+    description: "",
+    first_brewed: "",
+    brewers_tips: "",
+    attenuation_level: "",
+    contributed_by: ""
+  });
+
+  const handleInputChange = e => {
+    const id = e.target.id;
+    const value = e.target.value;
+    setBeer({ ...beer,
+      [id]: value
+    });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const formData = { ...beer
+    };
+    (0, _beers.createBeer)(formData);
+    history.push("/");
+  };
+
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Header.Header, null), _react.default.createElement("form", {
+    onSubmit: handleSubmit
+  }, _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "name"
+  }, "Name: "), _react.default.createElement("input", {
+    type: "text",
+    id: "name",
+    value: beer.name,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "Tagline"
+  }, "Tagline: "), _react.default.createElement("input", {
+    type: "text",
+    id: "tagline",
+    value: beer.tagline,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "Description"
+  }, "Description: "), _react.default.createElement("input", {
+    type: "text",
+    id: "description",
+    value: beer.description,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "first_brewed"
+  }, "Date of first brew: "), _react.default.createElement("input", {
+    type: "text",
+    id: "first_brewed",
+    value: beer.first_brewed,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "brewers_tips"
+  }, "Some tips for brewers: "), _react.default.createElement("input", {
+    type: "text",
+    id: "brewers_tips",
+    value: beer.brewers_tips,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "attenuation_level"
+  }, "Level of attenuation: "), _react.default.createElement("input", {
+    type: "number",
+    id: "attenuation_level",
+    value: beer.attenuation_level,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("label", {
+    htmlFor: "contributed_by"
+  }, "Created by: "), _react.default.createElement("input", {
+    type: "text",
+    id: "contributed_by",
+    value: beer.contributed_by,
+    onChange: handleInputChange
+  })), _react.default.createElement("div", null, _react.default.createElement("button", {
+    type: "submit"
+  }, "ADD NEW"))));
+});
+exports.NewBeer = NewBeer;
+},{"react":"node_modules/react/index.js","../layout/Header":"src/layout/Header.js","../lib/beers.api":"src/lib/beers.api.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/pages/BeersInfo.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48597,14 +48683,14 @@ const App = () => _react.default.createElement(_reactRouterDom.BrowserRouter, nu
   exact: true,
   component: _Beers.Beers
 }), _react.default.createElement(_reactRouterDom.Route, {
+  path: "/beers/:id",
+  component: _BeersInfo.BeerId
+}), _react.default.createElement(_reactRouterDom.Route, {
   path: "/random-beers",
   component: _Randombeer.Randombeer
 }), _react.default.createElement(_reactRouterDom.Route, {
-  path: "/new-beer",
-  component: _Newbeer.Newbeer
-}), _react.default.createElement(_reactRouterDom.Route, {
-  path: "/beers/:id",
-  component: _BeersInfo.BeerId
+  path: "/create-beer",
+  component: _Newbeer.NewBeer
 })));
 
 var _default = App;
@@ -48655,7 +48741,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43779" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40227" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
