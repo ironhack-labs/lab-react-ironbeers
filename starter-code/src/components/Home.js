@@ -45,30 +45,31 @@ const Home = () => {
   return (
     <Container>
       <Section>
-        <Link to="/beers">
+        <Link style={{ textDecoration: "none" }} to="/beers">
           <ImgBeers></ImgBeers>
-          <h2>All Beers</h2>
+          <h2 style={{ paddingLeft: "10px" }}>All Beers</h2>
         </Link>
-        <p>
+        <p style={{ paddingLeft: "10px" }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
           elementum lectus, rutrum mattis nunc.
         </p>
       </Section>
       <Section>
-        <Link to="/random-beer">
-          <ImgRandom></ImgRandom> <h2>Random Beers</h2>
+        <Link style={{ textDecoration: "none" }} to="/random-beer">
+          <ImgRandom></ImgRandom>{" "}
+          <h2 style={{ paddingLeft: "10px" }}>Random Beers</h2>
         </Link>
-        <p>
+        <p style={{ paddingLeft: "10px" }}>
           Donec at quam sodales, consectetur purus id, viverra libero. Fusce
           varius enim eu elit facilisis efficitur.
         </p>
       </Section>
       <Section>
-        <Link to="/new-beer">
+        <Link style={{ textDecoration: "none" }} to="/new-beer">
           <ImgNew></ImgNew>
-          <h2>New Beer</h2>
+          <h2 style={{ paddingLeft: "10px" }}>New Beer</h2>
         </Link>
-        <p>
+        <p style={{ paddingLeft: "10px" }}>
           Fusce varius enim eu elit facilisis efficitur. Pellentesque nulla
           quam, rutrum id auctor ut, convallis vitae leo.
         </p>
