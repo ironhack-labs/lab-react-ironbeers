@@ -56,6 +56,35 @@ main {
   width: auto;
 }
 
+.beer-detail-img {
+  height: 400px;
+  width: auto;
+}
+
+.beer-detail-card {
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  
+  box-sizing: border-box;
+}
+
+.beer-detail {
+  h2 {
+    color: #888;
+  }
+
+  h3 {
+    font-size: 20px;
+    color: #999;
+  }
+
+  h4 {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+}
+
 .beer-item-descr {
   h3 {
     font-size: 22px;
@@ -71,6 +100,50 @@ main {
     color: #222;
   }
 }
+
+.cont-form {
+  max-width: 500px !important;
+  margin: auto;
+}
+
+.input {
+  border-radius: 20px;
+  border: 1px solid #DEDEDE;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px 20px;
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.input-form {
+  height: 40px;
+  background-color: #EEEEEE;
+  color: #222;
+}
+
+.text-area-form {
+  height: 100px;
+  background-color: #EEEEEE;
+  color: #222;
+}
+
+.submit {
+  height: 40px;
+  background-color: #2ec4fa;
+  color: #FFF;
+  text-align: center;
+  border: 1px solid #2ec4fa;
+
+  &:hover {
+    background-color: #0ba2da;
+  }
+}
+
+
 
 footer p {
   color: #888;
@@ -90,5 +163,7 @@ footer p {
   width: 100%;
   height: auto;
 }
+
+
 
 
