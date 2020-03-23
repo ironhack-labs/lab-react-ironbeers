@@ -8,8 +8,8 @@ const BtnDecoration = styled(Link)`
   position: fixed;
   background: url("https://www.cervezaslavirgen.com/wp-content/uploads/2017/12/vaso_peque2.jpg");
   background-size: cover;
-  width: 50px;
-  height: 50px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   transition: 0.3s all;
   &:hover {

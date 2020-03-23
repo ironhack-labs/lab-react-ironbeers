@@ -7,6 +7,7 @@ import Home from "./components/Home"
 import Beers from "./components/beers"
 import BeerId from "./components/beerId"
 import RandomBeer from "./components/randomBeer"
+import NewBeer from "./components/newBeer"
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/beers/:beerId" exact component={BeerId} />
           {/* : Tells react route   is a param and will match / with anything */}
           <Route path="/random-beer" exact component={RandomBeer} />
+          <Route path="/new-beer" exact component={NewBeer} />
         </Switch>
 
       </Router>
