@@ -35,9 +35,10 @@ const Home = () => {
           <div >New Beer</div>
         </Link>
         <p>
-          In this section you will be able to customize and designd a new beer from scratch. The list of items we will need
+          In this section you will be able to customize and design a new beer from scratch. The list of items we will need
           <br />are as follow: name, tagline, description, first brewed, brewers tips, attenuation level and contributed by.
-          Hope you enjoy!
+          Hope <br />
+          you enjoy!
         </p>
       </div>
     </>

@@ -16,7 +16,6 @@ class RandomBeer extends Component {
 
     axios.get("https://ih-beers-api2.herokuapp.com/beers/")
       .then(response => {
-        console.log("API response in Random Beer!!!!!!", response.data)
         this.setState({ randomBeer: response.data[Math.floor(Math.random() * response.data.length)] })
 
       })

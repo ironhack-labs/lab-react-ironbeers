@@ -17,7 +17,6 @@ class BeerId extends Component {
 
     axios.get(`https://ih-beers-api2.herokuapp.com/beers/${params.beerId}`)
       .then(response => {
-        console.log("API response in Beer ID!!!!!!", response)
         this.setState({ beerId: response.data })
       })
   }
