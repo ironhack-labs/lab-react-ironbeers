@@ -10,7 +10,7 @@ import NewBeer from "./components/NewBeer";
 const App = () => (
   <Router>
     <Switch>
-      // A los componentes hay que llamarlos
+      {/* // A los componentes hay que llamarlos, no pueden ser funciones */}
       <Route path="/" exact component={Home} />
       <Route path="/beers" exact component={AllBeers} />
       <Route path="/beers/:id" component={SingleBeer} />
