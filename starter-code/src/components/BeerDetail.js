@@ -1,29 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Layout from './Layout'
-import axios from "axios";
 import { Container, Row, Col } from 'react-bootstrap';
+import { getBeerDetail } from '../service/api'
 
 const BeerDetail = (props) => {
 
     const [beer, setBeer] = useState([]);
     useEffect(() => {
         const id = props.match.params.id;
-        const restBeersApi = axios.create({
-            baseURL: `https://ih-beers-api2.herokuapp.com/beers/${id}`
-        })
-            
-        const getListBeers = (restBeersApi) => {
-            restBeersApi
-            .get()
-            .then(beer => setBeer(beer.data))
-        }
-
-        getListBeers(restBeersApi);
+        getBeerDetail(id).then(beer => setBeer(beer))
     }, []);
 
-   
-    return(beer.length == 0 ?
-         <p>Loading...</p>
+    return(beer === 0 ?  
+       
+    <p>Loading...</p>
+         
     :
 
     <Layout >

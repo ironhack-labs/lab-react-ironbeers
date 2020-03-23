@@ -3,23 +3,16 @@ import Layout from './Layout'
 import axios from "axios";
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import { getAllBeers } from "../service/api";
 
 const Beers = () => {
 
     const [beers, setBeers] = useState([]);
     useEffect(() => {
-        const restBeersApi = axios.create({
-            baseURL: `https://ih-beers-api2.herokuapp.com/beers`
-        })
+        
+        getAllBeers.then(beers => setBeers(beers.data))
             
-        const getListBeers = (restBeersApi) => {
-            restBeersApi
-            .get()
-            .then(beers => setBeers(beers.data))
-            
-        }
-
-        getListBeers(restBeersApi);
+       
     }, []);
 
    

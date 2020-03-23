@@ -7,18 +7,9 @@ const RandomBeer = (props) => {
 
     const [beer, setBeer] = useState([]);
     useEffect(() => {
-        const id = props.match.params.id;
-        const restBeersApi = axios.create({
-            baseURL: `https://ih-beers-api2.herokuapp.com/beers/random`
-        })
-            
-        const getListBeers = (restBeersApi) => {
-            restBeersApi
-            .get()
-            .then(beer => setBeer(beer.data))
-        }
-
-        getListBeers(restBeersApi);
+        
+        getRandomBeer.then(beer => setBeer(beer.data))
+        
     }, []);
 
    
