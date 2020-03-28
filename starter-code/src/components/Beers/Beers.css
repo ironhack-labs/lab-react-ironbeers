@@ -1,0 +1,12 @@
+.beers img {
+    width: 150px;
+    height: 400px;
+    margin: 10px 0;
+}
+
+.beer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px 0;
+}

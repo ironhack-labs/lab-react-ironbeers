@@ -1,0 +1,17 @@
+.random-beer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: justify;
+}
+
+.random-beer img {
+  width: 150px;
+  height: 400px;
+  margin: 40px 0 20px 0;
+}
+
+.random-beer p {
+    padding: 20px;
+}

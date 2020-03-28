@@ -1,0 +1,8 @@
+
+.home img {
+  width: 100%;
+}
+
+.home h1, .home p {
+    margin: 20px 0 20px 30px;
+  }
