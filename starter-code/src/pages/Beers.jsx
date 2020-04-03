@@ -21,16 +21,22 @@ class Beers extends Component {
 
     render() {
         return (
-            <div className="App">
-                <Nav />
-                {this.state.beers.map((br, index)=> <SingleBeer 
-                key = {index}
-                name = {br.name} 
-                pic = {br.image_url} 
-                tagline = {br.tagline}
-                contributed_by = {br.contributed_by}
-                id = {br._id}
-                />)}
+
+            <div>
+                <div>
+                    <Nav />
+                </div>
+
+                <div className="App">
+                    {this.state.beers.map((br, index)=> <SingleBeer 
+                        key = {index}
+                        name = {br.name} 
+                        pic = {br.image_url} 
+                        tagline = {br.tagline}
+                        contributed_by = {br.contributed_by}
+                        id = {br._id}
+                    />)}
+                </div>
             </div>
         );
     }
