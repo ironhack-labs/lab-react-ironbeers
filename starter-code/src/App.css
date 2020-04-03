@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: url('/public/images/beers.png');
 }
 
 .App-logo {
@@ -25,4 +26,29 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.beerImg{
+width: 50px;
+}
+.text-Beer{
+font-size: 15px;
+}
+.cardBeer{
+  width: 200px;
+  height: 250px;
+}
+.cardBeert{
+  width: 200px;
+  height: 80px;
+}
+li{
+list-style: none;
+}
+.formBeer{
+  width: 400px;
+}
+.textDes{
+width: 500px;
+
+margin: 0 auto;
 }
