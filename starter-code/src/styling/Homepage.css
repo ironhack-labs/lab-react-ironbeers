@@ -1,0 +1,15 @@
+.main-section {
+  text-align: initial;
+  margin-bottom: 20px;
+}
+
+.main-section h2{
+  margin: 1.4vh 2vh;
+    color: black;
+}
+
+.main-section p{
+  margin: 0px 2vh;
+  color: gray;
+  /* margin-right: 50px; */
+}

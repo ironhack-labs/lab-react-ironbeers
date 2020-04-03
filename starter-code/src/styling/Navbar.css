@@ -1,0 +1,10 @@
+nav {
+  background-color: #3DC4FC;
+  color: white;
+  height: 5vh;
+  padding-top: 4px;
+}
+
+nav p {
+  margin-top: 5px;
+}

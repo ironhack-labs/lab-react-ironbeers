@@ -1,0 +1,28 @@
+.beer-list {
+  padding: 2vh 0;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.beer-list_text {
+  text-align: left;
+}
+
+.beer-list img {
+  height: 20vh;
+}
+
+.beer-list h2 {
+  font-size: 1.3rem;
+  color:black
+}
+
+.beer-list h4 {
+  color:gray;
+  font-size: 0.9rem;
+}
+
+.beer-list p {
+  color:black;
+  font-size: 0.6rem;
+}
+
