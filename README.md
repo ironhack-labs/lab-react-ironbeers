@@ -8,6 +8,7 @@ Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mis
 <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
 </div>
 
+This lab is going to be spread out over 3 days. For Friday you only have to do the read operations, meaning until and including iteration 5. Monday we are going to do 6 and Tuesday this lab will be updated with another iteration that is about the authentication.
 
 ## Requirements
 
@@ -29,17 +30,9 @@ Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mis
 ## Introduction
 
 We will be building a React app so the API (server) needs to be built somewhere for us, right? You are completely right, it's deployed on *heroku* and the root fo the API is: 
-**`https://ih-beers-api2.herokuapp.com/beers`**.
+**`https://ih-beers-api.herokuapp.com/beers`**.
 
-The available endpoints are the following:
-
-| Method | Endpoint | Response (200)     | Action |
-| ------ | -------- | ------------------ | ------ |
-| GET    | /     | [beers]            | Get all the beers from the DB |
-| GET    | /:id | { beer }        | Get the a single/specific beer      |
-| GET    | /random     | { beer }        | Get a random beer from the DB |
-| POST   | /new        | { message: "New beer successfully saved to database!"}| Create a new beer (the fields are specified in the instructions)|
-| GET    | /search?q=`{query}` | [beers] | Get beers from the DB whose name contains the search term. For example `/search?q=lager` searches for all beers with lager in the name. |
+Check out the different endpoints at **https://ih-beers-api.herokuapp.com/**
 
 On each iteration, we will explain which endpoint you should use!
 
@@ -86,7 +79,7 @@ On every view (except for the `home`), we should add a **header** with a `link` 
 
 ### Iteration 3: List the Beers
 
-On the `/beers` route, we should display all the beers from the database. So, in this case, you need to "hit" the API's route `https://ih-beers-api2.herokuapp.com/beers` and the API will return an **array of beers**.
+On the `/beers` route, we should display all the beers from the database. So, in this case, you need to "hit" the API's route `https://ih-beers-api.herokuapp.com/beers` and the API will return an **array of beers**.
 
 *Hint*: The array of beers is array of objects. We strongly advise you to **console log the response** from the API so you can see the structure of it.
 
@@ -124,7 +117,7 @@ Again, we **strongly recommend to console log the response from the API**.
 
 ### Iteration 5: Random Beer
 
-On the `/random-beer` route, we will render a single beer that will be retrieved from the database. The endpoint will do all the job for us, all we need to do is to call `https://ih-beers-api2.herokuapp.com/beers/random`. We should receive an object including all the info about a beer.
+On the `/random-beer` route, we will render a single beer that will be retrieved from the database. The endpoint will do all the job for us, all we need to do is to call `https://ih-beers-api.herokuapp.com/beers/random`. We should receive an object including all the info about a beer.
 The same way we did with the **Single Beer** view, we should render the following fields:
 
   - `image`
@@ -152,7 +145,7 @@ Finally, on the `/new-beer` route (remember, this is you react route, you're dis
   - **contributed_by** - must be type *text*
 
 Why we pointed out the type? Well, since we already console log response from the API, we could notice that all the fields are strings but *attenuation_level*, which is number. Using our knowledge from module II, we can make conclusion that in the *beer model* all the properties are type *String* except *attenuation_level*, which is type *Number*.
-When you have built the form, you should do a `POST` request to `https://ih-beers-api2.herokuapp.com/beers/new`, passing all the data on the `body` object. If everything went ok, you would receive a **200** response from the server.
+When you have built the form, you should do a `POST` request to `https://ih-beers-api.herokuapp.com/beers/new`, passing all the data on the `body` object. If everything went ok, you would receive a **200** response from the server.
 
 Notice that the fields on the `body` should have those specific **names** so the API can create a new beer.
 
@@ -166,7 +159,7 @@ Since we didn't cover how to upload images yet, don't worry about it now - the A
 
 ### (Extra) Bonus Iteration: Filter the Beers
 
-Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beers-api2.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
+Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beers-api.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
 
 **We are done!** :trophy:
 
