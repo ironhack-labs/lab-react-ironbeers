@@ -22,6 +22,35 @@
   font-size: large;
 }
 
+.beer-images {
+  width: 80px;
+}
+
+.text-beer {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.each-beer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.beer {
+  margin: 25px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
