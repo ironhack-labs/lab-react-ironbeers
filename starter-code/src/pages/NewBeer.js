@@ -3,7 +3,11 @@ import Nav from '../components/Nav'
 import axios from 'axios'
 
 export default class NewBeer extends Component {
-    state={success:false}
+    state={success:false, style:{
+        backgroundColor:'dodgerblue'
+    },
+    button:'Create'
+    }
     getSet = (e) => {
         this.setState({
             [e.target.name]:e.target.value
@@ -24,31 +28,43 @@ export default class NewBeer extends Component {
             console.log(response.status)
             if (response.status === 200) {
                 this.setState({
-                    success:true
+                    button:'Success!',
+                    style:{
+                        backgroundColor:'green'
+                    }
+                })
+            } else {
+                this.setState({
+                    button:"Failed",
+                    style:{
+                        backgroundColor:'red'
+                    }
                 })
             }
         })
-        .catch(err=>console.log(err))
+        .catch(err=>{
+            this.setState({
+                    button:'Error',
+                    style:{
+                        backgroundColor:'red'
+                    }
+                })
+            console.log(err)})
     }
 
     render() {
-        let success
-        if (this.state.success){
-            success = <h2>Beer Creation Success!</h2>
-        }
         return (
             <div>
             <Nav/>
             <div className='newbeer'>
-                <input name='name' type="text" required onChange={this.getSet} placeholder='Name'/>
+                <input name='name' type="text" onChange={this.getSet} placeholder='Name'/>
                 <input name='tagline' type="text" onChange={this.getSet} placeholder='Tagline'/>
                 <input name='description' type="text" onChange={this.getSet} placeholder='Description'/>
                 <input name='first_brewed' type="text" onChange={this.getSet} placeholder='First Brewed'/>
                 <input name='brewers_tips' type="text" onChange={this.getSet} placeholder='Brewers Tips'/>
                 <input name='attenuation_level' type="number" onChange={this.getSet} placeholder='Attenuation Level (number)'/>
-                <input name='contributed_by' type="text" required onChange={this.getSet} placeholder='Contributed By'/>
-                <button onClick={this.post}>Create</button>
-                {success}
+                <input name='contributed_by' type="text" onChange={this.getSet} placeholder='Contributed By'/>
+                <button style={this.state.style} onClick={this.post}>{this.state.button}</button>
             </div>
             </div>
         )
