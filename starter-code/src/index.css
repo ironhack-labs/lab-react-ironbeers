@@ -3,3 +3,47 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.navBar{
+  background-color: blueviolet;
+}
+.home h1, p{
+  text-align: center;
+}
+.home img{
+  display: block;
+  margin: auto;
+}
+.allBeers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.allBeers img{
+  max-width: 90%;
+  max-height: 200px;
+  display: block;
+  margin: auto;
+  padding: 15px 0;
+}
+.oneBeers{
+  width: 25%;
+  text-align: center;
+}
+.beer img{ 
+  height: 300px;
+  display: block;
+  margin: auto;
+}
+.beer{
+  padding: 20px;
+  text-align: center;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}
+.form *{
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
