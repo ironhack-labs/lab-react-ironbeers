@@ -1,0 +1,26 @@
+.beer-wiki {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding: 50px 200px;
+}
+
+.individualBeer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px 0px;
+    padding: 50px;
+    border-bottom: 2px solid gray;
+}
+
+.individualInformation {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgBeer {
+    height: 30%;
+    width: 30%;
+    margin: 0;
+}

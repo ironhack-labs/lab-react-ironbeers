@@ -1,0 +1,25 @@
+.beerContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 20%;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    text-align: left;
+    margin: 10px;
+}
+
+.links {
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(0, 102, 255);
+}
+
+p {
+    color: rgb(90, 88, 88);
+}
