@@ -3,16 +3,19 @@ import Nav from '../components/Nav'
 import axios from 'axios'
 
 export default class NewBeer extends Component {
-    state={success:false, style:{
+    state={style:{
         backgroundColor:'dodgerblue'
     },
     button:'Create'
     }
+    //for each input, create a state property matching the input-name and give it the value of the input-value
     getSet = (e) => {
         this.setState({
             [e.target.name]:e.target.value
         })
     }
+
+    //axios post to create new beer with API
     post = () => {
         axios.post('https://ih-beers-api2.herokuapp.com/beers/new', {
             name:this.state.name,
@@ -26,6 +29,7 @@ export default class NewBeer extends Component {
         })
         .then(response=>{
             console.log(response.status)
+            //change button color and text depending on success or failure to create new beer
             if (response.status === 200) {
                 this.setState({
                     button:'Success!',

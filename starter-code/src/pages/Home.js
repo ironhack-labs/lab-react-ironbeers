@@ -5,6 +5,7 @@ import axios from 'axios'
 
 export default class Home extends Component {
     state = {random:''}
+    //axios get random beer
     componentDidMount(){
         axios.get('https://ih-beers-api2.herokuapp.com/beers/random')
         .then(response=>{
