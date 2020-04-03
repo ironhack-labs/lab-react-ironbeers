@@ -1,0 +1,27 @@
+.link-home {
+    text-decoration: none;
+}
+
+.home-part {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-part img {
+    width:100%;
+}
+
+.home-part h3 {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+}
+
+.home-part p {
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+}

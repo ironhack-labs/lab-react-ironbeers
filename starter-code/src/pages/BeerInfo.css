@@ -1,0 +1,70 @@
+.beerinfo {
+    height: 100vh;
+}
+.beerinfo-img {
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beerinfo-img img {
+    height: 80%;
+}
+
+.beerinfo-top {
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.beerinfo-top div {
+    height: 100%;
+}
+
+.top-one {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: space-evenly;
+}
+
+.top-one h3 {
+    color:grey;
+}
+
+.top-two {
+    text-align: end;
+    width: 30%; 
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: space-evenly;
+}
+
+.top-two h3 {
+    color:grey;
+}
+.top-two h4 {
+    font-size: 0.8rem;
+}
+
+.beerinfo-bottom {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.beerinfo-description {
+    font-size: 1rem;
+}
+
+.beerinfo-contri {
+    color:grey;
+    font-size: 0.8rem;
+}

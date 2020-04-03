@@ -1,0 +1,22 @@
+.navbar {
+    height: 5vh;
+    background-color: dodgerblue;
+    width: 100vw;
+    text-align: center;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-nav {
+    text-decoration: none;
+    color:white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 20%;
+    height: 70%;
+    line-height: 1.5rem;
+    box-shadow: 0px 0px 30px white;
+    background-color: rgb(16, 136, 255);
+}
