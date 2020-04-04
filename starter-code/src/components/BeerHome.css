@@ -1,0 +1,18 @@
+.home-links-container{
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
+    align-items: center;
+}
+
+.images-home {
+    padding:10px
+}
+
+.title-home{
+    padding:10px;
+    text-align:center;
+    color:#E95226;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+}
