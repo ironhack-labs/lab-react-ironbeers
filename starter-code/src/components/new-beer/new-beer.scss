@@ -1,0 +1,31 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(100vh - 73px);
+  padding: 10px 20px;
+
+  & > * {
+    width: calc(100% - 16px);
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+  }
+}
+
+
+button {
+  background-color: deepskyblue;
+  color: white;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+}

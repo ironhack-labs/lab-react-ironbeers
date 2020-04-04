@@ -1,0 +1,39 @@
+.beer-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+
+  & > *:not(img) {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  img {
+    height: 250px;
+    margin-top: 46px;
+    margin-bottom: 24px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    h4 {
+      color: grey;
+    }
+  }
+
+  .footer {
+    font-size: 12px;
+    color: grey;
+  }
+}

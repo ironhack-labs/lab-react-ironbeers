@@ -1,0 +1,36 @@
+.home {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .section {
+    flex-basis: 33.333%;
+    text-decoration: none;
+    color: black;
+
+
+    .img {
+      width: 100%;
+      height: 55%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 10px;
+    }
+
+    h2, p {
+      padding: 0 5%;
+    }
+
+    p {
+      font-size: 14px;
+      color: grey;
+    }
+  }
+
+}
