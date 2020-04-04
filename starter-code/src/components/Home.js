@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 /* import axios from 'axios'; */
 import { Link } from "react-router-dom";
-import Header from './Header'
+
 
 
 class Home extends Component {
@@ -16,7 +16,7 @@ class Home extends Component {
     render() {
         return (
             <div style={{color: "black"}}>
-            <Header />
+            
                 <div className="" >
                     <Link className="w-100" to={'/beers'} style={{color: "black"}}>
                         <img className="w-100" src="/images/beers.png" alt="beers"/>
