@@ -46,7 +46,7 @@ class AllBeers extends Component {
                                 <p style={{fontSize: "30px", fontWeight: "400", color: "gray"}}>{beers.tagline}</p>
                                 <sub style={{fontSize: "18px"}}><b>Created by: </b>{beers.contributed_by}</sub>
                            </div>
-                           <hr class="solid"></hr>
+                           <hr className="solid"></hr>
                        </div> 
                     )
                 })}
