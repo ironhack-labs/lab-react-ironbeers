@@ -1,0 +1,12 @@
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 250px;
+    border-style: dotted;
+}
+
+.cardImg{
+    width: 5vw;
+}
