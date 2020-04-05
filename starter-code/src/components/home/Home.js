@@ -5,11 +5,11 @@ export const Home = () => {
 
 
     return (
-            <div className ="p-5">
-      <ul className ="p-5">
-        <li >
+            <div className ="container-fluid">
+      <div className ="list-group p-5">
+        <li className="list-group-item col m-2 p-5">
             <div>
-          <img src="/images/beers.png" alt="Cervezas" srcset="" />
+          <img className="img-fluid" src="/images/beers.png" alt="Cervezas" srcset="" />
           </div>
           <Link className="text-center" to="/beers">Beers List</Link>
           <p className ="text-center ">
@@ -19,9 +19,9 @@ export const Home = () => {
             vel ipsam itaque, culpa suscipit?
           </p>
         </li>
-        <li>
+        <li className="list-group-item col m-2 p-5">
             <div>
-        <img src="/images/new-beer.png" alt="Nueva Cerveza" srcset="" />
+        <img className="img-fluid" src="/images/new-beer.png" alt="Nueva Cerveza" srcset="" />
         </div>
           <Link className="text-center" to="/new-beer">New Beer</Link>
           <p className ="text-center ">
@@ -31,9 +31,9 @@ export const Home = () => {
             vel ipsam itaque, culpa suscipit?
           </p>
         </li>
-        <li>
+        <li className="list-group-item col m-2 p-5">
             <div>
-        <img src="/images/random-beer.png" alt="Cerveza Random" srcset="" />
+        <img className="img-fluid" src="/images/random-beer.png" alt="Cerveza Random" srcset="" />
         </div>
           <Link className="text-center" to="/random-beer" >Random Beer</Link>
           <p className ="text-center ">
@@ -43,7 +43,7 @@ export const Home = () => {
             vel ipsam itaque, culpa suscipit?
           </p>
         </li>
-      </ul>
+      </div>
     </div>
     )
 }

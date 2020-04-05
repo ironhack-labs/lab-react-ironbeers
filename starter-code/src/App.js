@@ -15,9 +15,7 @@ export const App = () => {
       <Header />
       {/* <Home /> */}
       <Switch>
-        {/* <Route exact path={'/'} component={Home} /> */}
-        <Route exact path={'/'} render={()=> <Redirect to={'/home'}/>} />
-        <Route exact path={'/home'} render={() => <Home />} />
+        <Route exact path={'/'} render={() => <Home />} />
         <Route exact path='/beers' render={() => <Beers/>} />
         <Route exact path='/random-beer/' render={() => <RandomBeer/>} />
         <Route exact path='/beers/:id' render={() => <BeerDetails/>} />
