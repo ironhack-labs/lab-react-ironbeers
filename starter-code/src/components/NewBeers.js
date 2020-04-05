@@ -24,7 +24,7 @@ class NewBeers extends Component {
         const {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = this.state
             
         try {
-            await axios.post('https://ih-beers-api2.herokuapp.com/beers/new', {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by})
+            await axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`, {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by})
             
                     this.setState({
                         name: '',
@@ -70,7 +70,7 @@ class NewBeers extends Component {
                     <input type='number' name='attenuation_level' value={this.state.attenuation_level} onChange={e => this.handleChange(e)} />
                     <label>Contributed By:</label>
                     <input type='text' name='contributed_by' value={this.state.contributed_by} onChange={e => this.handleChange(e)} />
-                   <input type='submit' value='Submit'/>
+                    <input type='submit' value='Create a new beer'/>
                 </form>
             </div>
         )

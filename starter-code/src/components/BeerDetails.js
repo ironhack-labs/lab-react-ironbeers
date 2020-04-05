@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 class BeerDetails extends Component {
     constructor(props) {
         super(props);
-        //console.log(props)
+        console.log(props)
 
         this.state = {
             beerList: props.match.params.id
@@ -27,7 +27,7 @@ class BeerDetails extends Component {
 
       }
 
-
+      
 
     render() {
 
