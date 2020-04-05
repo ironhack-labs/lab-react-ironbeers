@@ -21,8 +21,42 @@
 .App-intro {
   font-size: large;
 }
+.beer-image img{
+  height: 200px;
+  width: 60px;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.home{
+  list-style-type: none;
+}
+.home a{
+  text-decoration: none;
+  color: black;
+}
+.home img{
+  height: 150px;
+}
+#navbar img{
+
+  height: auto;
+  width: auto;
+}
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form input{
+  border-radius: 20px;
+  margin: 5px;
+}
+.form textarea{
+  border-radius: 20px;
+  margin: 5px;
+  height: 100px;
 }
