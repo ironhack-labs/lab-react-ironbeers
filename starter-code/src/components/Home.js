@@ -6,7 +6,6 @@ export class Home extends Component {
 
         return (
             <div className="home">
-
                 <li>
                     <Link to="/beers">
                         <img src={process.env.PUBLIC_URL + 'images/beers.png'} alt="" />
