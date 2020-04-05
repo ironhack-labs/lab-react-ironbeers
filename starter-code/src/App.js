@@ -5,6 +5,7 @@ import './App.css';
 import Home from './components/Home';
 import AllBears from './components/AllBeers'
 import BeerDetails from './components/BeerDetails'
+import RandomBeer from './components/RandomBeer';
  
 
 
@@ -22,9 +23,8 @@ class App extends Component {
         <Route exact path ='/' component={Home} />
         <Route exact path ='/beers' component={AllBears} />
         <Route path ='/beers/:id' component={BeerDetails} />
-
-        {/* <Route path ='/random-beer' component={} />
-        <Route path ='/new-beer' component={} />  */}
+        <Route path ='/random-beer' component={RandomBeer} />
+        {/* <Route path ='/new-beer' component={} />   */}
 
       </Switch>
 
