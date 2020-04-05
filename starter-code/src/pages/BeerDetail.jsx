@@ -19,7 +19,7 @@ export class BeerDetail extends React.Component {
       .then(response => {
         console.log("one beer response: ", response);
         this.setState({ beer: response.data });
-        console.log("BLABLA", this.state.beer)
+        console.log("BLABLA", this.state.beer);
       })
       .catch(error => {
         console.log(error);
@@ -30,22 +30,24 @@ export class BeerDetail extends React.Component {
     return (
       <div>
         <Navbar />
-        <div>
-          <img src={this.state.beer.image_url} alt="Beer"/>
+        <div className="column">
+          <div className=" beer-detail">
+            <img src={this.state.beer.image_url} alt="Beer" />
 
-          <div>
-            <p>{this.state.beer.name}</p>
-            <p>{this.state.beer.attenuation_level}</p>
-          </div>
+            <div className="row">
+              <h2 className="col-9 text-left">{this.state.beer.name}</h2>
+              <p className="col-3">{this.state.beer.attenuation_level}</p>
+            </div>
 
-          <div>
-            <p>{this.state.beer.tagline}</p>
-            {/* <p>{this.state.beer.first_brewed}</p> */}
-          </div>
+            <div className="row">
+              <p className="col-12 text-left">{this.state.beer.tagline}</p>
+              {/* <p>{this.state.beer.first_brewed}</p> */}
+            </div>
 
-          <div>
-            <p>{this.state.beer.description} </p>
-            <p>{this.state.beer.contributed_by}</p>
+            <div>
+              <p className="text-left">{this.state.beer.description} </p>
+              <p className="text-left">{this.state.beer.contributed_by}</p>
+            </div>
           </div>
         </div>
       </div>

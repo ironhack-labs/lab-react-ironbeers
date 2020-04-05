@@ -1,0 +1,12 @@
+.beer-detail img {
+  height: 30vh;
+  margin: 6vh 0 3vh 0;
+}
+
+/* .beer-detail h2 {
+text-align: initial;
+} */
+
+.beer-detail {
+  margin: 2vh;
+}
