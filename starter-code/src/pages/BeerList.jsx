@@ -32,7 +32,8 @@ export class BeerList extends React.Component {
 
         <div className="container">
             {this.state.beers.map(beer => (
-              <Link to={`/beers/detail/${beer._id}`}>
+
+              <Link to={`/beers/${beer._id}`}>
               <div className="row beer-list">
 
                 <div className="col-5">
@@ -44,8 +45,8 @@ export class BeerList extends React.Component {
                   <p>Created by: {beer.contributed_by}</p>
                 </div>
                 </div>
-
               </Link>
+
             ))}
         </div>
       </div>

@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Homepage from "./pages/Homepage";
 import BeerList from "./pages/BeerList";
+import BeerDetail from "./pages/BeerDetail";
 
 import Navbar from "./components/Navbar";
 
@@ -14,6 +15,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Homepage}></Route>
           <Route exact path="/beers" component={BeerList}></Route>
+          <Route exact path="/beers/:id" component={BeerDetail}></Route>
         </Switch>
       </div>
     );
