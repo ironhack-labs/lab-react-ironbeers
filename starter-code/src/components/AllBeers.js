@@ -10,7 +10,7 @@ class AllBeers extends Component {
     }
 
 
-    getAllTheBears =  async () => {
+    getAllTheBeers =  async () => {
     const arrayBeers = await axios
             .get(`https://ih-beers-api2.herokuapp.com/beers`)
             try{
@@ -22,7 +22,7 @@ class AllBeers extends Component {
     }
 
     componentDidMount() {
-        this.getAllTheBears();
+        this.getAllTheBeers();
     }
 
 
