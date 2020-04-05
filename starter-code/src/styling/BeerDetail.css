@@ -10,3 +10,10 @@ text-align: initial;
 .beer-detail {
   margin: 2vh;
 }
+
+.beer-detail h3, h5, h6 {
+color: gray}
+
+.beer-detail p{
+  margin: 2vh 0;
+}
