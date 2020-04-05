@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 export class Home extends Component {
     render() {
-
         return (
             <div className="home">
                 <li>
@@ -18,9 +17,6 @@ export class Home extends Component {
                         <br />Random Beer !
                     </Link>
                 </li>
-
-
-
                 <li>
                     <Link to="/newbeer">
                         <img src={process.env.PUBLIC_URL + 'images/new-beer.png'} alt="" />
