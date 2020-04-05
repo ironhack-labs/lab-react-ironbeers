@@ -39,18 +39,20 @@ class AllBeers extends Component {
                
 
                 return(
-                       <div  key={i}>
+                       <div className="w-100" key={i}>
                            
         {/*Todo esto irá dentro de un link que te llevara a la ruta de la beer con la id,
         tanto imagen como el div con los nombres y demás */}
-                    <Link to={`/beers/${beers._id}`}style={{color: "black"}}>
-                        <div className="d-flex border-bottom mx-5" style={{width: "100%", maxHeight: "40vh"}} >
+                    <Link className="w-100" to={`/beers/${beers._id}`}style={{color: "black"}}>
+                        <div className="d-flex flex-row justify-content-center border-bottom " style={{maxWidth: '100%',maxHeight: "40vh"}} >
+                        <div className="w-25 pt-4 ml-5">
 
-                        <img style={{width: "8vw", height: "26vh", margin: "4% 3%"}} src={beers.image_url} alt="beer"/>
-                           <div className="content-fluid w-75 p-5">
-                                <h3 style={{fontSize: "40px", fontWeight: "300"}}>{beers.name}</h3>
-                                <p style={{fontSize: "30px", fontWeight: "400", color: "gray"}}>{beers.tagline}</p>
-                                <sub style={{fontSize: "18px"}}><b>Created by: </b>{beers.contributed_by}</sub>
+                        <img style={{maxWidth: "8vw", maxHeight: "26vh", margin: "4% 0% 4% 10%", textAlign: "center"}} src={beers.image_url} alt="beer"/>
+                        </div>
+                           <div className="w-100 py-5">
+                                <h3 style={{fontSize: "4vh", fontWeight: "300"}}>{beers.name}</h3>
+                                <p style={{fontSize: "3vh", fontWeight: "400", color: "gray"}}>{beers.tagline}</p>
+                                <sub style={{fontSize: "2vh"}}><b>Created by: </b>{beers.contributed_by}</sub>
                            </div>
                            <hr className="solid"></hr>
                         </div>

@@ -44,10 +44,10 @@ import axios from 'axios'
                     </div>
                     <div>
 
-                    <h3>{this.state.theBeer.name} <span className="float-right">{this.state.theBeer.attenuation_level}</span></h3>
-                    <p>{this.state.theBeer.tagline} <span className="float-right">{this.state.theBeer.first_brewed}</span></p>
-                    <p>{this.state.theBeer.description}</p>
-                    <p>{this.state.theBeer.contributed_by}</p>
+                    <h3 style={{fontWeight: "300", fontSize: "40px"}}>{this.state.theBeer.name} <span style={{fontWeight: "400", fontSize: "40px", color: "lightgray"}} className="float-right">{this.state.theBeer.attenuation_level}</span></h3>
+                    <p style={{color: "gray",fontSize: "26px", fontWeight: "400"}}>{this.state.theBeer.tagline} <span style={{color: 'black', fontWeight: '500', fontSize: '20px', letterSpacing: "-1.5px"}} className="float-right">{this.state.theBeer.first_brewed}</span></p>
+                    <p style={{fontSize: '24px', letterSpacing: '-1.2px'}}>{this.state.theBeer.description}</p>
+                    <p style={{fontSize: '20px', fontWeight: '600', color: 'gray', letterSpacing: '-1px '}} >{this.state.theBeer.contributed_by}</p>
                     </div>
                 </div>
 
