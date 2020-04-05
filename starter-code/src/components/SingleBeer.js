@@ -13,7 +13,7 @@ export default class SingleBeer extends Component {
     const { params } = this.props.match;
     console.log(this.props.match);
     axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers/${params._id}`)
+      .get(`https://ih-beers-api2.herokuapp.com/beers/${params.id}`)
       .then(responseApi => {
         const theBeer = responseApi.data;
         this.setState(theBeer);
@@ -28,7 +28,7 @@ export default class SingleBeer extends Component {
   render() {
     return (
       <div>
-        <h1>hola</h1>
+        <h3>{this.state.name}</h3>
       </div>
     );
   }
