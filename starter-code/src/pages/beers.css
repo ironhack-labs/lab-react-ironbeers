@@ -1,0 +1,8 @@
+.beer-card {
+  display:flex;
+  flex-direction: row;
+}
+
+.beer-image img{
+  height:80px;
+}
