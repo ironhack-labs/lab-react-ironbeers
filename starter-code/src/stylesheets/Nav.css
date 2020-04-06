@@ -1,5 +1,18 @@
-.Nav .NavBar {
+.Nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #32c3ff;
+  height: 75px;
+  width: 100%;
+}
+
+.NavBar {
   color: #ffffff;
+}
+
+.Nav-icon.icon {
+  font-size: 2rem;
 }
 
 .Nav-item {
@@ -8,4 +21,5 @@
 
 .Nav-link {
   color: #ffffff;
+  text-decoration: none;
 }

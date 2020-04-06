@@ -22,15 +22,14 @@ class ListBeers extends Component {
     return (
       <div className="ListBeers">
         {this.state.beers.map((beer) => (
-          <div className="ListBeers-img-container">
-            <img src={beer.image_url} alt="" className="ListBeers-img" />
-            <h1>{beer.name}</h1>
-            <h3 className="ListBeers-tagline">{beer.tagline}</h3>
-            <p className="ListBeers-contributor">{beer.contributed_by}</p>
-            <Link to={`/SingleBeer/${beer._id}`}>
-              <button className="ListBeers-btn">Details</button>
-            </Link>
-          </div>
+          <Link className="ListBeers-link" to={`/SingleBeer/${beer._id}`}>
+            <div className="ListBeers-img-container">
+              <img src={beer.image_url} alt="" className="ListBeers-img" />
+              <h1>{beer.name}</h1>
+              <h3 className="ListBeers-tagline">{beer.tagline}</h3>
+              <p className="ListBeers-contributor">{beer.contributed_by}</p>
+            </div>
+          </Link>
         ))}
       </div>
     );
