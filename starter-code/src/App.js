@@ -17,10 +17,10 @@ class App extends Component {
           <Nav />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/" component={ListBeers} />
-            <Route path="/" component={SingleBeer} />
-            <Route path="/" component={RandomBeer} />
-            <Route path="/" component={AddNewBeer} />
+            <Route path="/ListBeers" component={ListBeers} />
+            <Route path="/SingleBeer" component={SingleBeer} />
+            <Route path="/RandomBeer" component={RandomBeer} />
+            <Route path="/AddNewBeer" component={AddNewBeer} />
           </Switch>
         </header>
       </div>
