@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import qs from 'qs';
 
 class AddNewBeer extends Component {
   constructor(props) {
@@ -13,11 +15,27 @@ class AddNewBeer extends Component {
       contributed_by: '',
       name: '',
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  onChange(event) {
+  handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value,
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    axios({
+      method: 'POST',
+      url: 'https://ih-beers-api.herokuapp.com/beers/new',
+      data: qs.stringify(this.state),
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+    }).then((res) => {
+      debugger;
+      console.log(res.data);
     });
   }
 
