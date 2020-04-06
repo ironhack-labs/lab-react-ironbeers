@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../components/Nav.jsx';
 import axios from 'axios'; 
 import './allBeers.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import {  Route } from 'react-router-dom';
 // import SingleBeer from './SingleBeer';
 
@@ -35,9 +35,9 @@ class AllBeers extends Component {
                 />
 
                 <div>
-                  {/* <Link to="/beers/:beerId"> */}
+                  <Link to={`/beers/${beerList._id}`}>
                     <h3>{beerList.name}</h3>
-                  {/* </Link> */}
+                  </Link>
                   <h5>{beerList.tagline}</h5>
                   <p>Created by: {beerList.contributed_by}</p>
                 </div>
