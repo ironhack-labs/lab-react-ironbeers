@@ -10,7 +10,7 @@ export default class AllBeers extends Component {
     }
     //axios get using search query and update state.beers to returned results
     searchBeer = (e) => {
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${e.target.value}`)
+        axios.get(`https://ih-beers-api.herokuapp.com/beers/search?q=${e.target.value}`)
         .then(response=>{
             let beersdata = response.data
             this.setState({
@@ -22,7 +22,7 @@ export default class AllBeers extends Component {
     
     //load all beers
     componentDidMount(){
-        axios.get('https://ih-beers-api2.herokuapp.com/beers')
+        axios.get('https://ih-beers-api.herokuapp.com/beers')
         .then(response=>{
             let beersdata = response.data
             this.setState({

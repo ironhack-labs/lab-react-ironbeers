@@ -7,10 +7,9 @@ export default class Home extends Component {
     state = {random:''}
     //axios get random beer
     componentDidMount(){
-        axios.get('https://ih-beers-api2.herokuapp.com/beers/random')
+        axios.get('https://ih-beers-api.herokuapp.com/beers/random')
         .then(response=>{
             let rbeer = response.data
-            console.log(rbeer._id)
             this.setState({
                 random:rbeer._id
             })

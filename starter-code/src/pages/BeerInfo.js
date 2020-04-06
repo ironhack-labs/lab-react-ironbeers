@@ -8,7 +8,7 @@ export default class BeerInfo extends Component {
     }
     //axios get beer by searching with id in url
     componentDidMount(){
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.id}`)
+        axios.get(`https://ih-beers-api.herokuapp.com/beers/${this.props.match.params.id}`)
         .then(response=>{
             let beer = response.data
             this.setState({

@@ -1,25 +1,37 @@
 import React, { Component } from 'react'
 import Nav from '../components/Nav'
 import axios from 'axios'
+import qs from 'qs'
 
 export default class NewBeer extends Component {
-    state={style:{
-        backgroundColor:'dodgerblue'
-    },
-    button:'Create'
+    state={
+        button:'Create',
+        style:{
+            backgroundColor:'dodgerblue'
+        },
+        form:{}
     }
     //for each input, create a state property matching the input-name and give it the value of the input-value
     getSet = (e) => {
+        let styleobject = this.state.form
+        styleobject[e.target.name] = e.target.value
         this.setState({
-            [e.target.name]:e.target.value
+            form:styleobject
         })
     }
 
     //axios post to create new beer with API
     post = () => {
-        axios.post('https://ih-beers-api2.herokuapp.com/beers/new', this.state)
+        axios({
+            method:'POST',
+            url:'https://ih-beers-api.herokuapp.com/beers/new',
+            data:qs.stringify(this.state.form),
+            headers:{
+                'content-type':'application/x-www-form-urlencoded'
+            }
+        })
         .then(response=>{
-            //change button color and text depending on success or failure to create new beer
+            // change button color and text depending on success or failure to create new beer
             if (response.status === 200) {
                 this.setState({
                     button:'Success!',
@@ -35,6 +47,10 @@ export default class NewBeer extends Component {
                     }
                 })
             }
+            setTimeout(()=>{
+                this.props.history.push(`/beer/${response.data._id}`)
+            }, 1000)
+
         })
         .catch(err=>{
             this.setState({
@@ -43,7 +59,7 @@ export default class NewBeer extends Component {
                         backgroundColor:'red'
                     }
                 })
-            console.log(err)})
+            console.log("ERROR AXIOS - ", err)})
     }
 
     render() {
