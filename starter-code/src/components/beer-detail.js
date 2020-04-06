@@ -22,8 +22,10 @@ class BeerDetail extends Component {
         }
         axios.get(`https://ih-beers-api.herokuapp.com/beers/${theId}`)
         .then(response => {
+            let tempBeer = {...response.data}
+            tempBeer.first_brewed = tempBeer.first_brewed.slice(0,10)
             console.log(response)
-            this.setState({theBeer: response.data})
+            this.setState({theBeer: tempBeer})
         })
         .catch((error)=> {
             console.log(error);

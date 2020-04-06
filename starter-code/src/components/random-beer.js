@@ -17,7 +17,10 @@ class RandomBeer extends Component {
         axios.get("https://ih-beers-api.herokuapp.com/beers/random")
         .then(response => {
             console.log(response)
-            this.setState({randomBeer: response.data})
+            let tempBeer = {...response.data}
+            tempBeer.first_brewed = tempBeer.first_brewed.slice(0,10)
+            this.setState({randomBeer: tempBeer})
+            // this.setState({randomBeer: response.data})
         })
         .catch((error)=> {
             console.log(error);
