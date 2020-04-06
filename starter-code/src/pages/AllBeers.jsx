@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../components/Nav.jsx';
 import axios from 'axios'; 
 import './allBeers.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import {  Route } from 'react-router-dom';
 // import SingleBeer from './SingleBeer';
 
