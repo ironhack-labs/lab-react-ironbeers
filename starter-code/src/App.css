@@ -4,7 +4,10 @@
 
 .App-header {
   background-color: rgb(12, 177, 243);
-  height: 50px;
+  height: 70px;
   padding: 20px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

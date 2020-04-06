@@ -5,7 +5,7 @@ import Home from './pages/Home.jsx';
 import AllBeers from './pages/AllBeers.jsx';
 import RandomBeer from './pages/RandomBeer.jsx';
 import NewBeer from './pages/NewBeer.jsx';
-// import SingleBeer from './pages/SingleBeer.jsx';
+import SingleBeer from './pages/SingleBeer.jsx';
 
 class App extends Component {
   render() {
@@ -14,8 +14,8 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/beers" component={AllBeers} />
-            {/* <Route path="/beers/:_id" component={SingleBeer}/> */}
+            <Route exact path="/beers" component={AllBeers} />
+            <Route path="/beers/:beerId" component={SingleBeer}/>
             <Route path="/random-beer" component={RandomBeer} />
             <Route path="/new-beer" component={NewBeer} />
           </Switch>
