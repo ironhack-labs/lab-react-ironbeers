@@ -1,3 +1,11 @@
+.Home-link {
+  text-decoration: none;
+}
+
 .Home-img {
-  width: 50%;
+  width: 90%;
+}
+
+.Home-heading {
+  margin: 0;
 }

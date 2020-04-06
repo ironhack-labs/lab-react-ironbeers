@@ -1,3 +1,42 @@
+.ListBeers-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.ListBeers-container {
+  display: flex;
+  padding: 3%;
+}
+
 .ListBeers-img {
-  height: 150px;
+  height: 100px;
+  margin-right: 0.5rem;
+}
+
+.ListBeers-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.ListBeers-name {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.ListBeers-tagline {
+  color: #bfbfbf;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+.ListBeers-contributor {
+  font-size: 0.75rem;
+}
+
+.ListBeers-highlight {
+  border-bottom: 1px solid #f0f0f0;
 }

@@ -5,8 +5,8 @@ import '../stylesheets/Home.css';
 class Home extends Component {
   render() {
     return (
-      <div className="Home container-fluid">
-        <Link className="Home-link container-fluid" to="/ListBeers">
+      <div className="Home">
+        <Link className="Home-link" to="/ListBeers">
           <img src="../images/beers.png" alt="" className="Home-img" />
           <h1 className="Home-heading">All Beers</h1>
         </Link>
