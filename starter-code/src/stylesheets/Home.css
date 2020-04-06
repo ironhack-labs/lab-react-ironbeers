@@ -2,10 +2,19 @@
   text-decoration: none;
 }
 
+.Home-content {
+  text-align: left;
+}
+
 .Home-img {
   width: 90%;
 }
 
 .Home-heading {
   margin: 0;
+}
+
+.Home-text {
+  font-size: 0.75rem;
+  text-align: left;
 }
