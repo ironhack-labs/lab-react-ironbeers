@@ -3,7 +3,7 @@ import "../styling/BeerDetail.css";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 
-export class BeerDetail extends React.Component {
+export class RandomBeer extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -14,7 +14,7 @@ export class BeerDetail extends React.Component {
   componentDidMount() {
     const selectedBeer = this.props.match.params.id;
     axios
-      .get(`https://ih-beers-api.herokuapp.com/beers/${selectedBeer}`)
+      .get("https://ih-beers-api.herokuapp.com/beers/random")
       .then(response => {
         console.log("one beer response: ", response);
         this.setState({ beer: response.data });
@@ -57,4 +57,4 @@ export class BeerDetail extends React.Component {
   }
 }
 
-export default BeerDetail;
+export default RandomBeer;

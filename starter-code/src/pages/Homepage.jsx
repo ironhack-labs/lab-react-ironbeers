@@ -21,7 +21,7 @@ export class Homepage extends React.Component {
             </section>
           </Link>
 
-          <Link exact to="/beers/detail/random">
+          <Link exact to="/beers/random">
           <section className="main-section">
               <img src="/images/random-beer.png" alt="Beer" />
               <h2>Random Beer</h2>

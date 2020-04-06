@@ -6,6 +6,8 @@ import Homepage from "./pages/Homepage";
 import BeerList from "./pages/BeerList";
 import BeerDetail from "./pages/BeerDetail";
 import AddBeer from "./pages/AddBeer";
+import RandomBeer from "./pages/RandomBeer";
+
 
 class App extends Component {
   render() {
@@ -15,6 +17,7 @@ class App extends Component {
           <Route exact path="/" component={Homepage}></Route>
           <Route exact path="/beers" component={BeerList}></Route>
           <Route exact path="/beers/new" component={AddBeer}></Route>
+          <Route exact path="/beers/random" component={RandomBeer}></Route>
           <Route exact path="/beers/:id" component={BeerDetail}></Route>
         </Switch>
       </div>
