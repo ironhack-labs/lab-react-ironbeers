@@ -2,7 +2,6 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "../styling/Homepage.css"
 
-
 export class Homepage extends React.Component {
   render() {
     return (

@@ -12,3 +12,7 @@
   margin: 0px 2vh;
   color: gray;
 }
+
+.main-section img{
+  max-width: 100%;
+}

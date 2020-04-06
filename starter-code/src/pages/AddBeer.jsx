@@ -51,7 +51,7 @@ class AddBeer extends React.Component {
     return (
       <div className="add-beer">
         <Navbar />
-        <h2>Add a new beer</h2>
+        {/* <h2>Add a new beer</h2> */}
         <form onSubmit={this.handleSubmit}>
           <div class="form-group">
             <label for="name">Name:</label>
@@ -114,7 +114,7 @@ class AddBeer extends React.Component {
             />
           </div>
           <div class="form-group">
-            <label>Created by:</label>
+            <label>Contributed by:</label>
             <input
               className="form-control"
               type="text"
@@ -124,7 +124,7 @@ class AddBeer extends React.Component {
             />
           </div>
 
-          <button type="submit" className="btn btn-warning">Add new beer</button>
+          <button type="submit" className="btn btn-block">ADD NEW</button>
         </form>
 
       </div>

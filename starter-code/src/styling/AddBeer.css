@@ -5,3 +5,18 @@ margin: 2vh;
 form{
   margin: 3vh;
 }
+
+.add-beer input {
+  border-radius: 26px;
+}
+
+.add-beer label {
+  float: left;
+  margin-left: 2vh;
+}
+
+.add-beer button {
+  border-radius: 26px;
+  background-color: #3DC4FC;
+  color:white
+}

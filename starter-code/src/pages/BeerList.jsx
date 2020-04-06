@@ -3,17 +3,18 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import Navbar from "../components/Navbar";
+import SearchBeer from "../components/SearchBeer";
 import "../styling/BeerList.css";
 
 export class BeerList extends React.Component {
   constructor() {
     super();
     this.state = {
-      beers: []
+      beers: null
     };
   }
 
-  componentDidMount() {
+  getAllBeers() {
     axios
       .get("https://ih-beers-api.herokuapp.com/beers")
       .then(response => {
@@ -25,11 +26,36 @@ export class BeerList extends React.Component {
       });
   }
 
+  componentDidMount() {
+    this.getAllBeers();
+  }
+
+  handleSearch = searchValue => {
+    if (searchValue.trim().length === 0) {
+      this.getAllBeers();
+    } else {
+      axios
+        .get(`https://ih-beers-api.herokuapp.com/beers/search?q=${searchValue}`)
+        .then(response => {
+          console.log("all beers response: ", response);
+          this.setState({ beers: response.data });
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  };
+
   render() {
     return (
       <div>
         <Navbar />
+        <SearchBeer handleSearch={this.handleSearch} />
+
         {!this.state.beers && <h1>Loading...</h1>}
+        {this.state.beers && this.state.beers.length === 0 && (
+          <h1>No beer found</h1>
+        )}
         {this.state.beers && (
           <div className="container">
             {this.state.beers.map(beer => (
