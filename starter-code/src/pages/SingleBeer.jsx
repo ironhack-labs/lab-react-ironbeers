@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../stylesheets/SingleBeer.css';
 
 class SingleBeer extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class SingleBeer extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://ih-beers-api.herokuapp.com/beers/${this.props.match.params.beerId}`
+        `https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.beerId}`
       )
       .then((res) => {
         this.setState({
@@ -28,7 +29,6 @@ class SingleBeer extends Component {
   render() {
     return (
       <div className="SingleBeer">
-        {this.state.beer && <h1>Opening Fridge....</h1>}
         {this.state.beer && (
           <div className="SingleBeer-detail">
             <img

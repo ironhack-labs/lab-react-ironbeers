@@ -16,6 +16,7 @@ class AddNewBeer extends Component {
       name: '',
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -28,7 +29,7 @@ class AddNewBeer extends Component {
     e.preventDefault();
     axios({
       method: 'POST',
-      url: 'https://ih-beers-api.herokuapp.com/beers/new',
+      url: 'https://ih-beers-api2.herokuapp.com/beers',
       data: qs.stringify(this.state),
       headers: {
         'content-type': 'application/x-www-form-urlencoded',

@@ -13,7 +13,7 @@ class ListBeers extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://ih-beers-api.herokuapp.com/beers').then((res) => {
+    axios.get('https://ih-beers-api2.herokuapp.com/beers').then((res) => {
       this.setState({ beers: res.data });
     });
   }
