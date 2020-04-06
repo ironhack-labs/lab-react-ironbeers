@@ -15,15 +15,15 @@ class BeerDetail extends Component {
     componentDidMount() {
         debugger
         let theId = 0;
-        if (this.props.match) {
+        // if (this.props.match) {
             theId = this.props.match.params.id;
-        } else {
-            theId = this.props.beer._id
-        }
+        // } else {
+        //     theId = this.props.beer._id
+        // }
         axios.get(`https://ih-beers-api.herokuapp.com/beers/${theId}`)
         .then(response => {
             let tempBeer = {...response.data}
-            tempBeer.first_brewed = tempBeer.first_brewed.slice(0,10)
+            // tempBeer.first_brewed = tempBeer.first_brewed.slice(0,10)
             console.log(response)
             this.setState({theBeer: tempBeer})
         })
@@ -38,20 +38,33 @@ class BeerDetail extends Component {
            
             <div >
                  <Navbar />
-                <div className= "beer-bottle">
-                    <div>
-                        <img src={this.state.theBeer.image_url} alt=""/>
+
+                <div className="card">
+                    <div className="card-image">
+                        <figure className="image">
+                        <img src={this.state.theBeer.image_url} alt="beer"/>
+                        </figure>
                     </div>
-                    <div className="desc">
-                        <h2 >{this.state.theBeer.name}</h2> 
-                        <p>{this.state.theBeer.tagline}</p>
-                        <p>{this.state.theBeer.first_brewed}</p>
-                        <p>{this.state.theBeer.attenuation_level}</p>
-                        <p>{this.state.theBeer.description}</p>
-                        <p>{this.state.theBeer.contributed_by}</p> 
+                    <div className="card-content">
+                        <div className="media">
+                            
+                            <div className="media-content">
+                                <p className="title is-4">{this.state.theBeer.name}</p>
+                                <p className="subtitle is-6">{this.state.theBeer.tagline}</p>
+                                <p className="subtitle is-6">{this.state.theBeer.attenuation_level}</p>
+                            </div>
+                        </div>
+
+                        <div className="content2">
+                            {this.state.theBeer.description} 
+                            
+                        </div>
+                        <time >{this.state.theBeer.first_brewed}</time>
+                        <br/>
+                        <h6 className="subtitle is-6">{this.state.theBeer.contributed_by}</h6>
                     </div>
-                    
                 </div>
+
             </div>
         )
   

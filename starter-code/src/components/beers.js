@@ -29,17 +29,29 @@ class Beers extends Component {
         return (    
             <div className="list">
                 <Navbar />
-                <h1>beers</h1>
+                <h1 className="title is-1">beers</h1>
                 {this.state.beers.map((beer) => {
                     return (
-                        <div className= "beer-can" key={beer._id}>
-                            <img src={beer.image_url} alt=""/>
-                            <h2 >
-                                <Link to={`/beer-detail/${beer._id}` }>{beer.name}</Link>
-                            </h2> 
-                            <h5>{beer.tagline}</h5>
-                            <p>Created by: {beer.contributed_by}</p>
+                        <div className="box">
+                            <article className="media">
+                                <div className="media-left">
+                                <figure className="image is-32x32">
+                                    <img src={beer.image_url} alt="beer"/>
+                                </figure>
+                                </div>
+                                <div className="media-content">
+                                    <div className="content">
+                                        <p>
+                                        <strong><h3 className="title is-3"><Link to={`/beer-detail/${beer._id}` }>{beer.name}</Link></h3></strong>
+                                        </p>
+                                        <h5 className="title is-5">{beer.tagline}</h5>
+                                        <h6 className="subtitle is-6">Created by: {beer.contributed_by}</h6>
+                                    </div>
+                                
+                                </div>
+                            </article>
                         </div>
+
                     )
                                       
                 })}
