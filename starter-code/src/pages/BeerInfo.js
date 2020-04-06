@@ -14,7 +14,6 @@ export default class BeerInfo extends Component {
             this.setState({
                 beer:beer
             })
-            
         })
         .catch(err=>console.log(err))
     }

@@ -17,18 +17,8 @@ export default class NewBeer extends Component {
 
     //axios post to create new beer with API
     post = () => {
-        axios.post('https://ih-beers-api2.herokuapp.com/beers/new', {
-            name:this.state.name,
-            tagline:this.state.tagline,
-            description:this.state.description,
-            first_brewed:this.state.first_brewed,
-            brewers_tips:this.state.brewers_tips,
-            attenuation_level:this.state.attenuation_level,
-            contributed_by:this.state.contributed_by,
-            tagline:this.state.tagline
-        })
+        axios.post('https://ih-beers-api2.herokuapp.com/beers/new', this.state)
         .then(response=>{
-            console.log(response.status)
             //change button color and text depending on success or failure to create new beer
             if (response.status === 200) {
                 this.setState({
