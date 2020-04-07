@@ -57,7 +57,7 @@ export class BeerList extends React.Component {
         {this.state.beers && (
           <div className="container">
             {this.state.beers.map(beer => (
-              <Link key={beer._id} to={`/beers/${beer._id}`}>
+              <Link key={beer._id} to={`/beers/${beer._id}`} className="beer-detail-link">
                 <div className="row beer-list">
                   <div className="col-5">
                     <img src={beer.image_url} alt="Beer Bottle" />

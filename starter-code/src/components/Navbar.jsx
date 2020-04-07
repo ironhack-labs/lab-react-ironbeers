@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { getUser, logout } from "../utils/auth";
-import { withRouter } from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 
 import "../styling/Navbar.css";
 
@@ -11,11 +11,10 @@ class Navbar extends React.Component {
     this.logoutUser = this.logoutUser.bind(this);
   }
 
-  logoutUser(){
-    logout()
-    .then(() =>{
-      this.props.history.push('/login')
-    })
+  logoutUser() {
+    logout().then(() => {
+      this.props.history.push("/login");
+    });
   }
 
   render() {
@@ -28,7 +27,12 @@ class Navbar extends React.Component {
               <Link to="/signup">Signup</Link>
             </div>
             <div>
-              <Link to="/signup">🏠</Link>
+              <Link to="/signup">
+                <img
+                  className="home-icon"
+                  src="/pngkey.com-home-png-2373015.png"
+                ></img>
+              </Link>
             </div>
             <div>
               <Link to="/login">Login</Link>
@@ -40,7 +44,12 @@ class Navbar extends React.Component {
               <p>Welcome {user.username}</p>
             </div>
             <div>
-              <Link to="/">🏠</Link>
+              <Link to="/">
+                <img
+                  className="home-icon"
+                  src="/pngkey.com-home-png-2373015.png"
+                ></img>
+              </Link>
             </div>
             <div>
               <p onClick={this.logoutUser}>Logout</p>

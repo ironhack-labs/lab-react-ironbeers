@@ -8,7 +8,7 @@ export class Homepage extends React.Component {
     return (
       <div>
         <div>
-          <Link exact to="/beers">
+          <Link exact to="/beers" className="main-section-link">
             <section className="main-section">
               <img src="/images/beers.png" alt="Beers" />
               <h2>All Beers</h2>
@@ -22,7 +22,7 @@ export class Homepage extends React.Component {
             </section>
           </Link>
 
-          <Link exact to="/beers/random">
+          <Link exact to="/beers/random" className="main-section-link">
             <section className="main-section">
               <img src="/images/random-beer.png" alt="Beer" />
               <h2>Random Beer</h2>
@@ -36,7 +36,7 @@ export class Homepage extends React.Component {
             </section>
           </Link>
 
-          <Link exact to="/beers/new">
+          <Link exact to="/beers/new" className="main-section-link">
             <section className="main-section">
               <img src="/images/new-beer.png" alt="Beer" />
               <h2>New Beer</h2>

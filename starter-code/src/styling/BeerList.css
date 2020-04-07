@@ -1,6 +1,6 @@
 .beer-list {
   padding: 2vh 0;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .beer-list_text {
@@ -13,16 +13,19 @@
 
 .beer-list h2 {
   font-size: 1.3rem;
-  color:black
+  color: black
 }
 
 .beer-list h4 {
-  color:gray;
+  color: gray;
   font-size: 0.9rem;
 }
 
 .beer-list p {
-  color:black;
+  color: black;
   font-size: 0.6rem;
 }
 
+.beer-detail-link:hover {
+  text-decoration: none;
+}

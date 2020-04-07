@@ -16,3 +16,11 @@
 .main-section img{
   width: 100%;
 }
+
+.home-icon {
+  height: 3vh;
+}
+
+.main-section-link:hover {
+  text-decoration: none;
+}
