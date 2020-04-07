@@ -1,21 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { getUser } from '../utils/Auth';
 import '../stylesheets/Nav.css';
 
-class Nav extends Component {
-  render() {
-    return (
-      <div className="Nav container">
-        <nav className="NavBar">
-          <Link className="Nav-link" to="/">
-            <span className="Nav-icon icon">
-              <i className="fas fa-home"></i>
-            </span>
-          </Link>
-        </nav>
-      </div>
-    );
-  }
-}
+const Navbar = () => {
+  let user = getUser();
+  return (
+    <div className="Nav">
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar-menu">
+          {user ? (
+            <div class="navbar-end">
+              <div className="navbar-item">
+                <p>welcome {user.username}</p>
+              </div>
+              <Link className="navbar-item" to="/auth/logout">
+                logout
+              </Link>
+              <Link className="navbar-item" to="/user/profile">
+                profile
+              </Link>
+            </div>
+          ) : (
+            <div className="navbar-end">
+              <Link className="navbar-item" to="/auth/signup">
+                Signup
+              </Link>
+              <Link className="navbar-item" to="/auth/home">
+                <span className="nav-icon icon">
+                  <i className="fas fa-home"></i>
+                </span>
+              </Link>
+              <Link className="navbar-item" to="/auth/login">
+                Login
+              </Link>
+            </div>
+          )}
+        </div>
+      </nav>
+    </div>
+  );
+};
 
-export default Nav;
+export default Navbar;
