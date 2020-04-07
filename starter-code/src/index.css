@@ -3,3 +3,31 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#smaller{
+  height: 40vh;
+  object-fit: contain;
+  width: 15vw;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: green;
+}
+
+.columns{
+  width: 20vw;
+}
+
+#small {
+  width: 20vw;
+
+}
+
+.bord{
+  border-bottom: grey solid 1px;
+  border-right: grey solid 1px;
+}
