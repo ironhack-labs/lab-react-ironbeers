@@ -24,7 +24,7 @@ const home = () => {
         <div className="random-beer">
           <Link style={{ textDecoration: 'none' }} to="./RandomBeer</Link>">
           <img src="/images/random-beer.png" alt="beer" />
-          <h2>Random beer</h2>
+          <h2>Random Beer</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             lacinia eleifend ornare. Etiam eget dui egestas, sodales magna id,
