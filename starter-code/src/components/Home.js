@@ -26,6 +26,15 @@ class Home extends React.Component {
                 <Link to="/new-beer">
                     <Homeblock image="/images/random-beer.png" title="New beer" text="charles"/>
                 </Link>
+
+                <Link to="/signup">
+                    Signup
+                </Link>
+                <br></br>
+                <Link to="/login">
+                    Login
+                </Link>
+
             </div>
         )
     }
