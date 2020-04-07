@@ -1,9 +1,22 @@
+.Home {
+  padding: 3%;
+  text-align: center;
+}
+
 .Home-link {
+  color: #000000;
   text-decoration: none;
 }
 
 .Home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0.75rem 0;
   text-align: left;
+  padding: 0 5%;
+  width: 80%;
 }
 
 .Home-img {
@@ -11,10 +24,12 @@
 }
 
 .Home-heading {
+  font-size: 1rem;
   margin: 0;
 }
 
 .Home-text {
+  color: #bfbfbf;
   font-size: 0.75rem;
   text-align: left;
 }
