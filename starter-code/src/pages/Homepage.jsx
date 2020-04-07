@@ -1,11 +1,13 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styling/Homepage.css"
+
 
 export class Homepage extends React.Component {
   render() {
     return (
       <div>
+        <div>
           <Link exact to="/beers">
             <section className="main-section">
               <img src="/images/beers.png" alt="Beers" />
@@ -21,7 +23,7 @@ export class Homepage extends React.Component {
           </Link>
 
           <Link exact to="/beers/random">
-          <section className="main-section">
+            <section className="main-section">
               <img src="/images/random-beer.png" alt="Beer" />
               <h2>Random Beer</h2>
               <p>
@@ -35,7 +37,7 @@ export class Homepage extends React.Component {
           </Link>
 
           <Link exact to="/beers/new">
-          <section className="main-section">
+            <section className="main-section">
               <img src="/images/new-beer.png" alt="Beer" />
               <h2>New Beer</h2>
               <p>
@@ -47,7 +49,7 @@ export class Homepage extends React.Component {
               </p>
             </section>
           </Link>
-
+        </div>
       </div>
     );
   }

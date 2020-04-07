@@ -1,3 +1,5 @@
+import "../styling/SearchBeer.css";
+
 import React from "react";
 
 class SearchBeer extends React.Component {

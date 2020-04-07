@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-import Navbar from "../components/Navbar";
 import DetailView from "../components/DetailView";
 
 export class RandomBeer extends React.Component {
@@ -29,7 +28,6 @@ export class RandomBeer extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
         {!this.state.beer && <h1>Loading...</h1>}
         {this.state.beer && (
           <DetailView beer={this.state.beer}/>

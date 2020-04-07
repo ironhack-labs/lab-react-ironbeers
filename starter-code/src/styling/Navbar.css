@@ -1,10 +1,21 @@
-nav {
+.nav {
   background-color: #3DC4FC;
-  color: white;
-  height: 5vh;
-  padding-top: 4px;
+  padding: 2vh;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  color:white
 }
 
-nav p {
-  margin-top: 5px;
+.nav p {
+  margin: 0;
+}
+
+.nav a {
+  color: white;
+  padding: 1vh 1vh 0;
+}
+
+.nav a:hover {
+  text-decoration: none;
 }

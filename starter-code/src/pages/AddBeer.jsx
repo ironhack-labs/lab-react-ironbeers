@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import qs from "qs";
 
-import Navbar from "../components/Navbar";
 import "../styling/AddBeer.css";
 
 class AddBeer extends React.Component {
@@ -50,7 +49,6 @@ class AddBeer extends React.Component {
   render() {
     return (
       <div className="add-beer">
-        <Navbar />
         {/* <h2>Add a new beer</h2> */}
         <form onSubmit={this.handleSubmit}>
           <div class="form-group">

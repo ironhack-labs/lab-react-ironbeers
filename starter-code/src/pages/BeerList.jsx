@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import Navbar from "../components/Navbar";
 import SearchBeer from "../components/SearchBeer";
 import "../styling/BeerList.css";
 
@@ -49,7 +48,6 @@ export class BeerList extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
         <SearchBeer handleSearch={this.handleSearch} />
 
         {!this.state.beers && <h1>Loading...</h1>}
@@ -59,7 +57,7 @@ export class BeerList extends React.Component {
         {this.state.beers && (
           <div className="container">
             {this.state.beers.map(beer => (
-              <Link to={`/beers/${beer._id}`}>
+              <Link key={beer._id} to={`/beers/${beer._id}`}>
                 <div className="row beer-list">
                   <div className="col-5">
                     <img src={beer.image_url} alt="Beer Bottle" />
