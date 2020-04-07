@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class NavUser extends Component {
-   
-   render() {
-      return (
-         <div>
-            
-         </div>
-      )
-   }
+export default function NavUser(props) {
+   return (
+      <div className='nav-user'>
+         <h3>Hello {props.username}</h3>
+         <button onClick={props.logout}>Log Out</button>
+      </div>
+   )
 }
+
 

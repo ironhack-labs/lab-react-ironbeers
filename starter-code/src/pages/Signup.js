@@ -1,19 +1,11 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import qs from 'qs'
+import {signup} from '../utils/auth'
 import Nav from '../components/Nav'
 
 export default class Signup extends Component {
 
    submitSignUp = () => {
-      axios({
-         method:'post',
-         url:'https://ih-beers-api.herokuapp.com/auth/signup',
-         data:qs.stringify(this.state),
-         headers: {
-            "content-type":"application/x-www-form-urlencoded"
-         }
-      })
+      signup(this.state)
       .then(response=>{
          this.props.history.push('/login')
       })

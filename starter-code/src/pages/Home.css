@@ -7,11 +7,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: rgb(185, 206, 224);
+    overflow-y: scroll;
 }
 .link-home {
     width: 80%;
+    margin:20px
 }
 
 .home-part {
@@ -54,4 +56,9 @@
 .nav-link2 {
     text-decoration: none;
     color: white;
+    background-color: rgb(27, 115, 204);
+    height: 100%;
+    width: 100px;
+    text-align: center;
+    font-size: 1.2rem;
 }

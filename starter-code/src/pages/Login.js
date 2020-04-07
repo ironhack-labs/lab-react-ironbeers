@@ -1,32 +1,17 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import qs from 'qs'
+// import axios from 'axios'
+// import qs from 'qs'
 import Nav from '../components/Nav'
+import {login} from '../utils/auth'
 
 export default class Login extends Component {
-
+   state = {}
    submitLogin = () => {
-      axios({
-         method:'post',
-         url:'https://ih-beers-api.herokuapp.com/auth/login',
-         data:qs.stringify(this.state),
-         headers: {
-            "content-type":"application/x-www-form-urlencoded"
-         }
-      })
+      login(this.state)
       .then(response=>{
-         console.log(response.data)
-         axios.get('https://ih-beers-api.herokuapp.com/user/profile')
-         .then(response=>{
-            console.log(response.data)
-         })
-         .catch(err=>console.log(err))
-         // this.props.history.push('/profile')         
+         this.props.history.push('/profile')
       })
-      .catch(err=>console.log(err))
    }
-   
-
    handleChange = (e) => {
       this.setState({
          [e.target.name]:e.target.value

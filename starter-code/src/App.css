@@ -5,6 +5,7 @@
 @import './pages/NewBeer.css';
 @import './pages/AllBeers.css';
 @import './pages/Auth.css';
+@import './pages/Profile.css';
 
 
 * {

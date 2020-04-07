@@ -1,26 +1,37 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import {getUser, logout} from '../utils/auth'
+import NavUser from '../components/NavUser'
 
 export default class Profile extends Component {
    state = {
-      profile:{
-         name:''
-      }
+      user:{}
    }
-   componentDidMount = () => {
-      axios.get('https://ih-beers-api.herokuapp.com/user/profile')
-      .then(response=>{
+   componentDidMount(){
+      let userprofile = getUser()
+      if (userprofile){
          this.setState({
-            profile:response.data
+            user:userprofile
          })
-      })
-      .catch(err=>console.log(err))
+      } else {
+         this.props.history.push('/login')
+      }
+
    }
-   
+   logMeOut = () => {
+      logout()
+      this.props.history.push('/login')
+   }
    render() {
       return (
-         <div>
-            <h2>Welcome{this.state.profile.name}</h2>
+         <div className='profile-container'>
+            <NavUser
+               username={this.state.user.username}
+               logout={this.logMeOut}
+            />
+            <div className="user-profile">
+               <h2>Welcome {this.state.user.firstname} {this.state.user.lastname}</h2>
+               <h4>Email: {this.state.user.email}</h4>
+            </div>
          </div>
       )
    }
