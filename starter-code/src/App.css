@@ -4,6 +4,8 @@
 @import './pages/Home.css';
 @import './pages/NewBeer.css';
 @import './pages/AllBeers.css';
+@import './pages/Auth.css';
+
 
 * {
     padding:0;
