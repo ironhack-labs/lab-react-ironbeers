@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -26,3 +26,33 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.homepage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.homepage p {
+  width: 40%;
+}
+
+.navigation-bar nav {
+  background-color: #3DC4FC;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.navigation-bar img {
+  width: 2%;
+}
+
+.all-beers-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
