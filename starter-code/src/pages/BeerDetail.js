@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
 import axios from "axios";
-import Header from '../components/Header';
-// import { Link } from 'react-router-dom';
+import Nav from '../components/Nav';
+import './BeerDetail.css'
 
 class BeerDetail extends Component {
   constructor(props){
@@ -26,12 +26,12 @@ class BeerDetail extends Component {
     return (
       <div className="beerDetail">
         <div className="beerDetail-header">
-          <Header />
+          <Nav />
         </div>
         <div className="beerDetail-card">
           {!this.state.beer && <h1>loading...</h1>}
           {this.state.beer && (
-            <img src={this.state.beer.image_url} alt="beer" />
+            <img classname="beerDetail-image" src={this.state.beer.image_url} alt="beer" />
           )}
           {this.state.beer && <h1>{this.state.beer.name}</h1>}
           {this.state.beer && <h4>{this.state.beer.tagline}</h4>}

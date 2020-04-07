@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import qs from 'qs';
-import Header from '../components/Header';
-// import BeerDetail from './BeerDetail';
+import Nav from '../components/Nav';
+import './AddBeerFile.css'
 
 export default class AdBeerFile extends Component {
  
@@ -38,9 +37,9 @@ export default class AdBeerFile extends Component {
 
   render() {
     return (
-      <div>
-        <Header />
-        <h1>add a new beer to our list</h1>
+      <div className="add-beer-file">
+        <Nav />
+        <h3>Add a new beer to our list</h3>
         <form onSubmit={this.handleSubmit} ref={this.formRef}>
           <input
             type="text"
@@ -79,7 +78,6 @@ export default class AdBeerFile extends Component {
           />
           <label className="custom-file-upload">
             <input type="file" name="picture"/>
-            upload beer picture
           </label>
           <button type="submit">Add beer</button>
         </form>
@@ -87,5 +85,3 @@ export default class AdBeerFile extends Component {
     );
   }
 }
-
-

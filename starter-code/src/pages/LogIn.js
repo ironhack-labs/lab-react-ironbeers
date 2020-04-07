@@ -1,72 +1,56 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Nav from "../components/Nav";
 import axios from 'axios';
-import qs from 'qs';
-import Header from '../components/Header';
-import { Link } from 'react-router-dom';
+import qs from "qs";
 
+export default class Login extends Component {
 
-class LogIn extends Component {
   constructor(props) {
-    super(props);
-
-    this.state = {
-      username: '',
-      password: '',
-    };
+    super(props)
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+  state = {
+    username: "",
+    password: ""
+  }
 
-  handleChange(event) {
+  handleChange(e) {
     this.setState({
-      [event.target.name]: event.target.value,
-    });
+      [e.target.name]: e.target.value
+    })
   }
 
   handleSubmit(e) {
     e.preventDefault();
     axios({
-      method: 'POST',
-      url: 'hthttps://ih-beers-api.herokuapp.com/auth/login',
-      withCredentials: true,
+      method: "POST",
       data: qs.stringify(this.state),
+      url: "https://ih-beers-api.herokuapp.com/auth/login",
       headers: {
-        'content-type': 'application/x-www-form-urlencoded',
-      },
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
     })
-      // .then((response) => {
-      //   this.props.history.push(`/login/${response.data._id}`);
-      // })
-      .catch((err) => {});
+      .then((response) => {
+        localStorage.setItem("user", JSON.stringify(response.data))
+        this.props.history.push("/")
+      })
   }
 
   render() {
     return (
-      <div>
-        <Header />
-        <h1>Please log in</h1>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            placeholder="username"
-            value={this.state.username}
-            onChange={this.handleChange}
-            name="username"
-          />
-          <input
-            type="text"
-            placeholder="password"
-            value={this.state.password}
-            onChange={this.handleChange}
-            name="password"
-          />
-          <Link to="../">
-            <button type="submit">Log in</button>
-          </Link>
-        </form>
-      </div>
-    );
+      <>
+        <div className="login-nav">
+          <Nav />
+        </div>
+        <div>
+          <form onSubmit={this.handleSubmit}>
+            <input onChange={this.handleChange} value={this.state.username} placeholder="username" type="text" name="username" />
+            <input onChange={this.handleChange} value={this.state.password} placeholder="password" type="password" name="password" />
+            <button type="submit">Submit </button>
+          </form>
+        </div>
+      </>
+    )
   }
 }
-
-export default LogIn;

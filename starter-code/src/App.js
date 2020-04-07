@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-// import './App.css';
 import Home from '../src/pages/home';
 import { Switch, Route } from 'react-router-dom';
 import beers from './pages/beers';
 import AddBeer from './pages/AddBeer';
 import BeerDetail from './pages/BeerDetail';
-import LogIn from './pages/LogIn';
+import Login from './pages/Login';
 import AddBeerFile from './pages/AddBeerFile';
 import RandomBeer from './pages/RandomBeer';
-import SignUp from './pages/SignUp';
+import Signup from './pages/Signup';
+import Profile from './pages/Profile';
 
 class App extends Component {
   render() {
@@ -19,10 +19,11 @@ class App extends Component {
           <Route path="/beers" component={beers} />
           <Route path="/addbeer" component={AddBeer} />
           <Route path="/beer-detail/:beerId" component={BeerDetail} />
-          <Route path="/login" component={LogIn} />
+          <Route path="/login" component={Login} />
           <Route path="/addbeerfile" component={AddBeerFile} />
           <Route path="/randombeer" component={RandomBeer} />
-          <Route path="/signup" component={SignUp} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/profile" component={Profile} />
         </Switch>
       </div>
     );

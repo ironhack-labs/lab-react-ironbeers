@@ -1,0 +1,17 @@
+.form {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    label {
+        float: left;
+    }
+    .field {
+        width: 40%;
+    }
+    button {
+        width: 40%;
+    }
+}

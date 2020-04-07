@@ -1,0 +1,19 @@
+form {
+  display:flex;
+  flex-direction:column;
+  width: 30vw;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+form input, button {
+  padding: 2%;
+  margin: 2%;
+  border: 1px solid  #008200;
+}
+
+button {
+  background-color: #008200;
+  color: white;
+}

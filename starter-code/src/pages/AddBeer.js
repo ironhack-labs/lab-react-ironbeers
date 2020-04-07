@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import qs from 'qs';
-import Header from '../components/Header';
-// import BeerDetail from './BeerDetail';
+import Nav from '../components/Nav';
+import './AddBeer.css'
 
 class AddBeer extends Component {
   constructor(props) {
@@ -47,9 +47,9 @@ class AddBeer extends Component {
 
   render(){
     return (
-      <div>
-        <Header />
-        <h1>add a new beer to our list</h1>
+      <div className="add-beer">
+        <Nav />
+        <h3>Add a new beer to our list</h3>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"

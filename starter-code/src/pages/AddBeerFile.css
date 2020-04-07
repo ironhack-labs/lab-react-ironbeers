@@ -1,0 +1,12 @@
+.add-beer-file h3 {
+text-align: center;
+}
+
+.custom-file-upload {
+  display:flex;
+  flex-direction:column;
+  width: 30vw;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}

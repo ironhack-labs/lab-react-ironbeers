@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import './App.css';
 import axios from 'axios';
-import Header from "../components/Header";
-// import BeerDetail from "./BeerDetail"
+import Nav from "../components/Nav";
 import './beers.css';
 import { Link } from 'react-router-dom';
 
@@ -25,23 +23,21 @@ class beers extends Component {
   render() {
     return (
       <div className="beers">
-        <Header />
-        <p>Check out all of these beers</p>
-
+        <div className="beers-nav">
+          <Nav />
+        </div>
         <div className="all-beers">
           {this.state.beers.map((beer) => (
-            <div className="beer-card">
-              <Link to={`/beer-detail/${beer._id}`}>
-                <div className="beer-image">
-                  <img src={beer.image_url} alt="beer" />
-                </div>
-                <div className="beer-text">
-                  <h1>{beer.name}</h1>
+              <Link style={{ textDecoration: 'none', color: 'black' }} to={`/beer-detail/${beer._id}`}>
+              <div className="beers-card">
+                <div><img className="beers-image" src={beer.image_url} alt="beer"/></div> 
+                <div className="beers-text">
+                  <h3>{beer.name}</h3>
                   <h5>{beer.tagline}</h5>
                   <p>Created by: {beer.contributed_by}</p>
                 </div>
+              </div>
               </Link>
-            </div>
           ))}
         </div>
       </div>

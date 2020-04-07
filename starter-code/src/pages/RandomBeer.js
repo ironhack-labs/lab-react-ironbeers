@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Header from '../components/Header';
-// import { Link } from 'react-router-dom';
+import Nav from '../components/Nav';
+import './RandomBeer.css'
+
 
 class RandomBeer extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class RandomBeer extends Component {
     return (
       <div className="RandomBeer">
         <div className="RandomBeer-header">
-          <Header />
+          <Nav />
         </div>
         <div className="RandomBeer-card">
           {!this.state.beer && <h1>loading...</h1>}
