@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import qs from 'qs';
 import Nav from '../components/Nav';
 
 class NewBeer extends Component {
@@ -25,23 +24,23 @@ class NewBeer extends Component {
             })
         } 
     
-        handleSubmit(e){
+        handleSubmit(e) {
+            e.preventDefault(); 
             axios({
-                method: "POST",
                 url: "https://ih-beers-api.herokuapp.com/beers/new",
-                data: qs.stringify(this.state),
-                header: {
-                    "content-type": "application/x-www-form-urlencoded"
-                }
+                data: this.state,
+                method: "POST"
             })
-            // .then((response) => {
-            //     console.log(response)
-            //     this.props.history.push(`/beer/${response._id}`);
-            // })
-            .catch((err)=>{
-                console.log(err);
+            .then((response)=> {
+                console.log(response.data._id)
+                this.props.history.push(`/beer/${response.data._id}`)
             })
+            .catch((error)=> {
+                console.log(error)
+            })
+            
         }
+    
 
     render() {
         return (

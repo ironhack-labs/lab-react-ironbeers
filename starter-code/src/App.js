@@ -5,7 +5,11 @@ import Home from './pages/Home';
 import Beers from './pages/Beers';
 import BeerDetail from './components/BeerDetail';
 import RandomBeer from './pages/RandomBeer';
-import NewBeer from './pages/NewBeer'
+import NewBeer from './pages/NewBeer';
+import Login from './pages/Login';
+import SignUp from './pages/Signup';
+import Profile from './pages/Profile';
+import Logout from './pages/Logout'
 
 class App extends Component {
   render() {
@@ -17,6 +21,10 @@ class App extends Component {
           <Route path = '/beer/:id' component = {BeerDetail}/>
           <Route path = '/random-beer' component = {RandomBeer}/>
           <Route path = '/new-beer' component = {NewBeer}/>
+          <Route path = '/login' component = {Login}/>
+          <Route path = '/signup' component = {SignUp}/>
+          <Route path = '/profile' component = {Profile}/>
+          <Route path = '/logout' component = {Logout}/>
         </Switch>
       </div>
     );
