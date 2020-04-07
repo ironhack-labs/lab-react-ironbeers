@@ -1,34 +1,42 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Navbar from './nav';
+import {logout} from "../utils/auth";
 
 class Logout extends Component {
     constructor() {
         super()
 
         this.state = {
-            response: ""
+            response: "",
+            error:null
         }
     }
 
     componentDidMount() {
-        debugger
-        axios.get(`https://ih-beers-api.herokuapp.com/auth/logout`)
+        // debugger
+        logout()
         .then(response => {
             console.log(response)
-            this.setState({response: response.statusText})
+            this.setState({
+                response: response.statusText, 
+                error:null}, 
+                ()=> {
+                    this.props.history.push("/beers")
+                }
+            )
         })
         .catch((error)=> {
             console.log(error.response.data.message);
+            this.setState({error: error.response && error.response.data})
         });
+        
     }
 
     render() {
         return (
             <div>
                 <Navbar />
-               <h1>Logged out!</h1> 
-               <p>{this.state.response}</p>
+               <h1>Logging out ...</h1> 
             </div>
         )
     }

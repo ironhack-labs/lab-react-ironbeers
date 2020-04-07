@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Navbar from './nav';
-import qs from 'qs';
+import {signup} from "../utils/auth";
 
 class Signup extends Component {
     constructor() {
@@ -19,39 +18,35 @@ class Signup extends Component {
                 lastname : "",
                 email : ""
             }, 
-            newUser:{}   
+            error:null   
         }
     }
 
     handleInputChange (event) {
-        debugger
+        // debugger
         let temp_user = {...this.state.tempUser};
         temp_user[event.target.name] = event.target.value;
         this.setState({tempUser:temp_user})
     }
 
     handleFormSubmit(event) {
-        event.preventDefault();
-        debugger
-        axios({
-            method: "POST",
-            url: "https://ih-beers-api.herokuapp.com/auth/signup", 
-            data: qs.stringify(this.state.tempUser) ,
-            headers: {
-                "content-type": "application/x-www-form-urlencoded"
-            }
-        })
-        .then(response => {
-            console.log(response.data)
-            this.props.history.push({
-                pathname:`/user/profile`,
-                state: {user: response.data}
+       event.preventDefault();
+        // debugger
+        signup(this.state.tempUser)
+        .then(() => {
+            this.setState({error:null}, ()=>{
+                this.props.history.push({
+                    pathname:`/user/profile`
+                })
             })
+            
         })
         .catch((error)=> {
             console.log(error.response.data.message);
+            this.setState({error: error.response && error.response.data})
         });
     }
+
 
     render() {
             return (          
@@ -120,7 +115,7 @@ class Signup extends Component {
                                 </div>
                             </div>
 
-                            <input class="button is-link" type="submit" value="Submit" />
+                            <input className="button is-link" type="submit" value="Signup" />
                         </form>
                         
                     </div>

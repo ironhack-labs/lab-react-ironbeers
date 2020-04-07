@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {getUser} from "../utils/auth";
 import Navbar from './nav';
 
 
@@ -14,25 +14,14 @@ class Profile extends Component {
                 firstname  : "",  
                 lastname : "",
                 email : ""
-            }, 
-            newUser:{}   
+            }   
         }
     }
 
     componentDidMount() {
-        debugger
-        let tempUser = {...this.state.theUser};
-        tempUser = this.props.location.state.user;
+        // debugger
+        let tempUser = getUser();
         this.setState ({theUser:tempUser});
-        // axios.get(`https://ih-beers-api.herokuapp.com/user/profile`)
-        // .then(response => {
-        //     let tempUser = {...response.data}
-        //     console.log(response.data)
-        //     this.setState({theUser: tempUser})
-        // })
-        // .catch((error)=> {
-        //     console.log(error);
-        // });
     }
 
     render() {

@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
-// import BeerDetail from './beer-detail';
-import axios from 'axios';
+// import axios from 'axios';
 import Navbar from './nav';
-import qs from 'qs';
+// import qs from 'qs';
+import {addBeer} from '../utils/beer';
 
 class AddBeer extends Component {
     constructor() {
         super()
 
-        // this.nameInput = this.nameInput.bind(this);
-        // this.taglineInput = this.taglineInput.bind(this);
-        // this.descriptionInput = this.descriptionInput.bind(this);
-        // this.attenuationLevelInput = this.attenuationLevelInput.bind(this);
-        // this.brewersTipsInput = this.brewersTipsInput.bind(this);
-        // this.contributedByInput = this.contributedByInput.bind(this);
-
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
         this.state = {
-            response: 0 ,
             tempBeer: {
                 name:"",  
                 tagline : "", 
@@ -28,11 +20,18 @@ class AddBeer extends Component {
                 brewers_tips  : "",
                 attenuation_level: 0,  
                 contributed_by: "" 
-            }, 
-            newBeer:{}   
+            }
         }
     }
 
+    // keeping this for future refrences! Bear with me :)
+    // {keeping this for future refrences! Bear with me :)
+        // this.nameInput = this.nameInput.bind(this);
+        // this.taglineInput = this.taglineInput.bind(this);
+        // this.descriptionInput = this.descriptionInput.bind(this);
+        // this.attenuationLevelInput = this.attenuationLevelInput.bind(this);
+        // this.brewersTipsInput = this.brewersTipsInput.bind(this);
+        // this.contributedByInput = this.contributedByInput.bind(this);}
     // nameInput = (event) => {
     //     let tempBeerCopy = {...this.state.tempBeer};
     //     tempBeerCopy.name = event.target.value;
@@ -90,7 +89,7 @@ class AddBeer extends Component {
     //   }
 
     handleInputChange (event) {
-        debugger
+        // debugger
         let temp_beer = {...this.state.tempBeer};
         temp_beer[event.target.name] = event.target.value;
         this.setState({tempBeer:temp_beer})
@@ -98,20 +97,11 @@ class AddBeer extends Component {
 
     handleFormSubmit(event) {
         event.preventDefault();
-        // console.log(this.state.tempBeer)
-        debugger
-        axios({
-            method: "POST",
-            url: "https://ih-beers-api.herokuapp.com/beers/new", 
-            data: qs.stringify(this.state.tempBeer) ,
-            headers: {
-                "content-type": "application/x-www-form-urlencoded"
-            }
-        })
+        // debugger
+        addBeer(this.state.tempBeer)
         .then(response => {
             console.log(response)
             this.props.history.push(`/beer-detail/${response.data._id}`)
-            // this.setState({response: response.status, newBeer: response.data})
         })
         .catch((error)=> {
             console.log(error);
@@ -119,119 +109,103 @@ class AddBeer extends Component {
     }
 
     render() {
-        // debugger
-        // if (this.state.response === 200) {return(
-        //     <div>
-        //         <BeerDetail beer={this.state.newBeer}/>
-        //     </div>
-        // )} else {
-            return (          
-                <div>
-                    <Navbar />
-                    <div className= "add-form">                  
-                        <form onSubmit={this.handleFormSubmit}>
-                            <div className="field">
-                                <label className="label">Name</label>
-                                <div className="control">
-                                    <input 
-                                        className="input"
-                                        type="text" 
-                                        name="name" 
-                                        value={this.state.tempBeer.name} 
-                                        onChange={this.handleInputChange}/>   {/* the handler gets the event object by default */}
-                                </div>
+        return (          
+            <div>
+                <Navbar />
+                <div className= "add-form">                  
+                    <form onSubmit={this.handleFormSubmit}>
+                        <div className="field">
+                            <label className="label">Name</label>
+                            <div className="control">
+                                <input 
+                                    className="input"
+                                    type="text" 
+                                    name="name" 
+                                    value={this.state.tempBeer.name} 
+                                    onChange={this.handleInputChange}/>   {/* the handler gets the event object by default */}
                             </div>
-                            
-                            
-                          
-                            <div className="field">
-                                <label className="label">Tagline:</label>
-                                <div className="control">
-                                    <input 
-                                        className="input"
-                                        type="text" 
-                                        name="tagline" 
-                                        value={this.state.tempBeer.tagline} 
-                                        onChange={this.handleInputChange}/>
-                                </div>
-                                
-                            </div>
-                            <div className="field">
-                                <label>Description:</label>
-                                <div className="control">
-                                    <input 
-                                        className="input"
-                                        type="text" 
-                                        name="description" 
-                                        value={this.state.tempBeer.description} 
-                                        onChange={this.handleInputChange}/>
-                                </div>
-                            </div>
-                            
-                            
-                            <div className="field">
-                                <label>First_brewed:</label>
-                                <div className="control">
-                                    <input 
-                                        className="input"
-                                        type="date" 
-                                        name="first_brewed" 
-                                        value={this.state.tempBeer.first_brewed} 
-                                        onChange={this.handleInputChange}/>
-                                </div>
-                            </div>
-                            
-                            <div className="field">
-                                <label>Brewers_tips:</label>
-                                <div className="control">
-                                    <input 
-                                        className="input"
-                                        type="text" 
-                                        name="brewers_tips" 
-                                        value={this.state.tempBeer.brewers_tips} 
-                                        onChange={this.handleInputChange}/>
-                                </div>
-                            </div>
+                        </div>
 
-                            
-                            <div className="field">
-                                <label>Attenuation_level:</label>
-                                <div className="control">
-                                    <input 
-                                        className="input"
-                                        type="number" 
-                                        name="attenuation_level" 
-                                        value={this.state.tempBeer.attenuation_level} 
-                                        onChange={this.handleInputChange}/>
-                                </div>
-                            </div>
+                        <div className="field">
+                            <label className="label">Tagline:</label>
+                            <div className="control">
+                                <input 
+                                    className="input"
+                                    type="text" 
+                                    name="tagline" 
+                                    value={this.state.tempBeer.tagline} 
+                                    onChange={this.handleInputChange}/>
+                            </div>                               
+                        </div>
 
-                            
-                            <div className="field">
-                                <label>Contributed_by:</label>
-                                <div className="control">
-                                    <input 
-                                        className="input"
-                                        type="text" 
-                                        name="contributed_by" 
-                                        value={this.state.tempBeer.contributed_by} 
-                                        onChange={this.handleInputChange} />
-                                </div>
+                        <div className="field">
+                            <label>Description:</label>
+                            <div className="control">
+                                <input 
+                                    className="input"
+                                    type="text" 
+                                    name="description" 
+                                    value={this.state.tempBeer.description} 
+                                    onChange={this.handleInputChange}/>
                             </div>
+                        </div>
 
-                            <div class="control">
-                                <input class="button is-link" type="submit" value="Submit" />
+                        <div className="field">
+                            <label>First_brewed:</label>
+                            <div className="control">
+                                <input 
+                                    className="input"
+                                    type="date" 
+                                    name="first_brewed" 
+                                    value={this.state.tempBeer.first_brewed} 
+                                    onChange={this.handleInputChange}/>
                             </div>
-                            
-                            
-                            
-                        </form>
+                        </div>
                         
-                    </div>
+                        <div className="field">
+                            <label>Brewers_tips:</label>
+                            <div className="control">
+                                <input 
+                                    className="input"
+                                    type="text" 
+                                    name="brewers_tips" 
+                                    value={this.state.tempBeer.brewers_tips} 
+                                    onChange={this.handleInputChange}/>
+                            </div>
+                        </div>
+                
+                        <div className="field">
+                            <label>Attenuation_level:</label>
+                            <div className="control">
+                                <input 
+                                    className="input"
+                                    type="number" 
+                                    name="attenuation_level" 
+                                    value={this.state.tempBeer.attenuation_level} 
+                                    onChange={this.handleInputChange}/>
+                            </div>
+                        </div>
+                        
+                        <div className="field">
+                            <label>Contributed_by:</label>
+                            <div className="control">
+                                <input 
+                                    className="input"
+                                    type="text" 
+                                    name="contributed_by" 
+                                    value={this.state.tempBeer.contributed_by} 
+                                    onChange={this.handleInputChange} />
+                            </div>
+                        </div>
+
+                        <div className="control">
+                            <input className="button is-link" type="submit" value="Submit" />
+                        </div>
+                            
+                    </form>           
                 </div>
-            )
-        // }
-        
+            </div>
+        )
   
     }
 }

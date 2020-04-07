@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navbar from './nav';
+import {getAllBeers} from '../utils/beer';
 
 class Beers extends Component {
     constructor() {
@@ -14,9 +15,8 @@ class Beers extends Component {
 
     componentDidMount() {
         debugger
-        axios.get("https://ih-beers-api.herokuapp.com/beers")
+        getAllBeers()
         .then(response => {
-            // console.log(response)
             this.setState({beers: response.data})
         })
         .catch((error)=> {

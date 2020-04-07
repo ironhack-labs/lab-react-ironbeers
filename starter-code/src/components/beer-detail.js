@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Navbar from './nav';
+import {getOneBeer} from '../utils/beer'
 
 
 class BeerDetail extends Component {
@@ -14,17 +15,13 @@ class BeerDetail extends Component {
 
     componentDidMount() {
         debugger
-        let theId = 0;
-        // if (this.props.match) {
-            theId = this.props.match.params.id;
-        // } else {
-        //     theId = this.props.beer._id
-        // }
-        axios.get(`https://ih-beers-api.herokuapp.com/beers/${theId}`)
+        let theId = this.props.match.params.id;
+        getOneBeer(theId)
         .then(response => {
             let tempBeer = {...response.data}
-            // tempBeer.first_brewed = tempBeer.first_brewed.slice(0,10)
-            console.log(response)
+            if (response.data.first_brewed) {
+                tempBeer.first_brewed = tempBeer.first_brewed.slice(0,10)
+            }    
             this.setState({theBeer: tempBeer})
         })
         .catch((error)=> {
@@ -34,11 +31,9 @@ class BeerDetail extends Component {
 
     render() {
         debugger
-        return (
-           
+        return (   
             <div >
                  <Navbar />
-
                 <div className="card">
                     <div className="card-image">
                         <figure className="image">
@@ -46,8 +41,7 @@ class BeerDetail extends Component {
                         </figure>
                     </div>
                     <div className="card-content">
-                        <div className="media">
-                            
+                        <div className="media">                       
                             <div className="media-content">
                                 <p className="title is-4">{this.state.theBeer.name}</p>
                                 <p className="subtitle is-6">{this.state.theBeer.tagline}</p>
@@ -59,7 +53,7 @@ class BeerDetail extends Component {
                             {this.state.theBeer.description} 
                             
                         </div>
-                        <time >{this.state.theBeer.first_brewed}</time>
+                            <p >{this.state.theBeer.first_brewed}</p>
                         <br/>
                         <h6 className="subtitle is-6">{this.state.theBeer.contributed_by}</h6>
                     </div>

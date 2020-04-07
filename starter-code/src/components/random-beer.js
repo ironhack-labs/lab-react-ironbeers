@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Navbar from './nav';
+import {getRandomBeer} from '../utils/beer';
 
 
 class RandomBeer extends Component {
     constructor() {
         super()
-
         this.state = {
             randomBeer: {}     
         }
     }
 
     componentDidMount() {
-        debugger
-        axios.get("https://ih-beers-api.herokuapp.com/beers/random")
+        // debugger
+        getRandomBeer()
         .then(response => {
             console.log(response)
             let tempBeer = {...response.data}
-            tempBeer.first_brewed = tempBeer.first_brewed.slice(0,10)
+            if (response.data.first_brewed) {
+                tempBeer.first_brewed = tempBeer.first_brewed.slice(0,10) // cleaning up the ugly system time part of it
+            }
             this.setState({randomBeer: tempBeer})
-            // this.setState({randomBeer: response.data})
         })
         .catch((error)=> {
             console.log(error);
@@ -28,13 +29,11 @@ class RandomBeer extends Component {
     }
 
     render() {
-        debugger
-        return (
-           
+        // debugger
+        return (           
             <div>
                  <Navbar />
-                <h1>Here is a random pick for you</h1>
-                
+                <h1>Here is a random pick for you</h1>             
                 <div className= "beer-bottle">
                     <div>
                         <img src={this.state.randomBeer.image_url} alt=""/>
@@ -46,8 +45,7 @@ class RandomBeer extends Component {
                         <p>{this.state.randomBeer.attenuation_level}</p>
                         <p>{this.state.randomBeer.description}</p>
                         <p>{this.state.randomBeer.contributed_by}</p>
-                    </div>
-                    
+                    </div>                    
                 </div>
             </div>
         )

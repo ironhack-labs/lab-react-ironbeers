@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Navbar from './nav';
+import {addBeerWithImage} from '../utils/beer';
 
 class AddBeerWithImg extends Component {
     constructor() {
@@ -32,14 +32,7 @@ class AddBeerWithImg extends Component {
         event.preventDefault();
         var formData = new FormData (this.formRef.current);
         
-        axios({
-            method: "POST",
-            url: "https://ih-beers-api.herokuapp.com/beers/new", 
-            data: formData ,
-            headers: {
-                "content-type": "multipart/form-data"
-            }
-        })
+        addBeerWithImage(formData)
         .then(response => {
             console.log(response)
             this.props.history.push(`/beer-detail/${response.data._id}`)
@@ -155,8 +148,8 @@ class AddBeerWithImg extends Component {
 
                             
                             
-                            <div class="control">
-                                <input class="button is-link" type="submit" value="Submit" />
+                            <div className="control">
+                                <input className="button is-link" type="submit" value="Submit" />
                             </div>
                             
                         </form>
