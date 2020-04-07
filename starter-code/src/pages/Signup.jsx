@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
-// import qs from 'qs';
 import Nav from '../components/Nav';
 import {signup} from '../utils/auth'
 
@@ -32,10 +30,8 @@ class SignUp extends Component {
 
     handleSubmit(event){
         event.preventDefault();
-        debugger
         signup(this.state.user)
         .then((response) => {
-            debugger
             this.setState({
                 error: null
             }, () => {
@@ -53,12 +49,40 @@ class SignUp extends Component {
             <div>
                 <Nav />
                 <form onSubmit= {this.handleSubmit}>
-                    <input type="text" placeholder = "username" value={this.state.username} onChange = {this.handleChange} name = "username"/>
-                    <input type="text" placeholder = "firstname" value={this.state.firstname} onChange = {this.handleChange} name = "firstname"/>
-                    <input type="text" placeholder = "lastname" value={this.state.lastname} onChange = {this.handleChange} name = "lastname"/>
-                    <input type="email" placeholder = "email" value={this.state.email} onChange = {this.handleChange} name = "email"/>
-                    <input type="password" placeholder = "password" value={this.state.password} onChange = {this.handleChange} name = "password"/>
-                    <button type= "submit">Sign Up</button>
+                    <div className = "columns">
+                        <div className = "column">
+                        </div>
+                        <div className = "column">
+                            <div className = "field">
+                                <div className = "control">
+                                    <input className ="input is-info is-rounded" type="text" placeholder = "username" value={this.state.username} onChange = {this.handleChange} name = "username"/>
+                                </div>
+                            </div>
+                            <div className = "field">
+                                <div className = "control">
+                                 <input className ="input is-info is-rounded" type="text" placeholder = "firstname" value={this.state.firstname} onChange = {this.handleChange} name = "firstname"/>
+                                </div>
+                            </div>
+                            <div className = "field">
+                                <div className = "control">
+                                    <input className ="input is-info is-rounded" type="text" placeholder = "lastname" value={this.state.lastname} onChange = {this.handleChange} name = "lastname"/>
+                                </div>
+                            </div>
+                            <div className = "field">
+                                <div className = "control">
+                                    <input className ="input is-info is-rounded" type="email" placeholder = "email" value={this.state.email} onChange = {this.handleChange} name = "email"/>
+                                </div>
+                            </div>
+                            <div className = "field">
+                                <div className = "control">
+                                    <input className ="input is-info is-rounded" type="password" placeholder = "password" value={this.state.password} onChange = {this.handleChange} name = "password"/>
+                                </div>
+                            </div>
+                            <button className= "button is-primary is-medium is-rounded" type= "submit">Sign Up</button>
+                        </div>
+                        <div className = "column">
+                        </div>
+                    </div>
                 </form>
             </div>
         )

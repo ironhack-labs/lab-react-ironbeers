@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import Nav from '../components/Nav';
 
 class Home extends Component {
     render(){
         return(
             <div>
+                <Nav />
                 <Link to = '/beers'>
                     <img src="/images/beers.png" alt=""/>
                     <h3>All Beers</h3>

@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import Nav from './Nav';
 
 class SingleBeer extends Component {
     render(){
         return(
             <div className = "beer-container">
-                <Nav />
                 <Link to = {`/beer/${this.props.id}`}>
                     <h1>{this.props.name}</h1>
                     <img src={this.props.pic} alt={this.props.name}/>

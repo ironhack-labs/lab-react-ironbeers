@@ -18,7 +18,6 @@ class Login extends Component {
     }
     
     handleChange(event){
-        debugger
         let userCp = {...this.state.user};
         userCp[event.target.name] = event.target.value;
         this.setState({
@@ -30,17 +29,11 @@ class Login extends Component {
         event.preventDefault();
         login(this.state.user)
         .then((response) => {
-            debugger
             this.setState({
                 error: null
             }, () => {
                 this.props.history.push(`/profile`)
             })
-        })
-        .then((response)=>{
-            debugger
-            console.log(response.data)
-
         })
         .catch(function(err){
             console.log(err)
@@ -52,9 +45,25 @@ class Login extends Component {
             <div>
                 <Nav />
                 <form onSubmit= {this.handleSubmit}>
-                    <input type="text" placeholder = "username" value={this.state.username} onChange={this.handleChange} name = "username"/>
-                    <input type="password" placeholder = "password" value={this.state.password} onChange={this.handleChange} name = "password"/>
-                    <button type= "submit">Login</button>
+                    <div className = "columns">
+                        <div className = "column">
+                        </div>
+                        <div className = "column">
+                            <div className = "field">
+                                <div className = "control">
+                                    <input className="input is-info is-rounded" type="text" placeholder = "username" value={this.state.username} onChange={this.handleChange} name = "username"/>
+                                </div>
+                            </div>
+                            <div className = "field">
+                                <div className = "control">
+                                    <input className="input is-info is-rounded" type="password" placeholder = "password" value={this.state.password} onChange={this.handleChange} name = "password"/>
+                                </div>
+                            </div>
+                            <button className= "button is-primary is-medium is-rounded" type= "submit">Login</button>
+                        </div>
+                        <div className = "column">
+                        </div>
+                    </div>
                 </form>
             </div>
         )

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import 'bulma/css/bulma.css';
 import {Switch, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Beers from './pages/Beers';
