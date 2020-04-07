@@ -32,17 +32,18 @@
     border-left: 2px solid lightsteelblue;
     border-bottom: 2px solid lightsteelblue;
     border-right: 2px solid lightsteelblue;
+    box-shadow: 0px 2px 4px rgb(89, 117, 126);
 }
 
 .home-part h3 {
     font-size: 2rem;
     text-align: center;
-    color: black;
+    color: rgb(14, 61, 109);
 }
 
 .home-part p {
     font-size: 1.2rem;
-    color: black;
+    color: rgb(14, 61, 109);
     text-align: center;
 }
 

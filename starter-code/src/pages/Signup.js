@@ -23,7 +23,7 @@ export default class Signup extends Component {
          <div>
             <Nav/>
             <div className='signup-container'>
-               <h3>Looking for cookies? Sorry, this is just the sign up page.</h3>
+               <h3 className='fun1'>Looking for the cure to covid19? <br/> Sorry, this is just another sign up page.</h3>
                <div className="signup-form">
                   <input type="text" required name="username" placeholder="Username" onChange={this.handleChange} />
                   <input type="text" required name="firstname" placeholder="First Name"  onChange={this.handleChange} />
