@@ -44,10 +44,10 @@ class SingleBeer extends Component {
                 </h3>
               </div>
               <div className="SingleBeer-subheading">
-                <h4 className="SingleBeer-brewed">
+                <h4 className="SingleBeer-level">
                   {this.state.beer.attenuation_level}
                 </h4>
-                <p className="SingleBeer-level">
+                <p className="SingleBeer-brewed">
                   {this.state.beer.first_brewed}
                 </p>
               </div>

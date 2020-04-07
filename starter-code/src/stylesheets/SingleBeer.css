@@ -12,7 +12,7 @@
 }
 
 .SingleBeer-subheading {
-  margin-top: auto;
+  /* margin-top: 0.125rem; */
 }
 
 .SingleBeer-name {
@@ -23,8 +23,15 @@
   color: #bfbfbf;
 }
 
-.SingleBeer-brewed {
+.SingleBeer-level {
   color: #bfbfbf;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.SingleBeer-brewed {
+  font-weight: bold;
+  margin-bottom: 1.25rem;
 }
 
 .SingleBeer-text {
