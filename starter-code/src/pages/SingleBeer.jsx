@@ -36,18 +36,30 @@ class SingleBeer extends Component {
               alt={this.state.beer.image_url}
               className="SingleBeer-img"
             />
-            <h1 className="SingleBeer-name">{this.state.beer.name}</h1>
-            <h3 className="SingleBeer-tagline">{this.state.beer.tagline}</h3>
-            <h4 className="SingleBeer-brewed">
-              {this.state.beer.first_brewed}
-            </h4>
-            <p className="SingleBeer-level">
-              {this.state.beer.attenuation_level}
-            </p>
-            <p className="SingleBeer-description">{this.state.description}</p>
-            <small className="SingleBeer-contributor">
-              {this.state.beer.contributed_by}
-            </small>
+            <div className="SingleBeer-header">
+              <div className="SingleBeer-heading">
+                <h1 className="SingleBeer-name">{this.state.beer.name}</h1>
+                <h3 className="SingleBeer-tagline">
+                  {this.state.beer.tagline}
+                </h3>
+              </div>
+              <div className="SingleBeer-subheading">
+                <h4 className="SingleBeer-brewed">
+                  {this.state.beer.attenuation_level}
+                </h4>
+                <p className="SingleBeer-level">
+                  {this.state.beer.first_brewed}
+                </p>
+              </div>
+            </div>
+            <div className="SingleBeer-text">
+              <p className="SingleBeer-description">
+                {this.state.beer.description}
+              </p>
+              <small className="SingleBeer-contributor">
+                {this.state.beer.contributed_by}
+              </small>
+            </div>
           </div>
         )}
       </div>

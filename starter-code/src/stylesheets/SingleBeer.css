@@ -1,3 +1,79 @@
+.SingleBeer {
+  padding: 3%;
+}
 .SingleBeer-img {
   height: 150px;
+}
+
+.SingleBeer-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.SingleBeer-subheading {
+  margin-top: auto;
+}
+
+.SingleBeer-name {
+  margin-bottom: 0;
+}
+
+.SingleBeer-tagline {
+  color: #bfbfbf;
+}
+
+.SingleBeer-brewed {
+  color: #bfbfbf;
+}
+
+.SingleBeer-text {
+  text-align: left;
+  padding: 1%;
+}
+
+.SingleBeer-contributor {
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .SingleBeer {
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+  }
+
+  .SingleBeer-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  .SingleBeer-img {
+    height: 195px;
+    width: 7%;
+  }
+
+  .SingleBeer-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .SingleBeer-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 35%;
+  }
+
+  .SingleBeer-subheading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding-right: 3%;
+  }
 }
