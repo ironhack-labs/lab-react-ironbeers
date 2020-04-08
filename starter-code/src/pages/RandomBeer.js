@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import Navbar from '../components/Navbar'
 
 class RandomBeer extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class RandomBeer extends Component {
     }
     componentDidMount() {
         axios
-            .get('https://ih-beers-api2.herokuapp.com/beers/random')
+            .get('https://ih-beers-api.herokuapp.com/beers/random')
             .then(response => {
                 console.log(response.data)
                 this.setState({beer: response.data})
@@ -19,6 +20,7 @@ class RandomBeer extends Component {
     render() {
         return (
             <div>
+                <Navbar />
                 <img src={this.state.beer.image_url} alt={this.state.beer.name}/>
                 <h1>{this.state.beer.name}</h1>
                 <p>{this.state.beer.tagline}</p>

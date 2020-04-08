@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import Navbar from '../components/Navbar'
 
 class AllBeers extends Component {
     constructor() {
@@ -11,7 +12,7 @@ class AllBeers extends Component {
     }
     componentDidMount() {
         axios
-            .get("https://ih-beers-api2.herokuapp.com/beers")
+            .get("https://ih-beers-api.herokuapp.com/beers")
             .then(response => {
                 this.setState({beers: response.data})
             })
@@ -19,7 +20,7 @@ class AllBeers extends Component {
     render() {
         return (
             <div>
-                <Link to='/'>Home</Link>
+                <Navbar />
                 {this
                     .state
                     .beers
