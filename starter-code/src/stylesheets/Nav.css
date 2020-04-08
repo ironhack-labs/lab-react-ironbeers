@@ -7,8 +7,16 @@
   width: 100%;
 }
 
-.navbar-item {
+.navbar.is-transparent {
   background-color: transparent;
+  background-image: none;
+}
+
+.navbar-end.navbar-item {
+  color: #ffffff;
+}
+
+.navbar-item {
   color: #ffffff;
 }
 
