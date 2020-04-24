@@ -3,12 +3,13 @@ import axios from 'axios';
 import Nav from './Nav';
 
 
+
 class BeerDetail extends Component {
 
     constructor() {
         super()
         this.state = {
-            beer: {}
+            beer: {},
         }
     }
 
