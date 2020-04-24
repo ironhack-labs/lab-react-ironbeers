@@ -62,11 +62,22 @@
   padding: 20px 0px 20px 0px;
 }
 
-
 .info-all-beers {
   width: 50%;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.Beer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.image-beer {
+  width: 30%;
+  text-align: center;
 }
