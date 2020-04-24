@@ -1,0 +1,20 @@
+.home-tile {
+  margin-bottom: 13px;
+}
+
+.home-tile img {
+  height: 20vh;
+}
+
+.home-tile h1 {
+  margin: 3px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+}
+
+.home-tile p {
+  margin: 3px 20px;
+  font-size: 13px;
+  color: #999;
+}
