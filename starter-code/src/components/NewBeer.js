@@ -29,10 +29,11 @@ class NewBeer extends Component {
         axios
             .post("https://ih-beers-api2.herokuapp.com/beers/new", this.state)
             .then(response => {
-                console.log(response);
             })
-            .catch(err => {
-                console.log(err);
+            .catch((error) => {
+                this.setState({
+                    error: error,
+                })
             })
 
         this.setState({
@@ -87,7 +88,7 @@ class NewBeer extends Component {
                         value={contributed_by}
                         placeholder="contributed_by"
                         onChange={this.handleChange} /> 
-                    <button type='submit'>Add</button>
+                    <button type='submit'>Add new beer</button>
                 </form>
             </div>
         )

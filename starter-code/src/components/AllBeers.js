@@ -23,7 +23,6 @@ class Home extends Component {
         this.setState({ status: STATUS.LOADING })
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
             .then((response) => {
-                console.log(response.data);
                 this.setState({
                     beers: response.data,
                     status: STATUS.LOADED
