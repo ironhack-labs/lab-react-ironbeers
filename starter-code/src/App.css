@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .home-tile {
   margin-bottom: 13px;
 }
@@ -17,4 +21,17 @@
   margin: 3px 20px;
   font-size: 13px;
   color: #999;
+}
+
+.header {
+  width: 100vw;
+  height: 9vh;
+  background-color: #32c3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img {
+  height: 5vh;
 }
