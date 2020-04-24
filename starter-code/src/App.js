@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route } from "react-router-dom";
+import HomePage from './components/HomePage'
+import BeerList from './components/BeerList';
+import Beer from './components/Beer';
+import NewBeer from './components/NewBeer';
 
 class App extends Component {
+
+  handleRenderBeer = (renderProps) => {
+    return <Beer id={renderProps.match.params.id}/>
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Route exact path="/" component={ HomePage }/>
+        <Route exact path="/beers" component={ BeerList }/>
+        <Route exact path="/beers/:id" render={this.handleRenderBeer}/>
+        <Route exact path="/random-beer" children={ <Beer id={'random'}/> }/>
+        <Route exact path="/new-beer" component={ NewBeer }/>
       </div>
     );
   }
