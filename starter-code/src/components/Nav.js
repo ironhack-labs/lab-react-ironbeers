@@ -7,7 +7,7 @@ class Nav extends Component {
     render() {
         return(
             <nav className="beers-nav">
-                <Link className='home-link' to='/'>Home</Link>
+                <Link className='nav-link' to='/'>Home</Link>
             </nav>
         )
     }

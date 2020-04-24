@@ -28,12 +28,45 @@
   color: white;
 }
 
+.home-page {
+  display: flex;
+  flex-direction: column;
+}
+
 .home-link {
+  padding: 10px;
+  text-decoration: none;
+  color: #222;
+}
+
+.nav-link {
   color: white;
   text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.allbeers-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid grey;
+  margin: 10px;
+}
+
+.image-container {
+  width: 50%;
+}
+
+.image-allbeers {
+  width: 20%;
+  padding: 20px 0px 20px 0px;
+}
+
+
+.info-all-beers {
+  width: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
