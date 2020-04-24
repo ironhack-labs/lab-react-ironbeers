@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import BeerPreview from './BeerPreview';
+import Loading from './Loading';
+import Error from './Error';
+import axios from 'axios';
 
-// const API_ROOT = 'https://ih-beers-api2.herokuapp.com/beers';
+const API_ENDPOINT = 'https://ih-beers-api2.herokuapp.com/beers';
 const STATUS = { LOADING: 'loading', LOADED: 'loaded', ERROR: 'error' };
 
 export default class BeerList extends Component {
@@ -12,22 +16,42 @@ export default class BeerList extends Component {
   };
 
   componentDidMount() {
-    // fetch(API_ROOT)
-    //   .then(response => {
-    //     if (!response.ok) throw Error(response.statusText);
-    //     else return response.json();
-    //   })
-    //   .then(beers => this.setState({ beers, status: STATUS.LOADED }))
-    //   .catch(error => this.setState({ error: error.message, status: STATUS.ERROR }))
+    axios
+      .get(API_ENDPOINT)
+      .then((response) => {
+        this.setState({
+          beers: response.data,
+          status: STATUS.LOADED,
+        });
+      })
+      .catch((error) => {
+        this.setState({
+          error: error.message,
+          status: STATUS.ERROR,
+        });
+      })
   }
 
   render() {
     const { beers, status, error } = this.state;
-    return (
-      <div>
-        <Header />
-        Beer List
-      </div>
-    )
+    console.log('beers', beers);
+    // eslint-disable-next-line default-case
+    switch (status) {
+      case STATUS.LOADING:
+        return <Loading />
+      case STATUS.LOADED:
+        return <HeaderAndBeerList beers={beers} />
+      case STATUS.ERROR:
+        return <Error error={error} />
+    }
   }
+}
+
+const HeaderAndBeerList = ({ beers }) => {
+  return (
+    <div>
+      <Header />
+      {beers.map((beer, i) => <BeerPreview key={beer.name + i} beer={beer} />)}
+    </div>
+  )
 }
