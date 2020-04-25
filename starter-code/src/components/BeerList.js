@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from './Header';
 import BeerPreview from './BeerPreview';
 import Loading from './Loading';
 import Error from './Error';
@@ -40,17 +39,16 @@ export default class BeerList extends Component {
       case STATUS.LOADING:
         return <Loading />
       case STATUS.LOADED:
-        return <HeaderAndBeerList beers={beers} />
+        return <BeerPreviews beers={beers} />
       case STATUS.ERROR:
         return <Error error={error} />
     }
   }
 }
 
-const HeaderAndBeerList = ({ beers }) => {
+const BeerPreviews = ({ beers }) => {
   return (
     <div>
-      <Header />
       {beers.map((beer, i) => <BeerPreview key={beer.name + i} beer={beer} />)}
     </div>
   )

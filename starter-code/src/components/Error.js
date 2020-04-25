@@ -4,7 +4,6 @@ import Header from './Header';
 const Error = ({ error }) => {
   return (
     <div>
-      <Header />
       <div className='error'>
         Error: {error}
       </div>

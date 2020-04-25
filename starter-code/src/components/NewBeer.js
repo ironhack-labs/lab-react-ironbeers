@@ -25,7 +25,6 @@ export default class NewBeer extends Component {
     const { beers, status, error } = this.state;
     return (
       <div>
-        <Header />
         New Beer
       </div>
     )

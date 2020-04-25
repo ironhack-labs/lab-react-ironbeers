@@ -25,7 +25,6 @@ export default class RandomBeer extends Component {
     const { beers, status, error } = this.state;
     return (
       <div>
-        <Header />
         random beer
       </div>
     )
