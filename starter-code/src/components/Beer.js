@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios';
+import api from '../lib/apiClient';
 import Header from './Header'
 
 const STATES = {
@@ -19,17 +19,13 @@ export default class Beer extends Component {
 
   componentDidMount = async () => {
     const { id: beerId } = this.props
-    axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
+    api.get(`/beers/${beerId}`)
     .then(response => {
       const { data: beer } = response
-      this.setState({
-        beer,
-        status: STATES.LOADED
-      })
+      this.setState({ beer, status: STATES.LOADED })
     })
     .catch(error => this.setState({ status: STATES.ERROR, error }))
   }
-
 
   showContent = () => {
     const { status, beer, error } = this.state

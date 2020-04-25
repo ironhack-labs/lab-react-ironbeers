@@ -8,17 +8,16 @@ import NewBeer from './components/NewBeer';
 
 class App extends Component {
 
-  handleRenderBeer = (renderProps) => {
-    return <Beer id={renderProps.match.params.id}/>
-  }
+  renderOneBeerId = (renderProps) =>  <Beer id={renderProps.match.params.id}/>
+  renderOneBeerRandom = () => <Beer id={'random'}/>
 
   render() {
     return (
       <div>
         <Route exact path="/" component={ HomePage }/>
         <Route exact path="/beers" component={ BeerList }/>
-        <Route exact path="/beers/:id" render={this.handleRenderBeer}/>
-        <Route exact path="/random-beer" children={ <Beer id={'random'}/> }/>
+        <Route exact path="/beers/:id" render={ this.renderOneBeerId }/>
+        <Route exact path="/random-beer" render={ this.renderOneBeerRandom }/>
         <Route exact path="/new-beer" component={ NewBeer }/>
       </div>
     );

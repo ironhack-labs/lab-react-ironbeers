@@ -1,40 +1,38 @@
 import React, { Component } from 'react'
 import Header from './Header'
-import axios from 'axios';
 import BeerItemList from './BeerItemList'
+import api from '../lib/apiClient'
 
 const STATES = {
   LOADING: 'LOADING',
   LOADED: 'LOADED',
-  ERROR: 'ERROR'
+  ERROR: 'ERROR',
+  INIT: 'INIT'
 }
 
 export default class BeerList extends Component {
   
   /* 
-    Duda para TA's: Porque nos hacen filtrar haciendo una nueva peticion a la API
-    si ya tenemos la lista de todas las beers aqui. Seria suficiente con un filtro
-    en el .map...
+    Duda para TA's: En la iteracion bonus, porque nos hacen filtrar haciendo una nueva
+    peticion a la API si ya tenemos la lista de todas las beers aqui. Seria suficiente
+    con un filtro en el .map...
   */
 
   constructor(){
     super()
     this.state = {
-      status: '',
+      status: STATES.INIT,
     }
   }
 
   apiCall = (filter) => {
     this.setState({ status: STATES.LOADING })
-    let baseUrl = 'https://ih-beers-api2.herokuapp.com/beers'
-    if(filter) baseUrl = `${baseUrl}/search?q=${filter}`
-    axios.get(baseUrl)
+    let endpoint = '/beers'
+    if(filter) endpoint = `${endpoint}/search?q=${filter}`
+    api.get(endpoint)
     .then(response => {
       const { data: beers } = response
-      this.setState({
-        beers,
-        status: STATES.LOADED
-      })
+      this.setState({ beers, status: STATES.LOADED })
     })
     .catch(error => this.setState({ status: STATES.ERROR, error }))
   }
@@ -56,9 +54,10 @@ export default class BeerList extends Component {
         return beers.map((b, i) => <BeerItemList key={i} beer={b}/>)
       case STATES.ERROR:
         return <div>{ error.toString() }</div>
-      default:
+      case STATES.INIT:
         return <div>Rendering...</div>
-        break;
+      default:
+        return <div>Hmm... what?</div>
     }
   }
 
@@ -68,7 +67,7 @@ export default class BeerList extends Component {
         <Header/>
         <div className="container">
           <input className="input-beer" onChange={this.handleFilter} type="text" placeholder="Filter the beers..." name="filter" id="filter"/>
-          {this.showContent()}
+          { this.showContent() }
         </div>
       </div>
     )
