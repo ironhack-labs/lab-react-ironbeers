@@ -5,30 +5,42 @@ import axios from "axios";
 class Beers extends Component {
   state = {
     allBeers: [],
+    loadStatus:false
   };
 
   componentDidMount() {
+    this.setState({loadStatus: true})
     axios.get(`https://ih-beers-api2.herokuapp.com/beers`)
     .then((res) => {
-      this.setState({ allBeers: res.data });
-      console.log(this.state.allBeers);
+      this.setState({ 
+        allBeers: res.data,
+        loadStatus:false
+       });
     });
   }
 
   render() {
-    return (
-      <div>
-        {this.state.allBeers.map((item, index) => {
-          return(
-          <div key={index}>
-              <img alt={item.name} src={item.image_url}></img>
-              {item.name}<br/>
-              {item.tagline}<br/>
+    let load = this.state.loadStatus;
+    let content;
+    if(load == true){
+      content = <div className="Loading"><img alt='loading' src="./images/load.gif"/>Loading</div>
+    } else {
+      content =     <div>
+      {this.state.allBeers.map((item, index) => {
+        return(
+        <div key={index}>
+            <img alt={item.name} src={item.image_url}></img>
+            {item.name}<br/>
+            {item.tagline}<br/>
 
-          </div>
-          )
-        })}
-      </div>
+        </div>
+        )
+      })}
+    </div>
+    }
+
+    return (
+      <div>{content}</div>
     );
   }
 }
