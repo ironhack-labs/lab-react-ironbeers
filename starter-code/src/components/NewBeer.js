@@ -28,7 +28,7 @@ export default class NewBeer extends Component {
   }
 
   handleRestart = () => {
-    this.setState({status: STATES.FORM})
+    this.setState({ status: STATES.FORM })
   }
 
   showContent = () => {
@@ -39,7 +39,7 @@ export default class NewBeer extends Component {
       case STATES.SENDED:
         return (<div>
             <p>Sended!</p>
-            <button onClick={this.handleRestart}>Return</button>
+            <button onClick={this.handleRestart}>Add more</button>
           </div>)
       case STATES.ERROR:
         return (<div>
@@ -47,7 +47,12 @@ export default class NewBeer extends Component {
             <button onClick={this.handleRestart}>Return</button>
           </div>);
       case STATES.FORM:
-        return <Form getNewBeer={this.handleClick}/>
+        return (
+          <div>
+            <h1 className="main-title" >New Beer</h1>
+            <Form getNewBeer={this.handleClick}/>
+          </div>
+        );
       default:
       break;
     }

@@ -66,8 +66,10 @@ export default class BeerList extends Component {
     return (
       <div>
         <Header/>
-        <input onChange={this.handleFilter} type="text" placeholder="Filter the beers..." name="filter" id="filter"/>
-        {this.showContent()}
+        <div className="container">
+          <input className="input-beer" onChange={this.handleFilter} type="text" placeholder="Filter the beers..." name="filter" id="filter"/>
+          {this.showContent()}
+        </div>
       </div>
     )
   }

@@ -5,7 +5,7 @@ export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Link to="/">Home</Link>
+        <Link to="/"> <img src="https://img.icons8.com/ios/50/000000/home.png"/> </Link>
       </div>
     )
   }

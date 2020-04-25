@@ -1,9 +1,14 @@
 .header{
-  background-color: rgb(46, 245, 218);
+  background-color: rgb(29, 8, 151);
+  padding: 5px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header img{
+  width: 30px;
 }
 
 .header a{
@@ -32,24 +37,82 @@
   color: black
 }
 
-.beerListContainer {
+.beer-list-container {
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
+  box-shadow: 2px 4px gray;
+  background-color: rgb(232, 243, 255);
+
 }
 
-.beerListInfo {
+.beer-list-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.beerListInfo p{
+.beer-list-info p{
   margin: 0px;
   padding: 10px 5px 10px 25px;
 }
 
-.beerListContainer img{
+.beer-list-container img{
   width: 15%;
+}
+
+.input-beer{
+  width: 90%;
+  padding: 20px;
+  margin: 10px;
+}
+
+.container{
+  text-align: center;
+}
+
+.single-beer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.single-beer-header{
+  margin: 20px;
+  background-color: #daf6ff;
+  display: flex;
+  border-radius: 13px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.single-beer-header *{
+  margin: 4px;
+}
+
+.single-beer img{
+  max-width: 80px;
+}
+
+.new-beer-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;  
+}
+
+.new-beer-form * {
+  padding: 15px;
+}
+
+.submit-btn{
+  margin: 20px;
+  width: 20%;
+  align-self: center;
+}
+
+.main-title{
+  text-align: center;
 }
