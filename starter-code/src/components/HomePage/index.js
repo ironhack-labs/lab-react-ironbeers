@@ -8,9 +8,9 @@ class HomePage extends React.Component {
     render(){
         return (
             <div>
-                <ItemHomePage img='../images/beers.png'  title='All Beers' description={description} />
-                <ItemHomePage img='../images/random-beer.png'  title='Random Beer' description={description} />
-                <ItemHomePage img='../images/new-beer.png'  title='New Beer' description={description} />
+                <ItemHomePage url='/beers'       img='../images/beers.png'        title='All Beers'   description={description} />
+                <ItemHomePage url='/random-beer' img='../images/random-beer.png'  title='Random Beer' description={description} />
+                <ItemHomePage url='/new-beer'    img='../images/new-beer.png'     title='New Beer'    description={description} />
             </div>
         )
     }

@@ -1,14 +1,14 @@
 import React from 'react';
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 class ItemHomePage extends React.Component {
     render(){
-        const { img, title, description} = this.props;
-        console.log({ img, title, description});
+        const {img,title,description,url} = this.props;
         return (
             <div>
                 <img src={img} alt={title}/>
-                <div> {title} </div>
+                <Link to={url}>  <div> {title} </div> </Link>
                 <div> {description}</div>
             </div>
         )
