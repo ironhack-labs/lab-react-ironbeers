@@ -11,10 +11,10 @@ import './App.css';
 const App = () => {
   return (
     <div className='App'>
-    <Switch>
-      <Route exact path='/' component={Home} />
-      <Route path='/' component={Layout} />
-    </Switch>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/' component={Layout} />
+      </Switch>
     </div>
   );
 }
@@ -23,9 +23,9 @@ const Layout = () => {
   return <div>
     <Header />
     <Route exact path='/beers' component={BeerList} />
-    <Route path='/beers/:id' render={(props) => <BeerDetail {...props} />}/>
-    <Route exact path='/random-beer' component={RandomBeer} />
-    <Route exact path='/new-beer' component={NewBeer} />
+    <Route path='/beers/:id' render={props => <BeerDetail {...props} />}/>
+    <Route path='/random-beer' component={RandomBeer} />
+    <Route path='/new-beer' component={NewBeer} />
   </div>
 }
 

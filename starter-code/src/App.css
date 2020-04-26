@@ -7,6 +7,15 @@ a {
   text-decoration: none;
 }
 
+.loading, .error {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
 .home-tile {
   margin-bottom: 13px;
 }

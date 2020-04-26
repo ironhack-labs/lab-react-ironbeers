@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import API from './API';
-import Loading from './Loading';
-import Error from './Error';
+import API from '../helpers/API';
+import ContentLoader from './ContentLoader';
 import BeerPage from './BeerPage';
 
 const STATUS = { LOADING: 'loading', LOADED: 'loaded', ERROR: 'error' };
 
 export default class RandomBeer extends Component {
   state = {
-    beer: [],
     status: STATUS.LOADING,
     error: undefined,
+    beer: [],
   };
 
   componentDidMount() {
@@ -30,15 +29,11 @@ export default class RandomBeer extends Component {
   }
 
   render() {
-    const { beer, status, error } = this.state;
-    // eslint-disable-next-line default-case
-    switch (status) {
-      case STATUS.LOADING:
-        return <Loading />
-      case STATUS.LOADED:
-        return <BeerPage beer={beer} />
-      case STATUS.ERROR:
-        return <Error error={error} />
-    }
+    const { status, error, beer } = this.state;
+    return (
+      <ContentLoader status={status} error={error}>
+        <BeerPage beer={beer} />
+      </ContentLoader>
+    )
   }
 }

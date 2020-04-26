@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import API from './API';
+import API from '../helpers/API';
+import ContentLoader from './ContentLoader';
 import NewBeerForm from './NewBeerForm';
-import Error from './Error';
+
+const STATUS = { LOADING: 'loading', LOADED: 'loaded', ERROR: 'error' };
 
 export default class NewBeer extends Component {
   state = {
+    status: STATUS.LOADED,
+    error: undefined,
     name: '',
     tagline: '',
     description: '',
@@ -12,7 +16,6 @@ export default class NewBeer extends Component {
     brewers_tips: '',
     attenuation_level: 0,
     contributed_by: '',
-    error: undefined,
   };
 
   addBeer() {
@@ -27,12 +30,10 @@ export default class NewBeer extends Component {
       contributed_by,
     };
     API('post', '/new', newBeer)
-      .then((response) => {
-        console.log('response', response);
-      })
       .catch((error) => {
         this.setState({
           error: error.message,
+          status: STATUS.ERROR,
         });
       })
   }
@@ -48,8 +49,15 @@ export default class NewBeer extends Component {
   }
 
   render() {
-    const { error } = this.state;
-    if (!error) return <NewBeerForm inputs={this.state} handleInput={this.handleInput} handleSubmit={this.handleSubmit} />
-    else return <Error error={error} />
+    const { status, error } = this.state;
+    return (
+      <ContentLoader status={status} error={error}>
+        <NewBeerForm
+          inputs={this.state}
+          handleInput={this.handleInput}
+          handleSubmit={this.handleSubmit}
+        />
+      </ContentLoader>
+    )
   }
 }
