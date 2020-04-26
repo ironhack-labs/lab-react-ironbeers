@@ -133,3 +133,37 @@ a {
   font-size: 11px;
   color: #999
 }
+
+.new-beer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.new-beer label {
+  margin: 18px 0 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.new-beer input,
+.new-beer textarea {
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.new-beer textarea {
+  height: 100px;
+}
+
+.new-beer button {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #32c3ff;
+  color: white;
+  text-transform: uppercase;
+}
