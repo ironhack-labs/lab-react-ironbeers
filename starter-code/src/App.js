@@ -11,23 +11,22 @@ import './App.css';
 const App = () => {
   return (
     <div className='App'>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/beers'>
-          <Header />
-          <BeerList />
-        </Route>
-        <Route path='/beers/:id' render={(props) => <BeerDetail {...props} />}/>
-        <Route exact path='/random-beer'>
-          <RandomBeer />
-        </Route>
-        <Route exact path='/new-beer'>
-          <Header />
-          <NewBeer />
-        </Route>
-      </Switch>
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route path='/' component={Layout} />
+    </Switch>
     </div>
   );
+}
+
+const Layout = () => {
+  return <div>
+    <Header />
+    <Route exact path='/beers' component={BeerList} />
+    <Route path='/beers/:id' render={(props) => <BeerDetail {...props} />}/>
+    <Route exact path='/random-beer' component={RandomBeer} />
+    <Route exact path='/new-beer' component={NewBeer} />
+  </div>
 }
 
 export default App;

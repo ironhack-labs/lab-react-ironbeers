@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import API from './API';
-import Header from './Header';
 import Loading from './Loading';
 import Error from './Error';
 import BeerPage from './BeerPage';
@@ -37,12 +36,7 @@ export default class RandomBeer extends Component {
       case STATUS.LOADING:
         return <Loading />
       case STATUS.LOADED:
-        return (
-        <div>
-          <Header />
-          <BeerPage beer={beer} />
-        </div>
-        )
+        return <BeerPage beer={beer} />
       case STATUS.ERROR:
         return <Error error={error} />
     }
