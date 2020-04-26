@@ -19,7 +19,6 @@ const App = () => {
         </Route>
         <Route path='/beers/:id' render={(props) => <BeerDetail {...props} />}/>
         <Route exact path='/random-beer'>
-          <Header />
           <RandomBeer />
         </Route>
         <Route exact path='/new-beer'>

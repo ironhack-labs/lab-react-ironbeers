@@ -34,7 +34,6 @@ export default class BeerDetail extends Component {
 
   render() {
     const { beer, status, error } = this.state;
-    const { id } = this.props.match.params;
     // eslint-disable-next-line default-case
     switch (status) {
       case STATUS.LOADING:
