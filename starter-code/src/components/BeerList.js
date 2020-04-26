@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
+import API from './API';
 import BeerPreview from './BeerPreview';
 import Loading from './Loading';
 import Error from './Error';
-import axios from 'axios';
 
-const API_ENDPOINT = 'https://ih-beers-api2.herokuapp.com/beers';
 const STATUS = { LOADING: 'loading', LOADED: 'loaded', ERROR: 'error' };
 
 export default class BeerList extends Component {
@@ -15,8 +14,7 @@ export default class BeerList extends Component {
   };
 
   componentDidMount() {
-    axios
-      .get(API_ENDPOINT)
+    API('get', '/')
       .then((response) => {
         this.setState({
           beers: response.data,

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import API from './API';
 import Header from './Header';
 import Loading from './Loading';
 import Error from './Error';
 import BeerPage from './BeerPage';
-import axios from 'axios';
 
-const API_ENDPOINT = 'https://ih-beers-api2.herokuapp.com/beers';
 const STATUS = { LOADING: 'loading', LOADED: 'loaded', ERROR: 'error' };
 
 export default class RandomBeer extends Component {
@@ -16,8 +15,7 @@ export default class RandomBeer extends Component {
   };
 
   componentDidMount() {
-    axios
-      .get(API_ENDPOINT + '/random')
+    API('get', '/random')
       .then((response) => {
         this.setState({
           beer: response.data,
