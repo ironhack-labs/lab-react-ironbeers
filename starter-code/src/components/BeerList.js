@@ -39,17 +39,22 @@ export default class BeerList extends Component {
       case STATUS.LOADING:
         return <Loading />
       case STATUS.LOADED:
-        return <BeerPreviews beers={beers} />
+        return (
+        <div>
+        {beers.map((beer, i) => <BeerPreview key={beer.name + i} beer={beer} />)}
+        {/* <Route path='/beers' render={(props) => <BeerPreviews {...props} beers={beers} />} /> */}
+        </div>
+        )
       case STATUS.ERROR:
         return <Error error={error} />
     }
   }
 }
 
-const BeerPreviews = ({ beers }) => {
-  return (
-    <div>
-      {beers.map((beer, i) => <BeerPreview key={beer.name + i} beer={beer} />)}
-    </div>
-  )
-}
+// const BeerPreviews = ({ beers }) => {
+//   return (
+//     <div>
+//       {beers.map((beer, i) => <BeerPreview key={beer.name + i} beer={beer} />)}
+//     </div>
+//   )
+// }

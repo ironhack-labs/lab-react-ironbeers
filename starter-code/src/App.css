@@ -55,26 +55,81 @@ a {
   height: 15vh;
 }
 
-.beer-info {
+.beer-preview .beer-info {
   flex: 0 0 70%;
   display: flex;
   flex-direction: column;
   margin: 10px;
 }
 
-.beer-info .title {
+.beer-preview .title {
   margin: 5px 0;
   font-size: 22px;
   font-weight: 400;
 }
 
-.beer-info .tagline {
+.beer-preview .tagline {
   margin: 8px 0;
   font-size: 15px;
   color: #999;
 }
 
-.beer-info .created-by {
+.beer-preview .created-by {
   margin: 0;
   font-size: 11px;
+}
+
+.beer-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.beer-detail img {
+  margin: 30px 0 10px 0;
+  height: 35vh;
+}
+
+.beer-detail .beer-info {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.beer-detail .title-row,
+.beer-detail .tagline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.beer-detail .title {
+  margin: 5px 0;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.beer-detail .attenuation-level {
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: 200;
+  color: #999;
+}
+
+.beer-detail .tagline {
+  margin: 5px 0;
+  font-size: 15px;
+  color: #999;
+}
+
+.beer-detail .first-brewed {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.beer-detail .beer-info .created-by {
+  margin: 0;
+  font-size: 11px;
+  color: #999
 }

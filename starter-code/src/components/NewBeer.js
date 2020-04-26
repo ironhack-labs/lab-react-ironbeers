@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from './Header';
 
 // const API_ROOT = 'https://ih-beers-api2.herokuapp.com/beers';
 const STATUS = { LOADING: 'loading', LOADED: 'loaded', ERROR: 'error' };

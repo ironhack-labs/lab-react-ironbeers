@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
 import BeerList from './components/BeerList';
+import BeerDetail from './components/BeerDetail';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
 import './App.css';
@@ -16,6 +17,7 @@ const App = () => {
           <Header />
           <BeerList />
         </Route>
+        <Route path='/beers/:id' render={(props) => <BeerDetail {...props} />}/>
         <Route exact path='/random-beer'>
           <Header />
           <RandomBeer />
