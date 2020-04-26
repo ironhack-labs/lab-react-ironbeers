@@ -1,0 +1,10 @@
+.header{
+    background-color: #3dc4fc;
+    padding: 10px; 
+}
+
+.imgHeader {
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 40px;
+}
