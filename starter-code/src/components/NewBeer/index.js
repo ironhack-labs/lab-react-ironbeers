@@ -1,14 +1,14 @@
 import React from 'react';
 import "./styles.css";
 
-class ListAll extends React.Component {
+class NewBeer extends React.Component {
     render(){
         return (
             <div>
-                list
+                NewBeer
             </div>
         )
     }
 }
 
-export default ListAll;
+export default NewBeer;

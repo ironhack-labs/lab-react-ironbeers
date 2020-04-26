@@ -10,7 +10,6 @@ class ItemHomePage extends React.Component {
                 <img src={img} alt={title}/>
                 <div> {title} </div>
                 <div> {description}</div>
-
             </div>
         )
     }
