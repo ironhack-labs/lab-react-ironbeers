@@ -1,0 +1,30 @@
+.Item{
+    padding: 3%;
+    border: 1px solid white;
+    border-radius: 1em;
+    margin: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+.imgItem {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.title {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    color: white
+}
+
+.description {
+    color: white
+}
+
+.link {
+    text-decoration: none;
+}

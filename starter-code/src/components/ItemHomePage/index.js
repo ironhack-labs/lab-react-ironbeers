@@ -6,10 +6,10 @@ class ItemHomePage extends React.Component {
     render(){
         const {img,title,description,url} = this.props;
         return (
-            <div>
-                <img src={img} alt={title}/>
-                <Link to={url}>  <div> {title} </div> </Link>
-                <div> {description}</div>
+            <div className="Item">
+                <img className="imgItem" src={img} alt={title}/>
+                <Link className="link" to={url}>  <div className="title"> {title} </div> </Link>
+                <div className="description"> {description}</div>
             </div>
         )
     }
