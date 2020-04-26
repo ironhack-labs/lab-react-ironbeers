@@ -1,0 +1,39 @@
+.BeerInList {
+    display: flex;
+}
+
+.BeerInList-Link {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    justify-content: space-evenly;
+}
+
+.BeerInList-img-container {
+    width: 50px;
+    text-align: center;
+}
+
+.BeerInList-img {
+    height: 100px;
+}
+
+.BeerInList-container {
+    width: 250px;
+    margin-left: 20px;
+}
+
+.BeerInList-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.BeerInList-tagline {
+    font-size: 0.9rem;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.BeerInList-contributed_by {
+    font-size: 0.6rem;
+}

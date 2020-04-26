@@ -1,0 +1,19 @@
+.HomeDetail-Link {
+    text-decoration: none;
+}
+
+.HomeDetail-img {
+    width: 100%;
+}
+
+.HomeDetail-text-container {
+    margin: 0 40px;
+}
+
+.HomeDetail-h1 {
+    color: black;
+}
+
+.HomeDetail-p {
+    color: gray;
+}

@@ -1,0 +1,10 @@
+.WithHeader-Link {
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #3DC4FC;
+}

@@ -1,0 +1,34 @@
+.NewBeer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+}
+
+.NewBeer-label {
+    font-weight: bold;
+    margin: 20px 0 0 10px;
+
+}
+
+.NewBeer-input {
+    border: 1px solid grey;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.NewBeer-description {
+    border: 1px solid grey;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.NewBeer-button {
+    background-color: #3DC4FC;
+    height: 25px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    font-size: 1rem;
+}

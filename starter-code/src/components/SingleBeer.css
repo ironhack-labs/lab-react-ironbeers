@@ -1,0 +1,37 @@
+.SingleBeer {
+    margin: 20px;
+}
+
+.SingleBeer-img-container {
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+.SingleBeer-img {
+    height: 200px;
+}
+
+.SingleBeer-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.SingleBeer-name {
+    font-size: 1.7rem;
+}
+
+.SingleBeer-attenuation-level {
+    font-size: 1.7rem;
+    color: grey;
+}
+
+.SingleBeer-tagline {
+    color: grey;
+}
+
+.SingleBeer-contributed-by {
+    font-size: 0.8rem;
+    color: grey;
+    margin-top: 15px;
+}
