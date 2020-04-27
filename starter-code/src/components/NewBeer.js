@@ -9,27 +9,9 @@ export default class NewBeer extends Component {
   state = {
     status: STATUS.LOADED,
     error: undefined,
-    name: '',
-    tagline: '',
-    description: '',
-    first_brewed: '',
-    brewers_tips: '',
-    attenuation_level: '',
-    contributed_by: '',
   };
 
-  addBeer() {
-    const { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = this.state;
-    const newBeer = {
-      name,
-      tagline,
-      description,
-      first_brewed,
-      brewers_tips,
-      attenuation_level: parseInt(attenuation_level),
-      contributed_by,
-    };
-
+  addBeer = (newBeer) => {
     const request = { method: 'post', route: '/new', data: newBeer };
     const actions = {
       onSuccess: (response) => {
@@ -44,25 +26,11 @@ export default class NewBeer extends Component {
     API(request, actions);
   }
 
-  handleInput = (e) => {
-    const { id, value } = e.target;
-    this.setState({ [id]: value })
-  };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.addBeer();
-  }
-
   render() {
     const { status, error } = this.state;
     return (
       <ContentLoader status={status} error={error}>
-        <NewBeerForm
-          inputs={this.state}
-          handleInput={this.handleInput}
-          handleSubmit={this.handleSubmit}
-        />
+        <NewBeerForm addBeer={this.addBeer} />
       </ContentLoader>
     )
   }
