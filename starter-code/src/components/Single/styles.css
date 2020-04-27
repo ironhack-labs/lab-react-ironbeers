@@ -1,0 +1,52 @@
+.imgbeer{
+    width: 100%;
+    text-align: center;
+}
+
+.imgBeer {
+    width: 150px;
+    height: 250px;
+    padding: 50px;
+}
+
+.boxBeer{
+    color: white;
+    line-height: 40px;
+    padding: 20px;
+}
+
+.c-lgrey{
+    color: grey;
+}
+
+.namebeer{
+    font-size: 20px;
+    width: 80%;
+}
+
+.boxNameAtten{
+    padding-top: 50px;
+}
+
+.tagline{
+    width: 80%;
+}
+
+.first_brewed{
+    float: right;
+    width: 20%;
+}
+
+.line {
+    display: flex;
+}
+
+.attenuation_level{
+    float: right;
+    width: 20%;
+}
+
+.contributed_by{
+    font-weight: 15px;
+}
+

@@ -4,7 +4,6 @@ import Header from '../Header';
 import Beer from '../Beer';
 import axios from "axios";
 
-
 // variables
 const url = 'https://ih-beers-api2.herokuapp.com/beers';
 const STATUS = {
