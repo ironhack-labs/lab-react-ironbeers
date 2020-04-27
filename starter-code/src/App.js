@@ -9,7 +9,7 @@ import NewBeer from './pages/NewBeer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route path='/beers' component={Beers}/>

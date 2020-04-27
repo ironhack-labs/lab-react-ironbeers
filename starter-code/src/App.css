@@ -1,4 +1,22 @@
-.App {
-  text-align: center;
+.homepage {
+  height: 100%;
+  margin-bottom: 8rem;
+  text-decoration: none;
 }
 
+.homepage-img {
+  width: 100%;
+}
+
+.homepage-item-description {
+  margin-left: 1rem;
+  color: black;
+}
+
+.homepage-item-description > p {
+  color: gray;
+}
+
+.homepage-item {
+  text-decoration: none;
+}
