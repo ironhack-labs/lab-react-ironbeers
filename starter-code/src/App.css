@@ -49,6 +49,25 @@ a {
   height: 5vh;
 }
 
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+}
+
+.search-bar label {
+  margin: 10px 0 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.search-bar input {
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
 .beer-preview {
   display: flex;
   padding: 15px;

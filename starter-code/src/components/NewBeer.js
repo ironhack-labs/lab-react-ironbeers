@@ -14,7 +14,7 @@ export default class NewBeer extends Component {
     description: '',
     first_brewed: '',
     brewers_tips: '',
-    attenuation_level: 0,
+    attenuation_level: '',
     contributed_by: '',
   };
 
