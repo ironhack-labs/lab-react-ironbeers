@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { StatusContext } from '../context/StatusContext';
 import API from '../lib/API';
 import ContentLoader from './ContentLoader';
 import BeerPreview from './BeerPreview';
 import SearchBar from './SearchBar';
 
-const STATUS = { LOADING: 'loading', LOADED: 'loaded', ERROR: 'error' };
-
 export default class BeerList extends Component {
+  static contextType = StatusContext;
+
   state = {
-    status: STATUS.LOADING,
+    status: this.context.STATUS.LOADING,
     error: undefined,
     beers: [],
   };
@@ -18,6 +19,7 @@ export default class BeerList extends Component {
   searchBeers = (query) => this.queryAPI({ route: `/search?q=${query}` });
 
   queryAPI = ({ route }) => {
+    const { STATUS } = this.context;
     const request = { method: 'get', route };
     const actions = {
       onSuccess: (response) => this.setState({

@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
+import { StatusContext } from '../context/StatusContext';
 import API from '../lib/API';
 import ContentLoader from './ContentLoader';
 import NewBeerForm from './NewBeerForm';
 
-const STATUS = { LOADING: 'loading', LOADED: 'loaded', ERROR: 'error' };
-
 export default class NewBeer extends Component {
+  static contextType = StatusContext;
+
   state = {
-    status: STATUS.LOADED,
+    status: this.context.STATUS.LOADED,
     error: undefined,
   };
 
   addBeer = (newBeer) => {
+    const { STATUS } = this.context;
     const request = { method: 'post', route: '/new', data: newBeer };
     const actions = {
       onSuccess: (response) => {
