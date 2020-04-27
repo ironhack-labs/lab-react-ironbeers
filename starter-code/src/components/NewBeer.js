@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import API from '../helpers/API';
+import API from '../lib/API';
 import ContentLoader from './ContentLoader';
 import NewBeerForm from './NewBeerForm';
 
@@ -30,6 +30,10 @@ export default class NewBeer extends Component {
       contributed_by,
     };
     API('post', '/new', newBeer)
+      .then((response) => {
+        if (response.statusText !== 'OK') throw Error (response.statusText);
+        else this.props.history.push('/beers');
+      })
       .catch((error) => {
         this.setState({
           error: error.message,

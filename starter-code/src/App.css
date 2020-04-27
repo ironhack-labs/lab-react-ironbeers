@@ -9,7 +9,7 @@ a {
 
 .loading, .error {
   width: 100vw;
-  height: 90vh;
+  height: 91vh;
   display: flex;
   justify-content: center;
   align-items: center;

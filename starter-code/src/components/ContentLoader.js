@@ -12,6 +12,8 @@ const ContentLoader = ({ status, error, children }) => {
       return <div>{children}</div>
     case STATUS.ERROR:
       return <Error error={error} />
+    default:
+      return <Error error='App is in unknown state' />
   }
 }
 

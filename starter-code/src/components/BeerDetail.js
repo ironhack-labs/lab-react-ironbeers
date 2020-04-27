@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import API from '../helpers/API';
+import API from '../lib/API';
 import ContentLoader from './ContentLoader';
 import BeerPage from './BeerPage';
 
