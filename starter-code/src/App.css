@@ -31,3 +31,28 @@
   height: 3rem;
   margin: 0.5rem 0 0 9rem;
 }
+
+.beer-box {
+  height: 10rem;
+  display: flex;
+}
+
+.beer-img {
+  width: auto;
+  height: 8rem;
+  margin: 1rem;
+}
+
+.beer-description-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.beer-description-box > h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.beer-link {
+  text-decoration: none;
+}
