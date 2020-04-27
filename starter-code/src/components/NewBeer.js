@@ -29,17 +29,19 @@ export default class NewBeer extends Component {
       attenuation_level: parseInt(attenuation_level),
       contributed_by,
     };
-    API('post', '/new', newBeer)
-      .then((response) => {
+
+    const request = { method: 'post', route: '/new', data: newBeer };
+    const actions = {
+      onSuccess: (response) => {
         if (response.statusText !== 'OK') throw Error (response.statusText);
-        else this.props.history.push('/beers');
-      })
-      .catch((error) => {
-        this.setState({
-          error: error.message,
-          status: STATUS.ERROR,
-        });
-      })
+        this.props.history.push('/beers');
+      },
+      onFailure: (error) => this.setState({
+        error: error.message,
+        status: STATUS.ERROR,
+      }),
+    };
+    API(request, actions);
   }
 
   handleInput = (e) => {

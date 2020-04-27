@@ -1,14 +1,17 @@
 import axios from 'axios';
 
-const API_BASE = 'https://ih-beers-api2.herokuapp.com/beers';
+const BASE_URL = 'https://ih-beers-api2.herokuapp.com/beers';
 
-const API = (method, route, data) => {
-  const request = axios({
+const API = (request, actions) => {
+  const { method, route, data } = request;
+  const { onSuccess, onFailure } = actions;
+  axios({
     method,
-    url: API_BASE + route,
+    url: BASE_URL + route,
     data,
-  });
-  return request;
+  })
+    .then((response) => onSuccess(response))
+    .catch((error) => onFailure(error))
 }
 
 export default API;

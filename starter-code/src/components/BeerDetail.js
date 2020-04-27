@@ -12,21 +12,20 @@ export default class BeerDetail extends Component {
     beer: [],
   };
 
-  componentDidMount() {
+  componentDidMount = () => {
     const { id } = this.props.match.params;
-    API('get', `/${id}`)
-      .then((response) => {
-        this.setState({
-          beer: response.data,
-          status: STATUS.LOADED,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          error: error.message,
-          status: STATUS.ERROR,
-        });
-      })
+    const request = { method: 'get', route: `/${id}` };
+    const actions = {
+      onSuccess: (response) => this.setState({
+        beer: response.data,
+        status: STATUS.LOADED,
+      }),
+      onFailure: (error) => this.setState({
+        error: error.message,
+        status: STATUS.ERROR,
+      }),
+    };
+    API(request, actions);
   }
 
   render() {

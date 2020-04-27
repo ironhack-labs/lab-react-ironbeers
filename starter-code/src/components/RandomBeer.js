@@ -12,20 +12,19 @@ export default class RandomBeer extends Component {
     beer: [],
   };
 
-  componentDidMount() {
-    API('get', '/random')
-      .then((response) => {
-        this.setState({
-          beer: response.data,
-          status: STATUS.LOADED,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          error: error.message,
-          status: STATUS.ERROR,
-        });
-      })
+  componentDidMount = () => {
+    const request = { method: 'get', route: '/random' };
+    const actions = {
+      onSuccess: (response) => this.setState({
+        beer: response.data,
+        status: STATUS.LOADED,
+      }),
+      onFailure: (error) => this.setState({
+        error: error.message,
+        status: STATUS.ERROR,
+      }),
+    };
+    API(request, actions);
   }
 
   render() {

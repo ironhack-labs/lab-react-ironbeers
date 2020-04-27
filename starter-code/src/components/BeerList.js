@@ -13,43 +13,30 @@ export default class BeerList extends Component {
     beers: [],
   };
 
-  componentDidMount() {
-    API('get', '/')
-      .then((response) => {
-        this.setState({
-          beers: response.data,
-          status: STATUS.LOADED,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          error: error.message,
-          status: STATUS.ERROR,
-        });
-      })
-  }
+  componentDidMount = () => this.queryAPI({ route: '/' });
 
-  findBeers = (query) => {
-    API('get', `/search?q=${query}`)
-      .then((response) => {
-        this.setState({
-          beers: response.data,
-          status: STATUS.LOADED,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          error: error.message,
-          status: STATUS.ERROR,
-        });
-      })
+  searchBeers = (query) => this.queryAPI({ route: `/search?q=${query}` });
+
+  queryAPI = ({ route }) => {
+    const request = { method: 'get', route };
+    const actions = {
+      onSuccess: (response) => this.setState({
+        beers: response.data,
+        status: STATUS.LOADED,
+      }),
+      onFailure: (error) => this.setState({
+        error: error.message,
+        status: STATUS.ERROR,
+      }),
+    };
+    API(request, actions);
   }
 
   render() {
     const { status, error, beers } = this.state;
     return (
       <ContentLoader status={status} error={error}>
-        <SearchBar findBeers={this.findBeers} />
+        <SearchBar searchBeers={this.searchBeers} />
         <BeerPreviews beers={beers} />
       </ContentLoader>
     )

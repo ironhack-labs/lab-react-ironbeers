@@ -5,9 +5,9 @@ export default class SearchBar extends Component {
 
   handleInput = (e) => {
     const { value } = e.target;
-    const { findBeers } = this.props;
+    const { searchBeers } = this.props;
     this.setState({ query: value },
-      findBeers(value));
+      searchBeers(value));
   }
 
   render() {
