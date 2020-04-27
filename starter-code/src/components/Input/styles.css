@@ -1,0 +1,24 @@
+.form {
+    border-radius: 1rem;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.formDescription {
+    height: 150px;
+}
+
+.txtForm{
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.buttonNew{
+    padding: 10px 40px;
+    border-radius: 1rem;
+    background-color: lightblue;
+    width: 140px;
+    margin-left: 40%;
+    margin-top: 50px;
+}
