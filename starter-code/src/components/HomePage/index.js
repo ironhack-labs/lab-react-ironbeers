@@ -2,9 +2,10 @@ import React from 'react';
 import "./styles.css";
 import ItemHomePage from '../ItemHomePage';
 
-const description = 'Lorem Ipsum is simply dummy text of the printing and typesetting is bendustry. Lorem Ipsum haen the industrys standard dummy text.';
+const description = 'Lorem Ipsum is simply dummy text of the printing and typesetting is bendustry. Lorem Ipsum haen the industrys standard dummy text. the printing and typesetting is bendustry. Lorem Ipsum haen the industrys standard d';
 
 class HomePage extends React.Component {
+
     render(){
         return (
             <div>

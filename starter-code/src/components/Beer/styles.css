@@ -1,0 +1,33 @@
+.imgBeer {
+    width: 95px;
+    max-height: 500px;
+    max-width: 300px;
+    background-color: white;
+}
+
+.img {
+    width: 60%;
+    height: 170px;
+    padding: 15px;
+}
+
+.data{
+    width: 70%;
+    margin-left: 10px;
+}
+
+.data > h6 {
+    color: lightgray
+}
+
+.data > h5 {
+    font-size: 20px;
+}
+
+.beer {
+    margin-left: 10px;
+    color:white;
+    display: flex;
+    padding: 5% 3%;
+    border-bottom: 1px solid lightgray;
+}

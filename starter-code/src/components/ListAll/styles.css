@@ -1,0 +1,6 @@
+.gif {
+     width: 200px;
+     margin-left: 50%;
+     margin-top: 20%;
+     transform: translate(-50%);
+}
