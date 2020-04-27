@@ -1,28 +1,234 @@
-.App {
-  text-align: center;
+
+.App a {
+  text-decoration: none;
+  color: #000
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+
+.section-text-container{
+  margin: 0px 30px;
+
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.section-text-title {
+  margin-block-start: 10px;
+  margin-block-end: 0px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.section-text-info {
+  color: #b2b2b2;
+  margin-block-start: 0px;
+  margin-block-end: 25px;
+
 }
 
-.App-intro {
-  font-size: large;
+.Header{
+  background-color: #3EC4FB;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.home{
+  width: 32px;
+  height: 32px;
+}
+.beer-list{
+  margin: 0 auto;
+  padding: 20px 0px 20px 50px;
+  border-bottom: 1px solid #b2b2b2;
+}
+.beer-img-list{
+  height: 175px;
+}
+.info-beer-list{
+  margin-left: 10px;
+  display: flex;
+  width:70%;
+  flex-direction: column;
+  justify-content: center;
+}
+.title-beer-list {
+  font-size: 20px;
+
+}
+.tagline-beer-list{
+  color: #b2b2b2;
+}
+.title-beer-list, .tagline-beer-list, .created-beer-list{
+  margin-block-start: 3px;
+  margin-block-end: 3px;
+}
+.new-beer-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 25px;
+}
+
+input, textarea {
+  border-radius: 15px;
+  border: 1px solid #b2b2b2;
+  padding: 10px;
+
+}
+.InputText label{
+  margin-left: 20px;
+  font-weight: bold;
+}
+.InputText {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 10px 0px;
+  }
+.button-beer{
+  background-color: #3EC4FB;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 0px;
+  margin: 10px auto; 
+}
+
+.container-beer-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-container{
+  margin: 0px 15px;
+}
+.beer-detail{
+  margin: 0 auto; 
+  padding: 50px 10px;
+}
+.beer-img-detail{
+  height: 200px;
+}
+.beer-detail-container-img{
+  display: flex;
+  justify-content: center;
+}
+.info-detail{
+  display: flex;
+  justify-content: space-between;
+}
+
+.beer-title{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.attenuation {
+  font-size: 20px;
+  color: #b2b2b2;
+}
+
+.tagline {
+  color: #b2b2b2;
+  font-size: 18px;
+}
+.brewed{
+  font-weight: bold;
+}
+
+.contributed {
+  font-weight: bold;
+  color: #b2b2b2;
+}
+
+.search-container{
+  margin: 20px; 
+  display: flex;
+  justify-content: center;
+}
+.search-bar {
+  width: 70%; 
+  margin-right: 15px;
+}
+
+@media (min-width: 600px) {
+  .section-text-info {
+  width: 675px;
+}
+}
+
+
+.loader {
+  color: #3EC4FB;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
