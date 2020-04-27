@@ -20,3 +20,14 @@
 .homepage-item {
   text-decoration: none;
 }
+
+.header {
+  background-color: #00a8ff;
+  height: 4rem;
+}
+
+.home-link-img {
+  background-color: white;
+  height: 3rem;
+  margin: 0.5rem 0 0 9rem;
+}
