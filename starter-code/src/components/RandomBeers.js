@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import BeerInfo from './BeerInfo';
 import axios from 'axios';
 
 class RandomBeers extends Component {
@@ -11,11 +10,11 @@ class RandomBeers extends Component {
     }
 
     componentDidMount(){
-        axios.get('https://ih-beers-api2.herokuapp.com/beers')
-        .then((beer) => {
-            console.log(beer.data);
+        axios.get('https://ih-beers-api2.herokuapp.com/beers/random')
+        .then((beers) => {
+            console.log(beers.data);
             this.setState({
-                beer: beer.data
+                beers: beers.data
             })
         })
         .catch((error) => {
@@ -26,17 +25,16 @@ class RandomBeers extends Component {
     }
 
     render () {
+        const { beer } = this.state
         return (
             <div>
-                <BeerInfo
-                 image_url={this.state.beer.image_url}
-                 name={this.state.beer.name}
-                 tagline={this.state.beer.tagline}
-                 first_brewed={this.state.beer.first_brewed}
-                 attenuation_level={this.state.beer.attenuation_level}
-                 description={this.state.beer.description}
-                 contributed_by={this.state.beer.contributed_by}
-                 />
+                 <img src={beer.image_url}></img>
+                 <p>{beer.name}</p>
+                 <p>{beer.tagline}</p>
+                 <p>{beer.first_brewed}</p>
+                 <p>{beer.attenuation_level}</p>
+                 <p>{beer.description}</p>
+                 <p>{beer.contributed_by}</p>
             </div>
         )
     }

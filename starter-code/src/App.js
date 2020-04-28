@@ -13,7 +13,7 @@ class App extends Component {
     return (
     <Fragment>
       <Router>
-        
+        <Nav />
          <Route exact path='/' component={HomePage} />
          <Route exact path='/beers' component={Beers} />
          <Route exact path='/:id' component={SingleBeer} />
