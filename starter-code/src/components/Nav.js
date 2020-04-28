@@ -6,13 +6,16 @@ import '../App.css';
 class Nav extends Component {
     render() {
         console.log(this.props)
-        return this.props.location.pathname === '/' ? (
+        return (
+        //this.props.location.pathname === '/beers' , '/' ? 
+        
             <nav className='App-header'>
                 <Link to ='/' className='link-root'>
                     <img className='App-logo' src='/images/home-run.png'/>
                 </Link>
             </nav>
-        ) : null
+        ) 
+        //: null
     }
 }
 

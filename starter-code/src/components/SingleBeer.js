@@ -2,31 +2,22 @@ import React, { Component } from 'react';
 import BeerInfo from './BeerInfo';
 import axios from 'axios';
 
-class RandomBeers extends Component {
-    constructor() {
-        super()
-        this.state = {
-            beer: {}
-        }
+class SingleBeer extends Component {
+    state = {
+        beer: {}
     }
 
     componentDidMount(){
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
-        .then((beer) => {
-            console.log(beer.data);
-            this.setState({
-                beer: beer.data
-            })
-        })
-        .catch((error) => {
-            this.setState({
-                error: error,
-            })
+        .then(beer => {
+            this.setState(
+                {beer: beer.data}
+            )
         })
     }
 
-    render () {
-        return (
+    render(){
+        return(
             <div>
                 <BeerInfo
                  image_url={this.state.beer.image_url}
@@ -42,4 +33,4 @@ class RandomBeers extends Component {
     }
 }
 
-export default RandomBeers;
+export default SingleBeer;
