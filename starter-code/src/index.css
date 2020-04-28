@@ -3,3 +3,21 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.container p {
+  color: grey;
+  font-size: 15px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.container img {
+  width: 100%;
+}
+
+.link {
+    padding-left: 40px;
+    color: black;
+    font-size: 25px;
+    font-weight: lighter;
+}
