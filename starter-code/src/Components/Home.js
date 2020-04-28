@@ -18,7 +18,9 @@ class Home extends Component {
           <div>
             <img alt="beers" src="./images/random-beer.png"></img>
           </div>
-          <h1>Random-beer</h1>
+          <Link to="/random">
+            <h1>Random beer</h1>
+          </Link>
         </section>
         <section className="home-section">
           <div>

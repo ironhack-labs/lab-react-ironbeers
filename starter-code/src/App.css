@@ -14,3 +14,12 @@ header {
   height:70px;
   margin-bottom:15px;
 }
+
+.beer-detail > img {
+  width: 50px;
+}
+
+.beer-container {
+  display: flex;
+  flex-direction:row ;
+}

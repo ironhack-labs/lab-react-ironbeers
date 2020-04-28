@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import UserContext, { UserProvider } from "./UserContext";
-import Detail from "./Detail";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import axios from "axios";
 
@@ -38,12 +37,14 @@ class Beers extends Component {
         <div>
           {this.state.allBeers.map((item, index) => {
             return (
-              <div key={index}>
-                <img alt={item.name} src={item.image_url}></img>
-                <Link to={`/beers/detail/${item._id}`}>{item.name}</Link>
-                <br />
-                {item.tagline}
-                <br />
+              <div key={index} className="beer-container">
+                <div className="beer-detail">
+                  <img alt={item.name} src={item.image_url}></img>
+                  <Link to={`/beers/detail/${item._id}`}>{item.name}</Link>
+                  <br />
+                  {item.tagline}
+                  <br />
+                </div>
               </div>
             );
           })}
