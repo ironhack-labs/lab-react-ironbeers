@@ -17,11 +17,10 @@ class NewBeer extends React.Component {
       }
 
     addBeer = () => {
-        console.log(this.state)
         axios
             .post('https://ih-beers-api2.herokuapp.com/beers/new', this.state)
             .then((response) => {
-                console.log(response)
+                console.log('done');
             })
             .catch((error) => {
                 this.setState({
