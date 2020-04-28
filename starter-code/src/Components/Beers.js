@@ -12,11 +12,10 @@ class Beers extends Component {
 
   componentDidMount() {
     const { setLoad } = this.context;
+    setLoad(true);
     let cleanedBeers = []
     axios.get(`https://ih-beers-api2.herokuapp.com/beers`).then((res) => {
-      setLoad(true);
       cleanedBeers = res.data.slice(0,25)
-
       this.setState({
         allBeers: cleanedBeers
       });

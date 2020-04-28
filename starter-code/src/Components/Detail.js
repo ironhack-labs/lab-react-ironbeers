@@ -20,28 +20,38 @@ class Detail extends Component {
         this.setState({
           detail: res.data,
         });
-        console.log()
+        console.log();
         setLoad(false);
       });
   }
 
   render() {
-    const { loadStatus, setLoad } = this.context;
-    console.log(loadStatus)
+    const { loadStatus } = this.context;
+    let content = "";
     const item = this.state.detail;
-
-    return (
-      <div className="beer-container">
-        <div className="beer-detail">
-          <img alt={item.name} src={item.image_url} />
-          <div>{item.name}</div>
-          <div>{item.tagline}</div>
-          <div>{item.first_brewed}</div>
-          <div>{item.attenuation_level}</div>
-          <div>{item.description}</div>
+    if ((loadStatus === false)) {
+      content = (
+        <div className="beer-container">
+          <div className="beer-detail">
+            <img alt={item.name} src={item.image_url} />
+            <div>{item.name}</div>
+            <div>{item.tagline}</div>
+            <div>{item.first_brewed}</div>
+            <div>{item.attenuation_level}</div>
+            <div>{item.description}</div>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      content = (
+        <div className="Loading">
+          <img alt="loading" src="./images/load.gif" />
+          Loading
+        </div>
+      );
+    }
+
+    return <div>{content} </div>;
   }
 }
 
