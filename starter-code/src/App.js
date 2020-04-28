@@ -23,7 +23,7 @@ const Layout = () => {
   return <div>
     <Header />
     <Route exact path='/beers' component={BeerList} />
-    <Route path='/beers/:id' render={props => <BeerDetail {...props} />}/>
+    <Route path='/beers/:id' component={BeerDetail} />
     <Route path='/random-beer' component={RandomBeer} />
     <Route path='/new-beer' component={NewBeer} />
   </div>
