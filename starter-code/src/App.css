@@ -21,7 +21,125 @@
 .App-intro {
   font-size: large;
 }
+.big-picture{
+width: 100%;
+}
+.main-content{
+  width: 25%;
+   
+  margin: 0 auto;
 
+  border: solid rgba(184, 184, 184, 0.465) 1px;
+}
+.tophome{
+  background-color: rgba(75, 149, 149, 0.842);
+}
+.tophome img {
+  width: 64px;
+}
+.imglist {
+  
+  border: solid rgba(133, 124, 124, 0.226) 1px;
+  float:right;
+  width: 50px;
+
+}
+.content-list{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom:  1px solid rgba(187, 182, 182, 0.527);
+
+}
+.beer-list-info{
+flex-direction: column;
+  display: flex;
+  float: left;
+  align-items:flex-start ;
+padding-left: 15px;
+justify-content: flex-start;
+text-align: start;
+}
+.tag-beer{
+  color: rgba(66, 66, 66, 0.561);
+  font-size: 80%;
+}
+.name-beer{
+  font-size: 100%;
+}
+.tag-beer{
+  margin-top: 10px;
+  font-size: 60%;
+}
+.contr-beer{
+  margin-top: 20px;
+  font-size: 55%;
+  font-weight: bold;
+}
+.content-id{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin:0 auto;
+  justify-content: center;
+  align-items: center;
+  
+}
+.beer-list-id{
+flex-direction: column;
+  display: flex;
+  float: left;
+  align-items:flex-start ;
+padding-left: 15px;
+justify-content: flex-start;
+text-align: start;
+  border: solid rgba(184, 184, 184, 0.465) 1px;
+
+}
+.imgid{
+  width: 20%;
+}
+
+.tag-id{
+    margin-top: 10px;
+  font-size: 60%;
+}
+.name-id{
+ margin-top: 10px;
+  font-size: 90%;
+
+}
+.line-items{
+  width: 90%;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: flex-end;
+}
+.desc-id{
+   margin-top: 20px;
+  font-size: 80%;
+  padding:20px;
+}
+.labeladd{
+font-size: 90%;
+font-weight: bold;
+  padding:10px;
+}
+.inputadd{
+  width: 90%;
+  padding: 5px;
+}
+.content-add{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin:0 auto;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dct="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dctype="http://purl.org/dc/dcmitype/" xmlns:dcat="http://vocab.deri.ie/dcat#">
+	<dcat:Dataset rdf:about="#dataset_6332347">
+		<dct:title xml:lang="ca">Servei GTFS Real time autobusos</dct:title>
+		<dct:title xml:lang="es">Servicio GTFS Real time autobuses</dct:title>
+		<dct:title xml:lang="en">GTFS real time bus service</dct:title>
+		<dct:description xml:lang="ca">Servei web de transport que ofereix la informaci&#243; del temps real de pas, per les parades, dels autobusos de l&apos;AMB (excepte els de TMB)</dct:description>
+		<dct:description xml:lang="es">Servicio web de transporte que ofrece la informaci&#243;n del tiempo real de paso, por las paradas, de los autobuses del AMB (salvo los de TMB)</dct:description>
+		<dct:description xml:lang="en">Transport web service providing real-time information on due times at bus stops for AMB buses (except TMB buses)</dct:description>
+        <dct:publisher>
+            <foaf:Organization>
+                <dct:title>AMB</dct:title>
+                <foaf:homepage rdf:resource="http://www.amb.cat"/>
+            </foaf:Organization>
+        </dct:publisher>
+        <dct:accrualPeriodicity>
+            <dct:Frecuency>
+				<rdfs:label xml:lang="ca">Cada 30 segons</rdfs:label>
+				<rdfs:label xml:lang="es">Cada 30 segundos</rdfs:label>
+				<rdfs:label xml:lang="en">every 30 seconds</rdfs:label>
+            </dct:Frecuency>
+        </dct:accrualPeriodicity>
+		<dct:spatial>
+			<rdf:Description>
+				<rdfs:label xml:lang="ca">Àrea metropolitana</rdfs:label>
+				<rdfs:label xml:lang="es">Área metropolitana</rdfs:label>
+				<rdfs:label xml:lang="en">Àrea metropolitana</rdfs:label>
+				<rdfs:seeAlso rdf:resource="http://sws.geonames.org/3336901/"/>
+			</rdf:Description>
+		</dct:spatial>
+		<dct:license rdf:resource="resource.llicencia_article_4_llei_37_2007"/>
+		<dcat:keyword xml:lang="ca">transport</dcat:keyword>
+		<dcat:keyword xml:lang="es">transport</dcat:keyword>
+		<dcat:keyword xml:lang="en">transport</dcat:keyword>
+		<dcat:keyword xml:lang="ca">autobusos</dcat:keyword>
+		<dcat:keyword xml:lang="es">autobusos</dcat:keyword>
+		<dcat:keyword xml:lang="en">autobusos</dcat:keyword>
+		<dct:subject>
+			<rdf:Description>
+				<rdfs:label xml:lang="ca">Mobilitat</rdfs:label>
+				<rdfs:label xml:lang="es">Mobilitat</rdfs:label>
+				<rdfs:label xml:lang="en">Mobilitat</rdfs:label>
+			</rdf:Description>
+		</dct:subject>
+		<dct:subject>
+			<rdf:Description>
+				<rdfs:label xml:lang="ca">Mitjans de transport</rdfs:label>
+				<rdfs:label xml:lang="es">Mitjans de transport</rdfs:label>
+				<rdfs:label xml:lang="en">Mitjans de transport</rdfs:label>
+			</rdf:Description>
+		</dct:subject>
+		<dct:subject>
+			<rdf:Description>
+				<rdfs:label xml:lang="ca">Mobilitat</rdfs:label>
+				<rdfs:label xml:lang="es">Movilidad</rdfs:label>
+				<rdfs:label xml:lang="en">Mobility</rdfs:label>
+			</rdf:Description>
+		</dct:subject>
+		<dct:subject>
+			<rdf:Description>
+				<rdfs:label xml:lang="ca">Mitjans de transport</rdfs:label>
+				<rdfs:label xml:lang="es">Medios de transporte</rdfs:label>
+				<rdfs:label xml:lang="en">Means of transport</rdfs:label>
+			</rdf:Description>
+		</dct:subject>
+		<dct:references>
+			<foaf:Document>
+				<rdfs:label xml:lang="ca"></rdfs:label>
+				<rdfs:label xml:lang="es"></rdfs:label>
+				<rdfs:label xml:lang="en"></rdfs:label>
+				<foaf:page rdf:resource=""/>
+			</foaf:Document>
+		</dct:references>
+
+		
+		<dcat:distribution>
+			<dcat:Distribution>
+				<rdf:type rdf:resource="http://vocab.deri.ie/dcat#Download"/>
+				<dcat:accessURL></dcat:accessURL>
+				<dct:format>
+					<dct:IMT>
+						<rdf:value>mimetype.</rdf:value>
+						<rdfs:label></rdfs:label>
+					</dct:IMT>
+				</dct:format>
+			</dcat:Distribution>
+		</dcat:distribution>
+		
+				
+		<dcat:distribution>
+			<dcat:Distribution>
+				<rdf:type rdf:resource="http://vocab.deri.ie/dcat#WebService"/>
+				<dcat:accessURL>https://ssl.ambmobilitat.cat/transit/trips-updates/trips.bin</dcat:accessURL>
+			</dcat:Distribution>
+		</dcat:distribution>
+    </dcat:Dataset>
+</rdf:RDF>
