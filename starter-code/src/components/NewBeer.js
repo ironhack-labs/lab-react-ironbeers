@@ -31,37 +31,37 @@ class NewBeer extends Component {
     return (
       <div>
         <Header />
-        <div>
-            <div>
-                <label htmlFor="name">name</label>
-                <input type="text" value={name} name="name" onChange={this.handleInput}/>
+        <div className="pa-1">
+            <div className="flex-row pb-1">
+                <label className="col-3 pr-1" htmlFor="name">name</label>
+                <input className="col-9" type="text" value={name} name="name" onChange={this.handleInput}/>
             </div>
-            <div>
-                <label htmlFor="tagline">tagline</label>
-                <input type="text" value={tagline} name="tagline" onChange={this.handleInput}/>
+            <div className="flex-row pb-1">
+                <label className="col-3" htmlFor="tagline">tagline</label>
+                <input className="col-9" type="text" value={tagline} name="tagline" onChange={this.handleInput}/>
             </div>
-            <div>
-                <label htmlFor="description">description</label>
-                <textarea value={description} name="description" onChange={this.handleInput}/>
+            <div className="flex-row pb-1">
+                <label  className="col-3 pr-1" htmlFor="description">description</label>
+                <textarea className="col-9" value={description} name="description" onChange={this.handleInput}/>
             </div>
-            <div>
-                <label htmlFor="firest_brewed">first brewed</label>
-                <input type="text" value={first_brewed} name="first_brewed" onChange={this.handleInput}/>
+            <div className="flex-row pb-1">
+                <label className="col-3 pr-1" htmlFor="firest_brewed">first brewed</label>
+                <input className="col-9" type="text" value={first_brewed} name="first_brewed" onChange={this.handleInput}/>
             </div>
-            <div>
-                <label htmlFor="brewers_tips">brewers tip</label>
-                <input type="text" value={brewers_tips} name="brewers_tips" onChange={this.handleInput}/>
+            <div className="flex-row pb-1">
+                <label className="col-3 pr-1" htmlFor="brewers_tips">brewers tip</label>
+                <input className="col-9" type="text" value={brewers_tips} name="brewers_tips" onChange={this.handleInput}/>
             </div>
-            <div>
-                <label htmlFor="attenuation_level">attenuation level</label>
-                <input type="number" value={attenuation_level} name="attenuation_level" onChange={this.handleInput}/>
+            <div className="flex-row pb-1">
+                <label className="col-3 pr-1" htmlFor="attenuation_level">attenuation level</label>
+                <input className="col-9" type="number" value={attenuation_level} name="attenuation_level" onChange={this.handleInput}/>
             </div>
-            <div>
-                <label htmlFor="contributed_by">contributed by</label>
-                <input type="text" value={contributed_by} name="contributed_by" onChange={this.handleInput}/>
+            <div className="flex-row pb-1">
+                <label className="col-3 pr-1" htmlFor="contributed_by">contributed by</label>
+                <input className="col-9" type="text" value={contributed_by} name="contributed_by" onChange={this.handleInput}/>
             </div>
-            <div>
-              <button onClick={this.handleSubmit}>create new</button>
+            <div className="ta-right">
+              <button className="button" onClick={this.handleSubmit}>create new</button>
             </div>
         </div>
       </div>

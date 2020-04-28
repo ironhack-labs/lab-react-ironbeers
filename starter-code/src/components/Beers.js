@@ -6,15 +6,24 @@ import { Link } from "react-router-dom";
 class Beers extends Component {
   
   state = {
-    beers: []
+    beers: [],
+    search: ""
   }
 
   componentDidMount() {
     axios.get("https://ih-beers-api2.herokuapp.com/beers")
     .then(response => {
-      this.setState({beers: response.data})
+      this.setState({beers: response.data, filteredBeers: response.data})
     })
   }
+
+  handleInputSearch = (e) => {
+    const searchValue = e.target.value;
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${searchValue}`)
+      .then(response => {
+        this.setState({beers: response.data, search:searchValue})
+      })
+  };
   
   render() {
 
@@ -22,6 +31,10 @@ class Beers extends Component {
       <div>
         <Header />
         <h2>Beers</h2>
+        <div className="flex-row pb-1">
+          <label className="col-2" htmlFor="search">search</label>
+          <input className="col-10" type="text" value={this.state.search} name="search" onChange={this.handleInputSearch}/>
+        </div>
         {this.state.beers.length > 0 && 
           this.state.beers.map ((beer, index) => {
             return (

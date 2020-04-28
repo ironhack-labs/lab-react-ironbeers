@@ -23,7 +23,7 @@ class SingleBeer extends Component {
       <div>
         <Header />
         {beer &&
-          <div>
+          <div className="ta-center">
             <div><img src={beer.image_url} alt={beer.name}/></div>
             <div>
               <div>{beer.name}</div>

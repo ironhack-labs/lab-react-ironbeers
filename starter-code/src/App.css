@@ -13,10 +13,10 @@ a.link-inside-element{
   height: 100%;
   overflow: hidden;
 }
-input {
+input, textarea {
   box-sizing: border-box;
   background-color: #F7F7F7;
-  border: 1px solid #F7F7F7;
+  border: 1px solid #EFA8E4;
   padding-left: 5px;
   padding-right: 5px;
 }
