@@ -14,10 +14,9 @@ class Beers extends Component {
 
   state = {
     beersList: [],
-    error: undefined,
     status: STATUS.LOADING,
   }
-
+  
   componentDidMount() {
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers")
@@ -38,8 +37,8 @@ class Beers extends Component {
 
   listingBeers = () => {
     const { beersList} = this.state;
-    return beersList.map((info, i) => 
-    <div>
+    return beersList.map((info, index) => 
+    <div key={index}>
       <Link className="beers-image" to={`/beers/${beersList._id}`}><img src={ info.image_url } alt="beers"/></Link>
       <div className="beers-info-box">
         <Link className="beers-name" to={`/beers/${beersList._id}`}>{ info.name }</Link>
@@ -51,19 +50,19 @@ class Beers extends Component {
   }
 
   render() {
-    const { status, error } = this.state;
+    const { status } = this.state;
 
     // eslint-disable-next-line default-case
     switch (status) {
       case STATUS.LOADING:
-        return <div>Loading</div>;
+        return <div>{ status }</div>;
       case STATUS.LOADED:
         return <div>
                 <HomeButton />
                 { this.listingBeers() }
               </div>;
       case STATUS.ERROR:
-        return <div>{error}</div>;
+        return <div>{ status }</div>;
     }
   }
 }
