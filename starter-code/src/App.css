@@ -22,6 +22,58 @@
   font-size: large;
 }
 
+.link-beerlist{
+  margin-bottom: 40px;
+}
+
+.BeerList-item{    display: flex;
+  color: #000;
+  text-decoration: none;
+  align-items: center;
+  padding: 36px 20px;
+  border-bottom: 1px solid #ccc;}
+
+.BeerList-item-img{
+  margin-right: 30px;
+}
+
+.BeerList-item-img img{
+  width: 35px;
+}
+
+.BeerList-item-text{
+  text-align: left;
+}
+
+.BeerList-item-text span{
+  font-size: 12px;
+}
+
+input, textarea{
+  border: 1px solid #ccc;
+}
+textarea{
+  height: 100px;
+  border-radius: 20px;
+}
+input{
+  height: 40px;
+  border-radius: 20px;
+}
+.field{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 45px;
+}
+.buttonAddBeer{
+  height: 45px;
+  width: 200px;
+  background: #3dc4fc;
+  color: #fff;
+  font-size: 18px;
+  margin: 40px 0px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
