@@ -3,3 +3,51 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+header {
+  background-color: #3DC4FB;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.img-components {
+  width: 100%;
+  margin: 0 3%;
+}
+
+.one-beer-of-the-list{
+  display: flex;
+  flex-direction: row;
+  height: 15%;
+  width: 100%;
+  margin: 0 5%;
+}
+
+.img-of-each-beer{
+  height: 180px;
+  width: 15%;
+}
+
+.info-beer{
+  display: flex;
+  flex-direction: column;
+  margin-left: 4%;
+}
+
+hr {
+  border: 1px solid;
+  margin: 2% 5%;
+}
+
+.show-all-info-beer {
+  height: 50%;
+  width: 100%;
+  margin: 0 5%;
+}
+
+.img-of-beer {
+  height: 280px;
+  width: 30%;
+}
