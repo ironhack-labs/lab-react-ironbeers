@@ -56,3 +56,13 @@
 .beer-link {
   text-decoration: none;
 }
+
+.single-beer-img {
+  height: 19rem;
+  margin: 2rem 0 1rem 8rem
+}
+
+.single-beer-name {
+  display: flex;
+  margin-left: 5rem;
+}

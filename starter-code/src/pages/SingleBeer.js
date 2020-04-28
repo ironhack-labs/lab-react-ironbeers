@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../components/Header';
 import axios from 'axios';
 
 const STATUS = {
@@ -36,8 +37,9 @@ class SingleBeer extends Component {
     const { beer } = this.state;
     return (
       <div>
-        <img src={beer.image_url} alt=""/>
-        <div>
+        <Header />
+        <img className="single-beer-img" src={beer.image_url} alt=""/>
+        <div className="single-beer-name">
           <h2>{beer.name}</h2>
           <p>{beer.attenuation_level}</p>
         </div>
