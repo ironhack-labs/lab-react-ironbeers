@@ -66,3 +66,10 @@
   display: flex;
   margin-left: 5rem;
 }
+
+.search-input {
+  height: 1.8rem;
+  width: 70%;
+  border-radius: 5px;
+  margin: 1rem 0 1rem 3rem;
+}
