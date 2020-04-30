@@ -1,28 +1,61 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+  font-family: "Inter", sans-serif;
+  padding: 1.5rem;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }
 
-.App-title {
-  font-size: 1.5em;
+h1 {
+  font-size: 3rem;
 }
 
-.App-intro {
-  font-size: large;
+h2 {
+  font-size: 2.25rem;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+h3 {
+  font-size: 1.875rem;
+}
+
+a {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.m-0_5 {
+  margin: 0.5rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-1_5 {
+  margin-top: 1.5rem;
 }
