@@ -26,3 +26,9 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.home-link-img {  
+background-color: white;  
+height: 3rem;  
+margin: 0.5rem 0 0 9rem;
+}
