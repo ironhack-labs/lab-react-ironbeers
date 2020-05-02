@@ -1,14 +1,41 @@
-import React, { Component } from 'react';
-import BeerCard from '../BeerCard';
+import React, { Component } from "react";
+import { getBeers } from "../../services/beerService";
+import BeerCard from "../BeerCard";
+import HomeButton from "../HomeButton";
 
 class BeerList extends Component {
-    render() {
-        return(
-            <div>
-                <BeerCard image="https://images.punkapi.com/v2/4.png" name="Some Beer" tagline="The best beer ever" contributor="John Sena"  />
-            </div>
-        )
-    }
+  state = {
+    data: [],
+  };
+
+  componentDidMount() {
+    getBeers().then((res) => {
+      this.setState({ data: res.data });
+    });
+  }
+
+  render() {
+    const { data } = this.state;
+
+    return (
+      <div>
+        <h1>All Beers</h1>
+
+        {data.map((item, index) => (
+          <BeerCard
+            key={index}
+            image={item.image_url}
+            name={item.name}
+            tagline={item.tagline}
+            contributor={item.contributed_by}
+            link={`/beers/${item.id}`}
+          />
+        ))}
+
+        <HomeButton />
+      </div>
+    );
+  }
 }
 
-export default BeerList
+export default BeerList;
