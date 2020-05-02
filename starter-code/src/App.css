@@ -8,6 +8,7 @@
 body {
   font-family: "Inter", sans-serif;
   padding: 1.5rem;
+  padding-bottom: 7.5rem;
 }
 
 h1,
@@ -28,9 +29,14 @@ h3 {
   font-size: 1.875rem;
 }
 
+p {
+  color: #4A5568;
+  line-height: 1.5;
+}
+
 a {
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.75);
+  color: #000;
 }
 
 img {
@@ -40,10 +46,67 @@ img {
   border-radius: 6px;
 }
 
+img.medium {
+  width: 90%;
+  height: 264px;
+  margin: 2.5rem auto;
+  display: block;
+  background: rgba(0, 0, 0, 0.05);
+  object-fit: contain;
+  padding: 1rem;
+}
+
+img.short {
+  width: 34px;
+  height: 132px;
+}
+
+/* Text */
+.text-center {
+  text-align: center;
+}
+
+.text-xs {
+  font-size: 0.875rem;
+  color: #000;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+/* Colors */
+.background-primary {
+  color: #FFF;
+  background-color: black;
+}
+
+.color-primary {
+  color: #000;
+}
+
+.color-secondary {
+  color: #4A5568;
+}
+
+/* Padding */
+.pt-1_5 {
+  padding-top: 1.5rem;
+}
+
+.pb-1_5 {
+  padding-bottom: 1.5rem;
+}
+
 .p-1 {
   padding: 1rem;
 }
 
+.p-1_5 {
+  padding: 1.5rem
+}
+
+/* Margin */
 .m-0_5 {
   margin: 0.5rem;
 }
@@ -56,6 +119,84 @@ img {
   margin-top: 1rem;
 }
 
+.mt-0_5 {
+  margin-top: 0.5rem;
+}
+
 .mt-1_5 {
   margin-top: 1.5rem;
+}
+
+.ml-1_5 {
+  margin-left: 1.5rem;
+}
+
+.ml-2_5 {
+  margin-left: 2.5rem;
+}
+
+.mb-0_5 {
+  margin-bottom: 0.5rem;
+}
+
+/* Size */
+.w-100 {
+  width: 87%;
+}
+
+/* Border */
+.br-6 {
+  border-radius: 6px;
+}
+
+/* Shadow */
+.shadow-xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* elements */
+.fixed {
+  position: fixed;
+  bottom: 1rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-justify {
+  justify-content: space-between;
+}
+
+label {
+  margin-left: 6px;
+}
+
+input {
+  padding: 1rem;
+  background-color: #edf2f8;
+  border-radius: 6px;
+  outline: none;
+  border: 0;
+  display: block;
+  width: 90%;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+input:focus {
+  background: #FFF;
+  border: solid 1px #000;
+}
+
+button.background-primary {
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  background-color: #F6AD55;
+  border: 0;
+  color: #000;
+  width: 100%;
 }
