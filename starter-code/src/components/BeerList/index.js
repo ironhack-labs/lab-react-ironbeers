@@ -28,7 +28,7 @@ class BeerList extends Component {
             name={item.name}
             tagline={item.tagline}
             contributor={item.contributed_by}
-            link={`/beers/${item.id}`}
+            link={`/beers/${item._id}`}
           />
         ))}
 
