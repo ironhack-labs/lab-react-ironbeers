@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Nav from './Nav';
+import Nav from "./Nav";
 
 class SingleBeer extends Component {
   constructor(props) {
@@ -34,14 +34,18 @@ class SingleBeer extends Component {
         <div>
           <Nav />
         </div>
-        <div>
-          <img className="beer-img" src={this.state.image_url} alt="img" />
-          <h3>{this.state.name}</h3>
-          <p>{this.state.tagline}</p>
-          <p>{this.state.first_brewed}</p>
-          <p>{this.state.attenuation_level}</p>
-          <p>{this.state.description}</p>
-          <p>{this.state.contributed_by}</p>
+        <div className="beers-card">
+          <div>
+            <img className="beer-img" src={this.state.image_url} alt="img" />
+          </div>
+          <div className="beers-card-info">
+            <h3>{this.state.name}</h3>
+            <p>{this.state.tagline}</p>
+            <p>{this.state.first_brewed}</p>
+            <p>{this.state.attenuation_level}</p>
+            <p>{this.state.description}</p>
+            <p>{this.state.contributed_by}</p>
+          </div>
         </div>
       </div>
     );

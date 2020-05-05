@@ -65,53 +65,53 @@ class NewBeer extends Component {
         <div>
           <Nav />
         </div>
-        <div>
+        <div className="form">
           <h3>Add Task</h3>
-          <form onSubmit={this.handleFormSubmit}>
+          <form className="div-form" onSubmit={this.handleFormSubmit}>
             <label>Name:</label>
             <input
               type="text"
               name="name"
               value={this.state.name}
               onChange={(e) => this.handleChange(e)}
-            />
+            /><br />
             <label>Tagline:</label>
             <input
               type="text"
               name="tagline"
               value={this.state.tagline}
               onChange={(e) => this.handleChange(e)}
-            />
+            /><br />
             <label>Description:</label>
             <textarea
               name="description"
               value={this.state.description}
               onChange={(e) => this.handleChange(e)}
-            />
+            /><br />
             <label>First Brewed:</label>
             <textarea
               name="first_brewed"
               value={this.state.first_brewed}
               onChange={(e) => this.handleChange(e)}
-            />
+            /><br />
             <label>Brewers tips:</label>
             <textarea
               name="brewers_tips"
               value={this.state.brewers_tips}
               onChange={(e) => this.handleChange(e)}
-            />
+            /><br />
             <label>Attenuation Level:</label>
             <textarea
               name="attenuation_level"
               value={this.state.attenuation_level}
               onChange={(e) => this.handleChange(e)}
-            />
+            /><br />
             <label>Contributed by:</label>
             <textarea
               name="contributed_by"
               value={this.state.contributed_by}
               onChange={(e) => this.handleChange(e)}
-            />
+            /><br />
 
             <input type="submit" value="Submit" />
           </form>

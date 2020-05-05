@@ -1,9 +1,9 @@
 
 * {
-  margin: 0;
+  margin-top: 0;
 }
 .beer-img {
-  width: 5rem
+  width: 4rem
 
 }
 
@@ -15,3 +15,95 @@
   margin-bottom: 2rem;
   top: 0;
 }
+.navbar a:visited  {
+  color: white
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.beers-home {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  flex-wrap: wrap;
+
+}
+
+ a:visited {
+  color:black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.beers-home h3 {
+  margin-top: 1rem
+}
+
+.beers-home p {
+  font-size: 0.8rem;
+  color: rgb(70, 70, 70)
+}
+
+.beers-card {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 4rem;
+}
+
+.beers-card-info {
+  margin-left: 2rem;
+}
+
+input {
+border-radius: 1rem;
+border-style: none;
+background-color: rgb(230, 230, 230);
+width: 20rem;
+height: 1.5rem;
+padding-left: 1rem;
+margin-left: 4rem;
+outline: none;
+}
+
+.form {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+
+.div-form {
+  width: 30rem;
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.div-form input {
+  margin-bottom: 2rem;
+}
+
+.div-form textarea {
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+border-style: none;
+background-color: rgb(230, 230, 230);
+width: 20rem;
+height: 1.5rem;
+padding-left: 1rem;
+outline: none;
+}
+
