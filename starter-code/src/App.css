@@ -1,28 +1,144 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+header {
+  width: 100%;
+  height: 15px;
+  background-color: #3dc4fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header a {
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.home {
+  margin: 0 auto;
 }
 
-.App-intro {
-  font-size: large;
+.home a {
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.home a p {
+  color: #777;
+}
+
+.home figure {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home figcaption {
+  width: 90%;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid #777;
+  border-radius: 6px;
+}
+
+.beers-card figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.beers-card img {
+  height: 100%;
+}
+
+.beers-card {
+  display: flex;
+}
+
+.beers-card h2 {
+  color: black;
+  transition: color 0.5 ease-in-out;
+}
+
+.beers-card h2:hover {
+  color: #3dc4fc;
+}
+
+.beers-card .info {
+  width: 100%;
+}
+
+.beer-details {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.beer-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.beer-card figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+.sides {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.left h2 {
+  font-size: 30px;
+}
+
+.left p {
+  color: #777;
+}
+
+form {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  padding: 5px;
+  background-color: #3dc4fc;
+  border: 1px solid #3dc4fc;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+button:hover {
+  background-color: #25a3da;
 }
