@@ -42,7 +42,27 @@
   
 }
 
+.svg{
+  fill:white;
+  margin-top:10px;
+  width:40px;
+  height:40px;
+}
 
+.img-one {
+  margin: 100px;
+  height: 30vh;
+}
 
+.img-one > img {
+  height: 100%;
+}
 
+.img {
+  margin: 50px;
+  height: 30vh;
+}
 
+.img > img {
+  height: 100%;
+}

@@ -7,7 +7,7 @@ export default function Section(props) {
         <div>
             <Link to={props.to}>
                 <div className="section">
-                    <img src={props.url} alt={props.name}></img>
+                    <img className="beer-img"src={props.url} alt={props.name}></img>
                     <h2>{props.name}</h2>
                     <p>{props.description}</p>
                 </div>

@@ -29,10 +29,10 @@ class BeerDetails extends Component {
         return (
             <div>
                 <Navbar/>
-                <div className="img-one">
-                    <img src={this.state.image_url} alt=""/>
-                </div>
                 <div className="body-one">
+                    <div className="img-one">
+                        <img src={this.state.image_url} alt=""/>
+                    </div>
                     <h3>{this.state.name}</h3>
                     <h3>{this.state.tagline}</h3>
                     <h3>{this.state.description}</h3>

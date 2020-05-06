@@ -26,7 +26,6 @@ export default class NewBeer extends Component {
             .post("http://ih-beers-api.herokuapp.com/beers/new", {
                 name,tagline, description, first_brewed, brewer_tips, attenuation_level, contributed_by
             })
-        
             .then(() => {
                 this.setState({
                     name: '',
@@ -38,14 +37,15 @@ export default class NewBeer extends Component {
                     contributed_by: '', 
                 })
             })
-        .catch((error)=> console.log(error))
+            .catch((error)=> console.log(error))
         
     }
+
     handleChange(e) {
         const { name, value } = e.target;
         this.setState({ [name]: value });
-    };
-    
+    }
+
     render() {
         return (
             <div>
