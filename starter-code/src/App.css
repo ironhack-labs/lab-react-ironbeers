@@ -26,3 +26,23 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.navbar{
+  background-color: #3dc4fc;
+  height: 60px;
+  width: 100vw;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  
+}
+
+
+
+
+
