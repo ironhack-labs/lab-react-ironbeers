@@ -19,7 +19,8 @@ export default class NewBeer extends Component {
         this.handleChange = this.handleChange.bind(this)
     }
     
-    handleSubmit() {
+    handleSubmit(e) {
+        e.preventDefault();
         let { name, tagline, description, first_brewed, brewer_tips, attenuation_level, contributed_by } = this.state;
         
         axios
@@ -51,21 +52,45 @@ export default class NewBeer extends Component {
             <div>
                 <Navbar/>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Name:</label>
-                    <input type="text" name="name" value={this.state.name} onChange={this.handleChange}></input>
-                    <label>Tagline:</label>
-                    <input type="text" name="tagline" value={this.state.tagline} onChange={this.handleChange}></input>
-                    <label>Description:</label>
-                    <input type="text" name="description" value={this.state.description} onChange={this.handleChange}></input>
-                    <label>First Brewed:</label>
-                    <input type="text" name="first_brewed" value={this.state.first_brewed} onChange={this.handleChange}></input>
-                    <label>Brewer Tips:</label>
-                    <input type="text" name="brewer_tips" value={this.state.brewer_tips} onChange={this.handleChange}></input>
-                    <label>Attenuation Level:</label>
-                    <input type="text" name="attenuation_level" value={this.state.attenuation_level} onChange={this.handleChange}></input>
-                    <label>Contributed by:</label>
-                    <input type="text" name="contributed_by" value={this.state.contributed_by} onChange={this.handleChange}></input>
-                    <input type="submit" value="Submit"></input>
+                    
+                    <div className="forms">
+                        <label>Name</label>
+                        <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
+                    </div>
+                    
+
+                    <div className="forms">
+                        <label>Tagline</label>
+                        <input type="text" name="tagline" value={this.state.tagline} onChange={this.handleChange}/>
+                    </div>
+
+                    <div className="forms">
+                        <label>Description</label>
+                        <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />
+                    </div>
+
+                    <div className="forms">
+                        <label>First Brewed</label>
+                        <input type="text" name="first_brewed" value={this.state.first_brewed} onChange={this.handleChange} />
+                    </div>
+                    
+                    <div className="forms">
+                        <label>Brewer Tips</label>
+                        <input type="text" name="brewer_tips" value={this.state.brewer_tips} onChange={this.handleChange} />
+                    </div>
+                    
+                    <div className="forms">
+                        <label>Attenuation Level</label>
+                        <input type="text" name="attenuation_level" value={this.state.attenuation_level} onChange={this.handleChange} />
+                    </div>
+
+                    <div className="forms">
+                        <label>Contributed by</label>
+                        <input type="text" name="contributed_by" value={this.state.contributed_by} onChange={this.handleChange} />
+                        <br />
+                        <input className="submit" type="submit" value="ADD NEW"></input>
+                    </div>
+                   
                 </form>
             </div>
         )

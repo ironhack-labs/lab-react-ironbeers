@@ -36,10 +36,50 @@
 .container{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
-  padding: 30px;
+  align-items: center;
+  align-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
   
+}
+.info{
+  text-decoration: none;
+  text-align: center;
+  color:black;
+}
+
+.beer-image{
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  flex-wrap: wrap;
+}
+
+.beer-image h2{
+  margin-left:5px;
+  color:black;
+  text-align: justify;
+  font-weight: 300;
+}
+a{
+  text-decoration: none;
+}
+.beer-image p{
+  font-size: 0.8rem;
+  color: grey;
+  text-align: justify;
+  
+}
+.beer-image img {
+  max-width:100%;
+  height:auto;
+}
+.search{
+  border-radius: 8px;
+  margin-top: 15px;
+  width:30%;
+  height:25px;
 }
 
 .svg{
@@ -65,4 +105,44 @@
 
 .img > img {
   height: 100%;
+}
+
+.img-onebeer{
+  margin: 50px;
+  height: 30vh;
+}
+.img-onebeer > img {
+  height: 100%;
+}
+
+form{
+  padding: 20px;
+  margin-left: 35%;
+}
+
+.forms{
+  display: flex;
+  flex-direction: column;
+  padding-bottom:10px ;
+  align-items: flex-start;
+}
+.forms > input{
+  border-radius: 9px;
+  border: 1px solid rgb(222, 220, 220);
+  width: 35%;
+  height: 30px;
+}
+
+.submit{
+  background-color:#3dc4fc;
+  color:white;
+  font-size:15px;
+  height:60px;
+  transition: transform .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.submit:hover{
+  transform: scale(1.1);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }

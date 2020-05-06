@@ -32,7 +32,7 @@ class Random extends Component {
         <div>
             <Navbar/>
         <div className="card-onebeer">
-          <div className="img-pnebeer">
+          <div className="img-onebeer">
             <img src={this.state.image_url} alt=""/>
           </div>
           <div className="body-onebeer">

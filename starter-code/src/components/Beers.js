@@ -43,7 +43,7 @@ export default class Beers extends Component {
            
             <div>
                 <Navbar />
-                <input placeholder="Search" type="text" name="search" onChange={this.handleSearch}></input>
+                <input className='search' placeholder="Search" type="text" name="search" onChange={this.handleSearch}></input>
                 {this.state.beers.filter((item) =>
                     item.name.toLowerCase().includes(this.state.search)
                 )
@@ -55,12 +55,15 @@ export default class Beers extends Component {
                         <div className="card">
                             <div className="img">
                                 <img src={beer.image_url} alt=""/>
-                            </div>
-                            <h2>{beer.name}</h2>
-                            <p>{beer.tagline}</p>
-                            <p>{beer.contributed_by}</p>
+                                    </div>
+                                    <div className="info">
+                                        <h2>{beer.name}</h2>
+                                        <p>{beer.tagline}</p>
+                                        <p>{beer.contributed_by}</p>
+                                </div>
                         </div>
                     </Link>
+                    <hr/>
                 </div>
                     );
                     })}
