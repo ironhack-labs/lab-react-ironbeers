@@ -1,0 +1,12 @@
+.home-header figure{
+    background-color: #32c3ff;
+    width:100%;
+    margin:0;
+    text-align: center;
+}
+
+.home-header img{
+    padding: 15px 0;
+    height: 65px;
+    background-color: #32c3ff;
+}
