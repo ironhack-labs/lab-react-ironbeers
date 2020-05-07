@@ -6,7 +6,7 @@ import NavBar from "./navbar/NavBar";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Beers from "./pages/beers/Beers";
-import BeerDetails from "./beerdetails/BeerDetails"
+import BeerDetails from "./beerdetails/BeerDetails";
 
 class App extends Component {
   constructor(props) {
@@ -19,8 +19,8 @@ class App extends Component {
   componentDidMount() {
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers")
-      .then((response) => this.setState({beers: response.data}))
-      .catch((err) => console.log(err))
+      .then((response) => this.setState({ beers: response.data }))
+      .catch((err) => console.log(err));
   }
 
   render() {
