@@ -1,0 +1,16 @@
+.menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.menu ul li {
+    margin: 0 10px;
+}
+
+.menu .active {
+    font-weight: bold;
+}
+.menu{
+    background-color:lightblue;
+}
