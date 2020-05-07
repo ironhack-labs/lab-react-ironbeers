@@ -2,14 +2,18 @@ import React, { Component } from 'react'
 
 import './home.css'
 
+import { Link } from 'react-router-dom'
+
 class Home extends Component {
   render() {
     return (
       <section>
         <h1>IronBeers</h1>
         <article>
-          <img src="./../../../images/beers.png" alt="Beers" />
-          <h2>All Beers</h2>
+          <Link to="/beers">
+            <img src="./../../../images/beers.png" alt="Beers" />
+            <h2>All Beers</h2>
+          </Link>
           <p>
             Lorem fistrum no te digo trigo por no llamarte Rodrigor amatomaa
             tiene musho peligro no te digo trigo por no llamarte Rodrigor.

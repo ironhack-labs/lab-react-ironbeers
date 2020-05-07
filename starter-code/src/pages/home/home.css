@@ -8,5 +8,10 @@ h1{
 }
 
 h2 {
-  margin: 0px
+  margin: 0px;
+  font-size: 1.3em;
+}
+
+a {
+  text-decoration: none;
 }

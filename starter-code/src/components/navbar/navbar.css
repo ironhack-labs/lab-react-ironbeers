@@ -1,0 +1,11 @@
+nav {
+  background: #F6AA1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+}
+
+.home-icon {
+  height: 24px;
+}
