@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav>
-      <Link to="/">
+    <Link to="/">
+      <nav>
         <img
           src="./../../../images/home.svg"
           alt="IronBeers"
           className="home-icon"
         />
-      </Link>
-    </nav>
+      </nav>
+    </Link>
   )
 }
 

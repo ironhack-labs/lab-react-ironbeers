@@ -6,6 +6,10 @@ nav {
   height: 36px;
 }
 
+
 .home-icon {
   height: 24px;
+  width: 24px;
+  display: block;
+  margin: auto;
 }
