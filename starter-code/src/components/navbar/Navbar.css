@@ -1,0 +1,19 @@
+.menu {
+    padding: 20px 0;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+}
+
+.menu img {
+    width: 30px;
+}
+
+.menu ul li {
+    list-style-type: none;
+}
+
+.menu a {
+    display: block;
+    margin: 0 auto;
+}

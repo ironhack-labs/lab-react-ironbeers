@@ -1,0 +1,48 @@
+img {
+	display: block;
+	width: 100%;
+}
+
+.each-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.each-page h1{
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.each-beer {
+	width: 350px;
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	border-bottom: cornflowerblue dotted 1px;
+}
+.each-beer .beer-img{
+	margin: 0 30px 0 0;
+	width: 50px;
+	height: 100px;
+}
+.each-beer img {
+	max-height: 100px;
+	object-fit: contain;
+	object-position: top;
+}
+
+.each-beer h3{
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0;
+}
+.each-beer h5{
+	font-size: 13px;
+	font-weight: 400;
+	color: cornflowerblue;
+	margin: 10px 0;
+}
+.each-beer p {
+	font-size: 10px;
+	margin: 0;
+}
