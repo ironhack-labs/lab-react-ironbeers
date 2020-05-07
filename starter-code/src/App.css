@@ -23,6 +23,25 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navImg {
+  width: 100vw;
+  margin-bottom: 50px;
+
+}
+
+.beerImg {
+  height: 20vh;
+}
+
+.homeImg {
+  width: 100vw;
 }
