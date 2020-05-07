@@ -1,6 +1,71 @@
 .App {
-  text-align: center;
+  width: 100%;
 }
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.nav {
+  background-color: #3DC4FC;
+  color: white;
+  padding: 30px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.cards {
+  width: 100%;
+  padding: 20px;
+}
+
+.card__container {
+  margin-bottom: 50px;
+}
+
+h3 {
+  margin: 10px 0 5px 0;
+}
+
+p {
+  margin: 10px 0 5px 0;
+}
+
+a.card__link {
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-decoration: none;
+}
+
+a.card__link img {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.beer__display {
+  padding: 20px;
+}
+
+
+.beer__display img {
+  max-width: 100%;
+  max-height: 200px;
+}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -14,6 +79,62 @@
   color: white;
 }
 
+form {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+textarea[type=text] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+button {
+  padding: 20px;
+  width: 100%;
+  background-color: #3DC4FC;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+}
+
+input {
+  width: 100%;
+
+}
+
+textarea {
+  width: 100%;
+}
+
+
+
 .App-title {
   font-size: 1.5em;
 }
@@ -23,6 +144,11 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
