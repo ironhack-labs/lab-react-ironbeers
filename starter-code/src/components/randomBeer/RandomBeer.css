@@ -1,0 +1,10 @@
+.randombeers {
+    width: 100%;
+    min-width: 375px;
+    height: 30vh;
+}
+
+.randombeers img {
+    width: 100%;
+    object-fit: cover;
+}

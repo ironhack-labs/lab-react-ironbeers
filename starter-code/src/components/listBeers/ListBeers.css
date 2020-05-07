@@ -1,0 +1,10 @@
+.listbeers{
+    width: 100%;
+    min-width: 375px;
+    height: 30vh;
+}
+
+.listbeers img{
+    width: 100%;
+    object-fit: cover;
+}

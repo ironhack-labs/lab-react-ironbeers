@@ -1,0 +1,34 @@
+.listbeers {
+    width: 100%;
+    min-width: 375px;
+}
+
+.listbeers img {
+    width: 100%;
+    object-fit: cover;
+    height: 30vh;
+}
+
+.newbeers {
+    width: 100%;
+    min-width: 375px;
+}
+
+.newbeers img {
+    width: 100%;
+    object-fit: cover;
+    height: 30vh;
+}
+
+.randombeers {
+    width: 100%;
+    min-width: 375px;
+
+}
+
+.randombeers img {
+    width: 100%;
+    object-fit: cover;
+    height: 30vh;
+
+}
