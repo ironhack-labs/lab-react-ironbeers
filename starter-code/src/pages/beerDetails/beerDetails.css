@@ -1,0 +1,18 @@
+img {
+  height: 320px;
+  object-fit: contain;
+  display: block;
+  margin: 8px auto;
+}
+
+h2 {
+  color: #f6aa1c;
+  text-align: center;
+}
+.text-container {
+  margin: 8px;
+}
+
+.contributor{
+  color: #f6aa1c;
+}
