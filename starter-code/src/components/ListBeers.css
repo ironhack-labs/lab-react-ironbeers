@@ -1,0 +1,22 @@
+.card1{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1,h2,h3,p{
+    margin:0px;
+    margin-bottom: 20px;
+}
+.card_image{
+    width: 40%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+
+}
+.card_inf{
+    width: 60%;
+text-align:left;
+
+}

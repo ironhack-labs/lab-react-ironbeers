@@ -1,0 +1,21 @@
+h2,h1,p{
+  margin: 40px 10px;
+}
+p{
+  color:grey;
+}
+.navbar{
+  margin-top: 20px ;
+  background-color:#52c3fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+#home{
+stroke:"white";
+fill:"white"
+}
+.section1{
+  margin-top: 25px;
+}
