@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 
 import Navbar from './../../components/navbar/navbar'
+import BeerCard from './../../components/beerCard/beerCard'
 
 class AllBeers extends Component {
   constructor() {
@@ -29,7 +29,14 @@ class AllBeers extends Component {
     return (
       <main>
         <Navbar />
-        {this.state.listOfBeers.map((elm, idx) => (<p>{elm.name}</p>))}
+        {this.state.listOfBeers.map((elm, idx) => (
+          <BeerCard
+            key={idx}
+            name={elm.name}
+            image={elm.image_url}
+            contributedBy={elm.contributed_by}
+          />
+        ))}
       </main>
     )
   }
