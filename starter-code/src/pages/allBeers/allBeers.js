@@ -33,6 +33,7 @@ class AllBeers extends Component {
           <BeerCard
             key={idx}
             name={elm.name}
+            tagline={elm.tagline}
             image={elm.image_url}
             contributedBy={elm.contributed_by}
           />

@@ -1,0 +1,19 @@
+article {
+  margin: 12px;
+}
+
+img {
+  height: 96px;
+  width: 96px;
+  object-fit: contain;
+}
+
+p {
+  margin: 0;
+}
+
+.is-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
