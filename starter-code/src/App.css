@@ -18,11 +18,75 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.main__link img{
+  height: 100%;
+  width: 100%;
+
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: bisque;
+}
+
+.navbar img{
+  height: 50px;
+}
+
+.beer-showcase{
+  display: flex;
+  align-items: center;
+  padding: 25px;
+}
+
+.beer-showcase h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.beer-showcase h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: gray;
+}
+
+.beer-showcase p {
+  font-size: 0.7rem;
+  font-weight: 400;
+  
+}
+
+.beer-showcase span {
+  font-weight: bold;  
+}
+
+.beer-showcase img{
+  height: 130px;
+}
+
+hr{
+  width: 75%;
+  margin: 10px auto;
+  border: 1px solid lightgray;
+}
+
+.beer-desc{
+  margin-left: 15px;
+  text-align: left;
+}
+
+.showcase-img{
+  width: 75px;
+}
+
+#beer-filter{
+  margin: 15px auto;
 }
