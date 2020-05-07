@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+import './allBeers.css'
+
 import Navbar from './../../components/navbar/navbar'
 import BeerCard from './../../components/beerCard/beerCard'
+
+import { Link } from 'react-router-dom'
 
 class AllBeers extends Component {
   constructor() {
@@ -30,13 +34,15 @@ class AllBeers extends Component {
       <main>
         <Navbar />
         {this.state.listOfBeers.map((elm, idx) => (
-          <BeerCard
-            key={idx}
-            name={elm.name}
-            tagline={elm.tagline}
-            image={elm.image_url}
-            contributedBy={elm.contributed_by}
-          />
+          <Link to={`/beers/${elm._id}`}>
+            <BeerCard
+              key={idx}
+              name={elm.name}
+              tagline={elm.tagline}
+              image={elm.image_url}
+              contributedBy={elm.contributed_by}
+            />
+          </Link>
         ))}
       </main>
     )
