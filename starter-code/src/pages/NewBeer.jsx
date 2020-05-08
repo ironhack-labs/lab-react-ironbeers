@@ -16,7 +16,6 @@ export default class NewBeer extends Component {
     axios
       .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
       .then((apiRes) => {
-        console.log(apiRes);
         this.props.history.push("/newest");
       })
       .catch((err) => console.log(err));

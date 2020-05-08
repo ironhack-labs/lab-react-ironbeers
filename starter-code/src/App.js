@@ -63,7 +63,6 @@ class App extends Component {
           beers: apiRes.data,
           newestBeer: apiRes.data[apiRes.data.length - 1],
         });
-        console.log(apiRes.data);
       });
     }
     return this.state.newestBeer;
