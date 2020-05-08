@@ -1,0 +1,8 @@
+.home-card-img {
+    width: 100%;
+}
+
+.home-card-link a,a:visited,a:link{
+    text-decoration: none;
+    color: black;
+}
