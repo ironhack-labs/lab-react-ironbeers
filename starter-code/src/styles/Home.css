@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+.home {
+    width: 100vw;
+    position: relative;
+    top: 8vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    background-color: #0B132B;
+}
+
+.home__header,
+.home__text {
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.home__header {
+    font-family: 'Archivo Black',
+        sans-serif;
+}
+
+.home__text {
+    margin-bottom: 10px;
+}
+
+.home a {
+    text-decoration: none;
+}
+
+.home img {
+    width: 100vw;
+    filter: grayscale(1);
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 8vh;
+    position: fixed;
+    z-index: 100;
+    background-color: #6FFFE9;
+}
+
+.main-title__text {
+    font-family: 'Archivo Black',
+        sans-serif;
+    font-size: 40px;
+}

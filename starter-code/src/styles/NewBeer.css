@@ -1,0 +1,22 @@
+.form {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    top: 15vh;
+}
+
+.form input {
+    border: 3px solid black;
+    width: 80%;
+    min-height: 30px;
+    margin: 10px 0;
+}
+
+.form__button {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}

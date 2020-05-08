@@ -1,0 +1,35 @@
+.single-beer {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px;
+}
+
+.single-beer__img-container {
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: 100%;
+}
+
+.single-beer__img-container img {
+    margin: 10px;
+    height: 90%;
+}
+
+.single-beer__text {
+    height: 100%;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.single-beer__text p {
+    color: black;
+}
+
+.single-beer a {
+    text-decoration: none;
+    color: black;
+}

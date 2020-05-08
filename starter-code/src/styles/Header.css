@@ -1,0 +1,13 @@
+.header {
+    background-color: #6FFFE9;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: fixed;
+    height: 8vh;
+    z-index: 100;
+}
+
+.header img {
+    margin: 10px 0;
+}
