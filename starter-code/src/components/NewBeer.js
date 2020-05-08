@@ -9,16 +9,16 @@ export default class NewBeer extends Component {
     first_brewed: "",
     brewers_tips: "",
     attenuation_level: 0,
-    contributed_by: ""
+    contributed_by: "",
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
 
     const newBeer = {
@@ -28,14 +28,14 @@ export default class NewBeer extends Component {
       first_brewed: this.state.first_brewed,
       brewers_tips: this.state.brewers_tips,
       attenuation_level: this.state.attenuation_level,
-      contributed_by: this.state.contributed_by
+      contributed_by: this.state.contributed_by,
     };
     axios
       .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
-      .then(res => {
+      .then((res) => {
         this.props.history.push(`/`);
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   render() {

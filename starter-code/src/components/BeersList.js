@@ -4,23 +4,23 @@ import { Link } from "react-router-dom";
 
 export default class BeersList extends Component {
   state = {
-    beerslist: []
+    beerslist: [],
   };
   componentDidMount() {
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers")
-      .then(res => {
+      .then((res) => {
         this.setState({
-          beerslist: res.data
+          beerslist: res.data,
         });
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }
 
   render() {
     return (
       <div>
-        {this.state.beerslist.map(beer => {
+        {this.state.beerslist.map((beer) => {
           return (
             <div key={beer._id} style={{ display: "flex" }}>
               <div style={{ height: "100px" }}>

@@ -3,30 +3,32 @@ import axios from "axios";
 
 export default class Beer extends Component {
   state = {
-    beer: null
+    beer: null,
   };
 
   componentDidMount() {
+    console.log(this.props.match);
+
     if (this.props.match.params.beerId) {
       axios
         .get("https://ih-beers-api2.herokuapp.com/beers")
-        .then(res => {
+        .then((res) => {
           this.setState({
-            beer: res.data.find(beer => {
+            beer: res.data.find((beer) => {
               return beer._id === this.props.match.params.beerId;
-            })
+            }),
           });
         })
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     } else {
       axios
         .get("https://ih-beers-api2.herokuapp.com/beers/random")
-        .then(res => {
+        .then((res) => {
           this.setState({
-            beer: res.data
+            beer: res.data,
           });
         })
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     }
   }
   render() {
