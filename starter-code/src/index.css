@@ -3,3 +3,104 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+ul.ant-menu {
+  background-color: #31d4fb;
+}
+
+li.ant-menu {
+  display: flex;
+  align-items: center;
+}
+
+.cardImage {
+  border-bottom: 1px solid grey;
+  display: flex;
+}
+.imageCont {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beerImage {
+  float: center;
+  width: auto;
+  height: 100px;
+  background-size: cover;
+  margin: 10px;
+}
+
+.infoBeer {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.infoBeer p:nth-child(1) {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10%;
+  margin-bottom: 0;
+}
+
+.infoBeer p:nth-child(2) {
+  color: gray;
+  margin-bottom: auto;
+}
+
+.infoBeer p:nth-child(3) {
+  color: black;
+  font-size: 0.6rem;
+  margin-bottom: 10%;
+}
+
+.detailedView {
+  width: 90vw;
+  height: 100vh;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.detailedView * {
+  color: black;
+}
+.detailedView span {
+  color: grey;
+}
+
+.imageDetailed {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.imageDetailed img {
+  height: 100%;
+}
+
+.level1 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: -15%;
+}
+
+.level2 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: -15%;
+}
