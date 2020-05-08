@@ -22,9 +22,9 @@ export default class AllBeers extends Component {
             onChange={this.handleFilter}
             placeholder="🔍 Filter"
           />
-          {this.props.beers.map((beer) => {
+          {this.props.beers.map((beer, index) => {
             if (beer.name.toLowerCase().includes(this.state.filter)) {
-              return <BeerCard beer={beer} />;
+              return <BeerCard key={index} beer={beer} />;
             }
           })}
         </div>

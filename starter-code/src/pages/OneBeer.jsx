@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 export default class OneBeer extends Component {
   render() {
-    console.log(this.props.beer);
     if (!this.props.beer) {
       return <p>Loading...</p>;
     } else {
@@ -33,13 +32,3 @@ export default class OneBeer extends Component {
     }
   }
 }
-
-/*
-image
-name
-tagline
-first_brewed
-attenuation_level
-description
-contributed_by
-*/

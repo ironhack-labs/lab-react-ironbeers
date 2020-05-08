@@ -6,7 +6,7 @@ import OneBeer from "./pages/OneBeer";
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import axios from "axios";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -56,7 +56,6 @@ class App extends Component {
     if (Date.now() > this.state.updateTime + 1000) {
       this.setState({
         newestBeer: undefined,
-        // beerPromise: axios.get("https://ih-beers-api2.herokuapp.com/beers"),
         updateTime: Date.now(),
       });
       axios.get("https://ih-beers-api2.herokuapp.com/beers").then((apiRes) => {
@@ -69,18 +68,6 @@ class App extends Component {
     }
     return this.state.newestBeer;
   }
-
-  // updateBeers(parentScope) {
-  //   parentScope.state.beerPromise.then((apiRes) => {
-  //     parentScope.setState({
-  //       beers: apiRes.data,
-  //       loaded: true,
-  //       random: apiRes.data[Math.floor(Math.random() * apiRes.data.length)],
-  //       randomTime: Date.now(),
-  //     });
-  //     return apiRes.data;
-  //   });
-  // }
 
   render() {
     return (

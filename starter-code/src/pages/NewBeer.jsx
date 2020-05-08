@@ -1,21 +1,9 @@
-/*
-
-
-- Finish styling submit button
-- Finish axios cycle, redirect to newly created beer page
-- Message William
-- Pay Ironhack
-
-
-*/
-
 import React, { Component } from "react";
 import axios from "axios";
 
 export default class NewBeer extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(e.target.name.value);
     const newBeer = {
       name: e.target.name.value,
       tagline: e.target.tagline.value,
