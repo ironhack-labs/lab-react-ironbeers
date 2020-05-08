@@ -52,7 +52,7 @@ const Home = () => (
       }}
     >
       <img src="/images/new-beer.png" alt="" />
-      <NavLink to="/new-beer">New Beer</NavLink>
+      <NavLink to="/new">New Beer</NavLink>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quibusdam repudiandae
         commodi excepturi blanditiis animi sequi delectus error voluptatum voluptate. Quibusdam enim
