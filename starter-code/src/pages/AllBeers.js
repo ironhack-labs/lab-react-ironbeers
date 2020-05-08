@@ -23,7 +23,7 @@ export  class AllBeers extends Component {
             <div className="card mb-3" style={{ width: "540px" }}>
               <div className="row no-gutters">
                 <div className="col-md-4">
-                  <img src={e.image_url} className="card-img" alt="..." style={{ width: "150px" }} />
+                  <img src={e.image_url} className="card-img" alt="..." style={{ width: "125px", height: "175px", margin: '10px'}} />
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import AllBeers from "./pages/AllBeers";
 import RandomBeer from "./pages/RandomBeer";
 import BeerDetail from "./pages/BeerDetail";
+import NewBeer from "./pages/newBeer";
 
 
 export default function router  () {
@@ -14,6 +15,7 @@ export default function router  () {
           <Route exact path="/allBeers" component={AllBeers} />
           <Route exact path="/beers/:id" component={BeerDetail} />
           <Route exact path="/randomBeer" component={RandomBeer} />
+          <Route exact path="/newbeer" component={NewBeer} />
           </Switch>
     </BrowserRouter>
     );
