@@ -10,4 +10,29 @@ nav.main {
 
 nav.main a {
 	color: var(--linkOnBackground);
+	transition: color 0.3s ease;
+}
+
+nav.main a:hover {
+	color: #ffcc00;
+}
+
+@media (min-width: 960px) {
+	nav.main.mobile {
+		display: none;
+	}
+	nav.main.desktop {
+		display: flex;
+		font-size: 1.5em;
+		line-height: 3.5em;
+	}
+}
+
+@media (max-width: 959px) {
+	nav.main.mobile {
+		display: flex;
+	}
+	nav.main.desktop {
+		display: none;
+	}
 }

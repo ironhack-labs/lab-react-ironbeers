@@ -1,3 +1,12 @@
 p.empty {
 	margin: 1em 2em;
 }
+
+@media (min-width: 960px) {
+	main.all-beers {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 0 2vw;
+	}
+}

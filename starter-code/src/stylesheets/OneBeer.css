@@ -63,3 +63,21 @@ article.my-beer em {
 	font-weight: bold;
 	font-size: 0.8em;
 }
+
+@media (min-width: 960px) {
+	article.my-beer {
+		max-width: 900px;
+		margin: 2em auto;
+		padding: 5em;
+		box-shadow: 0 0 2em rgba(0, 0, 0, 0.15);
+		border-radius: 20px;
+	}
+
+	article.my-beer h1 {
+		font-size: 1.5em;
+	}
+
+	article.my-beer .tag {
+		font-size: 1.3em;
+	}
+}

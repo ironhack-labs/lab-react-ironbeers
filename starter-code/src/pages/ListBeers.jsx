@@ -47,13 +47,15 @@ class ListBeers extends Component {
 						placeholder="Search..."
 					/>
 				</form>
-				{!this.state.allBeers.length ? (
-					<p className="empty">{errorMessage}</p>
-				) : (
-					this.state.allBeers.map((beer, index) => {
-						return <BeerBlocList key={index} data={beer} />;
-					})
-				)}
+				<main className="all-beers">
+					{!this.state.allBeers.length ? (
+						<p className="empty">{errorMessage}</p>
+					) : (
+						this.state.allBeers.map((beer, index) => {
+							return <BeerBlocList key={index} data={beer} />;
+						})
+					)}
+				</main>
 			</React.Fragment>
 		);
 	}

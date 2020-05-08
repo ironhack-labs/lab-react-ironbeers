@@ -1,6 +1,6 @@
 .beer-bloc {
 	display: grid;
-	grid-template-columns: 25vw auto;
+	grid-template-columns: 25% auto;
 	border-bottom: 1px solid var(--borderColor);
 	padding: 1em 0.5em;
 }
@@ -31,4 +31,20 @@
 
 .beer-bloc span {
 	font-weight: bold;
+}
+
+@media (min-width: 960px) {
+	.beer-bloc {
+		padding: 2vh 1vw;
+		width: 29vw;
+		box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+		grid-template-columns: 40% auto;
+		border-radius: 10px;
+		margin: 2vh 1vw;
+		transition: all 0.3s ease-in;
+	}
+
+	.beer-bloc:hover {
+		box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+	}
 }

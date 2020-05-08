@@ -46,3 +46,10 @@ input.error {
 input.error::placeholder {
 	color: red;
 }
+
+@media (min-width: 960px) {
+	form {
+		max-width: 700px;
+		margin: 2em auto;
+	}
+}

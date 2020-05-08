@@ -15,3 +15,21 @@ body {
 	font-family: 'Fauna One', serif;
 	font-size: 11pt;
 }
+
+@media (min-width: 960px) {
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: initial;
+	}
+}
+
+@media (max-width: 959px) {
+	.mobile {
+		display: initial;
+	}
+	.desktop {
+		display: none;
+	}
+}
