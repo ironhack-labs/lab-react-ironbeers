@@ -1,28 +1,346 @@
-.App {
+/*
+
+div.root
+|- div.App
+|-- nav
+|--- a.active
+|--- a
+|--- a
+|-- div.all-beers
+|---
+|-- div.new-beer
+|--- 
+|-- div.home
+|--- 
+
+
+*/
+
+/* Global */
+
+:root {
+  --nav-color: #4da8dd;
+  --nav-gradient: radial-gradient(
+    circle,
+    rgba(77, 168, 221, 1) 0%,
+    rgba(77, 168, 221, 1) 62%,
+    rgba(73, 163, 215, 1) 71%,
+    rgba(60, 145, 194, 1) 100%
+  );
+  --body-width: 600px;
+  --dark-grey: rgb(39, 39, 39);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: lightgrey;
+  /* background: linear-gradient(
+    160deg,
+    rgba(255, 188, 167, 1) 0%,
+    rgba(255, 151, 119, 1) 100% */
+  /* );
+
+  background-attachment: fixed; */
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+* {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav */
+
+nav {
+  width: 100%;
+  background: var(--nav-color);
+  background: var(--nav-gradient);
+  position: fixed;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+nav p {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+div.nav {
+  margin: 0 auto;
+  max-width: var(--body-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+nav a,
+nav label {
+  color: #ffe8a7;
+  font-weight: light;
+  padding: 15px;
+}
+
+nav a.active {
+  color: #ffbb00;
+}
+
+nav input,
+nav .closer,
+nav a {
+  display: none;
+}
+
+nav a {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+nav p {
+  margin-right: 5px;
+}
+
+nav input:checked ~ a {
+  display: flex;
+}
+
+nav input:checked + label .closer {
+  display: flex;
+}
+nav input:checked + label .burger {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  div.nav {
+    flex-direction: row;
+  }
+  nav label {
+    display: none;
+  }
+  nav .burger {
+    display: none;
+  }
+  nav .closer {
+    display: none;
+  }
+  nav a {
+    display: flex;
+    flex-direction: column;
+  }
+  nav p {
+    margin: 0;
+  }
+}
+
+/* Body */
+
+.App {
+  max-width: var(--body-width);
+  margin: 0 auto;
   padding: 20px;
+  padding-top: 110px;
+}
+
+/* Beer List, Beer Card */
+
+.beer-list input {
+  width: 100%;
+  border: unset;
+  background: none;
+  border-bottom: 1px solid darkgrey;
+  font-size: 1.2em;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.beer-list input:focus {
+  outline: none;
+}
+
+.beer-card,
+.one-beer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: var(--nav-color);
+  background: var(--nav-gradient);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 0px;
+  width: 100%;
+  margin-left: 0px;
+  transition: all 0.2s;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.beer-card:hover {
+  margin-top: -2px;
+  width: 101%;
+  margin-left: -0.5%;
+  margin-bottom: 22px;
+  box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.beer-card img,
+.one-beer img {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  object-fit: contain;
+  background: white;
+  border-radius: 5px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 400px) {
+  .beer-card,
+  .one-beer {
+    flex-direction: row;
+  }
+  .beer-card img,
+  .one-beer img {
+    margin-right: 20px;
+    width: 25%;
+  }
+}
+
+.beer-card .info,
+.one-beer .ingo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.beer-card h3,
+.beer-card p,
+.one-beer h3,
+.one-beer p {
+  color: var(--dark-grey);
+  padding-bottom: 10px;
+}
+
+.beer-card h3,
+.one-beer h3 {
+  padding-top: 10px;
+}
+
+.beer-card .tagline,
+.one-beer .tagline {
+  font-size: 1.1em;
+  font-style: oblique;
+  color: rgb(92, 92, 92);
+}
+
+.beer-card .contributor {
+  font-size: 0.9em;
+}
+
+.one-beer strong {
+  display: block;
+  font-size: 0.8em;
+}
+
+/* New Beer */
+
+form.new-beer {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.new-beer label {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-beer input,
+.new-beer textarea {
+  flex-grow: 1;
+  border: unset;
+  background: none;
+  border-bottom: 1px solid darkgrey;
+  font-size: 1.2em;
+  padding: 8px;
+}
+
+.new-beer input:focus,
+.new-beer textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #0a7abd;
+  margin-bottom: -1px;
+}
+
+.new-beer p {
+  font-size: 0.8em;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.new-beer button {
+  border: none;
+  background: white;
+  margin-top: 20px;
+  padding: 15px;
+  font-family: unset;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.1s;
+  color: (var(--dark-grey));
+  font-size: 0.9em;
+}
+
+.new-beer button:hover {
+  background: #2c92cf;
+  /* color: white; */
+}
+
+.new-beer button:focus {
+  outline: none;
+}
+
+/* Home */
+
+.home {
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url("https://source.unsplash.com/UErWoQEoMrc");
+  background-position: center center;
+  background-size: cover;
+  padding: 20px;
+  height: 60vh;
+  border-radius: 20px;
+  /* color: white; */
+}
+
+.home p,
+.home h2 {
+  margin-bottom: 10px;
+  max-width: 60%;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0.2);
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.home h2 {
+  font-size: 4em;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.home a {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  /* max-width: 60%; */
+  align-self: flex-start;
+  text-shadow: none;
+  color: (var(--dark-grey));
 }
