@@ -1,0 +1,26 @@
+.bloc {
+	width: 100vw;
+	margin-bottom: 1.5em;
+}
+
+.bloc img {
+	width: 100vw;
+}
+
+.bloc article {
+	padding: 0 1em;
+}
+
+.bloc h2 {
+	margin: 0.5em 0;
+	font-size: 1.5em;
+	font-family: var(--titleFamily);
+	font-weight: bold;
+}
+
+.bloc p {
+	color: var(--descriptionColor);
+	font-size: 0.8em;
+	font-family: var(--bodyFamily);
+	line-height: 1.2em;
+}

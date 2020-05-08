@@ -1,0 +1,48 @@
+form {
+	margin: 2em;
+}
+
+form .element {
+	margin-bottom: 1em;
+}
+
+label {
+	display: block;
+	font-size: 0.75em;
+	font-weight: bold;
+	margin-left: 1em;
+	margin-bottom: 0.3em;
+}
+
+input,
+textarea {
+	font-family: var(--bodyFamily);
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+	padding: 0.5em 1em;
+	width: 100%;
+}
+
+textarea {
+	resize: none;
+	min-height: 5em;
+}
+
+button.submit {
+	border-radius: 20px;
+	border: 0;
+	background-color: var(--backgroundColor);
+	color: var(--linkOnBackground);
+	padding: 0.65em 0.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	width: 100%;
+}
+
+input.error {
+	border-color: red;
+}
+
+input.error::placeholder {
+	color: red;
+}

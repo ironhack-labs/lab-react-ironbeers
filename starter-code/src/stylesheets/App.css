@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fauna+One&display=swap');
+
+:root {
+	--backgroundColor: #3dc4fc;
+	--linkOnBackground: #fff;
+	--titleFamily: 'Montserrat', sans-serif;
+	--bodyFamily: 'Fauna One', serif;
+	--descriptionColor: rgba(0, 0, 0, 0.5);
+	--borderColor: rgba(0, 0, 0, 0.15);
+}
+
+body {
+	font-family: 'Fauna One', serif;
+	font-size: 11pt;
+}

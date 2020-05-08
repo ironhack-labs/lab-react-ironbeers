@@ -1,0 +1,8 @@
+p.confirmMessage {
+	margin: 2em;
+	background-color: var(--backgroundColor);
+	padding: 2em;
+	border-radius: 20px;
+	text-align: center;
+	font-weight: bold;
+}

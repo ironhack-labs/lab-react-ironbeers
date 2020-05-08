@@ -1,0 +1,65 @@
+article.my-beer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 1em;
+}
+
+article.my-beer > * {
+	flex-basis: 50%;
+}
+
+article.my-beer .picture,
+article.my-beer .description,
+article.my-beer em {
+	flex-basis: 100%;
+}
+
+article.my-beer .picture {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+article.my-beer .picture img {
+	max-height: 40vh;
+}
+
+article.my-beer h1 {
+	font-weight: bold;
+	font-size: 1.1em;
+	font-family: var(--titleFamily);
+	margin-bottom: 1em;
+}
+
+article.my-beer h2 {
+	text-align: right;
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 2em;
+	font-family: var(--titleFamily);
+	font-weight: bold;
+}
+article.my-beer .tag {
+	color: var(--descriptionColor);
+	font-size: 1.1em;
+}
+
+article.my-beer strong {
+	display: block;
+	text-align: right;
+	font-family: var(--titleFamily);
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+article.my-beer .description {
+	margin: 1em 0;
+	font-family: var(--bodyFamily);
+	font-size: 0.9em;
+}
+article.my-beer em {
+	font-family: var(--titleFamily);
+	color: var(--descriptionColor);
+	font-weight: bold;
+	font-size: 0.8em;
+}

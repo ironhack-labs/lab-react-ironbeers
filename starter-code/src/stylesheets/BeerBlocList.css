@@ -1,0 +1,34 @@
+.beer-bloc {
+	display: grid;
+	grid-template-columns: 25vw auto;
+	border-bottom: 1px solid var(--borderColor);
+	padding: 1em 0.5em;
+}
+
+.beer-bloc .picture {
+	text-align: center;
+}
+
+.beer-bloc img {
+	height: 20vh;
+}
+
+.beer-bloc .content h2 {
+	font-family: var(--titleFamily);
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.beer-bloc .desc {
+	margin: 1em 0;
+	font-size: 1em;
+	color: var(--descriptionColor);
+}
+
+.beer-bloc .creator {
+	font-size: 0.8em;
+}
+
+.beer-bloc span {
+	font-weight: bold;
+}
