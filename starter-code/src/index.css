@@ -1,5 +1,29 @@
 body {
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.beerDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.beerCreate{
+  width: 300px;
+  align-items: center;
+  justify-content: center;
 }
