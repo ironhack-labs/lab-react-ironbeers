@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BEER_SERVICE from '../services/BeerList'
+import NavBar from '../components/NavBar'
 
 export default class NewBeer extends Component {
   state = {
@@ -25,6 +26,9 @@ export default class NewBeer extends Component {
   render() {
     return (
       <div>
+        <div className="home-container">
+          <NavBar />
+        </div>
         <form onSubmit={this.submit}>
           <div>
             <label htmlFor="name">Name: </label>
