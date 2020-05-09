@@ -1,0 +1,54 @@
+.form-title {
+    /* color: #DC143C; */
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Fredoka One',
+        cursive;
+    color: #2F4F4F;
+}
+
+.new-beer-form {
+    border-radius: 10px;
+    margin: 2vh auto;
+    width: 90vw;
+    height: 86vh;
+    padding: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-title {
+    width: 95%;
+}
+
+.form-unit {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-unit input {
+    width: 100%;
+    border-radius: 10px;
+    height: 3vh;
+    border: 1px solid lightgray
+}
+
+.form-unit label {
+    width: 90%;
+    /* color: #DC143C; */
+    margin-bottom: 1vh;
+    font-weight: bold;
+}
+
+.button-form {
+    border-style: none;
+    width: 30vw;
+    margin: 0 auto;
+    height: 4vh;
+    border-radius: 25px;
+    background-color: var(--color1);
+    color: white;
+    font-size: 1.3em;
+    height: 50px;
+}

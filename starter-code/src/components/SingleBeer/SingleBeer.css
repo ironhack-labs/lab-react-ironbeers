@@ -1,0 +1,39 @@
+.single-beer-page {
+    padding: 3vh 3vw;
+}
+
+.single-beer-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+
+}
+
+.single-beer-image {
+    max-width: 50vw;
+    height: 40vh;
+}
+
+.single-beer-informations {
+    display: flex;
+    height: 45vh;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.single-beer-name {
+    color:#DC143C;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.single-beer-tagline {
+    color: #2F4F4F;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+.single-beer-description {
+    text-align: justify;
+}

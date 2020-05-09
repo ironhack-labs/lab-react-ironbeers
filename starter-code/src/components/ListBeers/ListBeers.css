@@ -1,0 +1,86 @@
+.list-beers-page {
+    padding: 5%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.list-beers-title {
+    margin-top: 2vh;
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 2vh;
+    font-family: 'Fredoka One',
+        cursive;
+    color: #2F4F4F;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+}
+
+.searchBar label {
+    font-weight: bold;
+    color: #2F4F4F;
+    line-height: 1.5em;
+}
+
+.searchBar input {
+    margin-left: 5px;
+    border-radius: 10px;
+    height: 3vh;
+    border: 1px solid lightgray;
+    padding-left: 5px;
+}
+
+.searchBar input:focus{
+    outline: none;
+}
+
+
+.one-of-the-beers {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    margin-bottom: 4vh;
+    box-shadow: 1px 1px 4px #2F4F4F;
+    background-color: white;
+    /* max-width: 400px; */
+    max-height: 200px;
+
+}
+
+.one-of-the-beers-picture-container {
+    min-width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.one-of-the-beers-picture {
+    max-height: 180px;
+    margin: 0 auto;
+}
+
+.one-of-the-beers-infos {
+    width: 66%;
+    margin-left: 5%;
+}
+
+.one-of-the-beers h2 {
+    color: #DC143C;
+    font-size: 1.5em;
+    margin-bottom: 1vh;
+}
+
+.one-of-the-beers h3 {
+    font-size: 1.2em;
+    color: #2F4F4F;
+    font-style: italic;
+    margin-bottom: 2vh;
+
+}
+
+.one-of-the-beers p {}
