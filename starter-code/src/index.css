@@ -1,5 +1,142 @@
+
+*{
+  font-family: 'Roboto', sans-serif;
+  padding:0;
+  margin:0;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.all-beers{
+height:20vh;
+display: grid;
+grid-template-columns: 0.7fr 1.3fr ;
+width:90vw;
+justify-content: center;
+border-bottom:1px solid gray;
+}
+
+.all-beers h2{
+  font-size:1em;
+}
+.all-beers h3{
+  font-size:0.9em;
+}
+.all-beers h4,p{
+  font-size:0.7em;
+}
+.all-beers img{
+ height:14vh;
+}
+.all-beers-text{
+display: flex;
+flex-direction:column;
+justify-content: center;
+text-align: left;
+padding-right:15px;
+}
+.all-beers-separation{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.allbeer-total{
+  width:100vw;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+.onebeer-image{
+  height:20vh;
+}
+.home-menu{
+font-weight:100;
+font-size: 24px;
+padding:0px 15px;
+}
+.link{
+  text-decoration:none;
+  color:black;
+}
+.home-text{
+  font-size:14px;
+  color:grey;
+  padding-left: 15px;
+  padding-right:15px;
+  padding-bottom:20px;
+  text-align: justify;
+}
+.main-home{
+  text-align:left;
+}
+.main-image{
+  width:100vw
+}
+.header{
+  width:100vw;
+}
+.allbeers-title{
+  text-align:center;
+  padding-top:40px;
+  font-weight:0;
+}
+.randombeers-title{
+  padding:20px;
+  text-align:center;
+}
+.beerPart{
+  padding:40px;
+}
+.allbeers-click{
+  padding-top:15px;
+  font-size:15px;
+  text-align:center;
+}
+.allbeers-link{
+  text-decoration:none;
+color:black;
+}
+.allbeers-link:hover{
+  background-color:lightgrey;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.beerform{
+  padding-top:30px;
+  display:flex;
+  justify-content: center;
 }
