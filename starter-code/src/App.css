@@ -1,28 +1,74 @@
-.App {
+.app {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.links {
+  width: min-content;
+  text-align: left;
+}
+
+.linktext {
+  text-decoration: none;
+  color: black;
+}
+
+span {
+  font-size: 2.5vh;
+}
+
+.img-box{
+  display: block;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.img-size {
+  height: 200px;
+  padding: 10px;
+ 
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.beername {
+  margin: auto 0;
+  font-size: 2.5vh;
 }
 
-.App-title {
-  font-size: 1.5em;
+.tagline {
+  font-size: 2.1vh;
+  color: gray;
 }
 
-.App-intro {
-  font-size: large;
+.contributor {
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.info-box {
+  border: 1px solid gray;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  border-radius: 20px;
+  margin-bottom: 10px;
+  height: 25px;
+  border: 1px solid transparent;
+  border: 1px solid lightgrey;
+}
+
+button {
+  border-radius: 20px;
+  height: 25px;
+  width: ;
+  color: white;;
+  background-color: deepskyblue;
+  border: none;
+
+}
+
+label {
+  font-weight: bold;
 }
