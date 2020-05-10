@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import Home from './Components/Home'
+import BeersList from './Components/BeersList'
+import SingleBeer from './Components/SingleBeer'
+import NewBeer from './Components/NewBeer'
 import './App.css';
 
+// make sure set up import route and <Router> tags in index.js
+// in the <Route exact path="xxx"> name freely the path that your component={xxx} shall display
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Link
+         key=""
+         to="/"
+      >
+      ironBeer Home
+      </Link>
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/beers" component={BeersList} />
+          <Route exact path="/beers/:id" component={SingleBeer} />
+          <Route exact path="/new-beer" component={NewBeer} />
+          
+        </Switch> 
     </div>
-  );
-}
+  )
+};
 
 export default App;
