@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Beers from "./pages/Beers";
+import BeerDetails from "./pages/BeerDetails";
+import RandomBeer from "./pages/RandomBeer";
+import NewBeer from "./pages/NewBeer";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      {/* <NavMain /> */}
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/beers" component={Beers} />
+        <Route exact path="/beers/random" component={RandomBeer} />
+        <Route exact path="/beers/new" component={NewBeer} />
+        <Route exact path="/beers/:beerid" component={BeerDetails} />
+        
+      </Switch>
+    </div>
     );
   }
 }

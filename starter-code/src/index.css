@@ -1,5 +1,90 @@
-body {
+* {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+
+.header{
+  background-color: aqua;
+  height: 10vh;
+  line-height: 10vh;
+}
+ form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 40vw;
+   margin-top: 5vh;
+ }
+
+ form button {
+   width: 10vw;
+   margin-top: 5vh;
+   padding: 10px;
+ }
+
+ form input {
+   width: 20vw;
+   height: 3vh;
+ }
+
+ .container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .container h1{
+   margin-top: 5vh;
+ }
+
+ .fas.fa-home{
+   background-image: url("/images/home-solid.svg");
+ }
+
+ .MainHomePage h1{
+  width: 30vw;
+  margin-top: 3vh;
+  display: flex;
+ }
+
+ .MainHomePage h1 a{
+  color: black;
+  text-decoration: none;
+  margin-left: 5vw;
+ }
+
+ .MainHomePage p{
+  color: black;
+  font-size: 1.5em;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+ }
+
+
+ .MainHomePage img{
+   width: 100vw;
+   
+ }
+
+.filter-div{
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  margin-bottom: 3vh;
+}
+
+
+.filter-div input{
+  height: 3vh;
+  width: 15vw;
+}
+
+path{
+  color: white;
+  width: 100px;
+}
+
