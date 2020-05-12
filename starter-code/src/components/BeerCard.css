@@ -1,0 +1,25 @@
+.beerCardMainDiv{
+    display: flex;
+    border: 1px solid #eeeeee;
+}
+
+.beerCardPhoto {
+    height: 100px;
+    margin: 10px 20px;
+}
+
+.beerCardName {
+    margin-top: 25px;
+    font-size: x-large;
+}
+
+.beerCardTagline {
+    font-size: large;
+    color: gray;
+}
+
+.beerCardContributedBy {
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

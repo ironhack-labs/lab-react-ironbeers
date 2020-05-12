@@ -1,0 +1,49 @@
+.detailMainDiv {
+    margin: 50px 20px 10px 20px
+}
+
+.detailPhoto {
+    height: 200px;
+    display: block;
+    margin: 50px auto 25px auto;
+}
+
+.detailName {
+    font-size: xx-large;
+    float: left;
+}
+
+.detailAttenuationLevel {
+    font-size: x-large;
+    color: #aaaaaa;
+    float: right;
+}
+
+.clearDiv {
+    clear: both;
+}
+
+.detailTagline {
+    color: #aaaaaa;
+    font-weight: bold;
+    float: left;
+    line-height: 2.5em;
+}
+
+.detailFirstBrewed {
+    font-size: smaller;
+    font-weight: 800;
+    float: right;
+    line-height: 2.5em;
+}
+
+.detailDescription {
+    font-weight: 600;
+}
+
+.detailContributedBy {
+    margin-top: 20px;
+    font-size: smaller;
+    font-weight: bold;
+    color: #aaaaaa;
+}

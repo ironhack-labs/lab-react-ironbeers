@@ -1,0 +1,19 @@
+.mainDiv{
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+  font-weight: normal;
+  margin: 5px 0px 5px 15px;
+  }
+  
+  p {
+    color: gray;
+    margin: 5px 15px 40px 15px;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
