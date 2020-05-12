@@ -3,3 +3,61 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.header {
+  background-color: rgb(82, 220, 255);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-icon svg {
+  color: white;
+}
+
+.header-icon svg circle {
+  color: white;
+}
+
+.beers-container {
+  display: flex;
+  justify-content: center;
+}
+
+.beer-card {
+  border: solid 1px rgb(212, 210, 210);
+}
+
+
+.single-beer-container {
+  border: solid 1px rgb(212, 210, 210);
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.single-beer {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.uk-input[type=text], .uk-input[type=number], select {
+  border-radius: 20px;
+}
+
+.button-form {
+  padding: 10px;
+  background-color: rgb(82, 220, 255);
+  border-radius: 20px;
+  border-style: solid;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
