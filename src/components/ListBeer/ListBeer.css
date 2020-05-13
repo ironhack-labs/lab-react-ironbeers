@@ -1,0 +1,49 @@
+.list-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin: 50px 20px;
+}
+
+.list-container img { 
+    margin: 0 auto;
+    height: 260px;
+    padding: 0 0 20px 0;
+}
+
+.list-row-elements {
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding-bottom: 15px;
+}
+
+.list-row-name {
+font-size: 1.5rem;
+}
+
+.list-row-att {
+color: rgb(131, 131, 131);
+font-size: 1.5rem;
+}
+
+.list-row-tagline {
+color: rgb(131, 131, 131)
+}
+
+.list-row-brewed {
+font-size: 0.8rem;
+font-weight: 600;
+}
+
+.list-description {
+    font-weight: 300;
+}
+
+.list-contributed {
+font-size: 0.8rem;
+margin: 20px 0 0 0;
+color: rgb(131, 131, 131);
+}

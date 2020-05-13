@@ -1,0 +1,13 @@
+.header {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: rgb(62, 196, 252);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 100%;
+    height: 8vh;
+}
