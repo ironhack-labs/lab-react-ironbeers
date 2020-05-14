@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App ul {
+
+list-style: none;
+
+}
+
+.list-beers {
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-bottom: 40px;
+border-bottom: solid grey;
+padding: 20px;
+
+
+}
+
+.list-beers img {
+
+height:100px
+
+}
