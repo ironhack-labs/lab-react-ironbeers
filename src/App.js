@@ -1,8 +1,8 @@
 import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Beers from './components/Beers';
-import RandomBeer from './components/Beers';
+import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
 import Home from './components/Home'
 import ShowBeer from './components/ShowBeer'
