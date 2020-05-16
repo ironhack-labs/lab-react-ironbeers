@@ -57,3 +57,24 @@
     font-size: 0.5rem;
     color: black;
 }
+
+.beers-form-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 0 0 10px;
+    font-family: inherit;
+}
+
+.beers-form-input {
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 10px;
+    display: block;
+    height: 25px;
+    width: 95%;
+    margin: 0 0 10px 0;
+    padding: 1px 10px;
+    color: rgb(85, 85, 85);
+    font-weight: 300;
+    font-family: inherit;
+}
