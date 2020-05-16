@@ -18,11 +18,23 @@ export default class Beers extends Component {
           .catch(e => console.log(e))
     }
 
+    handleQuery(e){
+        // e.target.value
+        console.log(e.target.value)
+        fetch(`https://ih-beers-api2.herokuapp.com/beers/search?q=${e.target.value}`)
+          .then(res => res.json())
+          .then(result => {
+            // console.log(result)
+            this.setState({beers: result})
+          })
+          .catch(e => console.log(e))
+    }
+
     render() {
         return (
             <div>
                 <Header />
-
+                <input type="text" onChange={(e)=> this.handleQuery(e)} />
                 {this.state.beers === '' ? 'Beers are loading' : 
                 this.state.beers.map((beer, index) => (
                     <div key={index}>
