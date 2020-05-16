@@ -1,30 +1,28 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 
-class RandomBeer extends Component {
+class OneBeer extends Component {
     constructor(props) {
         super(props);
         this.state={
-            beer:{},
-            isLoaded:false
+            beer:{}
         }
     }
 
     componentDidMount() {
-        Axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+        let id = this.props.match.params.id;
+        Axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
             .then(response=>{
                 console.log(response.data);
                 this.setState({
-                    beer:response.data,
-                    isLoaded:true
+                    beer:response.data
                 })
             })
     }
 
     render() {
 
-        return !this.state.isLoaded ? (<div>The beer is loading!!!</div>) : 
-        (
+        return (
             <div className='ml-5 mr-5'>
                 <div>
                     <img src={this.state.beer.image_url} alt="beer-tag" style={{height:'450px'}}/>
@@ -45,4 +43,4 @@ class RandomBeer extends Component {
     }
 }
 
-export default RandomBeer;
+export default OneBeer;

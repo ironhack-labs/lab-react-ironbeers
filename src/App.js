@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Beers from './components/Beers';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
+import OneBeer from './components/OneBeer';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
     <Route path='/' component={Header}/>
     <Switch>
+      <Route path='/beers/:id' component={OneBeer}/>
       <Route path='/beers' component={Beers}/>
       <Route path='/random-beer' component={RandomBeer}/>
       <Route path='/new-beer' component={NewBeer}/>
