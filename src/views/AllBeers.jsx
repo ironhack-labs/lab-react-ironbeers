@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
 
 import SingleBeerForList from './../components/SingleBeerForList';
+
+//importing API
 import { listAllBeers } from './../services/beersApi';
 
 class AllBeers extends Component {
@@ -11,10 +14,19 @@ class AllBeers extends Component {
     };
   }
 
+  //making a call to the API
   componentDidMount() {
+    this.fetchBeerData();
+  }
+
+  fetchBeerData() {
     listAllBeers()
       .then((response) => {
-        console.log(response.data);
+        // console.log(response);
+        // console.log(response.data);
+        this.setState({
+          allBeers: response.data,
+        });
       })
       .catch((error) => {
         // console.log(error);
@@ -24,8 +36,9 @@ class AllBeers extends Component {
   render() {
     return (
       <div>
-        <h1>All beers list</h1>
-        <SingleBeerForList />
+        {this.state.allBeers.map((beer) => {
+          return <SingleBeerForList key={beer._id} beer={beer} />;
+        })}
       </div>
     );
   }

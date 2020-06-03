@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import AllBeers from './views/AllBeers';
 import Home from './views/Home';
-import SingleBeer from './views/SingleBeer';
-import RandomBeer from './views/RandomBeer';
+import AllBeers from './views/AllBeers';
 import NewBeer from './views/NewBeer';
+import RandomBeer from './views/RandomBeer';
+import SingleBeer from './views/SingleBeer';
 
 import NavBar from './components/NavBar';
 
@@ -16,14 +16,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        {/* <p>IronBeers App June 2nd</p> */}
 
         <Switch>
-          <Route path="/beers" component={AllBeers}></Route>
-          <Route path="/random" component={RandomBeer}></Route>
-          <Route path="/new" component={NewBeer}></Route>
-          <Route path="/:id" component={SingleBeer}></Route>
-          <Route path="/" component={Home}></Route>
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/beers" exact component={AllBeers}></Route>
+          <Route path="/random" exact component={RandomBeer}></Route>
+          <Route path="/new" exact component={NewBeer}></Route>
+          <Route path="/beers/:id" exact component={SingleBeer}></Route>
         </Switch>
       </BrowserRouter>
     </div>
