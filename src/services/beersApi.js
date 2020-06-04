@@ -5,7 +5,7 @@ const listAllBeers = () => {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers')
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         // const allBeers = response.data;
         // console.log(allBeers);
         resolve(response);
