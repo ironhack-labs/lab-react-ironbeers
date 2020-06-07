@@ -7,8 +7,6 @@ import NewBeer from './views/NewBeer';
 import RandomBeer from './views/RandomBeer';
 import SingleBeer from './views/SingleBeer';
 
-import NavBar from './components/NavBar';
-
 import './App.css';
 
 function App() {

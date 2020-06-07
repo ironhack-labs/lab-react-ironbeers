@@ -1,6 +1,6 @@
 /* eslint-disable array-callback-return */
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import SingleBeerForList from './../components/SingleBeerForList';
 import BeerSearch from './../components/BeerSearch';
@@ -37,9 +37,10 @@ class AllBeers extends Component {
       });
   }
 
+  //updating the query as the user searches
   updateSearchQuery = (event) => {
     const value = event.target.value;
-    this.set.State({
+    this.setState({
       query: value,
     });
   };
@@ -56,26 +57,20 @@ class AllBeers extends Component {
   //   // this.setState({ [input]: value });
   // };
 
-  // beersFilter = () => {
-  // let beersFilter = this.state.allBeers.filter((beer) => {
-  //   // console.log(beer);
-  //   beer.name.toLowerCase().includes(this.state.query);
-  // });
-  // return beersFilter;
-
   render() {
+    console.log(this.state.query);
     const beersFilter = this.state.allBeers.filter((beer) => {
-      return beer.name.toLowerCase().includes(this.state.query.toLowerCase());
+      return beer.name.toLowerCase().includes(this.state.query);
     });
-
     return (
       <div>
         <NavBar />
         <BeerSearch
-          query={this.state.query}
+          query={this.state.query} //saving the query
           handleInputChange={this.updateSearchQuery}
         />
-        {this.state.allBeers.map((beer) => {
+
+        {beersFilter.map((beer) => {
           return <SingleBeerForList key={beer._id} beer={beer} />;
         })}
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import SingleBeersForList from './SingleBeerForList';
+// import SingleBeersForList from './SingleBeerForList';
 
 function BeerInfo(props) {
   const beer = props.beer;

@@ -1,11 +1,16 @@
 import axios from 'axios';
+import NewBeer from './../views/NewBeer';
+
+const instance = axios.create({
+  baseURL: 'https://ih-beers-api2.herokuapp.com/beers',
+});
 
 const listAllBeers = () => {
   return new Promise((resolve, reject) => {
-    axios
-      .get('https://ih-beers-api2.herokuapp.com/beers')
+    instance
+      .get('/')
       .then((response) => {
-        // console.log(response.data);
+        console.log(response.data);
         // const allBeers = response.data;
         // console.log(allBeers);
         resolve(response);
@@ -16,8 +21,8 @@ const listAllBeers = () => {
 
 const oneBeer = (id) => {
   return new Promise((resolve, reject) => {
-    axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
+    instance
+      .get(`/${id}`)
       .then((response) => {
         resolve(response.data);
       })
@@ -25,4 +30,15 @@ const oneBeer = (id) => {
   });
 };
 
-export { listAllBeers, oneBeer };
+const addBeer = (NewBeer) => {
+  return new Promise((resolve, reject) => {
+    instance
+      .post('/new', NewBeer)
+      .then((response) => {
+        resolve(response);
+      })
+      .catch(reject);
+  });
+};
+
+export { listAllBeers, oneBeer, addBeer };
