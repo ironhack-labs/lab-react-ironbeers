@@ -29,7 +29,7 @@ class Detail extends React.Component {
     render() {
 
         if (this.state.loading) {
-            return <div>Loading</div>
+            return <div>Loading…</div>
         }
         return (
             <div>
