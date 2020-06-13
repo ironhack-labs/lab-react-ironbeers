@@ -16,9 +16,9 @@ class Navigation extends React.Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/list">All beers</Nav.Link>
-                            <Nav.Link href="/add">Add a beer</Nav.Link>
-                            <Nav.Link href="/random">Random beer</Nav.Link>
+                            <Nav.Link href="/beers">All beers</Nav.Link>
+                            <Nav.Link href="/new-beer">Add a beer</Nav.Link>
+                            <Nav.Link href="/random-beer">Random beer</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

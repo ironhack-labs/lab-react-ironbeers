@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-class List extends React.Component {
+class Beers extends React.Component {
 
     state = {
         beersArr: []
@@ -32,8 +32,8 @@ class List extends React.Component {
                 <Container>
                     <h1>List.js</h1>
                     <div>{this.state.beersArr.length > 0 ?
-                    this.state.beersArr.map(beer => <li key={beer._id}><Link to={"/detail/" + beer._id}>
-                        {beer.name}</Link></li>) :
+                    this.state.beersArr.map(beer => <ul className="list-unstyled" key={beer._id}><li><Link to={"/detail/" + beer._id}>
+                        {beer.name}</Link></li></ul>) :
                     <img src={imgUrl} alt="Draft beer like Homer"></img>
                 }</div>
                     <Row>
@@ -45,4 +45,4 @@ class List extends React.Component {
     }
 }
 
-export default List;
+export default Beers;

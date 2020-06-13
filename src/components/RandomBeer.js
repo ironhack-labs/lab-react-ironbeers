@@ -9,10 +9,10 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
-// Random from LODASH
+// LODASH
 import _ from 'lodash';
 
-class Random extends React.Component {
+class RandomBeer extends React.Component {
 
     state = {
         beer: null,
@@ -40,10 +40,25 @@ class Random extends React.Component {
                 <Container>
                     <h1>Your random choice: {this.state.beer.name}</h1>
                     <Row>
+                    <Col><img src={this.state.beer.image_url} alt={this.state.beer.name} /></Col>
+                    </Row>
+                    <Row className="mt-2">
                         <Col>Description: {this.state.beer.description}</Col>
                     </Row>
                     <Row className="mt-2">
                         <Col>Goes best with: {this.state.beer.food_pairing}</Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>Tagline: {this.state.beer.tagline}</Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>First brewed: {this.state.beer.first_brewed}</Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>Attenuation level: {this.state.beer.attenuation_level}</Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>Contributed by: {this.state.beer.contributed_by}</Col>
                     </Row>
                 </Container>
             </div>
@@ -51,4 +66,4 @@ class Random extends React.Component {
     }
 }
 
-export default Random;
+export default RandomBeer;

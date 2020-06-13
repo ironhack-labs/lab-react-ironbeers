@@ -36,10 +36,25 @@ class Detail extends React.Component {
                 <Container>
                     <h1>{this.state.beer.name}</h1>
                     <Row>
+                        <Col><img src={this.state.beer.image_url} alt={this.state.beer.name} /></Col>
+                    </Row>
+                    <Row className="mt-2">
                         <Col>Description: {this.state.beer.description}</Col>
                     </Row>
                     <Row className="mt-2">
                         <Col>Goes best with: {this.state.beer.food_pairing}</Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>Tagline: {this.state.beer.tagline}</Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>First brewed: {this.state.beer.first_brewed}</Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>Attenuation level: {this.state.beer.attenuation_level}</Col>
+                    </Row>
+                    <Row className="mt-2">
+                        <Col>Contributed by: {this.state.beer.contributed_by}</Col>
                     </Row>
                 </Container>
             </div>

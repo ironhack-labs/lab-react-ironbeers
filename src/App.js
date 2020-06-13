@@ -6,10 +6,10 @@ import { Route, Switch } from 'react-router-dom';
 
 import Navigation from './components/Navigation';
 import Home from './components/Home';
-import List from './components/List';
+import Beers from './components/Beers';
 import Detail from './components/Detail';
-import Add from './components/Add';
-import Random from './components/Random';
+import NewBeer from './components/NewBeer';
+import RandomBeer from './components/RandomBeer';
 
 function App() {
   return (
@@ -18,10 +18,10 @@ function App() {
       <div className="container">
       <Switch>
         <Route exact path="/" component={Home}></Route>
-        <Route path="/list" component={List}></Route>
+        <Route path="/beers" component={Beers}></Route>
         <Route exact path="/detail/:id" component={Detail}></Route>
-        <Route path="/add" component={Add}></Route>
-        <Route path="/random" component={Random}></Route>
+        <Route path="/new-beer" component={NewBeer}></Route>
+        <Route path="/random-beer" component={RandomBeer}></Route>
         </Switch>
       </div>
     </div>
