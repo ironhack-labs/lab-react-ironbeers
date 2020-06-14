@@ -1,6 +1,6 @@
 import React from 'react';
 // import logo from './logo.svg';
-// import './../App.css';
+import './../App.css';
 
 // DATA
 import axios from 'axios';
@@ -29,16 +29,24 @@ class Beers extends React.Component {
 
         return (
             <div>
-                <Container>
-                    <h1>List.js</h1>
-                    <div>{this.state.beersArr.length > 0 ?
-                    this.state.beersArr.map(beer => <ul className="list-unstyled" key={beer._id}><li><Link to={"/detail/" + beer._id}>
-                        {beer.name}</Link></li></ul>) :
-                    <img src={imgUrl} alt="Draft beer like Homer"></img>
-                }</div>
-                    <Row>
-                        <Col><p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs! "Now fax quiz Jack!" my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack!</p></Col>
-                    </Row>
+                <Container fluid>
+                    <h1 className="sr-only">List of all beers</h1>        
+                        {this.state.beersArr.length > 0 ?
+                            this.state.beersArr.map(beer =>
+                                <Link to={"/detail/" + beer._id} key={beer._id}>
+                                <Row className="mb-4">
+                                    <Col xs={3} className="to-the-right"><img src={beer.image_url} alt={beer.name} className="img-fluid img-max-width" /></Col>
+                                    <Col xs={9}>
+                                        <h2>{beer.name}</h2>
+                                        <h3>{beer.tagline}</h3>
+                                        <p><strong>Contributed by:</strong> {beer.contributed_by}</p>
+                                    </Col>
+                                    </Row>
+                                    <hr></hr>
+                                </Link>
+                            ) :
+                            <img src={imgUrl} alt="Draft beer like Homer"></img>
+                        }
                 </Container>
             </div>
         );
@@ -46,3 +54,10 @@ class Beers extends React.Component {
 }
 
 export default Beers;
+
+
+{/* <div>{this.state.beersArr.length > 0 ?
+                    this.state.beersArr.map(beer => <ul className="list-unstyled" key={beer._id}><li><Link to={"/detail/" + beer._id}>
+                        {beer.name}</Link></li></ul>) :
+                    <img src={imgUrl} alt="Draft beer like Homer"></img>
+                }</div> */}

@@ -7,7 +7,8 @@ import axios from 'axios';
 
 // STYLE and COMPONENTS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 class Detail extends React.Component {
 
@@ -35,27 +36,17 @@ class Detail extends React.Component {
             <div>
                 <Container>
                     <h1>{this.state.beer.name}</h1>
-                    <Row>
-                        <Col><img src={this.state.beer.image_url} alt={this.state.beer.name} /></Col>
+                    <Row className="mb-3">
+                        <Col xs={3} className="to-the-right"><img src={this.state.beer.image_url} alt={this.state.beer.name} className="img-fluid img-max-width" /></Col>
+                        <Col xs={9}><strong>Description:</strong> {this.state.beer.description}
+                            <br /><strong>Goes best with:</strong> {this.state.beer.food_pairing}
+                            <br /><strong>Tagline:</strong> {this.state.beer.tagline}
+                            <br /><strong>First brewed:</strong> {this.state.beer.first_brewed}
+                            <br /><strong>Attenuation level:</strong> {this.state.beer.attenuation_level}
+                            <br /><strong>Contributed by:</strong> {this.state.beer.contributed_by}
+                        </Col>
                     </Row>
-                    <Row className="mt-2">
-                        <Col>Description: {this.state.beer.description}</Col>
-                    </Row>
-                    <Row className="mt-2">
-                        <Col>Goes best with: {this.state.beer.food_pairing}</Col>
-                    </Row>
-                    <Row className="mt-2">
-                        <Col>Tagline: {this.state.beer.tagline}</Col>
-                    </Row>
-                    <Row className="mt-2">
-                        <Col>First brewed: {this.state.beer.first_brewed}</Col>
-                    </Row>
-                    <Row className="mt-2">
-                        <Col>Attenuation level: {this.state.beer.attenuation_level}</Col>
-                    </Row>
-                    <Row className="mt-2">
-                        <Col>Contributed by: {this.state.beer.contributed_by}</Col>
-                    </Row>
+                <Link to="/beers"><Button variant="danger">Go back to all beers</Button></Link>
                 </Container>
             </div>
         );
