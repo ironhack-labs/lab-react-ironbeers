@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+.beer-img {
+  height: 200px;
+  width: 125px;
+}
+
+.container {
+  margin: 50px auto;
+}
+
+.allbeers-image {
+  width: 100%;
+  height: 50%;
+}
+
+.beer-info{
+  text-align: left;
+  padding: 60px 10px;
+}
