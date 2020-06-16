@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 function AllBeers(props) {
   const beers = props.beers;
+
   return (
     <div>
       <Navbar />
@@ -11,7 +12,7 @@ function AllBeers(props) {
       {beers.map((beer, id) => {
         return (
           <div className="container">
-            <div class="row">
+            <div className="row">
               <div className="image-container">
                 <img
                   src={`${beer.image_url}`}
@@ -20,15 +21,15 @@ function AllBeers(props) {
                 />
               </div>
               <div className="beer-info" key={id}>
-              <NavLink to="/beers/:id">{beer.name}</NavLink><br />
+              <NavLink to={`/beers/beerdetails/:${beer.id}`}>{beer.name}</NavLink><br />
                   {beer.tagline}<br />
                   {beer.contributed_by}
               </div>
             </div>
           </div>
-          //
         );
       })}
+      <hr/>
     </div>
   );
 }
