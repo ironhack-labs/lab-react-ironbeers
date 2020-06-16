@@ -23,24 +23,31 @@ class BeerList extends Component {
       <div>
         <Navbar></Navbar>
         <div className="container">
-          <ul className="list-unstyled">
-            {this.state.allBeers.map((b) => (
-              <li className="media m-4" key={b._id}>
+          <div className="col text-center">
+            <h4 className="display-4">All Beers</h4>
+          </div>
+        </div>
+        <div className="container">
 
+            {this.state.allBeers.map((b) => (
+              <div className="row mb-3 border" key={b._id}>
+                <div className="col-2 text-center">
                   <img
-                    className="thumbImage mr-5 "
+                    className="img-fluid thumbImage py-2"
                     src={b.image_url}
                   ></img>
+                </div>
 
-
-                <div className="media-body align-self-center">
+                <div className="col align-self-center">
+                <div className="col">
                   <h2 className="h3">{b.name}</h2>
                   <p>{b.tagline}</p>
                   <Link to={'/beers/' + b._id}>Go to Beer</Link>
                 </div>
-              </li>
+                </div>
+              </div>
             ))}
-          </ul>
+
         </div>
       </div>
     );

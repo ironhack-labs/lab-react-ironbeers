@@ -1,7 +1,16 @@
+
+
 .smallImage {
     max-height: 400px;
 }
 
 .thumbImage {
     max-height: 150px;
+}
+
+.newBeerImg {
+    background-image: url("./sarah-gualtieri-uAW91YdM-Z8-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
