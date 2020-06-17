@@ -16,10 +16,47 @@ class RandomBeer extends Component {
   }
 
   render() {
+    const {
+      image_url,
+      name,
+      tagline,
+      first_brewed,
+      attenuation_level,
+      description,
+      contributed_by,
+    } = this.state.beer;
     return (
-      <div>
+      <div className="">
         <Header />
-        <h3>{this.state.beer.name}</h3>
+        <a className="text-info" href="/random-beer"> Spin the weel another time! </a>
+        <div className="m-3 p-3">
+          <div className="d-flex justify-content-center my-5">
+            <img
+              className="img-fluid"
+              src={image_url}
+              alt={name}
+              style={{ width: '80px' }}
+            />
+          </div>
+          <div className="d-flex justify-content-between flex-row">
+            <p>
+              <h4 className="display-5 font-weight-normal ">{name}</h4>
+              <h4 className="display-5 font-weight-normal text-muted">
+                {tagline}
+              </h4>
+            </p>
+            <small>
+              <h4 className="display-5 font-weight-bold text-muted">
+                {attenuation_level}
+              </h4>
+              <strong>{first_brewed}</strong>
+            </small>
+          </div>
+          <p>{description}</p>
+          <small className="text-muted">
+            <strong>{contributed_by}</strong>
+          </small>
+        </div>
       </div>
     );
   }

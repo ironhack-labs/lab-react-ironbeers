@@ -1,14 +1,17 @@
 import React from 'react';
-import Home from './Home';
-import { Route, NavLink, Switch } from 'react-router-dom';
+
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
     <div>
-      <NavLink to="/">Home</NavLink>
-      <Switch>
-        <Route exact path="/" component={Home} />
-      </Switch>
+      <NavLink to="/">
+        <img
+          className="img-fluid p-0 m-0"
+          src={process.env.PUBLIC_URL + '/images/header.png'}
+          alt="header"
+        />
+      </NavLink>
     </div>
   );
 }

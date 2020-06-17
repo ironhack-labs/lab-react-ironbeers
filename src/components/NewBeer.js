@@ -15,13 +15,11 @@ class NewBeer extends Component {
 
   handleFormSubmit = (e) => {
     e.preventDefault();
-    
+
     console.log(this.state);
     const newBeer = this.state;
 
-    Axios.post('https://ih-beers-api2.herokuapp.com/beers/new', 
-      newBeer
-    )
+    Axios.post('https://ih-beers-api2.herokuapp.com/beers/new', newBeer)
       .then((response) => {
         console.log(response.data);
       })
@@ -45,50 +43,89 @@ class NewBeer extends Component {
     return (
       <div>
         <Header />
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
-          <label>Tagline:</label>
-          <input
-            type="text"
-            name="tagline"
-            value={this.state.tagline}
-            onChange={this.handleChange}
-          />
-          <label>first_brewed:</label>
-          <input
-            type="text"
-            name="first_brewed"
-            value={this.state.first_brewed}
-            onChange={this.handleChange}
-          />
-          <label>brewer_tips:</label>
-          <input
-            type="text"
-            name="brewers_tips"
-            value={this.state.brewers_tips}
-            onChange={this.handleChange}
-          />
-          <label>attenuation_level:</label>
-          <input
-            type="number"
-            name="attenuation_level"
-            value={this.state.attenuation_level}
-            onChange={this.handleChange}
-          />
-          <label>contributed_by:</label>
-          <input
-            type="text"
-            name="contributed_by"
-            value={this.state.contributed_by}
-            onChange={this.handleChange}
-          />
-          <input type="submit" value="Submit" />
+        <form
+          onSubmit={this.handleFormSubmit}
+          className="d-flex flex-column text-center m-3 p-3"
+        >
+          <h5 className="display-5 mb-3 pb-3">
+            Insert a new beer.
+          </h5>
+          <div className="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              name="name"
+              className="form-control"
+              value={this.state.name}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label>Tagline</label>
+            <input
+              type="text"
+              name="tagline"
+              value={this.state.tagline}
+              className="form-control"
+              onChange={this.handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Description</label>
+            <input
+              type="text"
+              name="contributed_by"
+              className="form-control"
+              value={this.state.description}
+              onChange={this.handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>First Brewed</label>
+            <input
+              type="text"
+              name="first_brewed"
+              value={this.state.first_brewed}
+              className="form-control"
+              onChange={this.handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Brewers Tips</label>
+            <input
+              type="text"
+              name="brewers_tips"
+              value={this.state.brewers_tips}
+              className="form-control"
+              onChange={this.handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Attenuation Level</label>
+            <input
+              type="number"
+              name="attenuation_level"
+              className="form-control text-center"
+              value={this.state.attenuation_level}
+              onChange={this.handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Contributed By</label>
+            <input
+              type="text"
+              name="contributed_by"
+              className="form-control"
+              value={this.state.contributed_by}
+              onChange={this.handleChange}
+            />
+          </div>
+          <input className="btn btn-info" type="submit" value="Submit" />
         </form>
       </div>
     );
