@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-item{
+  padding: 10px;
+}
+
+.cards{
+  display: flex;
+  justify-content: space-around;
+}
+
+.from-navbar {
+  margin-top: 5%;
+}
+
+.single-beer-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 60%;
+}
