@@ -6,7 +6,7 @@ function Header(){
     return(
         <NavLink exact to='/'>
             <div className="btn btn-info header">
-                <div class="header-icon"><MdHome /></div>
+                <div className="header-icon"><MdHome /></div>
             </div>
         </NavLink>
     )
