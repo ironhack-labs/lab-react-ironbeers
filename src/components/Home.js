@@ -1,33 +1,46 @@
 import React from 'react';
-import AllBeers from './AllBeers';
-import RandomBeer from './RandomBeer';
-import NewBeer from './NewBeer';
-import BeerDetail from'./BeerDetail';
-
-import { Switch, Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 function Home() {
     return (
-      <div>
-        <ul>
-          <li>
-            <NavLink to="/beers">All beers</NavLink>
-          </li>
-          <li>
-            <NavLink to="/random-beer">Random beer</NavLink>
-          </li>
-          <li>
-            <NavLink to="/new-beer">New beer</NavLink>
-          </li>
-        </ul>
+      <div className="d-flex justify-content-center align-items-center flex-column">
 
-        <Switch>
-          <Route exact path="/beers" component={AllBeers} />
-          <Route path="/random-beer" component={RandomBeer} />
-          <Route path="/new-beer" component={NewBeer} />
-          <Route path="/beers/:id" component={BeerDetail} />
-        </Switch>
+        <div className="card my-3" style={{"width": "18rem"}}>
+          <a href="/beers">
+            <img className="card-img-top" src={process.env.PUBLIC_URL + "/images/beers.png"} alt="Card image cap" />
+          </a>
+            <div className="card-body">
+            <a href="/beers" style={{textDecoration:"none"}}>
+              <h5 className="card-title">All Beers</h5>
+            </a>
+              <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, corrupti.</p>
+            </div>
+        </div>
+
+        <div className="card my-3" style={{"width": "18rem"}}>
+          <a href="/random-beer">
+            <img className="card-img-top" src={process.env.PUBLIC_URL + "/images/random-beer.png"} alt="Card image cap" />
+          </a>
+            <div className="card-body">
+            <a href="/random-beer">
+              <h5 className="card-title">Random Beer</h5>
+            </a>
+              <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, corrupti.</p>
+            </div>
+        </div>
+
+        <div className="card my-3" style={{"width": "18rem"}}>
+          <a href="/new-beer">
+            <img className="card-img-top" src={process.env.PUBLIC_URL + "/images/new-beer.png"} alt="Card image cap" />
+          </a>
+            <div className="card-body">
+            <a href="/new-beer">
+              <h5 className="card-title">New Beer</h5>
+            </a>
+              <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, corrupti.</p>
+            </div>
+        </div>
       </div>
     );
 

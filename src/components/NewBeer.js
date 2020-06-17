@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Axios from 'axios'
+import Axios from 'axios';
+import Header from './Header';
 
 class NewBeer extends Component {
   state = {
@@ -9,35 +10,41 @@ class NewBeer extends Component {
     first_brewed: '',
     brewers_tips: '',
     attenuation_level: 0,
-    contributed_by: ''
-
+    contributed_by: '',
   };
 
   handleFormSubmit = (e) => {
     e.preventDefault();
-    // lift the state!
-    // push character into parent state
-    console.log(this.state)
-    const newBeer = this.state
-
-    Axios.post('https://ih-beers-api2.herokuapp.com/beers/new', {
-      body: newBeer
-    }).then((response) => {
-      console.log(response);
-    }).catch(err=>console.log(err));
     
+    console.log(this.state);
+    const newBeer = this.state;
+
+    Axios.post('https://ih-beers-api2.herokuapp.com/beers/new', 
+      newBeer
+    )
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((err) => console.log(err));
   };
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
+    if (name === 'attenuation_level') {
+      this.setState({
+        [name]: Number(value),
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
   };
 
   render() {
     return (
       <div>
+        <Header />
         <form onSubmit={this.handleFormSubmit}>
           <label>Name:</label>
           <input
@@ -63,8 +70,8 @@ class NewBeer extends Component {
           <label>brewer_tips:</label>
           <input
             type="text"
-            name="brewer_tips"
-            value={this.state.brewer_tips}
+            name="brewers_tips"
+            value={this.state.brewers_tips}
             onChange={this.handleChange}
           />
           <label>attenuation_level:</label>

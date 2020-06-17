@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import Header from './Header';
 
 class BeerDetail extends Component {
     state = {
@@ -17,7 +18,9 @@ class BeerDetail extends Component {
   }
   
     render() {
-    return (<div>
+    return (
+    <div>
+      <Header />
         <h3>{this.state.beer.name}</h3>
     </div>);
   }

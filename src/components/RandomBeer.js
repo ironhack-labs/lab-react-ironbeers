@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import Header from './Header';
 
 class RandomBeer extends Component {
   state = {
@@ -17,6 +18,7 @@ class RandomBeer extends Component {
   render() {
     return (
       <div>
+        <Header />
         <h3>{this.state.beer.name}</h3>
       </div>
     );
