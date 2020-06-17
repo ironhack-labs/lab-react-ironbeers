@@ -29,7 +29,7 @@ class App extends Component {
             path="/beers"
             render={(props) => <AllBeers beers={this.state.beers} />}
           />
-          <Route path="/beers/:id" render={(props) => <BeerDetails beer={this.state.beer} />} />
+          <Route path="/beers/:id" component={BeerDetails} />
 
         </Switch>
         <div>
