@@ -28,7 +28,7 @@ class BeerDetail extends Component {
       contributed_by,
     } = this.state.beer;
     return (
-      <div className="">
+      < div className = "d-flex justify-content-center align-items-center flex-column" >
         <Header />
             <a className="text-info" href="/beers"> Go back to all beers </a>
         <div className="mx-3 px-3">

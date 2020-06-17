@@ -26,7 +26,7 @@ class RandomBeer extends Component {
       contributed_by,
     } = this.state.beer;
     return (
-      <div className="">
+      <div className="d-flex justify-content-center align-items-center flex-column">
         <Header />
         <a className="text-info" href="/random-beer"> Spin the weel another time! </a>
         <div className="m-3 p-3">

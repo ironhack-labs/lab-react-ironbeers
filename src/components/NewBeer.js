@@ -41,11 +41,11 @@ class NewBeer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="d-flex justify-content-center align-items-center flex-column">
         <Header />
         <form
           onSubmit={this.handleFormSubmit}
-          className="d-flex flex-column text-center m-3 p-3"
+          className="d-flex flex-column text-center m-3 p-3 w-75"
         >
           <h5 className="display-5 mb-3 pb-3">
             Insert a new beer.
@@ -125,7 +125,7 @@ class NewBeer extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <input className="btn btn-info" type="submit" value="Submit" />
+          <input className="btn btn-info my-3" type="submit" value="Submit" />
         </form>
       </div>
     );
