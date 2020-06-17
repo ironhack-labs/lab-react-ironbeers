@@ -5,7 +5,7 @@ import AllBeers from './components/AllBeers';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import BeerDetails from './components/BeerDetails';
-// import RandomBeer from './components/RandomBeer';
+import RandomBeer from './components/RandomBeer';
 // import NewBeer from './components/NewBeer';
 
 class App extends Component {
@@ -30,7 +30,7 @@ class App extends Component {
             render={(props) => <AllBeers beers={this.state.beers} />}
           />
           <Route path="/beers/:id" component={BeerDetails} />
-
+          <Route path="/random-beer" component={RandomBeer} />
         </Switch>
         <div>
           <NavLink to="/beers">All Beers</NavLink>
