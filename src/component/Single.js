@@ -7,7 +7,7 @@ export default class Single extends React.Component {
     beer: ''
   }
   componentDidMount(){
-    let id = this.props
+    let id = this.props.match.params.beerId
     console.log(id)
     axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
       .then((res) => {
@@ -17,7 +17,7 @@ export default class Single extends React.Component {
       })
   }
   render(){
-    if(!this.state.todo){
+    if(!this.state.beer){
       return (
 <div className="text-center">
   <div className="spinner-border text-info" role="status">
@@ -30,15 +30,15 @@ export default class Single extends React.Component {
     const {image_url, name, tagline, first_brewed, attenuation_level, description, contributed_by} = this.state.beer
     // let id = this.props.match.params.id
     return (
-    <div class="card" style={{width: '18rem'}}>
-  <img src={image_url} class="card-img-top" alt=""/>
-  <div class="card-body">
-    <h5 class="card-title">{name}</h5>
-    <p class="card-text">{tagline}</p>
-    <p class="card-text">{first_brewed}</p>
-    <p class="card-text">{attenuation_level}</p>
-    <p class="card-text">{description}</p>
-    <p class="card-text">{contributed_by}</p>
+    <div className="card" style={{width: '18rem'}}>
+  <img src={image_url} className="card-img-top" alt=""/>
+  <div className="card-body">
+    <h5 className="card-title">{name}</h5>
+    <p className="card-text">{tagline}</p>
+    <p className="card-text">{first_brewed}</p>
+    <p className="card-text">{attenuation_level}</p>
+    <p className="card-text">{description}</p>
+    <p className="card-text">{contributed_by}</p>
   </div>
 </div>
 

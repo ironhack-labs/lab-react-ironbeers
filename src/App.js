@@ -25,6 +25,39 @@ class App extends React.Component {
       })
     })
   }
+  handleAddBeer = (e) => {
+    e.preventDefault()
+    console.log(e.target.first_brewed.value)
+    console.log(e.target.brewers_tips.value)
+    console.log(e.target.attenuation_level.value)
+    console.log(e.target.contributed_by.value)
+    let name = e.target.name.value
+    let tagline = e.target.tagline.value
+    let description = e.target.description.value
+    let first_brewed = e.target.first_brewed.value
+    let brewers_tips = e.target.brewers_tips.value
+    let attenuation_level = e.target.attenuation_level.value
+    let contributed_by = e.target.contributed_by.value
+
+
+    axios.post('https://ih-beers-api2.herokuapp.com/beers/new', {
+      name: name,
+      description: description,
+      tagline: tagline,
+      first_brewed: first_brewed,
+      brewers_tips: brewers_tips,
+      attenuation_level: attenuation_level,
+      contributed_by: contributed_by
+    })
+    .then((res) => {
+      console.log('worked')
+      this.setState({
+        beers: [...this.state.beers, res.data]
+      }, () => {
+        this.props.history.push('/beers') //redirecting user to different paths
+      })
+    })
+  }
 
   render(){
     return (
@@ -34,18 +67,15 @@ class App extends React.Component {
         <Route exact path="/beers" render={() => {
           return <AllBeers beers={this.state.beers} />
         }}/>
-        <Route path="/beers/:id" render={() => {
-          return <Single  />
+        <Route path="/beers/:beerId" render={(routeProps) => {
+          return <Single {...routeProps} />
         }}/>
         <Route exact path="/random-beer" render={() => {
           return <Random  />
         }}/>
         <Route path="/new-beer" render={() => {
-          return <New />
+          return <New  onAdd={this.handleAddBeer} />
         }}/>
-        {/* <Route path="/search?q={query}" render={(routeProps) => {
-          return <EditTodo {...routeProps} />
-        }}/> */}
       </Switch>
       </div>
     );
