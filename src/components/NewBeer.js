@@ -27,7 +27,7 @@ export default function NewBeer(props) {
                 </div>
                 <div class="form-group">
                     <label for="attenuation">Attenuation Level</label>
-                    <input type="number" class="form-control" id="attenuation" placeholder="81.3" />
+                    <input type="number" step="any" min="0" class="form-control" id="attenuation" placeholder="81.3" />
                 </div>
                 <div class="form-group">
                     <label for="contributed">Contributed by</label>
