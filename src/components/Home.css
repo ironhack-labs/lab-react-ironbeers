@@ -1,0 +1,12 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6% 0;
+}
+
+.card-div {
+    color: black;
+    text-align: left;
+}

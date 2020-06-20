@@ -1,0 +1,21 @@
+.beer-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.beer-img {
+    width: 30%;
+    height: 30%;
+}
+
+.my-beer-title {
+    font-size: 16px;
+}
