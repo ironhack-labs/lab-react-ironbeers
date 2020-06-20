@@ -29,30 +29,30 @@ export default class AllBeers extends React.Component {
 
     // }
 
-    // //FILTER BEERS
-    // handleFilter = (e) => {
-    //     let input = e.target.value
+    //FILTER BEERS
+    handleFilter = (e) => {
+        e.preventDefault()
+        let input = e.target.value
 
-    //     axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${input}`)
-    //     .then((res) => {
-    //         let newBeers = this.state.beers.filter((beer) => {
-    //             return beer.name.startsWith(input)
-    //           })
-    //         this.setState({
-    //             filteredBeers: newBeers
-    //           })
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${input}`)
+        .then((res) => {
+            console.log(res.data)
+            this.setState({
+                filteredBeers: res.data
+              })
 
-    //     })
+        })
         
     
-    //   }
+      }
 
     render(){
+
 
         return (
             <div>
                 <Header />
-                <input type="text" onChange={this.props.onFilter} placeholder="Search all beers..."></input>
+                <input type="text" onChange={this.handleFilter} placeholder="Search all beers..."></input>
                 <h1>All Beers</h1>
                 
                 {
