@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.two-columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.two-columns div{
+  
+}
+.beer-image{
+  width: 200px;
+}
+.beer-image img{
+  height: 100px;
+}
