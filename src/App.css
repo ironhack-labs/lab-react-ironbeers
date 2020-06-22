@@ -1,3 +1,11 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1566633806327-68e152aaf26d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+  background-size: cover;
+}
+
+h1 {
+  color: whitesmoke
+}
 .App {
   text-align: center;
 }
