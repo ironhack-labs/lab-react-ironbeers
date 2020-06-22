@@ -35,6 +35,11 @@ class BeerDetails extends Component {
     return (
       <div>
         <Navbar />
+        <img
+        src={process.env.PUBLIC_URL + '/images/beers.png'}
+        className="allbeers-image"
+        alt="beers"
+      />
         <div className="container">
           <div className="row">
             <div className="image-container">

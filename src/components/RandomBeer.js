@@ -32,6 +32,11 @@ class RandomBeer extends Component{
     return(
         <div>
         <Navbar />
+        <img
+        src={process.env.PUBLIC_URL + '/images/random-beer.png'}
+        className="allbeers-image"
+        alt="beers"
+      />
         <div className="container">
           <div className="row">
             <div className="image-container">
