@@ -20,6 +20,14 @@ class App extends Component {
       });
   }
 
+  addBeer(newBeer) {
+    const beersCopy = [...this.state.beers];
+    beersCopy.push(newBeer);
+    this.setState({
+      beers: beersCopy
+    })
+  };
+
   render(){
     return (
       <div className="App">
@@ -28,7 +36,7 @@ class App extends Component {
           <Route exact path="/beers" render={(props) => <Beers beers={this.state.beers} />} />
           <Route path="/beers/:beerId" render={(props) => <BeerDetails {...props} />} />
           <Route path="/random-beer" component={RandomBeer} />
-          <Route path="/new-beer" component={NewBeer} />
+          <Route path="/new-beer" render={(props) => <NewBeer addBeer={this.addBeer} />} />
         </Switch>
       </div>
     );

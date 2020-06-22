@@ -37,7 +37,6 @@ function Beers(props){
     return(
         <div>
             <Header />
-            <h1>Beers page</h1>
             {props.beers.map((beer, i) => {
                 return(
                     <Div key={i} container>
