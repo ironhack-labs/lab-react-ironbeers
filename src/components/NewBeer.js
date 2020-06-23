@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import axios from 'axios';
+import styled from 'styled-components'
 
+const Div = styled.div`
+    max-width: 600px;
+    margin: auto;
+`
 
 class NewBeer extends Component {
     state = {
@@ -25,19 +30,6 @@ class NewBeer extends Component {
 
         axios.post('https://ih-beers-api2.herokuapp.com/beers/new', this.state)
             .then(() => {
-                //console.log(newBeer)
-                this.props.addBeer(this.state);
-
-                // this.setState({
-                //     name: '',
-                //     tagline: '',
-                //     description: '',
-                //     first_brewed: '',
-                //     brewers_tips: '',
-                //     attenuation_level: '',
-                //     contributed_by: ''
-                // });
-
                 this.props.history.push('/')
             });
     };
@@ -46,24 +38,40 @@ class NewBeer extends Component {
         return(
             <div>
                 <Header />
-                <form onSubmit={this.formSubmitHandler}>
-                    <label>Name</label>
-                    <input type="text" name="name" value={this.state.name} onChange={this.onChangeHandler} />
-                    <label>Tagline</label>
-                    <input type="text" name="tagline" value={this.state.tagline} onChange={this.onChangeHandler} />
-                    <label>Description</label>
-                    <textarea type="text" name="description" value={this.state.description} onChange={this.onChangeHandler} />
-                    <label>First Brewed</label>
-                    <input type="text" name="first_brewed" value={this.state.first_brewed} onChange={this.onChangeHandler} />
-                    <label>Brewers Tips</label>
-                    <input type="text" name="brewers_tips" value={this.state.brewers_tips} onChange={this.onChangeHandler} />
-                    <label>Attenuation Level</label>
-                    <input type="number" name="attenuation_level" value={this.state.attenuation_level} onChange={this.onChangeHandler} />
-                    <label>Contributed By</label>
-                    <input type="text" name="contributed_by" value={this.state.contributed_by} onChange={this.onChangeHandler} />
+                <Div>
+                    <form onSubmit={this.formSubmitHandler}>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" class="form-control" value={this.state.name} onChange={this.onChangeHandler} />
+                        </div>
+                        <div class="form-group">
+                            <label>Tagline</label>
+                            <input type="text" name="tagline" class="form-control" value={this.state.tagline} onChange={this.onChangeHandler} />
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea type="text" name="description" class="form-control" value={this.state.description} onChange={this.onChangeHandler} />
+                        </div>
+                        <div class="form-group">
+                            <label>First Brewed</label>
+                            <input type="text" name="first_brewed" class="form-control" value={this.state.first_brewed} onChange={this.onChangeHandler} />
+                        </div>
+                        <div class="form-group">
+                            <label>Brewers Tips</label>
+                            <input type="text" name="brewers_tips" class="form-control" value={this.state.brewers_tips} onChange={this.onChangeHandler} />
+                        </div>
+                        <div class="form-group">
+                            <label>Attenuation Level</label>
+                            <input type="number" name="attenuation_level" class="form-control" value={this.state.attenuation_level} onChange={this.onChangeHandler} />
+                        </div>
+                        <div class="form-group">
+                            <label>Contributed By</label>
+                            <input type="text" name="contributed_by" class="form-control" value={this.state.contributed_by} onChange={this.onChangeHandler} />
+                        </div>
 
-                    <input type="submit" value="ADD NEW" />
-                </form>
+                        <input type="submit" class="btn btn-info" value="ADD NEW" />
+                    </form>
+                </Div>
             </div>
         )
     }
