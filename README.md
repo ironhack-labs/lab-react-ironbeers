@@ -157,7 +157,7 @@ Since we didn't cover how to upload images yet, don't worry about it now - the A
   <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
 </div>
 
-### Part II - Iteration 6: Create New Beer With Image
+## Part II - Iteration 6: Create New Beer With Image
 Make a separate page where you can create a beer with an image. This is mainly to practice the difference between controlled forms (thourgh state) and the escape hatch with refs. Later you can switch to using only creating beers with an image.
 
 ## Part II - Iteration 7: Delete a Beer
