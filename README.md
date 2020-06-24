@@ -163,7 +163,7 @@ Make a separate page where you can create a beer with an image. This is mainly t
 ## Part II - Iteration 7: Delete a Beer
 Make it possible to delete a beer. You can do this either in the detail page, list page or both. Note that you can only delete beers without owners or beers that are created by you while logged in. Check the documentation. 
 
-### Part II - Iteration 6: Edit a Beer
+## Part II - Iteration 6: Edit a Beer
 Create an edit button on the detail page. If you click on it, you show the edit form. The form should be prepopulated with the data, except for the file upload. Redirect to the detail page of the same beer after the beer has been updated successfully.
 
 ### (Extra) Bonus Iteration: Filter the Beers
