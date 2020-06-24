@@ -132,7 +132,7 @@ The same way we did with the **Single Beer** view, we should render the followin
   <img src="https://user-images.githubusercontent.com/23629340/40707457-05a22990-63f1-11e8-84b2-a86143b7b821.png" height="600px" />
 </div>
 
-### Iteration 6: Create New Beer
+### Part II - Iteration 6: Create New Beer
 
 Finally, on the `/new-beer` route (remember, this is you react route, you're displaying the form on this route), we should render a form where user can create new beers. The `form` should include the following fields:
 
@@ -156,6 +156,15 @@ Since we didn't cover how to upload images yet, don't worry about it now - the A
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
 </div>
+
+### Part II - Iteration 6: Create New Beer With Image
+Make a separate page where you can create a beer with an image. This is mainly to practice the difference between controlled forms (thourgh state) and the escape hatch with refs. Later you can switch to using only creating beers with an image.
+
+## Part II - Iteration 7: Delete a Beer
+Make it possible to delete a beer. You can do this either in the detail page, list page or both. Note that you can only delete beers without owners or beers that are created by you while logged in. Check the documentation. 
+
+### Part II - Iteration 6: Edit a Beer
+Create an edit button on the detail page. If you click on it, you show the edit form. The form should be prepopulated with the data, except for the file upload. Redirect to the detail page of the same beer after the beer has been updated successfully.
 
 ### (Extra) Bonus Iteration: Filter the Beers
 
