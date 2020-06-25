@@ -169,6 +169,24 @@ Create an edit button on the detail page. If you click on it, you show the edit 
 ## Part II - (Extra) Bonus: Iteration 10: Edit the Image
 Extend iteration 9 with files. The input field for the image can't be prepopulated. You could create a second form with a separate button on the page for the file field only. 
 
+## Part III - Iteration 11: Create a Signup Page 
+Create a signup page. If a user signs up it's autmatically also logged in on the backend. Make sure to put the user in the localstorage. You can add a little user icon in the navbar and/or on the home screen that navigate the sign up page.
+
+## Part III - Iteration 12: Make a Personalized Navbar and Simple Profile Page
+Read from the local storage in the navbar component. If there's a user, you show a different nav than when there isn't one. Leverage the .auth.js file. After signing up, the user should be redirected to the profile page. It should display some basic info about the user.
+
+## Part III - Iteration 13: Implement a Login Route
+Extend the signup page. It needs to be possible to toggle between the signup and login form. After logging in, the user should also be redirected to the profile page.
+
+## Part III - Iteration 14: Implement the Logout
+If the user clicks on logout, it should be redirected to the logout page. In the componentDidMount of the <Logout /> page you logout through axios and redirect back to the home page. The navbar should update.
+
+## Part III - Iteration 15: Make the Profile Page Editable
+Make the profile editable. Just like you had to do for beers in iteration 9.
+
+## Part III - Iteration 16: Create a My Beers Page
+If you create a beer while being logged in, the beer gets an additional `owner` field. First, create a couple of beers while being logged in. Second, add my beers route that shows the beers that were created by the logged in user. Consult the documention.
+
 ### (Extra) Bonus Iteration: Filter the Beers
 
 Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beers-api.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
