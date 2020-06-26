@@ -181,11 +181,14 @@ Extend the signup page. It needs to be possible to toggle between the signup and
 ## Part III - Iteration 14: Implement the Logout
 If the user clicks on logout, it should be redirected to the logout page. In the componentDidMount of the <Logout /> page you logout through axios and redirect back to the home page. The navbar should update.
 
-## Part III - Iteration 15: Make the Profile Page Editable
-Make the profile editable. Just like you had to do for beers in iteration 9.
+## Part III - Iteration 15: Make the Firstname and Lastname Editable on the Profile Page 
+Make the firstname and lastname editable. The password, username and email are handled individually.
 
-## Part III - Iteration 16: Create a My Beers Page
-If you create a beer while being logged in, the beer gets an additional `owner` field. First, create a couple of beers while being logged in. Second, add my beers route that shows the beers that were created by the logged in user. Consult the documention.
+## Part III - Iteration 16: Make the password, email and username editable on the Profile Page
+Now make each of these fields editable as well. They should be handled separately. Each should be updated with their own axios request.
+
+## Part III - Iteration 17: Create a My Beers Page
+If you create a beer while being logged in, the beer gets an additional `owner` field which contains the objectId of the current user. This fully handled by the backend. First, create a couple of beers while being logged in. Second, add a my beers route that shows the beers that were created by the logged in user. Consult the documentation.
 
 ### (Extra) Bonus Iteration: Filter the Beers
 
