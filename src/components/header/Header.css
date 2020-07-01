@@ -1,0 +1,11 @@
+header{
+    background:rgb(112, 225, 253);
+    height:80px;
+    font-weight:bold;
+    line-height: 80px;
+    font-size:30px;
+}
+
+header a:hover{
+    color:white!important;
+}

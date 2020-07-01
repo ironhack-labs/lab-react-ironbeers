@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+a{
+  color:#222!important;
+  transition: color .5s ease;
+}
+a:focus, a:hover{
+  text-decoration:none!important;
+  color:#888!important;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -22,10 +31,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
