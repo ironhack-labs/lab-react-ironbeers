@@ -8,7 +8,7 @@ import NewBeer from "./components/newbeer/NewBeer"
 class App extends Component {
   render() {
     return (
-      <div>
+      <div> 
         <Switch>
           <Route exact path="/beers" render={() => <Beers/>}/>
           <Route exact path="/random-beer" render={() => <RandomBeer/>}/>
