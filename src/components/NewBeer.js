@@ -8,7 +8,7 @@ class NewBeer extends Component {
   };
   toggleForm = () => {
     this.setState({
-      showForm: !this.state.ShowForm,
+      showForm: !this.state.showForm,
     });
   };
   addBeer = (e) => {
