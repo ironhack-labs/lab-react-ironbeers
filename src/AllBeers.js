@@ -47,7 +47,15 @@ class AllBeers extends Component {
 
     return (
       <div>
-        <input onChange={this.filtered} type="text" name="name" />
+        <div className="searchBar">
+          <h2>Find your Beer!</h2>
+          <input
+            onChange={this.filtered}
+            type="text"
+            name="name"
+            placeholder="type_here"
+          />
+        </div>
         {this.showMeBeers()}
       </div>
     );

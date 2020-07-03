@@ -52,18 +52,21 @@ class NewBeer extends Component {
   render() {
     console.log(this.state.list);
     return (
-      <div>
-        <button onClick={this.toggleForm}>New beer</button>
+      <div className="newBeer">
+        <button onClick={this.toggleForm}>Add a New beer</button>
         {this.state.showForm ? (
           <form onSubmit={this.addBeer}>
             <label>Name:</label>
+            <br />
             <input onChange={this.handleChange} type="text" name="name" />
             <br />
             <label>Tagline:</label>
+            <br />
             <input onChange={this.handleChange} type="text" name="tagline" />
             <br />
             <label>Description:</label>
-            <input
+            <br />
+            <textarea
               onChange={this.handleChange}
               type="text"
               name="description"
@@ -93,7 +96,8 @@ class NewBeer extends Component {
               name="contributed_by"
             />
             <br />
-            <input type="submit" />
+            <br />
+            <input className="submit" type="submit" />
           </form>
         ) : (
           ''

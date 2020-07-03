@@ -18,14 +18,18 @@ class RandomBeer extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="wholePage">
           <img src={this.state.beers.image_url} alt="single beer" />
-          <h1>{this.state.beers.name}</h1>
-          <h2>{this.state.beers.tagline}</h2>
-          <p>{this.state.beers.first_brewed}</p>
-          <p>{this.state.beers.attenuation_level}</p>
-          <p>{this.state.beers.description}</p>
-          <p>{this.state.beers.contributed_by}</p>
+          <div className="nameHead">
+            <h1>{this.state.beers.name}</h1>
+            <p>{this.state.beers.attenuation_level}</p>
+          </div>
+          <div className="date">
+            <h2>{this.state.beers.tagline}</h2>
+            <p>{this.state.beers.first_brewed}</p>
+          </div>
+          <p className="descript">{this.state.beers.description}</p>
+          <p className="closer">{this.state.beers.contributed_by}</p>
         </div>
       </div>
     );

@@ -23,24 +23,23 @@ class SingleBeer extends Component {
     });
     console.log({ ...beer });
     return (
-      <div>
+      <div className="wholePage">
         <img src={{ ...beer }.image_url} alt="single beer" />
-        <h1>{{ ...beer }.name}</h1>
-        <h2>{{ ...beer }.tagline}</h2>
-        <p>{{ ...beer }.first_brewed}</p>
-        <p>{{ ...beer }.attenuation_level}</p>
-        <p>{{ ...beer }.description}</p>
-        <p>{{ ...beer }.contributed_by}</p>
+        <div className="nameHead">
+          <h1>{{ ...beer }.name}</h1>
+          <p>{{ ...beer }.attenuation_level}</p>
+        </div>
+        <div className="date">
+          <h2>{{ ...beer }.tagline}</h2>
+          <p>{{ ...beer }.first_brewed}</p>
+        </div>
+        <p className="descript">{{ ...beer }.description}</p>
+        <p className="closer">{{ ...beer }.contributed_by}</p>
       </div>
     );
   };
   render() {
-    return (
-      <div>
-        {this.showSingleBeer()}
-        Single Beer
-      </div>
-    );
+    return <div>{this.showSingleBeer()}</div>;
   }
 }
 

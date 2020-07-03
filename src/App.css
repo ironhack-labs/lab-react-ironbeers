@@ -1,12 +1,15 @@
 * {
   font-family: Courier, monospace;
 }
+body {
+  background-color: rgb(212, 232, 245);
+}
 #homePage img {
   width: 100%;
   height: 10%;
 }
 .home {
-  background-color: rgb(44, 181, 226);
+  background-color: lightskyblue;
   width: 100%;
 }
 .home img {
@@ -17,14 +20,21 @@
   height: 5%;
 }
 .row img {
-  width: 10vw;
+  width: 7vw;
   height: 50vh;
 }
 #homePage p {
-  padding: 0 3%;
+  color: black;
+  margin: 10px 0;
 }
-#homePage h {
-  padding: 0 3%;
+.headerLink {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+.articles {
+  margin: auto 4%;
+  padding: 0 0 2%;
 }
 .row {
   width: 50%;
@@ -61,6 +71,106 @@ div {
   color: black;
   font-size: 1.2vw;
 }
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchBar input {
+  width: 20%;
+  height: 30px;
+  font-size: 25px;
+}
+.searchBar input type {
+  height: 25px;
+}
+.searchBar h2 {
+  font-size: 3.1wv;
+}
+.wholePage img {
+  width: 7vw;
+  height: 25vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0;
+}
+.wholePage h1 {
+  color: black;
+  font-size: 40px;
+}
+.wholePage {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0 0;
+}
+.nameHead {
+  display: flex;
+  justify-content: space-evenly;
+}
+.nameHead h1 {
+  font-size: 50px;
+  font-weight: 100;
+}
+.nameHead p {
+  font-size: 50px;
+}
+.date {
+  display: flex;
+  justify-content: space-evenly;
+}
+.date h2 {
+  color: grey;
+  font-size: 30px;
+  font-weight: 900;
+}
+.date p {
+  color: black;
+}
+.descript {
+  color: black;
+  width: 70%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.closer {
+  display: block;
+  margin-left: 300px;
+}
+button {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 25px;
+  margin: 20px 90px 0;
+}
+form {
+  text-align: center;
+  margin: 20px auto 0;
+}
+.newBeer input {
+  width: 90%;
+  height: 4vh;
+  border-radius: 20px;
+}
+textarea {
+  width: 90%;
+  height: 20vh;
+  border-radius: 20px;
+}
+.submit {
+  width: 97%;
+  color: white;
+  background-color: lightskyblue;
+  font-size: 30px;
+  font-weight: 900;
+}
+.newBeer {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px auto;
+}
 @media only screen and (max-width: 600px) {
   body {
     background-color: lightblue;
@@ -78,43 +188,80 @@ div {
     width: 10%;
     height: 10%;
   }
-  .row img {
-    width: 10vw;
-    height: 50vh;
-  }
   .row {
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom-style: solid;
-    border-bottom-color: lightgrey;
+    width: 90%;
+    justify-content: space-between;
   }
   h2 {
-    font-size: 2vw;
-    color: black;
-    font-weight: 100;
-    text-decoration: none;
-    list-style-type: none;
+    font-size: 7vw;
+  }
+  .articles {
+    margin: auto 4%;
+    padding: 0 0 2%;
+  }
+  .row img {
+    width: 40%;
+    height: 30%;
   }
   .column p {
     color: black;
-    font-size: 1.3vw;
+    font-size: 4vw;
     font-weight: 100;
   }
   div {
     color: grey;
     font-weight: 900;
-    font-size: 1.6vw;
+    font-size: 5vw;
   }
   .column {
     width: 50%;
   }
   .column strong {
     color: black;
-    font-size: 1.2vw;
+    font-size: 3.8vw;
+  }
+  .searchBar h2 {
+    font-size: 1wv;
+    margin: 0 10px;
+  }
+  .searchBar input {
+    width: 60%;
+    height: 30px;
+    font-size: 25px;
+    margin: 0 10px;
+  }
+  .searchBar {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .wholePage img {
+    width: 25vw;
+    height: 90vw;
+    padding: 15px 0;
+  }
+  .nameHead {
+    margin: 0 15px;
+  }
+  .nameHead h1 {
+    font-size: 45px;
+  }
+  .nameHead p {
+    font-size: 50px;
+  }
+  .date {
+    margin: 0 15px;
+  }
+
+  .date p {
+    margin: 35px 0 0;
+  }
+  .closer {
+    margin-left: 30px;
+  }
+  .submit {
+    font-size: 20px;
+    text-align: center;
+    padding: 15px auto;
+    margin: 0 auto 20px;
   }
 }
