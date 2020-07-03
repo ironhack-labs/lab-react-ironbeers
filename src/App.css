@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+* {
+  font-family: Courier, monospace;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#homePage img {
+  width: 100%;
+  height: 10%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home {
+  background-color: rgb(44, 181, 226);
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6%;
+  height: 5%;
+}
+.row img {
+  width: 10vw;
+  height: 50vh;
+}
+#homePage p {
+  padding: 0 3%;
+}
+#homePage h {
+  padding: 0 3%;
+}
+.row {
+  width: 50%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-style: solid;
+  border-bottom-color: lightgrey;
 }
-
-.App-link {
-  color: #61dafb;
+h2 {
+  font-size: 2vw;
+  color: black;
+  font-weight: 100;
+  text-decoration: none;
+  list-style-type: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.column p {
+  color: black;
+  font-size: 1.3vw;
+  font-weight: 100;
+}
+div {
+  color: grey;
+  font-weight: 900;
+  font-size: 1.6vw;
+}
+.column {
+  width: 50%;
+}
+.column strong {
+  color: black;
+  font-size: 1.2vw;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
   }
-  to {
-    transform: rotate(360deg);
+  * {
+    font-family: Courier, monospace;
+  }
+  .home {
+    background-color: rgb(44, 181, 226);
+  }
+  .home img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: 10%;
+  }
+  .row img {
+    width: 10vw;
+    height: 50vh;
+  }
+  .row {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+  }
+  h2 {
+    font-size: 2vw;
+    color: black;
+    font-weight: 100;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .column p {
+    color: black;
+    font-size: 1.3vw;
+    font-weight: 100;
+  }
+  div {
+    color: grey;
+    font-weight: 900;
+    font-size: 1.6vw;
+  }
+  .column {
+    width: 50%;
+  }
+  .column strong {
+    color: black;
+    font-size: 1.2vw;
   }
 }
