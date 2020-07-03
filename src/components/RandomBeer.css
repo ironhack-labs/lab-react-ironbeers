@@ -1,0 +1,10 @@
+.rb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rb img {
+    width: 150;
+    height: 300;
+}

@@ -1,0 +1,10 @@
+.sb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.b-img {
+    width: 150px;
+    height: 300px;
+}
