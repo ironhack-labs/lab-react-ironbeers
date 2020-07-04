@@ -1,0 +1,20 @@
+/* STYLES============================================================ */
+.divStyle{
+    display: 'flex';
+    border: '1px solid lightgrey';
+}
+
+.infoStyle{
+    /* float: 'right'; */
+}
+
+.imgDiv{
+    width: '125px';
+    text-align:'center';
+    margin-right: '75px';
+}
+img{
+    padding: '15px 10px';
+    height: '145px';
+}
+/* =================================================================== */
