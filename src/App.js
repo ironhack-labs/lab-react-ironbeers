@@ -12,19 +12,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="home">
-          <Link to="/home">
-            <img
-              width="170vw"
-              height="150vh"
-              src="https://www.pinclipart.com/picdir/big/405-4059078_png-file-svg-transparent-white-home-button-clipart.png"
-              alt="home-button"
-            />
-          </Link>
-        </div>
+        <div className="home"></div>
 
         <Switch>
-          <Route exact path="/home" render={props => <Home {...props} />} />
+          <Route exact path="/" render={props => <Home {...props} />} />
           <Route
             exact
             path="/beers"

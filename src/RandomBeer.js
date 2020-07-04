@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link, Switch, Route } from 'react-router-dom';
 
 class RandomBeer extends Component {
   state = {
@@ -18,6 +19,15 @@ class RandomBeer extends Component {
   render() {
     return (
       <div>
+        <Link to="/">
+          <img
+            className="house"
+            width="170vw"
+            height="150vh"
+            src="https://www.pinclipart.com/picdir/big/405-4059078_png-file-svg-transparent-white-home-button-clipart.png"
+            alt="home-button"
+          />
+        </Link>
         <div className="wholePage">
           <img src={this.state.beers.image_url} alt="single beer" />
           <div className="nameHead">

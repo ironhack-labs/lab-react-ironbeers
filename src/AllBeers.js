@@ -47,6 +47,15 @@ class AllBeers extends Component {
 
     return (
       <div>
+        <Link to="/">
+          <img
+            className="house"
+            width="170vw"
+            height="150vh"
+            src="https://www.pinclipart.com/picdir/big/405-4059078_png-file-svg-transparent-white-home-button-clipart.png"
+            alt="home-button"
+          />
+        </Link>
         <div className="searchBar">
           <h2>Find your Beer!</h2>
           <input

@@ -139,6 +139,9 @@ div {
   display: block;
   margin-left: 300px;
 }
+.newBeer button {
+  margin: 0 700px 90px;
+}
 button {
   padding: 10px;
   border-radius: 20px;
@@ -170,6 +173,9 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   padding: 10px auto;
+}
+.house {
+  margin: 20px 20px 0;
 }
 @media only screen and (max-width: 600px) {
   body {
@@ -263,5 +269,13 @@ textarea {
     text-align: center;
     padding: 15px auto;
     margin: 0 auto 20px;
+  }
+  .house {
+    margin: 20px 20px 0;
+    width: 15%;
+    height: 10%;
+  }
+  .newBeer button {
+    margin: 30px 60px;
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, Switch, Route } from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -52,56 +53,68 @@ class NewBeer extends Component {
   render() {
     console.log(this.state.list);
     return (
-      <div className="newBeer">
-        <button onClick={this.toggleForm}>Add a New beer</button>
-        {this.state.showForm ? (
-          <form onSubmit={this.addBeer}>
-            <label>Name:</label>
-            <br />
-            <input onChange={this.handleChange} type="text" name="name" />
-            <br />
-            <label>Tagline:</label>
-            <br />
-            <input onChange={this.handleChange} type="text" name="tagline" />
-            <br />
-            <label>Description:</label>
-            <br />
-            <textarea
-              onChange={this.handleChange}
-              type="text"
-              name="description"
-            />
-            <br />
-            <label>First Brewed:</label>
-            <input
-              onChange={this.handleChange}
-              type="text"
-              name="first_brewed"
-            />
-            <br />
-            <label>Brewers Tips:</label>
-            <input onChange={this.handleChange} type="text" name="tips" />
-            <br />
-            <label>Attenuation Level:</label>
-            <input
-              onChange={this.handleChange}
-              type="number"
-              name="attenuation_level"
-            />
-            <br />
-            <label>Contributed By:</label>
-            <input
-              onChange={this.handleChange}
-              type="text"
-              name="contributed_by"
-            />
-            <br />
-            <br />
-            <input className="submit" type="submit" />
-          </form>
-        ) : (
-          ''
-        )}
+      <div>
+        <Link to="/">
+          <img
+            className="house"
+            width="170vw"
+            height="150vh"
+            src="https://www.pinclipart.com/picdir/big/405-4059078_png-file-svg-transparent-white-home-button-clipart.png"
+            alt="home-button"
+          />
+        </Link>
+
+        <div className="newBeer">
+          <button onClick={this.toggleForm}>Add a New beer</button>
+          {this.state.showForm ? (
+            <form onSubmit={this.addBeer}>
+              <label>Name:</label>
+              <br />
+              <input onChange={this.handleChange} type="text" name="name" />
+              <br />
+              <label>Tagline:</label>
+              <br />
+              <input onChange={this.handleChange} type="text" name="tagline" />
+              <br />
+              <label>Description:</label>
+              <br />
+              <textarea
+                onChange={this.handleChange}
+                type="text"
+                name="description"
+              />
+              <br />
+              <label>First Brewed:</label>
+              <input
+                onChange={this.handleChange}
+                type="text"
+                name="first_brewed"
+              />
+              <br />
+              <label>Brewers Tips:</label>
+              <input onChange={this.handleChange} type="text" name="tips" />
+              <br />
+              <label>Attenuation Level:</label>
+              <input
+                onChange={this.handleChange}
+                type="number"
+                name="attenuation_level"
+              />
+              <br />
+              <label>Contributed By:</label>
+              <input
+                onChange={this.handleChange}
+                type="text"
+                name="contributed_by"
+              />
+              <br />
+              <br />
+              <input className="submit" type="submit" />
+            </form>
+          ) : (
+            ''
+          )}
+        </div>
       </div>
     );
   }
