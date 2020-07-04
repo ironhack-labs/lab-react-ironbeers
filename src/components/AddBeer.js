@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import HomeLink from './HomeLink';
 
+
+
 class AddBeer extends Component {
     render() {
         return (

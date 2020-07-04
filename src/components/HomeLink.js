@@ -7,19 +7,24 @@ import AddBeer from './AddBeer'
 
 
 const HomeLink =()=> {
-        return (
-            <div>
-                <Link to='/'>Home</Link>
-                {/* <Link to='/allBeer'>AllBeers</Link>
-                <Link to='/addBeer'>RandBeers</Link> */}
-                {/* <Switch>
-                    <Route exact path='/home' render={<Home />}/>     
-                    <Route exact path='/allBeer' render={<AllBeers />}/>     
-                    <Route exact path='/randBeer' render={<RandBeer />}/>     
-                    <Route exact path='/addBeer' render={<AddBeer />}/>     
-                </Switch> */}
-            </div>
-        );
+    const divStyle = {
+        width: '100%',
+        height: '75px',
+        textAlign: 'center',
+        backgroundColor: 'rgb(18, 126, 228)',
+        color: 'white'
+    };
+
+    const imgStyle ={
+        width: '104px',
+    }
+
+
+    return (
+        <div style={divStyle}>
+            <Link to='/'><img src='../../public/logo192.png' style={imgStyle} /></Link>
+        </div>
+    );
 }
 
 export default HomeLink;

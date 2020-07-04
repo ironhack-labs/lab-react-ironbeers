@@ -11,17 +11,21 @@ import AddBeer from './AddBeer'
 const Home =()=> {
         return (
             <div>
-                <Link to='/allBeers'>All Beers</Link>
-                <Link to='/randBeer'>Random Beer</Link>
-                <Link to='/addBeer'>Add Beer</Link>
-                <Switch>
-                    <Route path="/allBeer" component={AllBeers} />
-                    <Route path="/randBeer" component={RandBeer} />
-                    <Route path="/addBeer" component={AddBeer} />
-                </Switch>
-{/*                 
-                <RandBeer />
-                <AddBeer />      */}
+                <Link to='/allBeers'>
+                    <img src="../../public/logo192.png" />
+                    <h1>All Beers</h1>
+                    <p>asd asd asd asd asd asd asd asd as dasd qwd asd</p>               
+                </Link>
+                <Link to='/randBeer'>
+                    <img src="../../public/logo192.png" />
+                    <h1>Random Beer</h1>
+                    <p>asd asd asd asd asd asd asd asd as dasd qwd asd</p>               
+                </Link>
+                <Link to='/addBeer'>
+                    <img src="../../public/logo192.png" />
+                    <h1>Add Beer</h1>
+                    <p>asd asd asd asd asd asd asd asd as dasd qwd asd</p>               
+                </Link>
             </div>
         );
 }
