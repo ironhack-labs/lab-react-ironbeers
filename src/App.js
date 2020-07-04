@@ -34,7 +34,7 @@ class App extends Component {
         <Switch>
           <Route  exact path='/' component={Home}/>
           <Route  path='/allBeers' render={()=><AllBeers beers={this.state.beers} />}/>
-          <Route  path='/randBeer' render={()=><RandBeer beers={this.state.beers} rand='true' />}/>
+          <Route  path='/randBeer' render={()=><BeerPage beers={this.state.beers} rand='true' />}/>
           <Route  path='/:id' render={(props) => <BeerPage beers={this.state.beers} {...props}/>} />
           <Route  path='/addBeer' component={AddBeer}/>
         </Switch>
