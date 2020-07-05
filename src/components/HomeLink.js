@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import Home from './Home'
-import AllBeers from './AllBeers'
-import RandBeer from './RandBeer'
-import AddBeer from './AddBeer'
 import Img from './homeImg.png'
+// import AllBeers from './AllBeers'
+// import AddBeer from './AddBeer'
 
 
 const HomeLink =()=> {

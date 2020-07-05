@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import { Link, Switch, Route } from 'react-router-dom';
 import HomeLink from './HomeLink'
 import './AllBeers.css'
-// import { withRouter, Link } from 'react-router-dom';
-import { Link, Switch, Route } from 'react-router-dom';
-import BeerPage from './BeerPage';
 
 const AllBeers =(props)=> {
+    console.log('allBeer page load')
+
     console.log(props.beers)
     
     const divStyle={

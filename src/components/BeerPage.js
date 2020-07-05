@@ -3,7 +3,9 @@ import HomeLink from './HomeLink';
 
 
 
+
 const BeerPage =(props)=> {
+
     // STYLES===========================================================
     const infoSection={
         width: '781px',
@@ -23,8 +25,8 @@ const BeerPage =(props)=> {
     }
     // ===================================================================
 
-    // let cur=props.beers
     let beer=[]
+    //Checks to see if incoming call was from the random button 
     if(props.rand == 'true'){
         let randNum=Math.floor(Math.random()*(props.beers.length-1))
         beer = props.beers[randNum]
@@ -35,24 +37,25 @@ const BeerPage =(props)=> {
     }
 
 
-    console.log(beer)
+    const displayBeer =()=>{
+        //Only executes if beer has property. Fixes issue with undefined errors on AddBeer
+        if(beer != undefined){
+            return <div className={infoSection}>
+                        <img src={beer.image_url} style={img}/>
+                        <h1>{beer.name}<span style={{color: "grey", float: 'right'}}>{beer.attenuation_level}</span></h1>
+                        <h3>{beer.tagline}<span style={{color: 'black',float: 'right'}}>{beer.first_brewed}</span></h3>
+                        <p>{beer.description}</p>
+                        <p style={contributedBy}>{beer.contributed_by}</p>
+            </div>  
+        }
+    }
 
     return (
         <div>
             <HomeLink />     
-                <div className={infoSection}>
-                    <img src={beer.image_url} style={img}/>
-                    <h1>{beer.name}<span style={{color: "grey", float: 'right'}}>{beer.attenuation_level}</span></h1>
-                    <h3>{beer.tagline}<span style={{color: 'black',float: 'right'}}>{beer.first_brewed}</span></h3>
-                    <p>{beer.description}</p>
-                    <p style={contributedBy}>{beer.contributed_by}</p>
-                </div>    
+            {displayBeer()}  
         </div>
     );
 }
-
-
-
-
 
 export default BeerPage;
