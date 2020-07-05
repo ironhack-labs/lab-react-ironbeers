@@ -1,61 +1,75 @@
 import React, { Component } from 'react';
 import HomeLink from './HomeLink';
+import axios from 'axios'
 
 
 
-const AddBeer =()=>{
-
-
-    
-    const submitBeer =(event)=>{
-        // let newBeer={
-        //     name: event.name.value,
-        //     tagline: event.tag.value,
-        //     description: event.description.value,
-        //     first_brewed: event.firstBrewed.value,
-        //     brewers_tips: event.brewerTips.value,
-        //     attenuation_level: event.attenuation.value,
-        //     contributed_by: event.contributed.value
-        // }
+class AddBeer extends Component{
+    state={
         
-        alert(event)
-    }
+    }   
     
-    const displayForm =()=>{
+    submitBeer = (event)=>{
+        let axios = require('axios')
+        let newBeer={
+            name: this.state.name,
+            tagline: this.state.tag,
+            description: this.state.description,
+            first_brewed: this.state.firstBrewed,
+            brewers_tips: this.state.brewerTips,
+            attenuation_level: this.state.attenuation,
+            contributed_by: this.state.contributed
+        }
+        
+        axios.post('https://ih-beers-api2.herokuapp.com/beers/new', newBeer)
+            .then(function (response) {
+                console.log(response);
+            })
+    }//end submitBeer
+    
+    handleChange = (event) =>{
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }//end handleChange
+
+    displayForm =()=>{
         return(
-            <form onSubmit={submitBeer()}>
+            <form onSubmit={()=>this.submitBeer()}>
                 <label >Name: </label>
-                <input type='text' name='name'/>
+                <input onChange={this.handleChange} type='text' name='name'/>
                 <br />
                 <label >Tagline: </label>
-                <input type='text' name='tag'/>
+                <input onChange={this.handleChange} type='text' name='tag'/>
                 <br />
                 <label >Description: </label>
-                <textarea name='description'/>
+                <textarea onChange={this.handleChange} name='description'/>
                 <br />
                 <label >First Brewed: </label>
-                <input type='text' name='firstBrewed'/>
+                <input onChange={this.handleChange} type='text' name='firstBrewed'/>
                 <br />
                 <label >Brewers Tips: </label>
-                <input type='text' name='brewerTips'/>
+                <input onChange={this.handleChange} type='text' name='brewerTips'/>
                 <br />
                 <label >Attentuation Level: </label>
-                <input type='number' name='attenuation'/>
+                <input onChange={this.handleChange} type='number' name='attenuation'/>
                 <br />
                 <label >Contributed By: </label>
-                <input type='text' name='contributed'/>
+                <input onChange={this.handleChange} type='text' name='contributed'/>
                 <br />
-                <input type="submit" />
+                <input onChange={this.handleChange} type="submit" />
             </form>
-        );
-    };
+        )
+    }//end displayForm
     
+    render(){
         return (
             <div>
                 <HomeLink />
-                {displayForm()}
+                {this.displayForm()}
             </div>
         );
+    }
 }
 
 export default AddBeer;
