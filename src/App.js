@@ -22,11 +22,11 @@ class App extends Component {
     return (
       <div>
       <Switch>
-          <Route path="/" exact component ={HomePage} />
-          <Route path="/beers"  exact component ={AllBeers} />
+          <Route exact path="/"  render ={HomePage} />
+          <Route exact path="/beers"   component ={AllBeers} />
           <Route path="/beers/:id" component ={BeerDetail} />
           <Route path="/randombeer"  component ={RandomBeer} />
-          <Route path="/newbeer"  exact component = {NewBeer}/>
+          <Route exact path="/newbeer"  component = {NewBeer}/>
       </Switch>    
       </div>
     );
