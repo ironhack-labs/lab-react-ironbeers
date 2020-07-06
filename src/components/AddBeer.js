@@ -64,7 +64,7 @@ class AddBeer extends Component{
     
     render(){
         return (
-            <div>
+            <div style={{border: '1px solid lightgrey'}}>
                 <HomeLink />
                 {this.displayForm()}
             </div>

@@ -51,7 +51,7 @@ const BeerPage =(props)=> {
     }
 
     return (
-        <div>
+        <div style={{border: 'solid 1px lightgrey '}}>
             <HomeLink />     
             {displayBeer()}  
         </div>

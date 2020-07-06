@@ -26,10 +26,10 @@ class App extends Component {
   render() {
 
     return (
-      <div>
+      <div style={{width: '500px'}}>
         {/* Pass beers to 2 components with 'render' */}
         <Switch>
-          <Route  exact path='/' component={Home}/>
+          <Route  exact path='/' render={(props)=><Home {...props}/>}/>
           <Route  path='/addBeer' render={() => <AddBeer />} />
           <Route  path='/allBeers' render={()=><AllBeers beers={this.state.beers} />}/>
           <Route  path='/randBeer' render={()=><BeerPage beers={this.state.beers} rand='true' />}/>

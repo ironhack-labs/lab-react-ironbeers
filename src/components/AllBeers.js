@@ -10,10 +10,11 @@ const AllBeers =(props)=> {
     
     const divStyle={
         display: 'flex',
-        border: '1px solid lightgrey'
+        border: '1px solid lightgrey',
     }
     
     const infoStyle={
+        color: 'black',
         float: 'right'
     }
     
