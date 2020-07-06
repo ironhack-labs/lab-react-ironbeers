@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'
-
+import Allbeers from "./components/Allbeers"
+import Onebeer from "./components/Onebeer"
+import {Link,Switch,Route} from "react-router-dom"
 
 class App extends Component {
 
@@ -57,13 +59,27 @@ class App extends Component {
     console.log(this)
     return (
 
+
       <div>
-        <img src= {this.state.onebeer.image_url}/>
+
+        <Link to = "home">home</Link>
+        <Link to = "Allbeers">Allbeer</Link>
+        <Link to = "Onebeer">Onebeer</Link>
+
+      <Switch>
+        <Route exact path = "/Allbeers" render = {(props) => <Allbeers />}/>
+        <Route exact path = "/Onebeer" render = {(props) => <Onebeer />}/>
+      </Switch>
+
+
+      {/* <Allbeers />
+      <Onebeer /> */}
+        {/* <img src= {this.state.onebeer.image_url}/>
         one:{this.showOneBeer()}
         Name: {this.state.onebeer.name }
         Description: {this.state.onebeer.description}
         tagline: {this.state.onebeer.tagline}
-        {this.showTheBeers()}
+        {this.showTheBeers()} */}
       </div>
     );
   }
