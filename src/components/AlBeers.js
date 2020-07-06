@@ -1,21 +1,23 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios'
 import './alBeers.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class AlBeers extends PureComponent {
     constructor(props) {
         super(props)
 
         this.state = {
-            allBeers: []
+            allBeers: [],
+            allBeersOriginal: []
         }
     }
 
     componentDidMount() {
         axios.get('https://ih-beers-api2.herokuapp.com/beers/').then(res => {
             this.setState({
-                allBeers: res.data
+                allBeers: res.data,
+                allBeersOriginal: [...res.data]
             })
         })
     }
@@ -36,9 +38,20 @@ class AlBeers extends PureComponent {
         })
     }
 
+    handleChange = (event) => {
+        event.preventDefault()
+        let filtered = [...this.state.allBeersOriginal].filter(beer => beer.name.includes(event.target.value))
+        this.setState({
+            allBeers: filtered
+        })
+    }
+
     render() {
         return (
-            <div>{this.displayBeers()}</div>
+            <div>
+                <input onChange={this.handleChange} type='text' placeholder='Search' />
+                <div>{this.displayBeers()}</div>
+            </div>
         )
     }
 }

@@ -16,7 +16,6 @@ class SingleBeer extends PureComponent {
             this.setState(
                 { beers: res.data }
             )
-            console.log(this.state.beers)
         })
     }
 
