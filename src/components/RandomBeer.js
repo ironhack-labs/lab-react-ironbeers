@@ -23,6 +23,7 @@ class RandomBeer extends Component {
       <div>
         <Header />
         <div>
+        <div>        
           <img
             style={{ width: '90px' }}
             src={this.state.beer.image_url}
@@ -40,6 +41,7 @@ class RandomBeer extends Component {
             <p>{this.state.beer.description}</p>
             <h6>{this.state.beer.contributed_by}</h6>
           </div>
+        </div>
         </div>
       </div>
     );

@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div>
       <Switch>
-          <Route exact path="/"  render ={HomePage} />
+          <Route exact path="/"  component ={HomePage} />
           <Route exact path="/beers"   component ={AllBeers} />
           <Route path="/beers/:id" component ={BeerDetail} />
           <Route path="/randombeer"  component ={RandomBeer} />
