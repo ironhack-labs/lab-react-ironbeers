@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className = "container">
       <div className="col">
       <img style = {{width: "300px"}}src = "https://media-cdn.tripadvisor.com/media/photo-s/11/cf/34/ea/bottled-beer-range.jpg" alt = "All beers"/>
-        <Link to = '/allbeers'><h1>All Beers</h1></Link>
+        <Link to = '/beers'><h1>All Beers</h1></Link>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a quam
           nec urna suscipit sollicitudin quis a eros. Curabitur laoreet massa eu

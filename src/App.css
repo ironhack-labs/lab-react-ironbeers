@@ -41,20 +41,30 @@
 .container {
   display: flex;
   flex-direction: column;
+  padding-left: 10px;
 }
 
 .container a{
   text-decoration: none;
   color: black;
 }
-.col {
-  padding: 10px;
+
+.container p {
+  width:500px
 }
 
-.col p{
- width:500px
+.beerInfo{
+  display: flex;
+  flex-direction: row;
+  width: 50vh;
+  border: 1px solid black;
+  padding-top: 10px;
 }
 
+.beerInfo div {
+  padding-left: 100px;
+  
+}
 /* Header */
 
 .header {

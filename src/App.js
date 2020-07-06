@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import Header from './components/Header';
 import HomePage from './components/HomePage';
 import AllBeers from './components/AllBeers';
+import BeerDetail from './components/BeersDetail'
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
 import {Switch, Route } from 'react-router-dom';
 
 class App extends Component {
-
-  state ={
-    beers:[]
-  }
 
   
   componentDidMount() {
@@ -27,7 +23,8 @@ class App extends Component {
       <div>
       <Switch>
           <Route path="/" exact component ={HomePage} />
-          <Route path="/allbeers"  component ={AllBeers} />
+          <Route path="/beers"  exact component ={AllBeers} />
+          <Route path="/beers/:id" component ={BeerDetail} />
           <Route path="/randombeer"  component ={RandomBeer} />
           <Route path="/newbeer"  exact component = {NewBeer}/>
       </Switch>    
