@@ -11,7 +11,10 @@ import EachBeer from './EachBeer';
 class App extends Component {
 
   render() {
+    console.log(this)
     return (
+
+
       <div>
         <Switch>
           <Route exact path = '/' render = { () => <Home />}/>
