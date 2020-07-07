@@ -1,85 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Link, Switch, Route} from 'react-router-dom'
+import AllBeers from './components/AllBeers'
+import RandomBeer from './components/RandomBeer'
+import NewBeer from './components/NewBeer'
+import OneBeer from './components/OneBeer'
 import axios from 'axios'
-import Allbeers from "./components/Allbeers"
-import Onebeer from "./components/Onebeer"
-import {Link,Switch,Route} from "react-router-dom"
+import './App.css'
 
 class App extends Component {
-
   state = {
-    beers: [],
-    onebeer: [],
-    randombeer: []
+    beers: []
+}
+
+  async componentDidMount() {
+    let res = await axios.get ('https://ih-beers-api2.herokuapp.com/beers')
+      // console.log(res)
+
+      this.setState({
+          beers: res.data
+
+      })
   }
-
-  async componentDidMount(){
-
-    let res = await axios.get('https://ih-beers-api2.herokuapp.com/beers') //All Beers
-    console.log(res)
-
-    this.setState({
-      beers: res.data
-    })
-    let one = await axios.get ("https://ih-beers-api2.herokuapp.com/beers/5daf440ccbc5d2fd7d19ebe3") //One Beer
-    console.log(one)
-
-    this.setState({
-      onebeer: one.data
-    })
-
-    let random = await axios.get('https://ih-beers-api2.herokuapp.com/beers/random') //Random Beer
-
-    console.log(random)
-
-    
-    // await axios.post(`https://ironrest.herokuapp.com/ironhackbeersstolen`, {beers: res.data})
-  }
-
-  showTheBeers = () => {
-    // return [ {name:"Cat"} ,{name:"dog"}, {name:"mouse"}].map(eachanimal=>{
-    //   return <li>{eachanimal.name}</li>
-    // })
-    
-    return this.state.beers.map(eachanimal=>{
-      return <li>{eachanimal.name}</li>
-    })
-
-  }
-    
-  showOneBeer = () => {
-
-    return this.state.onebeer.name
-  }
-
 
 
   render() {
-    console.log(this)
     return (
-
-
       <div>
 
-        <Link to = "home">home</Link>
-        <Link to = "Allbeers">Allbeer</Link>
-        <Link to = "Onebeer">Onebeer</Link>
-
-      <Switch>
-        <Route exact path = "/Allbeers" render = {(props) => <Allbeers />}/>
-        <Route exact path = "/Onebeer" render = {(props) => <Onebeer />}/>
-      </Switch>
+        <Link to= '/'>Home</Link>
+        <Link to= '/all-beers'>All Beers</Link>
+        <Link to= '/random-beer'>Random Beer</Link>
+        <Link to= '/new-beer'>New Beers</Link>
 
 
-      {/* <Allbeers />
-      <Onebeer /> */}
-        {/* <img src= {this.state.onebeer.image_url}/>
-        one:{this.showOneBeer()}
-        Name: {this.state.onebeer.name }
-        Description: {this.state.onebeer.description}
-        tagline: {this.state.onebeer.tagline}
-        {this.showTheBeers()} */}
+        <Switch>
+          <Route exact path='/all-beers' render={() => <AllBeers beers= {this.state.beers} /> } />
+          <Route exact path='/random-beer' render={() => <RandomBeer /> } />
+          <Route exact path='/new-beer' render={() => <NewBeer /> } />
+          <Route exact path='/beers/:beerid' render={(props) => <OneBeer {...props} beers = {this.state.beers} /> } />
+        </Switch>
+        
       </div>
     );
   }
