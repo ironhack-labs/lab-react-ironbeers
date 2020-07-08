@@ -1,23 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 
 class AllBeers extends Component {
-    // state = {
-    //     beers: []
-    // }
-
-    // async componentDidMount() {
-    //    let res = await axios.get ('https://ih-beers-api2.herokuapp.com/beers')
-    //     // console.log(res)
-
-    //     this.setState({
-    //         beers: res.data
-
-    //     })
-    // }
-
 
     showEachBeer() {
         return this.props.beers.map((eachBeer) =>{
@@ -40,9 +26,6 @@ class AllBeers extends Component {
             <div>
             <Header />
             {this.showEachBeer()}
-
-
-
             </div>
         );
     }

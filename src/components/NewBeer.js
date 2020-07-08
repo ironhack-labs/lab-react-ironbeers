@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import axios from 'axios'
+import axios from 'axios';
 
 class NewBeer extends Component {
     state = {
@@ -14,7 +14,6 @@ class NewBeer extends Component {
     }
 
     createNew = (event) => {
-        // console.log()
         let inputName= event.target.name
         this.setState({
             [inputName]: event.target.value

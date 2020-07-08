@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import {Link, Switch, Route} from 'react-router-dom'
-import AllBeers from './components/AllBeers'
-import RandomBeer from './components/RandomBeer'
-import NewBeer from './components/NewBeer'
-import OneBeer from './components/OneBeer'
-import axios from 'axios'
-import './App.css'
+import {Link, Switch, Route} from 'react-router-dom';
+import AllBeers from './components/AllBeers';
+import RandomBeer from './components/RandomBeer';
+import NewBeer from './components/NewBeer';
+import OneBeer from './components/OneBeer';
+import axios from 'axios';
+import './App.css';
 
 class App extends Component {
   state = {

@@ -28,6 +28,9 @@ class RandomBeer extends Component {
                     </div>    
             );
     }
+
+
+    
     
     render() {
         return (
