@@ -1,7 +1,19 @@
 .list-item img{
-    width: 20%;
+    height: 100%;
+    object-fit: contain;
 }
 .list-item {
     display: flex;
-    
+    align-items: center;
+    max-height: 150px;
+    margin-bottom: 50px;
+}
+.list-item h5 {
+    color: #333;
+    font-size: 1.1em;
+}
+.list-item p {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 0.5rem
 }

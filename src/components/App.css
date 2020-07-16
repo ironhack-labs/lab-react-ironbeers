@@ -4,3 +4,10 @@ img {
 .main {
   padding-top: 40px;
 }
+.spinner-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

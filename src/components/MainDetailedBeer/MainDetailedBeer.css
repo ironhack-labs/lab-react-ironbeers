@@ -1,0 +1,19 @@
+.detail-beer-image {
+    margin: 50px 0;
+    max-height: 250px;
+    object-fit: contain;
+}
+.separate-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline
+}
+.light-grey {
+    color: #888
+}
+.bold {
+    font-weight: 800;
+}
+.column {
+    margin-bottom: 10px;
+}

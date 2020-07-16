@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import BeerService from "../../services/BeerServices"
 
+import "./MainBeerList.css"
+
 import NavBar from "../Ui/Navbar"
 import MainBeerItem from "./BeerListItem"
 import SearchBar from "./Searchbar"
@@ -34,12 +36,12 @@ class BeerList extends Component {
     }
 
     render() {
-        const beerItems = !this.state.beersFiltered ? <Spinner animation="border" /> :
+        const beerItems = !this.state.beersFiltered ? <div className="spinner-container"><Spinner animation="border" /></div> :
             this.state.beersFiltered.map(beer => <MainBeerItem key={beer._id} {...beer}/>)
         return (
             <>
                 <NavBar />
-                <Container fluid>
+                <Container as="main" className="main-beers" fluid>
                     <SearchBar filterProducts={this.filterProducts}/>
                     <Row>
                         {beerItems}

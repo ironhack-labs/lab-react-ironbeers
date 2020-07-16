@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Form from 'react-bootstrap/Form'
+
 class SearchBar extends Component {
     constructor() {
         super()
@@ -16,9 +18,13 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <form>
-                <label>Search <input type="text" name="name" onChange={this.handleInputChange} value={this.state.name} /></label>
-            </form>
+
+                <Form className="search-bar">
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Control type="text" name="name" onChange={this.handleInputChange} value={this.state.name} placeholder="Search a beer" />
+                    </Form.Group>
+                </Form>
+
         )
     }
 }
