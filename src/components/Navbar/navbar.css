@@ -1,0 +1,9 @@
+.mine-nav{
+    display: flex;
+    justify-content: center;
+}
+
+.mine-nav img{
+   width: 50px;
+
+}

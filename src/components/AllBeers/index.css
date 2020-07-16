@@ -1,0 +1,11 @@
+.beer-list{
+    display: flex;
+    margin-bottom: 40px;
+
+}
+
+.beer-list img{
+    width: 200px;
+    height: 200px;
+    object-fit: scale-down;
+}
