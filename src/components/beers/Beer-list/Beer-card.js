@@ -14,11 +14,10 @@ const BeerCard = ({ _id, name, image_url, contributed_by }) => {
         <>
             <Col md={4}>
                 <Row className="beer-card">
-                    <img src={image_url} />
+                    <img src={image_url} alt="beer" />
                     <strong>{name}</strong>
-                    <Row>
+
                         <strong>Created by: </strong> {contributed_by}
-                    </Row>
                     <Link to={`/${_id}`} className="btn">Details</Link>
                 </Row>
 

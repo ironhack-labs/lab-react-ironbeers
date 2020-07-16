@@ -13,7 +13,7 @@ function App() {
 
       <Switch>
         <Route exact path="/beers" render={() => <BeersList />} />
-        <Route path="/beers/:beer_id" render={props => <BeerDetail {...props} />} />
+        <Route path="/:beer_id" render={props => <BeerDetail {...props} />} />
       </Switch>
     </>
   )
