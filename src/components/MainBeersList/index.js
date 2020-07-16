@@ -3,6 +3,7 @@ import BeerService from "../../services/BeerServices"
 
 import NavBar from "../Ui/Navbar"
 import MainBeerItem from "./BeerListItem"
+import SearchBar from "./Searchbar"
 
 import Spinner from 'react-bootstrap/Spinner'
 import Container from 'react-bootstrap/Container'
@@ -12,7 +13,8 @@ class BeerList extends Component {
     constructor (){
         super ()
         this.state = {
-            beers: undefined
+            beers: undefined,
+            beersFiltered: undefined
         }
         this.BeerService = new BeerService()
     }
@@ -21,16 +23,24 @@ class BeerList extends Component {
     updateBeerList = () => {
         this.BeerService
             .getAllBeers()
-            .then(response => this.setState({ beers: response.data }))
+            .then(response => this.setState({ beers: response.data, beersFiltered: response.data }))
             .catch(err => console.log(err))
     }
+    filterProducts = word => {
+        console.log(word)
+        const beersCopy = [...this.state.beers]
+        const beersFiltered = beersCopy.filter(elm => elm.name.toLowerCase().includes(word.toLowerCase()))
+        this.setState({ beersFiltered })
+    }
+
     render() {
-        const beerItems = !this.state.beers ? <Spinner animation="border" /> :
-            this.state.beers.map(beer => <MainBeerItem key={beer._id} {...beer}/>)
+        const beerItems = !this.state.beersFiltered ? <Spinner animation="border" /> :
+            this.state.beersFiltered.map(beer => <MainBeerItem key={beer._id} {...beer}/>)
         return (
             <>
                 <NavBar />
                 <Container fluid>
+                    <SearchBar filterProducts={this.filterProducts}/>
                     <Row>
                         {beerItems}
                     </Row>
