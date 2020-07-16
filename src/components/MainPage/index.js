@@ -10,11 +10,11 @@ import image3 from "./MainPageSection/images/beer-3.jpg"
 const MainPage = () => {
     return (
 
-        <main>
+        <section>
                 <MainPageSection title="All Beers" imgUrl ={image1} link="/beers"/>
                 <MainPageSection title="Random Beer" imgUrl={image2} link="/random-beer"/>
                 <MainPageSection title="New Beer" imgUrl={image3} link="/new-beer"/>
-        </main>
+        </section>
     )
 }
 

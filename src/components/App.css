@@ -11,3 +11,9 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+
+.btn-primary {
+  background-color: #3EC4FC!important;
+  border-color: #3EC4FC!important
+}

@@ -3,6 +3,13 @@ import React, {Component} from 'react'
 import BeerService from "../../services/BeerServices"
 import NavBar from "../../components/Ui/Navbar"
 
+import "./MainCreateBeer.css"
+
+import Container from 'react-bootstrap/Container'
+import Form from 'react-bootstrap/Form'
+import Button from "react-bootstrap/Button"
+
+
 class BeerForm extends Component {
     constructor (){
         super ()
@@ -40,16 +47,27 @@ class BeerForm extends Component {
         return (
             <>
                 <NavBar />
-                <form onSubmit={this.handleFormSubmit} >
-                    <label>Name<input onChange={this.handleInputChange} name="name" type="text" value={this.state.name}/></label>
-                    <label>Tagline<input onChange={this.handleInputChange} name="tagline" type="text" value={this.state.tagline}/></label>
-                    <label>Description<textarea onChange={this.handleInputChange} name="description" value={this.state.description}></textarea></label>
-                    <label>First brewed<input onChange={this.handleInputChange} name="first_brewed" type="text" value={this.state.first_brewed}/></label>
-                    <label>Brewer tips<input onChange={this.handleInputChange} type="text" name="brewer_tips" value={this.state.brewer_tips}/></label>
-                    <label>Attenuation level<input onChange={this.handleInputChange} name="attenuation_level" type="number" value={this.state.attenuation_level}/></label>
-                    <label>Contributed by<input onChange={this.handleInputChange} name="contributed_by" type="text" value={this.state.contributed_by}/></label>
-                    <input type="submit" value="ADD NEW"/>
-                </form>
+                <Container as="main">
+                    <Form className="search-bar" onSubmit={this.handleFormSubmit}>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control onChange={this.handleInputChange} type="text" name="name" value={this.state.name} />
+                            <Form.Label>Tagline</Form.Label>
+                            <Form.Control onChange={this.handleInputChange} name="tagline" type="text" value={this.state.tagline}/>
+                            <Form.Label>Description</Form.Label>
+                            <Form.Control as="textarea" onChange={this.handleInputChange} className="text-area" name="description" value={this.state.description} />
+                            <Form.Label>First brewed</Form.Label>
+                            <Form.Control onChange={this.handleInputChange} name="first_brewed" type="text" value={this.state.first_brewed} />
+                            <Form.Label>Brewer tips</Form.Label>
+                            <Form.Control onChange={this.handleInputChange} type="text" name="brewer_tips" value={this.state.brewer_tips} />
+                            <Form.Label>Attenuation level</Form.Label>
+                            <Form.Control onChange={this.handleInputChange} name="attenuation_level" type="number" value={this.state.attenuation_level} />
+                            <Form.Label>Contributed</Form.Label>
+                            <Form.Control onChange={this.handleInputChange} name="contributed_by" type="text" value={this.state.contributed_by} />
+                            <Button className="rounded-btn" variant="primary" type="submit">ADD NEW!</Button>
+                        </Form.Group>
+                    </Form>
+                </Container>
             </>
         )
     }

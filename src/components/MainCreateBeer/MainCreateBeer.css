@@ -1,0 +1,14 @@
+.form-control {
+    border-radius: 5% / 50%;
+    margin-bottom:15px
+}
+.text-area.form-control {
+       border-radius: 5% / 20%
+}
+.search-bar {
+    margin-top: 50px
+}
+.rounded-btn {
+    margin-top: 10px;
+    border-radius: 15% / 50%;
+}

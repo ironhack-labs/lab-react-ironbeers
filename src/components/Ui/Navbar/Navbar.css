@@ -5,3 +5,6 @@
     display: flex;
     justify-content: center;
 }
+.bg-primary {
+    background-color: #3EC4FC!important;
+}
