@@ -1,0 +1,12 @@
+.beer-card {
+    width:200px;
+    height: 100px;
+    display: inline;
+    align-items: center;
+    font-size: 0.5em;
+}
+.beer-card img {
+    width: 20px;
+    object-fit: cover;
+    margin: 5px;
+}
