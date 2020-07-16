@@ -1,0 +1,8 @@
+.card-home {
+    margin-top: 40px;
+}
+
+.card-home img {
+    height: 180px;
+    object-fit: cover;
+}
