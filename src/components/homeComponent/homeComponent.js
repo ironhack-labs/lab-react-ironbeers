@@ -33,7 +33,7 @@ const HomeComponent = () => {
                     <Card className='card-home'>
                         <Card.Img variant='top' src='https://52brews.com/wp-content/uploads/2018/07/All-The-Different-Types-and-Styles-of-Beer.jpg' />
                         <Card.Body>
-                            <Card.Title><Link to={'/new'} >New Beer</Link></Card.Title>
+                            <Card.Title><Link to={'/beers/new'} >New Beer</Link></Card.Title>
                         </Card.Body>
                     </Card>
                 </Col>
