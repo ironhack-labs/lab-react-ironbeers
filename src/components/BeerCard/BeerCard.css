@@ -1,0 +1,8 @@
+.beer-card {
+    margin-bottom: 40px;
+}
+
+.beer-card img {
+    height: 180px;
+    object-fit: scale-down;
+}
