@@ -6,12 +6,12 @@ export default class BeerService {
     constructor() {
 
         this.service = axios.create({
-            baseURL: 'https://ih-beers-api2.herokuapp.com/beers'
+            baseURL: 'https://ih-beers-api2.herokuapp.com'
         })
     }
 
-    getAllBeers = () => this.service.get('/')
-    getRandomBeer = () => this.service.get('/random')
-    newBeer = beer => this.service.post(`/new-beer`, beer)
-    oneBeer = id => this.service.get(`/${id}`)
+    getAllBeers = () => this.service.get('/beers')
+    getRandomBeer = () => this.service.get('/beers/random')
+    newBeer = beer => this.service.post(`/beers/new-beer`, beer)
+    oneBeer = id => this.service.get(`/beers/${id}`)
 }

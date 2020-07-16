@@ -12,12 +12,12 @@ const HomePage = () => {
             </div>
 
             <div className="homeSection">
-                <Link to="/random-beer">Random Beer</Link>
+                <Link to="/beers/random-beer">Random Beer</Link>
                 <p>Blabla</p>
             </div>
 
             <div className="homeSection">
-                <Link to="/new-beer">New Beer</Link>
+                <Link to="/beers/new-beer">New Beer</Link>
                 <p>Blabla</p>
 
             </div>

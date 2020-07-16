@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
+import './../App.css'
+
 
 
 const BeerCard = ({ _id, image_url, name, tagline, contributed_by }) => {
@@ -12,7 +14,7 @@ const BeerCard = ({ _id, image_url, name, tagline, contributed_by }) => {
             <Card>
                 <Card.Body>
                     <Card.Img variant="top" src={image_url} style={{ width: "50px", height: "150px" }} alt={name} />
-                    <Link to={`/${_id}`}><Card.Title>{name}</Card.Title></Link>
+                    <Link to={`/beers/${_id}`}><Card.Title>{name}</Card.Title></Link>
                     <p>{tagline}</p>
                     <p>{contributed_by}</p>
                 </Card.Body>

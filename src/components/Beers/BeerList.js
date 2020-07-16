@@ -30,11 +30,9 @@ class BeerList extends Component {
 
                     <h1>Listado de cervezas</h1>
 
-
                     <Row>
                         {this.state.beers.map(elm => <BeerCard key={elm._id} {...elm} />)}
                     </Row>
-
 
                 </Container>
             </>
