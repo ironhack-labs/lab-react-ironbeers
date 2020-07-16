@@ -3,6 +3,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Switch, Route } from 'react-router-dom'
 
+import Navigation from './Nav/Nav'
 import HomePage from './HomePage/HomePage'
 import BeerList from './Beers/BeerList'
 import BeerDetails from './Beers/BeerDetail'
@@ -14,6 +15,8 @@ function App() {
   return (
 
     <div className="App">
+
+      <Navigation />
 
       <Switch>
         <Route exact path="/" render={() => <HomePage />} />

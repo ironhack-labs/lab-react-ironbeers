@@ -28,7 +28,7 @@ class BeerList extends Component {
             <>
                 <Container as="main" className="beers-page">
 
-                    <h1>Listado de cervezas</h1>
+                    <h1>Beer list</h1>
 
                     <Row>
                         {this.state.beers.map(elm => <BeerCard key={elm._id} {...elm} />)}

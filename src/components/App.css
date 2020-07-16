@@ -1,6 +1,9 @@
 .App {
   text-align: center;
+  
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +38,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.homePage{
+  max-width: 500%;
+  background-image: url(https://images.unsplash.com/photo-1558642891-54be180ea339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80);
 }
