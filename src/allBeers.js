@@ -1,13 +1,13 @@
 import React from 'react'; 
 import axios from 'axios'; 
 import Header from './Header'; 
+import { Link } from "react-router-dom";
 
-
-export default class allBeers extends React.Component {
+export default class BeerList extends React.Component {
     state={
         beers: []
     }
-    componentDidMount(){
+    getBeerData(){
         axios.get("https://ih-beers-api2.herokuapp.com/beers")
         .then(res=> {
             const beers=res.data; 

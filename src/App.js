@@ -4,23 +4,25 @@ import axios from 'axios';
 import Home from './Home'; 
 import Header from './Header'; 
 import BeerList from './allBeers'; 
-import { BrowserRouter, Switch, Route } from 'react-router-dom'; 
+import { Switch, Route } from 'react-router-dom'; 
+import RandomBeer from './randomBeer';
+import NewBeer from './newBeer';
 
 function App(){
   const NotFound = () => {
     return <h1>not found :)</h1>
   }
   return (
-    <>
-      <Header/>
-      <BrowserRouter>
+    <main>
       <Switch>
-        <Home/>
+        {/* <Home/> */}
         {/* <Route path='/' component={Home}/> */}
-        <Route path="/beers" render={() => <BeerList/>} />
+        <Route exact path='/' render={()=> <Home/>} />
+        <Route exact path="/beers" render={() => <BeerList/>} />
+        <Route exact path="/random-beer" render={() => <RandomBeer/>} />
+        <Route exact path="/new-beer" render={() => <NewBeer/>} />
       </Switch>
-      </BrowserRouter>
-    </>
+    </main>
   )
 }
 
