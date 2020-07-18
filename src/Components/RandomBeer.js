@@ -5,21 +5,15 @@ import '../App.css';
 class BeerDetails extends React.Component {
 
     state = {
-        randomBeer: null,
-        allBeers: []
+        randomBeer: null
     }
 
     getRandom = () => {
-        axios.get("https://ih-beers-api2.herokuapp.com/beers/")
+        axios.get("https://ih-beers-api2.herokuapp.com/beers/random")
             .then(res => {
                 this.setState({
-                    allBeers: res.data
+                    randomBeer: res.data
                 })
-            const randomNo = Math.floor(Math.random() * Math.floor(this.state.allBeers.length))
-            const randomBeer = this.state.allBeers[randomNo]
-            this.setState({
-                randomBeer: randomBeer
-            })
         })
     }
     
