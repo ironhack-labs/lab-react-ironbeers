@@ -5,9 +5,27 @@ import axios from 'axios';
 
 class AllBeers extends React.Component {
     state = {
-        data: null
+        data: null,
+        query: ''
       }
     
+    handleInputChange = event => {
+        const search = event.target.value
+        this.setState(state => ({
+            query: search
+        }))
+    }
+
+    searchBeers = () => {
+        axios.get('https://ih-beers-api2.herokuapp.com/beers/search?q=' + this.state.query)
+        .then(response => {
+            const beers = response.data;
+            this.setState({
+                data: beers
+            })
+        }) 
+    }
+
     getBeers = () => {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
             .then(response => {
@@ -20,13 +38,31 @@ class AllBeers extends React.Component {
 
     componentDidMount() {
         this.getBeers();
-      }
+    }
 
+    componentDidUpdate(prevProps, prevState) {
+        if(this.state.query !== prevState.query) {
+            this.searchBeers()
+        }
+    }
   render() {
     const beers = this.state.data
     if (!beers) return <></>;
     return (
         <div className="container">
+            <div className="input-group mb-3">
+                <input 
+                    type="text" 
+                    className="form-control" 
+                    placeholder="Search" 
+                    aria-label="Search" 
+                    aria-describedby="addon-wrapping"
+                    name="query" 
+                    value={this.state.query} 
+                    onChange={this.handleInputChange}
+                />
+            </div>
+            <br />
             <ul className="media-list">
                 {beers.map(beer => {
                     return (

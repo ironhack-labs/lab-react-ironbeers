@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-dark bg-primary mb-3">
       <div className="container">
-        <Link to="/" className="navbar-brand" style={{ color: 'white' }}>Ironbeers</Link>
+        <Link to="/" className="navbar-brand" style={{ color: 'white' }}>IronBeers</Link>
       </div>
     </nav>
   );

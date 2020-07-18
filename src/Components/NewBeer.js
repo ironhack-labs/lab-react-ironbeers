@@ -42,7 +42,6 @@ class NewBeer extends React.Component {
             attenuation_level,
             contributed_by 
         }
-        console.log(data)
         fetch('https://ih-beers-api2.herokuapp.com/beers/new', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
@@ -50,10 +49,10 @@ class NewBeer extends React.Component {
         })
         .then(response => response.json())
         .then(result => {
-        console.log('Success:', result);
+            console.log('Success:', result);
         })
         .catch(error => {
-        console.error('Error:', error);
+            console.error('Error:', error);
         });
       }
 
