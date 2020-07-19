@@ -13,7 +13,7 @@ const RandomBeer = (props) => {
     });
   }, []);
 
-// console.log(beers.data)
+  // console.log(beers.data)
 
   let beer;
   if (beers.data) {

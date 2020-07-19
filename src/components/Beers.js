@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import Navbar from './Navbar';
 
-const Beers = () => {
+const Beers = (props) => {
   let [beers, setBeers] = useState([]);
 
   useEffect(() => {
@@ -15,6 +15,7 @@ const Beers = () => {
     });
   }, []);
 
+  // console.log(props.test)
   // console.log(beers.data);
 
   let allBeers;
@@ -27,16 +28,17 @@ const Beers = () => {
         <div className="beersDetails">
           <h2>{beer.name}</h2>
           <p>{beer.tagline}</p>
-          <p>
-            <b>Created by:</b>{' '}
-            {beer.contributed_by.replace(/ *\<[^)]*\> */g, '')}
-          </p>
         </div>
       </Link>
     ));
   } else {
     allBeers = null;
   }
+
+  //   <p>
+  //   <b>Created by:</b>{' '}
+  //   {beer.contributed_by.replace(/ *\<[^)]*\> */g, '')}
+  //    </p>
 
   return (
     <>
