@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+body {
+  --header-height: 10vh;
+  --box-border: 1px solid rgb(223, 223, 223);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.App .main {
+  width: 80vw;
+  margin: auto;
+  padding: 2%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.Header {
+  background-color: #61dafb;
   color: white;
+  text-align: center;
+  height: var(--header-height);
+  padding: 12px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.Header img {
+  height: 6vmin;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Home {
+  width: 40vw;
+}
+
+.Home .beers-img {
+  height: 20vh;
+}
+
+.Home .text-article {
+  font-size: 0.8em;
+}
+
+.BeerBox {
+  width: 50vw;
+  border: var(--box-border);
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.BeerBox .text-side {
+  width: 80%;
+}
+
+.OneBeer {
+  width: 40vw;
+  border: var(--box-border);
+  padding: 20px 20px;
+}
+
+.beer-name {
+  font-size: 1.9em;
+  font-weight: 400;
+}
+.beer-img {
+  height: 150px;
+  padding: 10px;
+}
+.beer-tagline {
+  font-size: 1.1em;
+  color: grey;
+}
+.beer-description {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.beer-brew {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.beer-attenuation_level {
+  font-size: 1.7em;
+  color: rgb(223, 223, 223);
+}
+.beer-contributor {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: grey;
+}
+
+.OneBeer .beer-img {
+  height: 300px;
+}
+
+.NewBeer {
+  width: 30vw;
 }
