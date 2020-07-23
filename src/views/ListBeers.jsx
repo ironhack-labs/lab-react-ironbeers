@@ -39,7 +39,7 @@ export class ListBeers extends Component {
 
   render() {
     return (
-      <div>
+      <div id="view_ListBeers">
         <Header />
         <input
           type="text"
@@ -47,30 +47,30 @@ export class ListBeers extends Component {
           id="search_bar"
           onChange={this.handleSearch}
         />
+        <div className="blank_fixed"></div>
         <div className="container_beers">
           {this.state.beers.map((beer) => {
             return (
-              <div key={beer._id} className="container_beer_item">
-                <img
-                  src={beer.image_url}
-                  className="img_beer"
-                  alt={`${beer.name}`}
-                />
-                <div className="beer_item_info">
-                  <h3>{beer.name}</h3>
-                  <h4>{beer.tagline}</h4>
-                  <p> {beer.contributed_by} </p>
-                  <div>
-                    <Link to={`/beers/${beer._id}`} className="link_beer">
-                      
-                      More details
-                    </Link>
+              <div key={beer._id}>
+                <Link to={`/beers/${beer._id}`} className="link_beer">
+                  <div  className="container_beer_item">
+                    <img
+                      src={beer.image_url}
+                      className="img_beer"
+                      alt={`${beer.name}`}
+                    />
+                    <div className="beer_item_info">
+                      <h3>{beer.name}</h3>
+                      <h4>{beer.tagline}</h4>
+                      <p> {beer.contributed_by} </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}
         </div>
+        <div id="fill"></div>
       </div>
     );
   }

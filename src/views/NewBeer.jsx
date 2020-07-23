@@ -55,11 +55,12 @@ export class NewBeer extends Component {
         return (
         <div> 
         <Header />
-        <div>
+        <div id="newBeer_success" className="column">
         <div> New beer added in collection !</div>
-        <div> Go check it out in the collection </div>
-        <Link to="/beers"> Collection </Link>
+        <div> Go check it out :) </div>
         </div>
+        <Link className="link_newBeer" to="/beers"> Collection </Link>
+        
         </div>
         )
         
@@ -69,7 +70,7 @@ export class NewBeer extends Component {
     return (
       <div>
         <Header />
-        <form onSubmit={this.handleSubmit}>
+        <form id="form_newBeer" onSubmit={this.handleSubmit} className="column">
           <label htmlFor="name"> Name </label>
           <input
             type="text"
@@ -86,9 +87,10 @@ export class NewBeer extends Component {
             onChange={this.handleChange}
           />
 
-          <label htmlFor="description"> description </label>
-          <input
+          <label htmlFor="description"> Description </label>
+          <input 
             type="textarea"
+            rows="4" cols="10"
             id="description"
             name="description"
             onChange={this.handleChange}
@@ -127,7 +129,7 @@ export class NewBeer extends Component {
             onChange={this.handleChange}
           />
 
-          <button>ADD NEW</button>
+          <button className="link_newBeer" >ADD NEW</button>
         </form>
       </div>
     );
