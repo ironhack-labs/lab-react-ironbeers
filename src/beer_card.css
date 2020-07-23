@@ -1,0 +1,42 @@
+.beer-card-wrapper{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 95%;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-bottom: rgba(0, 0, 0, 0.185) 2px solid;
+}
+
+.beer-card-wrapper .beer-img{
+    max-height: 100px;
+    justify-self: center;
+}
+
+.beer-card-wrapper .beer-info {
+    line-height: 20px;
+}
+
+.beer-card-wrapper .beer-name{
+    font-size: 0.9rem;
+}
+
+.beer-card-wrapper .beer-tagline {
+    color: grey;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.beer-card-wrapper .creator-label {
+    font-weight: bolder;
+}
+
+.beer-card-wrapper .details-link {
+    background-color: dodgerblue;
+    color: whitesmoke;
+    padding: 3px;
+    font-style: italic;
+    border-radius: 5px;
+}
