@@ -17,7 +17,6 @@ export class Beers extends Component {
       .catch((apiError) => console.log(apiError));
   }
 
- 
   render() {
     return (
       <div className="disp-beers">
@@ -25,16 +24,18 @@ export class Beers extends Component {
         <div className="beers-container">
           {this.state.beers.map((beer) => {
             return (
-            <div className="one-beer" key={beer._id}>
-              <img src={beer.image_url} alt="beer" />
-              <h2>{beer.name}</h2>
-              <p className="tagline">{beer.tagline}</p>
-              <p>{beer.contributed_by}</p>
-              <Link to={"/beers/" + beer._id} key={beer._id}> More Details</Link>
-           
-            </div>
-          )})
-          })
+              <div className="one-beer" key={beer._id}>
+                <img className="img-onebeer" src={beer.image_url} alt="beer" />
+                <Link to={'/beers/' + beer._id} key={beer._id}>
+                  <h2>{beer.name}</h2>{' '}
+                </Link>
+
+                <p className="tagline">{beer.tagline}</p>
+                <p>{beer.contributed_by}</p>
+              </div>
+            );
+          })}
+          )
         </div>
       </div>
     );

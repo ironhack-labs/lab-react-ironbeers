@@ -16,28 +16,26 @@ export class NewBeer extends Component {
 
   handleChange = (event) => {
     const key = event.target.name;
-    let value=event.target.value;
-    if(event.target.type==="number"){
-        this.setState({ [key]: parseInt(value,10) });
+    let value = event.target.value;
+    if (event.target.type === 'number') {
+      this.setState({ [key]: parseInt(value, 10) });
     }
-    
+
     this.setState({ [key]: value });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
-   
-        apiHandler
-          .createBeer(this.state)
-          .then((res) => {
-            console.log(res);
-            // this.setState({ beer: res.data });
-          })
-          .catch((error) => console.log(error));
-      
-};
 
+    apiHandler
+      .createBeer(this.state)
+      .then((res) => {
+        console.log(res);
+        // this.setState({ beer: res.data });
+      })
+      .catch((error) => console.log(error));
+  };
 
   render() {
     return (
@@ -48,6 +46,8 @@ export class NewBeer extends Component {
         </div>
         <div>
           <Form onSubmit={this.handleSubmit}>
+            <h1 className="create-title">Create a new beer ! 🍻</h1>
+
             <FormGroup>
               <Label for="name">Name</Label>
               <Input plaintext name="name" onChange={this.handleChange} />
@@ -58,15 +58,28 @@ export class NewBeer extends Component {
             </FormGroup>
             <FormGroup>
               <Label for="description">Description</Label>
-              <Input type="textarea" name="description" id="description" onChange={this.handleChange}/>
+              <Input
+                type="textarea"
+                name="description"
+                id="description"
+                onChange={this.handleChange}
+              />
             </FormGroup>
             <FormGroup>
               <Label for="first_brewed">First Brewed</Label>
-              <Input plaintext name="first_brewed" onChange={this.handleChange}/>
+              <Input
+                plaintext
+                name="first_brewed"
+                onChange={this.handleChange}
+              />
             </FormGroup>
             <FormGroup>
               <Label for="brewers_tips">Brewers Tips</Label>
-              <Input plaintext name="brewers_tips" onChange={this.handleChange} />
+              <Input
+                plaintext
+                name="brewers_tips"
+                onChange={this.handleChange}
+              />
             </FormGroup>
             <FormGroup>
               <Label for="attenuation Level">Attenuation Level</Label>
@@ -76,12 +89,15 @@ export class NewBeer extends Component {
                 id="exampleNumber"
                 placeholder="Attenuation Level"
                 onChange={this.handleChange}
-                
               />
             </FormGroup>
             <FormGroup>
               <Label for="contributed_by">Contributed By</Label>
-              <Input plaintext name="contributed_by" onChange={this.handleChange}/>
+              <Input
+                plaintext
+                name="contributed_by"
+                onChange={this.handleChange}
+              />
             </FormGroup>
             <button>Add New Beer</button>
           </Form>

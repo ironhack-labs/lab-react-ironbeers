@@ -1,14 +1,208 @@
 .header{
-  background-color: #3DC4FC;
+  background-color: #211d2b;
   color:white;
   text-decoration: none;
+display: flex;  
+flex-direction: row;
+justify-content: center;
+width: 100vw;
+position: fixed;
+top:0;
+
 
 }
 
-.header a{
+.header a {
   text-decoration: none;
   color:white;
   font-weight: bold;
   font-size: 50px;
+}
+
+.header-img {
+  background-color: #211d2b;
+}
+
+.img-home {
+  width: 10%;
+  transform: scaleX(-1);
+
+}
+
+p {
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: 50px;
+  text-align: justify;
+
+}
+
+span {
+  font-weight: 700;
+}
+
+.container-beers{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #211d2b;
+  margin: 20px;
+
+} 
+
+input.form-control-plaintext{
+  background-color: white
+
+}
+
+textarea#description.form-control {
+  background-color: white
+}
+
+input#exampleNumber.form-control {
+  background-color: white
+}
+
+form {
+  width: 50%;
+background-color: #211d2b;
+  ;
+  padding: 20px;
+  padding-top:150px;
+  margin: 0 25%;
+}
+
+.create-title {
+  color: #318aa5;
+  margin-bottom: 50px;
+
+
+}
+
+
+button {
+  background-color: #318aa5;
+  border: none;
+  padding: 10px;
+  margin: 50px 50px;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+label{
+  color:#f752e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+* {
+  color: white;
+}
+
+Link {
+  font-size: 700;
+  color:#f752e0;
+
+}
+
+Link:hover {
+  color:#f752e0;
+  text-decoration: none;
+}
+
+a:active {
+  color:#f752e0;
+  text-decoration: none;
+}
+
+.beers-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: black;
+  justify-content: space-around;
+  align-items: center;
+padding: 20px;
+  margin: 50px;
+}
+
+.random-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+height: 100vh;
+}
+
+.img-randombeer{
+  margin: 150px;
+  width: 100px;
+}
+
+.blue-background {
+  background-color: #211d2b;
+}
+
+.infos-container {
+  margin: 50px;
+}
+
+.infos-container p {
+text-align: justify;
+color: white;
+}
+
+.infos-container h2 {
+  text-align: justify;
+  color: #f752e0;
+  }
+  
+
+.random-container p {
+width: 80%;
+margin: 10px;
+
+}
+
+.beers-container p {
+  color: black;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin:10px
+}
+
+.beers-container h2 {
+  color: #f752e0;
+  text-align: center;
+
+
+}
+
+.img-onebeer {
+  height: 190px;
+
+}
+
+.one-beer{
+  background-color: white;
+  border: 5px solid #f752e0;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+padding: 20px;
+width: 30%;
+}
+
+
+
+.disp-beers {
+  background-color: #211d2b;
 
 }
