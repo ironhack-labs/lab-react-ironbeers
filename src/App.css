@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.link{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "calibri";
+  text-decoration: none;
+  color: inherit;
+}
+
+.container-link-home{
+  max-width:600px;
+  text-align: left;
+  margin:20px;
+}
