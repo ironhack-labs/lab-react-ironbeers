@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
 
-function App() {
+// Pages
+import HomePage from './pages/HomePage.js';
+import BeersPage from './pages/BeersPage.js';
+import RandomBeerPage from './pages/RandomBeerPage';
+import NewBeerPage from './pages/NewBeerPage';
+import BeerDetailPage from './pages/BeerDetailPage';
+
+// Components
+import Header from './components/Header.js';
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Fragment>
+            <Header />
+            <Route exact path="/beers" component={BeersPage} />
+            <Route exact path="/random-beer" component={RandomBeerPage} />
+            <Route
+              exact
+              path="/new-beer"
+              render={(props) => {
+                return <NewBeerPage {...props} />;
+              }}
+            />
+            {/* <Route exact path="/new-beer" component={NewBeerPage} /> */}
+            <Route exact path="/beers/:id" component={BeerDetailPage} />
+          </Fragment>
+        </Switch>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
