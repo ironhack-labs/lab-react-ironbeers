@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
 import DisplayOneBeer from '../components/DisplayOneBeer';
 import apiHandler from "../api/apiHandler";
 
@@ -25,8 +24,6 @@ class RandomBeer extends React.Component {
         if (this.state.randomBeer === null) return <div>Loading...</div>;
 
         return (<div>
-            <Header />
-            <h1>Beer detail</h1>
             <DisplayOneBeer beer ={this.state.randomBeer}/>
         </div>
         );

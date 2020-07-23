@@ -25,14 +25,19 @@ export class ListBeers extends Component {
                 <div className="Pokemons">
                     {this.state.beers.map((beer) => {
                         return (
-                            <div key={beer._id}>
-                                <Link  to={"/beers/" + beer._id}>
-                                    <img style={{ height: "100px" }} src={beer.image_url} alt="" />
-                                    <p>{beer.name}</p>
-                                </Link>
-
-                                <p>{beer.tagline}</p>
-                                <p>{beer.contributed_by}</p>
+                            <div key={beer._id} id="beers">
+                                <div>
+                                    <Link to={"/beers/" + beer._id}>
+                                        <img style={{ height: "150px", margin:"40px"}} src={beer.image_url} alt="" />
+                                    </Link>
+                                </div>
+                                <div>
+                                    <Link style={{textDecoration:"none", color:"inherit"}} to={"/beers/" + beer._id}>
+                                        <p style={{fontSize:"30px"}}>{beer.name}</p>
+                                    </Link>
+                                    <p>{beer.tagline}</p>
+                                    <p>Created by : {beer.contributed_by}</p>
+                                </div>
                             </div>
                         );
                     })}

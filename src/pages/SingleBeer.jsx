@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../components/Header';
 import DisplayOneBeer from '../components/DisplayOneBeer';
 import apiHandler from "../api/apiHandler";
+import { Link } from 'react-router-dom';
 
 class SingleBeer extends React.Component {
     constructor(props) {
@@ -26,11 +26,12 @@ class SingleBeer extends React.Component {
     render() {
         if (this.state.beer === null) return <div>Loading...</div>;
 
-        return (<div>
-            <Header />
-            <h1>Beer detail</h1>
-            <DisplayOneBeer beer ={this.state.beer}/>
-        </div>
+        return (
+
+            <div>
+                <DisplayOneBeer beer={this.state.beer} />
+            </div>
+
         );
     }
 }

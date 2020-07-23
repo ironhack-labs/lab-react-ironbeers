@@ -5,8 +5,8 @@ const Header = () => {
     return (
         <div>
             <Link to={"/"}><img
-                style={{ height: "40px"}}
-                src="home.PNG"
+                style={{ height: "80px", width: "650px"}}
+                src="../home.PNG"
                 alt=""
             /> </Link>
         </div>
