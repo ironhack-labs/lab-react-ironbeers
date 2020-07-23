@@ -8,7 +8,7 @@ const Home = () => {
             <div className="container-link-home">
                 <img style={{width:"600px"}}src="bar-beer.jpg" alt="" />
                 <br/>
-                <Link to={"/allBeers"} className="link">All Beers</Link>
+                <Link to={"/beers"} className="link">All Beers</Link>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, laudantium tempore molestias perspiciatis dolores maiores consequuntur ut est quod voluptas doloremque nisi enim adipisci ea consectetur culpa, minus sunt temporibus.</p>
             </div>
 

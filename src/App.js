@@ -11,11 +11,10 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      {/* <NavMain /> */}
       <main className="content">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/allBeers" component={ListBeers} />
+          <Route exact path="/beers" component={ListBeers} />
           <Route path="/beers/:id" component={SingleBeer} />
           <Route path="/randomBeer" component={RandomBeer} />
           <Route path="/newBeer" component={NewBeer} />
