@@ -22,4 +22,8 @@ export default {
     console.log('attempt to post new beer');
     return service.post('/new', newBeerState);
   },
+  searchOneBeer(beer) {
+    console.log('asking api for a beer thanks to name');
+    return service.get('/search?q=' + beer);
+  },
 };
