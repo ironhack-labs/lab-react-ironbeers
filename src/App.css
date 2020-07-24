@@ -36,3 +36,180 @@
     transform: rotate(360deg);
   }
 }
+
+.home-beers {
+  height: 33%;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 10px;
+}
+
+.home-img {
+  width: 100%;
+  
+ 
+}
+
+.header-main{
+  background-color: dodgerblue;
+  height: 10vh;
+}
+
+.logo-img {
+  width: 8vh;
+}
+
+.header-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-beer {
+  display: flex;
+  border-bottom: 1px solid rgb(209, 204, 204) ;
+}
+
+.img-beer {
+  width: 6vh;
+  height: 18vh;
+  padding: 4vh;
+ 
+}
+
+.text-beer {
+  text-align: left;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 4vh;
+  padding-top:6vh;
+  margin: 0
+}
+
+p {
+  margin: 0px;
+}
+
+.link {
+  font-size: 2vh;
+  text-decoration: none;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+
+}
+
+input {
+  width: 40vh;
+  height: 4vh;
+  border-radius: 20px;
+  border-style: none;
+  background-color: rgb(241, 234, 234);
+  margin-bottom: 2vh;
+}
+
+button {
+  border-radius: 20px;
+  border-style: none;
+  background-color: dodgerblue;
+  font-size: 18px;
+  color: white;
+  width: 15vh;
+  height: 5vh;
+  font-weight: 600;
+  margin-bottom: 5vh;
+}
+
+label {
+  margin-bottom: 1vh;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 5vh;
+  margin-top: 2vh;
+
+}
+
+.span-img {
+  height: 100px;
+  background-image: url('./images/bar-209148_1920.jpg');
+  background-clip: border-box;
+
+}
+
+.home-beers a {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 3vh;
+  }
+}
+
+  @media (min-width: 600px) {
+    .home-img {
+      width: 100%
+    }
+  
+
+  .home-beers {
+    width: 50%;
+    margin: 5px;
+    border: 1px solid black;
+
+  }
+
+  .home-div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .info-onebeer {
+    text-align: left;
+    width: 50%
+   
+  }
+
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5vh;
+}
+
+.info-onebeer {
+  text-align: left;
+ 
+}
+
+.first-raw {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.second {
+  padding-top: 50px;
+
+}
+
+.text {
+  margin-top: 4vh;
+}
