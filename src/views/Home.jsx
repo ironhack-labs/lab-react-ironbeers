@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import apiHandler from '../api/apiHandler';
+
 
 const Home = () => {
   return (

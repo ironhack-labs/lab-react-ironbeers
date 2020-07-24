@@ -46,7 +46,7 @@ export class NewBeer extends Component {
         </div>
         <div>
           <Form onSubmit={this.handleSubmit}>
-            <h1 className="create-title">Create a new beer ! 🍻</h1>
+            <h1 className="create-title">Create a new beer ! <span role="img" aria-labelledby="beers">🍻</span></h1>
 
             <FormGroup>
               <Label for="name">Name</Label>

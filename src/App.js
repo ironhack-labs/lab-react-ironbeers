@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import './App.css';
 import Home from './views/Home';
-import NavMain from './components/Header';
 import Beers from './views/Beers';
 import RandomBeer from './views/RandomBeer';
 import NewBeer from './views/NewBeer';

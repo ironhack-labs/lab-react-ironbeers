@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import React from "react";
-import axios from 'axios';
-import { Link } from 'react-router-dom';
 import apiHandler from '../api/apiHandler';
 import Header from './../components/Header';
 
