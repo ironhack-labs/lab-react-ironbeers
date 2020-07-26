@@ -5,3 +5,17 @@
 .card-img-top {
   height: 250px;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3cc4fc;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  color: white;
+  font-size: 42px;
+}
