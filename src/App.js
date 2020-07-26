@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Home from './components/Home';
 import AllBeers from './components/AllBeers';
 import SingleBeer from './components/SingleBeer';
+import RandomBeer from './components/RandomBeer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         path="/beers/:beerId"
         render={(props) => <SingleBeer {...props} />}
       />
+      <Route path="/random-beer" component={RandomBeer} />
     </Switch>
   );
 }

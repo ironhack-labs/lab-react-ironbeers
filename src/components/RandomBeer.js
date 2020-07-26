@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
-import Header from './Header';
 import axios from 'axios';
 
-class SingleBeer extends Component {
+import Header from './Header';
+
+export class RandomBeer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      beerData: {},
+      randomBeer: {},
     };
   }
 
   componentDidMount() {
     axios
-      .get(
-        'https://ih-beers-api2.herokuapp.com/beers/' +
-          this.props.match.params.beerId
-      )
+      .get('https://ih-beers-api2.herokuapp.com/beers/random')
       .then((response) => {
-        this.setState({ beerData: response.data });
+        this.setState({ randomBeer: response.data });
       })
-      .catch((err) => 'Error while trying to retrive the beer data' + err);
+      .catch((err) => console.log('Error trying to get the random beer', err));
   }
 
   render() {
-    const beer = this.state.beerData;
+    const beer = this.state.randomBeer;
     return (
       <div>
         <Header />
@@ -55,4 +53,4 @@ class SingleBeer extends Component {
   }
 }
 
-export default SingleBeer;
+export default RandomBeer;
