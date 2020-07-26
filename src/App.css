@@ -49,3 +49,34 @@
 .link:hover {
   text-decoration: none;
 }
+
+.gray {
+  color: gray;
+}
+
+.text-spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.singleBeerImg > img {
+  height: 350px;
+}
+
+.singleBeerImg {
+  text-align: center;
+  margin: 20px;
+}
+
+.singleBeerData {
+  margin: 5px 15px;
+}
+
+.smaller {
+  font-size: 0.6em;
+}
+
+.align {
+  text-align: right;
+}

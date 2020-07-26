@@ -23,8 +23,8 @@ export class AllBeers extends Component {
 
   render() {
     const beerList = this.state.beers.map((beer) => (
-      <Link className="link" to={'/beers/' + beer._id}>
-        <div key={beer._id} className="container">
+      <Link key={beer._id} className="link" to={'/beers/' + beer._id}>
+        <div className="container">
           <div className="beerImage">
             <img src={beer.image_url} alt={beer.name} />
           </div>
