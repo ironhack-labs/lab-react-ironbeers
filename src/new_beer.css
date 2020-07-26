@@ -1,0 +1,35 @@
+.new-beer-form{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    flex-direction: column;
+}
+
+.new-beer-form .field{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.new-beer-form label{
+    font-size: 1rem;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+.new-beer-form input {
+    padding: 2px 5px;
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+.new-beer-form button{
+    color: whitesmoke;
+    background-color: dodgerblue;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bolder;
+    align-self: center;
+}

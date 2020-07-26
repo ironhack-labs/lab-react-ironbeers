@@ -6,3 +6,8 @@ header{
     justify-content: center;
     align-items: center;
 }
+
+header .go-back{
+    position: absolute;
+    left: 5%;
+}

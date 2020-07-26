@@ -1,0 +1,26 @@
+.beers-grid{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.searchBar {
+    justify-self: center;
+    margin-bottom: 20px;
+    display: flex;
+
+}
+
+.searchBar label{
+    margin-right: 10px;
+}
+
+.searchBar svg {
+    color: dodgerblue;
+}
+
+.beers-grid .not-found-msg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

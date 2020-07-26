@@ -1,0 +1,23 @@
+.loading-animation{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  .loading-animation .loading-spinner {
+    animation: 2s infinite linear spin;
+  }
+
+  @keyframes spin{
+      from{
+          transform: rotate(0deg);
+      }
+      to{
+        transform: rotate(360deg);
+    }
+  }

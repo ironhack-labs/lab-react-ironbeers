@@ -1,0 +1,42 @@
+.beer-details-grid{
+    display: grid;
+    grid-template-columns: 80% 15%;
+    grid-template-rows: auto auto auto auto auto;
+    margin: 20px;
+    row-gap: 20px;
+    column-gap: 5%;
+}
+
+.beer-details-grid img{
+    height: 300px;
+    grid-column: 1 / span 2;
+    justify-self: center;
+}
+
+.beer-details-grid .name{
+    font-size: 1.2rem;
+}
+
+.beer-details-grid .attenuation{
+    justify-self: end;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.beer-details-grid .brewed{
+    justify-self: end;
+    font-weight: bolder;
+}
+
+.beer-details-grid .desc{
+    grid-column: 1 / span 2;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.beer-details-grid .contributed{
+    grid-column: 1 / span 2;
+    color: grey;
+    font-weight: bolder;
+}
