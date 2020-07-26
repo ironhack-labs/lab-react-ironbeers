@@ -8,6 +8,7 @@ import Home from './components/Home';
 import AllBeers from './components/AllBeers';
 import SingleBeer from './components/SingleBeer';
 import RandomBeer from './components/RandomBeer';
+import AddBeer from './components/AddBeer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         render={(props) => <SingleBeer {...props} />}
       />
       <Route path="/random-beer" component={RandomBeer} />
+      <Route path="/new-beer" component={AddBeer} />
     </Switch>
   );
 }

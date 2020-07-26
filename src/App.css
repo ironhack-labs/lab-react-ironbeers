@@ -80,3 +80,18 @@
 .align {
   text-align: right;
 }
+
+.form {
+  padding: 10px;
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  background: #3cc4fc;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+}
