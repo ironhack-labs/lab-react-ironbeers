@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { api } from '../api-config';
 
 import Header from './Header';
 
-export class RandomBeer extends Component {
+class RandomBeer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,10 +12,10 @@ export class RandomBeer extends Component {
   }
 
   componentDidMount() {
-    axios
-      .get('https://ih-beers-api2.herokuapp.com/beers/random')
+    api
+      .get('beers/random')
       .then((response) => {
-        this.setState({ randomBeer: response.data });
+        this.setState(() => ({ randomBeer: response.data }));
       })
       .catch((err) => console.log('Error trying to get the random beer', err));
   }

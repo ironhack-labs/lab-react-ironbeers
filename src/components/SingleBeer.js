@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import axios from 'axios';
+import { api } from '../api-config';
 
 class SingleBeer extends Component {
   constructor(props) {
@@ -11,13 +11,10 @@ class SingleBeer extends Component {
   }
 
   componentDidMount() {
-    axios
-      .get(
-        'https://ih-beers-api2.herokuapp.com/beers/' +
-          this.props.match.params.beerId
-      )
+    api
+      .get('/beers/' + this.props.match.params.beerId)
       .then((response) => {
-        this.setState({ beerData: response.data });
+        this.setState(() => ({ beerData: response.data }));
       })
       .catch((err) => 'Error while trying to retrive the beer data' + err);
   }

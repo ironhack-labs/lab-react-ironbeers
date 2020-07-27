@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { api } from '../api-config';
 import { Link } from 'react-router-dom';
 
 import Header from './Header';
@@ -15,32 +15,28 @@ export class AllBeers extends Component {
   }
 
   componentDidMount() {
-    axios
-      .get('https://ih-beers-api2.herokuapp.com/beers')
+    api
+      .get('/beers')
       .then((response) => {
-        this.setState({ beers: response.data, filtered: response.data });
+        this.setState((state) => ({
+          ...state,
+          beers: response.data,
+          filtered: response.data,
+        }));
       })
       .catch((err) => console.log('Error trying to get the beer list', err));
   }
 
-  handleSearch = (event) => {
-    let newList = [];
-
-    if (event.target.value !== '') {
-      newList = this.state.beers.filter((item) => {
-        const lc = item.name.toLowerCase();
-        const filter = event.target.value.toLowerCase();
-        return lc.includes(filter);
-      });
-    } else {
-      newList = this.state.beers;
-    }
-
-    this.setState({
-      ...this.state,
-      filtered: newList,
-      [event.target.name]: event.target.value,
-    });
+  handleSearch = ({ target }) => {
+    const filter = target.value.toLowerCase();
+    const filteredBeers = this.state.beers.filter((beer) =>
+      beer.name.toLowerCase().includes(filter)
+    );
+    this.setState((state) => ({
+      ...state,
+      filtered: filteredBeers,
+      [target.name]: target.value,
+    }));
   };
 
   render() {

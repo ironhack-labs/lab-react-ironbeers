@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { api } from '../api-config';
 
 import Header from './Header';
 
@@ -19,25 +19,21 @@ export class AddBeer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post('https://ih-beers-api2.herokuapp.com/beers/new', this.state)
+    api
+      .post('beers/new', this.state)
       .then((response) => {
         console.log(response.data);
       })
       .catch((err) => console.log('Error when submiting a new beer', err));
   };
 
-  handleChange = (event) => {
-    const key = event.target.name;
-    let value = event.target.value;
-
-    if (key === 'attenuation_level') {
-      value = parseInt(event.target.value);
-    }
-    this.setState({
-      ...this.state,
-      [key]: value,
-    });
+  handleChange = ({ target }) => {
+    const hasToParseValue = target.name === 'attenuation_level';
+    const value = hasToParseValue ? parseInt(target.value) : target.value;
+    this.setState((state) => ({
+      ...state,
+      [target.name]: value,
+    }));
   };
 
   render() {
