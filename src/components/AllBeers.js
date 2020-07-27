@@ -9,6 +9,8 @@ export class AllBeers extends Component {
     super(props);
     this.state = {
       beers: [],
+      filtered: [],
+      search: '',
     };
   }
 
@@ -16,13 +18,33 @@ export class AllBeers extends Component {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers')
       .then((response) => {
-        this.setState({ beers: response.data });
+        this.setState({ beers: response.data, filtered: response.data });
       })
       .catch((err) => console.log('Error trying to get the beer list', err));
   }
 
+  handleSearch = (event) => {
+    let newList = [];
+
+    if (event.target.value !== '') {
+      newList = this.state.beers.filter((item) => {
+        const lc = item.name.toLowerCase();
+        const filter = event.target.value.toLowerCase();
+        return lc.includes(filter);
+      });
+    } else {
+      newList = this.state.beers;
+    }
+
+    this.setState({
+      ...this.state,
+      filtered: newList,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   render() {
-    const beerList = this.state.beers.map((beer) => (
+    const beerList = this.state.filtered.map((beer) => (
       <Link key={beer._id} className="link" to={'/beers/' + beer._id}>
         <div className="container">
           <div className="beerImage">
@@ -42,7 +64,19 @@ export class AllBeers extends Component {
 
     return (
       <div>
-        <Header /> {beerList}
+        <Header />
+        <div className="container mx-1">
+          <input
+            name="search"
+            onChange={this.handleSearch}
+            className="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </div>
+
+        {beerList}
       </div>
     );
   }
