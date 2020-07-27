@@ -12,7 +12,7 @@ export class Beer extends Component {
   render() {
     console.log(this.state);
     let beer;
-    if (this.state.id && this.state.id != -1) {
+    if (this.state.id) {
       beer = this.state.beers.find((b) => b._id === this.state.id);
     } else {
       const randomIndex = Math.floor(Math.random() * this.state.beers.length);

@@ -5,6 +5,7 @@ import Home from './components/home/Home';
 import axios from 'axios';
 import Beers from './components/beers/Beers';
 import Beer from './components/beers/Beer';
+import NewBeer from './components/beers/NewBeer';
 
 export class App extends Component {
   constructor(props) {
@@ -30,7 +31,11 @@ export class App extends Component {
           path="/beers/:id"
           component={(props) => <Beer {...props} beers={this.state.beers} />}
         />
-        <Route path="/new"></Route>
+        <Route
+          path="/random-beer"
+          component={(props) => <Beer {...props} beers={this.state.beers} />}
+        />
+        <Route path="/new-beer" component={NewBeer}></Route>
       </Switch>
     );
   }

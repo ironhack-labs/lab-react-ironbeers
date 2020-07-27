@@ -32,7 +32,7 @@ function Home() {
             additional content.
           </p>
         </div>
-        <Link to="/beers/-1" className="stretched-link" />
+        <Link to="/random-beer" className="stretched-link" />
       </div>
       <div className="card">
         <img
@@ -48,7 +48,7 @@ function Home() {
             first to show that equal height action.
           </p>
         </div>
-        <Link to="/new" className="stretched-link" />
+        <Link to="/new-beer" className="stretched-link" />
       </div>
     </div>
   );
