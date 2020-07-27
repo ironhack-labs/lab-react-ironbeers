@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -16,7 +17,7 @@ function Home() {
             lead-in to additional content. This content is a little bit longer.
           </p>
         </div>
-        <a href="/beers" className="stretched-link"></a>
+        <Link to="/beers" className="stretched-link" />
       </div>
       <div className="card">
         <img
@@ -31,7 +32,7 @@ function Home() {
             additional content.
           </p>
         </div>
-        <a href="/random" className="stretched-link"></a>
+        <Link to="/beers/-1" className="stretched-link" />
       </div>
       <div className="card">
         <img
@@ -47,7 +48,7 @@ function Home() {
             first to show that equal height action.
           </p>
         </div>
-        <a href="/new" className="stretched-link"></a>
+        <Link to="/new" className="stretched-link" />
       </div>
     </div>
   );

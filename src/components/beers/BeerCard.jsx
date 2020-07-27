@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function BeerCard(props) {
   return (
-    <div>
+    <div className="card border-0">
       <div className="row mt-2">
         <div className="col-3 text-center">
           <img
@@ -22,8 +23,8 @@ function BeerCard(props) {
           </small>
         </div>
       </div>
+      <Link to={`/beers/${props.beer._id}`} className="stretched-link" />
       <hr className="bg-secondary" />
-      <a href={`/beers/${props.beer._id}`} className="stretched-link"></a>
     </div>
   );
 }
