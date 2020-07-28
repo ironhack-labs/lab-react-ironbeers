@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import axios from 'axios'
 import Beer from './components/Beer'
 import RandomBeer from './components/RandomBeer';
+import NewBeerForm from './components/NewBeerForm';
 
 function App() {
   const [beers, setBeers] = useState(
@@ -60,6 +61,8 @@ function App() {
         >
           <RandomBeer />
         </Route>
+
+        <Route exact path='/new-beer' component={(props) => <NewBeerForm {...props} />} />
 
       </Switch>
 
