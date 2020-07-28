@@ -5,11 +5,10 @@ import {
 } from 'react-router-dom';
 import Home from './components/Home'
 import BeerListContainer from './components/beerList/BeerListContainer'
-import RandomBeerContainer from './components/random-beer/RandomBeerContainer'
-import NewBeerContainer from './components/new-beer/NewBeerContainer'
+import NewBeerForm from './components/NewBeerForm'
 
 import './App.css';
-import SingleBeerContainer from './components/SingleBeer/SingleBeerContainer';
+import SingleBeer from './components/SingleBeer';
 
 function App() {
   return (
@@ -17,9 +16,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/beers" component={BeerListContainer}/>
-        <Route path="/beers/:id" render={(props) => <SingleBeerContainer {...props}/>} />
-        <Route path="/random-beer" component={RandomBeerContainer}/>
-        <Route path="/new-beer" component={NewBeerContainer}/>
+        <Route path="/beers/:id" render={(props) => <SingleBeer {...props}/>} />
+        <Route path="/random-beer" render={(props) => <SingleBeer random {...props}/>}/>
+        <Route path="/new-beer" component={NewBeerForm}/>
       </Switch>
     </div>
   );

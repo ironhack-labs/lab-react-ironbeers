@@ -31,7 +31,7 @@ function Home() {
     const homeData = [...data]
 
     const renderData = homeData.map(article =>(
-        <Link to={article.link}>
+        <Link to={article.link} key={article.title}>
             <article>
                 <img src={article.img} alt={article.title}/>
                 <div className="features">

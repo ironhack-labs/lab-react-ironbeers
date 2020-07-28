@@ -25,7 +25,7 @@ function BeerCard({img, name, tagline, contributed_by, id}){
 
     return (
         <StyledBeerCard>
-            <div className="img-box">
+            <div className="img-box" loading="lazy">
             </div>
             <div>
                 <h4>{name}</h4>
