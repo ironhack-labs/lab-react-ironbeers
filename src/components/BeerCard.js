@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BeerCard = ({ image, name, tagline, contributor }) => {
+const BeerCard = ({ id, image, name, tagline, contributor }) => {
   return (
-    <Link to="/beers/:beerId" title={name}>
+    <Link to={'/beers/' + id} title={name}>
       <div className="beer-card">
         <div className="beer-col">
           <div className="beer-image">

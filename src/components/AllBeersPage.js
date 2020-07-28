@@ -7,19 +7,20 @@ const AllBeersPage = () => {
   const initialState = {
     beers: [],
   };
-  const [state, setState] = useState(initialState);
+  const [beers, setBeers] = useState(initialState);
 
   const getBeers = () => {
     Axios.get('https://ih-beers-api2.herokuapp.com/beers').then((res) => {
-      setState({ beers: res.data });
+      setBeers({ beers: res.data });
     });
   };
 
   useEffect(() => getBeers());
 
-  const beersList = state.beers.map((beer) => (
+  const beersList = beers.beers.map((beer) => (
     <BeerCard
       key={beer._id}
+      id={beer._id}
       image={beer.image_url}
       name={beer.name}
       tagline={beer.tagline}
