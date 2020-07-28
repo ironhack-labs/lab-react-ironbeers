@@ -11,5 +11,4 @@ function RandomBeerContainer() {
     )
 }
 
-
 export default RandomBeerContainer

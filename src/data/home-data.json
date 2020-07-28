@@ -1,0 +1,20 @@
+[
+    {
+        "title":"All Beers",
+        "description": "A complete list of all our beers.",
+        "img":"https://cdn.pixabay.com/photo/2013/11/12/01/29/bar-209148_960_720.jpg",
+        "link":"/beers"
+    },
+    {
+        "title":"Random Beer",
+        "description": "If you are a undecided, get a random beer!",
+        "img":"https://cdn.pixabay.com/photo/2016/11/29/02/53/bottle-caps-1866945_960_720.jpg",
+        "link":"/random-beer"
+    },
+    {
+        "title":"New Beer",
+        "description": "We don't have your favourite beer on our list? Aggregate a new beer!",
+        "img":"https://cdn.pixabay.com/photo/2018/05/31/16/51/glass-of-beer-3444480_960_720.jpg",
+        "link":"/new-beer"
+    }
+]
