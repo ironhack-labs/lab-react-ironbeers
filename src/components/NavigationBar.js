@@ -6,7 +6,7 @@ const NavigationBar = () => {
   return (
     <Navbar bg="primary" variant="dark">
       <Link to="/">
-        <span class="lnr lnr-home"></span>
+        <span className="lnr lnr-home"></span>
       </Link>
     </Navbar>
   );
