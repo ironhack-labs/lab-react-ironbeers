@@ -17,7 +17,8 @@ export default function NewBeerForm(props) {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        this.setState({
+        setValue({
+            ...value,
             [name]: value
         })
 
@@ -36,8 +37,6 @@ export default function NewBeerForm(props) {
         props.history.push('/beers')
         console.log('SUBMITED', value)
     }
-
-
 
     return (
         <form onSubmit={handleSubmit}>
