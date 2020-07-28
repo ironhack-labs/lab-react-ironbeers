@@ -14,7 +14,6 @@ const BeerDetailsPage = (props) => {
   const getBeerDetails = () => {
     Axios.get('https://ih-beers-api2.herokuapp.com/beers/' + beer.id).then(
       (res) => {
-        console.log(res.data);
         setBeer({ beerDetails: res.data });
       }
     );

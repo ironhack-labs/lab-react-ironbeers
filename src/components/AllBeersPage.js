@@ -15,7 +15,7 @@ const AllBeersPage = () => {
     });
   };
 
-  useEffect(() => getBeers());
+  useEffect(() => getBeers(), []);
 
   const beersList = beers.beers.map((beer) => (
     <BeerCard
