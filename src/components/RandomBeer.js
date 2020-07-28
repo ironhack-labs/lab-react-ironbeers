@@ -12,14 +12,14 @@ const RandomBeer = () => {
 
     useEffect(() => {
         const getBeer = async () => {
-        try {
-            const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers/random")
-            setState(state => ({
-                randomBeer: response.data
-            }))
-        } catch(err) {
-            console.log("AXIOS ERROR : ", err);
-        }
+            try {
+                const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers/random")
+                setState(state => ({
+                    randomBeer: response.data
+                }))
+            } catch(err) {
+                console.log("AXIOS ERROR : ", err);
+            }
         }
         getBeer()
     }, [])
