@@ -15,6 +15,7 @@ const Beers = () => {
             try {
                 const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers")
                 setState(state => ({
+                    ...state,
                     beers: response.data
                 }))
             } catch(err) {
@@ -23,6 +24,14 @@ const Beers = () => {
         }
         getBeers()
     }, [])
+
+    const handleSearch = async ({target}) => {
+        const { value } = target
+        const filteredBeers = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${value}`)
+        setState(state => ({
+            beers: filteredBeers.data
+        }))
+    }
 
     const listBeers = state.beers.map(beer => {
         return (
@@ -45,6 +54,7 @@ const Beers = () => {
 
     return (
         <div className="list-group">
+            <input className="form-control" type="text" value={state.currentSearch} placeholder="Search.." onChange={handleSearch} />
             {listBeers}
         </div>
     )
