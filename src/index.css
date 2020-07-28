@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.NavBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.NavBar div {
+  background-color: rgb(87, 167, 210);
+  width: 100%;
+  text-align: center;
+  height: 3rem;
+  padding: 5px;
+}
+.NavBar div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.NavBar ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  list-style: none;
+}
+
+.NavBar ul a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #535353;
+}
+
+.BeerCard {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #535353;
+  margin: 0.5rem auto;
+  color: #535353;
+}
+
+.BeerCard div img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.BeerCard h1,
+h5 {
+  color: black;
+}
