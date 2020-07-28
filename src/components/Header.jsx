@@ -6,18 +6,13 @@ import { Link } from 'react-router-dom'
 
 export class Header extends Component {
     render() {
-        const {pathname} = this.props.location
-        if (pathname === '/') {
-            return null
-        } else {
-            return (
-                <nav className="navbar navbar-dark bg-primary">
-                    <span>
-                        <Link to='/'><FontAwesomeIcon style={{color: 'white'}} icon={faHome} /></Link>
-                    </span>
-                </nav>
-            )
-        }
+        return (
+            <nav className="navbar navbar-dark bg-primary">
+                <span>
+                    <Link to='/'><FontAwesomeIcon style={{color: 'white'}} icon={faHome} /></Link>
+                </span>
+            </nav>
+        )
     }
 }
 
