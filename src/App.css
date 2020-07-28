@@ -11,3 +11,11 @@
   padding: 20px 25px;
   color: #000000;
 }
+
+.navbar a {
+  margin: 0 !important;
+  width: 100% !important;
+  text-align: center;
+  color: #ffffff;
+  font-size: 22px;
+}

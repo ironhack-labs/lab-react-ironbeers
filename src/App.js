@@ -3,14 +3,18 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AllBeersPage from './components/AllBeersPage';
+import RandomBeerPage from './components/RandomBeerPage';
+import NewBeerPage from './components/NewBeerPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route path="/random-beer" />
-        <Route path="/new-beer" />
+        <Route path="/beers" component={AllBeersPage} />
+        <Route path="/random-beer" component={RandomBeerPage} />
+        <Route path="/new-beer" component={NewBeerPage} />
       </Switch>
     </BrowserRouter>
   );
