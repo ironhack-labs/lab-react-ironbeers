@@ -1,4 +1,5 @@
 import React, { useState, useEffect }  from 'react'
+import BeerCard from './BeerCard'
 import axios from 'axios'
 
 const BeerDetails = props => {
@@ -26,23 +27,15 @@ const BeerDetails = props => {
     console.log(state.currentBeer)
 
     return (
-        <div className="card mx-auto" style={{width:"18rem"}}>
-            <img className="card-img-top mx-auto" src={state.currentBeer.image_url} style={{width:"100px"}} alt="Card cap" />
-            <div className="card-body">
-                <div className="row d-flex justify-content-between my-2">
-                    <h5 className="card-title">{state.currentBeer.name}</h5>
-                    <h5 className="card-title">{state.currentBeer.attenuation_level}</h5>
-                </div>
-                <div className="row d-flex justify-content-between my-2">
-                    <span className="card-text">{state.currentBeer.tagline}</span>
-                    <span className="card-text">{state.currentBeer.first_brewed}</span>
-                </div>
-                <div className="row d-flex text-left">
-                    <p className="card-text">{state.currentBeer.description}</p>
-                    <p className="card-text">{state.currentBeer.contributed_by}</p>
-                </div>
-            </div>
-        </div>
+        <BeerCard
+            image_url = {state.currentBeer.image_url}
+            name = {state.currentBeer.name}
+            attenuation_level = {state.currentBeer.attenuation_level}
+            tagline = {state.currentBeer.tagline}
+            first_brewed = {state.currentBeer.first_brewed}
+            description = {state.currentBeer.description}
+            contributed_by = {state.currentBeer.contributed_by}
+        />
     )
 }
 

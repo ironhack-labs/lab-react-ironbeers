@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom'
 
 const HomeCard = props => {
     return (
-        <div className="card" style={{width:"18rem"}}>
-            <img className="card-img-top" src={props.img} alt="Card cap" />
-            <div className="card-body">
-                <Link className="mx-auto" to={props.link}>
-                    <h5 className="card-title">{props.title}</h5>
-                </Link>
-                <p className="card-text">{props.description}</p>
+        <Link className="mx-auto" to={props.link}>
+            <div className="card no-link-style no-link-clickable" style={{width:"18rem"}}>
+                <img className="card-img-top" src={props.img} alt="Card cap" />
+                <div className="card-body">             
+                    <h5 className="card-title mx-auto">{props.title}</h5>
+                    <p className="card-text">{props.description}</p>
+                </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
