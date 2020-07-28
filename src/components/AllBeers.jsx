@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import AllBeerCard from './AllBeerCard'
 
 export class AllBeers extends Component {
     constructor(props) {
@@ -19,21 +19,7 @@ export class AllBeers extends Component {
     }
     getAllBeers = () => {
         const {beers} = this.state
-        return beers.map(beer => (
-            <div key={beer._id}>
-                <div className='all-beer-card d-flex flex-row'>
-                    <div className='all-beer-image-box d-flex align-items-center justify-content-center'>
-                        <img src={beer.image_url} alt={beer.name}/>
-                    </div>
-                    <div className='all-beer-info d-flex flex-column justify-content-center'>
-                        <Link to={'/beers/' + beer._id}><h5>{beer.name}</h5></Link>
-                        <p>{beer.tagline}</p>
-                        <span><b>Created by: </b>{beer.contributed_by}</span>
-                    </div>
-                </div>
-                <hr />
-            </div>
-        ))
+        return beers.map(beer => <AllBeerCard key={beer._id} beer={beer} />)
     }
     render() {
         return (
