@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AllBeersPage from './components/AllBeersPage';
 import RandomBeerPage from './components/RandomBeerPage';
 import NewBeerPage from './components/NewBeerPage';
-import BeerDetails from './components/BeerDetails';
+import BeerDetailsPage from './components/BeerDetailsPage';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route exact path="/beers" component={AllBeersPage} />
         <Route
           path="/beers/:beerId"
-          render={(props) => <BeerDetails {...props} />}
+          render={(props) => <BeerDetailsPage {...props} />}
         />
         <Route path="/random-beer" component={RandomBeerPage} />
         <Route path="/new-beer" component={NewBeerPage} />
