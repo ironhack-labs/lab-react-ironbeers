@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tagline {
+  color: grey
+}
+
+.beer-card {
+  border: 0.5px solid lightgray;
+  padding: 10px 0px;
+}
+
+.link {
+  color: black;
+}
+
+.card-text {
+  text-align: left;
+}
+
+
+.content {
+  padding: 100px;
+}
+
+header{
+  padding: 10px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 10px;
+
+}
