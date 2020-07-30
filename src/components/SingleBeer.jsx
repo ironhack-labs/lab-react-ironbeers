@@ -19,6 +19,7 @@ export class SingleBeer extends Component {
             .then(({data: randomBeer}) => {
                 this.setState(randomBeer)
             })
+            .catch( error => console.log(error) )
         }
     }
     render() {

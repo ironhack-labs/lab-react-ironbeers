@@ -32,6 +32,7 @@ class NewBeerForm extends Component {
         .then(() => {
             this.props.history.push('/beers');
         })
+        .catch( error => console.log(error) )
     }
     render() {
         const {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by} = this.state.newBeer
