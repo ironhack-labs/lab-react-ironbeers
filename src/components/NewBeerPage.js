@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavigationBar from './NavigationBar';
 import { Container, Row, Col, Form, Button, Toast } from 'react-bootstrap';
-import Axios from 'axios';
+import api from '../services/api';
 
 const NewBeerPage = () => {
   const initialState = {
@@ -24,10 +24,7 @@ const NewBeerPage = () => {
     });
   };
   const submitNewBeer = () => {
-    Axios.post(
-      'https://ih-beers-api2.herokuapp.com/beers/new',
-      state.formData
-    ).then(() => {
+    api.post('/new', state.formData).then(() => {
       setState({
         formData: {
           name: '',

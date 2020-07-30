@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NavigationBar from './NavigationBar';
 import { Container, Row, Col } from 'react-bootstrap';
-import Axios from 'axios';
 import BeerDetails from './BeerDetails';
+import api from '../services/api';
 
 const RandomBeerPage = () => {
   const initialState = {
@@ -11,9 +11,9 @@ const RandomBeerPage = () => {
   const [randomBeer, setRandomBeer] = useState(initialState);
 
   const getRandomBeerDetails = () => {
-    Axios.get('https://ih-beers-api2.herokuapp.com/beers/random').then((res) =>
-      setRandomBeer({ randomBeerDetails: res.data })
-    );
+    api
+      .get('/random')
+      .then((res) => setRandomBeer({ randomBeerDetails: res.data }));
   };
 
   useEffect(() => getRandomBeerDetails(), []);

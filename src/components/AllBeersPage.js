@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import NavigationBar from './NavigationBar';
-import Axios from 'axios';
 import BeerCard from './BeerCard';
 import { Container, Row, Col, Form } from 'react-bootstrap';
+import api from '../services/api';
 
 const AllBeersPage = () => {
   const initialState = {
@@ -13,7 +13,7 @@ const AllBeersPage = () => {
   const [beers, setBeers] = useState(initialState);
 
   const getBeers = useCallback(() => {
-    Axios.get('https://ih-beers-api2.herokuapp.com/beers').then((res) => {
+    api.get('/').then((res) => {
       setBeers({ ...beers, beers: res.data, isLoading: false });
     });
   }, [beers]);
@@ -22,9 +22,7 @@ const AllBeersPage = () => {
 
   const handleSearch = (e) => {
     const searchQuery = e.target.value;
-    Axios.get(
-      'https://ih-beers-api2.herokuapp.com/beers/search?q=' + searchQuery
-    ).then((res) => {
+    api.get('/search?q=' + searchQuery).then((res) => {
       setBeers({
         ...beers,
         beers: res.data,
