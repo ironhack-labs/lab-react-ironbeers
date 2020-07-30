@@ -2,10 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -27,6 +24,20 @@
 .App-link {
   color: #61dafb;
 }
+
+
+.homepage{
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  text-align: justify;
+}
+
+.img-home{
+  width: 500px;
+  }
 
 @keyframes App-logo-spin {
   from {
