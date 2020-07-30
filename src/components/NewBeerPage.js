@@ -1,39 +1,74 @@
 import React, { useState } from 'react';
 import NavigationBar from './NavigationBar';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Toast } from 'react-bootstrap';
 import Axios from 'axios';
 
 const NewBeerPage = () => {
   const initialState = {
-    name: '',
-    tagline: '',
-    description: '',
-    first_brewed: '',
-    brewers_tips: '',
-    attenuation_level: 0,
-    contributed_by: '',
+    formData: {
+      name: '',
+      tagline: '',
+      description: '',
+      first_brewed: '',
+      brewers_tips: '',
+      attenuation_level: 0,
+      contributed_by: '',
+    },
+    isSubmitted: false,
   };
   const [state, setState] = useState(initialState);
   const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value });
+    setState({
+      ...state,
+      formData: { ...state.formData, [e.target.name]: e.target.value },
+    });
   };
   const submitNewBeer = () => {
-    Axios.post('https://ih-beers-api2.herokuapp.com/beers/new', state).then(
-      () => {
-        console.log('new beer created');
-      }
-    );
+    Axios.post(
+      'https://ih-beers-api2.herokuapp.com/beers/new',
+      state.formData
+    ).then(() => {
+      console.log('new beer created');
+      setState({
+        formData: {
+          name: '',
+          tagline: '',
+          description: '',
+          first_brewed: '',
+          brewers_tips: '',
+          attenuation_level: 0,
+          contributed_by: '',
+        },
+        isSubmitted: true,
+      });
+    });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     submitNewBeer();
   };
+  const toast = (
+    <Toast
+      onClose={() => setState({ ...state, isSubmitted: false })}
+      show={state.isSubmitted}
+      delay={3000}
+      autohide
+    >
+      <Toast.Header>
+        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
+        <strong className="mr-auto">IronBeers</strong>
+        <small>5 secs ago</small>
+      </Toast.Header>
+      <Toast.Body>Woohoo, your new beer has been submitted!</Toast.Body>
+    </Toast>
+  );
   return (
     <div>
       <NavigationBar />
       <Container className="mt-5">
         <Row>
           <Col lg={12}>
+            {state.isSubmitted ? toast : null}
             <Form onSubmit={handleSubmit}>
               <Form.Group>
                 <Form.Label>Name</Form.Label>
@@ -42,7 +77,7 @@ const NewBeerPage = () => {
                   name="name"
                   placeholder="Enter beer name"
                   onChange={handleChange}
-                  value={state.name}
+                  value={state.formData.name}
                 ></Form.Control>
               </Form.Group>
               <Form.Group>
@@ -52,7 +87,7 @@ const NewBeerPage = () => {
                   name="tagline"
                   placeholder="Enter beer tagline"
                   onChange={handleChange}
-                  value={state.tagline}
+                  value={state.formData.tagline}
                 ></Form.Control>
               </Form.Group>
               <Form.Group>
@@ -63,7 +98,7 @@ const NewBeerPage = () => {
                   name="description"
                   placeholder="Enter beer description"
                   onChange={handleChange}
-                  value={state.description}
+                  value={state.formData.description}
                 ></Form.Control>
               </Form.Group>
               <Form.Group>
@@ -73,7 +108,7 @@ const NewBeerPage = () => {
                   name="first_brewed"
                   placeholder="Enter first brewed date"
                   onChange={handleChange}
-                  value={state.first_brewed}
+                  value={state.formData.first_brewed}
                 ></Form.Control>
               </Form.Group>
               <Form.Group>
@@ -83,7 +118,7 @@ const NewBeerPage = () => {
                   name="brewers_tips"
                   placeholder="Enter brewers tips"
                   onChange={handleChange}
-                  value={state.brewers_tips}
+                  value={state.formData.brewers_tips}
                 ></Form.Control>
               </Form.Group>
               <Form.Group>
@@ -93,7 +128,7 @@ const NewBeerPage = () => {
                   name="attenuation_level"
                   placeholder="Enter attenuation level"
                   onChange={handleChange}
-                  value={state.attenuation_level}
+                  value={state.formData.attenuation_level}
                 ></Form.Control>
               </Form.Group>
               <Form.Group>
@@ -103,7 +138,7 @@ const NewBeerPage = () => {
                   name="contributed_by"
                   placeholder="Enter contributor name"
                   onChange={handleChange}
-                  value={state.contributed_by}
+                  value={state.formData.contributed_by}
                 ></Form.Control>
               </Form.Group>
               <Button variant="primary" type="submit">
