@@ -1,23 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import NavigationBar from './NavigationBar';
 import Axios from 'axios';
 import BeerCard from './BeerCard';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 
 const AllBeersPage = () => {
   const initialState = {
     beers: [],
     isLoading: true,
+    searchQuery: '',
   };
   const [beers, setBeers] = useState(initialState);
 
-  const getBeers = () => {
+  const getBeers = useCallback(() => {
     Axios.get('https://ih-beers-api2.herokuapp.com/beers').then((res) => {
-      setBeers({ beers: res.data, isLoading: false });
+      setBeers({ ...beers, beers: res.data, isLoading: false });
+    });
+  }, [beers]);
+
+  useEffect(getBeers, []);
+
+  const handleSearch = (e) => {
+    const searchQuery = e.target.value;
+    Axios.get(
+      'https://ih-beers-api2.herokuapp.com/beers/search?q=' + searchQuery
+    ).then((res) => {
+      setBeers({
+        ...beers,
+        beers: res.data,
+        searchQuery: searchQuery,
+      });
     });
   };
-
-  useEffect(() => getBeers(), []);
 
   const beersList = beers.beers.map((beer) => (
     <BeerCard
@@ -48,7 +62,20 @@ const AllBeersPage = () => {
   return (
     <div>
       <NavigationBar />
-      <div className="beers-list---wrapper">{beersList}</div>
+      <Container className="mt-3">
+        <Row>
+          <Col lg={12}>
+            <Form.Control
+              type="text"
+              name="searchQuery"
+              onChange={handleSearch}
+              value={beers.searchQuery}
+              placeholder="Search beers..."
+            />
+            <div className="beers-list---wrapper">{beersList}</div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };

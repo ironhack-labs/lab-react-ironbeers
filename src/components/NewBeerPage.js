@@ -28,7 +28,6 @@ const NewBeerPage = () => {
       'https://ih-beers-api2.herokuapp.com/beers/new',
       state.formData
     ).then(() => {
-      console.log('new beer created');
       setState({
         formData: {
           name: '',
