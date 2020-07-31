@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from './components/HomePage'
 import ListBeers from './components/ListBeers'
 import RandomBeer from './components/RandomBeer'
+import SingleBeer from './components/SingleBeer';
 
 
 
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path='/random-beer'>
           <RandomBeer />
+        </Route>
+        <Route exact path='/beers/:beerId'>
+          <SingleBeer />
         </Route>
       </Switch>
 
