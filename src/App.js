@@ -6,6 +6,8 @@ import HomePage from './components/HomePage'
 import ListBeers from './components/ListBeers'
 import RandomBeer from './components/RandomBeer'
 import SingleBeer from './components/SingleBeer';
+import NewBeer from './components/NewBeer';
+
 
 
 
@@ -16,15 +18,19 @@ function App() {
         <Route exact path='/'>
           <HomePage />
         </Route>
-        <Route exact path='/beers'>
+        <Route  path='/beers'>
           <ListBeers />
         </Route>
-        <Route exact path='/random-beer'>
+        <Route  path='/random-beer'>
           <RandomBeer />
         </Route>
-        <Route exact path='/beers/:beerId'>
+        <Route  path='/beers/:beerId'>
           <SingleBeer />
         </Route>
+        <Route  path='/new-beer'>
+          <NewBeer />
+        </Route>
+        
       </Switch>
 
 
