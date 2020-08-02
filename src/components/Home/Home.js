@@ -8,7 +8,7 @@ function Home() {
         <div>
             <div className="card">
             <img src="/Images/beers.jpeg" alt="beers"></img> 
-            <h3><Link to='/allBeers'> All beers  </Link></h3>
+            <h3><Link to='/listAllBeers'> All beers  </Link></h3>
             <p>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
