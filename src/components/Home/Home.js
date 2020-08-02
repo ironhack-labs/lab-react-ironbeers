@@ -22,7 +22,7 @@ function Home() {
 
             <div className="card">
             <img src="/Images/randombeer.jpeg" alt="random beer"></img>
-            <h3><Link to='/randomBeer'>Random Beer  </Link></h3>
+            <h3><Link to='/random'>Random Beer  </Link></h3>
             <p>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
