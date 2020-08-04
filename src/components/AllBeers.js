@@ -12,10 +12,10 @@ export class AllBeers extends Component {
   componentDidMount() {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers')
-      .then((response) =>
-        this.setState({ ...this.state, beers: response.data })
-      );
+      .then((response) => this.setState({ beers: response.data }));
   }
+
+  handleChange = (event) => {};
 
   render() {
     const allBeers = this.state.beers.map((beer, index) => (
@@ -30,13 +30,18 @@ export class AllBeers extends Component {
         <div className="col-auto mt-4 mb-4">
           <h3>{beer.name}</h3>
           <h5 className="text-secondary">{beer.tagline}</h5>
-          <p><strong>Created by: </strong>{beer.contributed_by}</p>
-          <a href={"/beers/" + beer._id} className="btn btn-secondary">Details</a>
+          <p>
+            <strong>Created by: </strong>
+            {beer.contributed_by}
+          </p>
+          <a href={'/beers/' + beer._id} className="btn btn-secondary">
+            Details
+          </a>
         </div>
       </div>
     ));
     return (
-      <div>
+      <div className="container mt-4">
         <h1>All beers</h1>
         {allBeers}
       </div>
