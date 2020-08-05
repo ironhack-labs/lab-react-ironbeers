@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.iconHome {
+  margin-top: 10px !important;
+  width: 39px;
+}
+
+.topbar-center-logo {
+  background: #3298db;
+  height: 60px;
+}
+
+.topbar-center-logo .menu {
+  background: #3298db;
+}
+
+.topbar-center-logo .menu a {
+  color: #fefefe;
+}
+
+/* .imageBeer {
+  width: 10%;
+} */
+
+.probando {
+  flex-shrink: 0;
+  margin-left: 20% !important;
+  width: 60% !important;
+}
