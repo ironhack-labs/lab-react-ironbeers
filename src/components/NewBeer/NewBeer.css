@@ -1,0 +1,4 @@
+.formuario {
+    display: flex;
+    flex-direction: column;
+}

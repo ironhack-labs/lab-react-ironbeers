@@ -14,9 +14,9 @@ function App() {
      <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/listAllBeers' component={ListAllBeers}/>
-          <Route path="/:id" render={(props) => <ListOne  {...props} />}/>
           <Route path='/random' component={Random}/>
           <Route path='/beer/new' component={NewBeer}/>
+          <Route path="/:id" render={(props) => <ListOne  {...props} />}/>
         </Switch>
     </div>
   );
