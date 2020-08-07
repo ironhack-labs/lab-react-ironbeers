@@ -17,6 +17,7 @@ class NewBeerForm extends Component {
       },
     };
   }
+
   handleChange = ({ target }) => {
     const { name, value } = target;
     this.setState((state) => ({
@@ -26,14 +27,17 @@ class NewBeerForm extends Component {
       },
     }));
   };
+
   handleSubmit = (event) => {
     event.preventDefault();
     axios
       .post('https://ih-beers-api2.herokuapp.com/beers/new', this.state.newBeer)
       .then(() => {
         this.props.history.push('/beers');
-      });
+      })
+      .catch((error) => console.log(error));
   };
+
   render() {
     const {
       name,
@@ -44,6 +48,7 @@ class NewBeerForm extends Component {
       attenuation_level,
       contributed_by,
     } = this.state.newBeer;
+
     return (
       <div>
         <Header />

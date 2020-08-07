@@ -8,6 +8,7 @@ export class AllBeers extends Component {
     super(props);
     this.state = {
       beers: [],
+      query: '',
     };
   }
 
@@ -19,8 +20,12 @@ export class AllBeers extends Component {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers')
       .then(({ data: allBeers }) => {
-        this.setState((state) => ({ ...state, beers: allBeers }));
-      });
+        this.setState((state) => ({
+          ...state,
+          beers: allBeers,
+        }));
+      })
+      .catch((error) => console.log(error));
   };
 
   getAllBeersCards = () => {
@@ -28,10 +33,30 @@ export class AllBeers extends Component {
     return beers.map((beer) => <AllBeerCard key={beer._id} beer={beer} />);
   };
 
+  handleSearch = ({ target }) => {
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${target.value}`)
+      .then(({ data: beersFiltered }) => {
+        this.setState((state) => ({
+          ...state,
+          query: target.value,
+          beers: beersFiltered,
+        }));
+      })
+      .catch((error) => console.log(error));
+  };
+
   render() {
     return (
       <div>
         <Header />
+        <input
+          className="form-control m-4"
+          name="search"
+          value={this.state.search}
+          onChange={this.handleSearch}
+          placeholder="Search..."
+        />
         {this.getAllBeersCards()}
       </div>
     );

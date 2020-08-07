@@ -7,9 +7,11 @@ export class SingleBeer extends Component {
     super(props);
     this.state = {};
   }
+
   componentDidMount = () => {
     this.getBeer();
   };
+
   getBeer = () => {
     const { state } = this.props.location;
     if (state) {
@@ -19,7 +21,8 @@ export class SingleBeer extends Component {
         .get('https://ih-beers-api2.herokuapp.com/beers/random')
         .then(({ data: randomBeer }) => {
           this.setState(randomBeer);
-        });
+        })
+        .catch((error) => console.log(error));
     }
   };
 
@@ -51,7 +54,6 @@ export class SingleBeer extends Component {
           <h6>
             <b>{first_brewed}</b>
           </h6>{' '}
-          >
         </div>
         <p className="px-4 description-beer">
           <b>{description}</b>
