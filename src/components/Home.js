@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <div className="card">
           <img className="card-img-top" src={'/allbeers.jpg'} alt="All beers" />
           <div className="card-body">

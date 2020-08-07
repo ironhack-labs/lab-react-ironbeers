@@ -36,8 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.card-img-top {
+  height: 300px;
+}
 
 .all-beer-card {
+  width: 200px;
   height: 150px;
 }
 
