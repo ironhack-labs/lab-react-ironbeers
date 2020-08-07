@@ -60,3 +60,7 @@
 .all-beer-info span {
   font-size: 12px;
 }
+
+.description-beer {
+  line-height: 15px;
+}

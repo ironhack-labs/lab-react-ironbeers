@@ -6,11 +6,7 @@ export class Home extends Component {
     return (
       <div>
         <div className="card">
-          <img
-            className="card-img-top"
-            src={'/allbeers.jpg'}
-            alt="All beers"
-          />
+          <img className="card-img-top" src={'/allbeers.jpg'} alt="All beers" />
           <div className="card-body">
             <Link to="/beers">
               <h3 className="card-title">All Beers</h3>
