@@ -22,7 +22,7 @@ export class Home extends Component {
         <div className="card">
           <img
             className="card-img-top"
-            src={'/randombeer.jpeg'}
+            src={'/randombeer.jpg'}
             alt="Random beer"
           />
           <div className="card-body">

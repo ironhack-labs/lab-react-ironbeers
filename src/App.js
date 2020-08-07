@@ -14,6 +14,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path='/beers' component={AllBeers} />
           <Route path='/beers/:id' component={SingleBeer} />
+          <Route path='/random-beer' component={SingleBeer} />
         </Switch>
       </div>
     </BrowserRouter>
