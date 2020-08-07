@@ -25,7 +25,6 @@ export class AllBeerCard extends Component {
               <b>Created by: </b>
               {contributed_by}
             </span>
-            >
           </div>
         </div>
         <hr />
