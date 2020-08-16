@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import NaviBar from './Navbar'
 
-const RandomBeer = () => {
-    return (
-        <div>
-            <NaviBar />
-        </div>
-    )
+export default class RandomBeer extends Component {
+    render() {
+        return (
+            <div>
+                <NaviBar />
+            </div>
+        )
+    }
 }
 
-export default RandomBeer

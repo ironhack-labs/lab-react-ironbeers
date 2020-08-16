@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import NaviBar from './Navbar'
 
-const NewBeer = () => {
-    return (
-        <div>
-            <NaviBar />
-        </div>
-    )
+export default class NewBeer extends Component {
+    render() {
+        return (
+            <div>
+                <NaviBar />
+            </div>
+        )
+    }
 }
 
-export default NewBeer
