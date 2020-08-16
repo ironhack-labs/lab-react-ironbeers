@@ -17,3 +17,8 @@
   flex-direction: column;
   align-items: center; 
 }
+
+.navbar {
+  display: block !important;
+  text-align: center !important;
+}
