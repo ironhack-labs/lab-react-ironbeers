@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 const NaviBar = () => {
     return (
-        <Navbar bg="primary" variant="top">
+        <Navbar variant="top">
             <Link to="/">
             <span><FontAwesomeIcon style={{color:'white'}} icon={faHome} /></span>
             </Link>

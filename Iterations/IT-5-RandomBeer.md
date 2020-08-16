@@ -1,0 +1,1 @@
+1. Igual que DetailedBeer pero cambiando el get de Axios y el argumento de setState para que guarde el ID de la cerveza seleccionada
