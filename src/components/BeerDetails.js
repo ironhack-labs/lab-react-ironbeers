@@ -45,6 +45,7 @@ class BeerDetails extends Component {
                         </div>
                         <p>{this.state.description}</p>
                         <p>{this.state.contributed_by}</p>
+                        <Link to="/beers">Back</Link>
                     </div>
                     
                 </div>
