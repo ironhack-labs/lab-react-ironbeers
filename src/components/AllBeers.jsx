@@ -7,7 +7,7 @@ export class AllBeers extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            beers: []
+            beers: null
         };
         this.getBeersInfo = new FetchBeers();
     }
@@ -33,6 +33,9 @@ export class AllBeers extends Component {
 
 
     render() {
+        if (!this.state.beers) {
+            return (<img src='https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif' alt="loading gif"/>)
+        }
         return (
             <div>
                {this.generateView()} 
