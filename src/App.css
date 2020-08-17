@@ -148,3 +148,9 @@ textarea {
     color: white;
     border: none;
 }
+
+@media (min-width: 900px) {
+    .beer-img {
+        height: 40rem;
+    }
+}
