@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import Navbar from '../components/navbar/Navbar';
 
 
 class OneBeer extends Component {
@@ -8,19 +9,15 @@ class OneBeer extends Component {
     super(props);
     this.state= {};
   }
+  
   componentDidMount() {
     this.getSingleBeer();
   }
-  componentWillUnmount() {
-    // fix Warning: Can't perform a React state update on an unmounted component
-    this.setState = (state, callback) => {
-      return;
-    };
-  }
+ 
   getSingleBeer = () => {
-   
+    const { params } = this.props.match;
     axios
-      .get(`http://localhost:3000/beers/${this.props._id}`)
+      .get(`https://ih-beers-api2.herokuapp.com/beers/${params._id}`)
       .then(responseFromApi => {
         const theBeer = responseFromApi.data;
         this.setState(theBeer);
@@ -33,6 +30,7 @@ class OneBeer extends Component {
   render(){
     return (
       <div>
+        <Navbar />
         <div>
           <img src={this.state.image_url} alt="" />
           <h1>{this.state.name}</h1>

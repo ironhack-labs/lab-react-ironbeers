@@ -3,43 +3,39 @@ import axios from "axios";
 import Navbar from '../components/navbar/Navbar';
 
 class RandomBeer extends Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      listOfBeers: []
-    }
-  } 
-  getAllBeers = () => {
-    axios.get(`https://ih-beers-api2.herokuapp.com/beers`).then(responseFromApi => {
-      this.setState({
-        listOfBeers: responseFromApi.data
-      });
-    });
-  };
+  constructor(){
+    super();
+    this.state= { aRandomBeer: {}};
+  }
   
   componentDidMount() {
-    this.getAllBeers();
+    this.getSingleBeer();
   }
+  
+  getSingleBeer = () => {
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+      .then(responseFromApi => {
+        const beerRandom = responseFromApi.data;
+        this.setState({aRandomBeer: beerRandom});
+        console.log(this.state)
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
-  getRandomBeer = () => {
-    const aRandomBeerIndex = this.listOfBeers[Math.floor(Math.random()* this.listOfBeers.length)];
-    const aRandomBeer = this.props.listOfBeers[aRandomBeerIndex]
+  
 
-    this.setState({
-      listOfBeers: aRandomBeer
-      
-    })
-    console.log(this.listOfBeers)
-  }
 
-  render() {
-    return(
-      <div>
-        <Navbar />
-        <p>hi</p>
-      </div>
-    )
+render() {
+  const { aRandomBeer } = this.state;
+  return(
+    <div>
+      <Navbar />
+      <p>hi {aRandomBeer.name}</p>
+    </div>
+  )
   }
 }
 

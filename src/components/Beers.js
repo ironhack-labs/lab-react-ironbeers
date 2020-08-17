@@ -26,12 +26,12 @@ class Beers extends Component {
       return (
         <div>
           <Navbar />
-          <div>
+          <div class="beers">
             {this.state.listOfBeers.map(beer => {
               return (
                 <div key={beer._id}>
                   <Link to={`/beers/${beer._id}`}>
-                    <img src="beer.image" alt=""/>
+                    <img src={beer.image_url} alt=""/>
                     <h3>{beer.name}</h3>
                     <h4>{beer.tagline}</h4>
                     <p>Created by: {beer.contributed_by}</p>

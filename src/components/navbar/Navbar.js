@@ -6,8 +6,8 @@ const navbar = () => {
     <nav className="nav-style">
       <ul>
         <li>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            Home
+          <Link to="/">
+            <img src='https://i.pinimg.com/originals/2e/51/45/2e5145f3e58a0bb07aa4ed9b29564534.png' alt="logo-home"/>
           </Link>
         </li>
       </ul>
