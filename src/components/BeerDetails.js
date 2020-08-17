@@ -33,16 +33,18 @@ class BeerDetails extends Component {
             <div>
                 <Navbar />
                 <div>
-                    <img src={this.state.image_url} />
-                    <div>
+                    <img className="details-img" src={this.state.image_url} />
+                    <div className="main-info-div">
                         <div>
-                            <h2>{this.state.name}</h2>
-                            <p>{this.state.tagline}</p>
+                            <h2 className="details-name">{this.state.name}</h2>
+                            <p className="tagline">{this.state.tagline}</p>
                         </div>
-                        <div>
-                            <p>{this.state.attenuation_level}</p>
-                            <p>{this.state.first_brewed}</p>
+                        <div className="details-nr">
+                            <p className="att">{this.state.attenuation_level}</p>
+                            <p className="date">{this.state.first_brewed}</p>
                         </div>
+                    </div>
+                    <div className="description">
                         <p>{this.state.description}</p>
                         <p>{this.state.contributed_by}</p>
                         <Link to="/beers">Back</Link>

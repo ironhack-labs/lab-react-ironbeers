@@ -52,7 +52,7 @@ class NewBeer extends Component {
         return (
             <div>
                 <Navbar />
-                <form onSubmit={this.handleFormSubmit}>
+                <form className="add-form" onSubmit={this.handleFormSubmit}>
                     <label>Name:</label>
                     <input 
                         type="text"
@@ -102,7 +102,7 @@ class NewBeer extends Component {
                         onChange={e => this.handleChange(e)}
                     />
 
-                    <input type="submit" value="Submit" />
+                    <input className="submit-btn" type="submit" value="Submit" />
                 </form>
             </div>
         )

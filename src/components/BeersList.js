@@ -3,17 +3,22 @@ import axios from 'axios';
 import { Link } from 'react-router-dom'
 
 import Navbar from './Navbar';
+import Search from './Search';
 
 class BeersList extends Component {
     constructor(props) {
         super(props);
-        this.state = { listOfBeers: [] };
+        this.state = { 
+            listOfBeers: [],
+            filteredBeers: []
+        };
     }
 
     getAllBeers = () => {
         axios.get(`https://ih-beers-api2.herokuapp.com/beers`).then( responseFromApi => {
             this.setState({
-                listOfBeers: responseFromApi.data
+                listOfBeers: responseFromApi.data,
+                filteredBeers: responseFromApi.data
             });
         });
     }
@@ -22,22 +27,32 @@ class BeersList extends Component {
         this.getAllBeers();
     }
     
+    dynamicSearch = (query) => {
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+        .then((responseFromApi) => {
+          const searchResult = responseFromApi.data;
+          this.setState({ filteredBeers: searchResult });
+        })
+        .catch((err) => console.log(err));
+    }
+    
     render() {
         return (
             <div>
                 <Navbar />
+                <Search filterBeers={this.dynamicSearch} />
                 {this.state.listOfBeers.map(beer => {
                         return(
-                            <div key={beer._id}>
+                            <div className="beer-card" key={beer._id}>
                                 <div>
-                                    <Link to={`/beers/${beer._id}`}><img src={beer.image_url} /></Link>
+                                    <Link to={`/beers/${beer._id}`}><img className="card-img" src={beer.image_url} /></Link>
                                 </div>
                                 <div>
-                                    <Link to={`/beers/${beer._id}`}>
+                                    <Link className="name-link" to={`/beers/${beer._id}`}>
                                         <h3>{beer.name}</h3>
                                     </Link>
-                                    <p>{beer.tagline}</p>
-                                    <p><b>Created by: </b>{beer.contributed_by}</p>
+                                    <p className="tagline">{beer.tagline}</p>
+                                    <p className="creator"><b>Created by: </b>{beer.contributed_by}</p>
                                 </div>
                                 
                                 

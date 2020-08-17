@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
 
 import Navbar from './Navbar'
 
@@ -32,17 +31,22 @@ class RandomBeer extends Component {
             <div>
                 <Navbar />
                 <div>
-                    <img src={this.state.image_url} />
-                    <div>
-                        <h2>{this.state.name}</h2>
-                        <p>{this.state.tagline}</p>
+                    <img className="details-img" src={this.state.image_url} />
+                    <div className="main-info-div">
+                        <div>
+                            <h2 className="details-name">{this.state.name}</h2>
+                            <p className="tagline">{this.state.tagline}</p>
+                        </div>
+                        <div className="details-nr">
+                            <p className="att">{this.state.attenuation_level}</p>
+                            <p className="date">{this.state.first_brewed}</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>{this.state.attenuation_level}</p>
-                        <p>{this.state.first_brewed}</p>
+                    <div className="description">
+                        <p>{this.state.description}</p>
+                        <p>{this.state.contributed_by}</p>
                     </div>
-                    <p>{this.state.description}</p>
-                    <p>{this.state.contributed_by}</p>
+                    
                 </div>
             </div>
         )
