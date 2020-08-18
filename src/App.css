@@ -43,6 +43,7 @@ nav {
 .search {
     padding: 0.5rem;
     width: 100%;
+    border-radius: 0;
 }
 
 .search-div {

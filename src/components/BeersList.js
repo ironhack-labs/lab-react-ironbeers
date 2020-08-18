@@ -23,9 +23,30 @@ class BeersList extends Component {
         });
     }
 
+    dynamicSearch = (query) => {
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+        .then((responseFromApi) => {
+          const searchResult = responseFromApi.data;
+          this.setState({ filteredBeers: searchResult });
+        })
+        .catch((err) => console.log(err));
+    }
+
     componentDidMount() {
         this.getAllBeers();
     }
+
+    /* filterBeers = (searchString) => {
+        const beersCopy = [...this.state.listOfBeers];
+        const filteredBeers = beersCopy.filter((beer) => {
+           if (beer.name.includes(searchString)) {
+               return true;
+           } else {
+               return false;
+           }
+        })
+        this.setState({ beersToShow: filteredBeers })
+    } */
     
     dynamicSearch = (query) => {
         axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
@@ -41,7 +62,7 @@ class BeersList extends Component {
             <div>
                 <Navbar />
                 <Search filterBeers={this.dynamicSearch} />
-                {this.state.listOfBeers.map(beer => {
+                {this.state.filteredBeers.map(beer => {
                         return(
                             <div className="beer-card" key={beer._id}>
                                 <div>
