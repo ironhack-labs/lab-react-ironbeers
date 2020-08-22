@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.under-nav {
+  margin-top: 50px;
+}
+
+
+.beer-card {
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.beer-img {
+  width: 50px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.beer-title {
+  color: black;
+}
+
+.beer-created {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.beer-details-card {
+  padding: 10px;
+}
+
+.beer-details-img {
+  width: 100px;
+  margin: auto;
+}
+
+.search-input {
+  margin: 15px;
+}
