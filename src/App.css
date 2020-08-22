@@ -1,38 +1,174 @@
-.App {
+/* General */
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.loadingSpinner{
+  text-align: center;
+  margin-top: 200px;
+}
+
+/* Home Page */
+.homeLink{
+  text-decoration: none;
+  color: black;
+}
+
+.homeLink img {
+  width: 100%;
+  height: 200px;
+}
+
+.homeLink h2{
+  margin: 0px 15px;
+  font-weight: 500;
+}
+
+.homeLink p{
+  margin: 0 15px 30px 15px;
+  font-weight: 200;
+}
+
+/* Nav bar*/
+#header{
+  background-color: rgb(0, 174, 255);
+  text-align: center;
+  padding: 10px 0;
+}
+
+#header img {
+  width: 40px;
+}
+
+/* All Beers */
+.oneBeer{
+  display: flex;
+  border-bottom: 1px solid rgb(185, 185, 185);
+  padding: 15px 0px;
+  text-decoration: none;
+  color: black;
+}
+
+.oneBeer img{
+  height: 150px;
+}
+
+.imgBlock{
+  min-width: 100px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.oneBeer .infoBlock{
+  padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.oneBeer .infoBlock h3{
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.oneBeer .infoBlock .tagline{
+  font-size: 20px;
+  color:gray;
+  margin: 10px 0;
+}
+
+.oneBeer .infoBlock .creator{
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Single Beer and Random beer */
+.beerDetails .imgBlock img{
+  height: 400px;
+}
+
+.beerDetails .imgBlock{
+  margin: 20px 0;
+}
+
+.beerDetails .infoBlock{
+  margin: 0 20px;
+}
+
+.beerDetails .firstLine{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+}
+
+.beerDetails h2{
+  font-size: 36px;
+  margin: 0;
+}
+
+.beerDetails .attLevel{
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(185, 185, 185);
+  margin: 0;
+}
+
+.beerDetails .tagline{
+  color: gray;
+  font-size: 22px;
+  margin: 0;
+}
+
+.beerDetails .date{
+  font-weight: bold;
+}
+
+.beerDetails .description{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.beerDetails .contributor{
+  font-weight: bolder;
+  color: gray;
+}
+
+/* New Beer */
+form{
+  margin: 0 25px;
+}
+
+form div{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+form label{
+  font-weight: bold;
+  margin-bottom: 0;
+  padding-left: 10px;
+}
+
+form input, form textarea{
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+form input{
+  min-height: 35px;
+}
+
+form textarea{
+  min-height: 100px;
+}
+
+#formBtn{
+  width: 100%;
+  height: 40px;
+  background-color:rgb(0, 174, 255);
+  border: none;
+  border-radius: 20px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-weight: bold;
+  margin: 10px 0;
 }
