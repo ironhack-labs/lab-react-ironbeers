@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+.home-img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-text {
+  margin: 10px;
+  padding-top: 0px;
+  line-height: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-text h2 {
+  margin: 0px!important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.home-p {
+  color: darkgrey;
+}
+
+.home-link {
+  text-decoration: none;
+  color:black
+}
+
+.home-link:hover {
+  text-decoration: none;
+  color:black
+}
+
+.navbar-expand {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-group {
+  width: 80%;
+  margin-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control {
+  border-radius: 20px;
+}
+
+.form-label {
+  font-weight: 600;
+  padding-left: 20px;
+  margin: 0px;
+}
+
+.add-btn {
+  border-radius: 20px;
+  width: 80%;
+}
+
+@media screen 
+  and (min-device-width: 500px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .home-img {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 0px;
+    }
+    
+
 }
