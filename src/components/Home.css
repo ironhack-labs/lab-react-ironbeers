@@ -1,0 +1,14 @@
+img{
+  width: 100%
+}
+
+.beer-img{
+  height: 200px;
+  width: auto
+}
+
+.beer-img-container{
+  display:flex;
+  justify-content: center;
+  margin: 30px auto
+}
