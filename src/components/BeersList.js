@@ -16,10 +16,15 @@ export default function BeersList(props) {
             </div>
             <Container fluid>
             {
-                !beers.length ? <Spinner animation="border" variant="primary" role="status"></Spinner> :
+                !props.found ? <p>No beer found, please try again</p> :
+                !beers.length ? 
+                <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <Spinner animation="border" variant="primary" role="status"></Spinner>
+                </div> 
+                :
                 beers.map((beer, i) => {
                     return <Link key={'beer' + i} className="home-link" to={`/beers/${beer._id}`}><BeerCard beer={beer}/></Link>
-                })
+                }) 
             }
             </Container>
         </div>

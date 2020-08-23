@@ -16,6 +16,7 @@ function App() {
 
   const [beers, setBeers] = useState([]);
   const [toHome, setToHome] = useState(false);
+  const [found, setFound] = useState(true)
 
   useEffect(() => {
     axios.get(`${API_URL}/`)
@@ -54,7 +55,8 @@ function App() {
     let searchText = e.currentTarget.value;
     axios.get(`${API_URL}/search?q=${searchText}`)
       .then((res) => {
-        setBeers(res.data)
+        !res.data.length ? setFound(false) : setFound(true)
+        !res.data ? setBeers(beers) : setBeers(res.data)
       })
   }
 
@@ -63,7 +65,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/beers" render={() => {
-          return <BeersList beers={beers} onSearch={handleSearch}/>
+          return <BeersList found={found} beers={beers} onSearch={handleSearch}/>
         }} />
         <Route path="/beers/:beerId" render={(routeProps) => {
           return <BeerDetails beers={beers} {...routeProps}/>
