@@ -30,7 +30,7 @@ class ListBeers extends Component {
             
             <div key={beer._id}>
                 <img src={beer.image_url} alt="Beer img" style={{ width: '30px' }} />
-                <Link key={beer._id} to={'/beers/' + beer._id}><h1>{beer.name}</h1></Link>
+                <Link key={beer._id} to={'/beers/' $ beer._id}><h1>{beer.name}</h1></Link>
                 <h3>{beer.tagline}</h3>
                 <p>{beer.contributed_by}</p>
             </div>
@@ -39,7 +39,7 @@ class ListBeers extends Component {
 
         return (
             <div>
-                {listBeer}
+                {ListBeer}
             </div>
         )
     }
