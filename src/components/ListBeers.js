@@ -13,8 +13,9 @@ class ListBeers extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://ih-beers-api2.herokuapp.com/beers/random')
+        axios.get('https://ih-beers-api2.herokuapp.com/beers')
             .then((res) => {
+                console.log(res)
                 this.setState({
                     beers: res.data
                 })
@@ -27,19 +28,19 @@ class ListBeers extends Component {
 
         const ListBeer = this.state.beers.map((beer) => {
             return (
-            
-            <div key={beer._id}>
-                <img src={beer.image_url} alt="Beer img" style={{ width: '30px' }} />
-                <Link key={beer._id} to={'/beers/' + beer._id}><h1>{beer.name}</h1></Link>
-                <h3>{beer.tagline}</h3>
-                <p>{beer.contributed_by}</p>
-            </div>
-            )
-        }
+
+                <div key={beer._id}>
+                    <img src={beer.image_url} alt="Beer img" style={{ width: '30px' }} />
+                    <Link key={beer._id} to={`/beers/${beer._id}`}><h1>{beer.name}</h1></Link>
+                    <h3>{beer.tagline}</h3>
+                    <p>{beer.contributed_by}</p>
+                </div>
+            );
+        });
 
         return (
             <div>
-                {listBeer}
+                {ListBeer}
             </div>
         )
     }
