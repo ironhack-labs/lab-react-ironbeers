@@ -67,7 +67,7 @@ export class NewBeer extends Component {
                   <input type="text" name="contributed_by" onChange={this.handleChange} value={this.state.contributed_by} className="form-control"
                   />
                 </div>
-                <input type="submit" value="Create beer" className="btn  btn-dark"/>
+                <input type="submit" value="new beer" className="btn  btn-dark"/>
               </form>
             </div>
           </div>
