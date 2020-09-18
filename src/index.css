@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 10px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.homeImage{
+  width: 100%;
+}
+
+.beerCard{
+  display: flex;
+  justify-content: space-around;
+}
+
+.beerImage{
+  height: 100px;
+  padding: 10px;
+}
+
+.beerInfo{
+  width: 250px;
 }

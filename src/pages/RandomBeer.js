@@ -7,7 +7,12 @@ function RandomBeer() {
     return beer ? (
         <Layoutapp>
             <div>
-
+                <img src="" alt=""/>
+                <h2>{beer.name}</h2>
+                <h3>{beer.tagline}</h3>
+                <h3>{beer.firstBrewed}</h3>
+                <h3>{beer.description}</h3>
+                <h3>{beer.contibuted_by}</h3>
             </div>
         </Layoutapp>
     ) : (<h1>Loading</h1>)

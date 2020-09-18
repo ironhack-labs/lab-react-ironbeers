@@ -1,14 +1,21 @@
 import React, { useState } from "react"
-import { Layout, Menu } from "antd"
+import { Layout } from 'antd';
 import { Link } from "react-router-dom"
+const { Header, Footer, Sider, Content } = Layout;
 
-function LayoutApp() {
+function LayoutApp({children}) {
     return (
-        <header>
-        <Link to={'/'}>
-            <h1>HOME</h1>
-        </Link>
-        </header>
+        <>
+            <Layout>
+            <Header>
+                <Link to='/'>HOME</Link>
+            </Header>
+            <Content>
+                {children}
+            </Content>
+            <Footer>Created with love by Ironhackers</Footer>
+            </Layout>
+        </>
     )
 }
 
