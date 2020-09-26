@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Nav from './Nav';
 
 class ListBeers extends Component {
   state = {
@@ -22,22 +23,28 @@ class ListBeers extends Component {
   render() {
     if(!this.state.beers) return (<div>Filling the barrels...</div>);
     return (
-      <div>
-        <h1>All of the beers</h1>
-        {this.state.beers.map(beer=>{
-          return (
-            <div key={beer._id}>
-              <Link to={`/beers/${beer._id}`}>
-                <figure><img src={beer.image_url} height={50} alt={beer.name}/></figure>
-                <h2>{beer.name}</h2>
-              </Link>
-              <blockquote>{beer.tagline}</blockquote>
-              <q>Created by: {beer.contributed_by}</q>
-            </div>
-          )
-        })}
-        <Link to={`/`}>Back home</Link>
-      </div>
+      <Fragment>
+        <Nav />
+        <section className="page">
+          {this.state.beers.map(beer=>{
+            return (
+              <div key={beer._id}>
+                <Link to={`/beers/${beer._id}`}>
+                  <figure>
+                    <img src={beer.image_url} alt={beer.name}/>
+                  </figure>
+                  <article>
+                    <h2>{beer.name}</h2>
+                    <blockquote>{beer.tagline}</blockquote>
+                    <p>Created by: {beer.contributed_by}</p>
+                  </article>
+                </Link>
+                <hr/>
+              </div>
+            )
+          })}
+        </section>
+      </Fragment>
     );
   }
 }

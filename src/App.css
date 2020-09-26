@@ -4,12 +4,163 @@ body, figure {
 }
 
 .App {
+  width: 100vw;
+  height: 100vh;
   text-align: center;
 }
 
+@media only screen and (min-width: 768px) {
+  .App {
+    margin: auto;
+    max-width: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+
+  .btn-back {
+    padding: 0 !important;
+  }
+}
+
 .App figure>div {
-  background-size: cover;
-  background-position: center;
+  background-size: 500px;
+  background-position: left;
+  background-repeat: no-repeat;
   height: 25vh;
   width: 100vw;
+}
+
+.App>div {
+  height: 33vh;
+  font-size:2rem; 
+}
+
+.App>.page {
+  height: calc(100vh - 3.5rem);
+  overflow: auto;
+}
+
+.App>.page a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.App>.page figure {
+  flex: 1;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.App>.page a>article {
+  flex: 4;
+  text-align: left;
+}
+
+.App>.page a>article h2,
+.App>.page a>article p {
+  margin: 0
+}
+.App>.page a>figure>img {
+  height: 120px;
+}
+
+nav,
+.btn-back {
+  background-color: skyblue;
+  width: 100vw;
+  max-width: 500px;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-back {
+  padding: 1rem;
+}
+
+nav>a {
+  font-size: 2rem;
+}
+
+.single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  /* height: 100%; */
+}
+
+.single figure img {
+  height: 300px;
+}
+
+.single article {
+  padding: 1rem;
+
+}
+
+.single article header,
+.single article aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single article header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.single article aside {
+  font-weight: bold;
+}
+
+.single article small,
+blockquote {
+  color: gray;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border-width: 1px;
+  border-color: lightgray;
+  outline: none;
+}
+
+form label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+form label:not(:first-of-type) {
+  margin-top: 0.5rem;
+}
+
+form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: skyblue;
+  color: white;
+  outline: none;
+}
+
+form button:hover {
+  background-color: lightskyblue;
 }
