@@ -3,28 +3,50 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Nav from './Nav';
 
+function Search(props) {
+  return (
+    <Fragment>
+      <span role="img" aria-label="search">👓</span>
+      <input type="text" name="search" id="search" value={props.query} onChange={props.handleChange}/>
+    </Fragment>
+  );
+}
+
 class ListBeers extends Component {
   state = {
-    beers: []
+    beers: [],
+    query: ''
   }
 
   getAllBeers() {
-    axios.get('https://ih-beers-api2.herokuapp.com/beers')
+    const query = this.state.query ? '/search?q='+this.state.query : '';
+
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers${query}`)
     .then(response => {
       this.setState({beers: response.data});
     })
     .catch(error=>console.log(error));
   }
 
+  handleChange = (e) => {
+    this.setState({query: e.target.value});
+  }
+
   componentDidMount(){
     this.getAllBeers();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    this.getAllBeers();
+  }
+
   render() {
-    if(!this.state.beers) return (<div>Filling the barrels...</div>);
+    if(!this.state) return (<div>Filling the barrels...</div>);
+
     return (
       <Fragment>
         <Nav />
+        <Search query={this.state.query} handleChange={this.handleChange} />
         <section className="page">
           {this.state.beers.map(beer=>{
             return (
