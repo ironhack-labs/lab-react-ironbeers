@@ -1,0 +1,20 @@
+.beer-container{
+    margin: 70px 200px 70px 200px;
+    display: flex;
+}
+
+ img {
+    width: 160px;
+} 
+
+
+.beer-text {
+    margin-left: 50px;
+    text-align: left;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+

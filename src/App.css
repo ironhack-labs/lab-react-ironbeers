@@ -1,38 +1,84 @@
+body {
+   /* background-color: aqua; */
+   margin: 0 100px;
+   border: 20px solid #03b6fc;
+   border-top: none;
+   
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.singleBeer-container {
+  padding: 50px 200px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img {
+  width: 6vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.name-attenuation {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+}
+
+.tagline-brewed {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+}
+
+.text-contributed {
+  text-align: left;
+}
+
+.btn-single {
+  background-color: #03b6fc;
+  border-radius: 30px;
+  width: 35vh;
+  height: 6vh;
+  border: none;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+  outline: none;
+}
+
+button:hover  {
+  text-decoration: underline;
+}
+
+.link-single {
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+}
+
+.all-containers {
+  border-top: 20px solid #03b6fc;
+  background-image: url('https://images.unsplash.com/photo-1505075106905-fb052892c116?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+input {
+  border: 1px outset;
+  width: 50%;
+  height: 3vh;
+  border-radius: 30px;
+  outline-style: none;
+}
+
+.form {
+  font-size: x-large;
+  margin: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
