@@ -22,6 +22,7 @@ figure {
 
   .btn-back {
     padding: 0 !important;
+    height: 10px;
   }
 }
 
@@ -125,7 +126,7 @@ blockquote {
   margin: 0;
 }
 
-form {
+/* form {
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -163,4 +164,4 @@ form button {
 
 form button:hover {
   background-color: lightskyblue;
-}
+} */
