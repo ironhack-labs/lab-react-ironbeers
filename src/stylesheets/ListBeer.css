@@ -1,0 +1,10 @@
+.img-description {
+	width: 40px;
+	height: auto;
+	margin: 4em;
+}
+.beer-item {
+	height: 13em;
+	display: flex !important;
+	align-items: center;
+}
