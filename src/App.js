@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import HttpService from './utils/HttpService';
 
 function App() {
+  const http = new HttpService();
+  console.log(http.getData());
   return (
     <div className="App">
       <header className="App-header">
