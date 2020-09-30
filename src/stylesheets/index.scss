@@ -1,0 +1,28 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Oxygen', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  margin: 2rem auto;
+  font-weight: 700;
+}
+
+table.table {
+  td,
+  th {
+    vertical-align: middle;
+  }
+  img {
+    max-width: 55px;
+  }
+}
