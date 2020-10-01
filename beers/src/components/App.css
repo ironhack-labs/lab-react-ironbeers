@@ -1,0 +1,28 @@
+img {
+  width: 100%;
+}
+
+nav {
+  height: 80px;
+  font-size: 2em; 
+  background-color: #3dc4fc;
+  color: white;
+}
+
+/* .phonescreen {
+  height: 812px;
+  width: 375px;
+  margin: 50px auto
+} */
+
+.card {
+  padding: 20px 10px;
+  margin: 10px 5px;
+  height: 95%
+}
+
+.card img {
+  height: 300px;
+  object-fit: contain;
+  
+}
