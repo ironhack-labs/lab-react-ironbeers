@@ -1,0 +1,23 @@
+h1 {
+    margin: 75px;
+    font-size: 3em;
+    text-align: center;
+}
+
+img {
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    padding: 50px 0;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 15px;
+    margin-bottom: 40px;
+    
+}
+
+.indexRow {
+    margin: 100px;
+}
