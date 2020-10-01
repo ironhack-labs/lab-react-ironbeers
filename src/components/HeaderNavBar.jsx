@@ -31,9 +31,11 @@ class HeaderNavBar extends React.Component {
         >
           <ul className="navbar-nav mr-auto">
             {urls.map((url, index) => (
-              <NavLink className="nav-link" key={index} to={url.target}>
-                {url.name}
-              </NavLink>
+              <li key={`${index}-${url.target}`}>
+                <NavLink className="nav-link" to={url.target}>
+                  {url.name}
+                </NavLink>
+              </li>
             ))}
           </ul>
           <form className="form-inline my-2 my-lg-0">
