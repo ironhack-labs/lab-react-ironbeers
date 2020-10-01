@@ -1,0 +1,26 @@
+.imageCardBeer{
+width:10%;
+object-fit:contain ;
+
+}
+
+.beer-card{
+    display:flex;
+    justify-content: row;
+    margin-top:20px;
+    padding-bottom: 15px;
+    border-bottom:1px rgb(235, 228, 228) solid
+}
+
+.card-description{
+margin-left:35px;
+
+}
+
+.subtext{
+    font-size: 12px;
+}
+
+.tagline{
+    color:rgb(151, 147, 147);
+}
