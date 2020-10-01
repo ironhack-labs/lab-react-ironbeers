@@ -1,0 +1,17 @@
+.beerListImg{
+  width: 100px;
+  display: block;
+  margin:auto;
+  margin-top: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(59, 56, 56)
+}
+
+.homeIcon{
+  height: 50px;
+  display: block;
+  margin: auto;
+}
