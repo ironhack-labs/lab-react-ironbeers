@@ -1,26 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import ListBeers from './components/ListBeers';
+import NewBeer from './components/NewBeer';
+import RandomBeers from './components/RandomBeers';
+import { getAllBeers } from './services/api-client';
+import SingleBeer from './components/SingleBeer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    beers: []
+  }
+
+  // componentDidMount() {
+  //   getAllBeers()
+  //     .then(beers => {
+  //       this.setState({
+  //         beers : beers
+  //       })
+  //       console.log(beers)
+  //     })
+    
+      
+  // }
+
+  render() {
+
+   
+
+    return (
+      <div className="App">
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/beers' component={ListBeers} />
+          <Route exact path='/beers/:id' component={SingleBeer} />
+          <Route exact path='/random-beer' component={RandomBeers} />
+          <Route exact path='/new-beer' component={NewBeer} />
+        </Switch>
+      </div>
+    );
+  }
+
 }
 
 export default App;
