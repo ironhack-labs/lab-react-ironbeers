@@ -1,0 +1,14 @@
+.NavBar {
+    background-color: rgb(14,144,244);
+    padding: 0 0 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.navBarLink {
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bolder;
+}

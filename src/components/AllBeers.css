@@ -1,0 +1,31 @@
+.AllBeers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 40px;
+}
+
+.beerCard {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid rgb(114, 112, 112);
+    list-style: none;
+}
+
+.beerCard:hover {
+background-color: rgb(190, 178, 178);;
+}
+
+.liLink {
+    text-decoration: none;
+    color: rgb(114, 112, 112);
+    width: 400px;
+    margin: 10px;
+}
+
+.beerPhotoSm {
+    height: 200px;
+    
+}

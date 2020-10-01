@@ -1,0 +1,18 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.noStyle {
+    text-decoration: none;
+    color: rgb(114, 112, 112);
+    width: 400px;
+    margin: 10px;
+    border: 1px solid rgb(114, 112, 112);
+}
+
+.homeImage {
+    width: 400px;
+}
