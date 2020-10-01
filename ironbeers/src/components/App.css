@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.container{
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.container img {
+  width: 100%;
+}
+
+.container p {
+  font-size: 0.8rem;
+  
+}
