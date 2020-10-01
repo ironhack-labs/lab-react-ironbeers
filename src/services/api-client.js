@@ -14,3 +14,8 @@ export const idBeer = (id) => {
           .then((res) => res.data);
   };
 
+export const randomBeer = () => {
+    return http.get('/random')
+        .then(res => res.data)
+}
+

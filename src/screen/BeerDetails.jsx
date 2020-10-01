@@ -1,9 +1,9 @@
 import React from 'react';
 import DetailBeer from '../components/DetailBeer';
 import NavBar from '../components/Navbar';
-import { randomBeer } from '../services/api-client';
+import { idBeer } from '../services/api-client';
 
-export default class RandomBeer extends React.Component {
+export default class BeerDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,9 +12,9 @@ export default class RandomBeer extends React.Component {
   }
 
   componentDidMount() {
-    randomBeer().then((res) =>
+    idBeer(this.props.match.params.id).then((res) =>
       this.setState({
-        beer: res
+        beer: res,
       })
     );
   }
@@ -36,7 +36,7 @@ export default class RandomBeer extends React.Component {
     return (
       <div>
         <NavBar />
-        <DetailBeer beer={beer} randomBeer={true}/>
+        <DetailBeer beer = {beer} />
       </div>
     );
   }
