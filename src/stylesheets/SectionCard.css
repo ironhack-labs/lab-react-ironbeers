@@ -1,0 +1,32 @@
+.SectionCard {
+    max-width: 760px;
+    box-shadow: 2px 2px 10px 2px grey;
+    color: black;
+    margin: 1rem 0;
+}
+
+.SectionCard:hover {
+    box-shadow: 2px 2px 10px 7px lightskyblue;
+}
+
+.SectionCard__content h2 {
+    margin: 0;
+    padding-top: 8px;
+}
+
+@media only screen and (max-width: 360px) {
+    .SectionCard__image {
+        height: 42vh;
+    }
+}
+
+.SectionCard__image {
+    width: 100vw;
+    max-width: 760px;
+}
+
+.SectionCard__content {
+    border: 2px solid gainsboro;
+    border-top: none;
+    padding: 0 1rem;
+}
