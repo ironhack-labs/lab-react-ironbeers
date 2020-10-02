@@ -121,7 +121,7 @@ footer {
     .card-pic {
       position: absolute;
       content: '';
-      width: 80%;
+      width: 90%;
       height: 80%;
       margin: auto;
       transform: scale(1);
@@ -242,5 +242,28 @@ footer {
     padding: 0.4rem 3.2rem;
     background: transparent;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 578px) {
+  .home-link {
+    &:before {
+      width: 3rem;
+      left: 4rem;
+      margin-left: 0;
+      top: 1.8rem;
+    }
+  }
+
+  .single-card {
+    .card-body {
+      padding: 2rem;
+    }
+
+    .card-header {
+      height: 30rem;
+      border-right: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
   }
 }

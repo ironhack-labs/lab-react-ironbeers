@@ -46,7 +46,6 @@ export default class NewBeer extends React.Component {
                 {`
                 body {
                     background: url(./images/004.jpg) no-repeat bottom center / cover;
-                    height: 100vh;
                     position: relative;
                     display: flex;
                     justify-content: center;
