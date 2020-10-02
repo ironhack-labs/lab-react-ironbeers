@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import AllBeers from './components/AllBeers';
+import OneBeer from './components/OneBeer';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
 
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/beers" component={AllBeers} />
+          <Route exact path="/beers/:id" component={OneBeer} />
           <Route exact path="/random-beer" component={RandomBeer} />
           <Route exact path="/new-beer" component={NewBeer} />
         </Switch>

@@ -1,0 +1,24 @@
+
+
+.formAdd {
+    font-size: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formAdd input {
+    font-size: 10px;
+    height: 15px;
+    max-width: 50%;
+}
+
+.formAdd textarea {
+    font-size: 10px;
+    height: 15px;
+    max-width: 50%;
+}

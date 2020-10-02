@@ -12,10 +12,12 @@
     margin: 10px;
     border: 1px solid rgb(114, 112, 112);
     list-style: none;
+    font-size: 12px;
+    border-radius: 5px;
 }
 
 .beerCard:hover {
-background-color: rgb(190, 178, 178);;
+    background-color: rgb(190, 178, 178);
 }
 
 .liLink {
@@ -25,7 +27,11 @@ background-color: rgb(190, 178, 178);;
     margin: 10px;
 }
 
+.liLink:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .beerPhotoSm {
-    height: 200px;
-    
+    height: 100px;   
 }

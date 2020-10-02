@@ -1,0 +1,44 @@
+.OneBeer {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.beerDetail {
+    display: flex;
+    padding: 10px 0 10px 40px;
+    margin: 5px;
+    width: 600px;
+    margin: 10px;
+    border: 1px solid rgb(114, 112, 112);
+    list-style: none;
+    border-radius: 5px;
+}
+
+.beerDetail img {
+    padding-right: 40px;
+}
+
+.beerDetail div {
+    text-align: left;
+}
+
+.beerDetail p {
+    font-size: 14px;
+}
+
+.splitted {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    height: 40px;
+    width: 100%;
+}
+
+.beerPhotoBg {
+    height: 200px;
+}
+
+.white {
+    color: white;
+}

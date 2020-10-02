@@ -1,27 +1,32 @@
 import React from 'react';
-import { getRandomBeer } from '../services/allServices';
-import './RandomBeer.css';
+import { Link } from 'react-router-dom';
+import { getOneBeer } from '../services/allServices';
+import './OneBeer.css';
 
-export default class extends React.Component {
+export default class OneBeer extends React.Component {
     constructor(props) {
         super(props);
         this.props = props;
     }
+
     state = {
-        randomBeer: null
-    }
+        beer: null
+    };
 
     componentDidMount() {
-        getRandomBeer()
-            .then(randomBeer => {
+        getOneBeer(this.props.match.params.id)
+            .then(beer => {
                 this.setState({
-                    randomBeer
-                });
-            });
+                    beer
+                })
+            })
+
     };
 
     render() {
-        const beer = this.state.randomBeer;
+        const beer = this.state.beer
+
+
         if (!beer) {
             return (
                 <div>Loading...</div>
@@ -44,11 +49,14 @@ export default class extends React.Component {
                                 </div>
                                 <p>{beer.description}</p>
                                 <p>{beer.contributed_by}</p>
+                                <Link to="/beers">
+                                    <div className="btn btn-primary">All beers</div>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             );
-        };
+        }
     };
 };

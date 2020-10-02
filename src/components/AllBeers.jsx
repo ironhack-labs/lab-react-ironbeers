@@ -13,14 +13,12 @@ export default class AllBeers extends React.Component {
             .then(beers => {
                 this.setState({
                     beers
-                })
-            })
-
+                });
+            });
     };
 
     render() {
         const beers = this.state.beers
-
 
         if (!beers.length) {
             return (
@@ -28,16 +26,14 @@ export default class AllBeers extends React.Component {
             )
         } else {
             const beersLi = beers.map(beer => (
-
                 <li className="beerCard">
-                    <Link className="liLink">
+                    <Link to={`/beers/${beer._id}`} className="liLink">
                         <img src={beer.image_url} className="beerPhotoSm" alt="beer" />
                         <h3>{beer.name}</h3>
                         <p>{beer.tagline}</p>
-                        <p><b>Created by:</b>{beer.contributed_by}</p>
+                        <p><b>Created by: </b>{beer.contributed_by.split('<')[0]}</p>
                     </Link>
                 </li>
-
             ));
             return (
                 <ul className="AllBeers">
@@ -45,7 +41,5 @@ export default class AllBeers extends React.Component {
                 </ul>
             );
         }
-
-
     };
 };

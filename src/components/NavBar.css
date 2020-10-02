@@ -12,3 +12,8 @@
     font-size: 50px;
     font-weight: bolder;
 }
+
+.navBarLink:hover {
+    color: rgb(209, 209, 209);
+    text-decoration: none;
+}
