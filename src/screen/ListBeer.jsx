@@ -1,14 +1,15 @@
 import React from 'react';
 import NavBar from '../components/Navbar';
 import '../stylesheets/ListBeer.css';
-import { allBeer } from '../services/api-client';
+import { allBeer, searchBeer } from '../services/api-client';
 import { Link } from 'react-router-dom';
 
 export default class ListBeer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      beers: null
+      beers: null,
+      Search: ''
     };
   }
 
@@ -18,6 +19,18 @@ export default class ListBeer extends React.Component {
         beers: res,
       })
     );
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      Search: e.target.value,
+    });
+    this.searchBeer(this.state.Search)
+  };
+
+  searchBeer = (params) => {
+    searchBeer(this.state.Search)
+      .then (res => this.setState({beers : res}))
   }
 
   render() {
@@ -36,6 +49,13 @@ export default class ListBeer extends React.Component {
       <div>
         <NavBar />
         <div className="container">
+          <input
+            className="form-control mt-2 mb-3 p-4"
+            placeholder="Search Beer"
+            value={this.state.search}
+            onChange={this.handleChange}
+            name="Search"
+          />
           <ul className="list-group mb-5">
             {this.state.beers.map((beer, index) => {
               return (
