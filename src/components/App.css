@@ -1,0 +1,40 @@
+main{
+
+    padding: 40px 30px
+}
+
+h2{
+
+    font-size: 1.5em;
+    font-weight: 300;
+    color: black
+}
+
+h3{
+
+    font-size: 1.3em;
+    font-weight: 400;
+    color: grey
+}
+
+h4{
+
+    font-size: .9em;
+    font-weight: 400;
+    color: black
+}
+
+@media (min-width: 768px) {
+  
+    h2{
+        font-size: 2em;
+    }
+
+    h3{
+        font-size: 1.5em;
+    }
+
+    h4{
+        font-size: 1em;
+    }
+}

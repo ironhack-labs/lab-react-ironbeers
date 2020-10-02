@@ -1,0 +1,50 @@
+.all-beers{
+
+    padding: 0
+}
+
+.beer-list{
+
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+.list-row {
+
+    list-style: none;
+}
+
+.list-row .image{
+
+    display: inline-block;
+
+    /* border: solid 1px green; */
+
+    width: 120px;
+}
+
+.list-row .info{
+
+    /* border: solid 1px red; */
+
+    display: inline-block;
+
+    height: 100%;
+
+    vertical-align: top;
+
+    margin-left: 20px;
+}
+
+.list-row img {
+
+    height: 150px;
+}
+
+@media (min-width: 768px) {
+  
+    .all-beers{
+
+        padding: 40px 30px
+    }
+}

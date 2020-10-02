@@ -1,0 +1,28 @@
+.header-main{
+
+    background-color: royalblue;
+    color: white;
+
+    height: 50px;
+}
+
+.header-main .logo{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+.header-main a{
+
+    height: 70%;
+
+    color: inherit
+}
+
+.header-main svg{
+
+    height: 100%;
+}

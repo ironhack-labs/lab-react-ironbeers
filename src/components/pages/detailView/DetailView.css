@@ -1,0 +1,9 @@
+.detail-view div[class*='col']{
+
+    margin: 15px 0
+}
+
+.detail-view .image img{
+
+    height: 300px;
+}
