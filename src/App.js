@@ -11,11 +11,10 @@ import SingleBeer from './components/SingleBeer'
 function App() {
   return (
     <div className="App">
-      <header>
+      <header className="container-fluid header">
         <NavBar />
       </header>
       <section className="container">
-        <div className="row">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/beers" component={AllBeers} />
@@ -24,9 +23,8 @@ function App() {
             <Route exact path="/random-beer" component={RandomBeer} />
             <Redirect to="/home" />
           </Switch>
-        </div>
       </section>
-      <footer>React IronBeers by Andrés Martínez @2020</footer>
+      <footer className="container-fluid">React IronBeers by Andrés Martínez @2020</footer>
     </div>
   )
 }

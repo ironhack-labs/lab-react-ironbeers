@@ -1,5 +1,246 @@
-.home-img {
-    width: 100%;
-    height: 120px;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+$text: #333;
+$white: #fff;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 2;
+  color: $text;
+  font-size: 1.6rem;
+  padding: 10rem 0;
+
+  strong {
+    font-weight: 700;
   }
-  
+}
+
+.title {
+  margin: 4rem;
+}
+
+.home-link {
+  color: $text;
+  text-align: center;
+  padding-top: 3rem;
+  border-top: solid 0.1rem $text;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: flex;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    background: url(../images/beer.svg) no-repeat center center / contain;
+    left: 50%;
+    margin-left: -3rem;
+    top: -10rem;
+    transform: rotate(0deg);
+    transition: all 200ms ease;
+  }
+
+  &:hover {
+    color: $text;
+    text-decoration: none;
+
+    &:before {
+      transform: rotate(10deg);
+    }
+  }
+}
+
+.header,
+footer {
+  background: $white;
+  position: fixed;
+  z-index: 1;
+  font-size: 20px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  bottom: 0;
+  padding: 2rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  top: 0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    color: $text;
+
+    &:hover {
+      text-decoration: none;
+
+      .icon {
+        margin: 0 0.2rem;
+      }
+    }
+
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      background: url(../images/beer.svg) no-repeat center center;
+      margin: 0 1rem;
+      transition: all 200ms ease;
+    }
+  }
+}
+
+.card {
+  margin-top: 2rem;
+  border: 0;
+
+  .card-header {
+    height: 20rem;
+    position: relative;
+    background: transparent;
+
+    &::before {
+      content: '';
+      width: 3rem;
+      height: 3rem;
+      background: url(../images/more-info.svg) no-repeat center center / contain;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    .card-pic {
+      position: absolute;
+      content: '';
+      width: 80%;
+      height: 80%;
+      margin: auto;
+      transform: scale(1);
+      transition: all 200ms ease-in-out;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover > .card-pic {
+      transform: scale(1.1);
+    }
+  }
+
+  .card-body {
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    h6 {
+      font-size: 1.4rem;
+    }
+
+    .tagline {
+      color: rgba(black, 0.4);
+    }
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  .card-text,
+  .card-body ul {
+    font-size: 1.2rem;
+  }
+
+  .card-footer {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    background: #e9ecef;
+    strong {
+      font-weight: 700;
+      color: #000;
+      display: block;
+    }
+  }
+}
+
+.form-control {
+  border: 0;
+  border-radius: 0;
+  font-size: 1.6rem;
+  border-bottom: solid 0.1rem $text;
+  outline: none;
+}
+
+.search-input {
+  margin: 2rem 0 6rem 0;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../images/search.svg) no-repeat center center / contain;
+    right: 1rem;
+    bottom: 1rem;
+    border-bottom: 0;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.single-card {
+  .card-header {
+    border: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.125);
+    height: 60rem;
+
+    &:before {
+      content: none;
+    }
+
+    &:hover {
+      cursor: initial;
+    }
+
+    &:hover > .card-pic {
+      transform: none;
+    }
+  }
+
+  .card-body {
+    padding: 4rem 0 0 4rem;
+    font-size: 1.4rem;
+
+    h5 {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.new-form {
+  .form-group {
+    margin-bottom: 4rem;
+
+    .form-control {
+      background: transparent;
+    }
+  }
+
+  button {
+    border: solid 0.1rem $text;
+    padding: 0.4rem 3.2rem;
+    background: transparent;
+    margin: 0 auto;
+  }
+}

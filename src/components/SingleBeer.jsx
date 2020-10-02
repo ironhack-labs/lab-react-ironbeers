@@ -31,13 +31,24 @@ export default class SingleBeer extends React.Component {
         return (
             filteredBeer.map((beer) =>
                 <>
-                    <img src={beer.image_url} alt="beer" />
-                    <p><strong>name</strong> {beer.name}</p>
-                    <p><strong>tagline</strong> {beer.tagline}</p>
-                    <p><strong>first brewed</strong> {beer.first_brewed}</p>
-                    <p><strong>attenuation level</strong> {beer.attenuation_level}</p>
-                    <p><strong>description</strong> {beer.description}</p>
-                    <p><strong>contributed by</strong> {beer.contributed_by}</p>
+                    <div className="col-12">
+                        <h1 className="title text-center"><strong>Single</strong> beer</h1>
+                        <div className="card single-card">
+                            <div className="row justify-content-center">
+                                <div className="card-header col-12 col-sm-3">
+                                    <div className="card-pic" style={{background: `url(${beer.image_url}) no-repeat center center / contain`}}></div>
+                                </div>
+                                <div className="card-body col-12 col-sm-6">
+                                    <h5 className="card-title">{beer.name} <br />
+                                        <small className="tagline"><strong>tagline</strong> {beer.tagline}</small></h5>
+                                    <p><strong>first brewed</strong> {beer.first_brewed}</p>
+                                    <p><strong>attenuation level</strong> {beer.attenuation_level}</p>
+                                    <p><strong>description</strong> {beer.description}</p>
+                                    <p className="card-text"><strong>contributed by</strong> @{beer.contributed_by.replace('<', '').replace('>', '').split(' ').splice(-1)}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </>
             )
         )
