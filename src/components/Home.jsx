@@ -16,8 +16,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="d-flex my-md-3 pl-md-3">
-        <div className="col mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-md-right text-white bg-random-beer">
+      <div className="row my-md-3 pl-md-3">
+        <div className="col-12 col-md-6 mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-md-right text-white bg-random-beer">
           <div className="my-3 py-3">
             <h2 className="display-5">Random Beer</h2>
             <p className="lead">
@@ -29,7 +29,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="col mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-md-left text-white bg-new-beer">
+        <div className="col-12 col-md-6 mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-md-left text-white bg-new-beer">
           <div className="my-3 p-3">
             <h2 className="display-5">New Beer</h2>
             <p className="lead">
