@@ -1,0 +1,25 @@
+.home-box{
+    width: 100%;
+}
+
+.home-box img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0px;
+
+}
+
+.home-sections h2{
+    margin: 20px;
+    font-weight: 400;
+
+}
+
+.home-sections p{
+    margin: 20px;
+    padding-bottom: 50px;
+    color:grey
+
+
+}
