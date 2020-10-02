@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HeaderNavBar from './components/HeaderNavBar';
+import HeaderNavBar from './components/layaout/HeaderNavBar';
 import Beers from './components/Beers';
 import Home from './components/Home';
 
