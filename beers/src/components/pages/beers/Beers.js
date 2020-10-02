@@ -27,7 +27,7 @@ class BeersList extends Component {
                 <>
                 <h1>List of beers</h1>
 
-                {this.state.beers.map(beer => <div key={beer.id}><BeersCard {...beer} /></div>)}
+                {this.state.beers.map(beer => <div key={beer._id}><BeersCard {...beer} /></div>)}
 
                 </>
             )

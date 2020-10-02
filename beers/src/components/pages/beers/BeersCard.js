@@ -17,7 +17,7 @@ export default ({ _id, image_url, name,tagline,contributed_by }) => {
                 <p className="card-text">{tagline}</p>
                 <p className="card-text"><small className="text-muted">{contributed_by}</small></p>
             </div>
-            <div class="w-100"></div>
+            <div className="w-100"></div>
         </div>
 
     )
