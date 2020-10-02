@@ -3,11 +3,13 @@ import Header from './Header';
 import axios from 'axios';
 import './ListBeers.css'
 import { Link } from 'react-router-dom';
+import Search from './Search';
 
 class ListBeers extends React.Component {
 
     state = {
-        beers: []
+        beers: [],
+        search: ''
     }
 
     componentDidMount() {
@@ -23,6 +25,19 @@ class ListBeers extends React.Component {
 
     }
 
+    handleSearch(newValue) {
+        this.setState({
+          search: newValue,
+        });
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${newValue}`)
+        .then(response => {
+            this.setState({
+                beers: response.data
+                })
+            })
+
+      };
+
     render() {
 
 
@@ -34,6 +49,10 @@ class ListBeers extends React.Component {
         return (
             <div>
                 <Header />
+                <Search 
+                search={this.state.search}
+                handleSearch={this.handleSearch.bind(this)}
+                />
                 <div className='container'>
                     <div className='row cards-allbeers-container'>
                         {this.state.beers.map(beer => {
@@ -49,7 +68,7 @@ class ListBeers extends React.Component {
                                             <div className="card-body">
                                                 <h2 className="card-title">{beer.name}</h2>
                                                 <h4 className="card-text text-muted">{beer.tagline}</h4>
-                                                <p className="card-text"><b>Created by: </b>{beer.contributed_by.split(" ").slice(0, -1).join(" ")}</p>
+                                                <p className="card-text"><b>Created by: </b>{beer.contributed_by}</p>
                                             </div>
                                         </div>
                                     </div>
