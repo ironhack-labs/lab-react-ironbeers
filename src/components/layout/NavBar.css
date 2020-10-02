@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(170, 202, 240);
+    height: 70px;
+
+}
+
+.icon {
+    padding-top:10px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    filter: invert(1);
+}

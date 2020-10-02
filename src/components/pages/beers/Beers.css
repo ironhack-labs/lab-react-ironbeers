@@ -1,0 +1,13 @@
+.info {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+}
+
+.info img {
+    width: 100px;
+}
+
+.info .text {
+    margin-left: 40px;
+}
