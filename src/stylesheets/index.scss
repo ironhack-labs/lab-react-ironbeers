@@ -1,19 +1,81 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~font-awesome/scss/font-awesome';
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Oxygen', serif;
+  font-family: 'Raleway', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: #343a40 !important;
+}
+
+body ::selection {
+  background: #353866;
+  color: #f8faff;
 }
 
 h1 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto Mono', serif;
   text-align: center;
   margin: 2rem auto;
   font-weight: 700;
+}
+.spinner-border {
+  color: #353866;
+}
+.bg-custom {
+  background-color: #343a40;
+  a {
+    color: #aaabd3;
+  }
+}
+.navbar-toggler {
+  padding: 10px;
+  border: 0 none;
+  box-shadow: 0 none;
+  background-color: rgba(0, 0, 0, 0.2);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.9);
+  }
+  &:focus,
+  :active {
+    border: 0 none;
+  }
+  &.active {
+    color: #eeeeee;
+  }
+}
+.bg-all-beers {
+  background-image: url('../images/all-beers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.bg-random-beer {
+  background-image: url('../images/random-beer.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.bg-new-beer {
+  background-image: url('../images/new-beer.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.list-unstyled {
+  .media {
+    &:nth-child(2n) {
+      background-color: #eeeeee;
+    }
+    img {
+      max-height: 50px;
+      max-width: 20px;
+    }
+  }
 }

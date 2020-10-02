@@ -3,13 +3,12 @@ import React from 'react';
 const MediaList = ({ beer }) => {
   return (
     <li
-      className="media py-2 my-2"
+      className="media py-3 px-2"
       style={{ borderBottom: '1px solid #dfdcdc' }}
     >
       <img
         src={beer.image_url}
-        className="mr-3 align-self-center"
-        style={{ maxHeight: '90px', maxWidth: '40px' }}
+        className="ml-3 mr-4 align-self-center"
         alt={beer.name}
       />
       <div className="media-body">

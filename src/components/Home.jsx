@@ -4,51 +4,42 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div>
-      <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-        <div className="col-md-5 p-lg-5 mx-auto my-5">
-          <h1 className="display-4 font-weight-normal">All beers</h1>
-          <p className="lead font-weight-normal">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            saepe eius sit.
+      <div className="position-relative p-3 p-md-5 m-md-3 text-center bg-all-beers">
+        <div className="col-md-5 py-lg-5 p-lg-3 mx-auto mt-2 mb-5">
+          <h1 className="display-4 font-weight-normal text-white">All beers</h1>
+          <p className="lead font-weight-normal text-white">
+            Dare to know the best selection of beers from IronHack.
           </p>
-          <Link className="btn btn-outline-secondary" to="#">
+          <Link className="btn btn-secondary btn-lg" to="/beers">
             See now
           </Link>
         </div>
-        <div className="product-device shadow-sm d-none d-md-block"></div>
-        <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
       </div>
 
-      <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div className="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+      <div className="d-flex my-md-3 pl-md-3">
+        <div className="col mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-md-right text-white bg-random-beer">
           <div className="my-3 py-3">
-            <h2 className="display-5">Another headline</h2>
-            <p className="lead">And an even wittier subheading.</p>
+            <h2 className="display-5">Random Beer</h2>
+            <p className="lead">
+              Can't decide? <br />
+              Let us select your beer for you.
+            </p>
+            <Link className="btn btn-warning btn-lg" to="/random-beer">
+              Give me one please
+            </Link>
           </div>
-          <div
-            className="bg-light shadow-sm mx-auto"
-            style={{
-              border: '1px solid red',
-              width: '80%',
-              height: '300px',
-              borderRadius: '21px 21px 0 0',
-            }}
-          ></div>
         </div>
-        <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div className="col mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-md-left text-white bg-new-beer">
           <div className="my-3 p-3">
-            <h2 className="display-5">Another headline</h2>
-            <p className="lead">And an even wittier subheading.</p>
+            <h2 className="display-5">New Beer</h2>
+            <p className="lead">
+              Can't find yours?. <br />
+              Upload it now!.
+            </p>
+            <Link className="btn btn-light btn-lg" to="/new-beer">
+              Go! Go! Go!
+            </Link>
           </div>
-          <div
-            className="bg-dark shadow-sm mx-auto"
-            style={{
-              border: '1px solid red',
-              width: '80%',
-              height: '300px',
-              borderRadius: '21px 21px 0 0',
-            }}
-          ></div>
         </div>
       </div>
     </div>

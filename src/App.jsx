@@ -1,12 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import HeaderNavBar from './components/layaout/HeaderNavBar';
+import Footer from './components/layaout/Footer';
 import Beers from './components/Beers';
 import Home from './components/Home';
 
 function App() {
   return (
-    <div>
+    <div className="bg-white">
       <HeaderNavBar
         urls={[
           { name: 'Beers', target: '/beers' },
@@ -20,6 +21,7 @@ function App() {
         {/* <Route exact path="/random-beer" component={RandomBeer} /> */}
         {/* <Route exact path="/new-beer" component={NewBeer} /> */}
       </Switch>
+      <Footer />
     </div>
   );
 }

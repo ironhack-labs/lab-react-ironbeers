@@ -16,16 +16,20 @@ class HeaderNavBar extends React.Component {
 
   render({ urls } = this.props) {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg bg-custom">
         <Link className="navbar-brand" to="/">
-          <FontAwesome name="home" size="2x" onClick={this.handleHideMenu} />
+          <FontAwesome name="beer" size="2x" onClick={this.handleHideMenu} />
         </Link>
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler${this.state.menu ? ' active' : ''}`}
           type="button"
           onClick={this.handleToggleMenu}
         >
-          <span className="navbar-toggler-icon"></span>
+          {this.state.menu ? (
+            <FontAwesome name="times" />
+          ) : (
+            <FontAwesome name="bars" />
+          )}
         </button>
 
         <div

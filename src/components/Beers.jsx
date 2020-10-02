@@ -32,7 +32,7 @@ class Beers extends React.Component {
 
     return (
       <div className="container">
-        <h1 className="mt-5 mb-2">All Beers</h1>
+        <h1 className="my-3">All Beers</h1>
         <div className="d-flex justify-content-end">
           <button
             type="button"
@@ -49,8 +49,8 @@ class Beers extends React.Component {
 
         {this.state.list ? (
           <div className="card-columns py-3">
-            {beers.lenght !== 0 || beers.lenght !== undefined ? (
-              beers?.map((beer, index) => (
+            {beers?.length !== 0 ? (
+              beers.map((beer, index) => (
                 <Card key={`${index}-${beer._id}`} beer={beer} />
               ))
             ) : (
@@ -59,8 +59,8 @@ class Beers extends React.Component {
           </div>
         ) : (
           <ul className="list-unstyled">
-            {beers.lenght !== 0 || beers.lenght !== undefined ? (
-              beers?.map((beer, index) => (
+            {beers?.length !== 0 ? (
+              beers.map((beer, index) => (
                 <MediaList key={`${index}-${beer._id}`} beer={beer} />
               ))
             ) : (
