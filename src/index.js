@@ -1,23 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import HeaderNavBar from './components/HeaderNavBar';
 
 import './stylesheets/index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <HeaderNavBar
-        urls={[
-          { name: 'Beers', target: '/beers' },
-          { name: 'Random Beer', target: '/random-beer' },
-          { name: 'New Beer', target: '/new-beer' },
-        ]}
-      />
-    </Router>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
     <footer></footer>
   </React.StrictMode>,
   document.getElementById('root')

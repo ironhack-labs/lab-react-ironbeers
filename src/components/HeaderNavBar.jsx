@@ -13,7 +13,7 @@ class HeaderNavBar extends React.Component {
 
   render({ urls } = this.props) {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <Link className="navbar-brand" to="/">
           <FontAwesome name="home" />
         </Link>
@@ -32,7 +32,11 @@ class HeaderNavBar extends React.Component {
           <ul className="navbar-nav mr-auto">
             {urls.map((url, index) => (
               <li key={`${index}-${url.target}`}>
-                <NavLink className="nav-link" to={url.target}>
+                <NavLink
+                  className="nav-link"
+                  to={url.target}
+                  onClick={this.toggleMenu}
+                >
                   {url.name}
                 </NavLink>
               </li>
@@ -44,10 +48,7 @@ class HeaderNavBar extends React.Component {
               type="search"
               placeholder="Search"
             />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
-            >
+            <button className="btn btn-secondary my-2 my-sm-0" type="submit">
               Search
             </button>
           </form>
