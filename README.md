@@ -168,7 +168,7 @@ Since we didn't cover how to upload images yet, don't worry about it now - the A
   <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
 </div>
 
-### ### Iteration 7 | Bonus | Filter the beers
+### Iteration 7 | Bonus | Filter the beers
 
 Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beers-api2.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
 
