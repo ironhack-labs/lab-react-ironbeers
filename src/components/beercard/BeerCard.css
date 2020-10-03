@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding: 20px;
+  margin: 20px;
+  justify-content: space-evenly;
+  width: 15rem;
+}
+
+.card .image {
+  width: 5rem;
+  padding: 20px 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .name,
+.card .creator,
+.card .description {
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+.card .name {
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.card .description {
+  padding: 5px 0;
+}
+.card .creator {
+  padding: 5px 0;
+}
+
+.card .creator .creator-one {
+  font-weight: bold;
+}

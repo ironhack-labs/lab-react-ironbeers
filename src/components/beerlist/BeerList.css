@@ -1,0 +1,14 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--primary-bg-color);
+}
+
+@media screen and (max-width: 703px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

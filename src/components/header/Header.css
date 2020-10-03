@@ -1,0 +1,72 @@
+/**
+ * Limit the container in
+ * width for big screens
+ */
+.main-header {
+  background-color: var(--secondary-bg-color);
+  color: #ffffff;
+}
+
+.container {
+  width: 53.75rem;
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/**
+ * By using display: flex
+ * Logo and nav are in 2 cols
+ * align-items make them
+ * vertically centered
+ * justify-content distribute
+ * horizontal spaces around
+ * and flex-wrap break the
+ * things in two lines in
+ * small screens
+ */
+.main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/**
+ * The followings are to
+ * make things more
+ * clean and airy
+ * and contents centered
+ */
+.main-nav ul {
+  margin: 1em 0 0.5em;
+  text-align: center;
+}
+.main-nav li {
+  display: inline;
+}
+.main-nav a {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a:active,
+.main-nav a:visited {
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+/**
+ * Space-around become
+ * Space-between to
+ * distribute space
+ * between the flex-items
+ */
+@media (min-width: 960px) {
+  .main-header .container {
+    justify-content: space-between;
+  }
+}

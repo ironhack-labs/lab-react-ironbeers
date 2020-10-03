@@ -1,27 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import HttpService from './utils/HttpService';
+import BeerList from './components/beerlist/BeerList';
+import Header from './components/header/Header';
 
 function App() {
-  const http = new HttpService();
-  console.log(http.getData());
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <BeerList />
     </div>
   );
 }
