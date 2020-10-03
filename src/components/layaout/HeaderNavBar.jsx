@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 
 class HeaderNavBar extends React.Component {
@@ -17,11 +17,16 @@ class HeaderNavBar extends React.Component {
   render({ urls } = this.props) {
     return (
       <nav className="navbar navbar-expand-lg bg-custom">
-        <Link className="navbar-brand" to="/">
+        <NavLink
+          className="navbar-brand"
+          activeClassName="disabled text-muted"
+          exact
+          to="/"
+        >
           <FontAwesome name="beer" size="2x" onClick={this.handleHideMenu} />
-        </Link>
+        </NavLink>
         <button
-          className={`navbar-toggler${this.state.menu ? ' active' : ''}`}
+          className={`navbar-toggler ${this.state.menu ? 'active' : ''}`}
           type="button"
           onClick={this.handleToggleMenu}
         >

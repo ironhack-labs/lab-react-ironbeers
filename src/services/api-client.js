@@ -7,9 +7,15 @@ const http = axios.create({
 export const getBeers = () => {
   return http.get('/beers').then((response) => response);
 };
+
 export const getBeer = (id) => {
   return http.get(`/beers/${id}`).then((response) => response);
 };
+
 export const getRandomBeer = (id) => {
-  return http.get(`/beers/random`).then((response) => response);
+  return http.get('/beers/random').then((response) => response);
+};
+
+export const setNewBeer = (data) => {
+  return http.post('/beers/new', data).then((response) => response);
 };
