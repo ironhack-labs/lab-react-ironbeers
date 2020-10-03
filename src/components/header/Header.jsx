@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
+
 class Header extends React.Component {
   render() {
     return (
@@ -9,13 +11,13 @@ class Header extends React.Component {
           <nav className="main-nav">
             <ul className="main-nav-list">
               <li>
-                <a href="#">All Beers</a>
+                <Link to="/">All Beers</Link>
               </li>
               <li>
-                <a href="#">Random Beer</a>
+                <Link to="/random">Random Beer</Link>
               </li>
               <li>
-                <a href="#">New Beer</a>
+                <Link to="/new">New Beer</Link>
               </li>
             </ul>
           </nav>
