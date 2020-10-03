@@ -8,3 +8,8 @@ img {
   margin: 0 auto;
   width: 90%;
 }
+
+.beer-info p,
+.beer-info h1 {
+  text-align: left;
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from '../header/Header';
 
-export default function AllBeer() {
+export default function NewBeer() {
   return (
     <div>
       <Header />
-      <h1>All Beer</h1>
+      <h1>New Beer</h1>
     </div>
   );
 }
