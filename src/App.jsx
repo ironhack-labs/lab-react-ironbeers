@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/beers" component={Beers} />
         <Route exact path="/beers/:id" component={Beer} />
-        {/* <Route exact path="/random-beer" component={RandomBeer} /> */}
+        <Route exact path="/random-beer" component={Beer} />
         {/* <Route exact path="/new-beer" component={NewBeer} /> */}
       </Switch>
       <Footer />

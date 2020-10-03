@@ -10,3 +10,6 @@ export const getBeers = () => {
 export const getBeer = (id) => {
   return http.get(`/beers/${id}`).then((response) => response);
 };
+export const getRandomBeer = (id) => {
+  return http.get(`/beers/random`).then((response) => response);
+};

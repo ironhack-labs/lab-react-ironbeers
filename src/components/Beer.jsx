@@ -1,7 +1,6 @@
 import React from 'react';
-import { getBeer } from '../services/api-client';
+import { getBeer, getRandomBeer } from '../services/api-client';
 import Spiner from './layaout/Spiner';
-import TrIngredients from './layaout/TrIngredients';
 
 class Beers extends React.Component {
   state = {
@@ -10,11 +9,17 @@ class Beers extends React.Component {
   };
 
   componentDidMount() {
-    getBeer(this.props.match.params.id).then((response) => {
-      this.setState({
-        beer: response.data,
-      });
-    });
+    this.props.match.params.id
+      ? getBeer(this.props.match.params.id).then((response) => {
+          this.setState({
+            beer: response.data,
+          });
+        })
+      : getRandomBeer().then((response) => {
+          this.setState({
+            beer: response.data,
+          });
+        });
   }
 
   handleClickDetails = () => {
@@ -26,15 +31,28 @@ class Beers extends React.Component {
   };
 
   render() {
-    const beer = this.state.beer;
+    const {
+      name,
+      tagline,
+      image_url,
+      description,
+      first_brewed,
+      attenuation_level,
+      contributed_by,
+      food_pairing,
+    } = this.state.beer;
 
     return (
       <div className="container">
-        {beer.length !== 0 ? (
+        {this.state.beer.length !== 0 ? (
           <div>
-            <h1 className="my-3">{beer.name}</h1>
-            <p className="lead text-center">{beer.tagline}</p>
-            <img src={beer.image_url} className="img-fluid" alt={beer.name} />
+            <h1 className="my-3">{name}</h1>
+            <p className="lead text-center">{tagline}</p>
+            <img
+              src={image_url}
+              className="img-fluid mx-auto d-block"
+              alt={name}
+            />
             <div className="d-flex justify-content-between my-3">
               <h4 className="mr-3 my-auto">Details</h4>
               <button
@@ -50,31 +68,28 @@ class Beers extends React.Component {
                 <p>
                   <b>Description:</b>
                   <br />
-                  {beer.description}
+                  {description}
+                  <br />
+                  <b>First brewed:</b>
+                  <br />
+                  {first_brewed}
+                  <br />
+                  <b>Attenuation level:</b>
+                  <br />
+                  {attenuation_level}
+                  <br />
+                  <b>Contributed by:</b>
+                  <br />
+                  {contributed_by}
                 </p>
-                {beer.ingredients && (
-                  <div>
-                    <p>
-                      <b>Ingedients:</b>
-                    </p>
-                    <table className="table table-striped table-dark">
-                      <thead>
-                        <tr>
-                          <th scope="col">Type</th>
-                          <th scope="col">Name</th>
-                          <th scope="col">Quantity</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {Object.keys(beer.ingredients)?.map((key, index) => (
-                          <TrIngredients
-                            key={`${key}-${index}`}
-                            ingredient={beer.ingredients[key]}
-                          />
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
+                <hr />
+                <h3>Combine it with:</h3>
+                {food_pairing?.length && (
+                  <ul>
+                    {food_pairing.map((food, index) => (
+                      <li key={`${index}-${food}`}>{food}</li>
+                    ))}
+                  </ul>
                 )}
               </div>
             )}
