@@ -60,13 +60,13 @@ h1 {
   background-image: url('../images/random-beer.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center top;
 }
 .bg-new-beer {
   background-image: url('../images/new-beer.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center center;
 }
 .list-unstyled {
   .media {
@@ -74,8 +74,8 @@ h1 {
       background-color: #eeeeee;
     }
     img {
-      max-height: 50px;
-      max-width: 20px;
+      max-height: 70px;
+      max-width: 30px;
     }
   }
 }

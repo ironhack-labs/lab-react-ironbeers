@@ -7,3 +7,6 @@ const http = axios.create({
 export const getBeers = () => {
   return http.get('/beers').then((response) => response);
 };
+export const getBeer = (id) => {
+  return http.get(`/beers/${id}`).then((response) => response);
+};

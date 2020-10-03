@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import HeaderNavBar from './components/layaout/HeaderNavBar';
 import Footer from './components/layaout/Footer';
 import Beers from './components/Beers';
+import Beer from './components/Beer';
 import Home from './components/Home';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/beers" component={Beers} />
+        <Route exact path="/beers/:id" component={Beer} />
         {/* <Route exact path="/random-beer" component={RandomBeer} /> */}
         {/* <Route exact path="/new-beer" component={NewBeer} /> */}
       </Switch>

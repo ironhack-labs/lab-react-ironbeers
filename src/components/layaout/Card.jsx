@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { getRandomClassColor } from '../../utils/utils';
 
 const Card = ({ beer }) => {
@@ -17,6 +18,9 @@ const Card = ({ beer }) => {
         <p className={`card-text ${color.color}`}>
           <b>{beer.contributed_by}</b>
         </p>
+        <Link to={`/beers/${beer._id}`} className="btn btn-info btn-block">
+          Take one
+        </Link>
       </div>
     </div>
   );
