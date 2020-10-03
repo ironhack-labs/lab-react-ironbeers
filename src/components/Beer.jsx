@@ -23,9 +23,10 @@ class Beer extends React.Component {
 
   render() {
     return (
-      <div className="row" key={this.state.beer._id}>
-        <div className="col-sm-6">
-          <div className="card">
+      
+        <div className="col">
+          
+          <div className="card"  key={this.state.beer._id}>
             <img
               className="card-img-top mx-auto beers"
               src={this.state.beer.image_url}
@@ -44,7 +45,7 @@ class Beer extends React.Component {
           </div>
         
         </div>
-      </div>
+      
 
 
 // image

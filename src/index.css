@@ -5,9 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0,0,0, 0.2);
+  padding: 20px 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+  color: black;
+
+}
+
+small{
+  color: grey
+}
+
+.card{
+  padding: 20px;
+  margin-bottom: 20px
+}
+
+.card-img-top.beers{
+  
+  width: 100px;
+  margin-bottom: 20px;
+}
+.card h5{
+ color: orange
+}
+
+form{
+  margin: 0 auto;
 }

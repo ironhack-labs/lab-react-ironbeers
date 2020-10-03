@@ -4,7 +4,7 @@ import './App.css';
 
 import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-import Header from './components/Header';
+
 import Beers from './components/Beers';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
@@ -20,7 +20,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="container-fluid">
-          <Header />
+          <h2>Iron Beers</h2>
 
           <div className="row justify-content-md-center">
             <Switch>

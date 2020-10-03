@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import '../styles/Beers.css';
+import Header from './Header';
 
 
 class RandomBeer extends React.Component {
@@ -15,9 +16,10 @@ class RandomBeer extends React.Component {
   }
 
   render() {
-    return <div className="row" key={this.state.beer._id}>
-    <div className="col-sm-6">
-      <div className="card">
+    return (
+    <div className="col">
+      <Header />
+      <div className="card" key={this.state.beer._id}>
         <img
           className="card-img-top mx-auto beers"
           src={this.state.beer.image_url}
@@ -36,7 +38,8 @@ class RandomBeer extends React.Component {
       </div>
     
     </div>
-  </div>
+    )
+  
     
   }
 }
