@@ -1,1 +1,49 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  justify-content: center;
+}
 
+.detail .image {
+  width: 400px;
+  padding: 20px 10px;
+}
+
+.detail .name,
+.detail .creator,
+.detail .description {
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+.detail .name {
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.detail .description {
+  padding: 5px 0;
+  font-size: 1rem;
+}
+.detail .creator {
+  padding: 5px 0;
+  font-size: 1rem;
+}
+
+.detail .creator .creator-one {
+  font-weight: bold;
+}
+
+.detail .creator .creator-one::after {
+  content: ' ';
+}

@@ -1,9 +1,9 @@
 import React from 'react';
-import './RandomBeer.css';
+import BeerDetail from '../beerdetail/BeerDetail';
 
 class RandomBeer extends React.Component {
   render() {
-    return <div>Random Beer component</div>;
+    return <BeerDetail />;
   }
 }
 

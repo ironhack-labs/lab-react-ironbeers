@@ -45,3 +45,7 @@
 .card .creator .creator-one {
   font-weight: bold;
 }
+
+.card .creator .creator-one::after {
+  content: ' ';
+}
