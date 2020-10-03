@@ -33,10 +33,13 @@ class Beers extends React.Component {
   }
 
   render() {
+    if (!this.state.beers.length) return (<img src="https://i.gifer.com/4V0b.gif"></img>)
+   
     return (
       <div className="col">
         <Header />
         <label className="mr-2 mt-2">Search: </label>
+        
         <input
           type="text"
           onChange={this.handleChange}

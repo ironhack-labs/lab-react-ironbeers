@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import Header from './Header';
 
 class Beer extends React.Component {
   state = {
-    beer: {},
+    beer: null,
   };
   componentDidMount() {
     axios.get('https://ih-beers-api2.herokuapp.com/beers').then((response) => {
@@ -22,10 +23,11 @@ class Beer extends React.Component {
   //   }
 
   render() {
+    if (!this.state.beer) return (<img src="https://i.gifer.com/4V0b.gif"></img>)
     return (
       
         <div className="col">
-          
+           <Header />
           <div className="card"  key={this.state.beer._id}>
             <img
               className="card-img-top mx-auto beers"

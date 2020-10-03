@@ -6,7 +6,7 @@ import Header from './Header';
 
 class RandomBeer extends React.Component {
   state = {
-    beer: [],
+    beer: null,
   };
 
   componentDidMount() {
@@ -16,7 +16,9 @@ class RandomBeer extends React.Component {
   }
 
   render() {
+    if (!this.state.beer) return (<img src="https://i.gifer.com/4V0b.gif"></img>)
     return (
+      
     <div className="col">
       <Header />
       <div className="card" key={this.state.beer._id}>
