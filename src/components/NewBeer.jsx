@@ -1,6 +1,7 @@
 import React from 'react';
 import { setNewBeer } from '../services/api-client';
 import Input from './layaout/Input';
+import Textarea from './layaout/Textarea';
 
 const validations = {
   name: (value) => value.length > 1,
@@ -8,7 +9,7 @@ const validations = {
   description: (value) => value.length > 1,
   first_brewed: (value) => value.length > 1,
   brewers_tips: (value) => value.length > 1,
-  attenuation_level: (value) => typeof value === 'number',
+  attenuation_level: (value) => value.length >= 1,
   contributed_by: (value) => value.length > 1,
 };
 
@@ -33,6 +34,7 @@ class NewBeer extends React.Component {
       contributed_by: true,
     },
     touch: {},
+    success: false,
   };
 
   handleChange = (event) => {
@@ -66,45 +68,101 @@ class NewBeer extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
-    setNewBeer().then((response) => {
-      console.log(response);
+    setNewBeer(this.state.data).then((response) => {
+      response.status === 200 &&
+        this.setState({
+          success: true,
+        });
+      setTimeout(() => {
+        this.props.history.push('/');
+      }, 5000);
     });
   };
 
   render() {
-    const { data, error, touch } = this.state;
+    const { data, error, touch, success } = this.state;
     const isError = Object.values(error).some((err) => err);
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-8">
-            <form onSubmit={this.handleSubmit}>
-              {console.log(error[{}])}
-              <Input
-                type="text"
-                name="name"
-                value={data.name}
-                onChange={this.handleChange}
-                onBlur={this.handleBlur}
-                error={error[data.name]}
-                touch={touch[data.name]}
-              />
-              <button
-                type="submit"
-                className="btn btn-primary"
-                disabled={isError}
-              >
-                Send
-              </button>
-            </form>
+      <div className="container py-4">
+        {success ? (
+          <div className="alert alert-success mt-3">
+            New beer successfully saved to database!
           </div>
-          <div className="col-4">
-            <label>State</label>
-            <pre>{JSON.stringify(this.state, null, ' ')}</pre>
-          </div>
-        </div>
+        ) : (
+          <form onSubmit={this.handleSubmit}>
+            <Input
+              type="text"
+              name="name"
+              value={data.name}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              error={error['name']}
+              touch={touch['name']}
+            />
+            <Input
+              type="text"
+              name="tagline"
+              value={data.tagline}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              error={error['tagline']}
+              touch={touch['tagline']}
+            />
+            <Textarea
+              name="description"
+              value={data.description}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              error={error['description']}
+              touch={touch['description']}
+            />
+            <Input
+              type="text"
+              name="first_brewed"
+              value={data.first_brewed}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              error={error['first_brewed']}
+              touch={touch['first_brewed']}
+            />
+            <Input
+              type="text"
+              name="brewers_tips"
+              value={data.brewers_tips}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              error={error['brewers_tips']}
+              touch={touch['brewers_tips']}
+            />
+            <Input
+              type="number"
+              name="attenuation_level"
+              value={data.attenuation_level}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              error={error['attenuation_level']}
+              touch={touch['attenuation_level']}
+            />
+            <Input
+              type="text"
+              name="contributed_by"
+              value={data.contributed_by}
+              onChange={this.handleChange}
+              onBlur={this.handleBlur}
+              error={error['contributed_by']}
+              touch={touch['contributed_by']}
+            />
+
+            <button
+              type="submit"
+              className="btn btn-primary btn-lg btn-block"
+              disabled={isError}
+            >
+              Send new beer
+            </button>
+          </form>
+        )}
       </div>
     );
   }
