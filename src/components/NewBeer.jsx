@@ -11,12 +11,12 @@ export default class NewBeer extends React.Component {
         brewers_tips: '',
         attenuation_level: 1,
         contributed_by: ''
-    }
+    };
 
     createBeer(event) {
-        event.preventDefault()
+        event.preventDefault();
         createNewBeer(this.state)
-            .then(() => this.props.history.push('/'))          
+            .then(() => this.props.history.push('/'));          
     }
 
 
@@ -64,7 +64,7 @@ export default class NewBeer extends React.Component {
                         <input type="text" className="form-control" name="contributed_by" value={this.state.contributed_by} onChange={(event) => this.changeState(event)} />
                     </div>
 
-                    {Object.values(this.state).every((value) => value) && <button className="btn btn-primary mb-5">ADD NEW</button>}
+                    {Object.values(this.state).every((value) => value) ? <button className="btn btn-primary mb-5">ADD NEW</button> : <div className="btn btn-secondary mb-5">Add All Fields</div>}
                 </form>
             </div>
         );
