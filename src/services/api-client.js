@@ -4,3 +4,7 @@ const baseURL = 'https://ih-beers-api2.herokuapp.com/beers';
 export const getBeers = () => {
   return axios.get(baseURL).then((response) => response.data);
 };
+
+export const getRandomBeer = () => {
+  return axios.get(`${baseURL}/random`).then((response) => response.data);
+};

@@ -5,16 +5,12 @@ class BeerDetail extends React.Component {
   render() {
     return (
       <div className="detail">
-        <div className="name">Mahou</div>
-        <img className="image" src="https://picsum.photos/400"></img>
-        <div className="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam,
-        </div>
+        <div className="name">{this.props.beer.name}</div>
+        <img className="image" src={this.props.beer.image_url}></img>
+        <div className="description">{this.props.beer.tagline}</div>
         <div className="creator">
-          <span className="creator-one">Created by</span>
-          <span className="creator-two">Pepe Perez</span>
+          <span className="creator-one">Created by:</span>
+          <span className="creator-two">{this.props.beer.contributed_by}</span>
         </div>
       </div>
     );
