@@ -33,7 +33,7 @@ class Beers extends React.Component {
   }
 
   render() {
-    if (!this.state.beers.length) return (<img className="center" src="https://i.gifer.com/4V0b.gif"></img>)
+    if (!this.state.beers.length) return (<img className="center" src="https://i.gifer.com/4V0b.gif" alt="aaa"></img>)
    
     return (
       <div className="col">

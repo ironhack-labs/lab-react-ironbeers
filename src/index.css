@@ -30,7 +30,9 @@ small{
 
 .card{
   padding: 20px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  background-color: rgba(255,255,255, 0.5);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
 }
 
 .card-img-top.beers{
