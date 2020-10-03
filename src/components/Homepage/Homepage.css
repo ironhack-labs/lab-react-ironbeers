@@ -1,0 +1,22 @@
+.menu {
+  padding: 10px;
+  text-align: start;
+  color: #959595;
+  line-height: normal;
+  width: 100vw;
+}
+
+.menu img {
+  width: 100%;
+}
+
+.details {
+  padding: 0 30px;
+  font-size: 1.3em;
+}
+
+.main {
+  color: black;
+  font-size: 1.8em;
+  text-align: start;
+}
