@@ -1,11 +1,12 @@
 import React from 'react';
+import './NavBar.css';
 
 export default function NavBar() {
   return (
-    <nav className=" navbar-dark bg-primary mb-3">
+    <nav>
       <div className="container">
         <header>
-          <a className="navbar-brand" href="/">
+          <a className="link" href="/">
             Home
           </a>
         </header>

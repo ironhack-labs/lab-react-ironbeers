@@ -1,0 +1,44 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.form-box {
+  margin: 2px;
+  padding: 2px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.form-box > label {
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+input {
+  border-radius: 15px;
+  border: 1px solid #c9c8c8;
+  padding: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.description {
+  padding: 50px;
+}
+
+.submit {
+  border-radius: 15px;
+  background-color: #4ec4f8;
+  border: 0px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 50px;
+  margin: 10px;
+}

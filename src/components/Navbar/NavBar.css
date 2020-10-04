@@ -1,0 +1,17 @@
+nav {
+  background-color: #4ec4f8;
+  height: 60px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.link {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: white;
+}

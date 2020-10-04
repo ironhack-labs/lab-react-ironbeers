@@ -23,3 +23,13 @@ export const getSingleBeer = async (id) => {
     return error;
   }
 };
+
+export const getRandomBeer = async () => {
+  try {
+    const response = await service.get(`/random`);
+    const beer = response.data;
+    return beer;
+  } catch (error) {
+    return error;
+  }
+};
