@@ -32,16 +32,20 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route
+              exact
               path="/beers"
               render={(props) => (
                 <AllBeers {...props} beersList={this.state.beersList} />
               )}
             />
-            <Route path="/random-beer" component={SingleBeer} />
+            {/* <Route path="/random-beer" component={SingleBeer} /> */}
             <Route path="/new-beer" component={NewBeer} />
             <Route
+              exact
               path="/beers/:beerId"
-              render={(props) => <SingleBeer {...props} />}
+              render={(props) => (
+                <SingleBeer {...props} singleBeer={this.state.singleBeer} />
+              )}
             />
           </Switch>
         </BrowserRouter>

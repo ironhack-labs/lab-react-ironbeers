@@ -1,0 +1,32 @@
+.single-beer-card {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+}
+.single-image-container {
+  width: 100%;
+  justify-items: center;
+  padding: 30px;
+}
+
+.single-image-container > img {
+  height: 300px;
+}
+
+.single-beer-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+  text-align: start;
+}
+
+.single-beer-details > h5 {
+  color: #969595;
+}
+
+.single-beer-details > p {
+  font-size: 10px;
+  font-weight: 700;
+}

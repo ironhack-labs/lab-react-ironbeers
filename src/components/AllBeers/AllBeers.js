@@ -8,8 +8,8 @@ export default function AllBeers(props) {
     <div className="beers-container">
       <NavBar />
       {props.beersList.map((beer) => (
-        <div key={beer.id}>
-          <Link to={`/beers/:beerId`} className="beer-card">
+        <div key={beer._id}>
+          <Link to={`/beers/${beer._id}`} className="beer-card">
             <div className="image-container">
               <img src={beer.image_url} alt={beer.name} />
             </div>
@@ -17,7 +17,7 @@ export default function AllBeers(props) {
               <h4>{beer.name}</h4>
               <h5>{beer.tagline}</h5>
               <p>
-                <span>contributed_by: </span>
+                <span>Created by: </span>
                 {beer.contributed_by}
               </p>
             </div>
