@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import BeerDetail from './components/beerdetail/BeerDetail';
 import BeerList from './components/beerlist/BeerList';
 import Header from './components/header/Header';
 import NewBeer from './components/newbeer/NewBeer';
@@ -21,6 +22,8 @@ function App() {
           <Route path="/new">
             <NewBeer />
           </Route>
+          {/* TO DO: pass beer as props */}
+          {/* <Route exact path="/beers/:id" component={BeerDetail} /> */}
         </Switch>
       </Router>
     </div>

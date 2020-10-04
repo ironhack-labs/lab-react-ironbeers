@@ -1,3 +1,7 @@
+.navlink {
+  text-decoration: none;
+}
+
 .card {
   display: flex;
   flex-direction: column;
