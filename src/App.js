@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import BeerById from './components/beerbyid/BeerById';
 import BeerDetail from './components/beerdetail/BeerDetail';
 import BeerList from './components/beerlist/BeerList';
 import Header from './components/header/Header';
@@ -22,7 +23,7 @@ function App() {
           <Route path="/new">
             <NewBeer />
           </Route>
-          <Route exact path="/beers/:id" component={BeerDetail} />
+          <Route exact path="/beers/:id" component={BeerById} />
         </Switch>
       </Router>
     </div>

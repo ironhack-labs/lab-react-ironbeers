@@ -2,8 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './BeerCard.css';
 class BeerCard extends React.Component {
-  state = {};
-
   render() {
     return (
       <NavLink className="navlink" to={`/beers/${this.props.beer._id}`}>
