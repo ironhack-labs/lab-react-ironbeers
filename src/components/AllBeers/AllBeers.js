@@ -1,11 +1,30 @@
 import React from 'react';
 import NavBar from '../Navbar/NavBar';
+import './AllBeers.css';
+import { Link } from 'react-router-dom';
 
-export default function AllBeers() {
+export default function AllBeers(props) {
   return (
-    <div>
+    <div className="beers-container">
       <NavBar />
-      <h1>All beers page</h1>
+      {props.beersList.map((beer) => (
+        <div key={beer.id}>
+          <Link to={`/beers/:beerId`} className="beer-card">
+            <div className="image-container">
+              <img src={beer.image_url} alt={beer.name} />
+            </div>
+            <div className="beer-details">
+              <h4>{beer.name}</h4>
+              <h5>{beer.tagline}</h5>
+              <p>
+                <span>contributed_by: </span>
+                {beer.contributed_by}
+              </p>
+            </div>
+          </Link>
+          <hr />
+        </div>
+      ))}
     </div>
   );
 }
