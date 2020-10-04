@@ -22,8 +22,7 @@ function App() {
           <Route path="/new">
             <NewBeer />
           </Route>
-          {/* TO DO: pass beer as props */}
-          {/* <Route exact path="/beers/:id" component={BeerDetail} /> */}
+          <Route exact path="/beers/:id" component={BeerDetail} />
         </Switch>
       </Router>
     </div>

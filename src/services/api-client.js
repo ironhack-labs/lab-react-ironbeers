@@ -8,3 +8,7 @@ export const getBeers = () => {
 export const getRandomBeer = () => {
   return axios.get(`${baseURL}/random`).then((response) => response.data);
 };
+
+export const getBeerById = (id) => {
+  return axios.get(`${baseURL}/${id}`).then((response) => response.data);
+};
