@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 class Header extends React.Component {
@@ -11,13 +11,19 @@ class Header extends React.Component {
           <nav className="main-nav">
             <ul className="main-nav-list">
               <li>
-                <Link to="/">All Beers</Link>
+                <NavLink exact activeClassName="selected" to="/">
+                  All Beers
+                </NavLink>
               </li>
               <li>
-                <Link to="/random">Random Beer</Link>
+                <NavLink activeClassName="selected" to="/random">
+                  Random Beer
+                </NavLink>
               </li>
               <li>
-                <Link to="/new">New Beer</Link>
+                <NavLink activeClassName="selected" to="/new">
+                  New Beer
+                </NavLink>
               </li>
             </ul>
           </nav>

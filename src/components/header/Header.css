@@ -7,6 +7,10 @@
   color: #ffffff;
 }
 
+.selected {
+  opacity: 0.5;
+}
+
 .container {
   width: 53.75rem;
   max-width: 100%;
