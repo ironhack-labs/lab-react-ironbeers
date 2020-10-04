@@ -18,17 +18,6 @@
   margin: 0 auto;
 }
 
-/**
- * By using display: flex
- * Logo and nav are in 2 cols
- * align-items make them
- * vertically centered
- * justify-content distribute
- * horizontal spaces around
- * and flex-wrap break the
- * things in two lines in
- * small screens
- */
 .main-header .container {
   display: flex;
   align-items: center;
@@ -36,12 +25,6 @@
   flex-wrap: wrap;
 }
 
-/**
- * The followings are to
- * make things more
- * clean and airy
- * and contents centered
- */
 .main-nav ul {
   margin: 1em 0 0.5em;
   text-align: center;
