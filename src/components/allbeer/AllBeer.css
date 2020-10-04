@@ -13,7 +13,8 @@ a {
   text-decoration: none;
 }
 
-.beer-container {
+.beer-container,
+.single-beer-container {
   display: flex;
   align-items: center;
   width: 90%;
@@ -25,6 +26,5 @@ a {
 img {
   height: 15vh;
   width: auto;
-
   padding: 10px;
 }

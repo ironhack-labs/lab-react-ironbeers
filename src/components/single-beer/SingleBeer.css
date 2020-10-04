@@ -1,0 +1,21 @@
+.single-beer-container {
+  flex-direction: column;
+}
+
+.name-rating,
+.tag-brewed {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  width: 100%;
+  text-align: left;
+}
+
+.single-beer-img {
+  height: 30vh;
+  width: auto;
+}
