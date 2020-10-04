@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './components/home/Home';
 import './App.css';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import AllBeer from './components/allbeer/AllBeer';
 import RandomBeer from './components/randombeer/RandomBeer';
 import NewBeer from './components/new-beer/NewBeer';

@@ -1,0 +1,30 @@
+p {
+  font-size: x-small;
+  margin: 5px;
+}
+
+h3,
+h5 {
+  margin: 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.beer-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 10px auto;
+  border-bottom: 1px solid gray;
+  text-align: left;
+}
+
+img {
+  height: 15vh;
+  width: auto;
+
+  padding: 10px;
+}
