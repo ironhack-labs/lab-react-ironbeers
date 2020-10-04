@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBeer from './SearchBeer';
 
 const listBeers = (props) => {
   const { beers } = props;
@@ -8,6 +9,7 @@ const listBeers = (props) => {
   return (
     <div>
       <h2> List of All Beers </h2>
+      <SearchBeer searchBeer={props.searchBeer} />
       <ul>
         {beers.map(({ _id, image_url, name, tagline, contributed_by }) => (
           <li

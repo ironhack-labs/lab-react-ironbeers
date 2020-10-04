@@ -37,4 +37,15 @@ export const addNewBeer = async (newBeerInfo) => {
   }
 };
 
+export const searchBeers = async (srchWord) => {
+  try {
+    console.log(' service -> searchBeers ', srchWord);
+    const srchResponse = await axiosService.get('/beers/search?q=' + srchWord);
+    console.log('searchBeers respnse from server: ', srchResponse);
+    return srchResponse.data;
+  } catch (error) {
+    return error;
+  }
+};
+
 // export default getAllBeers;

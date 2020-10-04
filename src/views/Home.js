@@ -3,6 +3,7 @@ import {
   getAllBeers,
   getRandomBeer,
   addNewBeer,
+  searchBeers,
 } from '../services/IronBeersAPI';
 import ListBeers from './ListBeers';
 import BeerDetails from './BeerDetails';
@@ -131,6 +132,16 @@ class Home extends Component {
     );
   };
 
+  searchBeer = (srchKey) => {
+    console.log(' search beers of home ', srchKey);
+    searchBeers(srchKey)
+      .then((srchResp) => {
+        console.log(srchResp);
+        this.setState({ beers: srchResp });
+      })
+      .catch((error) => console.log(error));
+  };
+
   createRoutes = () => {
     return (
       <Switch>
@@ -162,7 +173,13 @@ class Home extends Component {
         <Route
           exact
           path="/all-beers"
-          render={(props) => <ListBeers {...props} beers={this.state.beers} />}
+          render={(props) => (
+            <ListBeers
+              {...props}
+              searchBeer={this.searchBeer}
+              beers={this.state.beers}
+            />
+          )}
         />
         <Route exact path="/" Component={Home} />
       </Switch>
