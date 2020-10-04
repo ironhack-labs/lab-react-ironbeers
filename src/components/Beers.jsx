@@ -1,9 +1,10 @@
 import React from 'react';
-import { getBeers } from '../services/api-client';
+import { getBeers, searchBeers } from '../services/api-client';
 import Card from './layaout/Card';
 import MediaList from './layaout/MediaList';
 import Spiner from './layaout/Spiner';
 import FontAwesome from 'react-fontawesome';
+import { getSearchParam } from '../utils/utils';
 
 class Beers extends React.Component {
   state = {
@@ -12,11 +13,19 @@ class Beers extends React.Component {
   };
 
   componentDidMount() {
-    getBeers().then((response) => {
-      this.setState({
-        beers: response.data,
-      });
-    });
+    this.props.location.search
+      ? searchBeers(getSearchParam(this.props.location.search)).then(
+          (response) => {
+            this.setState({
+              beers: response.data,
+            });
+          }
+        )
+      : getBeers().then((response) => {
+          this.setState({
+            beers: response.data,
+          });
+        });
   }
 
   handleClickList = () => {
@@ -32,7 +41,11 @@ class Beers extends React.Component {
 
     return (
       <div className="container">
-        <h1 className="my-3">All Beers</h1>
+        {!this.props.location.search ? (
+          <h1 className="my-3">All Beers</h1>
+        ) : (
+          <h1 className="my-3">Found Beers</h1>
+        )}
         <div className="d-flex justify-content-end">
           <button
             type="button"

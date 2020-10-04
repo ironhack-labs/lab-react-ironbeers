@@ -1,10 +1,20 @@
 import React from 'react';
 
 const Input = (props) => {
-  const { name, type, value, onChange, onBlur, error, touch } = props;
+  const {
+    name,
+    type,
+    value,
+    onChange,
+    onBlur,
+    error,
+    touch,
+    label,
+    placeholder,
+  } = props;
   return (
-    <div className="form-group">
-      <label htmlFor={name}>{name}</label>
+    <div>
+      {label && <label htmlFor={name}>{name}</label>}
       <input
         type={type}
         name={name}
@@ -13,6 +23,7 @@ const Input = (props) => {
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        placeholder={placeholder}
       />
       <div className="invalid-feedback">Please provide a valid {name}.</div>
     </div>

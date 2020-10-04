@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom';
 
 const MediaList = ({ beer }) => {
   return (
-    <li
-      className="media py-3 px-2"
-      style={{ borderBottom: '1px solid #dfdcdc' }}
-    >
+    <li className="media py-3 px-2">
       <img
         src={beer.image_url}
         className="ml-3 mr-4 align-self-top"

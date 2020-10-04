@@ -19,3 +19,6 @@ export const getRandomBeer = (id) => {
 export const setNewBeer = (body) => {
   return http.post('/new', body).then((response) => response);
 };
+export const searchBeers = (query) => {
+  return http.get(`/search?q=${query}`).then((response) => response);
+};

@@ -70,13 +70,24 @@ h1 {
 }
 .list-unstyled {
   .media {
+    border-bottom: 1px solid #dfdcdc;
+
     &:nth-child(2n) {
       background-color: #eeeeee;
+    }
+    &:last-child {
+      border-bottom: 0 none;
     }
     img {
       max-height: 70px;
       max-width: 30px;
     }
+  }
+}
+.input-group {
+  .form-group {
+    margin-bottom: 0;
+    width: 100%;
   }
 }
 .form-group {

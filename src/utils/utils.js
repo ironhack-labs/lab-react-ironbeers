@@ -13,3 +13,7 @@ const bgColors = [
 export const getRandomClassColor = () => {
   return bgColors[Math.floor(bgColors.length * Math.random())];
 };
+
+export const getSearchParam = (string) => {
+  return string.substring(string.indexOf('=') + 1);
+};
