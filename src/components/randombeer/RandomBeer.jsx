@@ -7,13 +7,13 @@ class RandomBeer extends React.Component {
     beer: [],
   };
 
-  geetRandomBeer = () => {
+  fetchRandomBeer = () => {
     getRandomBeer().then((beer) => {
       this.setState({ beer });
     });
   };
   componentDidMount() {
-    this.geetRandomBeer();
+    this.fetchRandomBeer();
   }
 
   componentWillUnmount() {
