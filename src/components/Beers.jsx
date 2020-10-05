@@ -10,6 +10,7 @@ class Beers extends React.Component {
   state = {
     beers: [],
     list: false,
+    notFound: false,
   };
 
   componentDidMount() {
@@ -18,6 +19,7 @@ class Beers extends React.Component {
           (response) => {
             this.setState({
               beers: response.data,
+              notFound: response.data?.length === 0 && true,
             });
           }
         )
@@ -37,7 +39,7 @@ class Beers extends React.Component {
   };
 
   render() {
-    const beers = this.state.beers;
+    const { beers, notFound } = this.state;
 
     return (
       <div className="container">
@@ -46,19 +48,21 @@ class Beers extends React.Component {
         ) : (
           <h1 className="my-3">Found Beers</h1>
         )}
-        <div className="d-flex justify-content-end">
-          <button
-            type="button"
-            onClick={this.handleClickList}
-            className="btn btn-outline-secondary"
-          >
-            {this.state.list ? (
-              <FontAwesome name="list" />
-            ) : (
-              <FontAwesome name="th-large" />
-            )}
-          </button>
-        </div>
+        {beers.length !== 0 && (
+          <div className="d-flex justify-content-end">
+            <button
+              type="button"
+              onClick={this.handleClickList}
+              className="btn btn-outline-secondary"
+            >
+              {this.state.list ? (
+                <FontAwesome name="list" />
+              ) : (
+                <FontAwesome name="th-large" />
+              )}
+            </button>
+          </div>
+        )}
 
         {this.state.list ? (
           <div className="card-columns py-3">
@@ -66,6 +70,8 @@ class Beers extends React.Component {
               beers.map((beer, index) => (
                 <Card key={`${index}-${beer._id}`} beer={beer} />
               ))
+            ) : notFound ? (
+              <p className="text-center">Sorry, not found beer</p>
             ) : (
               <Spiner />
             )}
@@ -76,6 +82,8 @@ class Beers extends React.Component {
               beers.map((beer, index) => (
                 <MediaList key={`${index}-${beer._id}`} beer={beer} />
               ))
+            ) : notFound ? (
+              <p className="text-center">Sorry, not found beer</p>
             ) : (
               <Spiner />
             )}

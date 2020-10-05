@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
-import Search from '../Search';
+import FormSearch from './FormSearch';
 
 class HeaderNavBar extends React.Component {
   state = {
@@ -55,7 +55,7 @@ class HeaderNavBar extends React.Component {
               </li>
             ))}
           </ul>
-          <Search />
+          <FormSearch />
         </div>
       </nav>
     );

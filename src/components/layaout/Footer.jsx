@@ -8,14 +8,12 @@ const Footer = () => {
         <Link
           to="https://www.freepik.es/fotos/fiesta"
           className="text-muted mr-4"
-        >
-          ©
-        </Link>
+        ></Link>
         <Link
           to="https://www.freepik.es/fotos/fiesta"
           className="text-muted mr-4"
         >
-          www.freepik.es
+          Images from - www.freepik.es
         </Link>
       </div>
     </div>
