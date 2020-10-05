@@ -3,7 +3,6 @@ import Header from '../header/Header';
 import { getAllBeer } from '../../services/BeerServices';
 import './AllBeer.css';
 import { Route, Link } from 'react-router-dom';
-import SingleBeer from '../single-beer/SingleBeer';
 
 class AllBeer extends React.Component {
   state = {
@@ -28,7 +27,6 @@ class AllBeer extends React.Component {
     return (
       <div>
         <Header />
-        {/* <Route path="/beers/:beerId" exact component={BeerDetails} /> */}
         <div className="list">
           {this.state.beers.map((beer) => (
             <div key={beer._id} className="beer-container">

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { getAllBeer } from '../../services/BeerServices';
 import './SingleBeer.css';
 import Header from '../header/Header';
+import { Link } from 'react-router-dom';
 
 export default class SingleBeer extends Component {
   state = {
-    beers: [],
     beerId: this.props.match.params.singlebeer,
     beer: [],
   };
@@ -14,13 +14,13 @@ export default class SingleBeer extends Component {
     this.fetchData();
   };
 
-  componentDidUpdate(previousProps, previousState) {
-    const beerChanged =
-      previousProps.match.params.name !== this.props.match.params.name;
-    if (beerChanged) {
-      this.fetchData();
-    }
-  }
+  // componentDidUpdate(previousProps, previousState) {
+  //   const beerChanged =
+  //     previousProps.match.params.name !== this.props.match.params.name;
+  //   if (beerChanged) {
+  //     this.fetchData();
+  //   }
+  // }
 
   fetchData = async () => {
     try {
@@ -28,9 +28,7 @@ export default class SingleBeer extends Component {
 
       const beer = beers.find((beer) => beer._id === this.state.beerId);
 
-      this.setState({ beers, beer }, () =>
-        console.log(`STATE`, this.state.beers)
-      );
+      this.setState({ beer }, () => console.log(`STATE`, this.state.beer));
     } catch (error) {
       console.log(`Error while getting all beers `, error);
     }
@@ -40,9 +38,10 @@ export default class SingleBeer extends Component {
     console.log(`BEER STATE `, this.state.beerId);
     console.log(`BEER Match STATE `, this.state.beer);
     const singleBeer = this.state.beer;
+
     return (
       <div>
-        <Header />{' '}
+        <Header />
         <div key={singleBeer._id} className="single-beer-container">
           <img
             className="single-beer-img"
@@ -60,6 +59,7 @@ export default class SingleBeer extends Component {
           <h4>{singleBeer.description}</h4>
           <p>{singleBeer.contributed_by}</p>
         </div>
+        <Link to="/beers">Take me back to the Beer List</Link>
       </div>
     );
   }
