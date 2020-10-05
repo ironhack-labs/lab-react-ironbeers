@@ -27,6 +27,10 @@ a:hover{
 small{
   color: grey
 }
+.App{
+  max-width: 500px;
+  margin: 0  auto;
+}
 
 .card{
   padding: 20px;
@@ -37,7 +41,7 @@ small{
 
 .card-img-top.beers{
   
-  width: 100px;
+  width: 80px;
   margin-bottom: 20px;
 }
 .card h5{
@@ -50,4 +54,13 @@ form{
 
 .center{
   margin: 0 auto
+}
+.card.beers a{
+  display: flex;
+  
+}
+.card.beers .text{
+  text-align: left;
+  
+
 }

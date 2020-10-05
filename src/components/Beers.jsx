@@ -47,13 +47,16 @@ class Beers extends React.Component {
         />
        
         {this.state.beers.map((el) => (
-          <div className="card" key={el._id}>
+          <div className="card beers" key={el._id}>
             <Link to={`/beers/${el._id}`}>
+
+              
               <img
                 className="card-img-top mx-auto beers"
                 src={el.image_url}
                 alt={el.name}
               ></img>
+              <div className="text">  
               <h5 className="card-title">{el.name}</h5>
               <p className="card-text">{el.tagline}</p>
               <p>
@@ -61,6 +64,8 @@ class Beers extends React.Component {
                   <strong>Created by:</strong> {el.contributed_by}
                 </small>
               </p>
+              </div>
+
             </Link>
           </div>
         ))}

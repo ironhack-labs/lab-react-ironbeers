@@ -34,7 +34,7 @@ class RandomBeer extends React.Component {
         <p>{this.state.beer.description}</p>
         <p>
           <small>
-            <strong>Created by:</strong> {this.state.beer.contributed_by}
+            <strong>Created by:</strong> {this.state.beer.contributed_by.split('<')[0]}
           </small>
         </p>
       </div>
