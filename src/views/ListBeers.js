@@ -17,7 +17,7 @@ const listBeers = (props) => {
             style={{ display: 'flex', fleDirection: 'column' }}
             key={_id}
           >
-            <div className=" list-group-item">
+            <div className=" list-group-item each-beer">
               <img
                 src={image_url}
                 atl=""

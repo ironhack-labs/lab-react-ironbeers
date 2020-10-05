@@ -47,5 +47,3 @@ export const searchBeers = async (srchWord) => {
     return error;
   }
 };
-
-// export default getAllBeers;

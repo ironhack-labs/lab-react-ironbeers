@@ -7,7 +7,7 @@ const navHomeBar = () => {
       className="navbar navbar-light bg-primary"
       style={{ backgroundColor: 'light-blue', justifyContent: 'center' }}
     >
-      <a href="/home">
+      <a href="/">
         <img
           src="/images/home.png"
           alt=""
