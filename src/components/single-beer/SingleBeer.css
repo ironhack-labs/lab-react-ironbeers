@@ -1,5 +1,6 @@
 .single-beer-container {
   flex-direction: column;
+  height: 86vh;
 }
 
 .name-rating,
@@ -16,6 +17,15 @@ p {
 }
 
 .single-beer-img {
-  height: 30vh;
+  height: 40%;
   width: auto;
+}
+
+.back {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  background-color: rgb(62, 196, 252);
 }

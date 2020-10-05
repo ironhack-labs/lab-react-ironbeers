@@ -59,7 +59,9 @@ export default class SingleBeer extends Component {
           <h4>{singleBeer.description}</h4>
           <p>{singleBeer.contributed_by}</p>
         </div>
-        <Link to="/beers">Take me back to the Beer List</Link>
+        <div className="back">
+          <Link to="/beers">Beer List</Link>
+        </div>
       </div>
     );
   }

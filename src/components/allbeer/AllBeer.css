@@ -1,3 +1,6 @@
+body {
+  text-align: center;
+}
 p {
   font-size: x-small;
   margin: 5px;
@@ -21,6 +24,10 @@ a {
   margin: 10px auto;
   border-bottom: 1px solid gray;
   text-align: left;
+}
+
+.single-beer-container {
+  border-bottom: none;
 }
 
 img {

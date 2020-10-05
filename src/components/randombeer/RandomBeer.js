@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../header/Header';
 import { getAllBeer } from '../../services/BeerServices';
-import './RandomBeer.css';
+import '../single-beer/SingleBeer.css';
 
 export default class RandomBeer extends Component {
   state = {
@@ -31,9 +31,9 @@ export default class RandomBeer extends Component {
     return (
       <div>
         <Header />
-        <div key={randomBeer._id} className="random-beer-container">
+        <div key={randomBeer._id} className="single-beer-container">
           <img
-            className="random-beer-img"
+            className="single-beer-img"
             src={randomBeer.image_url}
             alt={randomBeer.name}
           />

@@ -1,0 +1,42 @@
+form {
+  /* border: 1px solid red; */
+  height: 85vh;
+  padding: 50px 20px 20px 20px;
+}
+
+.inputItem {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: bold;
+  font-size: small;
+  margin: 10px;
+}
+
+.inputItem label {
+  padding-left: 20px;
+  padding-bottom: 3px;
+}
+
+.inputItem input,
+form button {
+  height: 25px;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+}
+
+.inputItem textarea {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+}
+
+form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(62, 196, 252);
+  width: 95%;
+  padding: 10px;
+  margin: 0 auto;
+  height: 30px;
+}

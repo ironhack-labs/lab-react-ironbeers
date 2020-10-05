@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from '../header/Header';
 import { getAllBeer } from '../../services/BeerServices';
 import './AllBeer.css';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class AllBeer extends React.Component {
   state = {

@@ -1,15 +1,25 @@
-img {
+.homeImg {
   width: 100%;
+  padding: 0;
+}
+section {
+  height: 33vh;
 }
 
-.beer-info {
+.beer-info,
+.beer {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 5px auto;
   width: 90%;
 }
 
 .beer-info p,
-.beer-info h1 {
+.beer-info h1,
+.beer {
   text-align: left;
+}
+
+.heading {
+  padding: 5px;
 }

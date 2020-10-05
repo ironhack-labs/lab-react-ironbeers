@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import Header from '../header/Header';
-// import { handleInputChange } from '../../services/BeerServices';
+import './NewBeer.css';
 
 export default class NewBeer extends Component {
   state = {
@@ -11,7 +11,7 @@ export default class NewBeer extends Component {
     firstBrewed: '',
     brewersTips: '',
     attenuation: 0,
-    contributedBy: '',
+    contributed_by: '',
   };
 
   submitNew = async (body) => {
@@ -41,7 +41,7 @@ export default class NewBeer extends Component {
       firstBrewed,
       brewersTips,
       attenuation,
-      contributedBy,
+      contributed_by,
     } = this.state;
 
     const data = {
@@ -51,7 +51,7 @@ export default class NewBeer extends Component {
       firstBrewed,
       brewersTips,
       attenuation,
-      contributedBy,
+      contributed_by,
     };
 
     //resets form to empty values
@@ -62,12 +62,12 @@ export default class NewBeer extends Component {
       firstBrewed: '',
       brewersTips: '',
       attenuation: 0,
-      contributedBy: '',
+      contributed_by: '',
     });
 
     //posts data to api
     this.submitNew(data);
-    alert(`${JSON.stringify(data.name, null, 2)} was created.`);
+    // alert(`${JSON.stringify(data.name, null, 2)} was created.`);
   };
 
   handleInputChange = (event) => {
@@ -85,9 +85,8 @@ export default class NewBeer extends Component {
     return (
       <div>
         <Header />
-        <h1>New Beer</h1>
         <form onSubmit={this.handleSubmit}>
-          <div>
+          <div className="inputItem">
             <label>Name</label>
             <input
               type="text"
@@ -96,7 +95,7 @@ export default class NewBeer extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div className="inputItem">
             <label>Tagline</label>
             <input
               type="text"
@@ -105,16 +104,18 @@ export default class NewBeer extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div className="inputItem">
             <label>Description</label>
-            <input
-              type="text"
+            <textarea
+              type="textarea"
+              rows="10"
+              cols="50"
               value={this.state.description}
               name="description"
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div className="inputItem">
             <label>First Brewed</label>
             <input
               type="text"
@@ -123,7 +124,7 @@ export default class NewBeer extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div className="inputItem">
             <label>Brewers Tips</label>
             <input
               type="text"
@@ -132,7 +133,7 @@ export default class NewBeer extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div className="inputItem">
             <label>Attenuation Level</label>
             <input
               type="number"
@@ -141,12 +142,12 @@ export default class NewBeer extends Component {
               onChange={this.handleInputChange}
             />
           </div>
-          <div>
+          <div className="inputItem">
             <label>Contributed By</label>
             <input
               type="text"
-              value={this.state.contributedBy}
-              name="contributedBy"
+              value={this.state.contributed_by}
+              name="contributed_by"
               onChange={this.handleInputChange}
             />
           </div>
