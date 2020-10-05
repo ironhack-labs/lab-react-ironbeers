@@ -1,0 +1,18 @@
+.link-card img {
+    height: 100%;
+    width: 100%;
+}
+
+.link-text h2, p {
+    color: black;
+    text-align: left;
+    margin: 10px;
+    font-weight: 200;
+}
+
+.link-text p {
+    font-size: 15px;
+    color: grey;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}

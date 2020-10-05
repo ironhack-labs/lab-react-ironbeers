@@ -1,3 +1,13 @@
+.header {
+  background-color: #469bdb;
+  height: 10vh;
+}
+
+.header img {
+  height: 6vh;
+  margin: 2vh;
+}
+
 .App {
   text-align: center;
 }
