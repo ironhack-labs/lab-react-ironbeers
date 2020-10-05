@@ -1,0 +1,10 @@
+.beer-card-img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ .cards-allbeers-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 

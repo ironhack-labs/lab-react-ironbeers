@@ -1,0 +1,27 @@
+.all-containers {
+    padding: 10px;
+    text-align: start;
+    color: #959595;
+    line-height: normal;
+    width: 100vw;
+}
+ 
+.all-containers img {
+    width: 100%;
+}
+ 
+.description{
+    padding: 0 30px;
+    font-size: 1.3em;
+}
+
+.link-single:link {
+    color: black;
+    font-size: 1.8em;
+    text-align: start;
+    text-decoration: none;
+}
+
+.link-single:hover {
+    color: blue;
+}
