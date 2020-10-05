@@ -1,5 +1,6 @@
 import React from 'react';
 import { getBeer, getRandomBeer } from '../services/api-client';
+import Paragraph from './layaout/Paragraph';
 import Spiner from './layaout/Spiner';
 
 class Beers extends React.Component {
@@ -8,18 +9,27 @@ class Beers extends React.Component {
     details: false,
   };
 
+  fetchBeer = (id) => {
+    getBeer(id).then((response) => {
+      this.setState({
+        beer: response.data,
+      });
+    });
+  };
+
   componentDidMount() {
-    this.props.match.params.id
-      ? getBeer(this.props.match.params.id).then((response) => {
-          this.setState({
-            beer: response.data,
-          });
-        })
+    this.props.match.params.id !== 'random'
+      ? this.fetchBeer(this.props.match.params.id)
       : getRandomBeer().then((response) => {
           this.setState({
             beer: response.data,
           });
         });
+  }
+
+  componentDidUpdate(oldBeer) {
+    this.props.match.params.id !== oldBeer.match.params.id &&
+      this.fetchBeer(this.props.match.params.id);
   }
 
   handleClickDetails = () => {
@@ -65,31 +75,34 @@ class Beers extends React.Component {
             </div>
             {this.state.details && (
               <div>
-                <p>
-                  <b>Description:</b>
-                  <br />
-                  {description}
-                  <br />
-                  <b>First brewed:</b>
-                  <br />
-                  {first_brewed}
-                  <br />
-                  <b>Attenuation level:</b>
-                  <br />
-                  {attenuation_level}
-                  <br />
-                  <b>Contributed by:</b>
-                  <br />
-                  {contributed_by}
-                </p>
-                <hr />
-                <h3>Combine it with:</h3>
+                {description && (
+                  <Paragraph title="Description: " content={description} />
+                )}
+                {first_brewed && (
+                  <Paragraph title="First brewed: " content={first_brewed} />
+                )}
+                {attenuation_level && (
+                  <Paragraph
+                    title="Attenuation level: "
+                    content={attenuation_level}
+                  />
+                )}
+                {contributed_by && (
+                  <Paragraph
+                    title="Contributed by: "
+                    content={contributed_by}
+                  />
+                )}
                 {food_pairing?.length && (
-                  <ul>
-                    {food_pairing.map((food, index) => (
-                      <li key={`${index}-${food}`}>{food}</li>
-                    ))}
-                  </ul>
+                  <div>
+                    <hr />
+                    <h3>Combine it with:</h3>
+                    <ul>
+                      {food_pairing.map((food, index) => (
+                        <li key={`${index}-${food}`}>{food}</li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
               </div>
             )}

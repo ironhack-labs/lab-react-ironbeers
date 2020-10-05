@@ -29,7 +29,8 @@ h1 {
 }
 .bg-custom {
   background-color: #343a40;
-  a {
+  .nav-link,
+  .navbar-brand {
     color: #aaabd3;
   }
 }
@@ -93,5 +94,10 @@ h1 {
 .form-group {
   label {
     text-transform: capitalize;
+  }
+}
+.dropdown-menu {
+  &.show {
+    min-width: 100%;
   }
 }

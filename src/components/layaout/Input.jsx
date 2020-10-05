@@ -11,6 +11,7 @@ const Input = (props) => {
     touch,
     label,
     placeholder,
+    autocomplete,
   } = props;
   return (
     <div>
@@ -24,6 +25,7 @@ const Input = (props) => {
         onChange={onChange}
         onBlur={onBlur}
         placeholder={placeholder}
+        autoComplete={autocomplete ? 'On' : 'Off'}
       />
       <div className="invalid-feedback">Please provide a valid {name}.</div>
     </div>

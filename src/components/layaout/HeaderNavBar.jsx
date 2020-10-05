@@ -11,6 +11,7 @@ class HeaderNavBar extends React.Component {
   handleToggleMenu = () => {
     this.setState({ menu: !this.state.menu });
   };
+
   handleHideMenu = () => {
     this.setState({ menu: false });
   };
