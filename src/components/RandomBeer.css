@@ -1,0 +1,34 @@
+
+.singleBeerCard {
+    margin : 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height :80vh;
+}
+
+.beerName, .beerNumber {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.singleBeerImg {
+  height: 40%;
+  width: auto;
+}
+
+p {
+  width: 100%;
+  text-align: left;
+}
+
+.beerNumber {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    text-align: right;
+    min-height: 100%;
+
+}

@@ -1,0 +1,14 @@
+
+.homeImg {
+    width: 600px;
+}
+.homeText {
+
+    color: black;
+    justify-content: center;
+    text-align: justify;
+    margin: 20px 400px ;
+    font-weight: 200;
+    font-size: 15px;
+
+}

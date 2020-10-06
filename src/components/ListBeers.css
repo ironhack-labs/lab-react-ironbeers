@@ -1,0 +1,54 @@
+.container {
+    padding: 10px;
+    margin:auto 50vh;
+    width: 100vh;
+    display: flex;
+}
+
+
+.beerCard{
+    padding: 10px;
+    margin:auto 50vh;
+    width: 50vh;
+    border: 1px solid rgb(114, 112, 112);
+    list-style: none;
+    font-size: 12px;
+    border-radius: 5px;
+    
+}
+.beerImg {
+    height: 20vh;
+    margin: 10px auto;
+    text-align:left;
+
+}
+
+/* .beerInfo{
+    justify-content: center;
+    
+} */
+
+h2 {
+
+    font-size: 24px;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 16px;
+    color: grey;
+}
+
+p  { 
+    font-size: 12px;
+    
+}
+
+.navBar {
+    background: #31c3fe;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin:10vh 50vh;
+    width: 50vh;
+}
+
