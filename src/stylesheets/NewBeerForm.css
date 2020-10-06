@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 4em;
+    margin-bottom: 2em;
 }
 
 
@@ -28,6 +29,14 @@
     border: 2px solid lightblue;
     padding: 10px 60px;
     cursor: pointer;
+}
+
+.NewBeerForm__submit:disabled:hover {
+    padding: 7px 18px;
+    background-color: #E3EDF0;
+    border: 2px solid darkgrey;
+    color: rgb(170, 170, 170);
+    cursor: default;
 }
 
 @media only screen and (max-width: 420px) {
