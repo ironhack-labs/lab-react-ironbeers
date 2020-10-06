@@ -1,14 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function Header(){
-return (
-    <div>
-      <Link to='/'>
+function Header() {
+  return (
+    <nav className="navbar navbar-light bg-light">
+        <Link to='/'>
         <header><i class="fas fa-home"></i></header>
         </Link>  
-    </div>
-)
+    </nav>
+  )
 }
 
 export default Header;

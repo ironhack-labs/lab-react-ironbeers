@@ -5,6 +5,7 @@ import Beers from './Beers';
 import RandomBeer from './RandomBeer';
 import NewBeer from './NewBeer'; 
 import BeerDetail from './BeerDetail';
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 function App() {
