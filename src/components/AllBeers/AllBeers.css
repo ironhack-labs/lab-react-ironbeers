@@ -1,0 +1,41 @@
+.container {
+  padding-top: 10px;
+}
+.beer-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.beer-image {
+  height: 130px;
+  margin: 10px auto;
+}
+
+.beer-img-card {
+  margin-right: 4%;
+  width: 100px;
+  text-align: center;
+}
+
+.beer-card-text h5 {
+  color: black;
+  font-weight: normal;
+}
+
+.tagline {
+  color: gray;
+  font-size: small;
+}
+
+.createdBy {
+  font-size: x-small;
+  color: black;
+}
+
+.beer-card-text {
+  width: 70%;
+}
