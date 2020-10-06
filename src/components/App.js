@@ -23,6 +23,7 @@ function App() {
   // after page renders for the first time, update the state (beers)
   // with the response from the API 
   useEffect(() => {
+
     (async () => {
       let source = axios.CancelToken.source();
       try {
@@ -43,10 +44,6 @@ function App() {
     })();
   }, []);
 
-  const addBeer = (res) => {
-    console.log(res);
-  }
-
   // renders the routes
   return (
     <div>
@@ -62,7 +59,7 @@ function App() {
         }}
         />
         <Route exact path='/new-beer' render={() => {
-          return <NewBeer addBeer={addBeer} />;
+          return <NewBeer apiUrl={BEER_API} />;
         }}
         />
       </BrowserRouter>
