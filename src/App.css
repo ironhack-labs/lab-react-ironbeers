@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  padding-left: 2rem;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  background-color: #3DC4FD;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  text-decoration: none;
+}
+
+.home-img {
+  height: 3rem;
+}
+
+.beer-img {
+  height: 20rem;
+  width: 100%;
+}
+
+.home-p {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0 2rem;
+}
+
+.search {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0;
+}
+
+.search-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beer-card {
+  display: flex;
+  align-items: center;
+  border: 1px rgb(195, 192, 192) solid;
+}
+
+.card-img {
+  height: 10rem;
+  width: 8rem;
+  padding: 1rem 2rem;
+  object-fit: contain;
+}
+
+.name-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.tagline {
+  font-weight: 600;
+  color: rgb(149, 149, 149);
+  font-size: 1.1rem;
+}
+
+.creator { 
+  font-size: 0.9rem;
+}
+
+.details-img {
+  height: 20rem;
+  padding-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details-name {
+  padding-left: 0;
+  font-weight: 400;
+}
+
+.main-info-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.details-nr {
+  text-align: end;
+}
+
+.att {
+  font-size: 1.5rem;
+  color: rgb(149, 149, 149);
+}
+
+.date {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.description {
+  padding: 0 1rem;
+}
+
+.add-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem 2rem;
+}
+
+label {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px rgb(193, 193, 193) solid;
+}
+
+textarea {
+  border-radius: 20px;
+  border: 1px rgb(193, 193, 193) solid;
+  padding: 4rem 0;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  background-color: #3DC4FD;
   color: white;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 900px) {
+  .beer-img {
+      height: 40rem;
   }
 }
