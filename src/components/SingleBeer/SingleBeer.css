@@ -1,0 +1,74 @@
+.single-beer-card img {
+    height: 300px;
+    margin: 20px auto 10px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px; 
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #469bdb
+}
+
+.title-tag {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75%;
+    min-height: 100%;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.title-numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    text-align: right;
+    min-height: 100%;
+}
+
+.title-tag h1 {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    margin: auto 10px;
+}
+
+.title-tag h3 {
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    margin: auto 10px;
+}
+
+.title-numbers h2 {
+    display: block;
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+    margin: auto;
+}
+
+.title-numbers p {
+    font-weight: 600;
+    font-size: 12px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.beer-description {
+    padding: 10px;
+}
+
+.author {
+    font-size: 12px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: grey;
+} 

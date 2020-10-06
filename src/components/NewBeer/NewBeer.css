@@ -1,0 +1,20 @@
+.new-beer-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 50vh;
+  margin-top: 20px;
+}
+
+label {
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.new-beer-form input, textarea, button {
+  margin: 10px 20px;
+  border-radius: 0px;
+  border: 1px solid grey;
+  outline: none;
+  padding: 10px;
+} 
