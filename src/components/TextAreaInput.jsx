@@ -1,7 +1,7 @@
 import React from 'react';
 import '../stylesheets/Input.css';
 
-const TextAreaInput = ({ name, value, handleChange, placeholder, error }) => (
+const TextAreaInput = ({ name, value, handleChange, handleBlur, placeholder, error }) => (
   <div className="TextInput">
     <label htmlFor={name} className="TextInput__label">
       {name}
@@ -11,6 +11,7 @@ const TextAreaInput = ({ name, value, handleChange, placeholder, error }) => (
         className={`TextInput__input ${error ? 'input_error' : ''}`}
         value={value}
         name={name}
+        onBlur={handleBlur}
         onChange={handleChange}
         placeholder={placeholder}
       ></textarea>

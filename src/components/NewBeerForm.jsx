@@ -85,7 +85,7 @@ class NewBeerForm extends Component {
           <TextInput
             name="name"
             value={name}
-            onBlur={this.handleBlur}
+            handleBlur={this.handleBlur}
             handleChange={this.handleChange}
             placeholder="Your beer's name"
             error={error.name && touch.name}
@@ -93,7 +93,7 @@ class NewBeerForm extends Component {
           <TextInput
             name="tagline"
             value={tagline}
-            onBlur={this.handleBlur}
+            handleBlur={this.handleBlur}
             handleChange={this.handleChange}
             placeholder="Write a witty tagline"
             error={error.tagline && touch.tagline}
@@ -101,7 +101,7 @@ class NewBeerForm extends Component {
           <TextAreaInput
             name="description"
             value={description}
-            onBlur={this.handleBlur}
+            handleBlur={this.handleBlur}
             handleChange={this.handleChange}
             placeholder="Describe your Beer"
             error={error.description && touch.description}
@@ -109,7 +109,7 @@ class NewBeerForm extends Component {
           <TextInput
             name="first_brewed"
             value={first_brewed}
-            onBlur={this.handleBlur}
+            handleBlur={this.handleBlur}
             handleChange={this.handleChange}
             placeholder="dd/mm/yyyy"
             error={error.first_brewed && touch.first_brewed}
@@ -117,7 +117,7 @@ class NewBeerForm extends Component {
           <TextInput
             name="brewers_tips"
             value={brewers_tips}
-            onBlur={this.handleBlur}
+            handleBlur={this.handleBlur}
             handleChange={this.handleChange}
             placeholder="Tips"
             error={error.brewers_tips && touch.brewers_tips}
@@ -125,7 +125,7 @@ class NewBeerForm extends Component {
           <NumberInput
             name="attenuation_level"
             value={attenuation_level}
-            onBlur={this.handleBlur}
+            handleBlur={this.handleBlur}
             handleChange={this.handleChange}
             placeholder={0}
             error={error.attenuation_level && touch.attenuation_level}
@@ -133,7 +133,7 @@ class NewBeerForm extends Component {
           <TextInput
             name="contributed_by"
             value={contributed_by}
-            onBlur={this.handleBlur}
+            handleBlur={this.handleBlur}
             handleChange={this.handleChange}
             placeholder="Your name"
             error={error.contributed_by && touch.contributed_by}

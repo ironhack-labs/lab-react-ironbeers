@@ -1,7 +1,7 @@
 import React from 'react';
 import '../stylesheets/Input.css';
 
-const NumberInput = ({ name, value, handleChange, placeholder, error }) => (
+const NumberInput = ({ name, value, handleChange, handleBlur, placeholder, error }) => (
   <div className="NumberInput">
     <label htmlFor={name} className="NumberInput__label">
       {name}
@@ -12,6 +12,7 @@ const NumberInput = ({ name, value, handleChange, placeholder, error }) => (
         type="number"
         value={value}
         name={name}
+        onBlur={handleBlur}
         onChange={handleChange}
         placeholder={placeholder}
       ></input>
