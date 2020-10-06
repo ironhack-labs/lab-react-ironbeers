@@ -1,4 +1,6 @@
 import React from 'react';
+import { addNewBeer } from '../services/IronBeersAPI';
+import { Redirect } from 'react-router-dom';
 
 class NewBeer extends React.Component {
   state = {
@@ -12,12 +14,18 @@ class NewBeer extends React.Component {
     isFormSubmitted: false,
   };
 
+  getNewBeer = (data) => {
+    addNewBeer(data)
+      .then((addResp) => {
+        this.setState({ isFormSubmitted: true });
+      })
+      .catch((error) => console.log(error));
+  };
+
   handleSubmit = (evt, data) => {
     evt.preventDefault();
-    console.log('newBeer-> handleSubmit ');
     console.log(this.state);
-    this.setState({ isFormSubmitted: true });
-    this.props.addBeer(this.state);
+    this.getNewBeer(this.state);
   };
 
   handleTextEntered = (evt) => {
@@ -27,6 +35,8 @@ class NewBeer extends React.Component {
   };
 
   render = () => {
+    if (this.state.isFormSubmitted) return <Redirect to="/beers" />;
+
     const newBeerForm = (
       <div>
         <form className="form-horizontal" onSubmit={this.handleSubmit}>
@@ -112,7 +122,6 @@ class NewBeer extends React.Component {
       </div>
     );
     return newBeerForm;
-    // return this.state.isFormSubmitted ? <Redirect to="/" /> : newBeerForm;
   };
 }
 

@@ -1,34 +1,44 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { getRandomBeer, getBeerID } from '../services/IronBeersAPI';
 
-const beerDetails = (props) => {
-  console.log(' beer details: ');
-  let beerDetails = null;
+class BeerDetails extends Component {
+  state = {
+    beerInfo: [],
+  };
 
-  if (props.isRand) {
-    // const randID = Math.floor(Math.random() * props.beers.length);
-    beerDetails = props.randBeer;
-    console.log(beerDetails);
-  } else {
-    const beerId = props.match.params.id;
-    beerDetails = props.beers.filter((eachBeer) => eachBeer._id === beerId);
-    beerDetails = beerDetails[0];
-  }
+  componentDidMount = () => {
+    if (this.props.isRand) {
+      getRandomBeer()
+        .then((beerInfo) => {
+          this.setState({ beerInfo });
+        })
+        .catch((error) => console.log(error));
+    } else {
+      console.log(this.props.match.params.id);
+      getBeerID(this.props.match.params.id)
+        .then((beerInfo) => {
+          this.setState({ beerInfo });
+        })
+        .catch((error) => console.log(error));
+    }
+  };
 
-  console.log('Beer Information:  ', beerDetails);
+  render = () => {
+    console.log(' beer details: ', this.state.beerInfo);
+    return (
+      <div>
+        <img src={this.state.beerInfo.image_url} alt=" " />
+        <h3> {this.state.beerInfo.name} </h3>
+        <strong> {this.state.beerInfo.tagline} </strong>
+        <blockquote> {this.state.beerInfo.first_brewed} </blockquote>
+        <p> {this.state.beerInfo.description} </p>
+        <h5> {this.state.beerInfo.attenuation_level} </h5>
+        <i> {this.state.beerInfo.contributed_by} </i>
+        <Link to="/beers"> All Beers </Link>
+      </div>
+    );
+  };
+}
 
-  return (
-    <div>
-      <img src={beerDetails.image_url} alt=" " />
-      <h3> {beerDetails.name} </h3>
-      <strong> {beerDetails.tagline} </strong>
-      <blockquote> {beerDetails.first_brewed} </blockquote>
-      <p> {beerDetails.description} </p>
-      <h5> {beerDetails.attenuation_level} </h5>
-      <i> {beerDetails.contributed_by} </i>
-      <Link to="/all-beers"> All Beers </Link>
-    </div>
-  );
-};
-
-export default beerDetails;
+export default BeerDetails;
