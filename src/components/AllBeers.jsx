@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 class AllBeers extends React.Component {
 
@@ -17,23 +18,24 @@ class AllBeers extends React.Component {
   render() {
     return (
       <div className="container">
-        hola
         {this.state.beers.map((beer) => {
           return (
-            <div className="card mb-3" style={{ maxWidth: '540px' }}>
-              <div className="row no-gutters">
-                <div className="col-md-4">
-                  <img src="" className="card-img" alt="..."></img>
-                </div>
-                  <div className="col-md-8">
-                    <div className="card-body">
-                      <h5 className="card-title">{beer.name}</h5>
-                      <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+            <div className="card mb-3 d-flex" style={{ maxWidth: '540px' }}>
+                <div className="row no-gutters">
+                  <div className="col-md-4">
+                    <img src={beer.image_url} className="img-fluid mx-auto d-block" alt={beer.name} style={{ maxHeight: '200px'}}></img>
+                  </div>
+                    <div className="col-md-8">
+                      <div className="card-body text-left">
+                        <Link to={`/beers/${beer._id}`}>
+                        <h5 className="card-title">{beer.name}</h5>
+                        </Link> 
+                        <h6 className="card-text"><small className="text-muted">{beer.tagline}</small></h6>
+                        <p className="card-text"><b>Created by: </b>{beer.contributed_by}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
             )
           })}
       </div>

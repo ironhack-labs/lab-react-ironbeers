@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import AllBeers from './AllBeers'
 
 
+
 const HomePage = () => {
   return (
     
       <div>
-        <Link to="/beers" component={AllBeers}>
+        <Link to="/beers">
         <div class="card mb-3">
           <img src="../images/latas-ktGD-U40534942355FNH-624x385@La Verdad.jpg" class="card-img-top" alt="..."></img>
             <div class="card-body">
@@ -17,7 +18,7 @@ const HomePage = () => {
             </div>
         </div>
        </Link>
-       <Link to="/random-beer" component={AllBeers}>
+       <Link to="/random-beer">
         <div class="card mb-3">
           <img src="..." class="card-img-top" alt="..."></img>
             <div class="card-body">
@@ -27,7 +28,7 @@ const HomePage = () => {
             </div>
         </div>
        </Link>
-       <Link to="/new-beer" component={AllBeers}>
+       <Link to="/new-beer">
         <div class="card mb-3">
           <img src="https://static2.laverdad.es/www/multimedia/201708/11/media/cortadas/latas-ktGD-U40534942355FNH-624x385@La%20Verdad.jpg" class="card-img-top" alt="..."></img>
             <div class="card-body">
