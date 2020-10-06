@@ -1,0 +1,38 @@
+.home-header {
+    background-color: lightskyblue;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-icon {
+    color: white;
+    width: 3em;
+}
+
+
+.beer-card {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: 3em;
+    text-align: left;
+}
+
+.beer-image {
+    height: 20em;
+    width: auto;
+    padding: 2em;
+}
+
+.beer-link {
+    color: black;
+    text-decoration: none;
+}
+.beer-tag {
+    color: gray;
+}
+.beer-text {
+    margin-left: 5em;
+}

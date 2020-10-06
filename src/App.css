@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.title {
+  color: black;
+  text-decoration: none;
+}
+.text {
+  text-align: center;
+  line-height: 1.5em;
+  margin: 2em 7em;
+}
