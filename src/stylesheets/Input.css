@@ -1,0 +1,26 @@
+.TextInput, .NumberInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.TextInput__label, .NumberInput__label{
+    margin-right: 1.2em;
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.TextInput__input, .NumberInput__input {
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 9px;
+    width: 50%;
+    transition: width 1.2s ease-in-out, border 0.3s;
+}
+
+.TextInput__input:focus, .NumberInput__input:focus {
+    border: 5px solid deepskyblue;
+    width: 100%;
+}

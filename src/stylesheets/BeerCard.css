@@ -1,0 +1,40 @@
+.BeerCard {
+    display: flex;
+    padding: 2rem 0;
+    border-bottom: 2px solid lightgray;
+    width: 80vw;
+    color: black;
+    margin: 0.5rem auto;
+}
+
+.BeerCard:hover {
+    background-color: lightskyblue;
+    color: white;
+    border-radius: 8px;
+}
+
+.BeerCard__img-wrapper {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.BeerCard img {
+    height: 215px;
+}
+
+.BeerCard__content {
+    margin: 20px 0  0 20px;
+}
+
+.BeerCard__name {
+    font-size: 26px;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.BeerCard__tagline, .tagline{
+    color: #959b9e;
+    font-weight: 800;
+    font-size: 18px;
+}

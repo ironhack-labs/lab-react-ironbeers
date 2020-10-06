@@ -5,7 +5,7 @@ import '../stylesheets/SectionCard.css';
 const SectionCard = (props) => (
   <Link to={props.link}>
     <article className="SectionCard">
-      <img src={props.image} className="SectionCard__image"></img>
+      <img src={props.image} className="SectionCard__image" alt="beer pub"></img>
       <div className="SectionCard__content">
         <h2 className="SectionCard__title">{props.title}</h2>
         <p className="SectionCard__body">

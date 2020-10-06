@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 18px;
 }
 
 @media only screen and (max-width : 360px) {

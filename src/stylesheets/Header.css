@@ -1,0 +1,16 @@
+.Header {
+    background-color: deepskyblue;
+    margin-bottom: 27px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header__icon {
+    color: white;
+}
+
+.Header:hover {
+    background-color: lightskyblue;
+}
