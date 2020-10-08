@@ -12,4 +12,7 @@ export default {
   getOneBeer(id) {
     return service.get('/' + id);
   },
+  getRandomBeer() {
+    return service.get('/random');
+  },
 };
