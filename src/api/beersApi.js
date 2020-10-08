@@ -22,4 +22,8 @@ export default {
     return service.post("/new", data);
   },
 
+  searchOne(data) {
+    return service.get("/search?q=" + data);
+  },
+
 };

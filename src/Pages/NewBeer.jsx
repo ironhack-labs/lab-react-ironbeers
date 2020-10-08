@@ -16,7 +16,6 @@ export default class NewBeer extends Component {
 
 handleChange = (event) => {
 
-  
   const value = event.target.value
   const name = event.target.name
 

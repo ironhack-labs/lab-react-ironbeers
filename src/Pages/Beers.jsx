@@ -22,6 +22,19 @@ export default class Beers extends Component {
       });
   }
 
+  //// BONUS
+  handleChange = (event) => {
+    const value = event.target.value;
+
+    beersApi.searchOne(value).then((apiResponse) => {
+      console.log(apiResponse);
+      this.setState({ beers: apiResponse.data });
+    });
+    console.log();
+  };
+
+  //// BONUS
+
   render() {
     return (
       <div>
