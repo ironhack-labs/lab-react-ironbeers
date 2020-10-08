@@ -13,7 +13,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header/>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/beers" component={Beers} />
         <Route exact path="/random-beer" component={RandomBeers} />
