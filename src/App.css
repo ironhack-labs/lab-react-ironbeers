@@ -2,6 +2,49 @@
   text-align: center;
 }
 
+.header {
+  background-color: #469bdb;
+  height: 10vh;
+}
+
+.beer-card {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: black;
+}
+
+.beer-card img {
+  height: 160px;
+  margin: 10px auto;
+}
+
+.beer-tag {
+  width: 65vw;
+  text-align: left;
+  margin: 0 10px;
+}
+
+.beer-tag h2 {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.beer-tag h3 {
+  font-size: 18px;
+  color: grey;
+}
+
+.beer-tag h3,
+p {
+  font-weight: 100;
+}
+
+.beer-tag p,
+strong {
+  font-size: 12px;
+}
+
 .photo-beer {
   width: 20%;
   height: 20%;
@@ -25,7 +68,9 @@ label {
   font-weight: 600;
 }
 
-.new-beer-form input, textarea, button {
+.new-beer-form input,
+textarea,
+button {
   margin: 10px 20px;
   border-radius: 0px;
   border: 1px solid grey;

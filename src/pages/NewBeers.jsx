@@ -44,7 +44,9 @@ export default class NewBeers extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <div className="header">
+          <Header />
+        </div>
         <h1>New Beer</h1>
         <form className="new-beer-form" onSubmit={this.createBeer}>
           <label>Name</label>

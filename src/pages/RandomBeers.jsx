@@ -20,7 +20,9 @@ export default class RandomBeers extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <div className="header">
+          <Header />
+        </div>
         <h1>random beer</h1>
         <img
           className="photo-beer"

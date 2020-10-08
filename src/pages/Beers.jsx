@@ -28,11 +28,18 @@ export default class Beers extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <div className="header">
+          <Header />
+        </div>
+
         <h1>All Beers</h1>
         {this.state.beers.map((beer) => {
           return (
-            <Link key={beer.name} to={`/beers/${beer._id}`}>
+            <Link
+              className="beer-card"
+              key={beer._id}
+              to={`/beers/${beer._id}`}
+            >
               <div>
                 <img
                   className="photo-beer"
