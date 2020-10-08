@@ -13,3 +13,12 @@ body {
 .homeLink img {
   width: 300px;
 }
+
+.beers {
+  display: flex;
+  width: auto;
+}
+
+.beers img {
+  height: 200px;
+}
