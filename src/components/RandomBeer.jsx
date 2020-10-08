@@ -13,7 +13,6 @@ class RandomBeer extends Component {
     beerAPI
       .getRandomeBeer()
       .then((apiResponse) => {
-        console.log(apiResponse.data);
         this.setState({ randomBeer: apiResponse.data });
       })
       .catch((err) => console.log(err));

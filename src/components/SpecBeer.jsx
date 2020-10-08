@@ -12,13 +12,11 @@ state = {
      console.log()
      beerAPI.getOneBeer(this.props.match.params.id)
      .then((apiResponse) => {
-         console.log(apiResponse.data);
          this.setState({ beer: apiResponse.data});
      }).catch(err => console.log(err));
  }
 
   render() {
-      console.log("Je suis dans specBeer")
      return (
       <div>
         <NavMain />
