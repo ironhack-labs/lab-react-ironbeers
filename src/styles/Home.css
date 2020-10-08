@@ -3,8 +3,7 @@
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  font-weight: 600;
+  justify-content: space-evenly;
 }
 
 .home-nav a {

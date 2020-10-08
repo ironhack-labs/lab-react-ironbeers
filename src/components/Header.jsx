@@ -6,7 +6,7 @@ function Header() {
   return (
     <nav className="header">
       <NavLink className="navlink" exact to="/">
-       Home 🏠
+       <span></span>🏠 Home
       </NavLink>
     </nav>
   );
