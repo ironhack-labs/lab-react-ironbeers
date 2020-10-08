@@ -1,21 +1,20 @@
 import React from 'react'
 import axios from 'axios'
 
-class SingleBeer extends React.Component {
-
+class RandomBeer extends React.Component {
   state = {
     oneBeer: "",
   }
 
-  getSingleBeer() {
-    axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.id}`)
+  getRandomBeer() {
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
     .then(response => {
         this.setState({ oneBeer: response.data})
     })
   }
 
   componentDidMount() {
-    this.getSingleBeer()
+    this.getRandomBeer()
   }
   
 
@@ -40,4 +39,4 @@ class SingleBeer extends React.Component {
   }
 }
 
-export default SingleBeer
+export default RandomBeer
