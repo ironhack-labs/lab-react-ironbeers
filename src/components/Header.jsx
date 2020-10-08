@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <nav className="NavMain">
         <NavLink exact to="/">
-          Home
+        <i class="fas fa-home"></i>
         </NavLink>
       </nav>
     )

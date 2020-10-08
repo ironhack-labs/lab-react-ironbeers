@@ -24,14 +24,30 @@ class OneBeer extends React.Component {
       <div>
         <Header />
         {this.state.beer && (
-          <div>
-            <img src={this.state.beer.image_url} alt="" />
-            <p>{this.state.beer.name}</p>
-            <p>{this.state.beer.tagline}</p>
-            <p>{this.state.beer.first_brewed}</p>
-            <p>{this.state.beer.attenuation_level}</p>
-            <p>{this.state.beer.description}</p>
-            <p>{this.state.beer.contributed_by}</p>
+          <div className="one-beer">
+            <img
+              className="one-beer-img"
+              src={this.state.beer.image_url}
+              alt=""
+            />
+            <div className="one-beer-data">
+              <div className="first-data">
+                <div className="first-data-left">
+                  <h3 className="beer-name">{this.state.beer.name}</h3>
+                  <p className="tagline">{this.state.beer.tagline}</p>
+                </div>
+                <div className="first-data-right">
+                  <p className="attenuation">
+                    {this.state.beer.attenuation_level}
+                  </p>
+                  <p className="brewed">
+                    <b>{this.state.beer.first_brewed}</b>
+                  </p>
+                </div>
+              </div>
+              <p className="beer-description">{this.state.beer.description}</p>
+              <p className="tagline">{this.state.beer.contributed_by}</p>
+            </div>
           </div>
         )}
       </div>

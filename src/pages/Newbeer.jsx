@@ -41,6 +41,7 @@ class Newbeer extends Component {
         <Header />
 
         <form className="Form" onSubmit={this.handleSubmit}>
+
           <label className="label" htmlFor="name">
             Name
           </label>

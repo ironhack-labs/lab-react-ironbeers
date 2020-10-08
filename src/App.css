@@ -1,38 +1,257 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.NavMain {
+  background-color: #4fc3f7;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.fa,
+.fas {
+  color: whitesmoke;
+  font-size: 30px;
+}
+
+.home-link {
+  width: 50vw;
+  margin-bottom: 30px;
+}
+
+.home-link img {
+  width: 50vw;
+  height: 16vh;
+  object-fit: cover;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+.beer-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60vw;
+}
+
+.search {
+  width: 60vw;
+  height: 4vh;
+  padding-left: 20px;
+}
+
+.beer-in-beers {
+  margin-top: 20px;
+  display: flex;
+  width: 30vw;
+}
+
+.tagline {
+  color: #546e7a;
+  margin-top: 10px;
+}
+
+.contributed {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.beers-img {
+  height: 10vh;
+  margin-right: 20px;
+}
+
+.beer-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.one-beer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 20px;
+}
+
+.beer-description {
+  width: 30vw;
+}
+
+.one-beer-img {
+  height: 40vh;
+}
+
+.one-beer-data {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+h3.beer-name {
+  font-size: 30px;
+}
+
+.first-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-data-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-data-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.attenuation {
+  font-size: 24px;
+  color: #b0bec5;
+}
+
+.beer-description {
+  margin-top: 20px;
+  width: 40vw;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input {
+  width: 80%;
+  margin-top: 4px;
+  height: 4vh;
+}
+
+.textarea {
+  width: 80%;
+  height: 14vh;
+  margin-top: 4px;
+}
+
+.button {
+  margin-top: 20px;
+  width: 40%;
+  padding: 20px 6px;
+  background-color: #4fc3f7;
   color: white;
+  border-radius: 20%;
+  border:0px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.label {
+  font-weight: bold;
+  margin-top: 10px;
+  align-self: flex-start;
+  padding-left: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .home-link {
+    width: 60vw;
+    margin-bottom: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  .beer-description {
+    width: 60vw;
   }
+  .home-link img {
+    width: 60vw;
+    height: 16vh;
+    object-fit: cover;
+  }
+  .search {
+    width: 60vw;
+    height: 4vh;
+  }
+
+  .NavMain {
+    background-color: #4fc3f7;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .search {
+    width: 100vw;
+    height: 4vh;
+  }
+  .beer-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .beer-in-beers {
+    margin-top: 20px;
+    display: flex;
+    width: 45vw;
+  }
+  h3.beer-name {
+    font-size: 30px;
+    width: 40vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .home-link {
+    width: 100vw;
+    margin-bottom: 30px;
+  }
+  .home-link img {
+    width: 100vw;
+    height: 16vh;
+    object-fit: cover;
+  }
+  .beer-description {
+    width: 90vw;
+  }
+  .search {
+    width: 100vw;
+    height: 4vh;
+  }
+  .beer-in-beers {
+    margin-top: 20px;
+    display: flex;
+    width: 100vw;
+  }
+  .one-beer {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  h3.beer-name {
+    font-size: 30px;
+    width: 70vw;
+  }
+  .label {
+    font-weight: bold;
+    margin-top: 10px;
+    align-self: flex-start;
+    padding-left: 40px;
+}
 }

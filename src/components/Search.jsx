@@ -24,6 +24,7 @@ class Search extends Component {
         <form className="Form">
           <input
             id="search"
+            placeholder="Search a beer"
             autoComplete="off"
             className="search"
             type="text"
