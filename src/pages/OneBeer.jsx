@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BeersApi from '../API/BeersApi';
 import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 export default class OneBeer extends Component {
   state = {
@@ -32,6 +33,7 @@ export default class OneBeer extends Component {
   render() {
     return (
       <div>
+        <Header />
         <h1>One Beer</h1>
         {this.state.beer && (
           <React.Fragment>
