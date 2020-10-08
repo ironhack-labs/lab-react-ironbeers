@@ -1,0 +1,29 @@
+.singleBeer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oneBeer {
+  border-bottom: 2px solid rgb(143, 141, 141);
+  width: 400px;
+  height: 54vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15vh 20%;
+}
+
+.oneBeer img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+.infoBeer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

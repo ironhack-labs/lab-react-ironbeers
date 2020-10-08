@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import AllBeers from './pages/AllBeers';
 import NewBeer from './pages/NewBeer';
 import RandomBeer from './pages/RandomBeer';
+import SingleBeer from './pages/SingleBeer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/beers" component={AllBeers} />
         <Route exact path="/random-beer" component={RandomBeer} />
         <Route exact path="/new-beer" component={NewBeer} />
+        <Route exact path="/single-beer/:id" component={SingleBeer} />
       </Switch>
     </div>
   );

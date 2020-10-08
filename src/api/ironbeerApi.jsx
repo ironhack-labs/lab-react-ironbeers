@@ -9,4 +9,7 @@ export default {
   getAllBeers() {
     return service.get('/');
   },
+  getOneBeer(id) {
+    return service.get('/' + id);
+  },
 };
