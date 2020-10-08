@@ -38,15 +38,16 @@ class Beers extends React.Component {
             <div className="row-beer">
               <img src={beer.image_url} alt="beer pic" />
               <div>
-                <Link key={beer.name} to={`/beers/${beer._id}`}>
+                <Link to={`/beers/${beer._id}`}>
                   <h2>{beer.name}</h2>
-                </Link>
+                
                 <p key={beer.tagline}>{beer.tagline}</p>
                 <p key={beer.contributed_by}>
                   {' '}
                   <strong>Created by: </strong>
                   {beer.contributed_by}
                 </p>
+                </Link>
               </div>
             </div>
           ))}

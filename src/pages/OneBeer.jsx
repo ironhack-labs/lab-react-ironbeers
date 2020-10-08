@@ -10,9 +10,9 @@ class OneBeer extends React.Component {
   componentDidMount() {
     beersAPI
       .getOne(this.props.match.params.id)
-      .then((oneBeer) => {
+      .then((apiResponse) => {
         this.setState({
-          beer: oneBeer.data,
+          beer: apiResponse.data,
         });
       })
       .catch((error) => console.log(error));
@@ -24,7 +24,7 @@ class OneBeer extends React.Component {
         <h1>Details beer</h1>
         <div className="row-beer">
           {this.state.beer && (
-            <>
+            <React.Fragment>
               <img src={this.state.beer.image_url} alt="beer pic" />
 
               <h2>{this.state.beer.name}</h2>
@@ -36,7 +36,7 @@ class OneBeer extends React.Component {
                 <strong>Created by: </strong>
                 {this.state.beer.contributed_by}
               </p>
-            </>
+            </React.Fragment>
           )}
         </div>
       </div>
