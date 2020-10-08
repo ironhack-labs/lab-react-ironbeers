@@ -2,37 +2,65 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+img {
+  height: 400px;
+  width: 100vw;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 500px) {
+  .img {
+    height: 200px;
+    width: 100vw;
+    object-fit: cover;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .logo {
+    max-width: 40px;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav {
+    height: 80px;
+    width: 100vw;
+    background-color: lightblue;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  .small-img {
+    margin: auto;
+    width: 70px;
+    height: 70px;
+  }
+
+  .medium-img {
+    margin: auto;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .beer-container {
+    display: flex;
+    text-align: left; 
+    align-content: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    border: 1px gray solid;
+  }
+
+  .beer-container > div {
+    margin: 0 20px;
+  }
+
+  .one-beer-container {
+    margin-top: 30px;
   }
 }
