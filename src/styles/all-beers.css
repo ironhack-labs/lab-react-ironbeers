@@ -1,0 +1,31 @@
+.all-beers {
+    border: 2px solid grey;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    width: 500px;
+}
+
+#main-all-beers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-beers img {
+    /* margin: 20px 50px 20px 20px; */
+    height: 160px;
+}
+
+.text-all-beers {
+    margin: 20px 50px 20px 0px;
+}
+
+.wrap-img {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
