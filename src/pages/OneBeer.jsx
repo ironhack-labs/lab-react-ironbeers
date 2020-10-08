@@ -12,7 +12,6 @@ class OneBeer extends React.Component {
     beerApi
       .getOne(this.props.match.params.id)
       .then((apiResponse) =>
-        //   console.log(apiResponse)
         this.setState({
           beer: apiResponse.data,
         })

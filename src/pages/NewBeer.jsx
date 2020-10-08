@@ -23,15 +23,7 @@ class NewBeer extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    beerApi.addBeer({
-      name: this.state.name,
-      tagline: this.state.tagline,
-      description: this.state.description,
-      first_brewed: this.state.first_brewed,
-      brewer_tips: this.state.brewer_tips,
-      attenuation_level: this.state.attenuation_level,
-      contributed_by: this.state.contributed_by,
-    });
+    beerApi.addBeer(this.state);
     
   };
 
