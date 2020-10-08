@@ -7,11 +7,19 @@ const service = axios.create({
 export default {
   service,
 
-  getPokemons() {
+  get() {
     return service.get('/');
   },
 
   getOne(id) {
     return service.get('/' + id);
+  },
+
+  getRandom() {
+    return service.get('/random');
+  },
+
+  createOne(id) {
+    return service.get('/new' + data);
   },
 };
