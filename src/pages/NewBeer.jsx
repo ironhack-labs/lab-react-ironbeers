@@ -32,6 +32,7 @@ class NewBeer extends React.Component {
       attenuation_level: this.state.attenuation_level,
       contributed_by: this.state.contributed_by,
     });
+    
   };
 
   render() {
@@ -60,7 +61,7 @@ class NewBeer extends React.Component {
             <label>First brew date: </label>
             <input
               onChange={this.handleChange}
-              type="text"
+              type="date"
               name="first_brewed"
             />
           </div>

@@ -22,4 +22,8 @@ export default {
   addBeer(data) {
     return service.post('/new', data);
   },
+
+  filterBeer(query) {
+    return service.get('/search?q=' + query);
+  },
 };

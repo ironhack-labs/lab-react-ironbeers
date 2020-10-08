@@ -21,10 +21,30 @@ class Beers extends React.Component {
       .catch((err) => console.log(err));
   }
 
+  handleChange = (event) => {
+    const query = event.target.value;
+    beerApi
+      .filterBeer(query)
+      .then((apiResponse) =>
+        this.setState({
+          beers: apiResponse.data,
+        })
+      )
+      .catch((err) => console.log(err));
+  };
+
   render() {
     return (
       <div>
         <h1>All beers</h1>
+        <form>
+          <input
+            onChange={this.handleChange}
+            type="text"
+            name="name"
+            placeholder="search for a beer..."
+          />
+        </form>
         {this.state.beers.map((beer) => (
           <div className="beer-container" key={beer.name}>
             <img src={beer.image_url} alt="beer-img" />
