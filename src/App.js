@@ -4,11 +4,13 @@ import Home from './pages/Home';
 import RandomBeer from './pages/RandomBeer';
 import NewBeer from './pages/NewBeer';
 import Beers from './pages/Beers';
+import Header from './components/Header';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/beers" component={Beers} />

@@ -1,0 +1,13 @@
+.home-nav {
+  background-color: dodgerblue;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 600;
+}
+
+.home-nav a {
+  text-decoration: none;
+  color: white;
+}
