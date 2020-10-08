@@ -8,6 +8,16 @@ class AllBeers extends Component {
     beers: [],
   };
 
+  handleChange = (event) => {
+    const query = event.target.value;
+    this.filterResults(query)
+  }
+
+  async filterResults(query) {
+    const result = await BeerApi.filter(query);
+    this.setState({beers : result.data })
+  }
+
   async componentDidMount() {
     try {
       const apiResponse = await BeerApi.getAllBeers();
@@ -22,6 +32,8 @@ class AllBeers extends Component {
     return (
       <div>
         <NavMain />
+        <label htmlFor="searchBar">Search a beer</label><br/>
+        <input onChange={this.handleChange} name="searchBar" type="text"/>
         <div>
           {beers.map((beer) => (
             <div key={beer._id} className="beer-container">
