@@ -30,7 +30,7 @@ const Home = () => {
           src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/86358/s960_englishpub-iStock-455939119.jpg"
           alt="Beer3"
         />
-        <Link to="/NewBeers">
+        <Link to="/new-beer">
           <h2>New Beer</h2>
         </Link>
         <p>Add a new beer!</p>

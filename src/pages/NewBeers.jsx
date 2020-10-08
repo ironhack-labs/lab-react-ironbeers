@@ -1,13 +1,19 @@
 import React from 'react';
 import apiHandler from '../apiHandler';
-import '../styles/Beers.css';
+import '../styles/NewBeers.css';
 import NavMain from '../components/NavMain';
 
 class NewBeers extends React.Component {
-  state = {};
+  state = {
+    name: '',
+    tagline: '',
+    description: '',
+    first_brewed: '',
+    attenuation_level: 0,
+    contributed_by: '',
+  };
 
   handleChange = (event) => {
-    // console.dir(event.target.name);
     const value = event.target.value;
     const key = event.target.name;
 
@@ -16,58 +22,111 @@ class NewBeers extends React.Component {
     });
   };
 
-  handleSubmit = (event) => {};
+  handleSubmit = (e) => {
+    e.preventDefault();
+    apiHandler
+      .createOne({
+        name: this.state.name,
+        tagline: this.state.tagline,
+        description: this.state.description,
+        first_brewed: this.state.first_brewed,
+        attenuation_level: this.state.attenuation_level,
+        contributed_by: this.state.contributed_by,
+      })
+      .then((response) => console.log('Success:', response))
+      .catch((error) => console.error('Error:', error));
+  };
+
   render() {
-    console.log(this.state.friends);
+    console.log('toto');
     return (
-      <form className="Form" onSubmit={this.handleSubmit}>
-        <h2 className="title">Add a friend</h2>
-        {/* <p>PS: You already have {this.props.friends.length} friends !</p> */}
+      <div className="NewBeers">
+        <NavMain />
+        <form className="Form" onSubmit={this.handleSubmit}>
+          <h2 className="title">Add a Beer</h2>
 
-        <label className="label" htmlFor="username">
-          Username
-        </label>
-        <input
-          // onChange={this.handleUsername}
-          onChange={this.handleChange}
-          value={this.state.username}
-          id="username"
-          autoComplete="off"
-          className="input"
-          type="text"
-          name="username"
-        />
+          <label className="label" htmlFor="name">
+            Beer Name:
+          </label>
+          <input
+            onChange={this.handleChange}
+            // value={this.state.name}
+            id="name"
+            autoComplete="off"
+            className="input"
+            type="text"
+            name="name"
+          />
 
-        <label className="label" htmlFor="profileImage">
-          Profile image
-        </label>
-        <input
-          id="profileImage"
-          autoComplete="off"
-          className="input"
-          type="text"
-          name="profileImage"
-          value={this.state.profileImage}
-          onChange={this.handleChange}
-          // onChange={this.handleProfileImage}
-        />
+          <label className="label" htmlFor="tagline">
+            Beer Tagline:
+          </label>
+          <input
+            id="tagline"
+            autoComplete="off"
+            className="input"
+            type="text"
+            name="tagline"
+            // value={this.state.tagline}
+            onChange={this.handleChange}
+            // onChange={this.handleProfileImage}
+          />
 
-        <label className="label" htmlFor="age">
-          Age
-        </label>
-        <input
-          id="age"
-          autoComplete="off"
-          className="input"
-          type="number"
-          name="age"
-          value={this.state.age}
-          onChange={this.handleChange}
-          // onChange={this.handleAge}
-        />
+          <label className="label" htmlFor="description">
+            Beer Description:
+          </label>
+          <input
+            id="description"
+            autoComplete="off"
+            className="input"
+            type="text"
+            name="description"
+            value={this.state.description}
+            onChange={this.handleChange}
+          />
 
-        <button className="button">Submit</button>
-      </form>
+          <label className="label" htmlFor="first_brewed">
+            When was it first brewed?:
+          </label>
+          <input
+            id="first_brewed"
+            autoComplete="off"
+            className="input"
+            type="text"
+            name="first_brewed"
+            value={this.state.first_brewed}
+            onChange={this.handleChange}
+          />
+
+          <label className="label" htmlFor="attenuation_level">
+            What is it's attenuation level?:
+          </label>
+          <input
+            id="attenuation_level"
+            autoComplete="off"
+            className="input"
+            type="number"
+            name="attenuation_level"
+            value={this.state.attenuation_level}
+            onChange={this.handleChange}
+          />
+
+          <label className="label" htmlFor="contributed_by">
+            By whom?:
+          </label>
+          <input
+            id="contributed_by"
+            autoComplete="off"
+            className="input"
+            type="text"
+            name="contributed_by"
+            value={this.state.contributed_by}
+            onChange={this.handleChange}
+          />
+
+          <button className="button">ADD NEW</button>
+        </form>
+      </div>
     );
   }
 }

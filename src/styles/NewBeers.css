@@ -1,0 +1,40 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Form .title {
+  margin-bottom: 20px;
+  font-size: 2.25rem;
+}
+
+.Form .input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  border-radius: 2em;
+ 
+}
+
+.Form .label {
+  margin-bottom: 5px;
+}
+
+.Form .button {
+  max-width: 200px;
+  padding: 10px 12px;
+  font-size: 1.25rem;
+  background-color: dodgerblue;
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 2em;
+}
+
+.Form .button:hover {
+  background-color: #12fa85;
+  color: black;
+}
