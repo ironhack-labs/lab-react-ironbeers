@@ -1,0 +1,10 @@
+.NavMain {
+  display: flex;
+  height: 70px;
+  background: dodgerblue;
+  color: white;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}

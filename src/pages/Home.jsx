@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../App.css';
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
           src="https://www.tripsavvy.com/thmb/I3Lf3oqbsZHgH2ecTT8hHbXJ3x0=/2121x1414/filters:fill(auto,1)/GettyImages-462573477-5932c9dd3df78c08abef9eea.jpg"
           alt="Beer1"
         />
-        <Link to="/Beers">
+        <Link to="/">
           <h2>All Beers</h2>
         </Link>
         <p>Check out all our beers!</p>
