@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  min-height: 15vh;
+  background-color: rgb(80, 172, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+.header NavLink {
+  display: block;
+}
+
+

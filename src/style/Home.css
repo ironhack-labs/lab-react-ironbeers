@@ -1,20 +1,42 @@
 .Home {
-  width: 100%;
-  height: 100vh;
+  border: 5px solid lightgrey;
+  margin: 20px 20%;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  border-radius: 4px;
+  box-shadow: 0 7px 10px rgba(36, 35, 35, 0.6);
 }
+
 .beers {
-  height: 30%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10vh 0;
+  height: 600px;
 }
-.beers img {
-  width: 500px;
+
+.Home .imgBeer {
+  width: 100%;
+  height: 300px;
+}
+
+.Home .img1{
+  background-image: url("https://static.vinepair.com/wp-content/uploads/2015/06/craft-beer-bar-social.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 100%;
+ height: 400px;
+}
+.Home .img2{
+  background-image: url("https://static.toiimg.com/photo/57732423/.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+}
+.Home .img3{
+  background-image: url("https://img.traveltriangle.com/blog/wp-content/uploads/2019/12/Pour-Boy-Pub_17th-Dec.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
 }

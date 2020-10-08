@@ -1,0 +1,27 @@
+.beer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  margin: 1%;
+  border: 3px solid lightgrey;
+  height: 400px;
+  box-shadow: 0 0 7px rgba(36, 35, 35, 0.6);
+}
+
+.img {
+  width: 30%;
+  height: 400px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beer img {
+  display: block;
+  /* float: left; */
+  width:  100px;
+  height: 200px;
+  object-fit: cover;
+}
