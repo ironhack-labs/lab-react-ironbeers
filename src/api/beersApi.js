@@ -15,5 +15,8 @@ export default {
     },
     getRandom() {
         return service.get("/random");
+    },
+    createBeer(body) {
+        return service.post("/new", body);
     }
 };

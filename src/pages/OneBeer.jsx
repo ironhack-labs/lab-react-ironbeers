@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import beersAPI from "../api/beersApi";
+import Header from "../components/Header";
 import "../styles/one-beer.css";
 
 class OneBeer extends Component {
@@ -21,7 +22,8 @@ class OneBeer extends Component {
 
     render() {
         return (
-            <div>
+            <div>                
+                <Header />
                 <h1>Beer's details</h1>
                 <div id="main-one-beer">
                 {this.state.beer && (

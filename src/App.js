@@ -7,10 +7,16 @@ import AllBeers from "./pages/AllBeers";
 import RandomBeer from "./pages/RandomBeer";
 import NewBeer from "./pages/NewBeer";
 import OneBeer from "./pages/OneBeer";
-
 import './App.css';
 
-function App() {
+class App extends React.Component {
+
+  state = {
+
+  };
+
+render() {
+
   return (
       <div>
         <Switch>
@@ -18,11 +24,21 @@ function App() {
           <Route exact path="/AllBeers" component={AllBeers}/>
           <Route exact path="/RandomBeer" component={RandomBeer}/>
           <Route exact path="/NewBeer" component={NewBeer}/>
+{/* 
+          <Route
+             exact 
+             path="/NewBeer" 
+             render={(handleCreateBeer) => {
+               return <NewBeer />
+             }}
+            //  component={NewBeer}
+            /> */}
           <Route path="/AllBeers/:beerId" component={OneBeer} />
           <Route component={NotFound}/>
         </Switch>
       </div>
     );
+  }
 }
 
 export default App;
