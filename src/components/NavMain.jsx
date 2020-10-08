@@ -5,9 +5,7 @@ import '../styles/NavMain.css';
 const NavMain = () => {
   return (
     <div className="NavMain">
-      <NavLink to="/">
-        <i class="fas fa-home"></i>
-      </NavLink>
+      <NavLink to="/">Home</NavLink>
     </div>
   );
 };

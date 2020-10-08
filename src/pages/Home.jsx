@@ -10,7 +10,7 @@ const Home = () => {
           src="https://www.tripsavvy.com/thmb/I3Lf3oqbsZHgH2ecTT8hHbXJ3x0=/2121x1414/filters:fill(auto,1)/GettyImages-462573477-5932c9dd3df78c08abef9eea.jpg"
           alt="Beer1"
         />
-        <Link to="/">
+        <Link to="/beers">
           <h2>All Beers</h2>
         </Link>
         <p>Check out all our beers!</p>
@@ -20,7 +20,7 @@ const Home = () => {
           src="https://p2d7x8x2.stackpathcdn.com/wordpress/wp-content/uploads/2018/11/Greene-King-heads-new-Old-Speckled-Hen-low-alcohol-beer_wrbm_large-640x360.jpg"
           alt="Beer2"
         />
-        <Link to="/RandomBeer">
+        <Link to="/Random">
           <h2>Random Beer</h2>
         </Link>
         <p>Let us choose a random beer for you!</p>

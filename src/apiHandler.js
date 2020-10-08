@@ -11,13 +11,13 @@ export default {
     return service.get('/');
   },
 
-  //   getOne(id) {
-  //     return service.get('/' + id);
-  //   },
+  getOne(id) {
+    return service.get('/' + id);
+  },
 
-  //   getRandom() {
-  //     return service.get('/random');
-  //   },
+    getRandom() {
+      return service.get('/random');
+    },
 
   //   createOne(id) {
   //     return service.get('/new' + data);
