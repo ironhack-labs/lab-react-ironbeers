@@ -17,7 +17,6 @@ class SingleBeer extends React.Component {
   componentDidMount() {
     this.getSingleBeer()
   }
-  
 
   render() {
     const beer = this.state.oneBeer
@@ -33,7 +32,6 @@ class SingleBeer extends React.Component {
             <p className="card-text">{beer.first_brewed}</p>
             <p className="card-text"><b>Created by: </b>{beer.contributed_by}</p>
           </div>
-
       </div>
       </div>
     )
