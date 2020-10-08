@@ -1,0 +1,11 @@
+.nav-main {
+    width: 100%;
+    background-color: #3DC4FC;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2.8rem;
+  }
+
+  .nav-main i { 
+    color: whitesmoke;
+  }

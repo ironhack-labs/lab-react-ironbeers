@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
+  
+  /* .form input,
+  .form textarea,
+  .form button {
+    padding: 3px;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+  }
+   */
+  .form button{
+    margin: 1rem 0;
+  } 
