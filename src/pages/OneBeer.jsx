@@ -1,6 +1,5 @@
 import React from 'react';
 import beerApi from '../beerApi';
-import { Link } from 'react-router-dom';
 
 import '../styles/OneBeer.css';
 

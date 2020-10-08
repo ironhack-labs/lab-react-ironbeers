@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <div>
       <div className="home-nav">
-        <Link to="/beers">Beers</Link>
-        <Link to="/random-beer">Random beer</Link>
-        <Link to="/new-beer">New beer</Link>
+        <Link to="/beers">🍻 BEERS</Link>
+        <Link to="/random-beer">🎲 RANDOM BEER</Link>
+        <Link to="/new-beer">➕ NEW BEER</Link>
       </div>
       
     </div>

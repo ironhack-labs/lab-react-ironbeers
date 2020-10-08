@@ -14,4 +14,8 @@ export default {
   getOne(id) {
     return service.get('/' + id);
   },
+
+  getRandom() {
+    return service.get('/random');
+  },
 };

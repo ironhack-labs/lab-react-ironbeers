@@ -1,12 +1,17 @@
 .home-nav {
-  background-color: dodgerblue;
-  height: 50px;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .home-nav a {
+  background-color: dodgerblue;
+  padding: 40px;
+  width: 15%;
+  border-radius: 30px;
   text-decoration: none;
   color: white;
+  font-size: 1rem;
+  font-weight: 600;
 }
