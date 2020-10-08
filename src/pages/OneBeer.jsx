@@ -39,7 +39,7 @@ class OneBeer extends Component {
                 )  
                 }
                 </div>
-            </div>
+             </div>
         )
     }
 }
