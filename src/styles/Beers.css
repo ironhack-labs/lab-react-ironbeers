@@ -8,8 +8,9 @@
   padding: 20px;
   margin: 20px;
   align-items: center;
-  border: 2px solid lightgray;
+  border: 3px solid lightgray;
   border-radius: 20px;
+  text-decoration: none;
 }
 
 .beer-infos {

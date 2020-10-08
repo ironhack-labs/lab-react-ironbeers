@@ -10,4 +10,8 @@ export default {
   getBeers() {
     return service.get('/');
   },
+
+  getOne(id) {
+    return service.get('/' + id);
+  },
 };

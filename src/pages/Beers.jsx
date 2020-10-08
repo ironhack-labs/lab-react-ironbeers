@@ -1,5 +1,6 @@
 import React from 'react';
 import beerApi from '../beerApi';
+import { Link } from 'react-router-dom';
 
 import '../styles/Beers.css';
 
@@ -28,7 +29,9 @@ class Beers extends React.Component {
           <div className="beer-container" key={beer.name}>
             <img src={beer.image_url} alt="beer-img" />
             <div className="beer-infos">
-              <h3>{beer.name}</h3>
+              <Link key={beer._id} to={`/beers/${beer._id}`}>
+                <h3>{beer.name}</h3>
+              </Link>
               <h4>{beer.tagline}</h4>
               <p>
                 created by: <i>{beer.contributed_by}</i>
