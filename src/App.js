@@ -5,9 +5,9 @@ import Home from './pages/Home';
 import Beers from './pages/beers';
 import NewBeer from './pages/new-beer';
 import RandomBeer from './pages/random-beer';
+import OneBeer from './pages/OneBeer';
 import NotFound from './pages/NotFound';
-import { Route, Switch } from "react-router-dom";
-
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -21,7 +21,9 @@ function App() {
               return <Home />;
             }}
           />
-          <Route path="/beers" component={Beers} />
+          <Route exact path="/" component={Beers} />
+          <Route exact path="/beers" component={Beers} />
+          <Route path="/beers/:id" component={OneBeer} />
           <Route path="/new-beer" component={NewBeer} />
           <Route path="/random-beer" component={RandomBeer} />
           <Route component={NotFound} />
