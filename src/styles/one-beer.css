@@ -1,0 +1,26 @@
+.container-one-beer {
+    border: 2px solid pink;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-one-beer img {
+    width: 90px;
+}
+
+#main-one-beer {
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-one-beer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

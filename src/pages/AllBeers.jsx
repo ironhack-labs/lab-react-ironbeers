@@ -31,7 +31,6 @@ class AllBeers extends React.Component {
                     <h1>All Beers</h1>
                     {this.state.beers.map((beer) => (
                             <Link key={beer.name} to={`/allBeers/${beer._id}`}>
-                                                        {/* /beers/:beerId */}
                                 <div className="all-beers">
                                     <div className="wrap-img">
                                         <img src={beer.image_url} alt="beers" />
