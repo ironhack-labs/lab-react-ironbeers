@@ -24,17 +24,23 @@ class OneBeer extends Component {
         return (
             <div>                
                 <Header />
-                <h1>Beer's details</h1>
                 <div id="main-one-beer">
                 {this.state.beer && (
                     <div className="container-one-beer">
                         <img src={this.state.beer.image_url} alt=""/>
-                        <div className="text-one-beer">
-                            <h2>{this.state.beer.name}</h2>
-                            <p>{this.state.beer.tagline}</p>
-                            <p>{this.state.beer.first_brewed}</p>
-                            <p>{this.state.beer.attenuation_level}</p>
+                        <div className="text-random-beer">
+                            <div className="divtext1">
+                                <h2>{this.state.beer.name}</h2>
+                                <p>{this.state.beer.attenuation_level}</p>
+                            </div>
+                            <br/>
+                            <div className="divtext1">
+                                <p>{this.state.beer.tagline}</p>
+                                <p>{this.state.beer.first_brewed}</p>
+                            </div>
+                            <br/>
                             <p>{this.state.beer.description}</p>
+                            <br/>
                             <p>{this.state.beer.contributed_by}</p>
                         </div>
                     </div>

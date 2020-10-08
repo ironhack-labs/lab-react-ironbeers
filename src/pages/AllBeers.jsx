@@ -36,8 +36,10 @@ class AllBeers extends React.Component {
                                         <img src={beer.image_url} alt="beers" />
                                     </div>
                                     <div className="text-all-beers">
-                                        <h3>{beer.name}</h3>
-                                        <p>{beer.tagline}</p>
+                                        <h2>{beer.name}</h2>
+                                        <br/>
+                                        <p className="tagline">{beer.tagline}</p>
+                                        <br/>
                                         <p><b>Created by :</b>{beer.contributed_by}</p>
                                     </div>
                                 </div>

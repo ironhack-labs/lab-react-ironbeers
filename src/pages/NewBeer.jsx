@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "../components/Header";
 import beersAPI from "../api/beersApi";
+import "../styles/new-beer.css"
 
 class NewBeer extends React.Component {
 
@@ -49,9 +50,12 @@ class NewBeer extends React.Component {
         return (
             <div>
                 <Header />
-                <h1>New Beer</h1>
+                <div id='main-contain-form'>
+                
                 <form onSubmit={this.handleSubmit}>
-                    <h2>Add a beer</h2>
+                    <div id="title">
+                        <h1>Add a beer</h1>
+                    </div>
                     <label htmlFor="name">
                         Name
                     </label>
@@ -121,8 +125,11 @@ class NewBeer extends React.Component {
                         value={this.state.Contributedby}
 
                     />
-                    <button>Submit</button>
+                    <div id="button-submit">
+                        <button>Submit</button>
+                    </div>
                 </form>
+                </div>
             </div>
         )
     

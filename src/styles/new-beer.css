@@ -1,0 +1,39 @@
+form {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+   
+}
+
+#main-contain-form {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+input {
+    height: 30px;
+    border-radius: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+}
+
+#title {
+    /* border: 2px solid grey; */
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: black;
+}
+
+#button-submit {
+    display: flex;
+    justify-content: center;
+}

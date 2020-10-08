@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div id="header">
             <Link to="/">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Facebook_Home_logo.svg/1024px-Facebook_Home_logo.svg.png" alt="logo" width="70px"/>
+                <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5559065.jpg" alt="logo" width="70px"/>
             </Link>
         </div>
     )

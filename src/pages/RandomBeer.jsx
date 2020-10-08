@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "../components/Header";
 import beersAPI from "../api/beersApi";
+import "../styles/random-beer.css"
 
 
 class RandomBeer extends React.Component {
@@ -27,17 +28,23 @@ class RandomBeer extends React.Component {
         return (
             <div>
                 <Header />
-                <h1>Random Beer</h1>
-                <div id="main-one-beer">
+                <div id="main-random-beer">
                 {this.state.randomBeer && (
-                    <div className="container-one-beer">
+                    <div className="container-random-beer">
                     <img src={this.state.randomBeer.image_url} alt=""/>
-                    <div className="text-one-beer">
-                        <h2>{this.state.randomBeer.name}</h2>
-                        <p>{this.state.randomBeer.tagline}</p>
-                        <p>{this.state.randomBeer.first_brewed}</p>
-                        <p>{this.state.randomBeer.attenuation_level}</p>
+                    <div className="text-random-beer">
+                        <div className="divtext1">
+                            <h2>{this.state.randomBeer.name}</h2>
+                            <p>{this.state.randomBeer.attenuation_level}</p>
+                        </div>
+                        <br/>
+                        <div className="divtext1">
+                            <p>{this.state.randomBeer.tagline}</p>
+                            <p>{this.state.randomBeer.first_brewed}</p>
+                        </div>
+                        <br/>
                         <p>{this.state.randomBeer.description}</p>
+                        <br/>
                         <p>{this.state.randomBeer.contributed_by}</p>
                     </div>
                 </div>

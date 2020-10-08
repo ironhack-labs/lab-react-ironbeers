@@ -1,27 +1,23 @@
-.container-one-beer {
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-}
-
-.container-one-beer img {
-    width: 120px;
-}
-
-#main-one-beer {
+#main-random-beer {
     /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.text-one-beer {
+.container-random-beer {
+    /* border: 2px solid pink; */
+    width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+}
+
+.container-random-beer img {
+    width: 140px;
 }
 
 .text-random-beer {
