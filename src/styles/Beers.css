@@ -10,12 +10,12 @@
   align-items: center;
   border: 3px solid lightgray;
   border-radius: 20px;
-  text-decoration: none;
 }
 
 .beer-infos {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-around;
+  min-height: 200px;
 }
