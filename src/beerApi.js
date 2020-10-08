@@ -18,4 +18,8 @@ export default {
   getRandom() {
     return service.get('/random');
   },
+
+  addBeer(data) {
+    return service.post('/new', data);
+  },
 };
