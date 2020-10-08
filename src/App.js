@@ -6,12 +6,12 @@ import Home from "./pages/Home";
 import AllBeers from "./pages/AllBeers";
 import RandomBeer from "./pages/RandomBeer";
 import NewBeer from "./pages/NewBeer";
+
 import './App.css';
 
 function App() {
   return (
       <div>
-        <h1>Hello World</h1>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/AllBeers" component={AllBeers}/>
