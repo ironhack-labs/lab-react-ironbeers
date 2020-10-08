@@ -18,12 +18,12 @@ export default {
     return service.get("/random");
   },
 
-  CreateOne() {
-    return service.post("/new");
+  CreateOne(data) {
+    return service.post("/new", data);
   },
 
   SearchBeer(query) {
-    return service.get(`/new?q=${query}`);
+    return service.get(`/search?q=${query}`);
   },
 };
 

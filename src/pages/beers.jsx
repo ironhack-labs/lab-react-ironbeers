@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
+import SearchBar from '../components/SearchBar';
 import beerAPI from '../API/beerApi';
 import { Link } from 'react-router-dom';
 
@@ -13,10 +14,23 @@ export default class beers extends Component {
     };
   }
 
-  async componentDidMount() {
+componentDidMount = () => {
     beerAPI
       .getBeers()
       .then((apiResponse) => {
+        this.setState({ beers: apiResponse.data });
+      })
+      .catch((apiError) => {
+        console.log(apiError);
+      });
+  }
+
+changeHandler = (value) => {
+    //   console.log(value);
+    beerAPI
+      .SearchBeer(value)
+      .then((apiResponse) => {
+          console.log(apiResponse);
         this.setState({ beers: apiResponse.data });
       })
       .catch((apiError) => {
@@ -28,6 +42,7 @@ export default class beers extends Component {
     return (
       <div>
         <Header />
+        <SearchBar search={this.changeHandler}/>
         <h1>Beers</h1>
         {this.state.beers.map((beer) => {
           return ( 
