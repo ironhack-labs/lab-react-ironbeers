@@ -1,0 +1,22 @@
+.header {
+    background-color: dodgerblue;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header nav {
+    height: 3rem;
+}
+
+.header .icon {
+    color:white;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+

@@ -1,0 +1,47 @@
+.single-beer {
+
+    padding: 1rem;
+}
+
+.single-beer .image {
+    height: 50vh;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.single-beer .title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.single-beer .att-levl {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ccc;
+    padding-left: .5rem;
+}
+
+.single-beer .tagline {
+    font-size: .9rem;
+    color: #999;
+    font-weight: 500;
+}
+
+.single-beer .first-brewed {
+    font-size: .65rem;
+    color: #101;
+    font-weight: 700;
+}
+
+.single-beer .description {
+    font-size: .8rem;
+    line-height: 1rem;
+    color: #101;
+}
+
+.single-beer .contributed {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #999;
+}

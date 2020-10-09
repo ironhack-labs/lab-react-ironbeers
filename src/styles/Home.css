@@ -1,0 +1,12 @@
+.article-title {
+    font-size: 2rem;
+    color:#333;
+}
+
+.article-content {
+    padding: 0rem 1rem 2rem 1rem;
+}
+
+.article-content p{
+    color: #999;
+}
