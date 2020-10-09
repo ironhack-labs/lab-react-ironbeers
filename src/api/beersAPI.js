@@ -15,10 +15,8 @@ export default{
         return service.get("/" + id)
     },
 
-    getRandom(id){
-        return service.get("/random" + id);
-    },
+   
     createNew(data){
-        return service.post("/new-beer", data);
+        return service.post("/new", data);
     },
 };

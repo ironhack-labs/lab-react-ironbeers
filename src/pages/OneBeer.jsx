@@ -21,21 +21,28 @@ class OneBeer extends React.Component {
     return (
       <div>
         <Header />
-        <h1>Details beer</h1>
-        <div className="row-beer">
+
+        <div className="one-beer">
           {this.state.beer && (
             <React.Fragment>
               <img src={this.state.beer.image_url} alt="beer pic" />
+              <div>
+                <div className="name-level">
+                  <h2>{this.state.beer.name}</h2>
+                  <h2 className="level">{this.state.beer.attenuation_level}</h2>
+                </div>
+                <div className="name-level">
+                  <p className="tagline">{this.state.beer.tagline}</p>
 
-              <h2>{this.state.beer.name}</h2>
-              <p>{this.state.beer.tagline}</p>
-              <p>{this.state.beer.first_brewed}</p>
-              <p>{this.state.beer.attenuation_level}</p>
-              <p>{this.state.beer.description}</p>
-              <p>
-                <strong>Created by: </strong>
-                {this.state.beer.contributed_by}
-              </p>
+                  <p >{this.state.beer.first_brewed}</p>
+                </div>
+
+                <p style={{textAlign: "justify", marginBottom: 30}}>{this.state.beer.description}</p>
+                <p>
+                  <strong>Created by: </strong>
+                  {this.state.beer.contributed_by}
+                </p>
+              </div>
             </React.Fragment>
           )}
         </div>
