@@ -9,8 +9,8 @@ class Home extends Component {
   render() {
     return (
       <>
-        <div clasName = "homeContainer">
-          <div clasName = "homeCard">
+        <div className = "homeContainer">
+          <div className = "homeCard">
               <Link to="/beers">
                 <img className="homeImg" src={allBeersImg} alt="" />
                 <h2>All beers</h2>
@@ -22,7 +22,7 @@ class Home extends Component {
               aliquip ex ea commodo consequat.
             </p>
           </div>
-          <div clasName = "homeCard">
+          <div className = "homeCard">
               <Link to="/random-beer">
                 <img className="homeImg" src={randomBeerImg} alt="" /> 
                 <h2>Random Beer</h2>
@@ -34,7 +34,7 @@ class Home extends Component {
               aliquip ex ea commodo consequat.
             </p>
           </div>
-          <div clasName = "homeCard">
+          <div className = "homeCard">
               <Link to="/new-beer">
                 <img className="homeImg" src={newBeerImg} alt="" /> 
                 <h2>New Beer</h2>

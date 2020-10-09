@@ -21,23 +21,24 @@ export default class NewBeer extends Component {
   };
 
   handleSubmit = (e) => {
+
+    console.log('TEST');
     e.preventDefault();
-    postNewBeer(
-      this.state.name,
-      this.state.tagline,
-      this.state.description,
-      this.state.first_brewed,
-      this.state.brewers_tips,
-      this.state.attenuation_level,
-      this.state.contributed_by
+    const BANANA = "BANANA"
+    // const beer1 ={
+    //   name:"BANANA",tagline: BANANA, description:BANANA, first_brewed : BANANA, 
+    //   attenuation_level:1,brewers_tips: BANANA 
+    // }
+    postNewBeer(this.state
     ).then((response) => {
+      console.log ('POST TEST', response)
       this.setState({
         name: '',
         tagline: '',
         description: '',
         first_brewed: '',
         brewers_tips: '',
-        attenuation_level: null,
+        attenuation_level: 0,
         contributed_by: '',
         
       });
