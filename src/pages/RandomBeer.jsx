@@ -24,6 +24,14 @@ class RandomBeer extends Component {
 				? <div>
 					<img src={this.state.beer.image_url} alt=""/>
 					<div>
+						<h1>{this.state.beer.name}</h1>
+						<h3>{this.state.beer.tagline}</h3>
+						<div>
+							<p>{this.state.beer.first_brewed}</p>
+							<p>{this.state.beer.attenuation_level}</p>
+						</div>
+						<p>{this.state.beer.description}</p>
+						<p>{this.state.beer.contributed_by}</p>
 					</div>
 				</div>
 				: <p id="loading">Loading...</p>

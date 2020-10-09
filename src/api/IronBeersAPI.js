@@ -12,6 +12,9 @@ export default {
   },
   getOne(id) {
     return service.get("/" + id);
+  },
+  addOne(beer) {
+    return service.post("/new",beer)
   }
 }
 

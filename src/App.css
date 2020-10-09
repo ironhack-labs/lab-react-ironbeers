@@ -12,6 +12,7 @@ body {
 
 .homeLink img {
   width: 300px;
+  margin-left: 50px;
 }
 
 .beers {
@@ -21,4 +22,27 @@ body {
 
 .beers img {
   height: 200px;
+}
+
+nav {
+  width: 100vw;
+  max-width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: cadetblue;
+  font-size: 2rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 50px;
+  padding: 50px;
+}
+
+form label {
+  align-self: end;
 }
