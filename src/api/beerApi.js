@@ -19,8 +19,11 @@ export default {
     return service.post("/new", beer);
   },
 
-
   getOne(id) {
     return service.get("/" + id);
   },
+
+  search(query) {
+      return service.get(`/search?q=${query}`);
+  }
 };
