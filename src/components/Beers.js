@@ -5,14 +5,25 @@ import { Link } from 'react-router-dom'
 
 export default class Beers extends Component {
     state = {
-        beers: []
+        beers: [],
+        search: '',
     }
 
     componentDidMount = () => {
-        axios.get('https://ih-beers-api2.herokuapp.com/beers').then((allBeers) => {
+        this.search("")
+    }
+
+    handleChange = (event) => {
+        const { name, value } = event.target;
+        this.search(value)
+    }
+
+    search = (query) => {
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`).then((allBeers) => {
             console.log(allBeers)
             this.setState({
-                beers: allBeers.data
+                beers: allBeers.data,
+                search: query
             })
         })
     }
@@ -21,6 +32,9 @@ export default class Beers extends Component {
         return (
             <div>
                 <Nav />
+                Search
+                <input onChange={this.handleChange} type="text" name="search"></input>
+
                 {this.state.beers.map((beer) => {
                     return (
                         <div key={beer._id}>
