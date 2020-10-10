@@ -9,7 +9,7 @@ export default function Home() {
                 <h1>All Beers</h1>
                 <p>Nulla voluptate incididunt consectetur exercitation Lorem eu sunt laborum velit tempor nulla excepteur excepteur. Ut quis irure do elit ipsum. Culpa qui consectetur nulla Lorem elit nisi Lorem ipsum ipsum fugiat aliquip ex duis. Irure consequat culpa quis Lorem consequat incididunt in adipisicing laborum consequat.</p>
             </Link>
-            <Link to={'/random'}>
+            <Link to={'/beers/random'}>
                 <img src="https://www.cohoferry.com/img/pages/FWBF-banner.jpg" className="banner" />
                 <h1>Random Beer</h1>
                 <p>Nulla voluptate incididunt consectetur exercitation Lorem eu sunt laborum velit tempor nulla excepteur excepteur. Ut quis irure do elit ipsum. Culpa qui consectetur nulla Lorem elit nisi Lorem ipsum ipsum fugiat aliquip ex duis. Irure consequat culpa quis Lorem consequat incididunt in adipisicing laborum consequat.</p>

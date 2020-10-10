@@ -4,7 +4,7 @@ import './App.css';
 import Home from './components/Home'
 import Beers from './components/Beers'
 import BeerDetails from './components/BeerDetails'
-
+import RandomBeer from './components/RandomBeer'
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route exact path='/beers' component={Beers} />
         <Route path='/beers/:id' component={BeerDetails} />
+        <Route path='/beers/random' component={RandomBeer} />
       </Switch>
 
     </div>
