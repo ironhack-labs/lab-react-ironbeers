@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import RandomBeer from "./pages/RandomBeer";
 import NewBeer from "./pages/NewBeer";
 import AllBeers from "./pages/AllBeers";
+import OneBeer from "./pages/OneBeer";
 
 import './App.css';
 
@@ -20,7 +21,8 @@ function App() {
 
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/beers" component={AllBeers} />
+        <Route exact path="/beers" component={AllBeers} />
+        <Route exact path="/beers/:id" component={OneBeer} />
         <Route path="/random-beer" component={RandomBeer} />
         <Route path="/new-beer" component={NewBeer} />
       </Switch>

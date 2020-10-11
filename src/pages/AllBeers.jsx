@@ -2,6 +2,8 @@ import React from 'react';
 import BeerAPI from '../api/beerApi';
 import { Link } from 'react-router-dom';
 
+console.log(BeerAPI);
+
 class AllBeers extends React.Component {
   constructor(props) {
     super(props);
@@ -36,9 +38,9 @@ class AllBeers extends React.Component {
         <p>All Beers Page</p>
         <h1>All the Beers!</h1>
         {this.state.beers.map((beer) => (
-          <div>
-            <Link key={beer._id} to={`/beer/${beer._id}`}>
+          <div key={beer._id}>
               <img src={beer.image_url} alt="" />
+            <Link to={`/beers/${beer._id}`}>
               <h3>{beer.name}</h3>
             </Link>
             <p>{beer.tagline}</p>

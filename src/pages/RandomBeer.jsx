@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
+import BeerAPI from '../api/beerApi';
+import { Link } from 'react-router-dom';
 
-const RandomBeer = () => {
-    return (
-        <div>
-            <p>Random Beer Page</p>
-        </div>
-    )
+class RandomBeer extends React.Component {
+
+    render() {
+        
+        return (
+            <div>
+                <p>Random Beer Page</p>
+            </div>
+        )
+    }
 }
 
-export default RandomBeer
+export default RandomBeer;
+
