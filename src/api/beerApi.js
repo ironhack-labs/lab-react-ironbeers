@@ -10,12 +10,13 @@ export default {
   getBeers() {
     return service.get("/");
   },
-  
+
   getOneBeer(id) {
     return service.get("/" + id);
   },
-/*
-  createOne(data) {
-    return service.post("/laroute-du-post", data);
-  },*/
+
+  getRandomBeer() {
+    return service.get("/random");
+  },
+
 };
