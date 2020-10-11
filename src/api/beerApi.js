@@ -19,4 +19,8 @@ export default {
     return service.get("/random");
   },
 
+  newBeer(data) {
+    return service.post("/new", data);
+  }
+
 };

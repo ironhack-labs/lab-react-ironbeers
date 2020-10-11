@@ -35,7 +35,6 @@ class AllBeers extends React.Component {
   render() {
     return (
       <div>
-        <p>All Beers Page</p>
         <h1>All the Beers!</h1>
         {this.state.beers.map((beer) => (
           <div key={beer._id}>
