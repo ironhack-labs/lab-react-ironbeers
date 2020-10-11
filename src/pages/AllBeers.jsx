@@ -10,10 +10,11 @@ class AllBeers extends React.Component {
     this.state = {
       beers: [],
       selectedBeer: null,
+      searchBeers: "",
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     BeerAPI.getBeers()
       .then((apiResponse) => {
         console.log(apiResponse);
@@ -32,10 +33,34 @@ class AllBeers extends React.Component {
     console.log('I have unmounted');
   }
 
+  handleChange = (event) => {
+    const value = event.target.value;
+    const key = event.target.name;
+
+    this.setState({
+      [key]: value,
+    });
+    
+    if(value) {
+      BeerAPI.searchBeers(value)
+      .then(apiResponse => {
+        this.setState({ beers: apiResponse.data });
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    } 
+  };
+
   render() {
     return (
       <div>
         <h1>All the Beers!</h1>
+        <form>
+        <label htmlFor="searchBeers">Search for a beer</label>
+        <input type="text" name="searchBeers" id="searchBeers" onChange={this.handleChange} value={this.state.searchBeers} />
+        <button>Search</button>
+        </form>
         {this.state.beers.map((beer) => (
           <div key={beer._id}>
               <img src={beer.image_url} alt="" />

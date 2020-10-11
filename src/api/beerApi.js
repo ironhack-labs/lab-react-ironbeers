@@ -21,6 +21,10 @@ export default {
 
   newBeer(data) {
     return service.post("/new", data);
+  },
+
+  searchBeers(query) {
+    return service.get(`/search?q=${query}`);
   }
 
 };
