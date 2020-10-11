@@ -15,8 +15,10 @@ function App() {
   return (
     <div className="App">
 
-    <header>
-      <Link to="/">Home</Link>
+    <header className="header flex">
+      <Link to="/">
+      <i className="fas fa-home fa-4x" id="home-icon"></i> 
+      </Link>
     </header>
 
       <Switch>
