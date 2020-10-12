@@ -22,3 +22,31 @@ code {
   color: white;
   text-decoration: none;
 }
+
+.beer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  border: 1px solid black;
+}
+
+.beer-card img {
+  height: 300px;
+  padding: 0 90px;
+}
+
+.beer-info {
+  margin: 0 auto;
+}
+
+.new-beer {
+  display: flex;
+  flex-flow: column;
+  width: 50vw;
+  margin: 2rem auto;
+}
+
+.new-beer button {
+  margin: 1rem 15rem;
+}
