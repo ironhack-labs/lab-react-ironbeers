@@ -3,9 +3,9 @@
 }
 
 .beerHome {
-  width:100%;
-    height: 200px;
-    object-fit:cover ;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .NavBar {
@@ -13,43 +13,101 @@
   background-color: lightskyblue;
 }
 
-.homeIcon{
-max-height: 20vw;
+.homeIcon {
+  max-height: 20vw;
 }
 
-.imageCardBeer{
-  width:10%;
-  object-fit:contain ;
+.imageCardBeer {
+  width: 10%;
+  object-fit: contain;
   position: inherit;
   margin-left: 5vw;
-  }
-  
-  .beer-card{
-      display:flex;
-      justify-content: row;
-      margin-top:20px;
-      padding-bottom: 15px;
-      border-bottom:1px rgb(235, 228, 228) solid
-  }
-  
-  .card-description{
-  margin-left:35px;
+}
+
+.beer-card {
+  display: flex;
+  justify-content: row;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px rgb(235, 228, 228) solid
+}
+
+.card-description {
+  margin-left: 35px;
   margin-right: 5vw;
-  
-  }
-  
-  .subtext{
-      font-size: 12px;
-  }
-  
-  .tagline{
-      color:rgb(151, 147, 147);
-  } 
-  
-  .beer-card-single{
-    display:block;
-    position: relative;
-    margin-top:50vw;
-    padding-bottom: 15px;
-    border-bottom:1px rgb(235, 228, 228) solid
-  }
+
+}
+
+.subtext {
+  font-size: 12px;
+}
+
+.tagline {
+  color: rgb(151, 147, 147);
+}
+
+.beer-card-single {
+  display: block;
+  position: relative;
+  margin-top: 30vw;
+  padding-bottom: 15px;
+  border-bottom: 1px rgb(235, 228, 228) solid
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+div .attenuation_level {
+  line-height: 17vw;
+}
+
+.tagline{
+text-align: left;
+}
+
+.subtext{
+  text-align: left;
+}
+
+.form-input{
+  display: flex;
+  margin-left: 5vh;
+  margin-top: 2vw;
+  margin-bottom: 0vw;
+}
+
+.input{
+  margin: 0vw;
+  width: 80vw;
+  height: 8vw;
+  border-radius: 5vw;
+}
+
+.input-big{
+  margin: 0vw;
+  width: 80vw;
+  height: 35vw;
+  border-radius: 5vw;
+}
+
+.form-button{
+  background-color: lightskyblue;
+  margin-top: 5vw;
+  width: 80vw;
+  height: 10vw;
+  border-radius: 6vw;
+}
+
+.input-search {
+  margin: 0vw;
+  width: 80vw;
+  height: 8vw;
+  border-radius: 5vw;
+}

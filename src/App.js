@@ -33,9 +33,9 @@ class App extends React.Component {
       <Switch>
           <Route path="/" exact render={() => <HomePage />} />
           <Route path="/beers" render={() => <BeersList />} />
-          <Route path="/singleBeer/:id" render={(props) => <SingleBeer  {...props} beers={this.state.beers} />} />
-          <Route path="/randomBeer" render={() => <RandomBeer beers={this.state.beers} />} />
-          <Route path="/newBeer" render={() => <NewBeer beers={this.state.beers} />} />
+          <Route path="/single-beer/:id" render={(props) => <SingleBeer  {...props} beers={this.state.beers} />} />
+          <Route path="/random-beer" render={() => <RandomBeer beers={this.state.beers} />} />
+          <Route path="/new-beer" render={() => <NewBeer beers={this.state.beers} />} />
         </Switch>
 
     </div>

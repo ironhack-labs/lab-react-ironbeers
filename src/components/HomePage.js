@@ -19,14 +19,14 @@ export default function HomePage() {
       </article>
       <article>
         <img className="beerHome" src={cheers} alt="Random Beer"></img>
-        <Link to="/randomBeer">
+        <Link to="/random-beer">
           <h2>Random Beer</h2>
         </Link>
         <p>Let the app choose a beer for you. </p>
       </article>
       <article>
         <img className="beerHome" src={glassOfBeer} alt="New Beer"></img>
-        <Link to="/newBeer">
+        <Link to="/new-beer">
           <h2>New Beer</h2>
         </Link>
         <p>Add new beers to our app. </p>

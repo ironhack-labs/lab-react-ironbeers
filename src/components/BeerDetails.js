@@ -7,7 +7,7 @@ const BeerDetails = ({ image_url, name, tagline, contributed_by, _id }) => {
       <article className="beer-card">
         <img className="imageCardBeer" src={image_url} alt="beer img"></img>
         <div className="card-description">
-          <Link to={'/singleBeer/' + _id}>
+          <Link to={'/single-beer/' + _id}>
             <h3>{name}</h3>
           </Link>
           <p className="tagline">{tagline}</p>
