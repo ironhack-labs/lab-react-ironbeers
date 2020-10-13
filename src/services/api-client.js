@@ -12,3 +12,7 @@ export const getRandomBeer = () => {
 export const getBeerById = (id) => {
   return axios.get(`${baseURL}/${id}`).then((response) => response.data);
 };
+
+export const createBeer = (body) => {
+  return axios.post(`${baseURL}/new`, body).then((response) => response.data);
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+import { createBeer } from '../../services/api-client';
 
 const validations = {
   name: (value) => value.length > 1,
@@ -6,7 +7,7 @@ const validations = {
   description: (value) => value.length > 1,
   first_brewed: (value) => value.length > 1,
   brewers_tips: (value) => value.length > 1,
-  attenuation_level: (value) => value.length > 1,
+  attenuation_level: (value) => value.length >= 0,
   contributed_by: (value) => value.length > 1,
 };
 
@@ -18,7 +19,7 @@ class Form extends React.Component {
       description: '',
       first_brewed: '',
       brewers_tips: '',
-      attenuation_level: '',
+      attenuation_level: 0,
       contributed_by: '',
     },
     error: {
@@ -35,6 +36,7 @@ class Form extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    createBeer(this.state.data);
   };
 
   handleChange = (event) => {
@@ -171,7 +173,9 @@ class Form extends React.Component {
                   value={data.attenuation_level}
                   onBlur={this.handleBlur}
                   name="attenuation_level"
-                  type="text"
+                  type="number"
+                  min="10"
+                  max="100"
                   onChange={this.handleChange}
                   className={`form-control ${
                     touch.attenuation_level && error.attenuation_level
@@ -179,7 +183,7 @@ class Form extends React.Component {
                       : ''
                   }`}
                   placeholder="Enter attenuation_level"
-                />
+                ></input>
 
                 <div className="invalid-feedback">error</div>
               </div>
@@ -215,11 +219,11 @@ class Form extends React.Component {
           </div>
         </div>
 
-        <div className="col">
+        {/* <div className="col">
           <label>State</label>
 
           <pre>{JSON.stringify(this.state, null, ' ')}</pre>
-        </div>
+        </div> */}
       </div>
     );
   }
