@@ -1,9 +1,14 @@
 import React from 'react';
+import Form from '../form/Form';
 import './NewBeer.css';
 
 class NewBeer extends React.Component {
   render() {
-    return <div>New beer component</div>;
+    return (
+      <div className="new">
+        <Form />
+      </div>
+    );
   }
 }
 
