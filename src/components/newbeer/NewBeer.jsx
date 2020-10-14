@@ -1,5 +1,6 @@
 import React from 'react';
-import Form from '../form/Form';
+import Form from '../forms/form/Form';
+
 import './NewBeer.css';
 
 class NewBeer extends React.Component {
