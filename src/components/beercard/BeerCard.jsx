@@ -5,7 +5,7 @@ class BeerCard extends React.Component {
   render() {
     return (
       <NavLink className="navlink" to={`/beers/${this.props.beer._id}`}>
-        <div className="card">
+        <article className="card">
           <div className="name">{this.props.beer.name}</div>
           <img className="image" src={this.props.beer.image_url}></img>
           <div className="description">{this.props.beer.tagline}</div>
@@ -15,7 +15,7 @@ class BeerCard extends React.Component {
               {this.props.beer.contributed_by}
             </span>
           </div>
-        </div>
+        </article>
       </NavLink>
     );
   }
