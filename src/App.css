@@ -2,37 +2,112 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.beerHome {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.NavBar {
+  max-height: 22vw;
+  background-color: lightskyblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homeIcon {
+  max-height: 20vw;
+}
+
+.imageCardBeer {
+  width: 10%;
+  object-fit: contain;
+  position: inherit;
+  margin-left: 5vw;
+}
+
+.beer-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: row;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px rgb(235, 228, 228) solid
 }
 
-.App-link {
-  color: #61dafb;
+.card-description {
+  margin-left: 35px;
+  margin-right: 5vw;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subtext {
+  font-size: 12px;
+}
+
+.tagline {
+  color: rgb(151, 147, 147);
+}
+
+.beer-card-single {
+  display: block;
+  position: relative;
+  margin-top: 30vw;
+  padding-bottom: 15px;
+  border-bottom: 1px rgb(235, 228, 228) solid
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+div .attenuation_level {
+  line-height: 17vw;
+}
+
+.tagline{
+text-align: left;
+}
+
+.subtext{
+  text-align: left;
+}
+
+.form-input{
+  display: flex;
+  margin-left: 5vh;
+  margin-top: 2vw;
+  margin-bottom: 0vw;
+}
+
+.input{
+  margin: 0vw;
+  width: 80vw;
+  height: 8vw;
+  border-radius: 5vw;
+}
+
+.input-big{
+  margin: 0vw;
+  width: 80vw;
+  height: 35vw;
+  border-radius: 5vw;
+}
+
+.form-button{
+  background-color: lightskyblue;
+  margin-top: 5vw;
+  width: 80vw;
+  height: 10vw;
+  border-radius: 6vw;
+}
+
+.input-search {
+  margin: 0vw;
+  width: 80vw;
+  height: 8vw;
+  border-radius: 5vw;
 }
