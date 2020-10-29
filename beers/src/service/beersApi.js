@@ -11,6 +11,6 @@ export default class BeerService {
     getAllBeers = () => this.api.get('/')
     getBeerById = id => this.api.get(`/${id}`)
     getRandomBeer = () => this.api.get('/random')
-    createNewBeer = () => this.api.post('/new')
+    createNewBeer = (beer) => this.api.post('/new', beer)
 }
         

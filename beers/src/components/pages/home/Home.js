@@ -17,7 +17,7 @@ const home = () => {
             <Link to="/randombeer" className='row home-card'>
                 <img src={randombeer} alt="Beer Tap" />
             </Link>
-                <h3>All Beers</h3>
+                <h3>Random Beer</h3>
                 <p>Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag.</p>
             <Link to="/newbeer" className='row home-card'>
                 <img src={newbeer} alt="Beer Bottle" />

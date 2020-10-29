@@ -24,5 +24,10 @@ nav {
 .card img {
   height: 300px;
   object-fit: contain;
-  
 }
+
+.detail img {
+  height: 500px;
+  object-fit: contain;  
+}
+
