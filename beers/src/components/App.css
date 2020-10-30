@@ -9,9 +9,24 @@ a{
   text-decoration: none;
   color: rgb(59, 56, 56)
 }
+a:hover{
+  text-decoration: none;
+  color:  rgb(59, 56, 56)
+}
 
 .homeIcon{
   height: 50px;
   display: block;
   margin: auto;
 }
+
+.card img{
+  height: 300px;
+  object-fit: cover;
+}
+
+.logo-wrapper img{
+  display: block;
+  margin: auto;
+}
+
