@@ -16,7 +16,7 @@ export default function Home() {
                 </article>
             </Link>
 
-            <Link to='/beer/random-beers' className='cards-home' >
+            <Link to='/beer/random-beer' className='cards-home' >
                 <article >
                 <img src={imgRandomBeer} alt=''></img>
                 <h2>Random Beer</h2>
