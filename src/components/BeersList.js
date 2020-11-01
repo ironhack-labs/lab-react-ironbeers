@@ -13,13 +13,14 @@ function BeersList(props) {
             {
                 props.beers.map((beer, i) => {
                         return (
-                            <Link to={`/RandomBeer`} key={{i}} style={{border: '2px solid black', display: 'flex', flexDirection: 'row'}}>
-                                <img src={beer.image_url} style={{height: '150px'}}/>
+                            <Link to={`/beer/${beer._id}`} key={{i}} style={{border: '2px solid black', display: 'flex', flexDirection: 'row'}}>
+                                <img src={beer.image_url} style={{height: '150px'}} alt='beerY' />
                                 <div>
                                     <p>{beer.name}</p>
                                     <p>{beer.tagline}</p>
                                     <p>{beer.contributed_by}</p>
                                     <p>{beer._id}</p>
+                                    <p>{i}</p>
                                 </div>
                             </Link>
                             )

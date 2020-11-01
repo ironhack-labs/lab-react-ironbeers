@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios' 
 import BeersList from './BeersList'
+//import {Link} from 'react-router-dom'
 
 export default class AllBeers extends Component {
 
@@ -17,6 +18,7 @@ export default class AllBeers extends Component {
                 })
             })
     }
+    
 
 
     render() {
@@ -25,6 +27,8 @@ export default class AllBeers extends Component {
                 
                 <h3 style={{color: 'gray'}}>In all beers page</h3>
                 <BeersList beers={this.state.beers} />
+
+
             </div>
         )
     }
