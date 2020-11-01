@@ -13,13 +13,26 @@ export default function AllBeers() {
     });
   },[]);
 
+const handleSearch = (query) =>{
+  console.log(query)
+  axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+  .then((res)=>{
+    console.log('im data axi',res.data)
+    setBeers(res.data)
+  })
+
+}
+
+
+
 if(!beers) return null
   return (
     <>
     
-
+<input type="search" onChange={(event)=>{handleSearch(event.target.value)}}/>
       {beers.map((beer ,index) => {
         return (
+          
           <Link to={`/beersDetail/${beer._id}`}>
             <div style={{ border: '2px solid black' }}>
               <img
@@ -33,6 +46,7 @@ if(!beers) return null
               {beer.tagline}
             </div>
           </Link>
+          
         );
       })}
     </>
