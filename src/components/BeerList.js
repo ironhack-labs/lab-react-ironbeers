@@ -6,7 +6,7 @@ function BeerList(props) {
   return (
     <div className="container">
       <Header />
-
+      <input className="search-field" onChange={props.onSearch} type="text" placeholder="Search"/>
       {props.beers.map((beer) => {
         return (
           <Link

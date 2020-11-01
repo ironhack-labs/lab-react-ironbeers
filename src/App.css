@@ -183,6 +183,15 @@ body{
   color: black;
   font-size: 1rem;
   font-weight: bold;
-  padding-left: 10px;
+  padding: 0px 0px 10px 10px;
   
+  
+}
+
+
+.search-field {
+  border: solid 1px gray;
+  padding: 10px;
+  margin: 40px 10px 50px 10px;
+  border-radius: 20px;
 }

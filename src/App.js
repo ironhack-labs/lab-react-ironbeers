@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import './App.css';
@@ -9,11 +9,15 @@ import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
 import HomePage from './components/HomePage';
 import SingleBeer from './components/SingleBeer';
+
+
+
 class App extends Component {
 
 
   state = {
     beers: [],
+    searchedBeers: []
   };
 
 
@@ -30,29 +34,48 @@ class App extends Component {
 
 
   handleAdd = (event) => {
-    event.preventDefault()
-    console.log(event.target.name)
-    console.log("submmitted")
-    const {name, tagline, first_brewed, brewers_tips, attenuation_level , contributed_by , description} = event.target.name
+    event.preventDefault();
+    console.log(event.target)
+    const { name, tagline, first_brewed, brewers_tips, attenuation_level ,contributed_by, description} = event.target
 
     let newBeer = {
-      name: name,
-      tagline: tagline,
-      first_brewed: first_brewed,
-      brewers_tips: brewers_tips,
-      attenuation_level: attenuation_level,
-      contributed_by: contributed_by,
-      description: description,
+      name: name.value,
+      tagline: tagline.value,
+      first_brewed: first_brewed.value,
+      brewers_tips: brewers_tips.value,
+      attenuation_level: attenuation_level.value,
+      contributed_by: contributed_by.value,
+      description: description.value,
     }
+
+    
 
     axios.post('https://ih-beers-api2.herokuapp.com/beers/new', newBeer)
     .then((response) =>{
-      console.log(response)
         this.setState({
           beers: [response.data , ...this.state.beers]
-        })      
-    })
+        });    
+    });
   }
+
+
+
+
+  handleSearch = (event) => {
+    console.log("search called!")
+    console.log(event)
+    event.preventDefault();
+    let search = event.target.value;
+    
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${search}`)
+     .then((response) =>{
+        this.setState({
+          searchedBeers: response.data
+        });    
+    });
+  }
+
+
 
 
 
@@ -61,7 +84,7 @@ class App extends Component {
       <div className="container">
       <Switch>
         <Route exact path="/" render={() => { return <HomePage/>}} />
-        <Route exact path="/beers" render={() => { return <BeerList beers={this.state.beers} />}} />
+        <Route exact path="/beers" render={() => { return <BeerList beers={this.state.beers} onSearch={this.handleSearch}/> ; }} />
         <Route path="/random-beer" render={() => { return <RandomBeer/>}} />
         <Route path="/new-beer" render={() => { return <NewBeer onAdd={this.handleAdd}/> ; }} />
         <Route path="/beers/:beerId" component={SingleBeer} />
@@ -72,4 +95,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App)
