@@ -12,27 +12,10 @@ export default function App() {
     <div>
       <Mynav />
       <Switch>
-       
-        <Route
-          path="/beers"
-
-          render={() => {
-            return <AllBeers />;
-          }}
-        />
+        <Route path="/beers" component={AllBeers} />;
         <Route path="/beersDetail/:beerId" component={SingleBeer} />
-        {/* <Route path="/new-beer" component={NewBeer} /> */}
-        <Route
-          path="/new-beer"
-          component={NewBeer}
-        />
-
-        <Route
-          path="/random-beer"
-          render={() => {
-            return <RandomBeers />;
-          }}
-        />
+        <Route path="/new-beer" component={NewBeer} />
+        <Route path="/random-beer" component={RandomBeers} />
       </Switch>
     </div>
   );

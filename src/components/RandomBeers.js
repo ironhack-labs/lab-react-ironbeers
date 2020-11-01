@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
 export default function RandomBeers(props) {
   const [randonBeer, setrandonBeer] = useState();
 
@@ -10,7 +9,6 @@ export default function RandomBeers(props) {
       .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
       .then((response) => {
         setrandonBeer(response.data);
-        console.log('hi random',response.data);
       })
       .catch((err) => {
         console.log('error', err);
@@ -29,7 +27,6 @@ export default function RandomBeers(props) {
   } = randonBeer;
   return (
     <>
-
       <div style={{ border: '1px solid black' }}>
         <img alt="" style={{ width: '35px' }} src={image_url}></img>
         <h1>{name}</h1>
