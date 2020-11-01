@@ -15,7 +15,7 @@ export default function Beers(props) {
         return (
             <div className="beer-box" /*style={{ width: '28rem' }}*/>
               <Link to={`/beers/${beer._id}`}>
-                <img style={{ height: '150px', width: '50px'}} className="beer-pic" src={beer.image_url} />
+                <img style={{ height: '150px', width: '50px'}} className="beer-pic" src={beer.image_url} alt="beerpic"/>
                 <div className="card-body">
                   <h2 className="beer-title" key={beer._id}>{beer.name}</h2>
                   <h3 class="tag-line">{beer.tagline}</h3>

@@ -1,5 +1,5 @@
-import Axios from 'axios';
 import React, { Component } from 'react';
+import Axios from 'axios';
 
 export default class BeerDetail extends Component {
   state = {
@@ -38,7 +38,7 @@ export default class BeerDetail extends Component {
       <div>
         <div className="card" style={{width: "18rem"}}>
           <div className="card-body">
-          <img src= {image_url} style={{height: "200px", textalign: "center"}}/>
+          <img src= {image_url} style={{height: "200px", textalign: "center"}} alt="beerpic"/>
             <h3 className="card-title">{name}</h3>
             <h4 className="card-subtitle mb-2 text-muted">{tagline}</h4>
             <aside>

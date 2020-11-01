@@ -36,6 +36,37 @@ componentDidMount() {
     })
 }
 
+addBeer = (e) => {
+  e.preventDefault()
+  console.log(e.target)
+   const { name, tagline, decription, firstBrewed, brewersTips, attenuationLevel, contributedBy} = e.target
+
+
+   let newBeer = {
+    name: name.value, 
+    tagline: tagline.value, 
+    decription: decription.value, 
+    firstBrewed: firstBrewed.value, 
+    brewersTips: brewersTips.value, 
+    attenuationLevel: attenuationLevel.value, 
+    contributedBy: contributedBy.value
+   }
+
+   //make a post request because we are sending the form's information
+   axios.post('https://ih-beers-api2.herokuapp.com/beers/new', newBeer)
+   .then((response ) => {
+     this.setState({
+      beers: [ response.data, ...this.state.beers]
+     }, // then you redirect the user to the home page
+    //  () => { 
+    //   this.props.history.push('/')
+    // }
+    )
+   })
+}
+
+
+
 
 
   render() {
@@ -51,7 +82,8 @@ componentDidMount() {
           }}/>
 
           <Route exact path="/random-beer" component={RandomBeer} />
-          <Route exact path="/new-beer" component={NewBeer} />
+          <Route exact path="/new-beer" render={() => {
+            return <NewBeer onAdd={this.addBeer} /> }}/>
           <Route exact path="/beers/:beerId" render = {(props) => {
                 return <BeerDetail {...props}/> }} />  
 

@@ -39,6 +39,13 @@
 
 
 /* beer page */
+#beer-container   {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* border: solid 2px red; */
+}
 #beer-container > div  {
   display: flex;
   justify-content: space-around;
@@ -81,7 +88,7 @@
 .beer-pic {
   /* max-width: 40%;
   height: auto;  */
-  border: solid 2px pink;
+  /* border: solid 2px pink; */
   position: relative;
   margin-bottom: 50px;
   text-align: center; 
