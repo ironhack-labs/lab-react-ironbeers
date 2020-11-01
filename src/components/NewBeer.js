@@ -16,7 +16,6 @@ export default function NewBeer(props) {
       contributed_by,
     } = e.target;
 
-
     let newData = {
       name: name.value,
       description: description.value,
@@ -31,7 +30,6 @@ export default function NewBeer(props) {
       .post('https://ih-beers-api2.herokuapp.com/beers/new', newData)
       .then((response) => {
         props.history.push('/');
-       
       });
   };
 

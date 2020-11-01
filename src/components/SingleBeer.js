@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
 export default function SingleBeer(props) {
   const [beerDetail, setBeerDetail] = useState();
 
@@ -30,7 +29,6 @@ export default function SingleBeer(props) {
   } = beerDetail;
   return (
     <>
-     
       <div style={{ border: '1px solid black' }}>
         <img alt="" style={{ width: '35px' }} src={image_url}></img>
         <h1>{name}</h1>
