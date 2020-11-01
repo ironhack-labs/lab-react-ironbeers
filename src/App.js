@@ -31,18 +31,18 @@ class App extends Component {
 
   handleAdd = (event) => {
     event.preventDefault()
-    console.log(event.target)
+    console.log(event.target.name)
     console.log("submmitted")
-    const {name, tagline, first_brewed, brewers_tips, attenuation_level , contributed_by , description} = event.target
+    const {name, tagline, first_brewed, brewers_tips, attenuation_level , contributed_by , description} = event.target.name
 
     let newBeer = {
-      name: name.value,
-      tagline: tagline.value,
-      first_brewed: first_brewed.value,
-      brewers_tips: brewers_tips.value,
-      attenuation_level: attenuation_level.value,
-      contributed_by: contributed_by.value,
-      description: description.value,
+      name: name,
+      tagline: tagline,
+      first_brewed: first_brewed,
+      brewers_tips: brewers_tips,
+      attenuation_level: attenuation_level,
+      contributed_by: contributed_by,
+      description: description,
     }
 
     axios.post('https://ih-beers-api2.herokuapp.com/beers/new', newBeer)
