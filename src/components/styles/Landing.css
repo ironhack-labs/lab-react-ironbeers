@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.landing__title {
+    font-size: 3em !important;
+    font-family: 'Bebas Neue', cursive !important;
+}
+
+.landing__img{
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.landing__img:hover{
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}

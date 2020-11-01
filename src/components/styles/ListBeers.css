@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@500&display=swap');
+
+
+.listBeers__img {
+    width: 50px !important;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.listBeers__img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.listBeers__title {
+    font-family: 'Yantramanav', sans-serif !important;
+    font-size: 25px !important;
+}
