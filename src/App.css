@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+body{
+ font-family: Arial, Helvetica, sans-serif; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 414px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #34c0eb;
+  height: 40px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icon {
+ height:30px;
+ align-self: baseline;
+}
+
+.headline{
+  color: black;
+}
+
+
+.headline:hover {
+  text-decoration: underline;
+}
+
+
+.headline:visited {
+  color: black;
+}
+
+.copytext{
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+
+.copytext:hover {
+  text-decoration: underline;
+}
+
+.copytext:visited{
+  color: black;
+}
+
+.image-container{
+  width: 420px; /* width of container */
+  height: 200px; /* height of container */
+  overflow: hidden;
+}
+
+.image{
+  width: 420px; /* width of container */
+}
+
+.textblock{
+  padding: 10px;
+}
+
+/* -------Beer card------- */
+
+.beer-card-image{
+  height: 150px;
+}
+
+.beer-card-image-container{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.beer-card{
+  display: flex;
+  flex-direction: row;
+  padding:20px 30px;
+}
+
+.beer-card-text{
+  padding-left: 20px;
+}
+
+
+.beer-name{
+  color: #474747;
+  font-size: 1.2rem;
+}
+
+.beer-tagline{
+  color: #474747;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.beer-created-tagline{
+  color: black;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+
+/* ///-----single beer */
+
+.single-beer-name{
+  color: #474747;
+  font-size: 2rem;
+}
+
+
+.single-beer-copytext{
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.single-beer-tagline {
+  color: #474747;
+  font-size: 1rem;
+  font-style: oblique;
+
+}
+
+.single-beer-image-container{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.single-beer-card-image{
+  height: 300px;
+  display: flex;
+}
+
+
+/* ---form--- */
+
+.form{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-field {
+  border: solid 1px gray;
+  padding: 10px;
+  margin: 0px 10px 20px 10px;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-field-description {
+  border: solid 1px gray;
+  height: 100px;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin: 0px 10px 20px 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  justify-items: flex-start;
+
+}
+
+.form-button {
+  background-color: #34c0eb;
+  color: aliceblue;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  margin: 0 10px 20px 10px;
+  border-radius: 20px;
+}
+
+.form-copy{
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 10px;
+  
 }
