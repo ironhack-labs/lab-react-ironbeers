@@ -1,26 +1,68 @@
-import React from 'react';
+import React, { Component } from 'react'
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Home from './components/Home'
+import Beers from './components/Beers'
+import NewBeer from './components/NewBeer'
+import RandomBeer from './components/RandomBeer'
+import NaviBar from './components/NaviBar'
+import BeerDetail from './components/BeerDetail'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import axios from 'axios'
+
+
+
+
+
+class App extends Component {
+
+
+state = {
+  beers: []
 }
 
-export default App;
+//I am fetching my data from the beer API
+componentDidMount() {
+  axios.get('https://ih-beers-api2.herokuapp.com/beers')
+    .then((response) => {
+      // console.log("response.data is: ", response.data)
+
+        this.setState({
+          beers: response.data
+        })
+    })
+}
+
+
+
+  render() {
+    return (
+      <div>
+        <NaviBar/>
+      <Switch>
+        <Route exact path='/' render = {() => {
+                return <Home /> }} />       
+          {/* <Route exact path="/beers" component={Beers} /> */}
+          <Route exact path="/beers" render={() => {
+            return <Beers singleBeer={this.state.beers}/> //here it will render the component with the props (the state)
+          }}/>
+
+          <Route exact path="/random-beer" component={RandomBeer} />
+          <Route exact path="/new-beer" component={NewBeer} />
+          <Route exact path="/beers/:beerId" render = {(props) => {
+                return <BeerDetail {...props}/> }} />  
+
+      </Switch>
+      </div>
+    )
+  }
+}
+
+
+export default App
+
+
+
