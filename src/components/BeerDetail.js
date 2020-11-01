@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import NaviBar from './NaviBar'
 
 export default class BeerDetail extends Component {
   state = {
@@ -35,6 +36,7 @@ export default class BeerDetail extends Component {
     } = this.state.beerDetail;
 
     return (
+      <div><NaviBar/>
       <div>
         <div className="card" style={{width: "18rem"}}>
           <div className="card-body">
@@ -51,6 +53,7 @@ export default class BeerDetail extends Component {
             <p className="contributed-by">{contributed_by}</p>
           </div>
         </div>
+      </div>
       </div>
     );
   }

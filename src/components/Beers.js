@@ -1,14 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NaviBar from './NaviBar'
 
 export default function Beers(props) {
   //props.beers = [{}, {}, {}]
   // let {singleBeer} = props
 
   return (
+    <div>
+    <NaviBar/>
     <section id="beer-container">
-      Hey its beeeeers page
-      {console.log('props.singleBeer is: ', props.singleBeer)}
+    
+
+      {/* {console.log('props.singleBeer is: ', props.singleBeer)} */}
 
       {
           props.singleBeer.map((beer) => {
@@ -27,5 +31,6 @@ export default function Beers(props) {
       })
       }
     </section>
+    </div>
   );
 }

@@ -8,7 +8,6 @@ import Home from './components/Home'
 import Beers from './components/Beers'
 import NewBeer from './components/NewBeer'
 import RandomBeer from './components/RandomBeer'
-import NaviBar from './components/NaviBar'
 import BeerDetail from './components/BeerDetail'
 
 import axios from 'axios'
@@ -72,7 +71,6 @@ addBeer = (e) => {
   render() {
     return (
       <div>
-        <NaviBar/>
       <Switch>
         <Route exact path='/' render = {() => {
                 return <Home /> }} />       

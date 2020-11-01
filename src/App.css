@@ -37,7 +37,14 @@
   }
 }
 
+/*Home Beers */ 
 
+#home-beer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 /* beer page */
 #beer-container   {
   display: flex;
@@ -92,4 +99,47 @@
   position: relative;
   margin-bottom: 50px;
   text-align: center; 
+}
+
+
+.navibar{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #34c0eb;
+  height: 70px;
+
+}
+
+.home-icon {
+  height: 60%;
+}
+
+.form-control {
+  margin-top: 20px;
+  /* border: solid red 2px; */
+
+}
+
+.form-container{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* border: solid pink 2px; */
+}
+
+.main-container {
+  /* border: solid green 2px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin-top: 20px;
+  /* border: solid orange 2px; */
+
 }

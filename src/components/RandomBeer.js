@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
+import NaviBar from './NaviBar'
 
 export default class RandomBeer extends Component {
 
@@ -40,6 +41,8 @@ componentDidMount() {
 
     return (
       <div>
+      <NaviBar/>
+      <div className="main-container">
         <div className="card" style={{width: "18rem"}}>
           <div className="card-body">
           <img src= {image_url} style={{height: "200px", textalign: "center"}} alt="beerpic"/>
@@ -54,6 +57,7 @@ componentDidMount() {
             </p>
             <p className="contributed-by">{contributed_by}</p>
           </div>
+        </div>
         </div>
       </div>
     );

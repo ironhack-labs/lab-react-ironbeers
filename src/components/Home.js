@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div>
-      <div className="card" style={{ width: '28rem' }}>
+    <div id="home-beer">
+      <div className="card" style={{ width: '18rem' }}>
         <Link to={'/beers'}>
           <img className="card-img-top" src="./allbeers.PNG" alt="beerpic"/>
           <div className="card-body">
@@ -20,7 +20,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="card" style={{ width: '28rem' }}>
+      <div className="card" style={{ width: '18rem' }}>
         <Link to={'/random-beer'}>
           <img className="card-img-top" src="./randombeer.PNG" alt="beerpic"/>
           <div className="card-body">
@@ -36,7 +36,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="card" style={{ width: '28rem' }}>
+      <div className="card" style={{ width: '18rem' }}>
         <Link to={'/new-beer'}>
           <img className="card-img-top" src="./newBeer.PNG" alt="beerpic"/>
           <div className="card-body">
