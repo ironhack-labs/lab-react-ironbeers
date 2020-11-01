@@ -17,7 +17,6 @@ class App extends Component {
 
   state = {
     beers: [],
-    searchedBeers: []
   };
 
 
@@ -54,6 +53,8 @@ class App extends Component {
     .then((response) =>{
         this.setState({
           beers: [response.data , ...this.state.beers]
+        }, () => {
+          this.props.history.push('/')
         });    
     });
   }
@@ -66,13 +67,15 @@ class App extends Component {
     console.log(event)
     event.preventDefault();
     let search = event.target.value;
-    
-    axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${search}`)
-     .then((response) =>{
+    const { beers } = this.state;
+
+  axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${search}`)
+    .then((response) =>{
         this.setState({
-          searchedBeers: response.data
+          beers: response.data
         });    
     });
+  
   }
 
 
@@ -95,4 +98,5 @@ class App extends Component {
   }
 }
 
-export default withRouter(App)
+export default withRouter(App);
+
