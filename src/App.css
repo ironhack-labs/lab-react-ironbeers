@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin:5px;
 }
 
 .App-logo {
@@ -36,3 +37,15 @@
     transform: rotate(360deg);
   }
 }
+
+.home-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.home-box img{
+  width:200px;
+}
+
