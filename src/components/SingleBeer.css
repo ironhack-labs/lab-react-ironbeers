@@ -1,0 +1,33 @@
+.myCard.card {
+  width: 18rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-img.myImg {
+  width: 25%;
+  margin-top: 20px;
+}
+
+.myCardBody.card-body {
+  padding: 15px;
+}
+
+.myCardBody.card-body > * {
+  margin: 0;
+}
+
+.myTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myTagline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.myDescription {
+  font-size: 14px;
+}

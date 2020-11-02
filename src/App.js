@@ -1,25 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*
+ * Setup.
+ */
+import React, { Fragment } from "react";
+import { Switch, Route } from "react-router-dom";
 
+// CSS.
+import "./App.css";
+
+// Components.
+import ListBeers from "./components/ListBeers";
+import SingleBeer from "./components/SingleBeer";
+import NewBeer from "./components/NewBeer";
+import RandomBeer from "./components/RandomBeer";
+import MyNav from "./components/MyNav";
+
+/*
+ * Main.
+ */
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <MyNav />
+
+      <Switch>
+        <Route
+          exact
+          path="/beers"
+          render={() => {
+            return <ListBeers />;
+          }}
+        />
+
+        <Route path="/beers/:beerId" component={SingleBeer} />
+
+        <Route
+          path="/random-beer"
+          render={() => {
+            return <RandomBeer />;
+          }}
+        />
+
+        <Route
+          path="/new-beer"
+          render={() => {
+            return <NewBeer />;
+          }}
+        />
+      </Switch>
+    </Fragment>
   );
 }
 

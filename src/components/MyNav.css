@@ -1,0 +1,10 @@
+.myNavbar {
+  background-color: #ffa846;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myNav > * {
+  margin: 0 20px;
+}
