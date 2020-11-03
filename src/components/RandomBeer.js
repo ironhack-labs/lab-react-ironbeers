@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import Header from './header/Header';
+//import Header from './header/Header';
 import axios from 'axios';
 
 
@@ -28,7 +28,7 @@ export default class RandomBeer extends Component {
     render() {
         return (
             <div>
-                <Header/>
+                
             <h1>Random Beer</h1>
             <img src={this.state.beer.image_url} alt={this.state.beer.name}/>
             <h1>{this.state.beer.name}</h1>

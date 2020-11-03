@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import Header from './header/Header';
+//import Header from './header/Header';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 
@@ -24,7 +24,7 @@ export default class AllBeer extends Component {
   render() {
     return (
       <div>
-         <Header />
+         
          <div className='list'>
            {this.state.beers.map((beer)=>(
              

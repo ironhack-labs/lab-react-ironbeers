@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 //import {Link} from 'react-router-dom';
-import Header from './header/Header';
+//import Header from './header/Header';
   
 export default class SingleBeer extends Component {
     
@@ -28,7 +28,7 @@ export default class SingleBeer extends Component {
       const beer=this.state.beer;  
       return (
             <div>
-                <Header/>{ ' '}
+                
                 <div key={beer._id} className='single-beer-container'>
                   <img className='single-beer-img'
                   src={beer.image_url}alt={beer.name}/>
