@@ -9,8 +9,8 @@ export default function BeerDetail(props) {
     console.log(beerDetails)
 
     return (
-        <div>
-            <img src={beerDetails.image_url} alt={beerDetails.name}></img>
+        <div className="card mb-3" style="max-width: 540px;">
+            <img className='card-img' src={beerDetails.image_url} alt={beerDetails.name}></img>
             <h2>{beerDetails.name}</h2>
             <h3>{beerDetails.tagline}</h3>
             <p>{beerDetails.first_brewed}</p>

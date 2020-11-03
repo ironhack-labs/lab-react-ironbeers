@@ -21,10 +21,11 @@ export default class SearchBar extends Component {
 
     render() {
         return (
-        <div>
-                <p>Search</p>
-                <form >
+        <div className='mx-5 my-5'>
+                <p className="font-weight-bold mt-3">Search</p>
+                <form className='form-group'>
                     <input 
+                        className="form-control"
                         type="text" 
                         name="search" 
                         placeholder="Search..." 

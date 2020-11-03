@@ -13,14 +13,12 @@ export default class AllBeers extends Component {
       }
     
     componentDidMount () {
-
         Axios 
         .get(BEERS_FROM_DB)
         .then(response => {
             this.setState({ beers: response.data })
             this.props.updateStateAppJs(this.state.beers)
         })
-
     }
 
     filterBySearch = (searchTerm) => {
@@ -45,16 +43,15 @@ export default class AllBeers extends Component {
         return (
             <>
             <SearchBar searchTerm={this.filterBySearch}/>
-            <div className="row ">
+            <div className="d-flex flex-row justify-content-center flex-wrap">
                 {beersArray.map((beer,index) => 
-                    <div className='col' key={beer._id}>
-                    <Link to={`/beer/beers/${beer._id}`}  style={{ textDecoration: 'none' }} className=' card text-decoration-none text-muted'>
-                        <img  style={{ width: '10vh' }}src={beer.image_url} alt=''></img>
-                        <h2 className='card-title mx-3 my-4 text-dark'>{beer.name}</h2>
-                        <h3>{beer.tagline}</h3>
-                        <h4>Created by: {beer.contributed_by}</h4>
-                        <hr></hr>
-                    </Link>
+                    <div className='card h-100' key={beer._id}>
+                        <Link to={`/beer/beers/${beer._id}`}  style={{ textDecoration: 'none' }} className=' card text-decoration-none text-muted'>
+                            <img  className="card-img-top w-10" src={beer.image_url} alt=''></img>
+                            <h2 className='card-title mx-3 my-4 text-dark'>{beer.name}</h2>
+                            <h3 className='card-text mx-3 my-4'>{beer.tagline}</h3>
+                            <h4>Created by: {beer.contributed_by}</h4>
+                        </Link>
                     </div>
                 )}
             </div>
