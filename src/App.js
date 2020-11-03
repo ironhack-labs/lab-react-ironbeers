@@ -1,24 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import { Route , Switch } from 'react-router-dom'
 import Home from './Components/Home';
-import Beers from '../src/Components/Beers';
+import Beers from './Components/Beers';
+import RandomBeer from './Components/RandomBeer';
+import NewBeer from './Components/NewBeer';
+import BeerDetails from './Components/BeerDetails';
 
 
 
-const BeerApi = 'https://ih-beers-api2.herokuapp.com/beers'
+export default function App(){ 
 
-export default class App extends Component{
- 
-  render(){
-  
     return (
     <div className="App">
-     <Home />
-     <Route path='/beers' component={Beers}></Route>
+    <Switch>
+     <Route exact path='/' component={Home} />
+     <Route exact path='/beers' component={Beers} />
+     <Route exact path='/beers/:id' component={BeerDetails} />
+     <Route exact path='/random-beer' component={RandomBeer} />
+     <Route exact path='/new-beer' component={NewBeer} />
+    </Switch>
     </div>
   )
-
-}
 }
 
