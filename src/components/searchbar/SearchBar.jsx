@@ -7,6 +7,7 @@ export default class SearchBar extends Component {
     }
 
     changeHandler = (e) => {
+     
         let { name, value } = e.target
 
         this.setState({ [name]: value }, this.handleSubmit)

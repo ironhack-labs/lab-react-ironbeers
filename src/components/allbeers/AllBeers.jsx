@@ -43,14 +43,18 @@ export default class AllBeers extends Component {
         return (
             <>
             <SearchBar searchTerm={this.filterBySearch}/>
-            <div className="d-flex flex-row justify-content-center flex-wrap">
+            <div className="d-flex flex-row justify-content-center flex-wrap flex-sm-wrap ">
                 {beersArray.map((beer,index) => 
-                    <div className='card h-100' key={beer._id}>
-                        <Link to={`/beer/beers/${beer._id}`}  style={{ textDecoration: 'none' }} className=' card text-decoration-none text-muted'>
-                            <img  className="card-img-top w-10" src={beer.image_url} alt=''></img>
-                            <h2 className='card-title mx-3 my-4 text-dark'>{beer.name}</h2>
-                            <h3 className='card-text mx-3 my-4'>{beer.tagline}</h3>
-                            <h4>Created by: {beer.contributed_by}</h4>
+                    <div className='card border-white ' key={beer._id} style={{ width: '18rem'}}>
+                        <Link to={`/beer/beers/${beer._id}`}  style={{ textDecoration: 'none' }} className=' card text-decoration-none text-muted border-white'>
+                           <div>
+                             <img  className="card-img-top p-5" src={beer.image_url} alt=''></img>
+                           </div>
+                           <div className='card-body'>
+                                <h2 className='card-title mx-3 my-4 text-dark font-weight-bold'>{beer.name}</h2>
+                                <h3 className='card-text mx-3 my-4 text-dark'>{beer.tagline}</h3>
+                                <h4 className='card-text mx-3 my-4'>Created by: {beer.contributed_by}</h4>
+                           </div>
                         </Link>
                     </div>
                 )}
