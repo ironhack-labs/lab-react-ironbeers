@@ -1,9 +1,11 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import BeerCard  from '../BeerCard/BeerCard';
+import StatusScreen from '../StatusScreen/StatusScreen';
 
 
 export default function BeersList({beers}) {
+    if (beers.length < 1) {return (<StatusScreen loading={true} />)}
     return (
         <div>
             <Navbar />

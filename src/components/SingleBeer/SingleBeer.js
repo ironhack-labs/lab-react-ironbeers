@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import useAxios from 'axios-hooks';
-import Navbar from '../Navbar/Navbar';
+import StatusScreen from '../StatusScreen/StatusScreen';
 import './SingleBeer.css';
 
 export default function SingleBeer({match}) {
-    const [{ data, loading, error }, refetch] = useAxios(`https://ih-beers-api2.herokuapp.com/beers/${match.params.id}`);
-    if (loading) {return <div><Navbar />filling your glass with beer</div>}
-    else if (error) {return <div><Navbar />Out of Stock :/ No beer today.</div>}
+    const [{ data, loading, error }] = useAxios(`https://ih-beers-api2.herokuapp.com/beers/${match.params.id}`);
+    if (loading) {return <div><StatusScreen loading={true}/></div>}
+    else if (error) {return <div><StatusScreen error={true}/></div>}
     console.log(data)
     return (
         <div className="card">
   <div className="card-image">
     <figure className="image is-4by3">
-      <img src={data.image_url} alt="Placeholder image"/>
+      <img src={data.image_url} alt={data.name}/>
     </figure>
   </div>
   <div className="card-content">

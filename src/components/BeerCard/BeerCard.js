@@ -10,7 +10,7 @@ export default function BeerCard({ name, tagline, author, idKey, image }) {
           <div className="media">
             <div className="media-left custom-media-left">
               <figure className="image">
-                <img style={{ width: 50 }} src={image} alt={name} />
+                <img className="custom-image" src={image} alt={name} />
               </figure>
             </div>
             <div className="media-content">

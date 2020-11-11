@@ -6,6 +6,8 @@ import axios from 'axios';
 import Home from './components/Home/Home';
 import BeersList from './components/BeersList/BeersList';
 import SingleBeer from './components/SingleBeer/SingleBeer';
+import StatusScreen from './components/StatusScreen/StatusScreen';
+import Navbar from './components/Navbar/Navbar';
 import 'bulma/css/bulma.css';
 
 class App extends React.Component {
@@ -26,17 +28,7 @@ class App extends React.Component {
   }
 
   render() {
-    if (this.state.errorStatus) {
-      return (
-        <div className="container has-text-centered" style={{height: 640}}>
-          <article class="message is-danger is-align-self-center message-body has-text-danger" style={{height: 640}}>
-            <div style={{marginTop: 276}}>
-              Sorry! The Beer API is offline, no beer today :(
-            </div>
-          </article>
-        </div>
-      );
-    }
+    if (this.state.errorStatus) { return (<StatusScreen error={true}/>) }
     return (
       <div className="App">
         <Switch>
