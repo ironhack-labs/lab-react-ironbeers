@@ -6,7 +6,7 @@ import StatusScreen from '../StatusScreen/StatusScreen';
 
 export default function BeersList({beers}) {
     if (beers.length < 1) {return (<StatusScreen loading={true} />)}
-    return (
+    else return (
         <div>
             <Navbar />
             {beers.map(beer => {
