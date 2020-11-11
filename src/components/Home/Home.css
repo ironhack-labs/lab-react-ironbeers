@@ -1,0 +1,17 @@
+.custom-card {
+    max-height: 213px;
+}
+
+.custom-media {
+    margin-bottom: 10px !important;
+}
+
+.custom-content {
+    padding: 8px !important;
+    max-height: 106px;
+}
+
+.custom-card-image {
+    max-height: 112px;
+    overflow: hidden;
+}
