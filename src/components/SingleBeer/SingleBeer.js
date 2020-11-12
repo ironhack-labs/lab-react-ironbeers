@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import PunkAPI from 'punkapi-javascript-wrapper';
 
 import { Link } from 'react-router-dom';
 
@@ -9,15 +10,23 @@ class SingleBeer extends React.Component {
   };
 
   componentDidMount() {
-    axios
-      .get(
-        `https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.beerId}`
-      )
-      .then((res) => {
-        console.log(res.data);
-        this.setState({ beer: res.data });
+    // axios
+    //   .get(
+    //     `https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.beerId}`
+    //   )
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     this.setState({ beer: res.data });
+    //   })
+    //   .catch((err) => console.log(err));
+    const punkapi = new PunkAPI();
+    punkapi
+      .getBeer(this.props.match.params.beerId)
+      .then((beer) => {
+        console.log(beer);
+        this.setState({ beer: beer[0] });
       })
-      .catch((err) => console.log(err));
+      .catch((error) => console.log(error));
   }
 
   render() {
