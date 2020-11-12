@@ -1,0 +1,25 @@
+.custom-ci {
+    top: 15px;
+    margin-bottom: 10px;
+}
+
+.custom-title {
+    margin-bottom: 10px;
+}
+
+.custom-beer-card {
+    height: 105vh;
+}
+
+.custom-mcontent {
+    height: fit-content;
+}
+
+.custom-beer-image {
+    width: 20%;
+    left: 40%;
+}
+
+.custom-sub {
+    margin-top: 10px !important;
+}

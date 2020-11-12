@@ -28,7 +28,7 @@ export default function Home() {
                     </div>
                 </div>
             </Link>
-            <Link to="/random">
+            <Link to="/random-beer">
                 <div className="card custom-card">
                     <div className="card-image custom-card-image">
                         <figure className="image is-16by9">
