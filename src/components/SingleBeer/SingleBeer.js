@@ -2,37 +2,35 @@ import React, { Component } from 'react';
 
 import NavBar from '../NavBar/NavBar';
 
-import './Beers.css';
-
 import PunkAPI from 'punkapi-javascript-wrapper';
-
-import { Link } from 'react-router-dom';
 
 const punkapi = new PunkAPI();
 
-class Beers extends Component {
+class SingleBeer extends Component {
   state = {
-    allBeers: [],
+    oneBeer: [],
   }
 
   componentDidMount() {
-    punkapi.getBeers()  
+    punkapi.getBeer(this.props.match.params.beer)  
       .then(res => {
-        this.setState({allBeers: res});
+        this.setState({oneBeer: res});
+        console.log(res);
       })
       .catch(err => console.log(err));
   }
 
-  displayAllBeers = () => {
-    const beerDisplay = this.state.allBeers.map((beer) => (
-      <div key={beer.id} className="d-flex">
+  displayBeer = () => {
+    const beerDisplay = this.state.oneBeer.map((beer) => (
+      <div key={beer.id}>
         <div >
           <img src={beer.image_url} alt={beer.name} height="200px" />
         </div>
         <div className="beer-information">
-          <h1><Link to={`/singlebeer/${beer.id}`}>{beer.name}</Link></h1>
-          <h2>{beer.tagline}</h2>
-          <h3>Created by: {beer.contributed_by}</h3>  
+          <h1>{beer.name} {beer.attenuation_level}</h1>
+          <h2>{beer.tagline} {beer.first_brewed}</h2>
+          <p>{beer.description}</p>
+          <h3>{beer.contributed_by}</h3>
         </div>
       </div>
     ));
@@ -40,14 +38,13 @@ class Beers extends Component {
   }
 
   render() {
-    return(
+    return (
       <div>
         <NavBar />
-        {this.displayAllBeers()}
+        {this.displayBeer()}
       </div>
     );
   }
 }
 
-export default Beers;
-
+export default SingleBeer;
