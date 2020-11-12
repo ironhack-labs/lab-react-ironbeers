@@ -8,7 +8,16 @@ export default function BeersList({beers, searchMethod, inputValue}) {
     return (
         <div>
             <Navbar />
-            <input type="text" className="input search-bar" value={inputValue} name="searchBar" onChange={searchMethod} />
+            <input
+
+            type="text"
+            className="input search-bar"
+            value={inputValue}
+            name="searchBar"
+            onChange={searchMethod}
+            placeholder='Search Beers'
+            style={{margin: 10, width: 340}}
+            />
             {beers.map(beer => {
                 return (
                     <BeerCard  name={beer.name} tagline={beer.tagline} author={beer.contributed_by} image={beer.image_url} key={beer.id} idKey={beer.id} />
