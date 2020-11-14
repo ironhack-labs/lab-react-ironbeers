@@ -26,22 +26,24 @@ class Beers extends Component {
     return (
       <div className="beersPage">
         <Navbar />
-        {/* Hacemos un map para recorrer todo el array*/}
-        {this.state.listOfBeers.map((eachBeer, index) => {
-          return (
-            <div key={eachBeer.id}>
-              <div>
-                <img src={eachBeer.image_url} alt="eachBeer" />
+        <div className="beersList">
+          {/* Hacemos un map para recorrer todo el array*/}
+          {this.state.listOfBeers.map((eachBeer, index) => {
+            return (
+              <div className="beer" key={eachBeer.id}>
+                <div className="imgBeer">
+                  <img src={eachBeer.image_url} alt="eachBeer" />
+                </div>
+                <div className="textBeer">
+                  <h4>{eachBeer.name}</h4>
+                  <p className="greyText">{eachBeer.tagline}</p>
+                  <p className="smallText"><strong>Contributed by:</strong> {eachBeer.contributed_by}</p>
+                 
+                </div>
               </div>
-              <div>
-                <h4>{eachBeer.name}</h4>
-                <p>{eachBeer.tagline}</p>
-                <p>Contributed by: {eachBeer.contributed_by}</p>
-                <hr/>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     );
   }
