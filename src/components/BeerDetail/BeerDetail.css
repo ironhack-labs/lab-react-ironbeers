@@ -1,0 +1,76 @@
+.detailPage{
+    padding-top:50px;
+    display:flex;
+    flex-direction:column;
+    margin: 15px;
+}
+
+
+.img_beer_details{
+    display:flex;
+    margin:auto;
+}
+
+.img_beer_details>img{
+    height: 300px;
+}
+
+.allDetails{
+    display: flex,
+    
+}
+
+.details_section{
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+.names{
+    display:flex;
+    text-align: left;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.greyText{
+    color: lightslategrey;
+   
+}
+h4{
+    margin-top:5px;
+}
+
+.smallText {
+    font-size: 10px;
+}
+
+.numbers{
+    display:flex;
+    text-align:right;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+    .detailPage{
+        max-width: 800px; 
+        flex-direction: row;
+       
+    }
+    .img_beer_details{
+        flex:1;
+        justify-content: center;
+    }
+    .allDetails{
+        margin-left: 20px;
+        flex:1;
+    }
+
+    .names {
+        text-align: left;
+    }
+    
+
+
+  }

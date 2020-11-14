@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from '../../components/Navbar/Navbar';
 import './Beers.css';
+import Beer from '../../components/Beer/Beer'
+import { Link } from 'react-router-dom';
 
 class Beers extends Component {
   state = {
@@ -13,7 +15,7 @@ class Beers extends Component {
       this.setState({
         listOfBeers: responseFromApi.data,
       });
-      console.log(this.state.listOfBeers);
+      //console.log(this.state.listOfBeers);
     });
   };
 
@@ -30,17 +32,7 @@ class Beers extends Component {
           {/* Hacemos un map para recorrer todo el array*/}
           {this.state.listOfBeers.map((eachBeer, index) => {
             return (
-              <div className="beer" key={eachBeer.id}>
-                <div className="imgBeer">
-                  <img src={eachBeer.image_url} alt="eachBeer" />
-                </div>
-                <div className="textBeer">
-                  <h4>{eachBeer.name}</h4>
-                  <p className="greyText">{eachBeer.tagline}</p>
-                  <p className="smallText"><strong>Contributed by:</strong> {eachBeer.contributed_by}</p>
-                 
-                </div>
-              </div>
+              <Link to={`/beers/${eachBeer.id}`}><Beer eachBeer={eachBeer}/></Link>
             );
           })}
         </div>

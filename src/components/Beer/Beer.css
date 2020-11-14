@@ -1,0 +1,31 @@
+.beer {
+    display:flex;
+    flex-direction:row;
+    padding:20px;
+    border-bottom: 1px solid lightgray;
+}
+.imgBeer {
+    flex:1;
+}
+
+.imgBeer>img{
+height:120px;
+}
+
+.textBeer {
+    text-align: left;
+    padding-left: 20px;
+    flex:2;
+}
+
+.textBeer>h4{
+    margin: 10px 0;
+}
+.greyText{
+    color: lightslategrey;
+    margin-bottom: 5px;
+}
+
+.smallText {
+    font-size: 10px;
+}
