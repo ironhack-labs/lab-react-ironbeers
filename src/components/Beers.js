@@ -1,26 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Header from './Header';
-import axios from 'axios'
 
 class Beers extends Component {
-    state={
-        beers: []
-    }
-
-    componentDidMount = async () => {
-        const beers = await axios.get("https://api.punkapi.com/v2/beers")
-        console.log(beers.data)
-        // axios devuelve un objeto con la respuesta dentro de "data"
-        this.setState({ beers: beers.data})
-    }
 
     render(){
         return (
             <div>
             <Header />
                 <div className="beers">
-                    {this.state.beers.map((beer, index) =>{
+                    {this.props.beers.map((beer, index) =>{
                         return<div key={index}>
                         <img src={beer.image_url} alt="" style={{height: 180}}/>
     

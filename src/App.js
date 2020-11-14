@@ -13,11 +13,11 @@ class App extends Component {
       beers: []
   }
 
-  componentDidMount = async () => {
+ componentDidMount = async () => {
     const beers = await axios.get("https://api.punkapi.com/v2/beers")
     console.log(beers.data, 'all the beers')
     // axios devuelve un objeto con la respuesta dentro de "data"
-    this.setState({ beers: beers.data})
+    this.setState({beers: beers.data})
  }
 
 addBeerHandler = theBeer => {
@@ -31,10 +31,11 @@ addBeerHandler = theBeer => {
   render(){
     return (
       <div className="App">
+
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route exact path='/beers' component={Beers}/>
-          <Route exact path='/beers/:id' render={() => <BeerDetails beers={this.state.beers}/>}/>
+          <Route exact path='/beers' render={() => <Beers beers={this.state.beers}/>}/>
+          <Route exact path='/beers/:id' render={(props) => <BeerDetails beers={this.state.beers} {...props}/>}/>
           <Route exact path='/random-beer' component={RandomBeer}/>
           <Route exact path='/new-beer' render={() => <NewBeer addTheBeer={this.addBeerHandler}/>}/>
         </Switch>

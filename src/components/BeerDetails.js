@@ -1,38 +1,39 @@
 import React from 'react'
-
+import Header from './Header'
 
 
 const BeerDetails = (props) => {
-    console.log(props);
-    let getBeer = id => this.props.beers.find(obj => obj.id === id);
-
-    const { params } = this.props.match;
-    console.log(this.props.match);
-
-    const foundBeer = getBeer(params.id)
-
+   
+  let findTheBeer = () => {
+    const{ params }  = props.match;
+    console.log(params)
+    return props.beers.find(beer => beer.id == params.id)
+    
+  }
+  const theBeer = findTheBeer()
     return (
-        <div className="col-7">
-        <img src={foundBeer.image_url} alt=""/>
-        <h1>{foundBeer.name}</h1>
-        <table className="table">
-          <thead></thead>
-          <tbody>
-            <tr>
-              <td className={{width: "30%"}}>Capital</td>
-              <td>{foundBeer.tagline}</td>
-            </tr>
-            <tr>
-              <td>Area</td>
-              <td>{foundBeer.description} km
-                <sup>2</sup>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-       
+      <div>
+            <Header />
+                <div className="beers">
+                    
+                        <div >
+                        <img src={theBeer.image_url} alt="" style={{height: 180}}/>
+    
+                        <div>
+                          <div>
+                               <h2>{theBeer.name}</h2> <span>{theBeer.first_brewed}</span>
+                          </div>
+                          <div>
+                          <h3>{theBeer.tagline}</h3> <span>{theBeer.attenuation_level}</span>
+                          </div>  
+                            <p>{theBeer.description}</p>
+                            <p>{theBeer.brewers_tips}</p>
+                            <h6><b>Created by:</b> {theBeer.contributed_by}</h6>
+                        </div>
+                        <hr></hr>
+                        </div>
+                </div>
+            </div>
     )
 }
 
