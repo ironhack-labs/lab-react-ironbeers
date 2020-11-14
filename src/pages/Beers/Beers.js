@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Navbar from './Navbar';
-import './BeersPage.css';
+import Navbar from '../../components/Navbar/Navbar';
+import './Beers.css';
 
 class Beers extends Component {
   state = {
