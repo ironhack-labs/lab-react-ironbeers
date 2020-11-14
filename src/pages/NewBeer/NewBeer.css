@@ -1,0 +1,23 @@
+.eachTab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.eachTab>label {
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+
+.eachTab>input {
+    width: 300px;
+    border-radius: 1.3rem;
+    border: 1px solid lightslategrey
+}
+
+.btn_new {
+    background-color: lightskyblue;
+}

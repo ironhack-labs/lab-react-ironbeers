@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav>
       {/* usamos el componente Link en lugar de <a> para escribir nuestros links en la app */}
       <Link to="/">
-        Home
+        <img src="../../../home.png" className="home"/>
       </Link>
     </nav>
   );
