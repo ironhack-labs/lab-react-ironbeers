@@ -1,0 +1,22 @@
+
+.allSections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.each_section {
+    margin: 10px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    text-decoration: none;
+    color: #273746;
+    text-align: center;
+    max-width: 500px; 
+}
+
+
+a {
+    text-decoration: none;
+    color: rgb(92, 89, 89)
+}
