@@ -7,6 +7,102 @@
   pointer-events: none;
 }
 
+/* Home */
+.home{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 200px;
+}
+
+.home p{
+  width: 60%;
+}
+
+.home img{
+  width: 50%;
+  height: 300px;
+}
+/* Navbar */
+
+.nav-style{
+  width: 100%;
+}
+
+/* BeerList */
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 20px 60px;
+}
+
+.imagen-cerveza img{
+  height: 200px;
+}
+
+.descripcion{
+  padding-left: 60px;
+}
+
+.descripcion h2{
+  color: grey;
+}
+
+.descripcion hr{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Detalles */
+
+.detalles{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detalles img{
+  height: 400px;
+}
+
+.detalles p{
+  width: 70%;
+  text-align: center;
+}
+
+.detalles h4{
+  color: grey;
+}
+
+/* New Beer */
+
+.formulario{
+  display: flex;
+  justify-content: center;
+}
+
+.formulario input{
+  width: 500px;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.formulario textarea{
+  width: 500px;
+  margin-bottom: 40px; 
+  border-radius: 10px;
+}
+
+.submit{
+  background-color: lightseagreen;
+  color: white;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
