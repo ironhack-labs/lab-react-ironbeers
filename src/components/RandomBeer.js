@@ -12,6 +12,7 @@ class RandomBeer extends Component {
         componentDidMount() {
             this.getSingleBeer()
         }
+        
         async getSingleBeer() {
             
            

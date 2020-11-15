@@ -2,27 +2,43 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import axios from "axios"
 
-export class NewBeer extends Component { 
+ class NewBeer extends Component { 
          state = {
             name: "",
             tagline: "", 
             description: "",
-            firstBrewed: "",
-            brewersTips: "",
-            attenuationLevel: 0,
-            contributedBy: "",
+            first_brewed: "",
+            brewers_tips: "",
+            attenuation_level: 0,
+            contributed_By: "",
          }
 
          handleChange(event) {
+            
            const { name, value } = event.target
 
            this.setState({
                [name]: value
            })
+           console.log(this.state)
          }
 
-         async handleSubmit() {
-            const sendNewBeer = await axios.post("hhttps://api.punkapi.com/v2/beers/new", {...this.state})
+          handleSubmit(event) {
+            // const sendNewBeer = await axios.post("https://api.punkapi.com/v2/beers/new", {...this.state})
+            event.preventDefault()
+            
+            console.log(this.props)
+            this.props.addBeer(this.state)
+
+            this.setState({
+                name: "",
+                tagline: "", 
+                description: "",
+                first_brewed: "",
+                brewers_tips: "",
+                attenuation_level: 0,
+                contributed_By: "",
+            })
          }
 
        render() {
@@ -32,18 +48,18 @@ export class NewBeer extends Component {
                <label htmlFor="">Name</label>
                <input type="text" name="name" onChange= {(event) => this.handleChange(event)}/>
                <label htmlFor="">Tagline</label>
-               <input type="text" name="tagline" onChange= {(event) => this.handleChange(event)}/>
+               <input type="text" name="tagline" onChange= {(event) => this.handleChange(event)}/> */}
                <label htmlFor="">Description</label>
                <textarea type="text" name="description" onChange= {(event) => this.handleChange(event)}/>
                <label htmlFor="" >First Brewed</label>
-               <input type="text"name="firstBrewed" onChange= {(event) => this.handleChange(event)}/>
+               <input type="text"name="firstbrewed" onChange= {(event) => this.handleChange(event)}/>
                <label htmlFor="" >Brewers Tips</label>
                <input type="text" name="brewersTips" onChange= {(event) => this.handleChange(event)}/>
                <label htmlFor="">Attenuation Level</label>
                <input type="text" name="attenuationLevel" onChange= {(event) => this.handleChange(event)}/>
                <label htmlFor="">Contributed by</label>
                <input type="text" name="contributedBy" onChange= {(event) => this.handleChange(event)}/>
-               <button type= "submit">Submit</button>
+               <input type= "submit" value="submit"/>
            </form>
     
                     <Link to= "/beers">Back</Link>

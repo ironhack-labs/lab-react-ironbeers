@@ -2,12 +2,16 @@ import React, {Component} from "react"
 import axios from "axios"
 import Header from "./Header"
 import { Link } from "react-router-dom"
+import NewBeer from "./NewBeer"
 
 class Beers extends Component {
     state= {
         beers: []
     }
 
+    componentDidMount() {
+        this.getBeersList()
+    }
     async getBeersList() {
         const getBeers = await axios.get("https://api.punkapi.com/v2/beers")
         this.setState({
@@ -16,8 +20,12 @@ class Beers extends Component {
         console.log(this.state.beers)
     }
 
-    componentDidMount() {
-        this.getBeersList()
+    handleAddBeer =(beer) => {
+        const beersCopy = [...this.state.beers]
+        beersCopy.push(beer)
+        this.setState({
+            beers: beersCopy
+        })
     }
 
     render() {
@@ -41,7 +49,10 @@ class Beers extends Component {
                 </div>
                 <div>
                 <Link className = "button-link" to={`/random-beer`}>Get a random beer</Link>
-                <Link className = "button-link" to = {`/new-beer`}>Insert your beer</Link>
+                {console.log(this.state.beers)}
+                {this.state.beers ? <NewBeer addBeer = {this.handleAddBeer}  /> : this.getBeersList}
+       
+                {/* <Link className = "button-link" to = {`/new-beer`}>Insert your beer</Link> */}
 
                 </div>
             </div>

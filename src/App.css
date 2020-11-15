@@ -101,3 +101,27 @@ text-decoration: none;
   flex-direction: column;
   
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(28, 104, 245);
+  width: 50%;
+  justify-content: center;
+  margin: 30px;
+  padding: 30px;
+  border-radius: 20px
+} 
+form input, form label, form textarea {
+  width: 50%;
+  height: 30px;
+  /* color: white; */
+  border-radius: 20px
+
+}
+
+form button {
+  color: black;
+  margin:10px
+}
