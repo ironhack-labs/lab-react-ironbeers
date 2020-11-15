@@ -36,3 +36,68 @@
     transform: rotate(360deg);
   }
 }
+
+.beer-image {
+  width: auto;
+  height: 300px;
+}
+
+a {
+text-decoration: none;
+}
+
+
+.beer-container {
+  border: solid 2px black;
+  width: 15vw;
+  padding: 20px;
+  margin: 10px
+}
+
+.beer-container h2, .beer-container p {
+  color: black
+}
+
+.beer-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.header {
+  background-color: blue;
+}
+
+.button-link {
+  display: block;
+  width: 200px;
+  height: 75px;
+  border-radius: 10px;
+  padding: auto;
+  background-color: green;
+  color: white;
+  margin: 10px
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.home img {
+  height: 300px;
+  width: auto;
+}
+
+.home-link {
+  width: 40%;
+  margin: 30px
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
