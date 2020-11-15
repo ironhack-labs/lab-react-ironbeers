@@ -44,3 +44,11 @@ color:black;
 border: black solid 1px;
 margin: 5px;
 }
+
+.oneBeer {
+width: 20%;
+padding: 20px;
+margin: 20px auto;
+border: black solid 1px;
+}
+

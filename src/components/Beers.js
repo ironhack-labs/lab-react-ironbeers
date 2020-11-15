@@ -19,10 +19,10 @@ class Beers extends Component {
         return (
             <div>
                 <Header />
-                <div className="eachBeer">
+                <div className = "allBeers">
                     {this.state.allBeers.map((eachBeer, index) =>{
                         return(
-                            <div key={index}>
+                            <div  className="oneBeer" key={index}>
                                 <img src={eachBeer.image_url} alt={eachBeer.name}  style={{width: 50}}/>
                                 <div>
                                     <h4><Link to={{pathname:`/beers/${eachBeer.id}`, state:{beersFromUrl: this.state.allBeers}}}>{eachBeer.name}</Link></h4>
