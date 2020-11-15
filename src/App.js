@@ -1,28 +1,27 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import { Link } from 'react-router-dom'
-import axios from 'axios';
+import Home from './components/Home';
+import Beers from './components/Beers';
+import BeerDetails from './components/BeerDetails';
+import RandomBeer from './components/RandomBeer';
+import NewBeer from './components/NewBeer';
 
-function App() {
+class App extends Component {
+
+  render(){
   return (
     <div className="App">
-      <div className="home-section">
-        <img src="" alt="" />
-        <h2><Link to={'/beers'}>All Beers</Link></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus quam tellus, quis accumsan ipsum finibus laoreet.</p>
-      </div>
-      <div className="home-section">
-        <img src="" alt="" />
-        <h2><Link to={`random-beer`}>Random Beers</Link></h2>
-        <p>Quisque in mauris et est pellentesque efficitur. Donec suscipit, ex tristique sollicitudin ultricies, magna justo congue odio,</p>
-      </div>
-      <div className="home-section">
-        <img src="" alt="" />
-        <h2><Link to={`new-beer`}>New Beers</Link></h2>
-        <p>Praesent in dolor accumsan, porttitor tellus id, laoreet erat. Nunc volutpat finibus dui vehicula lacinia.</p>
-      </div>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/beers' component={Beers} />
+        <Route exact path='/beers/:id' component={BeerDetails} />
+        <Route exact path='/random-beer' component = {RandomBeer} />
+        <Route exact path='/new-beer' component = {NewBeer}/>
+      </Switch>
     </div>
   );
+}
 }
 
 export default App;

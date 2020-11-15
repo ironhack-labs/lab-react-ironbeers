@@ -1,14 +1,13 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios';
 
-import React from 'react'
 
-export default function Header() {
-    return (
-        <div>
-            <Link to={`/`}></Link>
-        </div>
-    )
+export default class Header extends Component {
+    render() {
+        return (
+            <nav>
+                <h3><Link to={`/`}>Home</Link></h3>
+            </nav>
+        )
+    }
 }
