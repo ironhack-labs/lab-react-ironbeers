@@ -1,0 +1,8 @@
+
+.bodyBeers {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 10%;
+    /* border-bottom: 2px solid black; */
+ }
