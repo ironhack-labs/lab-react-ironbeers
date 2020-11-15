@@ -26,7 +26,7 @@ class RandomBeer extends Component {
         <div>
           {this.state.random.map((random, index) => {
             return (
-              <div key={index}>
+              <div  className="oneBeer" key={index}>
                 <img src={random.image_url} alt="" style={{ height: 180 }} />
 
                 <div>
