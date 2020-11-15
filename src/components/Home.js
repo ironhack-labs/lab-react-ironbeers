@@ -5,15 +5,8 @@ const Home = () => {
   return (
     <div>
       <div>
-        <img
-          src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png"
-          alt=""
-          height={600}
-        />
-      </div>
-      <div>
         <div>
-          <button>
+          <button className="btn">
             <NavLink
               to="/beers"
               activeStyle={{ fontWeight: 'bold', color: 'red' }}
@@ -23,13 +16,14 @@ const Home = () => {
           </button>
         </div>
         <div>
-          <button>
-            <Link to="/random-beer">Feeling adventurous?</Link>
+        
+          <button className="btn">
+            <Link to="/random-beer">Random beer</Link>
           </button>
         </div>
         <div>
-          <button>
-            <Link to="/new-beer">Show us your beer</Link>
+          <button className="btn">
+            <Link to="/new-beer">Add your beer</Link>
           </button>
         </div>
       </div>

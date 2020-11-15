@@ -5,7 +5,7 @@ const BeerDetails = (props) => {
   let findTheBeer = () => {
     const { params } = props.match;
     console.log(params);
-    return props.beers.find((beer) => beer.id == params.id);
+    return props.beers.find((beer) => beer.id === params.id);
   };
   
   const theBeer = findTheBeer();

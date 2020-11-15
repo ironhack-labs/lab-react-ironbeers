@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.btn{
+padding: 10px 20px;
+background-color:rgb(235, 235, 235);
+color:black;
+border: black solid 1px;
+margin: 5px;
+}

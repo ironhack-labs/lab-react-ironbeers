@@ -1,46 +1,41 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Header from './Header';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import Header from './Header'
 
 class Beers extends Component {
-  handleSearch = (event) => {
-    this.props.searchTheBeer(event.target.value);
-  };
 
-  render() {
-    return (
-      <div>
-        <Header />
-        <div>
-          <div>
-            <label htmlFor="">Search:</label>
-            <input
-              type="text"
-              name="name"
-              onChange={(e) => this.handleSearch(e)}
-            />
-          </div>
-          {this.props.beers.map((beer, index) => {
-            return (
-              <div key={index}>
-                <img src={beer.image_url} alt="" style={{ height: 180 }} />
-                <div>
-                  <Link to={`/beers/${beer.id}`}>
-                    <h2>{beer.name}</h2>
-                  </Link>
-                  <h3>{beer.tagline}</h3>
-                  <h6>
-                    <b>Created by:</b> {beer.contributed_by}
-                  </h6>
+    state = {
+        allBeers: []
+    }
+
+    componentDidMount = async () => {
+        const ApiBeers = await axios.get("https://api.punkapi.com/v2/beers")
+        console.log(ApiBeers.data)
+        this.setState({ allBeers: ApiBeers.data})
+    }
+
+    render() {
+        return (
+            <div>
+                <Header />
+                <div className="eachBeer">
+                    {this.state.allBeers.map((eachBeer, index) =>{
+                        return(
+                            <div key={index}>
+                                <img src={eachBeer.image_url} alt={eachBeer.name}  style={{width: 50}}/>
+                                <div>
+                                    <h4><Link to={{pathname:`/beers/${eachBeer.id}`, state:{beersFromUrl: this.state.allBeers}}}>{eachBeer.name}</Link></h4>
+                                    <h5>{eachBeer.tagline}</h5>
+                                    <h6>Created by: {eachBeer.contributed_by}</h6>
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
-                <hr></hr>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  }
+            </div>
+        )
+    }
 }
 
 export default Beers;
