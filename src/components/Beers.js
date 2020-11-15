@@ -3,12 +3,21 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 
 class Beers extends Component {
+    handleSearch = event => {
+        this.props.searchTheBeer(event.target.value);
+    }
 
     render(){
         return (
             <div>
             <Header />
+            
                 <div className="beers">
+
+                <div>
+                    <label htmlFor="">Search:</label>
+                    <input type="text" name="name" onChange={(e) => this.handleSearch(e)}/>
+                </div>
                     {this.props.beers.map((beer, index) =>{
                         return<div key={index}>
                         <img src={beer.image_url} alt="" style={{height: 180}}/>
