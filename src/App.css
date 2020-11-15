@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+.cardHome{
+    display: flex;
+    flex-direction: column;
+}
+.containerText{
+    margin: 20px;
+}
+.containerCard{
+    display: flex;
+}
+.cardImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+    width: 30%;
+}
+.imgBeer{
+    width: 30%;
+}
+.cardText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+.cardImgRandom{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.imgBeerRandom{
+    width: 30%;
+}
+.titleRandom{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px; 
+}
+.subTitleRandom{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px; 
+}
+.attenuation{
+    opacity: 0.6;
+}
+.tagline{
+    opacity: 0.6;
+}
+.description{
+    margin: 0px 20px; 
+}
+.nav-style{
+    background-color: #3BB3EB;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.home{
+    color: #fff;
+    font-size: 50px;
+}
+.containerform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type=text], input[type=number]{
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type=submit]{
+    border-radius: 10px;
+    background-color: #3BB3EB;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.textarea{
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label{
+    margin: 10px;
 }
