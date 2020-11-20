@@ -5,12 +5,15 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function Beers(props) {
-  const [state, setState] = useState({
-    image: '',
-    name: '',
-    tagline: '',
-    contributed_by: '',
-  });
+  const [state, setState] = useState([
+    {
+      image: '',
+      name: '',
+      tagline: '',
+      contributed_by: '',
+    },
+  ]);
+  /* console.log(typeof state); */
 
   useEffect(() => {
     async function fecthData() {
@@ -18,10 +21,10 @@ function Beers(props) {
         const response = await axios.get(
           'https://ih-beers-api2.herokuapp.com/beers'
         );
-       /*  console.log(response); */
+        /*  console.log(response); */
         setState([...response.data]);
       } catch (err) {
-       /*  console.error(err); */
+        /*  console.error(err); */
       }
     }
 
