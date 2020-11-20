@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.beer-details {
+  display: flex;
+  flex-direction: column;
+}
+.beer-details img {
+  margin-top: 1rem;
+  width: 4rem;
+  align-self: center;
+}
+
+.title1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem 0 1rem;
+}
+.title2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.6rem 1rem 0 1rem;
+}
+.title2 h4 {
+  margin: 0;
+}
+
+.text {
+  margin: 1rem 1rem 1rem 1rem;
+}
+.text p {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.number {
+  font-size: 1.5rem;
+  color: rgb(151, 151, 151);
+  font-weight: bold;
+}
+
+.data {
+  font-size: 0.9rem;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.contributed {
+  margin-top: 1rem;
+  color: rgb(119, 119, 119);
+}

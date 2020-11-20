@@ -1,0 +1,25 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem 0.2rem 0.4rem 0.2rem;
+  border: 0.1rem solid black;
+}
+
+.image {
+  width: 21.9rem;
+}
+
+.div-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin: 0.5rem 0 0 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+  margin: 0.5rem 2rem 1rem 1rem;
+}

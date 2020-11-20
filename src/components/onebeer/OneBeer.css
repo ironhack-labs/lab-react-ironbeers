@@ -1,0 +1,23 @@
+.onebeer {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 2rem;
+  margin: 1.1rem 1.7rem 1.1rem 1.7rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h4 {
+  color: rgb(139, 139, 139);
+  margin-bottom: 1px;
+  margin-top: 1rem;
+}
