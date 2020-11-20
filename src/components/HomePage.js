@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
-    <div className="App  ">
+    <div className="App d-flex ">
       <Link to={'/beers'}>
         <div className="container">
           <h2>All Beers</h2>

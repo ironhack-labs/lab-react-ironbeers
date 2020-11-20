@@ -34,17 +34,22 @@ function Beers(props) {
   return (
     <div>
       <NavBar></NavBar>
-      <table class="table">
+      <table className="table">
         <tbody>
           {state.map((beers) => (
             <tr>
-              {beers.id}
-              <td>{beers.image}</td>
+              <td>
+                <img
+                  className="image is-128x128"
+                  src={beers.image_url}
+                  alt="beer img"
+                ></img>
+              </td>
               <td>{beers.name}</td>
               <td>{beers.tagline}</td>
               <td>{beers.contributed_by}</td>
               <td>
-                <Link to={`/beers/${beers.id}`}>See Details</Link>
+                <Link to={`/beers/${beers._id}`}>See Details</Link>
               </td>
             </tr>
           ))}
