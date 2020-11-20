@@ -1,0 +1,19 @@
+.container img {
+  width: auto;
+  height: 250px;
+  margin: 30px;
+}
+
+.beerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.beerFlex1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px 0;
+}

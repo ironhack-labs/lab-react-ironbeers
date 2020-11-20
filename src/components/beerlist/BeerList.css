@@ -1,0 +1,10 @@
+ul {
+  list-style: none;
+  width: 90vw;
+}
+
+ul img {
+  width: auto;
+  height: 200px;
+  margin: 20px;
+}
