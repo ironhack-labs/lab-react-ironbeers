@@ -3,34 +3,38 @@ import NavBar from './NavBar';
 import axios from 'axios';
 
 function SingleBeer(props) {
-  const [beerInfo, setBeerInfo] = useState([
-    {
-      image: '',
-      name: '',
-      tagline: '',
-      first_brewed: '',
-      attenuation_level: 0,
-      description: '',
-      contributed_by: '',
-    },
-  ]);
-  /* console.log(typeof state); */
+  const [beer, setBeer] = useState({
+    image: '',
+    name: '',
+    tagline: '',
+    first_brewed: '',
+    attenuation_level: 0,
+    description: '',
+    contributed_by: '',
+  });
 
   useEffect(() => {
-    async function fecthData() {
+    async function fetchData() {
       try {
         const response = await axios.get(
-          `https://ih-beers-api2.herokuapp.com/beers/:id`
+          `https://ih-beers-api2.herokuapp.com/beers/${props.match.params.beerId}`
         );
-        console.log(response);
-        setBeerInfo([...response.data]);
+        setBeer({
+          image: response.data.image_url,
+          name: response.data.name,
+          tagline: response.data.tagline,
+          first_brewed: response.data.first_brewed,
+          attenuation_level: response.data.attenuation_level,
+          description: response.data.description,
+          contributed_by: response.data.contributed_by,
+        });
       } catch (err) {
-        /*  console.error(err); */
+        console.error(err);
       }
     }
-
-    fecthData();
-  }, []);
+    fetchData();
+  }, [props]);
+  console.log(beer);
 
   /*  [...reseponse.data] = beerInfo.find(
     (item) => item._id === props.match.params._id
@@ -42,7 +46,7 @@ function SingleBeer(props) {
       <NavBar></NavBar>
       <table className="table">
         <tbody>
-          {beerInfo.map((beers) => (
+          {beer.map((beers) => (
             <tr>
               <td>
                 <img
