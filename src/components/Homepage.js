@@ -27,7 +27,7 @@ const Homepage = () => {
         src="https://img.freepik.com/fotos-gratis/um-copo-de-fotografia-macro-de-cerveja-gelada_53876-65291.jpg?size=626&ext=jpg"
         alt="cerveja2"
       />
-      <Link to={'/random-beer'}>
+      <Link to={'/random'}>
         {' '}
         <h1>Random Beers</h1>{' '}
       </Link>

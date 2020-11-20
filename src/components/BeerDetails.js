@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 const BeerDetails = (props) => {
   const [beerState, setBeerState] = useState({
@@ -32,6 +33,7 @@ const BeerDetails = (props) => {
 
   return (
     <div>
+      <Navbar />
       <div key={beerState._id} className="singleBeerContainer">
         <div>
           <img src={beerState.image_url} className="beerImgs" />
