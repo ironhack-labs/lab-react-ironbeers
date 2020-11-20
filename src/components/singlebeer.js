@@ -1,15 +1,16 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
-function Beers(props) {
-  const [state, setState] = useState([
+function SingleBeer(props) {
+  const [beerInfo, setBeerInfo] = useState([
     {
       image: '',
       name: '',
       tagline: '',
+      first_brewed: '',
+      attenuation_level: 0,
+      description: '',
       contributed_by: '',
     },
   ]);
@@ -19,10 +20,10 @@ function Beers(props) {
     async function fecthData() {
       try {
         const response = await axios.get(
-          'https://ih-beers-api2.herokuapp.com/beers'
+          `https://ih-beers-api2.herokuapp.com/beers/:id`
         );
-        /*  console.log(response); */
-        setState([...response.data]);
+        console.log(response);
+        setBeerInfo([...response.data]);
       } catch (err) {
         /*  console.error(err); */
       }
@@ -31,13 +32,18 @@ function Beers(props) {
     fecthData();
   }, []);
 
+  /*  [...reseponse.data] = beerInfo.find(
+    (item) => item._id === props.match.params._id
+  );
+ */
+
   return (
     <div>
       <NavBar></NavBar>
       <table className="table">
         <tbody>
-          {state.map((beers) => (
-            <tr key={beers._id}>
+          {beerInfo.map((beers) => (
+            <tr>
               <td>
                 <img
                   className="image is-128x128"
@@ -47,10 +53,10 @@ function Beers(props) {
               </td>
               <td>{beers.name}</td>
               <td>{beers.tagline}</td>
+              <td>{beers.first_brewed}</td>
+              <td>{beers.attenuation_level}</td>
+              <td>{beers.description}</td>
               <td>{beers.contributed_by}</td>
-              <td>
-                <Link to={`/beers/${beers._id}`}>See Details</Link>
-              </td>
             </tr>
           ))}
         </tbody>
@@ -59,4 +65,4 @@ function Beers(props) {
   );
 }
 
-export default Beers;
+export default SingleBeer;
