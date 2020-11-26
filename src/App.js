@@ -1,11 +1,8 @@
-/*
- * Setup.
- */
+/*    App.js    */
+
+// Setup.
 import React, { Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
-
-// CSS.
-import "./App.css";
 
 // Components.
 import ListBeers from "./components/ListBeers";
@@ -14,9 +11,10 @@ import NewBeer from "./components/NewBeer";
 import RandomBeer from "./components/RandomBeer";
 import MyNav from "./components/MyNav";
 
-/*
- * Main.
- */
+// Styles
+import "./App.css";
+
+// Rendering function.
 function App() {
   return (
     <Fragment>

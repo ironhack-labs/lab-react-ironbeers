@@ -1,6 +1,6 @@
-/*
- * Setup.
- */
+/*    Random beer.    */
+
+// Setup.
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Card, Spinner } from "react-bootstrap";
