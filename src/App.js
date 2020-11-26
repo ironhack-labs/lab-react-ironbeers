@@ -4,12 +4,16 @@ function Home() {
   return <h2>Home</h2>;
 }
 
-function About() {
-  return <h2>About</h2>;
+function Beers() {
+  return <h2>Beers</h2>;
 }
 
-function Users() {
-  return <h2>Users</h2>;
+function RandomBeer() {
+  return <h2>RandomBeer</h2>;
+}
+
+function NewBeer() {
+  return <h2>NewBeer</h2>;
 }
 function App() {
   return (
@@ -21,10 +25,13 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/beers">beers</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/random-beer">random-beer</Link>
+            </li>
+            <li>
+              <Link to="/new-beer">new-beer</Link>
             </li>
           </ul>
         </nav>
@@ -32,11 +39,14 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/beers">
+            <Beers />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/random-beer">
+            <RandomBeer />
+          </Route>
+          <Route path="/new-beer">
+            <NewBeer />
           </Route>
           <Route path="/">
             <Home />
