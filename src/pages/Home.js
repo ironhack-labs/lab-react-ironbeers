@@ -24,7 +24,7 @@ const Home = () =>{
                 style={{ width: 500}}
                 cover={<img alt="example" src="../images/randombeer.jpg" />}
                 >
-                <Link to="/beer/:id">Get a Random Beer</Link>
+                <Link to="/random-beer">Get a Random Beer</Link>
                 <Meta description="Lorem ipsum" />
             </Card>
         </Col>

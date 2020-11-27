@@ -25,7 +25,7 @@ const BeerList = () =>{
             <Card
                 hoverable
                 style={{ width: 500}}
-                cover={<img style={{height: 200, width: 100}} alt="example" src={beer.image_url} />}
+                cover={<img style={{height: 100, width: 50}} alt="example" src={beer.image_url} />}
                 >
                 <p>{beer.name}</p>
                 <p>{beer.tagline}</p>

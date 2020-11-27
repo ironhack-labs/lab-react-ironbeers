@@ -15,6 +15,6 @@ export const getAllBeers = () => beersService.get('')
 
 export const getSingleBeer = id => beersService.get(`/${id}`)
 
-//export const getRandomBeer = id => beersService.get(`/${id}`)
+export const getRandomBeer = () => beersService.get(`/random`)
 
 export const CreateBeer = beer => beersService.post('', beer)

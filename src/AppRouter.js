@@ -8,7 +8,9 @@ import {
 import Home from './pages/Home'
 import BeerList from './pages/BeerList'
 import BeerDetails from './pages/BeerDetails'
+import RandomBeer from './pages/RandomBeer'
 import NewBeer from './pages/NewBeer'
+import LayoutApp from './components/LayoutApp'
 
 
 //const Home = () => <h1><Link to="/"></Link></h1>
@@ -22,10 +24,12 @@ function AppRouter() {
     <Router>
       <Switch>
         <Route path='/' component={Home} exact />
+        <LayoutApp>
         <Route path='/beers' component={BeerList} exact />
         <Route path='/beer/:beerId' component={BeerDetails} exact />
-        
+        <Route path="/random-beer" component={RandomBeer} exact />
         <Route path='/new-beer' component={NewBeer} exact />
+        </LayoutApp>
       </Switch>
     </Router>
   )
