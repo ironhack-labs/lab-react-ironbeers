@@ -10,3 +10,5 @@ export const getSingleBeer = (id) => beerService.get(`${id}`)
 export const getRandomBeer = () => beerService.get(`/random`)
 
 export const addNewBeer = (beer) => beerService.post(`/new`, beer)
+
+export const searchBeer = (query) => beerService.post(`/search?q=${query}`)

@@ -73,7 +73,7 @@ const NewBeer = () => {
                     name="attenuation_level "
                     rules={[{ required: true, message: 'The attenuation level of the new beer' }]}
                 >
-                    <InputNumber min={1} max={10} defaultValue={3} />
+                    <InputNumber min={1} max={100} defaultValue={50} />
                 </Form.Item>
 
                 <Form.Item
