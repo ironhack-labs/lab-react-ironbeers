@@ -3,8 +3,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 
 import {HomeOutlined} from '@ant-design/icons'
-import {Card, Menu, Layout,Typography} from 'antd'
-const {Title, Text}=Typography
+import { Menu, Layout,Typography,List, Avatar, Image} from 'antd'
 const {Header, Content}=Layout
 
 const baseURL='https://ih-beers-api2.herokuapp.com/beers'
@@ -17,11 +16,12 @@ function ListBeers() {
 
     useEffect(()=>{
         async function getBeers(){
-            const {data:{results}}=await axios.get(baseURL)
-            setBeers(results)
+            const results=await axios.get(baseURL)
+            setBeers(results.data)
         }
         getBeers()
     },[])
+
 
 
     return (
@@ -35,10 +35,23 @@ function ListBeers() {
         </Link>
       </Menu>
             </Header>
-            <Content style={{ padding: '10px 40px' }}>
-        
-            <h1>List Beers</h1>
-
+            <Content style={{ padding: '10px 40px', alignItems:"center" }}>
+                
+                {beers?<h1>{beers.map((beer,i)=><List
+    itemLayout="horizontal"
+    dataSource={beers}
+    renderItem={item => (
+        <Link to={`/beers/${item._id}`}><List.Item>
+        <List.Item.Meta
+          avatar={<Image width="60px"  src={item.image_url} />}
+          title={<a href="https://ant.design">{item.name}</a>}
+          description={'"'+ item.tagline+'"'+'  Created by:'+ item.contributed_by}          
+        />
+      <hr/>
+    
+      </List.Item>  </Link>
+    )}
+  />)}</h1>: <h1>Loading...</h1>   }
         </Content>
         </Layout>    
         )
