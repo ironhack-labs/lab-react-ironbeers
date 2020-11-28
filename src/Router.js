@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import ListBeers from './pages/ListBeers'
 import RandomBeer from './pages/RandomBeer'
 import NewBeer from './pages/NewBeer'
+import SingleBeer from './pages/SingleBeer'
 
 //const Home=()=><h1>Home</h1>
 //const ListBeers=()=><h1>ListBeers</h1>
@@ -25,6 +26,7 @@ export default function RouterApp() {
                     <Route path='/beers' component={ListBeers} exact/>
                     <Route path='/random-beer' component={RandomBeer} exact/>
                     <Route path='/new-beer' component={NewBeer} exact/>
+                    <Route path='/beers/:id' component={SingleBeer} exact/>
                 </Switch>
             </Router>
             
