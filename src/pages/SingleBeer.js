@@ -57,6 +57,7 @@ function SingleBeer({
     <Text>{beer?.first_brewed}</Text>
     </Col>
     </Row>
+    <br/>
     <Row>
           <Col span={24}>
     <Text level={2} >{beer?.description}</Text>
