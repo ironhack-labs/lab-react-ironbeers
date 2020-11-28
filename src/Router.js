@@ -7,11 +7,13 @@ import {
   } from 'react-router-dom'
 import Home from './pages/Home'
 import ListBeers from './pages/ListBeers'
+import RandomBeer from './pages/RandomBeer'
+import NewBeer from './pages/NewBeer'
 
 //const Home=()=><h1>Home</h1>
 //const ListBeers=()=><h1>ListBeers</h1>
-const RandomBeer=()=><h1>RandomBeer</h1>
-const NewBeer=()=><h1>NewBeer</h1>
+//const RandomBeer=()=><h1>RandomBeer</h1>
+//const NewBeer=()=><h1>NewBeer</h1>
 
 
 export default function RouterApp() {
