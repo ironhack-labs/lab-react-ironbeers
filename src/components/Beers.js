@@ -24,8 +24,8 @@ function Beers() {
       <div className='beersList'>
 
         {beersArray.map((beer) => (
-          <Link style={{textDecoration:'none'}} to={`beer/${beer._id}`}>
-            <div className='beerList' key={beer._id}>
+          <Link  key={beer._id} style={{textDecoration:'none'}} to={`beer/${beer._id}`}>
+            <div className='beerList'>
               <div className='beerListImage'>
                 <img src={beer.image_url} alt={beer.name}></img>
               </div>

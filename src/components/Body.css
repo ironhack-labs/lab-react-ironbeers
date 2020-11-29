@@ -16,6 +16,6 @@
 .bodyCard p {
   text-decoration: none;
   text-align: justify;
-  padding-bottom: 10px;
+  padding: 0px 10px 10px 10px;
   color: grey;
 }

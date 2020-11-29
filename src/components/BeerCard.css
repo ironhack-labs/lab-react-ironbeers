@@ -34,4 +34,6 @@
 
 .beerCardBy {
   padding-bottom: 5px;
+  color: grey;
+  text-align: left;
 }

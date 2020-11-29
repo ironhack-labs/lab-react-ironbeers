@@ -20,7 +20,7 @@ const BeerCard = ({match}) => {
   return  (
     <div>
       <Nav />
-      <div className='beerCard'>
+      <div key={beer._id} className='beerCard'>
         <div className='beerCardImage'>
           <img src={beer.image_url} alt={beer.name}></img>
         </div>
