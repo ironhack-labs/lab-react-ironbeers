@@ -21,9 +21,9 @@ const Beers = () => {
     <div>
       {newBeerState.map((beer, index) => {
         return (
-          <div className="beers">
-            <Link to={`/beers/${beer._id}`}>
-              <div key={beer._id} className="beers-card">
+          <div key={beer._id} className="beers">
+            <Link to={`/beers/${beer._id}`} style={{ textDecoration: 'none' }}>
+              <div className="beers-card">
                 <img src={beer.image_url} alt={beer.name}></img>
                 <div className="beers-card-right">
                   <h3 className="beers-name">{beer.name}</h3>
