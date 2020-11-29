@@ -25,7 +25,7 @@ class Beers extends Component {
                 <img
                   src={mapBeer.image_url}
                   alt={mapBeer.name}
-                  style={{ width: 50 }}
+                  style={{ width: 45 }}
                 />
                 <div>
                   <h4>
@@ -35,9 +35,10 @@ class Beers extends Component {
                         // state: { beersFromUrl: this.state.beerList },
                       }}
                     >
-                      {mapBeer.name}
+                      Check out {mapBeer.name}
                     </Link>
                   </h4>
+                  <h5>{mapBeer.name}</h5>
                   <h5>{mapBeer.tagline}</h5>
                   <h6>Created by: {mapBeer.contributed_by}</h6>
                 </div>
