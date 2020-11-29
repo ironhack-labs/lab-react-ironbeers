@@ -4,26 +4,34 @@ import axios from 'axios';
 import Header from './Header';
 
 export class Beers extends Component {
-  constructor() {
-    super();
-    this.state = {
-      listOfBeers: [],
-    };
-  }
+  state = {
+    listOfBeers: [],
+  };
 
+  componentDidMount() {
+    this.getAllBeers();
+  }
+/*
   getAllBeers = () => {
     axios
       .get(`https://api.punkapi.com/v2/beers`)
       .then((responseFromApi) => {
         this.setState({
-            listOfBeers: responseFromApi.data,
+          listOfBeers: responseFromApi.data,
         });
       })
       .catch((error) => console.log(error));
   };
-
-  componentDidMount() {
-    this.getAllBeers();
+*/
+  getAllBeers = async () => {
+    try {
+      const getBeers = await axios.get(`https://api.punkapi.com/v2/beers`)
+      this.setState({
+        listOfBeers: getBeers.data,
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   render() {
@@ -32,12 +40,11 @@ export class Beers extends Component {
         <Header />
         <div>
           {this.state.listOfBeers.map((beer, index) => {
-            console.log(beer);
             return (
               <div key={index}>
                 <img src={beer.image_url} alt="Beer" />
                 <div>
-                  <h2>{beer.name}</h2>
+                <Link to={`/beer/${beer.id}`}><h2>{beer.name}</h2></Link>
                   <h3>{beer.tagline}</h3>
                   <p>
                     <span>Created by: </span>
