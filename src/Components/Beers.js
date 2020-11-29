@@ -1,13 +1,12 @@
 import React from 'react'
+import Nav from './Nav';
 
-
-
-function Home() {
+function Beers() {
     return (
         <div>
-            <h1>All the beers!</h1>
+        <Nav />
         </div>
     )
 }
 
-export default Home
+export default Beers
