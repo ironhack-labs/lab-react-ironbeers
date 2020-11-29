@@ -6,17 +6,16 @@ const BeerDetail = ({ match }) => {
   const [beerItem, setBeerItemState] = useState({});
 
   useEffect(() => {
-    fetchBeer();
-  }, []);
+    const fetchOneBeer = async () => {
+      const fetchBeer = await axios.get(
+        `https://ih-beers-api2.herokuapp.com/beers/${match.params.beerId}`
+      );
+      const beerItem = await fetchBeer.data;
+      setBeerItemState(beerItem);
+    };
+    fetchOneBeer();
+  }, [match.params.beerId]);
 
-  const fetchBeer = async () => {
-    const fetchBeer = await axios.get(
-      `https://ih-beers-api2.herokuapp.com/beers/${match.params.beerId}`
-    );
-    const beerItem = await fetchBeer.data;
-    setBeerItemState(beerItem);
-    console.log(beerItem);
-  };
   return (
     <div className="beer-detail">
       <img

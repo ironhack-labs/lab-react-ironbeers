@@ -7,14 +7,14 @@ const Beers = () => {
   const newBeerState = [...beerState];
 
   useEffect(() => {
-    axios
-      .get('https://ih-beers-api2.herokuapp.com/beers')
-      .then((result) => {
-        const beers = result.data;
-        console.log(beers);
-        setBeerState(beers);
-      })
-      .catch((err) => console.error(err));
+    const fetchBeers = async () => {
+      const beersData = await axios.get(
+        'https://ih-beers-api2.herokuapp.com/beers'
+      );
+      const beersList = await beersData.data;
+      setBeerState(beersList);
+    };
+    fetchBeers();
   }, []);
 
   return (
