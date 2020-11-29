@@ -39,6 +39,7 @@ export default function CreateBeer ({history}){
                 <input htmlType='number' name='attenuation_level'/>
                 <label>Contributed by: </label>
                 <input htmlType='text' name='contributed_by'/>
+                <button htmlType='submit' style={{color:"white", backgroundColor:"turquoise"}}>ADD NEW</button>
             </form>
         </div>
     )

@@ -27,14 +27,14 @@ export default function AllBeers(){
             </Link>
             <h1>All Beers</h1>
             <hr/>
-            {beers.map((beer) => 
+            {beers.map((beers) => 
             <Link to={`/beers/:beerId`}>
                 <div>
-                    <img src={beer.image_url}/>
+                    <img src={beers.image_url}/>
                     <div>
-                        <h2>{beer.name}</h2>
-                        <p>{beer.tagline}</p>
-                        <small>{beer.contributed_by}</small>
+                        <h2>{beers.name}</h2>
+                        <p>{beers.tagline}</p>
+                        <small>{beers.contributed_by}</small>
                     </div>
                 </div>
             </Link>)}
