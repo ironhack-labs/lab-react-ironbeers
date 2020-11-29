@@ -1,0 +1,37 @@
+.beerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  padding: 0px 15px;
+}
+
+.beerCard h2 {
+  color: grey;
+}
+
+.beerCardImage {
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.beerCardImage img{
+  max-height: 400px;
+}
+
+.beerCardTitle, .beerCardTagline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.beerCardDescription {
+  text-align: justify;
+  font-size: 1.15em;
+}
+
+.beerCardBy {
+  padding-bottom: 5px;
+}

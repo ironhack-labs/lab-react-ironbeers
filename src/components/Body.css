@@ -1,0 +1,21 @@
+.body {
+  display: flex;
+	flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.body h1 {
+  color: black;
+}
+
+.bodyCard img {
+  max-width: 100%;
+}
+
+.bodyCard p {
+  text-decoration: none;
+  text-align: justify;
+  padding-bottom: 10px;
+  color: grey;
+}
