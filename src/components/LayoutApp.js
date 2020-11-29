@@ -20,7 +20,7 @@ export default function LayoutApp({children}) {
               <Link to={'/random'}>Random Beer</Link>
             </Menu.Item>
             <Menu.Item key="4">
-              <Link to={'/new'}>New Beer</Link>
+              <Link to={'/new-beer'}>New Beer</Link>
             </Menu.Item>
           </Menu>
         </Header>
@@ -29,7 +29,7 @@ export default function LayoutApp({children}) {
             {children}
           </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>F</Footer>
+        <Footer style={{ textAlign: 'center' }}>footer:p</Footer>
       </Layout>
     );
 }

@@ -3,25 +3,23 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import LayoutApp from './components/LayoutApp'
 import 'antd/dist/antd.css'
 import AllBeers from './components/AllBeers'
+import BeerDetails from './components/BeerDetails'
+import RandomBeer from './components/RandomBeer'
+import NewBeer from './components/NewBeer'
 
 export default function RouterApp() {
 
     const Home = () => <div>Home</div>
-    // const AllBeers = () => <div>beers</div>
-    const BeerDetail = () => <div>dettails</div>
-    const RandomBeer = () => <div>random</div>
-    const NewBeer = () => <div>new bbwe</div>
-    
 
     return (
       <Router>
         <LayoutApp>
           <Switch>
-            <Route component={Home} exact path="/" />
+            <Route component={AllBeers} exact path="/" />
             <Route component={AllBeers} exact path="/beers" />
-            {/* <Route component={BeerDetail} path="/:id" /> */}
+            <Route component={BeerDetails} path="/beer/:id" />
             <Route component={RandomBeer} path="/random" />
-            <Route component={NewBeer} path="/new" />
+            <Route component={NewBeer} path="/new-beer" />
           </Switch>
         </LayoutApp>
       </Router>
