@@ -5,8 +5,10 @@ const beersService = axios.create({baseURL})
 
 export const getAllBeers = () => beersService.get('')
 
-export const getSingleBeer = (id) => beersService.get(`/${id}`)
+export const getSingleBeer = id => beersService.get(`/${id}`)
 
 export const getRandomBeer = () => beersService.get(`/random`);
 
 export const newBeer = beer => beersService.post('/new', beer)
+
+export const searchBeer = query => beersService.get(`search?q=${query}`)

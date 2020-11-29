@@ -6,6 +6,7 @@ import AllBeers from './components/AllBeers'
 import BeerDetails from './components/BeerDetails'
 import RandomBeer from './components/RandomBeer'
 import NewBeer from './components/NewBeer'
+import SearchBeer from './components/SearchBeer'
 
 export default function RouterApp() {
 
@@ -20,6 +21,7 @@ export default function RouterApp() {
             <Route component={BeerDetails} path="/beer/:id" />
             <Route component={RandomBeer} path="/random" />
             <Route component={NewBeer} path="/new-beer" />
+            <Route component={SearchBeer} path="/search" />
           </Switch>
         </LayoutApp>
       </Router>

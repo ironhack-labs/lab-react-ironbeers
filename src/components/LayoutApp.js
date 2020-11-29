@@ -22,6 +22,9 @@ export default function LayoutApp({children}) {
             <Menu.Item key="4">
               <Link to={'/new-beer'}>New Beer</Link>
             </Menu.Item>
+            <Menu.Item key="5">
+              <Link to={'/search'}>Search beer</Link>
+            </Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '0 50px' }}>

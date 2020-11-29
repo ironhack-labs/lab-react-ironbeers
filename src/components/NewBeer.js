@@ -8,7 +8,6 @@ import {
   Button,
   Divider,
   message,
-  DatePicker,
 } from 'antd';
 
 import { newBeer } from '../services/beers';
