@@ -10,7 +10,7 @@ function Headers() {
         <div>
              <Header>
                
-               <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+               <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{textAlign:"center"}}>
                <Link to={'/'}>
            <Menu.Item key="1" icon={<HomeOutlined/>}></Menu.Item>
            </Link>
