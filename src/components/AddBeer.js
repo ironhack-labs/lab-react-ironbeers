@@ -19,7 +19,6 @@ function AddBeer() {
   const inputChangeHandler = (event) => {
     let { name, value } = event.target;
     setAllValues({ ...allValues, [name]: value });
-    console.log(allValues);
   };
 
   function addNewBeer(event) {

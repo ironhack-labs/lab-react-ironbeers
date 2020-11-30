@@ -2,10 +2,15 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 700px;
-  background-color: aquamarine;
+  max-width: 500px;
+  background-color: rgb(220, 255, 243);
   min-height: 500px;
   padding: 5%;
+}
+
+header img {
+  width: 10%;
+  margin: 5%;
 }
 
 .Home img {
@@ -18,6 +23,24 @@
   margin: 4%;
 }
 
-.oneBeerList img {
+.beerList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.oneBeerInList {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2%;
+  padding: 2%;
+  background-color: rgb(255, 162, 74);
+  border-radius: 10%;
+}
+
+.oneBeerInList img {
   max-height: 100px;
 }
