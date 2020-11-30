@@ -8,6 +8,14 @@ import RandomBeer from "./components/random-beer";
 import AddNewBeer from "./components/new-beer";
 import BeerSingle from "./components/beer-single";
 
+
+// const addBeerHandler = (newBeerItem) => {
+//   const stateCopy = [...foodState];
+//   stateCopy.push(newBeerItem);
+//   setBeerState(stateCopy);
+  
+// };
+
 function App() {
   return (
     <div className="wrapper">

@@ -18,7 +18,6 @@ const BeerSingle = (props) => {
     }, [])
 
     return (
-        
         <div>
             <Header /> 
             <div>
@@ -34,10 +33,6 @@ const BeerSingle = (props) => {
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
         </div>
     )
 }

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  
+  
 }
 
 .App-link {
@@ -9,6 +11,7 @@
 .wrapper {
   display: flex;
   justify-content: center;
+  margin: 50px;
 }
 .card{
   display: flex;
@@ -39,3 +42,40 @@
   width: auto;
 }
 
+.control {
+  margin: 10px;
+}
+
+.intro-title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: black;
+}
+
+.subtitle {
+  font-size: 1.5em;
+}
+
+.section {
+  width: 400px;
+  margin: 50px;
+}
+
+.beer-img {
+  width: 100%;
+  height: 220px;
+}
+
+.home-wrapper {
+  display: flex;
+}
+
+.home {
+  text-align: center;
+}
+
+.wlcm {
+  font-weight: bold;
+  font-size: 4em;
+}
