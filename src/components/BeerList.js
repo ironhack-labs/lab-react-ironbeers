@@ -21,6 +21,7 @@ function BeerList() {
     return (
       <div>
         <Header />
+        {/* //The search function does not work, not sure yet why and how to make it work without just adding an OnSubmit */}
         <SearchBar searchBeer={getAllBeerData} />
         <div className="beerList">
           {beerList.map((item) => (
@@ -30,7 +31,8 @@ function BeerList() {
                 <div className="infoWrapper">
                   <h4>{item.name}</h4>
                   <q>{item.tagline}</q>
-                  <p>-<i>{item.contributed_by}</i>
+                  <p>
+                    -<i>{item.contributed_by}</i>
                   </p>
                 </div>
               </div>
