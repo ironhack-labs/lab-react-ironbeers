@@ -6,6 +6,7 @@ import Nav from './Nav';
 import Beers from './Beers';
 import BeerDetail from './BeerDetail';
 import NotFound from './NotFound';
+import RandomBeer from './RandomBeer';
 
 function App() {
   return (
@@ -16,9 +17,9 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/beers" exact component={Beers} />
           <Route path="/beers/:beerId" exact component={BeerDetail} />
+          <Route path="/random-beer" exact component={RandomBeer} />
           <Route component={NotFound} />
-          {/* <Route path="/random-beer" component={RandomBeer} />
-        <Route path="/new-beer" component={NewBeer} /> */}
+          {/* <Route path="/new-beer" component={NewBeer} /> */}
         </Switch>
       </div>
     </Router>

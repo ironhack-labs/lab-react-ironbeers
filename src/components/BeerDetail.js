@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const BeerDetail = ({ match }) => {
   const [beerItem, setBeerItemState] = useState({});
-
+  console.log(match);
   useEffect(() => {
     const fetchOneBeer = async () => {
       const beerItem = await axios.get(
