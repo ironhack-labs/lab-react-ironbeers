@@ -1,0 +1,24 @@
+.randomBeer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 25%;
+    height: 500px;
+    object-fit: scale-down;
+}
+
+.randomBeerdiv {
+    display: flex;
+}
+
+.randomBeerdiv p {
+    margin-right: 20px;
+}
+
+.description {
+    width: 70%;
+    text-align: center;
+}

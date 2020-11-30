@@ -1,0 +1,16 @@
+.beerCard img {
+  height: 12em;
+  width: 8em;
+  object-fit: contain;
+}
+
+.beerTxt {
+    width: 100%;
+    padding-left: 10em;
+}
+
+.beerCard {
+    margin: 5em;
+    display: flex;
+    padding-left: 10em; 
+}
