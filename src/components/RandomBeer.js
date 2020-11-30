@@ -11,10 +11,8 @@ function RandomBeer() {
 
   const fetchRandomBeer = async () => {
     const data = await fetch(`https://ih-beers-api2.herokuapp.com/beers/random`);
-
     const randomBeerItem = await data.json();
     setRandomBeer(randomBeerItem)
-    
   }
   
   return  (
@@ -24,7 +22,6 @@ function RandomBeer() {
         <div className='beerCardImage'>
           <img src={randomBeer.image_url} alt={randomBeer.name}></img>
         </div>
-        
         <div className='beerCardTitle'>
           <h1>{randomBeer.name}</h1>
           <h2>{randomBeer.attenuation_level}</h2>

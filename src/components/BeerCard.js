@@ -24,7 +24,6 @@ const BeerCard = ({match}) => {
         <div className='beerCardImage'>
           <img src={beer.image_url} alt={beer.name}></img>
         </div>
-        
         <div className='beerCardTitle'>
           <h1>{beer.name}</h1>
           <h2>{beer.attenuation_level}</h2>

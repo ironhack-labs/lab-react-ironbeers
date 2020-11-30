@@ -18,7 +18,6 @@ function App() {
           <Route path='/new-beer' component={NewBeer} />
           <Route path='/beer/:id' component={BeerCard} />
         </Switch>
-        
       </div>
     </Router>
     

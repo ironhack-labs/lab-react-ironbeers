@@ -1,9 +1,36 @@
 .newBeerForm {
-  
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding:  50px 30px;
+}
+
+.newBeerForm div{
+  display: flex;
+  flex-direction: column;
+}
+
+.newBeerForm input {
+  width: 300px;
+  padding: 5px;
+}
+
+.newBeerForm label {
+  text-align: left;
+}
+
+.submitNewBeer {
+  width: 300px;
+  padding: 5px;
+  background-color: #31C2FE;
+  color: white;
+  border: 1px solid #31C2FE;
+}
+
+.submitNewBeer:hover {
+  color: #31C2FE;
+  background-color: white;
+  border: 1px solid #31C2FE;
 }

@@ -12,7 +12,6 @@ function Beers() {
 
   const fetchBeers = async () => {
     const data = await fetch('https://ih-beers-api2.herokuapp.com/beers');
-
     const beers = await data.json();
     setBeersArray(beers)
   }
@@ -22,7 +21,6 @@ function Beers() {
       <Nav />
       <h1>Beers</h1>
       <div className='beersList'>
-
         {beersArray.map((beer) => (
           <Link  key={beer._id} style={{textDecoration:'none'}} to={`beer/${beer._id}`}>
             <div className='beerList'>
@@ -36,9 +34,7 @@ function Beers() {
               </div>
             </div>
           </Link>
-          
         ))}
-
       </div>
     </div>
   );

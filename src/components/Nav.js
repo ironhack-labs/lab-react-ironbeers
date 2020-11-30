@@ -8,7 +8,6 @@ const Nav = () => {
       <Link style={{textDecoration:'none'}} to='/'>
         <h1>Home</h1>
       </Link>
-      
     </nav>
   )
 };
