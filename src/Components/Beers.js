@@ -11,7 +11,7 @@ class Beers extends Component {
   componentDidMount = async () => {
     const ApiBeers = await axios.get('https://api.punkapi.com/v2/beers');
     this.setState({ beerList: ApiBeers.data });
-    // console.log(ApiBeers.data)
+    console.log(ApiBeers.data)
   };
 
   render() {
@@ -38,9 +38,11 @@ class Beers extends Component {
                       Check out {mapBeer.name}
                     </Link>
                   </h4>
+                  <div className = "beer-post">
                   <h5>{mapBeer.name}</h5>
                   <h5>{mapBeer.tagline}</h5>
                   <h6>Created by: {mapBeer.contributed_by}</h6>
+                </div>
                 </div>
               </div>
             );

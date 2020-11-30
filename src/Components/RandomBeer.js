@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Nav from './Nav';
 
 class RandomBeer extends Component {
   state = {
@@ -13,7 +14,8 @@ class RandomBeer extends Component {
 
   render() {
     return (
-      <div>
+      <div className = "random-beer">
+          <Nav />
          <h1>RANDOM BEER</h1>
         <img
           src={this.state.randomBeer.image_url}

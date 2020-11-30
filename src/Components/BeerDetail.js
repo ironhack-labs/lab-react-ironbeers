@@ -26,12 +26,14 @@ class BeerDetail extends Component {
 
   render() {
     return (
-      <div>
+      <div className = "beer-details"> 
+      <div className = "nav">
         <Nav />
+        </div>
         {this.state.oneBeer.map((beer, index) => {
           return (
             <div className="single-beer-details" key={index}>
-              \<h1>BEER DETAILS</h1>
+              <h1>BEER DETAILS</h1>
               <img src={beer.image_url} alt="" />
               <h1> {beer.name} </h1>
               <h2> {beer.tagline} </h2>

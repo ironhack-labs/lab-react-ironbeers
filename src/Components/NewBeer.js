@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Nav from './Nav';
 
 class NewBeer extends Component {
   state = {
@@ -39,7 +40,8 @@ class NewBeer extends Component {
 
   render() {
     return (
-      <div>
+      <div className = "new-beer">
+        <Nav />
            <h1>NEW BEER</h1>
         <form onSubmit={this.handleFormSubmission}>
           <label>Name:</label>
