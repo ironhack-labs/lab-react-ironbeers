@@ -5,17 +5,21 @@ import Home from './Home';
 import Nav from './Nav';
 import Beers from './Beers';
 import BeerDetail from './BeerDetail';
+import NotFound from './NotFound';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Nav />
-        <Route path="/" exact component={Home} />
-        <Route path="/beers" exact component={Beers} />
-        <Route path="/beers/:beerId" component={BeerDetail} />
-        {/* <Route path="/random-beer" component={RandomBeer} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/beers" exact component={Beers} />
+          <Route path="/beers/:beerId" exact component={BeerDetail} />
+          <Route component={NotFound} />
+          {/* <Route path="/random-beer" component={RandomBeer} />
         <Route path="/new-beer" component={NewBeer} /> */}
+        </Switch>
       </div>
     </Router>
   );

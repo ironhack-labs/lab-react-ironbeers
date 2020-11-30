@@ -88,3 +88,8 @@
 .beer-detail-text {
   text-align: left;
 }
+.not-found {
+  margin: 2rem;
+  font-weight: bold;
+  font-size: 28px;
+}

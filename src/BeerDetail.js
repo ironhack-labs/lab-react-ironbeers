@@ -7,11 +7,10 @@ const BeerDetail = ({ match }) => {
 
   useEffect(() => {
     const fetchOneBeer = async () => {
-      const fetchBeer = await axios.get(
+      const beerItem = await axios.get(
         `https://ih-beers-api2.herokuapp.com/beers/${match.params.beerId}`
       );
-      const beerItem = await fetchBeer.data;
-      setBeerItemState(beerItem);
+      setBeerItemState(beerItem.data);
     };
     fetchOneBeer();
   }, [match.params.beerId]);

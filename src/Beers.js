@@ -11,8 +11,7 @@ const Beers = () => {
       const beersData = await axios.get(
         'https://ih-beers-api2.herokuapp.com/beers'
       );
-      const beersList = await beersData.data;
-      setBeerState(beersList);
+      setBeerState(beersData.data);
     };
     fetchBeers();
   }, []);
