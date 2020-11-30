@@ -11,7 +11,7 @@ class Beers extends Component {
   componentDidMount = async () => {
     const ApiBeers = await axios.get('https://api.punkapi.com/v2/beers');
     this.setState({ beerList: ApiBeers.data });
-    console.log(ApiBeers.data)
+    // console.log(ApiBeers.data)
   };
 
   render() {
@@ -19,6 +19,7 @@ class Beers extends Component {
       <div>
         <Nav />
         <div className="beer-list">
+          <h1>ALL BEERS</h1>
           {this.state.beerList.map((mapBeer) => {
             return (
               <div className="beer-image" key={mapBeer.id}>
@@ -32,7 +33,6 @@ class Beers extends Component {
                     <Link
                       to={{
                         pathname: `/beers/${mapBeer.id}`,
-                        // state: { beersFromUrl: this.state.beerList },
                       }}
                     >
                       Check out {mapBeer.name}
