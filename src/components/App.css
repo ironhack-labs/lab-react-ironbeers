@@ -93,3 +93,31 @@
   font-weight: bold;
   font-size: 28px;
 }
+.new-beer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.beer-form-holder {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  text-align: left;
+}
+.beer-form-holder input {
+  width: 100%;
+}
+.beer-form-holder textarea {
+  width: 100%;
+  height: 250px;
+}
+button {
+  background-color: #3dc4fc;
+  width: 250px;
+  border-radius: 25px;
+  padding: 0.5rem;
+  margin: 1rem;
+  color: white;
+  font-weight: bold;
+  border-style: none;
+}

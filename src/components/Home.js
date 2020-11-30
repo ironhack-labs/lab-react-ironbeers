@@ -27,7 +27,7 @@ const Home = () => {
         </p>
       </div>
       <div className="link-info-new">
-        <Link to="new-beer">
+        <Link to="/new-beer">
           <img src="images/Screenshot 2020-11-29 at 13.57.51.png" alt="beer3" />
           <h2>New Beer</h2>
         </Link>
