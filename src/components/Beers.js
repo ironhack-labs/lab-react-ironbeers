@@ -18,7 +18,7 @@ const Beers = () => {
 
   return (
     <div>
-      {newBeerState.map((beer, index) => {
+      {newBeerState.map((beer) => {
         return (
           <div key={beer._id} className="beers">
             <Link to={`/beers/${beer._id}`} style={{ textDecoration: 'none' }}>
