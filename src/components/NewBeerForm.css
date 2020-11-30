@@ -1,0 +1,8 @@
+.new-form{
+    display: flex;
+    flex-direction: column;
+}
+.new-from label{
+    padding: 20px;
+    margin: 20px;
+}
