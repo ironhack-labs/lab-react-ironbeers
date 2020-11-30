@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import axios from 'axios';
+import OneBeer from './OneBeer';
 
 function BeerDetails(props) {
   const [beerDetails, setBeerDetails] = useState({});
@@ -19,13 +20,9 @@ function BeerDetails(props) {
 
   if (loaded) {
     return (
-      <div className="beerDetails">
-        <h2>{beerDetails.name}</h2>
-        <img src={beerDetails.image_url} alt={beerDetails.name} />
-        <p>{beerDetails.tagline}</p>
-        <p>{beerDetails.attenuation_level}</p>
-        <p>{beerDetails.description}</p>
-        <p>{beerDetails.contributed_by}</p>
+      <div>
+        <Header />
+        <OneBeer beer={beerDetails} />;
       </div>
     );
   } else {

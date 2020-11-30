@@ -21,7 +21,7 @@ function BeerList() {
       <div>
         <Header />
         {beerList.map((item) => (
-          <div className="oneBeer" key={item._id}>
+          <div className="oneBeerList" key={item._id}>
             <img src={item.image_url} alt={item.name} />
             <Link to={`/beer/${item._id}`}>
               <h4>{item.name}</h4>
