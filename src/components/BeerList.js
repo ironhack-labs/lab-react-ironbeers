@@ -24,16 +24,17 @@ function BeerList() {
         <SearchBar searchBeer={getAllBeerData} />
         <div className="beerList">
           {beerList.map((item) => (
-            <div className="oneBeerInList" key={item._id}>
-              <img src={item.image_url} alt={item.name} />
-              <div className="infoWrapper">
-                <Link to={`/beer/${item._id}`}>
+            <Link to={`/beer/${item._id}`}>
+              <div className="oneBeerInList" key={item._id}>
+                <img src={item.image_url} alt={item.name} />
+                <div className="infoWrapper">
                   <h4>{item.name}</h4>
-                </Link>
-                <p>{item.tagline}</p>
-                <p>{item.contributed_by}</p>
+                  <q>{item.tagline}</q>
+                  <p>-<i>{item.contributed_by}</i>
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

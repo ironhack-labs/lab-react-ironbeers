@@ -30,17 +30,51 @@ header img {
   align-items: center;
 }
 
+.beerList a {
+  text-decoration: none;
+  color: black;
+  width: 80%;
+}
+
+.beerList a:hover {
+  transform: scale(1.1);
+}
+
 .oneBeerInList {
   display: flex;
-  width: 80%;
   justify-content: space-around;
   align-items: center;
-  margin: 2%;
+  margin: 3%;
   padding: 2%;
-  background-color: rgb(255, 162, 74);
-  border-radius: 10%;
+  background-color: rgba(236, 132, 34, 0.5);
+  border-radius: 10px;
 }
 
 .oneBeerInList img {
   max-height: 100px;
+}
+
+.beerWrapper,
+.formWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oneBeer,
+form {
+  width: 80%;
+  padding: 2%;
+  background-color: rgba(236, 132, 34, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.oneBeer img {
+  max-height: 20vw;
+  margin: 5%;
 }

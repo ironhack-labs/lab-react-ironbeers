@@ -5,10 +5,14 @@ function OneBeer(props) {
     <div className="oneBeer">
       <h2>{props.beer.name}</h2>
       <img src={props.beer.image_url} alt={props.beer.name} />
-      <p>{props.beer.tagline}</p>
-      <p>{props.beer.attenuation_level}</p>
+      <q>{props.beer.tagline}</q>
+      <p>
+        <b>{props.beer.attenuation_level}</b>
+      </p>
       <p>{props.beer.description}</p>
-      <p>{props.beer.contributed_by}</p>
+      <p>
+        <i>{props.beer.contributed_by}</i>
+      </p>
     </div>
   );
 }

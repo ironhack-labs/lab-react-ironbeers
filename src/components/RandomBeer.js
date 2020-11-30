@@ -20,7 +20,9 @@ function RandomBeer() {
     return (
       <div>
         <Header />
-        <OneBeer beer={randomBeer} />;
+        <div className="beerWrapper">
+          <OneBeer beer={randomBeer} />
+        </div>
       </div>
     );
   } else {

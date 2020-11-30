@@ -22,7 +22,9 @@ function BeerDetails(props) {
     return (
       <div>
         <Header />
-        <OneBeer beer={beerDetails} />;
+        <div className="beerWrapper">
+          <OneBeer beer={beerDetails} />
+        </div>
       </div>
     );
   } else {
