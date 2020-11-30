@@ -1,0 +1,25 @@
+.Beers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.beerCard{
+    height: 300px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-style: solid;
+    border-color: lightgrey;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.text{
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+   }

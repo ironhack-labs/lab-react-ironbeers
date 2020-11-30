@@ -1,0 +1,15 @@
+.singleBeerContainer{
+    height: 400px;
+    width: 600px;
+    display: flex;
+    border-style: solid;
+    border-color: lightgrey;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.detailspage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
