@@ -1,5 +1,4 @@
 // Iteration 4 | Display a single beer
-//not completed, will be continued
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Nav from '../components/Nav'
