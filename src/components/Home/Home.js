@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router';
+import {NavLink} from 'react-router-dom';
 
 function Home() {
     return (
@@ -7,24 +7,24 @@ function Home() {
      <div>
             
         <div>
-            <Link to='/ListBeers'>
+            <NavLink to='/ListBeers'>
                 <h1>List of Beers</h1>
-            </Link>
+            </NavLink>
             <p>description</p>
 
         </div>
         <div>
-            <Link to='/RandomBeer'>
+            <NavLink to='/RandomBeer'>
                 <h1>Beer</h1>
-            </Link>
+            </NavLink>
             <p>description</p>
 
 
         </div>
         <div>
-            <Link to='/NewBeer'>
+            <NavLink to='/NewBeer'>
                 <h1>New Beer</h1>
-            </Link>
+            </NavLink>
             <p>description</p>
 
         </div>

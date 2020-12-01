@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home/Home';
 import axios from 'axios'
 import ListBeers from './components/ListBeers/ListBeers';
-import {Route, Switch} from 'react-router-dom';
-import SingleBeer from './components/Singlebeer/SingleBeer';
-import RandomBeer from './components/Randombeer/RandomBeer';
-import NewBeer from './components/Newbeer/NewBeer';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import SingleBeer from './components/SingleBeer/SingleBeer';
+import RandomBeer from './components/RandomBeer/RandomBeer';
+import NewBeer from './components/NewBeer/NewBeer';
 
 
 class App extends React.Component {
@@ -29,9 +28,14 @@ class App extends React.Component {
     })
   }
 
-render() {
+
+ render() {
+    if(this.state.beers && this.state.beers.length < 1)  {
+      return <h1>brewing...</h1>
+    }
   return (
   <div className="App">
+    <BrowserRouter>
     <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/beers" render={(props) => <ListBeers  beers={this.state.beers} onSearch={this.searchHandler} {...props}/>} />
@@ -39,15 +43,12 @@ render() {
         <Route exact path="/random-beer" render={(props) => <RandomBeer randomBeer={this.state.randomBeer} {...props} />} />
         <Route exact path="/new-beer" component={NewBeer} />
      </Switch>
+     </BrowserRouter>
 
-  </div>
-
-  )
-  
+    </div>
+  );
+ }
 }
-
-}
-
 export default App;
 
 

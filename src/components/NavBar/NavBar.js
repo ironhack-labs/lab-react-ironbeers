@@ -1,14 +1,16 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+
 
 function NavBar() {
   return (
     <nav>
-      <Link to="/">
+      <NavLink to="/">
         <h4>Home</h4>
-      </Link>
+      </NavLink>
     </nav>
   );
 }
 
 export default NavBar;
+
