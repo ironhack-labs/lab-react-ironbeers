@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header(props) {
     return (
         <div>
             <Link to="/">
-            <img src="./images/home.png" alt="home"/>
+            <img src={props.location} alt="home"/>
             </Link>
         </div>
     )

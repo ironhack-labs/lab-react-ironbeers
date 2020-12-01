@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import Header from './header' 
+import Header from './Header' 
 
 function SelectedBeer(props) {
      const [selectedBeer, setBeerState] = useState({})

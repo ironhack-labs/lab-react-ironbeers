@@ -1,4 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
+import axios from 'axios'
+import Header from './Header'
 
 const initialState = {
     name : "",
@@ -10,60 +12,110 @@ const initialState = {
     contributed_by :""
   };
 
-const NewBeerForm = () => {
-    const [allValues, setAllValues] = useState(initialState);
+  const NewBeer = () =>{
+    const [formState, setFormState] = useState(initialState);
 
     
-   /*  useEffect(() => {
-        axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`)
-        .then(selectedBeer => {
-            console.log(object);
-            setBeerState(selectedBeer.data)
-        })
-        .catch((error)=> "Error while fetching the beer from API") */
-       }
-       //)
+    const handleInputChange = (event) => {
+        let inputValue = event.target.value;
+        let inputName = event.target.name;
+        let inputType = event.target.type;
+    
+        if(inputType === "number") {
+          inputValue = parseInt(inputValue)
+        };
+    
+        setFormState({ ...formState, [inputName]: inputValue});
+    
+      };
+      
+function addNewBeer(event) {
+  event.preventDefault();
+  axios
+      .post('https://ih-beers-api2.herokuapp.com/beers/new', formState)
+      .then(() => {
+        console.log(`New beer added`)
 
-function NewBeer() {
-    return (
-     /*    <div>
-      <form onSubmit={handleFormSubmission} className="add-new-beer">
-        <label>Name:</label>
-        <input
-          type="text"
-          name="title"
-          value={allValues.title}
-          onChange={inputChangeHandler}
-        />
+      })
+      .catch((error) => error);
 
-        <label>Director:</label>
-        <input
-          type="text"
-          name="director"
-          value={allValues.director}
-          onChange={inputChangeHandler}
-        />
-
-        <label>Oscar Awarded:</label>
-        <input
-          type="checkbox"
-          name="hasOscars"
-          checked={allValues.hasOscars}
-          onChange={inputChangeHandler}
-        />
-
-        <label>IMDb Rating:</label>
-        <input
-          type="text"
-          name="IMDbRating"
-          value={allValues.IMDbRating}
-          onChange={inputChangeHandler}
-        />
-
-        <button>Submit</button>
-      </form>
-    </div> */
-    )
+    setFormState(initialState);
+  
 }
+
+return (
+  <div>
+    <h1>Add New Beer</h1>
+    <Header/>
+  <div>
+          <form onSubmit={addNewBeer}>
+            <div className="control">
+              <input className="input" 
+                type="text"
+                name="name"
+                placeholder="Enter Beer Name"
+                value={formState.name}
+                onChange={handleInputChange}
+                />
+            </div>
+
+            <div className="control">
+              <input className="input" 
+                type="text"
+                name="tagline"
+                placeholder="Enter Tagline"
+                value={formState.tagline}
+                onChange={handleInputChange}
+                />
+            </div>
+
+            <div className="control">
+              <input className="input" 
+                type="text"
+                name="description"
+                placeholder="Your description here"
+                value={formState.description}
+                onChange={handleInputChange}
+                />
+            </div>
+
+            <div className="control">
+              <input className="input" 
+                type="text"
+                name="first_brewed"
+                placeholder="First brewed on ... MM/YYYY"
+                value={formState.first_brewed}
+                onChange={handleInputChange}
+                />
+            </div>
+
+            <div className="control">
+              <input className="input" 
+                type="text"
+                name="brewers_tips"
+                placeholder="Brewers tips..."
+                value={formState.brewers_tips}
+                onChange={handleInputChange}
+                />
+            </div>
+
+            <div className="control">
+              <input className="input" 
+                type="number"
+                name="attenuation_level"
+                placeholder="Attenuation Level...."
+                value={formState.attenuation_level}
+                onChange={handleInputChange}
+                />
+            </div>
+            <div className="control"> 
+              <button className="button is-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  
+  )
+};
 
 export default NewBeer

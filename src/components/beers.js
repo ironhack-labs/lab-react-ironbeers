@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react';
 import axios from 'axios';
 import '../components/allbears.css'
 import { Link } from 'react-router-dom';
-import Header from '../components/header.js' 
+import Header from './Header.js' 
 
 
 const Beers = () => {
@@ -22,7 +22,7 @@ const Beers = () => {
    return (
     <div>
        <h1>All Beers</h1> 
-       <Header/>
+       <Header location={"./images/home.png"}/>
        {AllBeers.length ? AllBeers.map((eachBeerItem, index) => {
            return (
                <div className="beer-card" key={index}>
