@@ -1,3 +1,4 @@
+// Iteration 3 | List all the beers
 import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -18,16 +19,16 @@ import Nav from '../components/Nav'
     }, []);
   
     return (
-      <div>
+      <div className='allBeersPage'>
       <Nav/>
         {copyAllBeers.map((beer) => {
           return (
-            <Link to ={`./AllBeers.js/${beer._id}`} style={{ textDecoration: 'none' }}>
+            <Link to = './AllBeers.js/beer._id' style={{ textDecoration: 'none' }}>
             <div key={beer._id} className="beersId">
             <img src={beer.image_url} alt='beerImg'></img>
             <h2 className="beersName">{beer.name}</h2>
             <h3 className="beersTagline"> {beer.tagline}</h3>
-            <h5 className="beersContributedBy">Created by: {beer.contributed_by}</h5>
+            <h5 className="beersContributedBy">{beer.contributed_by}</h5>
             </div>
             </Link>
           );
