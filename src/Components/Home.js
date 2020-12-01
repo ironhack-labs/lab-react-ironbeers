@@ -1,8 +1,8 @@
 import React from 'react'
 import CardHome from './CardHome'
-import beers from "../images/beers.jpg"
-import newBeer from "../images/newBeer.jpg"
-import random from "../images/RandomBeer.jpg"
+import beers from "../Components/images/beers.jpg"
+import newBeer from "../Components/images/newBeer.jpg"
+import random from "../Components/images/RandomBeer.jpg"
 
 
 function Home() {
