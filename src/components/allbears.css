@@ -1,0 +1,10 @@
+body{
+    margin :0;
+    align-items: center;
+    align-content: center;
+}
+
+.beer-image{
+    width: auto;
+    height: 120px;
+}
