@@ -1,22 +1,21 @@
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
 import './App.css';
+import { Switch, Route } from "react-router-dom";
 
 import Home from './components/Home';
-import Beers from './components/Beers';
+import AllBeers from './components/AllBeers';
 import NewBeer from './components/NewBeer';
 import RandomBeer from './components/RandomBeer';
-// import NotFound from '';
 
 const App = () => {
   return (
     <section className="app">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/beers" component={Beers} />
-        <Route path="/new-beer" component={NewBeer} />
-        <Route path="/random-beer" component={RandomBeer} />
-        {/* <Route component={NotFound} /> */}
+        <Route exact path="/allbeers" component={AllBeers} />
+        <Route path="/newbeer" component={NewBeer} />
+        <Route path="/randombeer" component={RandomBeer} />
+
       </Switch>
     </section>
   );

@@ -1,15 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Nav from './Nav';
+// import Nav from './Nav';
 
 const Home = () => {
     return (
         <div className='home' style={{ width: '500px' }}>
 
-            <Nav />
-
             <div className='all-beer'>
-                <Link to='/beers'>
+                <Link to='/allbeers'>
                     <img src="https://www.pahotel.com.au/wp-content/uploads/2018/03/Ipswich-Craft-Beer-Bar-and-Restaurant.jpg" style={{ width: '500px' }} alt='all-beers' />
                     <h1> All Beers</h1></Link>
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
