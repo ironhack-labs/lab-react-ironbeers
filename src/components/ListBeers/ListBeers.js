@@ -3,9 +3,9 @@ import Link from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 
 
-function ListBeers(props) {
+function ListBeers() {
     
-    // console.log(props.beers)
+ 
     
     return (
         <div>
