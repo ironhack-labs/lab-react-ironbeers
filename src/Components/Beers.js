@@ -13,13 +13,12 @@ class Beers extends Component{
                 beerList:response.data
             })
         })
-
     }
     render(){
         return(
             <div className="beer-list">
-                {this.state.beerList.map((ele,index)=>{
-                    return <CardBeer key={index} {...ele}></CardBeer>
+                {this.state.beerList.map((ele)=>{
+                    return <CardBeer key={ele._id} {...ele}></CardBeer>
                 })}
 
             </div>

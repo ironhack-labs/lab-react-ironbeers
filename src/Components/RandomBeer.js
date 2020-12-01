@@ -13,7 +13,6 @@ class RandomBeer extends Component{
                 simpleBeer:response.data
             })
         })
-
     }
     render(){
         return(

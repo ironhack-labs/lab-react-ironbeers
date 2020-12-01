@@ -130,7 +130,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background: linear-gradient(0.25turn,  #f69d3c, #ebf8e1,#3f87a6);
   width: 50%;
   justify-content: center;
   margin: 30px;
