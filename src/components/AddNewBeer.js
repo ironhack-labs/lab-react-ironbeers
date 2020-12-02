@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import Header from './Header'
 
+
 const initialState = {
     name : "",
     tagline : "",
@@ -11,43 +12,28 @@ const initialState = {
     attenuation_level: 0,
     contributed_by :""
   };
-
-  const NewBeer = () =>{
+  const AddNewBeer = (props) =>{
     const [formState, setFormState] = useState(initialState);
-
-    
     const handleInputChange = (event) => {
-        let inputValue = event.target.value;
-        let inputName = event.target.name;
-        let inputType = event.target.type;
-    
-        if(inputType === "number") {
-          inputValue = parseInt(inputValue)
-        };
-    
-        setFormState({ ...formState, [inputName]: inputValue});
-    
+      let { name, value} = event.target;
+        setFormState({ ...formState, [name]: value});
+        
       };
-      
 function addNewBeer(event) {
   event.preventDefault();
   axios
       .post('https://ih-beers-api2.herokuapp.com/beers/new', formState)
       .then(() => {
         console.log(`New beer added`)
-
       })
       .catch((error) => error);
-
     setFormState(initialState);
-  
 }
-
-return (
-  <div>
-    <h1>Add New Beer</h1>
-    <Header/>
-  <div>
+  return (
+    <div>
+        <h1>Add New Beer</h1>
+        <Header /> 
+        <div>
           <form onSubmit={addNewBeer}>
             <div className="control">
               <input className="input" 
@@ -58,7 +44,6 @@ return (
                 onChange={handleInputChange}
                 />
             </div>
-
             <div className="control">
               <input className="input" 
                 type="text"
@@ -68,7 +53,6 @@ return (
                 onChange={handleInputChange}
                 />
             </div>
-
             <div className="control">
               <input className="input" 
                 type="text"
@@ -78,7 +62,6 @@ return (
                 onChange={handleInputChange}
                 />
             </div>
-
             <div className="control">
               <input className="input" 
                 type="text"
@@ -88,7 +71,6 @@ return (
                 onChange={handleInputChange}
                 />
             </div>
-
             <div className="control">
               <input className="input" 
                 type="text"
@@ -98,7 +80,6 @@ return (
                 onChange={handleInputChange}
                 />
             </div>
-
             <div className="control">
               <input className="input" 
                 type="number"
@@ -108,14 +89,22 @@ return (
                 onChange={handleInputChange}
                 />
             </div>
+            <div className="control">
+              <input className="input" 
+                type="text"
+                name="contributed_by"
+                placeholder="Your Name here..."
+                value={formState.contributed_by}
+                onChange={handleInputChange}
+                />
+            </div>
             <div className="control"> 
               <button className="button is-primary">Submit</button>
             </div>
           </form>
         </div>
+
     </div>
-  
   )
 };
-
-export default NewBeer
+export default AddNewBeer
