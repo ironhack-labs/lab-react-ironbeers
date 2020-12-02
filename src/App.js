@@ -6,6 +6,8 @@ import { Button, Layout } from 'antd';
 import HomePage from './screens/HomePage.jsx';
 import Beers from './screens/Beers.jsx';
 import SingleBeer from './screens/SingleBeer.jsx';
+import RandomBeer from './screens/RandomBeer';
+import NewBeer from './screens/NewBeer';
 const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
@@ -24,16 +26,11 @@ function App() {
 
         <Content style={{ minHeight: '100%' }}>
           <Switch>
-            <Route path="/" exact>
-              <HomePage />
-            </Route>
-            <Route path="/beers" exact>
-              <Beers />
-            </Route>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/beers" exact component={Beers} />
             <Route path="/beers/:beerId" exact component={SingleBeer} />
-
-            <Route path="/random-beer"></Route>
-            <Route path="/new-beer"></Route>
+            <Route path="/random" exact component={RandomBeer} />
+            <Route path="/new-beer" exact component={NewBeer}></Route>
           </Switch>
         </Content>
       </Layout>

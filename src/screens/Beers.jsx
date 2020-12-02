@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Spin } from 'antd';
 import BeerList from '../components/BeerList.jsx';
+
 const Beers = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [beers, setBeers] = useState([]);
 
   useEffect(() => {

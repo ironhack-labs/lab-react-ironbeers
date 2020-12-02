@@ -19,10 +19,10 @@ const HomePage = () => {
           <Card title="All Beers" extra={<Link to="/beers">Go to</Link>} style={{ width: 300 }}></Card>
         </Col>
         <Col style={rowStyle} span={8}>
-          <Card title="Random Beer" extra={<Link to="/test">Go to</Link>} style={{ width: 300 }}></Card>
+          <Card title="Random Beer" extra={<Link to="/random">Go to</Link>} style={{ width: 300 }}></Card>
         </Col>
         <Col style={rowStyle} span={8}>
-          <Card title="New Beer" extra={<Link to="/">Go to</Link>} style={{ width: 300 }}></Card>
+          <Card title="New Beer" extra={<Link to="/new-beer">Go to</Link>} style={{ width: 300 }}></Card>
         </Col>
       </Row>
     </>
