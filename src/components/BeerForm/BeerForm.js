@@ -8,7 +8,7 @@ class BeerForm extends Component {
     constructor() {
         super()
         this.state = {
-            image_url:'',
+            brewer_tips:'',
             name:'',
             tagline:'',
             first_brewed:'',
