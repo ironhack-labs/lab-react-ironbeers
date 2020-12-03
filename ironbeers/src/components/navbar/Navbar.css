@@ -1,0 +1,9 @@
+.nav-style img {
+    width: 50px;
+    padding: 10px 500px;
+}
+
+.nav-style {
+    background-color: blue;
+    padding-bottom: 20px;
+}

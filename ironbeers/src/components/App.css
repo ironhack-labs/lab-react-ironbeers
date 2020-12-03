@@ -1,0 +1,12 @@
+.imgbeer {
+  width: 60px;
+}
+
+.homeoptions {
+  border: 1px solid black;
+}
+
+.homeoptions a {
+  text-decoration: none;
+  color: black;
+}
