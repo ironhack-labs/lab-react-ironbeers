@@ -1,0 +1,22 @@
+.card-img-top{
+  object-fit: cover;
+  height: 200px;
+}
+
+.navbar a {
+  color:white!important;
+  text-decoration: none;
+}
+
+.beer-card {
+  margin-bottom: 30px;
+}
+
+.beer-card img {
+  height: 140px;
+  object-fit: contain;
+} 
+
+.details img{
+width: 150px
+}
