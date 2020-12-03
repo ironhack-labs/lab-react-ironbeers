@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import BeersService from './../../public/service/Beers.service'
+//import BeersService from './../../public/service/Beers.service'
 import Header from "./Header"
 
 
