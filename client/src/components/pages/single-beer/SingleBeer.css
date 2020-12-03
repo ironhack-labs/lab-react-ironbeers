@@ -1,0 +1,11 @@
+.single-beer-card {
+  padding: 1em;
+  margin: 2em;
+  text-align: center;
+  box-shadow: 0 0 6px rgb(0, 0, 0, .3);
+}
+
+.single-beer-card img {
+  height: 300px;
+  object-fit: contain;
+}

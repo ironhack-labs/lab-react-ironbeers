@@ -1,0 +1,24 @@
+.link {
+  color: black;
+  text-align: center;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.card-link h1 {
+  font-weight: 200;
+  font-size: 3em;
+}
+
+.home-card {
+  padding: 2em;
+  margin: 0 2em;
+}
+
+.home-image {
+  height: 40vh;
+  object-fit: cover;
+}

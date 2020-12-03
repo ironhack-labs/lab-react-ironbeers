@@ -1,0 +1,8 @@
+.beer-card {
+  margin: 1em;
+  border: 1px solid grey;
+}
+
+.beer-card-img {
+  object-fit: contain;
+}
