@@ -1,0 +1,22 @@
+
+.beer-card {
+    margin-bottom: 30px;    
+    width:200px;
+
+}
+
+.beer-card img {
+    height: 390px;
+    object-fit: cover;
+}   
+.beerList{
+    justify-content: center;
+    margin: 0 auto;
+
+}
+.beerimg{
+    height: 300px;
+    padding-top:40px ;
+    display: block;
+    margin:0 auto
+}

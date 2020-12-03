@@ -1,0 +1,41 @@
+.header{
+    background-color:red;
+    height: 170px;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+}
+.header button{
+margin:0 auto;
+width: 100%;
+margin-bottom:5px
+}
+.container{
+    margin-top:30px
+}
+.hea1{
+    background-image: url('./d8d5fc6c2936d53a918e2e3ba0252d02.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.hea2{
+    background-image: url('./5196f38832afcfb6b442bb5e41d7d86f.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hea3{
+    background-image: url('./79bef0c022b7de561ae4bcb39c4abbee.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1{
+    text-align: center;
+    margin-top: 20px
+    
+}
