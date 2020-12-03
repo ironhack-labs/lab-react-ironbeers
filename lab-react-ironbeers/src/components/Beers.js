@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-//import BeersService from './../../public/service/Beers.service'
+import BeersService from './../../public/service/Beers.service'
 import Header from "./Header"
-import BeersCard from './BeersCard'
+
 
 class Beers extends Component {
 
@@ -20,7 +20,7 @@ class Beers extends Component {
           <section>
             <Header />
         
-                {this.state.beers.map(elm => <BeersCard key={elm._id} {...elm} />)}
+                {this.state.beers.map(elm => console.log(Beers))}
                 
         </section>
         )
