@@ -1,0 +1,59 @@
+.home img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.home {
+    margin-top: 40px;
+}
+
+.home a {
+    color: black
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.navigation {
+    height: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation img {
+    height: 40px;
+    width: auto;
+    margin: 10px;
+}
+
+.beer-card {
+    width: 22%;
+    margin: 10px;
+}
+
+.beer-card img {
+    max-height: 300px;
+    object-fit: contain;
+    margin: 10px 0;
+}
+
+.beer-dets {
+    margin-left: 50px;
+}
+
+.beer-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
