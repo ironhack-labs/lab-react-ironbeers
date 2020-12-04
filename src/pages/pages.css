@@ -1,0 +1,65 @@
+/* GENERAL CSS */
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* HOMEPAGE CSS */
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+
+.homepage_links {
+  text-decoration: none;
+  color: black;
+}
+
+/* ALL BEERS CSS */
+
+.search-bar {
+  padding: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  border: 1px solid #9F9F9F;
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 10px;
+  outline: none;
+}
+
+/* NEW BEER CSS */
+
+.new-beer_form {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-beer_form input {
+  border-radius: 10px;
+  border: 1px solid #E5E5E5;
+  margin-bottom: 15px;
+  height: 30px;
+  outline: none;
+}
+
+.new-beer_description {
+  height: 80px !important;
+}
+
+.new-beer_btn {
+  border: none;
+  outline: none;
+  background-color: #3DC4FC;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}

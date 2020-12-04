@@ -1,0 +1,74 @@
+/* HEADER CSS */
+
+.header {
+  background-color: #3DC4FC;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-home {
+  color: #fff;
+  font-size: 32px;
+}
+
+/* MENU CARD CSS */
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #9F9F9F;
+}
+
+.menu-card_img img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu-card_details {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+/* BEER CARD CSS */
+
+.beer-card {
+  display: flex;
+  border-bottom: 1px solid #9F9F9F;
+  padding: 20px;
+}
+
+.beer-card_img {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.beer-card_img img {
+  height: 150px;
+}
+
+/* BEER INFO CSS */
+
+.beer-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.beer-info_img {
+  display: flex;
+  justify-content: center
+}
+
+.beer-info_img img {
+  height: 200px;
+}
+
+.beer-info_details div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
