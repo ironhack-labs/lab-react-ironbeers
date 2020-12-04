@@ -1,0 +1,24 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card-img {
+    width: 50%;
+    align-self: center;
+}
+
+.card-img img {
+    max-width:100%;
+}
+
+.card-text {
+    width: 50%;
+    margin-left: 50px;
+    text-align: left;
+    overflow: scroll;
+}
+

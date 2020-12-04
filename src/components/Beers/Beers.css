@@ -1,0 +1,28 @@
+.beers-card {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    height: 20vh;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.beers-card-img {
+    width: 30%;
+
+}
+.beers-card-img img {
+    max-height:100%;
+}
+
+.beers-card-text {
+    width: 70%;
+    margin: 0 30px;
+    text-align: left;
+}
+
+h4 {
+    color: darkgrey;
+}
+

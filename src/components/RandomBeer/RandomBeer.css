@@ -1,0 +1,31 @@
+.beer-card {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    /* height: 70vh; */
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.beer-card-img {
+    width: 30%;
+    align-items: center;
+}
+
+.beer-card-img img {
+    max-height: 80%;
+    max-width: 100%;
+    /* align-content: center; */
+}
+
+.beer-card-text {
+    width: 70%;
+    margin-left: 30px;
+    text-align: left;
+}
+
+h4 {
+    color: darkgrey;
+}
+
