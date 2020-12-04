@@ -1,0 +1,11 @@
+/* HOME */
+.beer-card {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.beer-card img {
+    width: 100%;
+    object-fit: cover;
+}
