@@ -1,0 +1,15 @@
+.beer-container {
+display: flex;
+flex-direction: row;
+justify-content: center;
+ height: 300px;
+}
+
+.beer-container img {
+    height: 100%
+}
+.beer-container div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
