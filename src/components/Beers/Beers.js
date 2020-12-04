@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import NavBar from '../NavBar/NavBar';
 import { Link } from 'react-router-dom';
 import './Beers.css';
 
@@ -24,7 +23,6 @@ export default class Beers extends Component {
     }
 
     render() {
-
         const filtered = this.state.beers.filter(beer => 
             beer.name.toLowerCase().includes(this.state.search.toLowerCase())
         )

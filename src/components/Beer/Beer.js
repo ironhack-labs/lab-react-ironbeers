@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import NavBar from '../NavBar/NavBar';
 import './Beer.css';
 
 
@@ -31,7 +30,6 @@ export default class Beer extends Component {
         if (!beer) return <>Loading</>
         return (
             <>
-                {/* <NavBar /> */}
                 <div className="beer-card" key={ beer._id }>
                     <div className="beer-card-img">
                         <img src={ beer.image_url } alt="beer"/>
