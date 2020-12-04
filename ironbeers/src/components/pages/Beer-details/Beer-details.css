@@ -1,0 +1,14 @@
+.beer-details img {
+    height: 140px;
+    object-fit: contain;
+    
+}
+
+.beer-details{
+
+    margin: 30px;
+}
+
+.details-card {
+    margin-top: 10px;
+}

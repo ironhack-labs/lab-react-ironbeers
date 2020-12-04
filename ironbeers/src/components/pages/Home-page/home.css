@@ -1,0 +1,18 @@
+.home{
+    margin-top: 50px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    background-color: #007bff;
+}
+
+.navbar img {
+    text-align: center;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    margin-left: 200px;
+}
