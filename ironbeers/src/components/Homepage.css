@@ -1,0 +1,15 @@
+.home {
+    margin-left: 50px;
+    padding-top: 30px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+.home-img {
+    width: 20%;
+}
+
+.text {
+    padding-bottom: 50px;
+    font-weight: 400;
+}
