@@ -1,0 +1,24 @@
+.section-card{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid lightgrey;
+    border-radius: 5px
+}
+
+.section-card img{
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0
+}
+
+.section-card p{
+    padding: 0 10px;
+    color: grey
+}
+
+.section-card h2{
+    color: black;
+    padding: 5px 10px 0 10px;
+}
