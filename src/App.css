@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.beer-card {
+  color: black;
+  outline: black solid;
+  width: 80vw;
+}
+
+.all-beers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
