@@ -1,0 +1,9 @@
+nav{
+    background-color: #3dc4fc;
+    display: flex;
+    justify-content: center;
+
+}
+nav img{
+    width: 100px;
+}

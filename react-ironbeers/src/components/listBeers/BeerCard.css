@@ -1,0 +1,11 @@
+#beerCard{
+    width: 25%;
+    align-self: center;
+}
+
+#cardTitle{
+    text-align: center;
+}
+#tagLine{
+    text-align: center;
+}
