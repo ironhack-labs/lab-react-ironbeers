@@ -1,4 +1,18 @@
 
-const NewBeer = () => { return(<h1>RandomBeer</h1>) }
+// import React, { Component } from 'react'
+// import BeerService from './../../service/beer.service'
 
-export default NewBeer
+
+// import { Container, Form, Button } from 'react-bootstrap'
+
+
+
+// const NewBeer = () => {
+//     return (
+//         <Container>
+//             <h1>RandomBeer</h1>
+//         </Container>
+//     )
+// }
+
+// export default NewBeer

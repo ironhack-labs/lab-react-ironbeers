@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import BeerService from './../../service/beer.service'
 
 
-import { Form, Button } from 'react-bootstrap'
+import { Container, Form, Button } from 'react-bootstrap'
 
 
 class NewBeer extends Component {
@@ -39,34 +39,50 @@ class NewBeer extends Component {
         render() {
             
             return (
-                <>
+            <Container>
+                    
                 <h1>New Beer</h1>
                 <hr />
 
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group controlId="title">
-                        <Form.Label>Nombre</Form.Label>
-                        <Form.Control type="text" name="title" value={this.state.title} onChange={this.handleInputChange} />
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control type="text" name="name" value={this.state.title} onChange={this.handleInputChange} />
                     </Form.Group>
+
                     <Form.Group controlId="description">
                         <Form.Label>Tag line</Form.Label>
-                        <Form.Control type="text" name="description" value={this.state.description} onChange={this.handleInputChange} />
+                        <Form.Control type="text" name="tagline" value={this.state.description} onChange={this.handleInputChange} />
                     </Form.Group>
+
                     <Form.Group controlId="length">
-                        <Form.Label>Longitud</Form.Label>
-                        <Form.Control type="number" name="length" value={this.state.length} onChange={this.handleInputChange} />
-                    </Form.Group>
+                        <Form.Label>Description</Form.Label>
+                        <Form.Control type="text" name="description" value={this.state.length} onChange={this.handleInputChange} />
+                     </Form.Group>
+                    <Form.Group controlId="length">
+                        <Form.Label>First Brewed</Form.Label>
+                        <Form.Control type="text" name="first_brewed" value={this.state.length} onChange={this.handleInputChange} />
+                     </Form.Group>
+
+                    <Form.Group controlId="length">
+                        <Form.Label>Brewers Tips </Form.Label>
+                        <Form.Control type="text" name="brewers_tips " value={this.state.length} onChange={this.handleInputChange} />
+                     </Form.Group>
+    
                     <Form.Group controlId="inversions">
-                        <Form.Label>Inversiones</Form.Label>
-                        <Form.Control type="number" name="inversions" value={this.state.inversions} onChange={this.handleInputChange} />
+                        <Form.Label>Attenuation Level </Form.Label>
+                        <Form.Control type="number" name="attenuation_level " value={this.state.inversions} onChange={this.handleInputChange} />
+                        </Form.Group>
+                        
+                    <Form.Group controlId="contributed_by ">
+                        <Form.Label>Contributed By </Form.Label>
+                        <Form.Control type="text" name="contributed_by " value={this.state.imageUrl} onChange={this.handleInputChange} />
                     </Form.Group>
-                    <Form.Group controlId="imageUrl">
-                        <Form.Label>Imagen (URL)</Form.Label>
-                        <Form.Control type="text" name="imageUrl" value={this.state.imageUrl} onChange={this.handleInputChange} />
-                    </Form.Group>
-                    <Button variant="dark" type="submit">Crear montaña rusa</Button>
+                        
+                    <Button variant="dark" className='btn-block' type="submit">New Beer</Button>
+               
                 </Form>
-            </>
+          </Container>
     )   
     }
 }
