@@ -20,9 +20,8 @@ class BeerDetails extends Component {
     componentDidMount = () => {
 
         const beerId = this.props.match.params.beer_id
-        console.log(beerId)
         this.beerService
-            .getOneBeer(beerId)
+            .getBeer(beerId)
             .then(res => this.setState({ beer: res.data }))
             .catch(err => console.log(err))
     }

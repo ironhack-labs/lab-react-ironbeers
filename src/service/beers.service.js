@@ -10,7 +10,7 @@ export default class beersService {
     }
 
     getBeers = () => this.apiHandler.get('/')
-    getOneBeer = beerId => this.apiHandler.get(`/${beerId}`)
+    getBeer = beerId => this.apiHandler.get(`/${beerId}`)
     getRandom = () => this.apiHandler.get('/random')
     newBeer = beerInfo => this.apiHandler.post('/new', beerInfo)
 }
