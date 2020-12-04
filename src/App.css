@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  /* border:2px solid blue; */
+  /* margin: 5px; */
+  padding: 10px;
+  background: #3dc4fb;
+  /* color: white; */
+  /* text-decoration: none; */
+}
+
+.beerImage {
+  width: 10%;
+}
