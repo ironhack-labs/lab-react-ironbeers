@@ -13,7 +13,7 @@ function App() {
     <div className='all-info'>
 
       <Switch>
-        <Route path='/' render={() => <Home />} />
+        <Route path='/' exact render={() => <Home />} />
         <Route path='/beers' render={() => <Beers />} />
         {/*<Route path='/random-beer' render={() => <RandomBeer />} />
         <Route path='/new-beer' render={() => <AddNewBeer />} />
