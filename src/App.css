@@ -141,6 +141,9 @@ h3 {
 .beeerTitlesAndPoints h2 {
   margin-bottom: 3%;
 }
+.beerTitles {
+  width: 65%;
+}
 .beerTitles h3 {
   color: gray;
 }

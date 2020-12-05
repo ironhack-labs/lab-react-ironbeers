@@ -11,13 +11,12 @@ function BeerDetails(props) {
           `https://ih-beers-api2.herokuapp.com/beers/${props.match.params.id}`
         );
         setBeer(response.data);
-        console.log('resp=>', response.data);
       } catch (err) {
         console.error(err);
       }
     }
     getBeers();
-  }, []);
+  }, [props]);
 
   return (
     <div className="dfc-jc-ac beerDetail">
