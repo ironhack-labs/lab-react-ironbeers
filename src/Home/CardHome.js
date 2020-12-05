@@ -8,7 +8,7 @@ function CardHome(props) {
       <h2>{props.title}</h2>
       <p>{props.content}</p>
       <Link to={props.link} className="df-jc-ac">
-        <button>{props.title}</button>
+        <button className="btn">{props.title}</button>
       </Link>
     </div>
   );
