@@ -4,7 +4,7 @@ import CardHome from './CardHome';
 
 function HomePage(porps) {
   return (
-    <container className="dfc-jc-ac">
+    <div className="dfc-jc-ac">
       <CardHome
         img="https://thehalfwall.com/wp-content/uploads/2016/08/sliderimg.jpg"
         title="All Beers"
@@ -23,7 +23,7 @@ function HomePage(porps) {
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet lacinia velit. Vivamus eleifend neque non faucibus congue. Quisque maximus elementum tortor, eget venenatis orci porttitor in."
         link="/new-beer"
       />
-    </container>
+    </div>
   );
 }
 

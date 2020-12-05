@@ -67,8 +67,6 @@
 .home-card button {
   background-color: #282c34;
   color: white;
-  position: relative;
-  left: 40%;
   margin-bottom: 3%;
   border-radius: 5px;
   padding: 1.5% 3%;
@@ -76,4 +74,87 @@
 .home-card p {
   padding: 0 5%;
   margin-top: 0;
+}
+
+.navBar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.63);
+  padding: 1.5% 0;
+}
+.navBar img {
+  height: 50px;
+}
+
+.beerCard {
+  text-decoration: none;
+  color: black;
+  border-bottom: gray solid 1px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 3%;
+}
+.imgSquare {
+  width: 70px;
+  margin-right: 3%;
+  height: 100px;
+  padding: 3% 0;
+}
+.beerCard img {
+  height: 100%;
+}
+.beerinformation {
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.beerinformation h3,
+h4,
+h6 {
+  margin: 0;
+  word-wrap: break-word;
+}
+.beerinformation h3 {
+  margin-bottom: 4%;
+}
+.beerinformation h4 {
+  margin-bottom: 0.5%;
+  color: gray;
+}
+
+.beerDetail {
+  padding: 12% 7%;
+}
+.beerDetail img {
+  height: 200px;
+  margin-bottom: 5%;
+}
+.beeerTitlesAndPoints {
+  justify-content: space-between;
+}
+.beeerTitlesAndPoints h2,
+h3 {
+  margin: 0;
+  font-weight: normal;
+}
+.beeerTitlesAndPoints h2 {
+  margin-bottom: 3%;
+}
+.beerTitles h3 {
+  color: gray;
+}
+.beerPoints {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.beerPoints h2 {
+  color: gray;
+}
+.beerPoints h3 {
+  font-weight: bold;
+}
+.beerDetail h4 {
+  color: gray;
 }
