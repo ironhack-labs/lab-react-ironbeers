@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+.df-jc-ac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  word-wrap: normal;
+}
+
+.dfc-jc-ac {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  word-wrap: normal;
+}
+
+.home-card {
+  word-wrap: normal;
+}
+.home-card img {
+  width: 100%;
+}
+.home-card h2 {
+  padding: 0 5%;
+  margin: 0 auto;
+}
+.home-card button {
+  background-color: #282c34;
+  color: white;
+  position: relative;
+  left: 40%;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  padding: 1.5% 3%;
+}
+.home-card p {
+  padding: 0 5%;
+  margin-top: 0;
+}
