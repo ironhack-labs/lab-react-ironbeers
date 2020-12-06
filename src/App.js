@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PropTypes from 'prop-types';
+import { Route, Link, Switch } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Beers from './pages/Beers';
+import SingleBeer from './pages/SingleBeer';
+import NewBeer from './pages/NewBeer';
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      {/* Syntax is: exact guarantees that the path has to be **exactly** that url  */}
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/beers" component={Beers} />
+      <Route exact path="/random-beer" component={SingleBeer} />
+      <Route exact path="/new-beer" component={NewBeer} />
+      <Route exact path="/beers/:id" component={SingleBeer} />
+      {/* Syntax: path - is the url that our website will be on  */}
+    </Switch>
   );
-}
+};
+
+App.propTypes = {};
 
 export default App;

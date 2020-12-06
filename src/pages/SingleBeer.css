@@ -1,0 +1,10 @@
+.singleBeer {
+  padding: 30px;
+}
+
+.singleBeer > img {
+  height: 300px;
+  width: auto;
+  display: block;
+  margin: 0px auto;
+}

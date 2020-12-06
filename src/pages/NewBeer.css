@@ -1,0 +1,16 @@
+.formInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+input {
+  border-radius: 20px;
+  border: 1px solid grey;
+  padding: 3px;
+}
+
+form {
+  padding: 20px;
+}
