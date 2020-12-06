@@ -1,0 +1,25 @@
+.home img {
+  /* width: 500px;
+  height: 300px; */
+}
+
+.container {
+  /* width: 500px;
+  border: 1px solid black; */
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home a {
+  text-decoration: none;
+  color: blue;
+}
+
+.home h1,
+p {
+  margin: 5px;
+}

@@ -1,0 +1,12 @@
+.nav-bar {
+  background-color: turquoise;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar img {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+}

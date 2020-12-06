@@ -1,0 +1,18 @@
+.single-beer-container {
+  margin: 5px 40px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.single-beer-container img {
+  width: 100px;
+  height: 350px;
+  align-self: center;
+  margin-top: 50px;
+}
+
+.single-beer-box {
+  display: flex;
+  justify-content: space-between;
+}
