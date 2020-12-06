@@ -1,0 +1,21 @@
+.homepage a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px solid peru;
+  margin: 20px;
+  padding: 20px;
+}
+
+.card p,
+.card h1 {
+  text-align: center;
+  color: gray;
+  width: 100%;
+}

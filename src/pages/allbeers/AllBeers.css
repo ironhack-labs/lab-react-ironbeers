@@ -1,0 +1,46 @@
+.img {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.all-card {
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  align-items: center;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+h6 {
+  color: gray;
+  font-weight: 400;
+}
+p {
+  font-size: x-small;
+  font-weight: bold;
+}
+
+@media (min-width: 1300px) {
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}

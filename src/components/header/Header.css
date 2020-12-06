@@ -1,0 +1,15 @@
+.header {
+  background-color: peru;
+  padding: 15px;
+}
+
+.header h1 {
+  margin: 0;
+  text-align: center;
+  color: aliceblue;
+  font-weight: 300;
+}
+
+.header a {
+  text-decoration: none;
+}

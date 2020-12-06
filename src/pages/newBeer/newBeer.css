@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20px 50px;
+  align-content: center;
+}
+
+input,
+textarea,
+button {
+  border-radius: 30px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+button {
+  background-color: peru;
+  border: none;
+  color: aliceblue;
+  padding: 10px;
+}
