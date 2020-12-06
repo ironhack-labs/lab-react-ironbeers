@@ -1,0 +1,10 @@
+.header {
+    height: 60px;
+    background-color: #3DC4FC;
+    display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: stretch;
+  }

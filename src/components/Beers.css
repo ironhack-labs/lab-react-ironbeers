@@ -1,0 +1,33 @@
+.allBeers {
+    height: 20vh;
+  }
+  
+  .parentDiv {
+    /* outline: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 20px 0;
+    border-bottom: 2px solid lightgray;
+  }
+  
+  .imageDiv {
+    /* outline:1px solid blue; */
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .description {
+    /* outline: 1px solid red; */
+    width: 70%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    align-content: flex-start;
+  }
