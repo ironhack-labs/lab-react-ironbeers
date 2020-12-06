@@ -24,12 +24,12 @@ export default class NewBeer extends Component {
 					<textarea name="description" type="text"></textarea><br/><br/>
 					<label htmlFor="first_brewed">First Brewed</label><br/>
 					<input name="first_brewed" type="date" /><br/>
-					<label htmlFor="tips">Brewer's Tips</label><br/>
-					<input name="tips" type="text" /><br/>
-					<label htmlFor="attenuation">Attenuation Level</label><br/>
-					<input name="attenuation" type="number" /><br/>
-					<label htmlFor="creator">Contributed by</label><br/>
-					<input name="creator" type="text" /><br/>
+					<label htmlFor="brewers_tips">Brewer's Tips</label><br/>
+					<input name="brewers_tips" type="text" /><br/>
+					<label htmlFor="attenuation_Level">Attenuation Level</label><br/>
+					<input name="attenuation_Level" type="number" /><br/>
+					<label htmlFor="contributed_by">Contributed by</label><br/>
+					<input name="contributed_by" type="text" /><br/>
 					<button type="submit">Add New</button>
 				</form>
 			</div>
