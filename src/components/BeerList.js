@@ -13,12 +13,6 @@ export default class BeerList extends Component {
     }
     
 
-    // setQuery = query => {
-    //     this.setState({
-    //         query: query
-    //     })
-    // }
-
     getBeerFromApi = () => {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
         .then(response => { 
@@ -29,34 +23,33 @@ export default class BeerList extends Component {
         })
     }
 
-    // searchedBeer = () => {
-    //     axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${this.state.query}`)
-    //     .then(response => {
-    //         this.setState({
-    //             beers: response.data
-    //         })
-    //     })
-    // }
+    
+
+    searchedBeer = () => {
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${this.state.query}`)
+        .then(response => {
+            this.setState({
+                beers: response.data
+            })
+        })
+    }
 
     componentDidMount() {
         this.getBeerFromApi();
-        // this.searchedBeer();
     }
 
-    // componentDidUpdate(prevProps) {
-    //     console.log('current props:', this.props.match.params.id)
-    //     console.log('previous props:', prevProps.match.params.id)
-    //     if (prevProps.match.params.id !== this.props.match.params.id) {
-    //       this.searchedBeer();
-    //     }
-    //   }
-    handleInputChange () => {
-        
+
+    handleInputChange = event => {
+        this.setState({
+            query: event.target.value
+        })
+        this.searchedBeer();
     }
 
     render() {
         return (
-            <div> 
+            <div>
+            <h1>{this.state.query}</h1> 
             <h1>All Beers</h1>
             <div>
                 <input
