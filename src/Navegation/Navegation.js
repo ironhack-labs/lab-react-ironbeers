@@ -9,6 +9,8 @@ import NewBeer from './NewBeer';
 
 function Navegation(props) {
   return (
+    //<></> é um apelido para <React.Fragment></React.Fragment>
+    //<Header /> => poderia usar assim o Header
     <>
       <Route path={props.match.url} component={Header} />
       <Switch>
