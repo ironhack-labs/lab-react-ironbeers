@@ -1,15 +1,24 @@
 import React from 'react'
 
 const SingleBeer = (props) => {
-    console.log("PROPS", props.beers)
-    console.log("PARAMS", props.match.params)
+    // console.log("PROPS", props.beers)
+    // console.log("PARAMS", props.match.params)
 
- const singleBeer =  props.beers.filter((singleBeer) => {return props.match.params.id === singleBeer._id})
-        //    console.log(singleBeer[0])
+ const singleBeer =  props.beers.find((singleBeer) => {return props.match.params.id === singleBeer._id})
+ if(!singleBeer) {
+     return <h1>No beer found with this ID</h1>
+ }
+        // console.log(singleBeer.name)
     return (
         <div>
             <h1>SingleBeer Page</h1>
-           {/* <p>{singleBeer.name}</p> */}
+            <img src={singleBeer.image_url} style={{width: "30px", height:"100px"}}/>
+           <p>{singleBeer.name}</p>
+           <p>{singleBeer.tagline}</p>
+           <p>{singleBeer.first_brewed}</p>
+           <p>{singleBeer.attenuation_level}</p>
+           <p>{singleBeer.description}</p>
+           <p>{singleBeer.contributed_by}</p>
         </div>
     )
 }

@@ -26,33 +26,38 @@ class App extends React.Component {
 
   render() {
     // console.log('STATE', this.state.beers);
-    if (!this.state.beers) {
+    //.length to catch this render when array is empty, so it does not pass empty array to children, but is cought in this condition. Only when array is full of objects (due to componentDiDMount) then it is passed as an object
+    if (!this.state.beers.length) {
       return <h2>Loading...</h2>;
-    } else {
-      return (
-        <div className="App">
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-          </Switch>
-          <Header />
-          <Route
-            exact
-            path="/beers"
-            component={ListBeers}
-            // beers={this.state.beers}
-          />
-          <Route
-            exact
-            path="/:id"
-            render={(routeProps) => (
-              <SingleBeer {...routeProps} beers={this.state.beers} />
-            )}
-          />
-          <Route exact path="/random-beer" component={RandomBeer} />
-          <Route exact path="/new-beer" component={NewBeer} />
-        </div>
-      );
     }
+    return (
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <>
+            <Header />
+            <Switch>
+              <Route
+                exact
+                path="/beers"
+                component={ListBeers}
+                // beers={this.state.beers}
+              />
+
+              <Route exact path="/random-beer" component={RandomBeer} />
+              <Route exact path="/new-beer" component={NewBeer} />
+              <Route
+                exact
+                path="/:id"
+                render={(routeProps) => (
+                  <SingleBeer {...routeProps} beers={this.state.beers} />
+                )}
+              />
+            </Switch>
+          </>
+        </Switch>
+      </div>
+    );
   }
 }
 
