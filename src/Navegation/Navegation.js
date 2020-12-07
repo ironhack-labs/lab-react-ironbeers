@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Header from './Header';
 import Beers from './Beers';
@@ -11,10 +11,12 @@ function Navegation(props) {
   return (
     <>
       <Route path={props.match.url} component={Header} />
-      <Route exact path="/beers" component={Beers} />
-      <Route exact path="/beers/:id" component={BeerDetails} />
-      <Route exact path="/random-beer" component={RandomBeer} />
-      <Route exact path="/new-beer" component={NewBeer} />
+      <Switch>
+        <Route exact path="/beers" component={Beers} />
+        <Route exact path="/beers/:id" component={BeerDetails} />
+        <Route exact path="/random-beer" component={RandomBeer} />
+        <Route exact path="/new-beer" component={NewBeer} />
+      </Switch>
     </>
   );
 }
