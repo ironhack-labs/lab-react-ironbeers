@@ -1,6 +1,6 @@
 import React from 'react';
 import './AllBeersPage.css';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../../components/header/Header';
 

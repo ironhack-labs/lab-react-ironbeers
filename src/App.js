@@ -1,13 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import HomePage from './pages/homePage/HomePage';
 import AllBeersPage from './pages/allBeersPage/AllBeersPage';
 import CreateBeerPage from './pages/createBeerPage/CreateBeerPage';
 import RandomBeerPage from './pages/randomBeerPage/RandomBeerPage';
 import SingleBeer from './components/singleBeer/SingleBeer';
-import Header from './components/header/Header';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   render() {

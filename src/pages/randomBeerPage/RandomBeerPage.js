@@ -1,6 +1,5 @@
 import React from 'react';
 import './RandomBeerPage.css';
-import { Route, Switch, Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../../components/header/Header';
 
