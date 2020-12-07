@@ -2,17 +2,15 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import axios from 'axios';
 
-class SingleBeer extends React.Component {
+class RandomBeer extends React.Component {
   state = {
     beer: {},
   };
   componentDidMount() {
     axios
-      .get(
-        `https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.beerId}`
-      )
+      .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
       .then((foundBeer) => {
-        console.log(foundBeer);
+        console.log('random beer: ', foundBeer);
         this.setState({ beer: foundBeer.data });
       })
       .catch((err) => {
@@ -40,4 +38,4 @@ class SingleBeer extends React.Component {
   }
 }
 
-export default SingleBeer;
+export default RandomBeer;

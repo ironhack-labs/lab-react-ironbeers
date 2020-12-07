@@ -8,7 +8,9 @@ class Homepage extends React.Component {
           <h2>All Beers</h2>
         </a>
 
-        <h2>Random Beer</h2>
+        <a href="/random">
+          <h2>Random Beer</h2>
+        </a>
 
         <a href="/new">
           <h2>New Beer</h2>

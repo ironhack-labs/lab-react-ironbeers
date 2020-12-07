@@ -5,6 +5,7 @@ import Homepage from './pages/Homepage';
 import ListBeers from './pages/ListBeers';
 import SingleBeer from './pages/SingleBeer';
 import NewBeer from './pages/NewBeer';
+import RandomBeer from './pages/RandomBeer';
 
 class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
         <Route exact path="/list" component={ListBeers} />
         <Route exact path="/new" component={NewBeer} />
         <Route exact path="/beers/:beerId" component={SingleBeer} />
+        <Route exact path="/random" component={RandomBeer} />
       </div>
     );
   }
