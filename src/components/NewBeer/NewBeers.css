@@ -1,0 +1,4 @@
+.form__newBeer {
+  display: flex;
+  flex-direction: column;
+}
