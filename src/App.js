@@ -36,7 +36,7 @@ function App() {
         <Route exact path="/beers" component={Listbeers} />
         <Route exact path="/randombeer" component={Randombeer} />
         <Route exact path="/newbeer" component={Newbeer} />
-        <Route path="beers/:beerId" component={Dynamicbeers} />
+        <Route path="/beers/:beerId" component={Dynamicbeers} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

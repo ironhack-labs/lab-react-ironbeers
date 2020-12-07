@@ -25,7 +25,7 @@ class Listbeers extends React.Component {
           <section className="homecard">
             <img src={beer.image_url} alt="" />
             <h2 key={index}>
-              <Link to={`/beer/${index + 1}`}> {beer.name} </Link>
+              <Link to={`/beers/${beer.name}`}> {beer.name} </Link>
             </h2>
             <h3>{beer.tagline}</h3>
             <p>{beer.description}</p>
