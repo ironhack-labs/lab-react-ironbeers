@@ -21,7 +21,7 @@ const BeersList = () => {
         axios.get("https://ih-beers-api2.herokuapp.com/beers/search?q={query}")
         .then((searchResults) => {
             searchResults.filter((beer) =>{
-                beer.name.inclludes(searchInput)
+                beer.name.includes(searchInput)
             })
             setBeersList(searchResults)
         })
