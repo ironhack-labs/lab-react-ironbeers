@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.home-div {
+  border: 1px solid gray;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+  padding: 10px;
+}
+.home-images {
+  width: 40vw;
+}
+
+.all-beers-div {
+  display: flex;
+  width: 45vw;
+  margin: 10px auto;
+  border: 1px solid gray;
+  padding: 10px;
+}
