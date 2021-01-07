@@ -16,7 +16,9 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/randombeers" component={RandomBeer} />
         <Route exact path="/listbeers" component={ListBeers} />
+        <Route exact path="/beers/create" component={NewBeer} />
         <Route exact path="/beers/:id" component={SingleBeer} />
+
       </Switch>
     </div>
   );

@@ -16,13 +16,12 @@ export default class RandomBeer extends Component {
     
         axios.get("https://ih-beers-api2.herokuapp.com/beers/random").then((apiResponse) => {
           console.log(apiResponse);
-          setTimeout(() => {
+          
             this.setState({
               beer: apiResponse.data,
             });
-          }, 1000);
-        });
-      }
+          })};
+
       render() {
         if (!this.state.beer) {
           return <div>Loading.....</div>;
