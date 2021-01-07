@@ -41,6 +41,7 @@ export class Beers extends Component {
       <div>
         <HomeButtonHeader />
         <input
+          style={{ width: '90vw', marginTop: '10px' }}
           onChange={this.handleSearch}
           name="search"
           id="search"
@@ -49,16 +50,28 @@ export class Beers extends Component {
         />
         {this.state.beers.map((beer) => {
           return (
-            <div key={beer._id}>
-              <Link to={`/beers/${beer._id}`}>
+            <div>
+              <Link
+                style={{
+                  border: '1px solid lightgray',
+                  margin: '10px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+                key={beer._id}
+                to={`/beers/${beer._id}`}
+              >
                 <img
-                  style={{ width: '100px' }}
+                  style={{ width: '100px', margin: '10px' }}
                   src={beer.image_url}
                   alt={beer.name}
                 />
-                <p>{beer.name}</p>
-                <p>{beer.tagline}</p>
-                <p>{beer.contributed_by}</p>
+                <div>
+                  <p>{beer.name}</p>
+                  <p>{beer.tagline}</p>
+                  <p>{beer.contributed_by}</p>
+                </div>
               </Link>
             </div>
           );
