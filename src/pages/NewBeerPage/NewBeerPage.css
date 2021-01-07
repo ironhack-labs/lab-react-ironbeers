@@ -1,0 +1,19 @@
+.new-beer{
+        margin-top: 5.5rem;
+}
+.new-beer form{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 2rem auto;
+}
+.new-beer form > *{
+        margin-bottom: 1rem;
+}
+.new-beer form label{
+        text-align: left;
+}
+.new-beer form button{
+        width: 5rem;
+        margin: 0 auto;
+}

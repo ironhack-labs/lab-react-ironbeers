@@ -1,0 +1,17 @@
+.beer-item{
+        display: flex;
+        padding: 10%;
+        border-bottom: 1px solid rgb(224, 221, 221);
+        width: 100%;
+}
+.beer-item img{
+        width: 7vw;
+        margin-right: 10%;
+}
+.beer-item > div{
+        text-align: start;
+}
+.beer-item > div h2{
+        opacity: 0.4;
+        padding-top: 1rem;
+}

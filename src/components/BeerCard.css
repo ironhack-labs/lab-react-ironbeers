@@ -1,0 +1,32 @@
+.beer-card {
+        margin-top: 6rem;
+}
+
+.beer-card img {
+        height: 50vh;
+}
+
+.beer-item__content {
+        text-align: start;
+        margin: 5% 10%;
+}
+
+.beer-item__content>div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.beer-item__content>div:first-child>h1:last-child {
+        opacity: 0.3;
+}
+
+.beer-item__content>div h3 {
+        opacity: 0.5;
+        margin: 1.5rem 0;
+}
+
+.beer-item__content>p:last-child {
+        margin-top: 1.5rem;
+        opacity: 0.7;
+}

@@ -1,0 +1,16 @@
+.header{
+        background-color: deepskyblue;
+        height: 4rem;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+}
+.header i{
+        color: white;
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+}

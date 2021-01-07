@@ -1,0 +1,12 @@
+.section-card img{
+        width: 100vw;
+        height: 15vh;
+        object-fit: cover;
+}
+.section-card > div{
+        text-align: start;
+        padding: 0.5vh 2rem 2vh;
+}
+.section-card > div p{
+        opacity: 0.7;
+}
