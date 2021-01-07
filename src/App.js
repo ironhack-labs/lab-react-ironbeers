@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home'
-import Beers from './components/Beers';
-import NewBeer from './components/NewBeer';
-import RandomBeer from './components/RandomBeer';
-import axios from 'axios';
-import OneBeer from './components/OneBeer'
+import Home from './views/Home'
+import Beers from './views/Beers';
+import NewBeer from './views/NewBeer';
+import RandomBeer from './views/RandomBeer';
+import OneBeer from './views/OneBeer'
 
 import { Switch, Route } from "react-router-dom";
 
@@ -15,7 +14,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/beers' component={Beers}/>
-          <Route exact path='/beers' component={NewBeer}/>
+          <Route exact path='/new-beer' component={NewBeer}/>
           <Route exact path='/random-beer' component={RandomBeer}/>
           <Route path="/beers/:id" component={OneBeer} />
         </Switch>
