@@ -34,8 +34,13 @@ export default class OneBeer extends Component {
       <NavMain />
         <h2>Detail of one beer</h2>
         <div>
-          <h2>{this.state.beer.name}</h2>
+          <h2>Name of the mighty beer: {this.state.beer.name}</h2>
           <img src={this.state.beer.image_url} />
+          <h3>Tagline: {this.state.beer.tagline}</h3>
+          <h3>First brewed: {this.state.beer.first_brewed}</h3>
+          <h3>Attenuation level: {this.state.beer.attenuation_level}</h3>
+          <h3>Description: {this.state.beer.description}</h3>
+          <h3>Contributed by the awesome: {this.state.beer.contributed_by}</h3>
         </div>
         {/* <pre>{JSON.stringify(this.props, null, 2)}</pre> */}
       </div>
