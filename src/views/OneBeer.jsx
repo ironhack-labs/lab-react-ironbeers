@@ -28,7 +28,11 @@ export class OneBeer extends Component {
     return (
       <div>
         <HomeButtonHeader />
-        <img src={this.state.beer.image_url} alt={this.state.beer.name} />
+        <img
+          style={{ width: '100px' }}
+          src={this.state.beer.image_url}
+          alt={this.state.beer.name}
+        />
         <h2>{this.state.beer.name}</h2>
         <p>{this.state.beer.tagline}</p>
         <p>{this.state.beer.first_brewed}</p>
