@@ -17,10 +17,10 @@ function App() {
     
       <Switch>
         <Route exact path="/" component={homePage} />
-        <Route  path="/new-beer" component={newbeer} />
-        <Route  path="/beers" component={beers} />
-        <Route  path="/random-beer" component={Randombeer} />
-        <Route  exact path="/beers/:id" component={onebeer} />
+        <Route   path="/new-beer" component={newbeer} />
+        <Route  exact path="/beers" component={beers} />
+        <Route   path="/random-beer" component={Randombeer} />
+        <Route   path="/beers/:id" component={onebeer} />
       </Switch>
     </div>
   );

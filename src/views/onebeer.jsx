@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 
 export default class onebeer extends Component {
@@ -26,14 +27,22 @@ export default class onebeer extends Component {
           }
         return (
             <div>
-                <h1>Hello</h1>
+<div className="home screenl"><NavLink exact to="/" className="link"><i class="fas fa-home" ></i></NavLink></div>
+<div className="randombeer">
                <img src={this.state.beer.image_url} alt=""/>
-               <h1>{this.state.beer.name}</h1> 
-               <h1>{this.state.beer.attenuation_level}</h1>
-               <h2>{this.state.beer.tagline}</h2>
-               <strong>{this.state.beer.first_brewed}</strong>
+               <div className="randomcontent">
+               <div className="flex">
+               <h3>{this.state.beer.name}</h3> 
+               <h3>{this.state.beer.attenuation_level}</h3>
+               </div>
+               <div className="flex">
+               <h5>{this.state.beer.tagline}</h5>
+               <h5>{this.state.beer.first_brewed}</h5>
+               </div>
                <p>{this.state.beer.description}</p>
-               <h3>{this.state.beer.contributed_by}</h3>
+               <h6>{this.state.beer.contributed_by}</h6>
+               </div>
+            </div>
             </div>
         );
     }
