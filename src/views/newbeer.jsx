@@ -41,9 +41,8 @@ handleSubmit = (event) => {
   render() {
     return (
       <div >
-      <h1>New beer</h1>
-      <NavLink exact to="/">Maison logo</NavLink>
-     <form onSubmit={this.handleSubmit}>
+      <div className="home screenl"><NavLink exact to="/" className="link"><i class="fas fa-home" ></i></NavLink></div>
+     <form className="addbeer" onSubmit={this.handleSubmit}>
      <label htmlFor="name">Name</label>
         <input
           onChange={this.handleChange}
@@ -52,6 +51,7 @@ handleSubmit = (event) => {
           name="name"
           type="text"
         />
+        
         <label htmlFor="tagline">Tagline</label>
         <input
           onChange={this.handleChange}
@@ -60,15 +60,18 @@ handleSubmit = (event) => {
           name="tagline"
           type="text"
         />
+        
         <label htmlFor="description">Description</label>
-        <input
+        <textarea
+          cols="40" rows="6"
           onChange={this.handleChange}
           value={this.state.description}
           id="description"
           name="description"
           type="text"
         />
-        <label htmlFor="brewers_tips">brewers_tips</label>
+      
+        <label htmlFor="brewers_tips"> Brewers_tips</label>
         <input
           onChange={this.handleChange}
           value={this.state.brewers_tips}
@@ -76,6 +79,7 @@ handleSubmit = (event) => {
           name="brewers_tips"
           type="text"
         />
+       
         <label htmlFor="attenuation_level">Attenuation_level</label>
         <input
           onChange={this.handleChange}
@@ -84,6 +88,7 @@ handleSubmit = (event) => {
           name="attenuation_level"
           type="number"
         />
+      
         <label htmlFor="contributed_by">Contributed_by</label>
         <input
           onChange={this.handleChange}
@@ -92,7 +97,8 @@ handleSubmit = (event) => {
           name="contributed_by"
           type="text"
         />
-        <button>Submit</button>
+       
+        <button>Add new</button>
 
      </form>
 

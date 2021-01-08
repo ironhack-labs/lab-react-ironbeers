@@ -35,7 +35,7 @@ export default class onebeer extends Component {
                <p>{this.state.beer.description}</p>
                <h3>{this.state.beer.contributed_by}</h3>
             </div>
-        )
+        );
     }
 }
 

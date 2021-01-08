@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -39,4 +42,117 @@
 
 .flex {
   display: flex;
+}
+
+.screen {
+  height: 98vh;
+}
+
+.screen img {
+  height: 20vh;
+  background-size: cover;
+}
+
+.screen h2,
+p {
+  margin: 1vh;
+}
+
+.link {
+  text-decoration: none;
+  color: #282c34;
+}
+
+.home {
+  background-color: dodgerblue;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+i {
+  color: white;
+  font-size: 4vh;
+}
+
+.screenl {
+  width: 100vw;
+}
+
+.beers img {
+  height: 20vh;
+}
+
+.cardimage {
+  height: 25vh;
+  width: 30vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  height: 25vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content p {
+  overflow-wrap: break-word;
+}
+
+.randombeer img {
+  height: 35vh;
+  margin: 4vh 0 0 0;
+}
+
+.randomcontent {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 50vh;
+}
+
+.randomcontent .flex {
+  justify-content: space-between;
+  margin: 0 5vw;
+  height: 7vh;
+}
+
+.randomcontent p {
+  margin: 3%;
+}
+
+.addbeer {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3vh 0;
+}
+
+.addbeer input {
+  margin: 1vh 0 2vh;
+  width: 80vw;
+  border-radius: 5px;
+  height: 3vh;
+}
+
+.addbeer textarea {
+  border-radius: 5px;
+  margin-bottom: 2vh;
+  margin: 1vh 0 2vh;
+}
+
+.addbeer button {
+  background-color: dodgerblue;
+  border: none;
+  padding: 1vh 4vw;
+  border-radius: 5px;
+  color: white;
+  margin-top: 2vh;
 }

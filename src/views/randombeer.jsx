@@ -20,17 +20,21 @@ state = {
   render() {
     return (
       <div >
-      <h1>Random beer</h1>
-      <NavLink exact to="/">Maison logo</NavLink>
-      <div>
-                <h1>Hello</h1>
+      <div className="home screenl"><NavLink exact to="/" className="link"><i class="fas fa-home" ></i></NavLink></div>
+      <div className="randombeer">
                <img src={this.state.random.image_url} alt=""/>
-               <h1>{this.state.random.name}</h1> 
-               <h1>{this.state.random.attenuation_level}</h1>
-               <h2>{this.state.random.tagline}</h2>
-               <strong>{this.state.random.first_brewed}</strong>
+               <div className="randomcontent">
+               <div className="flex">
+               <h3>{this.state.random.name}</h3> 
+               <h3>{this.state.random.attenuation_level}</h3>
+               </div>
+               <div className="flex">
+               <h5>{this.state.random.tagline}</h5>
+               <h5>{this.state.random.first_brewed}</h5>
+               </div>
                <p>{this.state.random.description}</p>
-               <h3>{this.state.random.contributed_by}</h3>
+               <h6>{this.state.random.contributed_by}</h6>
+               </div>
             </div>
 
     </div>

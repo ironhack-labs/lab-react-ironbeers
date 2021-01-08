@@ -20,21 +20,25 @@ class Beers extends React.Component {
 render () {
     return (
         <div >
-          <h1>All beers</h1>
-          <NavLink exact to="/">Maison logo</NavLink>
+          <div className="home screenl"><NavLink exact to="/" className="link"><i class="fas fa-home" ></i></NavLink></div>
+          
           {this.state.allBeers.map(beer => {
             return (
-
-                <div className="card" key={beer._id}>
-                    <Link className="flex" to={`/beers/${beer._id}` }>
-                <img src={beer.image_url} alt=""/>
+<div>   
+                <div className="card flex beers screenl" key={beer._id}>
+                    <Link className="flex link" to={`/beers/${beer._id}` }>
+                <div className="cardimage flex"><img src={beer.image_url} alt={beer.name}/></div>
                 <div className="content">
-                    <h1>{beer.name}</h1>
-                    <h2>{beer.tagline}</h2>
-                    <p>{beer.contributed_by}</p>   
+                    <strong>{beer.name}</strong>
+                    <p>{beer.tagline}</p>
+                    <small>{beer.contributed_by}</small>   
                 </div>
                 </Link>
-            </div>
+                
+                </div>
+                <hr/>
+                </div>
+                
             )
           })}
          

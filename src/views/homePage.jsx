@@ -5,23 +5,22 @@ import { NavLink } from "react-router-dom";
 const Home = (props) => {
     console.log(props)
   return (
-    <div >
-      <h1>Home page</h1>
+    <div className="screen" >
       <nav style={{display:"flex", flexDirection: "column"}}>
-      <NavLink exact to="/beers">
-        <img src="https://unsplash.com/photos/nCxCBnK6UKQ"></img>
-        <h1>All Beers</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      <NavLink exact to="/beers" className="link">
+        <img src="./images/beers.png"></img>
+        <h2>All Beers</h2>
+        <p>Discover all our beers.</p>
       </NavLink>
-      <NavLink exact to="/random-beer">
-      <img src="https://unsplash.com/photos/nCxCBnK6UKQ"></img>
-        <h1>Random Beers</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      <NavLink exact to="/random-beer" className="link">
+      <img src="./images/random-beer.png"></img>
+        <h2>Random Beers</h2>
+        <p>Pick a random beer.</p>
       </NavLink>
-      <NavLink exact to="/new-beer">
-      <img src="https://unsplash.com/photos/nCxCBnK6UKQ"></img>
-        <h1>New Beers</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      <NavLink exact to="/new-beer" className="link">
+      <img src="./images/new-beer.png"></img>
+        <h2>New Beers</h2>
+        <p>Create your own beer.</p>
       </NavLink>
     </nav>
     </div>
