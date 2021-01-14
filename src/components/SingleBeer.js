@@ -23,6 +23,8 @@ export class SingleBeer extends React.Component {
             });
     }
 
+    // first render action happens with value null for the beer property (initial state value)
+    // you will need if else statement or setTimeout inside setState (inside promise)
     render() {
         return (
             <div>
@@ -33,7 +35,7 @@ export class SingleBeer extends React.Component {
                 </div>)}
 
                 {/* first data has to be there (loaded) */}
-                {/* if data is not there we will try to show for example this.state.beer.null instead of this.state.beer.image_url and example this.state.beer.null will always cause errors */}
+                {/* if data is not there you would try to show for example this.state.beer.null instead of this.state.beer.image_url and example this.state.beer.null will always cause errors */}
                 {this.state.beer && (
                     <div>
                         <img src={process.env.PUBLIC_URL + this.state.beer.image_url} alt='featured beer' />

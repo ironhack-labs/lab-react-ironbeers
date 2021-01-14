@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './NavBar';
+// import Navbar from './NavBar';
 
 const Home = () => {
 
     return (
         <div>
-            <Navbar />
             <div>
                 <Link to='/beers'><img src={process.env.PUBLIC_URL + 'images/beers.png'} alt='collection of beers' className='img-fluid' /></Link>
                 <h2>All Beers</h2>
