@@ -22,7 +22,11 @@ export class New_Beer extends React.Component {
 
     handleFormSubmit = (event) => {
         event.preventDefault()
-        axios.post("https://ih-beers-api2.herokuapp.com/beers/new", this.state)
+       
+        axios.post('https://ih-beers-api2.herokuapp.com/beers/new', this.state) 
+        .then((response) => {
+            console.log(response)
+        })
     }
 
     render() {
