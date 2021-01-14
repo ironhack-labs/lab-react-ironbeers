@@ -21,6 +21,10 @@ class AddBeer extends Component {
         this.setState({ [name]: value });
     }
 
+
+    // When you have built the form, you should do a POST request to https://ih-beers-api2.herokuapp.com/beers/new
+
+
     handleFormSubmit = (event) => {
         event.preventDefault();
 
