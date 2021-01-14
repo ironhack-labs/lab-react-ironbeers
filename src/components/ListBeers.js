@@ -25,10 +25,15 @@ class ListBeers extends React.Component {
         return (
             <div>
                 <Navbar />
+                {/* Bootstrap spinner */}
+                {this.state.loading && (<div className="spinner-border text-light" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>)}
+
                 {this.state.beers.map((beer, key) => {
                     return (
-                        <Link to={'/beers' + beer._id} key={beer._id}>
-                            <img src={process.env.PUBLIC_URL + beer.image_url} alt='featured beer' />
+                        <Link to={'/beers/' + beer._id} key={beer._id}>
+                            <img src={process.env.PUBLIC_URL + beer.image_url} alt='featured beer' className='small-beer-picture' />
                             <div>
                                 <h3>{beer.name}</h3>
                                 <p>{beer.tagline}</p>

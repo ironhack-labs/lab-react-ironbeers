@@ -27,3 +27,7 @@ p {
   padding: 15px;
   text-align: left;
 }
+
+.small-beer-picture {
+  height: 200px;
+}
