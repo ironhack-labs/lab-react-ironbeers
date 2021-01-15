@@ -34,7 +34,7 @@ class RandomBeer extends React.Component {
                 {/* if data is not there you would try to show for example this.state.beer.null instead of this.state.beer.image_url and example this.state.beer.null will always cause errors */}
                 {this.state.beer && (
                     <div>
-                        <img src={process.env.PUBLIC_URL + this.state.beer.image_url} alt='featured beer' />
+                        <img src={this.state.beer.image_url} alt='featured beer' />
                         <h2>{this.state.beer.name}</h2>
                         <p>{this.state.beer.tagline}</p>
                         <p>{this.state.beer.first_brewed}</p>

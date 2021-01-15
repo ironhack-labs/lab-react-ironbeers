@@ -7,7 +7,9 @@ class ListBeers extends React.Component {
 
     state = {
         beers: [],
-        loading: true
+        loading: true,
+        searchTerm: "",
+        timeoutID: 0
     };
 
     componentDidMount() {
@@ -21,6 +23,27 @@ class ListBeers extends React.Component {
             });
     }
 
+    editSearchTerm = (event) => {
+        const newSearchTerm = event.currentTarget.value;
+        this.setState({ searchTerm: newSearchTerm, loading: true }, () => {
+
+            clearTimeout(this.state.timeoutID);
+
+            const newTimeoutID = window.setTimeout(() => axios
+                .get('https://ih-beers-api2.herokuapp.com/beers/search', {
+                    params: { q: newSearchTerm }
+                })
+                .then(resp => {
+                    this.setState({
+                        beers: resp.data,
+                        loading: false
+                    });
+                }), 300);
+
+            this.setState({ timeoutID: newTimeoutID });
+        });
+    }
+
     render() {
         return (
             <div>
@@ -30,10 +53,13 @@ class ListBeers extends React.Component {
                     <span className="sr-only">Loading...</span>
                 </div>)}
 
+                <label htmlFor="search-bar">Search beers</label>
+                <input type="text" id="search-bar" value={this.state.searchTerm} onChange={this.editSearchTerm} className="input"></input>
+
                 {this.state.beers.map((beer, key) => {
                     return (
                         <Link to={'/beers/' + beer._id} key={beer._id}>
-                            <img src={process.env.PUBLIC_URL + beer.image_url} alt='featured beer' className='small-beer-picture' />
+                            <img src={beer.image_url} alt='featured beer' className='small-beer-picture' />
                             <div>
                                 <h3>{beer.name}</h3>
                                 <p>{beer.tagline}</p>

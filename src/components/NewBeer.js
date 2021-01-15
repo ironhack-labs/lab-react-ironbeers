@@ -23,8 +23,7 @@ class NewBeer extends React.Component {
     submitHandler = (event) => {
 
         event.preventDefault();
-
-        const newBeer = { ...this.state};
+        // const newBeer = { ...this.state};
 
         axios.post('https://ih-beers-api2.herokuapp.com/beers/new', this.state)
         .then(resp => {

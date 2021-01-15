@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div>
             <nav>
-                <Link to='/'><img src={process.env.PUBLIC_URL + 'images/house.png'} alt="small house icon" className='house-icon' /></Link>
+                <Link to='/'><img src={'/images/house.png'} alt="small house icon" className='house-icon' /></Link>
             </nav>
         </div>
     );
