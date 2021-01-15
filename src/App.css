@@ -1,33 +1,45 @@
 .App {
-  text-align: center;
-}
-
-nav {
-  background-color: lightblue;
-}
-
-.house-icon {
-  height: 40px;
-  margin: 10px auto;
-}
-
-/* .main-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
   max-width: 750px;
   box-sizing: border-box;
-  padding: 0 70px;
   flex-grow: 1;
-} */
+}
 
-p {
-  padding: 15px;
-  text-align: left;
+.App > div {
+  width: 100%;
+}
+
+nav {
+  background-color: lightblue;
+  text-align: center;
+}
+
+.house-icon {
+  height: 40px;
+  margin: 15px auto;
+}
+
+.home-small-container {
+  padding: 20px 20px 40px 20px;
+  border: 1px solid lightgrey;
 }
 
 .small-beer-picture {
-  height: 200px;
+  height: 180px;
+}
+
+.input-field {
+  margin: 20px auto;
+}
+
+.beer-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 60px 20px;
 }

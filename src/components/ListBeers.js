@@ -53,13 +53,14 @@ class ListBeers extends React.Component {
                     <span className="sr-only">Loading...</span>
                 </div>)}
 
-                <label htmlFor="search-bar">Search beers</label>
-                <input type="text" id="search-bar" value={this.state.searchTerm} onChange={this.editSearchTerm} className="input"></input>
+                <input type='text' value={this.state.searchTerm} onChange={this.editSearchTerm} className='form-control input-field' placeholder='Search beers...'></input>
 
                 {this.state.beers.map((beer, key) => {
                     return (
-                        <Link to={'/beers/' + beer._id} key={beer._id}>
-                            <img src={beer.image_url} alt='featured beer' className='small-beer-picture' />
+                        <Link to={'/beers/' + beer._id} key={beer._id} className='beer-box'>
+                            <div>
+                                <img src={beer.image_url} alt='featured beer' className='small-beer-picture' />
+                            </div>
                             <div>
                                 <h3>{beer.name}</h3>
                                 <p>{beer.tagline}</p>
