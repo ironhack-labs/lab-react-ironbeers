@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 
 import Home from './components/Home';
+import Header from './components/Header';
+import AllBeers from './components/AllBeers';
+import SingleBeer from './components/SingleBeer';
 
 function App() {
   return (
@@ -16,13 +19,17 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/all">
-            all
+          <Route exact path="/beers">
+            <Header />
+            <AllBeers />
           </Route>
-          <Route path="/random">
+          <Route exact path="/beers/:beerId" component={SingleBeer} />
+          <Route exact path="/random-beer">
+            <Header />
             random
           </Route>
-          <Route path="/new">
+          <Route exact path="/new-beer">
+            <Header />
             new
           </Route>
         </Switch>
