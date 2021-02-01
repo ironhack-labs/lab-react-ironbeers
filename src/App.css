@@ -37,6 +37,14 @@
   }
 }
 
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+}
 
 .homePage {
   display: flex;
@@ -47,7 +55,6 @@
 .beerSection {
   width: 75%;
   align-content: flex-start;
-  border: 1px solid grey;  
 }
 
 .beerSection a {
@@ -66,4 +73,16 @@
 .navBar img {
   width: 50px;
   margin: 10px;
+}
+.beerItem { 
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  border-bottom: 1px solid grey;
+  text-decoration: none;
+  color: black;
+}
+
+.beerItem img { 
+  width: 100px;
 }
