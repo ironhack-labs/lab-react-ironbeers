@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beerSection {
+  width: 100%;
+  align-content: flex-start;
+  border: 1px solid grey;  
+}
+
+.beerSection a {
+  text-decoration: none;
+  color: black;
+}
+
+.beerSection img {
+  width: 100%;
+}
+
