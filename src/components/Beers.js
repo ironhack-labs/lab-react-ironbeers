@@ -15,21 +15,31 @@ class Beers extends React.Component {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
         
         .then(response => {
-            console.log(response)
             this.setState({beers: response.data})
         })
     }
-
+    
     render(){
+        const beerDetails = [...this.state.beers]
+        // const beerTo = {
+        //     pathname: `/beers/${beer._id}`,
+        //     beers: beerDetails
+        // }
+        console.log(beerDetails)
     return (
         <div>
             <Navbar />
             <div className='container'>
             <h1>All Beers</h1>
+            
             {this.state.beers.map((beer, index) => {
                 return(
-                    <div key={index}>
-                        <Link className='beerItem' to={`/beers/${beer._id}`} >
+                    <div key={index} >
+                        <Link 
+                            to={`/beers/${beer._id}`}
+                            className='beerItem'
+                            
+                                                >
                             <img src={beer.image_url} alt={beer.name}/>
                             <div className='beerItemRight'>
                                 <h2>{beer.name}</h2>

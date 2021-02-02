@@ -86,3 +86,14 @@
 .beerItem img { 
   width: 100px;
 }
+
+.beerDetail {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.beerDetailImg img {
+  margin-top: 50px;
+  width: 75%;
+}
