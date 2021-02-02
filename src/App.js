@@ -10,6 +10,7 @@ import Home from './components/Home';
 import Header from './components/Header';
 import AllBeers from './components/AllBeers';
 import SingleBeer from './components/SingleBeer';
+import FormNewBeer from './components/FormNewBeer';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           </Route>
           <Route exact path="/new-beer">
             <Header />
-            new
+            <FormNewBeer />
           </Route>
         </Switch>
       </div>
