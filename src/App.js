@@ -19,7 +19,7 @@ function App(props) {
         <Switch>
         <Route exact path="/" component={HomeMenu}/>
           <Route path="/beers" component={AllBeers}/>
-          <Route path="/:id" component={BeerDetails}/>
+          {/* <Route path="/:id" component={BeerDetails}/> */}
         </Switch>
       </div>
     </div>
