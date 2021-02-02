@@ -11,12 +11,9 @@ export default class AllBeers extends Component {
     isLoaded: false
   }
 
-  searchInputChangeHandler = (e) => {
-    const searchInput = e.target.value;
-    this.setState({
-      searchInput
-    });
-    fetch(`https://ih-beers-api2.herokuapp.com/beers/search?q=${searchInput}`)
+  fetchBeers = (searchInput) => {
+    const url = searchInput? `https://ih-beers-api2.herokuapp.com/beers/search?q=${searchInput}` : "https://ih-beers-api2.herokuapp.com/beers";
+    fetch(url)
       .then(res => res.json())
       .then(beersRaw => {
         return beersRaw.map(beerRaw => {
@@ -36,27 +33,17 @@ export default class AllBeers extends Component {
       })
   }
 
+  searchInputChangeHandler = (e) => {
+    const searchInput = e.target.value;
+    this.setState({
+      searchInput
+    });
+    
+    this.fetchBeers(searchInput);
+  }
+
   componentDidMount() {
-    fetch("https://ih-beers-api2.herokuapp.com/beers")
-      .then(res => res.json())
-      .then(beersRaw => {
-        return beersRaw.map(beerRaw => {
-          const {_id: id, image_url: image, name, tagline, contributed_by: contributor} = beerRaw;
-          return {id, image, name, tagline, contributor};
-        })
-      })
-      .then(beers => {
-        this.setState({
-        beers,
-        isLoaded: true
-        })
-      },
-      (error) => {
-        this.setState({
-          isLoaded: true,
-          error
-        })
-      })
+    this.fetchBeers();
   }
 
   render() {
