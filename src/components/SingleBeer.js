@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import Header from './Header';
 
 export default class SingleBeer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       beer: null
-    }
+    };
   }
 
   componentDidMount() {
-    fetch(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.beerId}`)
+    const endPoint = this.props.isRandom ? "random" : this.props.match.params.beerId;
+    fetch(`https://ih-beers-api2.herokuapp.com/beers/${endPoint}`)
       .then(res => res.json())
       .then(beer => {
         this.setState({
@@ -27,17 +29,39 @@ export default class SingleBeer extends Component {
   }
 
   render() {
-    const beer = this.state.beer;
-    if(!beer) {
+    if(!this.state.beer) {
       return (
         <p>Sorry no data</p>
       )
     }
 
+    const {
+      image,
+      name,
+      tagline,
+      firstBrew,
+      attenuation,
+      description,
+      contributor,
+    } = this.state.beer;
+
     return (
-      <div>
-        <img src={beer.image} />
-      </div>
+      <>
+        <Header />
+        <div>
+          <img src={image} alt={name} />
+          <div>
+            <h2>{name}</h2>
+            <span>{attenuation}</span>
+          </div>
+          <div>
+            <p>{tagline}</p>
+            <span>{firstBrew}</span>
+          </div>
+          <p>{description}</p>
+          <span>{contributor}</span>
+        </div>
+      </>
     )
   }
 }

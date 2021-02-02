@@ -25,8 +25,7 @@ function App() {
           </Route>
           <Route exact path="/beers/:beerId" component={SingleBeer} />
           <Route exact path="/random-beer">
-            <Header />
-            random
+            <SingleBeer isRandom={true} />
           </Route>
           <Route exact path="/new-beer">
             <Header />
