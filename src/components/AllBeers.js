@@ -5,7 +5,35 @@ import {
 
 export default class AllBeers extends Component {
   state = {
-    beers: []
+    beers: [],
+    searchInput: "",
+    error: null,
+    isLoaded: false
+  }
+
+  searchInputChangeHandler = (e) => {
+    const searchInput = e.target.value;
+    this.setState({
+      searchInput
+    });
+    fetch(`https://ih-beers-api2.herokuapp.com/beers/search?q=${searchInput}`)
+      .then(res => res.json())
+      .then(beersRaw => {
+        return beersRaw.map(beerRaw => {
+          const {_id: id, image_url: image, name, tagline, contributed_by: contributor} = beerRaw;
+          return {id, image, name, tagline, contributor};
+        })
+      })
+      .then(beers => {
+        this.setState({
+        beers,
+        })
+      },
+      (error) => {
+        this.setState({
+          error
+        })
+      })
   }
 
   componentDidMount() {
@@ -17,9 +45,18 @@ export default class AllBeers extends Component {
           return {id, image, name, tagline, contributor};
         })
       })
-      .then(beers => this.setState({
-        beers
-      }))
+      .then(beers => {
+        this.setState({
+        beers,
+        isLoaded: true
+        })
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error
+        })
+      })
   }
 
   render() {
@@ -33,9 +70,14 @@ export default class AllBeers extends Component {
 
     return (
       <>
+        <input onChange={this.searchInputChangeHandler} 
+          type="search" 
+          name="searchInput"
+          value={this.state.searchInput}
+        />
         <div className="container">
           {this.state.beers.map(beer => {
-            return <div key={beer.name}>
+            return <div key={beer.id}>
               <img src={beer.image} alt={beer.name} />
               <div>
                 <Link to={`/beers/${beer.id}`}>

@@ -5,13 +5,16 @@ class FormNewBeer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      tagline: "",
-      description: "",
-      first_brewed: "",
-      brewers_tips: "",
-      attenuation_level: 0,
-      contributed_by: "",
+      beer: {
+        name: "",
+        tagline: "",
+        description: "",
+        first_brewed: "",
+        brewers_tips: "",
+        attenuation_level: 0,
+        contributed_by: ""
+      },
+      error: null     
     };
   }  
 
@@ -20,7 +23,9 @@ class FormNewBeer extends Component {
     const value = e.target.value;
     
     this.setState({
-      [name]: value
+     beer: {
+       [name]: value
+     }
     });
   }
 
@@ -29,13 +34,18 @@ class FormNewBeer extends Component {
     fetch("https://ih-beers-api2.herokuapp.com/beers/new", {
       headers: { "Content-Type": "application/json; charset=utf-8" },
       method: 'POST',
-      body: JSON.stringify(this.state)
+      body: JSON.stringify(this.state.beer)
     })
       .then(res => res.json())
       .then(() => {
         this.props.history.push("/beers")
-      })
-      .catch(err => console.log(err));
+      },
+      (error) => {
+        this.setState({
+          error
+        });
+      }
+    )
   }
 
   render() {
