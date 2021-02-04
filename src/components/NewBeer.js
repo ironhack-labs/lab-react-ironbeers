@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-
+import axios from 'axios'
 
 class NewBeer extends React.Component {
 
@@ -23,8 +23,25 @@ class NewBeer extends React.Component {
 
     handleFormSubmit = (e) => {
         e.preventDefault()
+        const propertyName = e.target.name
 
-        console.log(e)
+        axios.post('https://ih-beers-api2.herokuapp.com/beers/new', {
+            name: this.state.name,
+            tagline: this.state.tagline,
+            description: this.state.description,
+            first_brewed: this.state.first_brewed,
+            brewer_tips: this.state.brewer_tips,
+            attenuation_level: this.state.attenuation_level,
+            contributed_by: this.state.contributed_by
+          })
+          .then( response => {
+            console.log(response);
+          })
+          .catch( error => {
+            console.log(error);
+          });
+
+        // console.log(e)
     }
 
     render(){
@@ -41,7 +58,7 @@ class NewBeer extends React.Component {
                 <input type='text' name='tagline' value={this.state.tagline} onChange={this.handleChange}/>
 
                 <label>Description</label>
-                <input type='text' name='description' value={this.state.description} onChange={this.handleChange}/>
+                <textarea type='text' name="description" rows="10" cols="30" value={this.state.description} onChange={this.handleChange} />
 
                 <label>First Brewed</label>
                 <input type='text' name='first_brewed' value={this.state.first_brewed} onChange={this.handleChange}/>
