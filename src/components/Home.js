@@ -7,6 +7,7 @@ import newBeerImg from './img/Newbeer.png'
 function Home() {
   return (
     <div className='homePage'>
+    <iframe width="110" height="200" src="https://www.myinstants.com/instant/alright-alright-alright-56826/embed/" frameborder="0" scrolling="no"></iframe>
       <h1>IronBeers</h1>
       <div className='beerSection'>
         <Link to="/beers">

@@ -5,34 +5,36 @@ import {Link} from 'react-router-dom'
 
 // import beerList from 'https://ih-beers-api2.herokuapp.com/beers'
 
-class Beers extends React.Component {
+function Beers (props) {
+    console.log(`BeerList: ${props.beerList}`)
+    console.log(props)
 
-    state = {
-        beers: []
-    }
+    // state = {
+    //     beers: []
+    // }
 
-    componentDidMount() {
-        axios.get('https://ih-beers-api2.herokuapp.com/beers')
+    // componentDidMount() {
+    //     axios.get('https://ih-beers-api2.herokuapp.com/beers')
         
-        .then(response => {
-            this.setState({beers: response.data})
-        })
-    }
+    //     .then(response => {
+    //         this.setState({beers: response.data})
+    //     })
+    // }
     
-    render(){
-        const beerDetails = [...this.state.beers]
-        // const beerTo = {
-        //     pathname: `/beers/${beer._id}`,
-        //     beers: beerDetails
-        // }
-        console.log(beerDetails)
+    // render(){
+    //     const beerDetails = [...this.state.beers]
+    //     // const beerTo = {
+    //     //     pathname: `/beers/${beer._id}`,
+    //     //     beers: beerDetails
+    //     // }
+    //     console.log(beerDetails)
     return (
         <div>
             <Navbar />
             <div className='container'>
             <h1>All Beers</h1>
             
-            {this.state.beers.map((beer, index) => {
+            {props.beerList.map((beer, index) => {
                 return(
                     <div key={index} >
                         <Link 
@@ -53,7 +55,7 @@ class Beers extends React.Component {
             </div>
         </div>
     )
-    }
 }
+
 
 export default Beers
