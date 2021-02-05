@@ -1,0 +1,9 @@
+.Beer {
+    border: 1px solid black;
+    display: flex;
+}
+
+.Beer > img {
+    width: 10%;
+    padding: 10px;
+}

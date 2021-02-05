@@ -1,0 +1,8 @@
+.BeerDetails {
+    border: 1px solid black;
+}
+
+.BeerDetails > img {
+    width: 10%;
+    padding: 10px;
+}
