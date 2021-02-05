@@ -1,0 +1,10 @@
+.card {
+    width: 50%;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+.homepage {
+    display: flex;
+    margin-top: 50px;
+}
