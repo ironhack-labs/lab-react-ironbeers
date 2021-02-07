@@ -1,26 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import {Route, Switch, withRouter} from 'react-router-dom';
+import axios from 'axios';
+import Header from './components/Header';
+import HomeMenu from './components/HomeMenu';
+import AllBeers from './components/AllBeers';
+import BeerDetails from './components/BeerDetails';
+import RandomBeer from './components/RandomBeer';
+import NewBeer from './components/NewBeer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			error: null,
+			isLoaded: false,
+			allBeers: []
+		};
+	}
+
+	componentDidMount() {
+		axios
+			.get('https://ih-beers-api2.herokuapp.com/beers')
+			.then(beers => {
+				this.setState({
+					isLoaded: true,
+					allBeers: beers.data
+				});
+			}, error => {
+				this.setState({
+					isLoaded: false,
+					error
+				});
+			});
+	}
+
+	render() {
+		return (
+			<div className="App">
+				<div className="container">
+					{this.props.location.pathname === '/' ? null :
+						<Header/>}
+
+					<Switch>
+						<Route exact path="/">
+							<HomeMenu/>
+						</Route>
+						<Route exact path="/beers" render={props => {
+							return <AllBeers {...props} beerList={this.state.allBeers}/>;
+						}}/>
+						<Route exact path="/:id" render={props => {
+							return <BeerDetails {...props} beerList={this.state.allBeers}/>;
+						}}/>
+						<Route path="/random-beer" component={RandomBeer}/>
+						<Route path="/new-beer" component={NewBeer}/>
+					</Switch>
+				</div>
+			</div>
+		);
+	}
 }
 
-export default App;
+export default withRouter(App);
