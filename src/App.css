@@ -8,6 +8,29 @@ a {
 	color: inherit;
 }
 
+form label {
+	margin: 20px 0 0 0;
+
+}
+
+#button, #contributed_by, #attenuation_level, #brewers_tips, #first_brewed, #tagline, #name {
+	border-radius: 100px;
+}
+
+.button {
+	text-align: center;
+}
+
+#button {
+	margin: 20px 0 0 0;
+	width: 300px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#description {
+	border-radius: 25px;
+}
 
 .menu-item {
 	display: block;
@@ -33,3 +56,4 @@ a {
 .img-beer {
 	height: 200px;
 }
+

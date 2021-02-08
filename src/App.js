@@ -6,8 +6,8 @@ import Header from './components/Header';
 import HomeMenu from './components/HomeMenu';
 import AllBeers from './components/AllBeers';
 import BeerDetails from './components/BeerDetails';
-import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
+import RandomBeer from './components/RandomBeer';
 
 
 class App extends Component {
@@ -47,14 +47,24 @@ class App extends Component {
 						<Route exact path="/">
 							<HomeMenu/>
 						</Route>
+
 						<Route exact path="/beers" render={props => {
 							return <AllBeers {...props} beerList={this.state.allBeers}/>;
 						}}/>
+
+						<Route exact path="/random-beer">
+							<RandomBeer/>
+						</Route>
+
+						<Route exact path="/new-beer">
+							<NewBeer/>
+						</Route>
+
 						<Route exact path="/:id" render={props => {
 							return <BeerDetails {...props} beerList={this.state.allBeers}/>;
 						}}/>
-						<Route path="/random-beer" component={RandomBeer}/>
-						<Route path="/new-beer" component={NewBeer}/>
+
+
 					</Switch>
 				</div>
 			</div>
