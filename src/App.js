@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import { withRouter, Switch, Route } from 'react-router-dom';
+import HomeMenu from './components/HomeMenu';
+import Header from './components/Header'
+import BeerList from './components/BeerList'
+import BeerCard from './components/BeerRandom'
 import './App.css';
 
-function App() {
+
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+
+      {
+        props.location.pathname === '/' ?
+        null : <Header />
+      }
+
+      <Switch>
+        <Route exact path='/'><HomeMenu /></Route>
+        <Route path='/beers'><BeerList /></Route>
+        <Route path='/:id'><BeerCard /></Route>
+      </Switch>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);
