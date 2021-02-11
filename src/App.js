@@ -5,7 +5,7 @@ import Beers from './components/Beers';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
 import Header from './components/Header';
-import { BrowserRouter as Router, Link, Switch, Route, withRouter } from 'react-router-dom';
+import { BrowserRouter as Link, Switch, Route, withRouter } from 'react-router-dom';
 
 function App(props) {
   return (

@@ -1,0 +1,29 @@
+img {
+    height: 200px;
+}
+
+.beerItem {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    padding: 20px 5px;
+    text-decoration: none;
+}
+
+.beerItemImg {
+    width: 100px;
+    margin-right: 50px;
+}
+
+.beerItemText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.beerItemText p, .beerItemText h6 {
+    color: black
+}
