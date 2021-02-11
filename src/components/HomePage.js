@@ -20,7 +20,7 @@ function HomePage() {
         </p>
       </div>
       <div>
-        <Link>
+        <Link to="/beers/random-beer">
           <img src="../assets/random-beers.png" alt="Many beers together" />
           <h2>Random Beer</h2>
         </Link>

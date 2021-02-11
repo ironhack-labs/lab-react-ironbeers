@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import HomePage from './HomePage';
 import BeersList from './BeersList';
 import BeerPage from './BeerPage';
+import RandomBeer from './RandomBeer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/beers/random-beer" component={RandomBeer} />
         <Route exact path="/beers" component={BeersList} />
         <Route exact path="/beers/:id" component={BeerPage} />
       </Switch>
