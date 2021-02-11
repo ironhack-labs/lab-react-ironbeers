@@ -4,15 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from './Navbar';
 import HomePage from './HomePage';
-import BeersList from './BeersList'
+import BeersList from './BeersList';
+import BeerPage from './BeerPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route exact path="/beers" component={BeersList} />
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/beers" component={BeersList} />
+        <Route exact path="/beers/:id" component={BeerPage} />
       </Switch>
     </BrowserRouter>
   );

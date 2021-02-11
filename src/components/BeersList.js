@@ -25,9 +25,14 @@ class BeersList extends Component {
         {this.state.beers.map((beer) => {
           return (
             <div key={beer._id}>
-            <Link to={`/beers/${beer._id}`}>
-              <img src={beer.image_url} alt="Beer"/>
-              <strong>{beer.name}</strong>
+              <Link to={`/beers/${beer._id}`}>
+                <img
+                  src={beer.image_url}
+                  alt="Beer"
+                  width="auto"
+                  height="300px"
+                />
+                <strong>{beer.name}</strong>
               </Link>
               <p>{beer.tagline}</p>
               <p>Created by: {beer.contributed_by}</p>
