@@ -1,12 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-dark bg-primary">
-      <NavLink to="/" className="nav-item nav-link" activeClassName="active">
-        <i className="fas fa-home"></i>
-      </NavLink>
+    <nav className="navbar navbar-dark bg-primary d-flex justify-content-center">
+      <Link to="/">
+        <button className="btn btn-primary">
+          <i className="fas fa-home"></i>
+        </button>
+      </Link>
     </nav>
   );
 }
