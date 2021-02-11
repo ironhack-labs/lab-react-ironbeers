@@ -5,8 +5,8 @@ function HomePage() {
   return (
     <div>
       <div>
-        <Link>
-          <img src="./assets/beers.png" />
+        <Link to="/beers">
+          <img src="./assets/beers.png" alt="All beers together" />
           <h2>All Beers</h2>
         </Link>
         <p>
@@ -21,7 +21,7 @@ function HomePage() {
       </div>
       <div>
         <Link>
-          <img src="../assets/random-beers.png" />
+          <img src="../assets/random-beers.png" alt="Many beers together" />
           <h2>Random Beer</h2>
         </Link>
         <p>
@@ -36,7 +36,7 @@ function HomePage() {
       </div>
       <div>
         <Link>
-          <img src="../assets/new-beers.png" />
+          <img src="../assets/new-beers.png" alt="Altogether a lot of beers" />
           <h2>New Beer</h2>
         </Link>
         <p>
