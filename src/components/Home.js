@@ -14,7 +14,9 @@ function Home() {
                     <Link to='/beers'>
                         <h5 class="card-title">Beers</h5>
                     </Link>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae diam in
+					tellus convallis mattis. Aenean tristique, libero quis blandit viverra, sem
+					tortor volutpat leo, nec suscipit purus magna nec metus.</p>
                 </div>
             </div>
 
@@ -24,7 +26,9 @@ function Home() {
                     <Link to='/random-beer'>
                         <h5 class="card-title">Random Beer</h5>
                     </Link>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae diam in
+					tellus convallis mattis. Aenean tristique, libero quis blandit viverra, sem
+					tortor volutpat leo, nec suscipit purus magna nec metus.</p>
                 </div>
             </div>
 
@@ -34,7 +38,9 @@ function Home() {
                     <Link to='/new-beer'>
                         <h5 class="card-title">New Beer</h5>
                     </Link>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae diam in
+					tellus convallis mattis. Aenean tristique, libero quis blandit viverra, sem
+					tortor volutpat leo, nec suscipit purus magna nec metus.</p>
                 </div>
             </div>
 
