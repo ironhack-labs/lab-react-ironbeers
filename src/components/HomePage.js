@@ -35,7 +35,7 @@ function HomePage() {
         </p>
       </div>
       <div>
-        <Link>
+        <Link to="/beers/new-beer">
           <img src="../assets/new-beers.png" alt="Altogether a lot of beers" />
           <h2>New Beer</h2>
         </Link>
