@@ -21,10 +21,10 @@ class BeersList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container d-flex flex-column justify-content-center">
         {this.state.beers.map((beer) => {
           return (
-            <div key={beer._id}>
+            <div className="d-flex m-2" key={beer._id}>
               <Link to={`/beers/${beer._id}`}>
                 <img
                   src={beer.image_url}
@@ -32,10 +32,23 @@ class BeersList extends Component {
                   width="auto"
                   height="300px"
                 />
-                <strong>{beer.name}</strong>
               </Link>
-              <p>{beer.tagline}</p>
-              <p>Created by: {beer.contributed_by}</p>
+              <div className="d-flex flex-column container">
+                <Link to={`/beers/${beer._id}`}>
+                  <strong>
+                    <p
+                      style={{ fontSize: '40px' }}
+                      className="fs-1 fw-bold mt-5"
+                    >
+                      {beer.name}
+                    </p>
+                  </strong>
+                </Link>
+                <p>{beer.tagline}</p>
+                <small>
+                  <p>Created by: {beer.contributed_by}</p>
+                </small>
+              </div>
             </div>
           );
         })}

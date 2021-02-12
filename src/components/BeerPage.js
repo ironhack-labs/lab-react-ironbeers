@@ -31,7 +31,7 @@ class BeerPage extends Component {
           <h1>{this.state.name}</h1>
           <span>{this.state.attenuation_level}</span>
         </div>
-        <div className="container d-flex justify-content-center">
+        <div className="container d-flex justify-content-between m-2">
           <span className="mr-4">{this.state.tagline}</span>
           <span>
             <small>
@@ -39,9 +39,7 @@ class BeerPage extends Component {
             </small>
           </span>
         </div>
-        <div className="text-center text-wrap" style={{ width: '200px' }}>
-          {this.state.description}
-        </div>
+        <div className="text-center text-wrap">{this.state.description}</div>
         <div>
           <small>{this.state.contributed_by}</small>
         </div>
