@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function HomePage() {
     return (
+      <div> 
         <div>
             <Link to="/beers">
           <img src="./assets/beers.png" alt="All beers together" />
@@ -20,7 +21,7 @@ function HomePage() {
         </p>
 
          <Link to="/random-beer">
-          <img src="./assets/random-beer.png" alt="Random beer" />
+          <img src="./assets/random-beer.png" alt="Many beers together" />
           <h2>Random Beer</h2>
         </Link>
         <p>
@@ -35,7 +36,7 @@ function HomePage() {
         </p>
 
          <Link to="/new-beer">
-          <img src="./assets/new-beer.png" alt="New beer" />
+          <img src="./assets/new-beer.png" alt="Altogether a lot of beers" />
           <h2>New Beer</h2>
         </Link>
         <p>
@@ -50,6 +51,8 @@ function HomePage() {
         </p>
         
         </div>
+      </div>
+        
     )
 }
 
