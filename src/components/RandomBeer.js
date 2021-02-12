@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Navbar from './Navbar'
 
 class RandomBeer extends React.Component {
   state = {
@@ -35,7 +36,8 @@ class RandomBeer extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <Navbar />
+        <div className="d-flex justify-content-center mt-5 mb-5">
           <img
             src={this.state.image}
             height="350"
@@ -43,23 +45,27 @@ class RandomBeer extends React.Component {
             alt={this.state.name}
           />
         </div>
-        <div>
-          <div>
-            <h3>{this.state.name}</h3>
-            <h4>{this.state.tagline}</h4>
+        <div className="container">
+          <div className="d-flex justify-content-between">
+            <div>
+              <h3>{this.state.name}</h3>
+              <h4 className="text-muted">{this.state.tagline}</h4>
+            </div>
+            <div>
+              <h3 className="text-muted">{this.state.attenuation_level}</h3>
+              <p>
+                <strong>{this.state.first_brewed}</strong>
+              </p>
+            </div>
           </div>
           <div>
             <p>
-              <small>{this.state.first_brewed}</small>
+              <strong>{this.state.description}</strong>
             </p>
-            <p>{this.state.attenuation_level}</p>
+            <p>
+              <small className="text-muted">{this.state.contributed_by}</small>
+            </p>
           </div>
-        </div>
-        <div>
-          <p>{this.state.description}</p>
-          <p>
-            <small>{this.state.contributed_by}</small>
-          </p>
         </div>
       </div>
     );
