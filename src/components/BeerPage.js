@@ -25,20 +25,26 @@ class BeerPage extends Component {
 
   render() {
     return (
-      <div>
-        <img src={this.state.image_url} width="auto" height="300px" />
-        <div>
+      <div className=" container d-flex flex-column align-items-center">
+        <img src={this.state.image_url} width="200px" height="auto" />
+        <div className="container d-flex justify-content-center">
           <h1>{this.state.name}</h1>
           <span>{this.state.attenuation_level}</span>
         </div>
-        <div>
-          <span>{this.state.tagline}</span>
+        <div className="container d-flex justify-content-center">
+          <span className="mr-4">{this.state.tagline}</span>
           <span>
-            <strong>{this.state.first_brewed}</strong>
+            <small>
+              <strong>{this.state.first_brewed}</strong>
+            </small>
           </span>
         </div>
-        <div>{this.state.description}</div>
-        <div>{this.state.contributed_by}</div>
+        <div className="text-center text-wrap" style={{ width: '200px' }}>
+          {this.state.description}
+        </div>
+        <div>
+          <small>{this.state.contributed_by}</small>
+        </div>
       </div>
     );
   }
