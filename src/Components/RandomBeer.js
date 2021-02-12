@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import Header from './Header';
 
-class SingleBeer extends React.Component {
+class RandomBeer extends React.Component {
     state = {
         name: '',
         tagline: '',
@@ -17,7 +17,7 @@ class SingleBeer extends React.Component {
 
     async componentDidMount() {
         try {
-            const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params._id}`
+            const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers/random"
             );
 
             this.setState({ ...response.data });
@@ -28,7 +28,6 @@ class SingleBeer extends React.Component {
     }
 
     render() {
-        console.log('Single Beer')
         console.log(this.state.image_url)
         return <div>
             <Header />
@@ -56,4 +55,4 @@ class SingleBeer extends React.Component {
 }
 
 
-export default SingleBeer;
+export default RandomBeer;
