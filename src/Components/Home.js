@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Home() {
-    return <div className='container-fluid'>
+    return <div className='container m-0 p-0'>
         <div>
             <Link to="/beers">
                 <img src={require('../assets/beers.png')} alt='beers' />
