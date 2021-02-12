@@ -38,7 +38,11 @@ class beerDetails extends React.Component {
         />
 
         <h1>{this.state.name} </h1>
-        </span>
+        <span>{this.state.tagline}</span>
+        <span>{this.state.first_brewed}</span>
+        <span>{this.state.attenuation_level}</span>
+        <span>{this.state.description}</span>
+        <span>{this.state.contributed_by}</span>
         {/* <div>
         <Nav />
         <table className="table">
