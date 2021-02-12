@@ -24,10 +24,10 @@ class AllBeers extends React.Component {
       <div>
         <ul className="list-group">
           {this.state.beers.map((element) => (
-            <Link to={`/beers/${element.name}`}>
-              <li key={element._id} className="list-group-item">
+            <Link to={`/beers/${element._id}`} key={element._id}>
+              <li className="list-group-item">
                 <div className="d-flex align-items-center">
-                  <div>
+                  <div className="d-inline p-30">
                     <img
                       height="200"
                       width="auto"
