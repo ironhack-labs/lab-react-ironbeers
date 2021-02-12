@@ -31,9 +31,9 @@ class BeersList extends Component {
               className="beerCard d-flex list-group-item list-group-item-action"
               style={{ maxHeight: '90vh' }}
             >
-              <div className="imageContainer mr-3">
+              <div className="imageContainer mr-5 d-flex align-items-center">
                 <img
-                  style={{ width: '64px', height: 'auto' }}
+                  style={{ width: '50px', height: 'auto' }}
                   src={beer.image_url}
                   alt={`${beer.name} beer`}
                 />
