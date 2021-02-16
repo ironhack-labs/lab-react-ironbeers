@@ -28,6 +28,92 @@
   color: #61dafb;
 }
 
+header {
+  background-color: lightskyblue;
+  color: white;
+  padding: 2vw 0;
+  margin-bottom: 2vw;
+  font-size: 3vw;
+}
+
+header a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tile {
+  width: 40vw;
+  height: 20vw;
+  margin: 2vw auto;
+  border-radius: 1vw;
+  border: 0.1vw solid lightgray;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tile a {
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 1vw;
+  text-decoration: none;
+  text-align: left;
+  border-radius: 0 0 1vw 1vw;
+}
+
+.tile h1 {
+  margin: 0;
+  font-size: 2vw;
+}
+
+.tile p {
+  margin: 0;
+  font-size: 1vw;
+}
+
+#all-beers {
+  background-image: url('./assets/beers.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#random-beer {
+  background-image: url('./assets/random-beer.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#new-beer {
+  background-image: url('./assets/new-beer.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.beerRow {
+  padding: 2vw;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.2vw solid lightgray;
+}
+
+.beerImg {
+  height: 20vw;
+}
+
+.beerInfo {
+  margin: 2vw;
+}
+
+.random-row {
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
