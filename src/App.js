@@ -4,6 +4,7 @@ import Home from './views/Home/Home';
 import Beers from './views/Beers/Beers';
 import BeerView from './views/Beer/Beer';
 import RandomBeer from './views/RandomBeer/RandomBeer';
+import NewBeer from './views/NewBeer/NewBeer';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <RandomBeer />
       </Route>
       <Route exact path="/new-beer">
-        <Home />
+        <NewBeer />
       </Route>
       <Route exact path="/beers">
         <Beers />
