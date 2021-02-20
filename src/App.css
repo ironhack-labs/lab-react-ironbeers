@@ -44,7 +44,7 @@
 }
 
 .beerSection {
-  width: 100%;
+  width: 75%;
   align-content: flex-start;
   border: 1px solid grey;
 }
@@ -56,4 +56,13 @@
 
 .beerSection img {
   width: 100%;
+}
+
+.navBar {
+  background-color: rgb(65, 179, 250);
+}
+
+.navBar img {
+  width: 50px;
+  margin: 10px;
 }

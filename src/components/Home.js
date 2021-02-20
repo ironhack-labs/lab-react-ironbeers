@@ -1,7 +1,4 @@
 import React from 'react';
-import Beers from './Beers';
-import RandomBeer from './RandomBeer';
-import NewBeer from './NewBeer';
 import { Link } from 'react-router-dom';
 import allBeers from './assets/beers.png';
 import randomBeer from './assets/random-beer.png';
