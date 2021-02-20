@@ -1,0 +1,11 @@
+.beer-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+  padding: 1em;
+  border-bottom: 1px solid black;
+}
+
+.beer-card img {
+  height: 150px;
+}

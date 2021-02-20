@@ -1,0 +1,17 @@
+.beer {
+  padding: 1em;
+}
+.beer * {
+  margin: 0.5em 0;
+}
+
+.beer img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.col2 {
+  display: flex;
+  justify-content: space-between;
+}
