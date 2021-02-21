@@ -14,7 +14,7 @@ export default function HomePage() {
     <section id="All Beers">
         <img src="./images/allBeers.PNG" alt="" />
         <article>
-          <h2>allBeers</h2>
+          <h2>All Beers</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
             fuga reiciendis odio nulla asperiores aperiam ipsum et explicabo,
