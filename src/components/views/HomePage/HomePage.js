@@ -24,7 +24,7 @@ export default function HomePage() {
         </article>
       </section>
     </Link>
-    <Link to="/random-beer" style ={style}>
+    <Link to="/beers/random" style ={style}>
       <section id="randomBeer">
         <img src="./images/randomBeer.PNG" alt="" />
         <article>
