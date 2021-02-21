@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import HomePage from './components/views/HomePage/HomePage';
 import AllBeers from './components/views/AllBeers/AllBeers';
+import SingleBeer from './components/views/SingleBeer/SingleBeer';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/beers">
           <AllBeers />
+        </Route>
+        <Route exact path="/beers/:id">
+          <SingleBeer />
         </Route>
       </Switch>
     </div>
