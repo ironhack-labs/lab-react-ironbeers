@@ -24,6 +24,9 @@ function App() {
       <Route exact path="/beers/:beerId">
         <BeerView />
       </Route>
+      <Route exact path="/beers/:beerId">
+        <BeerView />
+      </Route>
     </BrowserRouter>
   );
 }

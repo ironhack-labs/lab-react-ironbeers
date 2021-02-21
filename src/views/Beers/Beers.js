@@ -7,21 +7,40 @@ import axios from 'axios';
 const Beers = () => {
   const [beers, setBeers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [query, setQuery] = useState('');
   const setState = () => {
     getBeers();
   };
   const getBeers = async () => {
-    const beersFetch = await axios.get(
-      'https://ih-beers-api2.herokuapp.com/beers'
-    );
-    const { data } = beersFetch;
+    let beersFetch;
+    if (query === '') {
+      beersFetch = await axios.get('https://ih-beers-api2.herokuapp.com/beers');
+    } else {
+      beersFetch = await axios.get(
+        `https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`
+      );
+    }
+    let { data } = beersFetch;
     setBeers([...data]);
     setLoading(false);
   };
+
+  const handleSearch = (event) => {
+    const { value } = event.target;
+    setQuery(value);
+  };
+
   useEffect(() => setState(), []);
+  useEffect(() => setState(), [query]);
   return (
     <main>
       <Navbar />
+      <input
+        type="text"
+        name="search"
+        placeholder="Search Beer"
+        onChange={handleSearch}
+      />
       {!loading ? (
         beers.map((beer) => (
           <Route key={beer._id}>
