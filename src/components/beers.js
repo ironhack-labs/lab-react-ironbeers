@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Navbar from '../components/Navbar';
 import { getBeers } from '../service/service';
 import { Link } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ function Beers() {
 
   return (
     <div>
+      <Navbar />
       {state.map((beer) => {
         return (
           <div key={beer._id}>

@@ -40,11 +40,11 @@ async function searchBeer(query) {
   }
 }
 
-async function newBeer() {
+async function newBeer(newData) {
   try {
-    const { data } = await axios.post(`${url}/new`, {});
+    const { data } = await axios.post(`${url}/new`, newData);
     console.log(data);
-    return data;
+    // return data;
   } catch (error) {
     console.log('there is an error fetching the beers', error);
   }

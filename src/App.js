@@ -5,13 +5,11 @@ import RandomBeers from './components/randomBeers';
 import Home from './components/Home';
 import NewBeer from './components/newBeer';
 import OneBeer from './components/oneBeer';
-import Navbar from './components/Navbar';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Switch>
         <Route exact path="/">
           <Home />
