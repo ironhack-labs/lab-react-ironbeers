@@ -28,7 +28,7 @@ function App() {
         <Route path="/random">
           <RandomBeer/>
         </Route>
-        <Route path="/new">
+        <Route path="/new-beer">
           <NewBeer/>
         </Route>
         <Route path="/:beerId">
