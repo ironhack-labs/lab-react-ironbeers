@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 function Beers() {
   const [beers, setBeers] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
+  const [search, setSearch] = React.useState('')
 
   const getBeers = async () => {
     const { data } = await axios.get(
