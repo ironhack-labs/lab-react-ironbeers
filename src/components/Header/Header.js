@@ -5,7 +5,7 @@ function Header() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-primary">
             <Link to="/">
-                <p className="navbar-brand">IronBeers</p>
+                <p className="navbar-brand" style={{color: 'white'}}>IronBeers</p>
             </Link>
         </nav>
     )

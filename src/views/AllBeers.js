@@ -11,23 +11,28 @@ function AllBeers() {
         axios.get("https://ih-beers-api2.herokuapp.com/beers").then((res)=>setBeers(res.data))
     }, [])
     console.log("beers", beers)
-    
+
+    const handleChange = (e) => {
+        const query = e.target.value;
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`).then((res)=>setBeers(res.data))
+        console.log("beers query", beers)
+    }
+
     return (
         <div>
             <h1>All beers</h1>
+            <input type="text" name="query" onChange={handleChange} placeholder="Search a beer" />
             {
                 beers.map((item)=>{
                     return (
                         <div className="card" key={item._id}>
-                            
-                                <img className="card-img-top" src={item.image_url} alt={item.name} style={style} />
+                                <Link to={item._id}><img className="card-img-top" src={item.image_url} alt={item.name} style={style} /></Link>
                                 <div className="card-body">
                                     <h5 className="card-title">{item.name}</h5>
                                     <p className="card-text">{item.tagline}</p>
                                     <p>{item.first_brewed}</p>
-                                    <Link to={item._id}><button class="btn btn-primary">See details</button></Link>
+                                    <Link to={item._id}><button className="btn btn-primary">See details</button></Link>
                                 </div>
-                            
                         </div>
                     )
                 })
@@ -38,11 +43,3 @@ function AllBeers() {
 export default AllBeers;
 
 
-{/* <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div> */}
