@@ -47,49 +47,49 @@ function NewBeer() {
           style={{ display: 'flex', flexDirection: 'column', width: '80%', marginTop: '10%' }}
           onSubmit={handleSubmit}
         >
-          <label>Name</label>
+          <label className='label-input'>Name</label>
           <input
             name="name"
             type="text"
             value={form.name}
             onChange={handleChange}
           ></input>
-          <label>Tagline</label>
+          <label className='label-input'>Tagline</label>
           <input
             name="tagline"
             type="text"
             value={form.tagline}
             onChange={handleChange}
           ></input>
-          <label>Description</label>
-          <input className='text-area'
+          <label className='label-input'>Description</label>
+          <textarea className='text-area'
             name="description"
             type="text"
             value={form.description}
             onChange={handleChange}
-          ></input>
-          <label>First brewed</label>
+          ></textarea>
+          <label className='label-input'>First brewed</label>
           <input
             name="first_brewed"
             type="text"
             value={form.first_brewed}
             onChange={handleChange}
           ></input>
-          <label>Brewed Tips</label>
+          <label className='label-input'>Brewed Tips</label>
           <input
             name="brewed_tips"
             type="text"
             value={form.brewed_tips}
             onChange={handleChange}
           ></input>
-          <label>Attenuation Level</label>
+          <label className='label-input'>Attenuation Level</label>
           <input
             name="attenuation_level"
             type="number"
             value={form.attenuation_level}
             onChange={handleChange}
           ></input>
-          <label>Contributed by</label>
+          <label className='label-input'>Contributed by</label>
           <input
             name="contributed_by"
             type="text"
