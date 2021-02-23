@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-//import { Route } from 'react-router-dom';
+import './Random.css';
 
 class Random extends React.Component {
   state = {
@@ -31,7 +31,7 @@ class Random extends React.Component {
   );
 
   render() {
-    return <div>{this.randomBeer()}</div>;
+    return <div className="randomcontainer">{this.randomBeer()}</div>;
   }
 }
 

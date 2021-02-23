@@ -3,7 +3,7 @@ form{
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    padding: 0 40px;
+    padding: 40px;
 }
 
 form label{
@@ -14,6 +14,8 @@ form label{
 form input{
     border: 0.5px solid rgba(128, 128, 128, 0.596);
     border-radius: 20px;
+    padding: 5px 10px;
+    font-weight:300;
     height: 35px;
     margin: 10px 0;
     max-width: 600px;
