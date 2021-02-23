@@ -1,0 +1,10 @@
+nav{
+    background-color: rgb(87, 194, 236);
+    padding: 5px 0;
+}
+ul li{
+    list-style-type: none;
+}
+nav img{
+    width: 50px;
+}

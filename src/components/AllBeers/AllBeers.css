@@ -1,0 +1,28 @@
+.beersList{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+}
+.anyBeer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 0.2px solid rgba(128, 128, 128, 0.424);
+    margin: 10px;
+    text-align: left;
+}
+.anyBeer img{
+    max-width: 200px;
+    padding: 40px;
+}
+.pBeer{
+    padding: 30px;
+    word-wrap: break-word;
+}
+.pBeer p{
+    word-wrap: break-word;
+    font-size: 30pt;
+    font-weight: bolder;
+    color: rgb(175, 174, 174);
+}

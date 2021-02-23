@@ -1,0 +1,23 @@
+a{
+    text-decoration: none;
+    text-align: left;
+}
+
+.seccion{
+    border: 1px solid gray;
+}
+.seccion img{
+    width: 100%;
+}
+.seccion div{
+    padding: 5%;
+    color: #000;
+    text-align: justify;
+}
+.seccion div p{
+    color: grey;
+}
+.link {
+    font-weight: bold;
+    font-size: 20pt;
+}
