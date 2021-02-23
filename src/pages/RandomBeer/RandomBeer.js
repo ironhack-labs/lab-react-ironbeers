@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import BeerCard from '../../components/BeerCard/BeerCard';
+import axios from 'axios';
 
-function SingleBeer({ beersList }) {
+function RandomBeer() {
   const initialState = {
     image_url: '',
     name: '',
@@ -13,20 +13,21 @@ function SingleBeer({ beersList }) {
     contributed_by: '',
     getData: false,
   };
-
   const [state, setState] = React.useState(initialState);
-  const { beerId } = useParams();
 
-  useEffect(() => {
-    const beersDetails = beersList.data.find((beer) => beer._id === beerId);
-    if (beersDetails) {
-      setState({
-        ...beersDetails,
-        getData: true,
+  const getData = () => {
+    axios
+      .get('https://ih-beers-api2.herokuapp.com/beers/random')
+      .then((res) => {
+        setState({
+          ...res.data,
+          getData: true,
+        });
       });
-    }
+  };
+  useEffect(() => {
+    getData();
   }, []);
-
   return (
     <div>
       {!state.getData ? <h1>...Loading</h1> : <BeerCard beer={state} />}
@@ -34,4 +35,4 @@ function SingleBeer({ beersList }) {
   );
 }
 
-export default SingleBeer;
+export default RandomBeer;

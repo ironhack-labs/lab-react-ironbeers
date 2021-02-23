@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from './components/Navbar/Navbar';
 import HomePage from './pages/HomePage/HomePage';
 import AllBeers from './pages/AllBeers/Allbeers';
-import SingleBeer from "./pages/SingleBeer/SingleBeer"
+import SingleBeer from './pages/SingleBeer/SingleBeer';
+import RandomBeer from './pages/RandomBeer/RandomBeer';
 import { Link, Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 
@@ -14,7 +15,7 @@ function App() {
     data: [],
   };
   const [beersList, setBeersList] = React.useState(initialState);
-  const [beerRandom, setBeerRandom] = React.useState(initialState);
+
   const getData = () => {
     axios.get('https://ih-beers-api2.herokuapp.com/beers').then((res) => {
       setBeersList({
@@ -22,13 +23,6 @@ function App() {
         getData: true,
       });
     });
-    axios.get("https://ih-beers-api2.herokuapp.com/beers/random").then((res)=>{
-      setBeerRandom({
-        data:res.data,
-        getData:true
-      })
-    })
-    console.log(beerRandom);
   };
   useEffect(() => {
     getData();
@@ -42,16 +36,14 @@ function App() {
           <AllBeers beersList={beersList} />
         </Route>
         <Route path="/Random Beer">
-          <SingleBeer beersList={beerRandom} />
+          <RandomBeer />
         </Route>
         <Route path="/:beerId">
           <SingleBeer beersList={beersList} />
         </Route>
-
         <Route path="/">
           <HomePage />
         </Route>
-
       </Switch>
     </main>
   );
