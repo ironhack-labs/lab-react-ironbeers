@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import BeerCard from '../../components/BeerCard/BeerCard';
+import NavBar from '../../components/NavBar/NavBar'
 
 function RandomBeer() {
   const [randomBeer, setRandomBeer] = React.useState([]);
@@ -18,6 +19,7 @@ function RandomBeer() {
   }, []);
   return (
     <div>
+    <NavBar/>
       {loading ? <BeerCard beer={randomBeer}></BeerCard> : <p>Loading...</p>}
     </div>
   );

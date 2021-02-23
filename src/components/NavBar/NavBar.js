@@ -5,8 +5,8 @@ function NavBar() {
   return (
     <nav className="navbar navbar-dark bg-primary">
       <Route>
-        <Link to="/">
-          <p>Home</p>
+        <Link className='center' to="/">
+          <img  src='./images/iconfinder_home_1608930.png' alt='home'/>
         </Link>
       </Route>
     </nav>

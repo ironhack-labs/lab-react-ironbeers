@@ -43,8 +43,8 @@ function NewBeer() {
     <div>
       <NavBar />
       {!message ? (
-        <form
-          style={{ display: 'flex', flexDirection: 'column', width: '100%' }}
+        <form className='container'
+          style={{ display: 'flex', flexDirection: 'column', width: '80%', marginTop: '10%' }}
           onSubmit={handleSubmit}
         >
           <label>Name</label>
@@ -62,7 +62,7 @@ function NewBeer() {
             onChange={handleChange}
           ></input>
           <label>Description</label>
-          <input
+          <input className='text-area'
             name="description"
             type="text"
             value={form.description}
@@ -96,7 +96,7 @@ function NewBeer() {
             value={form.contributed_by}
             onChange={handleChange}
           ></input>
-          <button>ADD NEW</button>
+          <button className='btn-beer'>ADD NEW</button>
         </form>
       ) : ( redirect ? (
         <Redirect

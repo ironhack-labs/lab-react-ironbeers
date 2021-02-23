@@ -11,3 +11,115 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a div {
+  color: black;
+}
+.center {
+margin: auto;
+text-align: center;
+}
+.center img {
+  width: 50%;
+  filter: invert();
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+.card-beer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card-beer img {
+  width: 100px;
+  height: 200px;
+}
+.title {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+.tagline {
+  font-size: 1em;
+  color: gray;
+  font-weight: 500;
+}
+.created {
+  font-size: 0.7em;
+}
+.col {
+  text-align: left;
+  margin: auto;
+}
+.single-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+}
+.single-card img {
+  width: 20%;
+}
+.align-center{
+  margin: auto;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.beer-line{
+
+  display: flex;
+  justify-content:  space-between;
+}
+.alltext{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.attenuation{
+  font-size: 1.5em;
+  color: gray;
+}
+.brewed{
+  font-weight: 900;
+  font-size: 0.8em;
+}
+.description{
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.contributed{
+  color: gray;
+  font-size: 0.7em;
+  font-weight: 700;
+}
+.btn-beer{
+  margin-top: 10%;
+  background-color:#007bff ;
+  border-radius: 15px;
+  color: white;
+  width: 100%;
+  margin: 20px auto 0 auto;
+  font-size: 0.8em;
+  padding: 5px;
+  border: none;
+}
+.text-area{
+  height: 200px;
+}
+
+input {
+  border-radius: 10px;
+  border: 1px solid rgba(175, 173, 173, 0.527);
+}
