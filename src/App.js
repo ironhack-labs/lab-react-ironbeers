@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage/HomePage';
 import AllBeers from './pages/AllBeers/Allbeers';
 import SingleBeer from './pages/SingleBeer/SingleBeer';
 import RandomBeer from './pages/RandomBeer/RandomBeer';
+import NewBeer from './pages/NewBeer/NewBeer';
 import { Link, Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 
@@ -32,6 +33,9 @@ function App() {
     <main>
       <Navbar />
       <Switch>
+        <Route path="/New Beer">
+          <NewBeer />
+        </Route>
         <Route path="/All Beers">
           <AllBeers beersList={beersList} />
         </Route>
