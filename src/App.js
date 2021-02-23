@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useEffect}  from 'react';
 import './App.css';
+import { Route } from 'react-router-dom';
+import AllBeers from "./views/AllBeers/AllBeers"
+import NewBeer from "./views/NewBeer/NewBeer"
+import RandomBeer from "./views/RandomBeer/RandomBeer"
+import Home from './components/Home/Home';
+import Abeer from "./views/aBeer/aBeer"
+import useFetch from './useFetch';
 
 function App() {
+  const {data:Beers} = useFetch("https://ih-beers-api2.herokuapp.com/beers")
+
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/beers">
+       {Beers && <AllBeers Beers = {Beers} title ="All Beers" />} 
+      </Route>
+      <Route exact path="/beers/:id">
+        <Abeer />
+      </Route>
+      <Route exact path="/random-beer">
+        <RandomBeer />
+      </Route>
+      <Route exact path="/new-beer">
+        <NewBeer />
+      </Route>
+     
     </div>
   );
 }
