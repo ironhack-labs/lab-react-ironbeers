@@ -2,13 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-    return (
-        <div className='navBar'>
-            <Link to='/'>
-                <img src='https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-512.png' alt='Home' />
-            </Link>
-        </div>
-    )
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to="/beers">All beers</Link>
+        </li>
+        <li>
+          <Link to="/beers/random">Random beer</Link>
+        </li>
+        <li>
+          <Link to="/beers/new">New beer</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
 export default Navbar;
