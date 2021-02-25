@@ -20,9 +20,12 @@ class BeerDetails extends Component {
 
   loadBeerDetails = async () => {
     try {
-      const response = await this.beerService.getBeerById(
-        this.props.match.params.id
-      );
+      let response;
+      if (this.props.id) {
+        response = await this.beerService.getBeerById(this.props.id);
+      } else {
+        response = await this.beerService.getRandomBeer();
+      }
       this.setState({ beerDetails: response.data });
     } catch (error) {
       console.error(error);
