@@ -17,12 +17,15 @@ class BeerList extends Component {
     this.loadBeers();
   }
 
-  loadBeers = () => {
-    this.beerService
-      .getAllBeers()
-      .then((response) => this.setState({ beersList: response.data }))
-      .catch((err) => console.error(err));
+  loadBeers = async () => {
+    try {
+      const response = await this.beerService.getAllBeers();
+      this.setState({ beersList: response.data });
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   render() {
     return (
       <>
