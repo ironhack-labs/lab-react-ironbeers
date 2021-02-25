@@ -1,0 +1,10 @@
+.card-section img {
+  height: 200px;
+  object-fit: cover;
+  /* meter media query para cambiar a fill con ancho de pantalla */
+}
+
+.card-section p {
+  color: rgb(106, 106, 106);
+  font-size: 0.9em;
+}
