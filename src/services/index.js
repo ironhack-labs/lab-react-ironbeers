@@ -10,7 +10,7 @@ class BeersService {
   getAllBeers = () => this.api.get('/');
   getBeerById = (id) => this.api.get(`/${id}`);
   getRandomBeer = () => this.api.get('/random');
-  addBeer = () => this.api.post('/new');
+  addBeer = (newBeer) => this.api.post('/new', newBeer);
   getMatch = (query) => this.api.get(`/search?q=${query}`);
 }
 export default BeersService;

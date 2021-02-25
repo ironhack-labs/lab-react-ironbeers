@@ -14,7 +14,7 @@ const Routes = () => (
       render={(props) => <BeerDetails id={props.match.params.id} />}
     />
     <Route path="/random-beer" render={() => <BeerDetails />}></Route>
-    <Route path="/new-beer" render={() => <NewBeer />}></Route>
+    <Route path="/new-beer" render={(props) => <NewBeer {...props} />}></Route>
   </Switch>
 );
 export default Routes;
