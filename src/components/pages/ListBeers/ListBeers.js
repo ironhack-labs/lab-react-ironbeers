@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 import './ListBeers.css'
 
@@ -48,6 +49,7 @@ class AllBeers extends Component {
                                     <h5>{elm.name}</h5>
                                     <p>{elm.tagline}</p>
                                     <p><strong>First Brewed:</strong> {elm.first_brewed}</p>
+                                    <Link to={`/details/${elm._id}`} className="btn btn-primary" >Beer details</Link>
                                 </div>
                             </article>
                                 <hr/>

@@ -5,10 +5,13 @@ import thirdImg from '../../../assets/new-beer.png'
 
 import { Container, Row, Col, Card } from 'react-bootstrap'
 
+import BeersService from '../../../service/beers-service'
+
 import { Link } from 'react-router-dom'
 import './home.css'
 
 const HomePage = () => {
+
     return(
         <Container>
             <Row>
@@ -23,7 +26,7 @@ const HomePage = () => {
                     <Card style={{ width: '25rem' }}>
                         <Card.Img variant="top" src={secondImg} />
                         <Card.Body>
-                            <Link to='/beers-list'>Random Beer</Link>
+                            <Link to={'/random'}>Random Beer</Link>
                             <p>So join me for a drink boys / We're gonna make a big noise / So don't worry 'bout tomorrow / Take it today / Forget about the check we'll get hell to pay / Have a drink on me / Yeah have a drink on me</p>
                         </Card.Body>
                     </Card>
