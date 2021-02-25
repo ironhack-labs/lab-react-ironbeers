@@ -1,0 +1,11 @@
+.beer-img{
+    width: 10%;
+    margin-bottom: 10px;
+}
+.beer-name{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.beer-title{
+    font-size: 25px;
+}

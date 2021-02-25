@@ -1,0 +1,9 @@
+img{
+    width: 40%;
+    display: flex;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 15p;
+    margin-bottom: 30px;
+}
