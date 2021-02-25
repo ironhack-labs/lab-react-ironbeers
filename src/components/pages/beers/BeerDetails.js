@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import './BeerDetails.css';
 import BeersService from '../../../services/index';

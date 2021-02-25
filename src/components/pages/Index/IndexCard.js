@@ -1,5 +1,4 @@
-import React from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Image, Row } from 'react-bootstrap';
 import beers from '../../../assets/beers.png';
 import random from '../../../assets/random-beer.png';
 import newBeer from '../../../assets/new-beer.png';
