@@ -41,7 +41,9 @@ class BeerList extends Component {
         <Header />
         <Container>
           <Row>
-            <Search searchHandler={this.searchBeers} />
+            <Col>
+              <Search searchHandler={this.searchBeers} />
+            </Col>
           </Row>
           <Row>
             {this.state.beersList.map((beer) => (
