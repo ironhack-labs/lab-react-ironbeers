@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import IndexPage from './pages/Index/Index';
+import Routes from './routes/index';
 
 function App() {
-  return <IndexPage />;
+  return <Routes />;
 }
 
 export default App;
