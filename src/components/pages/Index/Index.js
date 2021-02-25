@@ -13,7 +13,7 @@ const IndexPage = () => (
           description="A Pilsner Urquell drunkenly shares a shower with a Wolverine Beer. When a bar tab living with a Luna Sea ESB is sudsy, the Hazed and Infused plans an escape from a steam engine behind a Hommel Bier a coors light related to a Rolling Rock."
         />
       </Link>
-      <Link to="/beer-details">
+      <Link to="/random-beer">
         <IndexCard
           imageUrl="random"
           title="Random Beer"
