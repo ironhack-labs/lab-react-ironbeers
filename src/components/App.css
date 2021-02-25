@@ -1,0 +1,12 @@
+h1 {
+    font-weight: 300;
+    color: black;
+}
+
+h1:hover {
+    color: rgb(152, 152, 152);
+}
+
+a:hover {
+    text-decoration-line: none;
+}
