@@ -1,0 +1,9 @@
+.each-beer{
+    display: flex;
+}
+
+.each-beer img {
+    width: 25px;
+    margin-right: 50px;
+
+}
