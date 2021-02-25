@@ -4,7 +4,7 @@ import './BeerCard.css';
 
 const BeerCard = ({ image_url, name, tagline, _id }) => (
   <Link to={`/beers/${_id}`}>
-    <Card>
+    <Card className="h-100">
       <Row>
         <Col xs={4}>
           <Card.Img className="beer-img" variant="top" src={image_url} />
