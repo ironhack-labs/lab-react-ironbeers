@@ -29,7 +29,7 @@ class HomePage extends React.Component {
         <div className="random-beer">
           <img src="./images/random-beer.png" alt="beers" />
           <h2 className="text-left">
-            <Link className="badge badge-light ml-3" to="/random-beer">
+            <Link className="badge badge-light ml-3" to="/random">
               Random Beer
             </Link>
           </h2>

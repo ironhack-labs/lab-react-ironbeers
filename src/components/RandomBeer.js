@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SingleBeer extends React.Component {
+class RandomBeer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ class SingleBeer extends React.Component {
 
   async componentDidMount() {
     const response = await fetch(
-      `https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.id}`
+      `https://ih-beers-api2.herokuapp.com/beers/random`
     );
     const json = await response.json();
     this.setState(() => ({ beer: json, loaded: true }));
@@ -40,4 +40,4 @@ class SingleBeer extends React.Component {
   }
 }
 
-export default SingleBeer;
+export default RandomBeer;
