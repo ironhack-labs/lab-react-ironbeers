@@ -57,3 +57,11 @@
 .beer-detail .description {
   font-weight: 500;
 }
+
+.newbeer-form input, textarea {
+  border-radius: 15px;
+}
+
+.newbeer-form button {
+  border-radius: 15px;
+}

@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Beers from './components/Beers';
 import SingleBeer from './components/SingleBeer';
 import RandomBeer from './components/RandomBeer';
-
+import NewBeer from './components/NewBeer';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route exact path="/beers" component={Beers} />
         <Route exact path="/beers/:id" component={SingleBeer} />
         <Route exact path="/random" component={RandomBeer} />
+        <Route exact path="/new-beer" component={NewBeer} />
       </Switch>
     </div>
   );
