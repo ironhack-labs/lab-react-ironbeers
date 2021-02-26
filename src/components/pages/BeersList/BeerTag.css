@@ -1,0 +1,21 @@
+.section-tag {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.section-tag figure {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-tag img {
+    width: 70px;
+    height: 180px;
+}
+
+.detailsLink {
+    text-decoration: none;
+}

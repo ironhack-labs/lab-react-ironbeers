@@ -1,0 +1,11 @@
+.nav {
+    background-color: #3dc4fb;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLink {
+    text-decoration: none;
+}
