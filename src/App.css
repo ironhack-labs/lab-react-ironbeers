@@ -49,3 +49,11 @@
 .beer-img {
   height: 150px;
 }
+
+.beer-detail img {
+  height: 250px;
+}
+
+.beer-detail .description {
+  font-weight: 500;
+}
