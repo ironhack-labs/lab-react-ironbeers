@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class Beers extends React.Component {
   constructor(props) {
@@ -7,13 +8,24 @@ class Beers extends React.Component {
     this.state = {
       beers: [],
       loaded: false,
+      query: ""
     };
+    this.inputHandler = this.inputHandler.bind(this);
   }
 
+  // use fetch
   async componentDidMount() {
     const response = await fetch('https://ih-beers-api2.herokuapp.com/beers');
     const json = await response.json();
     this.setState(() => ({ beers: json, loaded: true }));
+  }
+
+  // use axios
+  async inputHandler(event) {
+      const query = event.target.value;
+      this.setState(() => ({query: query}));
+      const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${this.state.query}`);
+      this.setState(() => ({beers: response.data}));
   }
 
   render() {
@@ -43,7 +55,25 @@ class Beers extends React.Component {
         </div>
       );
     });
-    return <div className="container">{beersRender}</div>;
+    return (
+        <div className="container">
+            <div className="input-group mb-3">
+                <span className="input-group-text" id="query">
+                    Beer Search
+                </span>
+                <input
+                type="text"
+                name="query"
+                className="form-control"
+                aria-label="query"
+                aria-describedby="basic-addon1"
+                value={this.state.query}
+                onChange={this.inputHandler}
+                />
+            </div>
+            {beersRender}
+        </div>
+    );
   }
 }
 
