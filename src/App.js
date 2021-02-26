@@ -5,6 +5,7 @@ import Home from './Home';
 import Beers from './Beers';
 import RandomBeer from './RandomBeer';
 import NewBeer from './NewBeer';
+import Header from './Header';
 
 
 
@@ -22,3 +23,5 @@ function App() {
 }
 
 export default App;
+
+// I don't think I know how I can do iteration 2 for now
