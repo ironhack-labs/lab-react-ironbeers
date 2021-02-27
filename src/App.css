@@ -1,3 +1,7 @@
+* {
+  color: rgb(58, 58, 58)
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,72 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+img {
+  width: 100%;
+}
+
+.beer-box {
+  margin: 20px; 
+}
+
+a {
+  text-decoration: none;
+  color: rgb(58, 58, 58)
+}
+
+.header {
+  max-height: 40px;
+  background-color: rgb(39, 172, 224);
+}
+
+.img-header {
+  height: 30px;
+  width: auto;
+  margin: 5px;
+}
+
+.beer-img {
+  max-height: 100px;
+  width: auto;
+  margin: 0 30px;
+}
+
+.beer-preview {
+  display: flex;
+  padding: 10px;
+  border-bottom: solid 1px darkgrey;
+  text-align: left;
+  align-items: center;
+}
+
+.beer-preview > div {
+  margin-left: 20px;
+}
+
+.creator {
+  font-size: 0.7rem;
+}
+
+.beer-img-details {
+  width: 100px;
+  height: auto;
+}
+
+.beer-box-details {
+  margin: 20px;
+}
+
+form > input, .submit-btn {
+  margin: 15px;
+  border-radius: 10px;
+  border: 1px rgb(39, 172, 224) solid; 
+}
+
+.submit-btn {
+  background-color:rgb(39, 172, 224);
+  color: white;
+  padding: 5px 30px;
+  font-size: 1.5rem;
 }

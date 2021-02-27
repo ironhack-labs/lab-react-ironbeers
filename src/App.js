@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from './components/Home';
+import Beers from './components/beers/Beers';
+import Details from './components/Details';
+import Random from './components/Random';
+import Newbeer from './components/NewBeer';
+
+export class App extends Component {
+  state = {
+    listOfBeers: [],
+  };
+
+  componentDidMount() {
+    axios
+      .get('https://ih-beers-api2.herokuapp.com/beers')
+      .then((allBeers) => {
+        this.setState({ listOfBeers: allBeers.data });
+        console.log(this.state.listOfBeers);
+      })
+      .catch((err) => console.log(err));
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/beers" component={Beers} />
+          <Route
+            exact
+            path="/beers/:id"
+            component={Details}
+            allBeers={this.state.listOfBeers}
+          />
+          <Route exact path="/random" component={Random} />
+          <Route exact path="/new-beer" component={Newbeer} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
