@@ -4,11 +4,13 @@ import HomePage from './components/HomePage/HomePage'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Beers from './components/Beers/Beers'
 import Beer from './components/Beer/Beer'
+import RandomBeer from './components/RandomBeer/RandomBeer'
 import Error from './components/Error/Error'
 
 class App extends Component {
 state = {
-  beers: []
+  beers: [],
+  // randomBeer: {}
 }
 
 componentDidMount() {
@@ -19,6 +21,18 @@ componentDidMount() {
     })
     .catch((err) => console.log(err));
 }
+
+// Iteration 5
+// getRandomBeer() {
+//   fetch('https://ih-beers-api2.herokuapp.com/beers/random')
+//     .then((response) => response.json())
+//     .then((data) => {
+//       this.setState({ randomBeer: data });
+//     })
+//     .catch((err) => console.log(err));
+
+//     return this.state.randomBeer;
+// }
 
   render() {
     const { beers } = this.state;
@@ -38,8 +52,16 @@ componentDidMount() {
                 <Beer {...rrdProps} beersData={ beers } /> 
               );
             }} exact />
-            {/* <Route path="/random-beer" component={ Beers } />
-            <Route path="/new-beer" component={ Beers } /> */}
+            {/* Iteration 5
+            <Route path="/random-beer" render={ 
+              (rrdProps) => {
+                return( 
+                  <Beer {...rrdProps} randomBeersData={() => { this.getRandomBeer() } } /> 
+                );
+              }
+            } exact /> */}
+            <Route path="/random-beer" component={ RandomBeer } exact />
+            {/* <Route path="/new-beer" component={ Beers } /> */}
             <Route component={ Error } />
           </Switch>
       </Router>

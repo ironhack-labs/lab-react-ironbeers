@@ -14,7 +14,6 @@ function Beers(props) {
 
     return (
         <div>
-
             <Header />
             <div className="container">
                 {props.beersData.map(( { _id, image_url, name, tagline, contributed_by } ) => {

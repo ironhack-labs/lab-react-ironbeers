@@ -7,6 +7,17 @@ import './../../App.css'
 function Beer(props) {
     console.log(props)
 
+    // Iteration 5
+    // let beer = undefined;
+
+    // if (props.match.path === '/beers/:beerId') {
+    //     const { beerId } = props.match.params;
+    //     beer = props.beersData.find(b => b._id === beerId)
+    //     console.log(beer)
+    // } else {
+    //     beer = props.randomBeersData;
+    // }
+
     const { beerId } = props.match.params;
     const beer = props.beersData.find(b => b._id === beerId)
     console.log(beer)
