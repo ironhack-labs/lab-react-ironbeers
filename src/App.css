@@ -50,10 +50,27 @@
   margin-left: 20px;
 }
 
-img {
+#homePageImg {
   width: 100%;
+}
+
+#beersImg {
+  width: 30px;
 }
 
 .navLink {
   text-decoration: none;
+}
+
+.beerListDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.beerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }

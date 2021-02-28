@@ -5,7 +5,7 @@ import header from './../../assets/header.png'
 function Header() {
     return (
         <div className="container">
-            <Link to="/"><img src={ header } alt="viewsHeader"/></Link>
+            <Link to="/"><img id="homePageImg" src={ header } alt="viewsHeader"/></Link>
         </div>
     )
 }
