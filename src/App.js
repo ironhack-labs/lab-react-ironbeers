@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './components/HomePage/HomePage'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Beers from './components/Beers/Beers'
+import Beer from './components/Beer/Beer'
 import Error from './components/Error/Error'
 
 class App extends Component {
@@ -28,9 +29,15 @@ componentDidMount() {
           <Switch>
             <Route path="/" component={ HomePage } exact /> 
             <Route path="/beers" render={ (rrdProps) => {
-              return( <Beers {...rrdProps} beersData={ beers } /> );
-            }} />
-            <Route path="/beers/:beerId" component={ HomePage } exact /> 
+              return( 
+                <Beers {...rrdProps} beersData={ beers } /> 
+              );
+            }} exact />
+            <Route path="/beers/:beerId" render={ (rrdProps) => {
+              return( 
+                <Beer {...rrdProps} beersData={ beers } /> 
+              );
+            }} exact />
             {/* <Route path="/random-beer" component={ Beers } />
             <Route path="/new-beer" component={ Beers } /> */}
             <Route component={ Error } />
