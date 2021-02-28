@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  background-color: #03a5d6;
+}
+
+.header-image {
+  height:60px;
+}
+
+.homepage{
+  border: 1px solid grey;
+  margin: 0px 50px;
+}
+.allbeers-homepage  {
+display:flex;
+flex-direction: column;
+padding-bottom: 50px;
+}
+
+.randombeer-homepage  {
+  display:flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+
+  }
+
+  .newbeer-homepage  {
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    }
+    
+  .homepage p {
+    text-align: justify;
+  }
