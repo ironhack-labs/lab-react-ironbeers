@@ -1,0 +1,88 @@
+form {
+  margin: 30px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form > label {
+  font-size: 1.5rem;
+}
+
+form > input,
+form > textarea {
+  margin: 5px 0 15px -15px;
+  height: 3rem;
+  width: 80%;
+  padding: 5px 15px;
+  border: 1px solid #eee;
+  border-radius: 25px;
+  font-size: 1.3rem;
+}
+
+form > input:focus,
+form > textarea:focus {
+  outline: none;
+  background-color: rgba(62, 196, 252, 0.2);
+  color: #222222
+}
+
+
+form > .input-descr {
+  height: 15rem;
+}
+
+button {
+  margin: 5px 0 15px -15px;
+  width: 90%;
+  height: 3rem;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  background-color: #3EC4FC;
+  font-size: 1.5rem;
+}
+
+button:focus {
+  outline: none
+}
+
+button:active {
+  transform: scale(0.95%);
+}
+
+button:hover {
+  background-color: rgba(62, 196, 252, 0.2);
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+
+  h1 {
+    display: none;
+  }
+  form > label {
+  font-size: 1rem;
+  }
+
+  form > input,
+  form > textarea {
+  height: 1.2rem;
+  font-size: 1rem;
+  }
+
+  form > .input-descr {
+  height: 5rem;
+}
+  button {
+    margin: 5px 0 15px -15px;
+    width: 90%;
+    height: 2rem;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #3EC4FC;
+    font-size: 1rem;
+  }
+}

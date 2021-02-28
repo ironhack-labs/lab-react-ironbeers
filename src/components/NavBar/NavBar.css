@@ -1,0 +1,22 @@
+.navbar {
+  background-color: #3EC4FC;
+  padding: 20px 30px;
+}
+
+.navbar > a > i {
+  color: #fff;
+  font-size: 3rem;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+  background-color: #3EC4FC;
+  padding: 10px 15px;
+}
+
+.navbar > a > i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+}
+

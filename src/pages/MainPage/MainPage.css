@@ -1,0 +1,38 @@
+.app > div > .card-link {
+  height: 30vh;
+  width: 100vw;
+
+}
+
+.card-link > img {
+  width: 100vw;
+  height: 17vh;
+  object-fit: cover;
+}
+
+.card-link > h3 {
+  height: 3vh;
+  font-size: 2rem;
+  text-decoration: none;
+  color: cornflowerblue
+}
+
+.card-link > p {
+  height: 3vh;
+  text-decoration: none;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #222222;
+}
+
+@media (max-width: 400px) {
+  .card-link > h3 {
+    font-size: 1.3rem
+  }
+
+  .card-link > p {
+    margin-bottom: 30px;
+  }
+}
