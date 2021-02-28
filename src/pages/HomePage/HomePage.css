@@ -1,0 +1,41 @@
+h1 {
+    padding-top: 80px;
+}
+
+.link {
+    text-decoration: none;
+    text-align: center;
+}
+
+div {
+    height: 300px;
+    width: 80%;
+    margin-left: 8vw;
+    margin-right: 5vw;
+}
+
+#all-beers {
+    background-image: url("./../../assets/beers.png") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#random-beer {
+    background-image: url("./../../assets/random-beer.png") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#new-beer {
+    background-image: url("./../../assets/new-beer.png") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+article {
+    margin-top: 80px;
+}
+
+#bottom-article {
+    padding-bottom: 80px;
+}
