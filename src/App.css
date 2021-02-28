@@ -96,13 +96,13 @@ a {
   margin: 20px;
 }
 
-form > input, .submit-btn {
+form > input, .submit-btn, .back-btn {
   margin: 15px;
   border-radius: 10px;
   border: 1px rgb(39, 172, 224) solid; 
 }
 
-.submit-btn {
+.submit-btn, .back-btn {
   background-color:rgb(39, 172, 224);
   color: white;
   padding: 5px 30px;

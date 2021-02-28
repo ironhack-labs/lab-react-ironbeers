@@ -33,6 +33,9 @@ export class Details extends Component {
           <h5>{this.state.oneBeer.description}</h5>
           <p>{this.state.oneBeer.contributed_by}</p>
         </div>
+        <button className="back-btn" onClick={this.props.history.goBack}>
+          Go Back
+        </button>
       </div>
     );
   }
