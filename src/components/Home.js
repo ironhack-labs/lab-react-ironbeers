@@ -1,8 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios'
 
 class Home extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+                beers: [],
+                randomBeer: {}
+        }
+       
+    }
+    componentDidMount = () => {
+        axios.get('https://ih-beers-api2.herokuapp.com/beers')
+            .then((response) => {
+                this.setState({ beers: response.data })
+                this.generateRandom()
+            })
+            .catch((err) => console.log(err))
+    }
+    generateRandom() {
+       const randomBeer = this.state.beers[Math.floor(Math.random()*this.state.beers.length)]
+       this.setState({randomBeer : randomBeer})
+        
+    }
     render() {
         return (
             <section className="p-4 lg:p-8 dark:bg-coolGray-800 dark:text-coolGray-100">
@@ -16,7 +37,7 @@ class Home extends React.Component {
                             <img src="./images/beers.png" alt="" className="p-2 h-60" />
                         </div>
                         <div className="flex flex-col justify-center flex-1 px-2 py-2 dark:bg-coolGray-900">
-                            <Link to="/beers"><h2 className="text-4xl :text-4xl font-bold ">All beers</h2></Link>
+                            <Link to={{pathname:`beers`, state: {beers: this.state.beers}}}><h2 className="text-4xl :text-4xl font-bold ">All beers</h2></Link>
                             <p className="my-6 dark:text-coolGray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
 
                         </div>
@@ -26,7 +47,7 @@ class Home extends React.Component {
                             <img src="./images/random-beer.png" alt="" className="p-2 h-60" />
                         </div>
                         <div className="flex flex-col justify-center flex-1 px-6 py-12 dark:bg-coolGray-900">
-                            <Link to="/random-beer"><h2 className="text-4xl :text-4xl font-bold ">Random beer</h2></Link>
+                            <Link to={{pathname:`random-beer`, state: {randomBeer: this.state.randomBeer}}}><h2 className="text-4xl :text-4xl font-bold ">Random beer</h2></Link>
                             <p className="my-6 dark:text-coolGray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquam possimus quas, error esse quos.</p>
 
                         </div>

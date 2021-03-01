@@ -1,42 +1,36 @@
 import React from 'react'
 import { Component } from 'react'
-import axios from 'axios'
+
+import { Link } from 'react-router-dom';
 
 class Beers extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-            beers: []
+            beers: this.props.location.state.beers
         }
-    }
-
-    componentDidMount = () => {
-        axios.get('https://ih-beers-api2.herokuapp.com/beers')
-            .then((response) => {
-                this.setState({ beers: response.data })
-            })
-            .catch((err) => console.log(err))
     }
 
     render() {
         return (
             <section className="py-6 dark:bg-coolGray-800 dark:text-coolGray-50">
-	            <div className="container flex items-stretch mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10"> 
+	            <div className="container mx-auto grid grid-cols-2 gap-4 p-4 md:grid-cols-4"> 
                 {this.state.beers.map((beer) => {
                     console.log(beer)
                     return (
-                        <div className="flex flex-row self-stretch w-full max-w-lg p-4 shadow-lg border-2 dark:bg-coolGray-400 dark:text-coolGray-800 rounded-lg border-purple-500 hover:border-gray-500 m-3">
-                        <div className="w-full m-2 h-20 sm:h-32 sm:w-32 sm:mb-0 justify-evenly " key={beer._id} >
-                            <img src={beer.image_url} alt="" className="object-cover w-full h-20 rounded shadow-sm min-h-20 dark:bg-center" />
+                        <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 shadow-lg border-2 dark:bg-coolGray-900 dark:text-coolGray-100" key={beer._id}>
+                        <div className="w-full m-2 h-20 sm:h-32 sm:w-32 sm:mb-0 justify-evenly "  >
+                            <img src={beer.image_url} alt="" className="object-cover h-20 rounded shadow-sm min-h-20 dark:bg-center" />
 	                    </div>
                             <div className="flex flex-col space-y-1">
                                 <div>
-                                    <h2 className="dark:text-2xl font-semibold">{beer.name}</h2>
-                                    <span className="dark:text-sm dark:text-coolGray-800">{beer.tagline}</span>
+                                <Link to={{pathname:`/beers/${beer._id}`, state: {beer: beer}}}>
+                                    <h2 className="capitalise dark:text-2xl font-semibold">{beer.name}</h2></Link>
+                                    <span className="dark:text-sm dark:text-coolGray-100">{beer.tagline}</span>
                                 </div>
                                 <div className="space-y-1">
                                     <span className="flex items-center space-x-2">
-                                        <span className="dark:text-coolGray-800">{beer.contributed_by}</span>
+                                        <span className="text-xs italic pt-3 dark:text-coolGray-100">{beer.contributed_by}</span>
                                     </span>
                                 </div>
                             </div>
