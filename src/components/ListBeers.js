@@ -33,7 +33,7 @@ class ListBeers extends Component {
               <img className="beer-img" src={beer.image_url} alt="beer" />
               <div>
                 <h2>
-                  <Link to={'/beers/:id'}>{beer.name} </Link>
+                  <Link to={`/beers/${beer._id}`}>{beer.name} </Link>
                 </h2>
                 <h3>{beer.tagline}</h3>
                 <p>Created by: {beer.contributed_by}</p>
