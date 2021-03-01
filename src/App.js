@@ -1,24 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
+import Beer from './components/Beer'
+import NewBeer from './components/NewBeer'
+import RandomBeer from './components/RandomBeer'
+import Home from './components/Home'
+import Header from './components/Header'
+import BeerDetails from './components/BeerDetails'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route  exact path='/beer' component={Beer}/>
+          <Route exact path='/beer/:id' component={BeerDetails} />
+          <Route path='/random-beer' component={RandomBeer} />
+          <Route path='/new-beer' component={NewBeer} />
+        </Switch>
+      </Router>
+
     </div>
   );
 }
