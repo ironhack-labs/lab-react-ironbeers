@@ -58,3 +58,14 @@ a {
   display: flex;
   
 }
+
+.addBeer {
+  display: flex;
+  justify-content: center;
+}
+
+.addBeer form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}

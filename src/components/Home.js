@@ -63,7 +63,7 @@ class Home extends React.Component{
             }}>Radnom Beer</Link>
                     </li>
                     <li>
-                    <Link to="/new-beer">New Beer</Link>
+                    <Link to="/new-beer">Add a New Beer</Link>
                     </li>
                     </ul>
             </div>
