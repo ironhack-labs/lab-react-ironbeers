@@ -34,38 +34,39 @@ class NewBeer extends React.Component {
     render() {
         return (
             <div className="p-8 h-100 dark:bg-coolGray-800 dark:text-coolGray-50">
-                <form onSubmit={this.formSubmitHandler} className="container flex flex-col m-auto ">
+                <form onSubmit={this.formSubmitHandler} className="container flex flex-col m-auto">
 
                     <div className="space-y-2 col-span-full lg:col-span-1">
-                        <p className="text-lg font-medium">Add new beer</p>
+                    <p className="text-lg font-medium">Add new beer</p>
                     </div>
                     <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                     <div className="col-span-full sm:col-span-2">
                     <label htmlFor="name">Name</label>
-                            <input type="text" 
+                            <input id="name"
+                                name="name"
                                 value={this.state.name}
-                                onChange={this.onChangeHandler}
-                                id="name"  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-coolGray-700 dark:text-coolGray-900" ></input>
+                                onChange={this.onChangeHandler} placeholder=""  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-coolGray-700 dark:text-coolGray-900" ></input>
                         </div>
                         <div className="col-span-full sm:col-span-4">
                             <label className="text-sm">Tagline</label>
-                            <input 
-                                id="tagline"
+                            <input id="tagline"
+                                name="tagline"
                                 value={this.state.tagline}
-                                onChange={this.onChangeHandler}
-                                type="text"  placeholder="" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-coolGray-700 dark:text-coolGray-900" ></input>
+                                onChange={this.onChangeHandler} className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-coolGray-700 dark:text-coolGray-900" ></input>
                         </div>
                         <div className="col-span-full sm:col-span-4">
                             <label className="text-sm">Description</label>
-                            <textarea rows="6"
+                            <textarea id="description"
+                                name="description"
                                 value={this.state.description}
-                                onChange={this.onChangeHandler} id="description" type="description" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-coolGray-700 dark:text-coolGray-900" ></textarea>
+                                onChange={this.onChangeHandler} className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-coolGray-700 dark:text-coolGray-900" ></textarea>
                         </div>
                         <div className="col-span-full sm:col-span-2">
-                            <label  className="text-sm">First Brewed</label>
-                            <input
+                            <label className="text-sm">First Brewed</label>
+                            <input id="first_brewed"
+                                name="first_brewed"
                                 value={this.state.first_brewed}
-                                onChange={this.onChangeHandler} id="first_brewed" type="text" placeholder="" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-coolGray-700 dark:text-coolGray-900" ></input>
+                                onChange={this.onChangeHandler}  placeholder="" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-coolGray-700 dark:text-coolGray-900" ></input>
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label className="text-sm">Brewer Tips</label>
