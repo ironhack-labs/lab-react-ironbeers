@@ -9,6 +9,15 @@ body {
   width: 40%;
 }
 
+.beer-img {
+  width: 10%;
+}
+
+.beer-container {
+  display: flex;
+  
+}
+
 .home-container p {
   width: 40vw;
 }
