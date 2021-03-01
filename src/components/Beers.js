@@ -25,10 +25,10 @@ class Beers extends React.Component {
             </Link>
             
             {this.state.beers.map(beer => 
-            <div>
+            <div key={beer._id}>
                 <img className="img" src={beer.image_url} alt={beer.name} width="100px"/>
                 <h1>
-                <Link to={`/beers/${beer._id}`}>
+                <Link to={`/beer/${beer._id}`}>
             {beer.name}
             </Link>
             </h1>
