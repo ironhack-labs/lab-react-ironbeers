@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+li {
+  width: 15vw;
+}
+
+img {
+  width: 35vw;
+}
+
