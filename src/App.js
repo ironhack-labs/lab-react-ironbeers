@@ -6,6 +6,7 @@ import Header from './components/Header';
 import ListBeers from './components/ListBeers';
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
+import BeerDetails from './components/BeerDetails';
 
 class App extends React.Component {
   render() {
@@ -32,7 +33,7 @@ class App extends React.Component {
           <Route
             exact
             path="/beers/:id"
-            render={(props) => <RandomBeer {...props} />}
+            render={(props) => <BeerDetails {...props} />}
           />
         </Switch>
       </div>
