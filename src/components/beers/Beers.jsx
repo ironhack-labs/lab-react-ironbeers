@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../navbar/Navbar';
+import Search from '../search/Search';
 
 class Beers extends React.Component {
   state = {
@@ -18,12 +19,21 @@ class Beers extends React.Component {
       .catch((error) => console.error(error));
   }
 
+
   render() {
     const { beers } = this.state;
+    if(beers.length === 0) {
+      return (
+      <div className="container my-4">
+        <h2>Loading...</h2>
+      </div>
+      )
+    }
     return (
       <div>
         <Navbar />
         <div className="container">
+          <Search />
           {beers.map((beer, i) => (
             <div key={i} className="row my-3 align-items-center">
               <div className="col-3">

@@ -8,21 +8,20 @@ class Home extends React.Component {
   render() {
     return (
       <div className="container mt-3">
-        <div className="row mb-3 w-75">
+        <div className="row mb-3">
           <div className="col-12 col-lg-12">
             <div className="card">
               <img src={beersImg} className="card-img-top" alt="beersImg" />
               <div className="card-body">
                 <Link className="fs-2 fw-bold text-decoration-none" to="/beers">Beers</Link>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea optio voluptates, et temporibus beatae praesentium tempore maiores eligendi. Inventore mollitia aspernatur dolore nulla deleniti repellendus repellat vero hic. Et, iste!
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="row mb-3 w-75">
+        <div className="row mb-3">
           <div className="col-12 col-lg-12">
             <div className="card">
               <img
@@ -40,7 +39,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="row mb-3 w-75">
+        <div className="row mb-3">
           <div className="col-12 col-lg-12">
             <div className="card">
               <img src={newBeerImg} className="card-img-top" alt="..." />

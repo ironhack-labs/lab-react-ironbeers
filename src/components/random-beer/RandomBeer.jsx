@@ -16,6 +16,13 @@ class RandomBeer extends React.Component {
 
   render() {
       const { randomBeer } = this.state;
+      if(randomBeer.length === 0) {
+        return (
+          <div className="container my-4">
+            <h2>Loading...</h2>
+          </div>
+          )
+      }
     return (
         <div>
         <Navbar />

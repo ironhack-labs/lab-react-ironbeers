@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(/bg-beer.jpg) no-repeat center/cover fixed; background-attachment: fixed; 
+  height: 100%;
+  width: 100%;
 }
 
 code {
