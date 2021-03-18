@@ -21,7 +21,7 @@ function ListBeers() {
       {items.map((beer ,i) => (
               
               <div className="mt-5"  key={i}>
-              <img src={beer.image_url} />
+              <img src={beer.image_url} alt="Beer picture" />
               <h2 className="mt-4" >{beer.name}</h2>
               <h3 className="mt-2">{beer.tagline}</h3>
               <h4 className="mt-2">{beer.contributed_by}</h4>

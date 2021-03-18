@@ -23,7 +23,7 @@ render() {
     return (
         <div className="container">
             <div className="mt-5"  >
-              <img src={beer.image_url} />
+              <img src={beer.image_url} alt="Beer picture" />
               <h2 className="mt-4" >{beer.name}</h2>
               <h3 className="mt-2">{beer.tagline}</h3>
               <h4 className="mt-2">{beer.contributed_by}</h4>

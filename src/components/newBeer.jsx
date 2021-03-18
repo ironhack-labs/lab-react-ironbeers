@@ -4,7 +4,7 @@ const NewBeer = () => {
   return (
     <div>
       <div>
-      <img src="../assets/new-beer.png" className="card-img-top" alt="..." />  
+        <img src="../assets/new-beer.png" className="card-img-top" alt="..." />
       </div>
     </div>
   );
