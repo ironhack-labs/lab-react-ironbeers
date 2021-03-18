@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { randomBeer } from './../api/beersApi';
+import BeerView from './../components/BeerView';
 
 export class RandomBeer extends Component {
   state = {
@@ -28,16 +29,16 @@ export class RandomBeer extends Component {
         </header>
         <div>
           {singleBeer && (
-            <div>
-              <img src={singleBeer.image_url} alt={singleBeer.name} />
-              <h1>{singleBeer.name}</h1>
-              <span>{singleBeer.tagline}</span>
-              <br />
-              <div>{singleBeer.first_brewed}</div>
-              <div>{singleBeer.attenuation_level}</div>
-              <p>{singleBeer.description}</p>
-              <small>{singleBeer.contributed_by}</small>
-            </div>
+            <BeerView
+              name={singleBeer.name}
+              _id={singleBeer._id}
+              contributed_by={singleBeer.contributed_by}
+              tagline={singleBeer.tagline}
+              img={singleBeer.image_url}
+              first_brewed={singleBeer.first_brewed}
+              attenuation_level={singleBeer.attenuation_level}
+              description={singleBeer.description}
+            />
           )}
         </div>
       </div>

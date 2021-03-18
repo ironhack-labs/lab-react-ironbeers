@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { allBeers } from './../api/beersApi';
+import { NavBar } from './../components/NavBar';
 
 export class AllBeers extends Component {
   state = {
@@ -22,7 +23,7 @@ export class AllBeers extends Component {
     return (
       <div>
         <header>
-          <Link to="/">Home</Link>
+          <NavBar />
         </header>
         <div>
           {this.state.beersList &&
@@ -34,7 +35,7 @@ export class AllBeers extends Component {
                   <span>{beer.tagline}</span>
                   <br />
                   <small>{beer.contributed_by}</small>
-                  <hr/>
+                  <hr />
                 </div>
               </Link>
             ))}
