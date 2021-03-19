@@ -1,7 +1,17 @@
 .App {
   text-align: center;
 }
+a{
+  text-decoration: none;
+  font-size: 2em;
+}
 
+.flex-column{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -34,5 +44,5 @@
   }
   to {
     transform: rotate(360deg);
-  }
-}
+  } */
+/* } */
