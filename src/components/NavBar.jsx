@@ -12,7 +12,7 @@ function NavBar(props) {
             {
                 props.location.pathname ==="/" ||
                 <div className="NavBar__NavBar">
-                <h1><Link to="/">Home</Link></h1>
+                <h1><Link to="/" className="Link">Home</Link></h1>
                 </div>
             }
 

@@ -6,7 +6,7 @@ export default function OneBeer(props) {
 
     return (
         <div>
-            <img src={image_url} alt=""/>
+            <img src={image_url} alt="" className="OneBeer__img"/>
             <div>
                 <div>{name}</div>
                 <div>{attenuation_level}</div>

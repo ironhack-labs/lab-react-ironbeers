@@ -43,7 +43,7 @@ export default class Beers extends Component {
 
         return (
             <div>
-                <div className="Beers__search">
+                <div className="Beers__search Link">
                     <label htmlFor="beer-search">Search</label>
                     <input type="text" name="beer-search" id="beer-search" onChange={this.handleSearchChange} value={this.state.searchName}/>
                 </div>
