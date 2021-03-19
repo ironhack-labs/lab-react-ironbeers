@@ -6,8 +6,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+ 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.form{
+  font-size: 14px;
+}
+.form> label{
+  text-align: left;
+  padding: 20px;
+}
+.form >input {
+  border-radius: 40px;
+  height: 50px;
+}
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
+ body {
+
+}
 }
