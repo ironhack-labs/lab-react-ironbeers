@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn-home{
+  height: 40px
+}
+
+.header{
+  background-color: lightblue;
+}
