@@ -21,7 +21,7 @@ class SingleBeer extends Component {
     return (
         <div>
         {this.state.beer.length === 0 && <h1>Loading...</h1>}
-        {this.state.beer.legnth !==0 && 
+        {this.state.beer.length !==0 && 
         <div>
             <div>
             <img style={{height: '350px'}} src={this.state.beer.image_url} alt="image of beer"/>

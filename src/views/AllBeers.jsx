@@ -1,4 +1,3 @@
-import { getNodeText } from '@testing-library/dom';
 import React, { Component } from 'react';
 import Header from './../components/Header';
 import axios from 'axios';
