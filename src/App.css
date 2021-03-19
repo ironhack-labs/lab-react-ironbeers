@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home img {
+  max-width: 360px;
+}
+.home p {
+  margin-bottom: 4vh;
+  color: lightslategrey;
+  font-style: italic;
+}
+.home-header {
+  max-width: 100vh;
+  max-height: 55px;
+}
+.beer-item {
+  display: flex;
+  border: grey 2px solid;
+  margin-top: 10px;
+  padding: 10px;
+  height: 180px;
+}
+.img-box {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-box img {
+  max-width: 70px;
+  max-height: 150px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.basic-info {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.basic-info h3 {
+  color: grey;
+}
+/* ========= Beer-details ========= */
+.beer-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 20px;
+}
+.beer-details img {
+  height: 40vh;
+  padding: 10px 0;
+}
+.firstLine, .secondLine {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px 0;
+  width: 100%;
+}
+.light-grey {
+  color: lightslategrey;
+}
+.beer-details p {
+  padding: 10px 20px;
+  text-align: justify;
+}
+.beer-details h4 {
+  font-style: italic;
+}
+/* ========= FORM ========= */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  padding: 10px;
+}
+.form label {
+  font-weight: bolder;
+  padding-left: 15px;
+}
+.form input,
+.form textarea,
+.form button,
+.page-layout input {
+  border-radius: 30px;
+  border: lightgray 2px solid;
+  padding: 5px 15px;
+}
+.form button {
+  background-color: dodgerblue;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
