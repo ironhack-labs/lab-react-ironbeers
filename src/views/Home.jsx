@@ -5,6 +5,7 @@ import randomImage from './../assets/random-beer.png';
 import newImage from './../assets/new-beer.png';
 
 
+
 export default class home extends Component {
   render() {
     return (

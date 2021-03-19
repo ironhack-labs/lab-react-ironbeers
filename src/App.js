@@ -5,21 +5,28 @@ import Home from './views/Home';
 import AllBeers from './views/AllBeers';
 import RandomBeer from './views/RandomBeer';
 import NewBeer from './views/NewBeer';
+import SingleBeer from './views/SingleBeer';
 
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route
-        path='/'
+        exact path='/'
         render={(historyProps) => {
           return <Home {...historyProps} />;
         }}
         />
         <Route
-        path='beers'
+        exact path='/beers'
         render={(historyProps) => {
           return <AllBeers {...historyProps} />;
+        }}
+        />
+        <Route
+        path='/beers/:id'
+        render={(historyProps) => {
+          return <SingleBeer {...historyProps} />;
         }}
         />
         <Route
