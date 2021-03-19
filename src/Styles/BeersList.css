@@ -1,0 +1,39 @@
+.oneBeer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px ;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.oneBeer img{
+    max-height: 80px;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    width: 70%;
+}
+
+.oneBeer h1{
+    font-size: 1em;
+    margin: 7px 0;
+    color: black;
+}
+
+.oneBeer p{
+    font-size: .7em;
+    margin: 3px 0;
+    color: black;
+}
+
+.tag{
+    color: grey;
+    font-weight: 600;
+}

@@ -1,0 +1,32 @@
+.newBeer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.newBeer input, .newBeer textarea{
+    width: 70%;
+    margin: 0 0 15px 0;
+}
+
+.newBeer input{
+    border-radius: 20px;
+}
+
+.newBeer textarea{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.newBeer button{
+    width: 70%;
+    border-radius: 20px;
+    color: white;
+    padding: 5px;
+    border: none;
+    background-color: #7373b9;
+    margin-top: 10px;
+    font-weight: 600;
+}

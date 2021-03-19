@@ -1,0 +1,50 @@
+.theBeer img{
+    max-height: 200px;
+}
+
+.theBeer article{
+    margin: 0 20px;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.theBeer h1{
+   font-size: 1em;
+   margin: 10px 0;
+   font-weight: 500;
+}
+
+.theBeer h2{
+    font-size: 1em;
+    color: grey;
+    margin: 10px 0;
+}
+
+#image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.tagline{
+    color: grey;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.date{
+    margin: 10px 0;
+}
+
+#description{
+    margin: 10px 0;
+}
+
+#creator{
+    color: grey;
+    font-weight: 600;
+}
