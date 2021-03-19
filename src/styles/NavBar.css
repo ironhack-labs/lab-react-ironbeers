@@ -1,0 +1,9 @@
+.NavBar__NavBar {
+    height: 60px;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 20px; */
+}

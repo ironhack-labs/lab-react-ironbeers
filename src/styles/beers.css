@@ -1,0 +1,39 @@
+.Beers_card {
+    height: 200px;
+    margin: 20px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    color: black
+}
+
+.Beers_card ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.Beers_images {
+    height: 180px;
+    width: 180px;
+}
+
+.Beers_images img {
+    height: 100%
+}
+
+.Beers__search {
+    background-color: rgb(186, 206, 212);
+    height: 50px ;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+.Beers__search input {
+    width: 50% ;
+    height: 30px;
+    margin: 20px;
+}
