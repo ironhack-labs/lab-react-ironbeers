@@ -1,0 +1,34 @@
+.searchbar {
+    height: 40px;
+    width: 50vw;
+    padding: 6px;
+    margin: 30px;
+}
+
+.BeerRow {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+.BeerRow > img {
+    height: 80px;
+}
+
+.BeerInfo {
+    margin-left: 20px;
+}
+.BeerInfo h2{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.BeerInfo h3{
+    font-size: 1rem;
+    color: grey;
+    margin-bottom: 10px;
+
+}
+.BeerInfo p{
+    font-size: 0.7rem;
+}

@@ -1,0 +1,33 @@
+.BeerForm {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.BeerForm label{
+    font-size: 0.8rem;
+}
+
+
+.BeerForm input,
+.BeerForm textarea {
+    padding: 6px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid grey;
+    outline: 0;
+}
+
+.BeerForm input {
+    height: 30px;
+}
+.BeerForm textarea {
+    height: 100px;
+}
+
+.BeerForm button {
+    height: 30px;
+    width: 100px;
+    
+}

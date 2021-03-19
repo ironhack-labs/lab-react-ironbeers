@@ -1,0 +1,17 @@
+.Loader {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Loader p {
+    font-size: 2rem;
+    color: black;
+}
+
+.searchbar {
+    height: 40px;
+    width: 50vw;
+    padding: 6px;
+    margin: 30px;
+}

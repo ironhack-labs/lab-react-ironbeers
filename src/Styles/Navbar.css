@@ -1,0 +1,16 @@
+.NavBar {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+header {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+.HomeBtn {
+    color: white;
+}

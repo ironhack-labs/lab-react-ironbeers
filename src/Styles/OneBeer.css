@@ -1,0 +1,30 @@
+.OneBeer {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+.OneBeer img {
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 40px;
+}
+
+.OneBeer h1{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.OneBeer h2{
+    font-size: 1rem;
+    color: grey;
+    margin-bottom: 10px;
+
+}
+.OneBeer .specs{
+    font-size: 1.5rem;
+    color: grey;
+}
+.OneBeer .creator{
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
