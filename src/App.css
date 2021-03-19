@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +33,222 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.lost {
+  height: 53vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__image {
+  height: 19vh;
+  width: 100vw;
+}
+
+.home__link {
+  text-decoration: none;
+  color: black;
+  font-size: 0.7rem;
+}
+
+.home__box {
+  margin-bottom: 3vh;
+}
+
+.home__para {
+  margin: 0.5vh 10px;
+}
+
+.home__box > p, h1 {
+  margin: 0 10px;
+}
+
+.navbar {
+  width: 100vw;
+  height: 7vh;
+  background: dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.beer__list {
+  width: 100vw;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.beer__list-item {
+  border-bottom: 1px solid dodgerblue;
+  height: 25vh;
+  width: 98vw;
+  margin: 0;
+  
+}
+
+.beer__box {
+  display: flex;
+  height: 25vh;
+  width: 94vw;
+  padding: 20px
+  
+}
+
+.beer__image-box {
+  width: 25vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.beer__image {
+  height: 20vh;
+
+}
+
+.beer__info {
+  width: 60vw;
+  padding: 0 10px;
+}
+
+.beer__info > h3 {
+  margin: 15px 0;
+
+}
+
+.beer__info h5 {
+  margin: 0;
+  color: slategray;
+}
+
+.beer__info p {
+  font-size: 0.6rem;
+
+}
+
+.details__box {
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.details__image {
+  height: 30vh;
+}
+
+.details__info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details__info-box > p {
+  width: 95vw;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.details__small-details {
+  margin: 0;
+  padding: 0;
+  width: 98vw;
+  display: flex;
+  justify-content: center;
+}
+
+.details__small-details > p {
+  margin: 0 10px;
+}
+
+.form__label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  width: 83vw;
+  margin: 3px 0;
+
+}
+
+.form__input {
+  height: 20px;
+  width: 85vw;
+  border: lightskyblue 1px solid;
+  border-radius: 20px;
+  margin-bottom: 15px;
+
+}
+
+.form {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.form__button {
+  width: 80vw;
+  height: 30px;
+  background: dodgerblue;
+  color: white;
+  border-radius: 20px;
+  font-weight: 700;
+  border: none;
+  margin-top: 1vh;
+}
+
+#description {
+  height: 15vh;
+}
+
+.search__box {
+  box-sizing: border-box;
+  width: 100vw;
+  margin: 0;
+  padding: 0 2vw;
+  display: flex;
+  height: 7vh;
+  align-items: center;
+  background: rgb(126, 186, 247);
+  color: white;
+  justify-content: space-between;
+
+}
+
+.search__box > h2 {
+  margin: 0;
+  padding: 0;
+  height: 3vh;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.search__bar {
+  width: 74vw;
+  border: none;
+  height: 3vh;
 }
