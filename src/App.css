@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.homepage-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar{
+  color: #61dafb;
+}
