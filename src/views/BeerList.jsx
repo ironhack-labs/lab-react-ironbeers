@@ -40,4 +40,19 @@ class BeerList extends Component {
     }
 }
 
+export const Search = (props) => {
+    const handleInputChange = (event) => {
+      props.onQueryChange(event.target.value);
+    };
+  
+    return (
+      <input
+        type="text"
+        placeholder="Search for a beer..."
+        value={props.query}
+        onChange={handleInputChange}
+      />
+    );
+  };
+
 export default BeerList;

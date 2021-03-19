@@ -12,14 +12,20 @@ export const randomBeer = async () => {
     return body.results;
 };
 
-export const newBeer = async () => {
-    const response = await axios.get('');
+export const singleBeer = async id => {
+    const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`);
     const body = response.data;
     return body.results;
 };
 
-export const singleBeer = async id => {
-    const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`);
+export const newBeer = async () => {
+    const response = await axios.get('https://ih-beers-api2.herokuapp.com/beers/new');
+    const body = response.data;
+    return body.results;
+};
+
+export const searchBar = async () => {
+    const response = await axios.get('https://ih-beers-api2.herokuapp.com/beers/search?q={query}');
     const body = response.data;
     return body.results;
 };
