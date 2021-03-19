@@ -21,10 +21,13 @@ export class AllBeers extends Component {
         .catch(err => console.log(err))
     }
 
-    componentDidUpdate() {
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${this.state.search}`)
-        .then(res => this.setState({beers: res.data}))
-        .catch(err => console.log(err))
+    componentDidUpdate(prevProps, prevState) {
+        console.log(prevState.search);
+        if (prevState.search !== this.state.search) {
+            axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${this.state.search}`)
+            .then(res => this.setState({beers: res.data}))
+            .catch(err => console.log(err))
+        }
     }
     
     handleSearch = (event) => {
@@ -32,6 +35,7 @@ export class AllBeers extends Component {
     }
 
     render() {
+        
         const {beers, apiLoad} = this.state
 
         if(beers.length === 0 && !apiLoad) { 
