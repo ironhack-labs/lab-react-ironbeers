@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -43,4 +43,23 @@
   margin: 2vh;
   text-decoration: none;
   color: white;
+}
+
+.beer-name {
+  font-size:  8vh;
+  /* background-col; */
+}
+
+.tagline {
+  color: grey;
+}
+
+ul {
+  list-style-type: none;
+  margin: 20vh 0;
+}
+
+img {
+  width: 30px;
+  margin-top: 10vh;
 }

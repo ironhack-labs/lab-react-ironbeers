@@ -5,7 +5,7 @@ import Header from '../Components/Header';
 function NewBeer() {
     return (
         <div>
-            <Header></Header>
+            <Header/>
             <h1>Add a beer</h1>
         </div>
     )

@@ -5,7 +5,7 @@ import Header from '../Components/Header';
 function RandomBeer() {
     return (
         <div>
-            <Header></Header>
+            <Header/>
             <h1>Random beer</h1>
         </div>
     )
