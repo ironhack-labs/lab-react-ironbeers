@@ -7,24 +7,24 @@ import randomBeer from './../assets/randomBeer.png';
 const Home = () => {
   return (
     <div>
-      <div>
+      <div className="alignHomePage">
         <img src={beers} />
         <Link to="/beers">
           <h1>All Beers</h1>
         </Link>
-        <p>
+        <p style={{ width: '50vw' }}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
           nobis odit repellat, nihil distinctio nulla voluptates delectus
           repudiandae laborum laudantium dolorem, aperiam mollitia. Error quidem
           molestias, repellat voluptatum aut qui!
         </p>
       </div>
-      <div>
+      <div className="alignHomePage">
         <img src={randomBeer} />
         <Link to="/random-beer" alt=" beer">
           <h1>Random Beer</h1>
         </Link>
-        <p>
+        <p style={{ width: '50vw' }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
           repudiandae incidunt amet placeat quos doloremque ut rem natus,
           assumenda cum dolorem rerum perferendis corporis, aut animi, nobis
@@ -32,12 +32,12 @@ const Home = () => {
         </p>
       </div>
 
-      <div>
+      <div className="alignHomePage">
         <img src={newBeer} />
         <Link to={'/new-beer'}>
           <h1>New Beer</h1>
         </Link>
-        <p>
+        <p style={{ width: '50vw' }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
           eos nisi asperiores distinctio dolor itaque dolorem nulla amet
           provident in eveniet, laborum quae, earum blanditiis cumque ab rerum

@@ -14,7 +14,7 @@ const Header = () => {
         }}
       >
         <NavLink to="/">
-          <ImHome />
+          <ImHome className="homeIcon" />
         </NavLink>
       </header>
     </div>

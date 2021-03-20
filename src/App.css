@@ -36,14 +36,40 @@
     transform: rotate(360deg);
   }
 }
+.alignHomePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .beer {
-  margin-left: 50px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
+  border-bottom: 1px solid black;
 }
 
 .beerListItems {
   text-align: center;
+}
+.input {
+  width: 60vw;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 20px;
+}
+.inputDescription {
+  width: 60vw;
+  margin-bottom: 20px;
+  height: 150px;
+  border-radius: 20px;
+}
+.label {
+  font-weight: bold;
+}
+.homeIcon {
+  height: 40px;
+  width: 40px;
 }

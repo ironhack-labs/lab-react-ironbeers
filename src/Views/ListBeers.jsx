@@ -35,6 +35,7 @@ class ListBeers extends React.Component {
               <h3 style={{ width: '200px' }}>{beer.tagline}</h3>
 
               <h5>Created By: {beer.contributed_by}</h5>
+              <hr />
             </div>
           </div>
         ))}

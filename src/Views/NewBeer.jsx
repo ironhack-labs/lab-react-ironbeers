@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Header from '../Components/Header';
+import './../App.css';
 
 class NewBeer extends Component {
   state = {
@@ -44,8 +45,12 @@ class NewBeer extends Component {
     return (
       <form method="" onSubmit={this.handleSubmit}>
         <div>
-          <label htmlFor="name">Name</label>
+          <label className="label" htmlFor="name">
+            Name
+          </label>
+          <br />
           <input
+            className="input"
             type="text"
             name="name"
             value={this.state.name}
@@ -53,8 +58,12 @@ class NewBeer extends Component {
           />
         </div>
         <div>
-          <label htmlFor="tagline">Tagline</label>
+          <label className="label" htmlFor="tagline">
+            Tagline
+          </label>
+          <br />
           <input
+            className="input"
             type="text"
             name="tagline"
             value={this.state.tagline}
@@ -62,8 +71,12 @@ class NewBeer extends Component {
           />
         </div>
         <div>
-          <label htmlFor="description">Description</label>
+          <label className="label" htmlFor="description">
+            Description
+          </label>
+          <br />
           <input
+            className="inputDescription"
             type="text"
             name="description"
             value={this.state.description}
@@ -71,8 +84,12 @@ class NewBeer extends Component {
           />
         </div>
         <div>
-          <label htmlFor="first_brewed"> First Brewed</label>
+          <label className="label" htmlFor="first_brewed">
+            First Brewed
+          </label>
+          <br />
           <input
+            className="input"
             type="text"
             name="first_brewed"
             value={this.state.first_brewed}
@@ -80,8 +97,12 @@ class NewBeer extends Component {
           />
         </div>
         <div>
-          <label htmlFor="brewers_tips">Brewers Tips</label>
+          <label className="label" htmlFor="brewers_tips">
+            Brewers Tips
+          </label>
+          <br />
           <input
+            className="input"
             type="text"
             name="brewers_tips"
             value={this.state.brewers_tips}
@@ -89,8 +110,12 @@ class NewBeer extends Component {
           />
         </div>
         <div>
-          <label htmlFor="attenuation_level">Attenuation Level</label>
+          <label className="label" htmlFor="attenuation_level">
+            Attenuation Level
+          </label>
+          <br />
           <input
+            className="input"
             type="number"
             name="attenuation_level"
             value={this.state.attenuation_level}
@@ -98,15 +123,21 @@ class NewBeer extends Component {
           />
         </div>
         <div>
-          <label htmlFor="contributed_by">Contributed By</label>
+          <label className="label" htmlFor="contributed_by">
+            Contributed By
+          </label>
+          <br />
           <input
+            className="input"
             type="text"
             name="contributed_by"
             value={this.state.contributed_by}
             onChange={this.handleChange}
           />
         </div>
-        <button>Add New</button>
+        <button className="input" style={{ backgroundColor: '#00BFFF' }}>
+          Add New
+        </button>
       </form>
     );
   }
