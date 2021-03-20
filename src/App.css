@@ -2,37 +2,76 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-color: dodgerblue;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.homeImg {
+  width: 100%;
+  height: auto;
+}
+
+.allBeersDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.allBeersDescr, .allBeersImg {
+  margin: 5%;
+}
+
+.oneBeer {
+  display: flex;
+  flex-direction: column;
+}
+
+.oneBeerTitle {
+  display: flex;
+  justify-content: space-around;
+}
+
+.oneBeerTag {
+  display: flex;
+  justify-content: space-around;
+}
+
+.oneBeerDescr {
+  width: 80%;
+  text-align: justify;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.divForm {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+
+input {
+  margin-top: 1%;
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 1%;
+}
+
+button {
+  border-radius: 20px;
+  background-color: dodgerblue;
+  padding: 1%;
+  margin: 2%;
+  width: 90%;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
