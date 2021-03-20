@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Header from './Header'
 
 class OneBeer extends Component {
 
@@ -35,6 +36,7 @@ componentDidMount() {
 
         return (
             <div>
+                <Header>Go back Home</Header>
                 <h1>You want me?</h1>
                 <h2>
                 {this.state.beer.name} 

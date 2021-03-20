@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import {Link} from 'react-router-dom'
+import Header from './Header'
 
 class Beers extends React.Component{
 
@@ -26,6 +27,7 @@ class Beers extends React.Component{
     render(){
         return(
             <div>
+                <Header>Go back Home</Header>
                <h1>All the beers are here</h1>
                {this.state.beers.map((beer) => {
                    return (
