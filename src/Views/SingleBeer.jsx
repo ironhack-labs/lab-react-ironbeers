@@ -7,7 +7,7 @@ class SingleBeer extends React.Component {
   };
 
   componentDidMound() {
-    const id = this.props.match.params.beerId;
+    const id = this.props.match.params._id;
     console.log(id);
     console.log('hello');
     axios

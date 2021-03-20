@@ -18,7 +18,7 @@ function App() {
         <Route exact path="/beers" component={ListBeers} />
         <Route exact path="/random-beer" component={RandomBeer} />
         <Route exact path="/new-beer" component={NewBeer} />
-        <Route exact path="/beers/:beerId" component={SingleBeer} />
+        <Route exact path="/beers/:_id" component={SingleBeer} />
       </Switch>
     </div>
   );
