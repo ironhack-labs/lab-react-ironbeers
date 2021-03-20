@@ -35,23 +35,23 @@ export default class NewBeer extends Component {
     render() {
         const {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by} = this.state ;
         return (
-            <div>
+            <div className="NewBeer__container">
                 <form action="" className="NewBeer__form" onSubmit={this.handleCreateBeer}>
-                    <label htmlFor="name">name</label>
+                    <label htmlFor="name">Name</label>
                     <input type="text" id="name" name="name" onChange={this.handleChange} value={name}/>
-                    <label htmlFor="tagline">tagline</label>
+                    <label htmlFor="tagline">Tagline</label>
                     <input type="text" id="tagline" name="tagline" onChange={this.handleChange} value={tagline}/>
-                    <label htmlFor="description">description</label>
+                    <label htmlFor="description">Description</label>
                     <textarea id="description" name="description" onChange={this.handleChange} value={description}/>
-                    <label htmlFor="first_brewed">first_brewed</label>
+                    <label htmlFor="first_brewed">First brewed</label>
                     <input type="text" id="first_brewed" name="first_brewed" onChange={this.handleChange} value={first_brewed}/>
-                    <label htmlFor="brewers_tips">brewers_tips</label>
+                    <label htmlFor="brewers_tips">Brewers tips</label>
                     <input type="text" id="brewers_tips" name="brewers_tips" onChange={this.handleChange} value={brewers_tips}/>
-                    <label htmlFor="attenuation_level">attenuation_level</label>
+                    <label htmlFor="attenuation_level">Attenuation level</label>
                     <input type="Number" id="attenuation_level" name="attenuation_level" onChange={this.handleChange} value={attenuation_level}/>
-                    <label htmlFor="contributed_by">contributed_by</label>
+                    <label htmlFor="contributed_by">Contributed by</label>
                     <input type="text" id="contributed_by" name="contributed_by" onChange={this.handleChange} value={contributed_by}/>
-                    <button>submit</button>
+                    <button>SUBMIT</button>
                 </form>
             </div>
         )

@@ -1,5 +1,42 @@
+.NewBeer__container {
+    display: flex;
+    justify-content: center;
+}
+
 .NewBeer__form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
+    width: 320px;
+}
+
+.NewBeer__form>label, .NewBeer__form>input, .NewBeer__form>textarea, .NewBeer__form>button {
+    width: 100%
+}
+
+.NewBeer__form>label {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.NewBeer__form>input, .NewBeer__form>textarea, .NewBeer__form>button {
+    border-radius: 15px;
+    padding: 5px ;
+    border: 2px solid grey;
+}
+
+.NewBeer__form>input, .NewBeer__form>button {
+    height: 30px;
+}
+
+.NewBeer__form>textarea {
+    height: 80px;
+}
+
+.NewBeer__form>button {
+    background-color: lightblue;
+    border: none;
+    margin-top: 20px;
 }
