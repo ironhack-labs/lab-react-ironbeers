@@ -63,3 +63,14 @@ img {
   width: 30px;
   margin-top: 10vh;
 }
+
+form {
+  display:flex;
+  flex-direction: column;
+  width: 50vh;
+  margin: 10vh;
+}
+form > button {
+  width: 20vh;
+  margin: 5vh;
+}
