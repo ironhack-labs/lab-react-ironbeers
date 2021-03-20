@@ -1,0 +1,36 @@
+.Home__container, .Home__container>div {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Home__container>div {
+    width: 70% ;
+}
+
+.Home_image {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.Home_image img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.Home__container article {
+ text-align: left;
+}
+
+.Home__container a {
+    width: 100%;
+    text-align: left;
+}
+
+.Home__container a h1 {
+    color: lightblue;
+    font-weight: normal;
+}
+
+ 
