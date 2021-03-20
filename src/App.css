@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.beer {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.beerListItems {
+  text-align: center;
+}
