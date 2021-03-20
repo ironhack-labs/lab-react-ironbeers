@@ -1,0 +1,25 @@
+.HomePage__container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.HomePage__container h1 {
+  text-align: center;
+}
+
+.HomePage__container section {
+  margin: 10px;
+}
+
+.HomePage__container img {
+  max-width: 100%;
+}
+
+.HomePage__container h2, .HomePage__container p {
+  margin: 0 15px;
+}
+
+.HomePage__container p {
+  color: #666464;
+}

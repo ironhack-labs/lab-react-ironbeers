@@ -1,0 +1,35 @@
+.SingleBeer__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  top: 60px;
+}
+
+.SingleBeer__container img {
+  width: 15%;
+  align-self: center;
+  margin: 5px 0;
+}
+
+.SingleBeer__level div {
+  display: flex;
+}
+
+.SingleBeer__level, .SingleBeer__tagline {
+  color: #666464;
+}
+
+.SingleBeer__level {
+  font-size: 1.2em;
+}
+
+.SingleBeer__level, .SingleBeer__date {
+  align-self: flex-end;
+}
+
+.SingleBeer__description {
+  margin: 10px 0;
+}
