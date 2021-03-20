@@ -45,3 +45,13 @@
 header {
   background-color: #61dafb;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+label {
+  margin-top: 5px;
+}

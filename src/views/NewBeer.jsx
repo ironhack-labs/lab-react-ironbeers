@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import NewBeer from './../components/NewBeer';
 
 export class newBeer extends Component {
   render() {
@@ -8,6 +9,7 @@ export class newBeer extends Component {
         <header>
           <Link to="/">Home</Link>
         </header>
+        <NewBeer />
       </div>
     );
   }
