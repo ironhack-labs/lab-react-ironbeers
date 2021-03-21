@@ -31,7 +31,7 @@ class OneBeer extends React.Component {
         <h2>
           {this.state.beer.name} {this.state.beer.price}€
         </h2>
-        <img src={this.state.beer.image} alt="" />
+        <img src={this.state.beer.image_url} alt="" />
       </div>
     );
   }

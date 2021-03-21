@@ -6,7 +6,7 @@ const Header = (props) => {
 
   return (
     <div>
-        
+        <img src="/assets/header-home-beers.png" alt="" />
     </div>
   );
 };
