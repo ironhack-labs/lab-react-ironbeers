@@ -59,7 +59,7 @@ export class BeerForm extends Component {
             console.log(response);
           })
           .catch(function (error) {
-            console.log("ERRROR ",error);
+            console.log("ERRROR", error);
           });
 
       }

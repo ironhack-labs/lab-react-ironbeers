@@ -8,14 +8,13 @@ export class BeerDetail extends Component {
         beer: {}
     }
  
-
     componentDidMount() {
         axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.id}`)
-        .then(response => {
-            this.setState({beer: response.data})
-            console.log(response.data)
-            
-        })
+            .then(response => {
+                this.setState({beer: response.data})
+                console.log(response.data)
+            }
+        )
     }
 
     render() {

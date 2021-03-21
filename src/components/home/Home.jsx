@@ -7,7 +7,7 @@ import newBeerImg from '../../assets/new-beer.png';
 export class Home extends Component {
     render() {
         return (
-                <div className="card-group m-4">
+            <div className="card-group m-4">
                 <div className="card m-2">
                     <img src={beersImg} className="card-img-top" alt="..." />
                         <div className="card-body">
