@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -32,7 +38,31 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+a {
+  color: rgb(176, 89, 194);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(64, 1, 77);
+}
+
+.homepageLinks {
+  max-width: 100vw;
+  width: 600px;
+}
+
+#homepage {
+  display: flex;
+  flex-direction: column;
+}
+
+.beers {
+  width: 50px;
 }
