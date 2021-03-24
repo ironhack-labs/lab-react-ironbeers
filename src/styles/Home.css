@@ -1,0 +1,30 @@
+.Home {
+  width: 100%;
+}
+
+.Home a {
+  text-decoration: none;
+  color: grey;
+  margin-bottom: 30px;
+}
+
+.Home h2,
+.Home p {
+  width: 95vw;
+}
+
+.Home .image {
+  height: 25vh;
+}
+
+.Home .beers .image {
+  background-image: url(./../assets/beers.png);
+}
+
+.Home .random .image {
+  background-image: url(./../assets/random-beer.png);
+}
+
+.Home .new .image {
+  background-image: url(./../assets/new-beer.png);
+}

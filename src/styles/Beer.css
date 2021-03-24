@@ -1,0 +1,28 @@
+.Beer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+.Beer > img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.info {
+  margin-left: 20px;
+}
+.info h2 {
+  font-size: 1.2rem;
+  color: black;
+}
+.info h3 {
+  font-size: 1rem;
+  color: grey;
+  margin-bottom: 10px;
+}
+.info p {
+  font-size: 0.8rem;
+  color: darkgrey;
+}

@@ -1,0 +1,29 @@
+.SingleBeer {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.SingleBeer img {
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+.SingleBeer h1 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.SingleBeer h2 {
+  font-size: 0.9rem;
+  color: grey;
+  margin-bottom: 10px;
+}
+.SingleBeer .specs {
+  font-size: 1rem;
+  color: grey;
+}
+.SingleBeer .creator {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}

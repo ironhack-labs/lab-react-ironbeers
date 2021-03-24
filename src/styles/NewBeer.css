@@ -1,0 +1,38 @@
+.NewBeer {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.NewBeer label {
+  font-size: 0.8rem;
+}
+
+.NewBeer input,
+.NewBeer textarea {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid cornflowerblue;
+  outline: 0;
+}
+
+.NewBeer input {
+  height: 30px;
+}
+.NewBeer textarea {
+  height: 100px;
+}
+
+.NewBeer button {
+  height: 30px;
+  width: 100px;
+  align-self: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 5px;
+}
