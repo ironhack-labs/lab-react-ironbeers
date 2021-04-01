@@ -13,3 +13,7 @@ export const getAllBeers = () => {
 export const getBeer = (id) => {
     return http.get(`/beers/${id}`)
 }
+
+export const getRandomBeer = () => {
+    return http.get('/beers/random')
+}

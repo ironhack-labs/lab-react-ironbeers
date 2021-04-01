@@ -14,8 +14,6 @@ class BeerDetail extends Component {
     }
 
     fetchBeer = () => {
-        console.log('fetchBeer', this.props.match.params)
-
         const {id} = this.props.match.params
 
         getBeer(id)
