@@ -1,0 +1,29 @@
+.card {
+    color: #000 !important;
+    text-decoration: none;
+    border-radius: 0;
+    border: none;
+    background-color: #f1f1f1;
+    border: 2px solid transparent;
+}
+
+.card > img {
+    border-radius: 0;
+}
+
+.card:hover {
+    border: 2px solid #bbbbbb;
+    text-decoration: none !important;
+}
+
+.beer_skeleton {
+    height: 200px;
+    width: 100%;
+    background-color: #f1f1f1;
+    animation: skeleton 1s infinite;
+}
+
+@keyframes skeleton {
+    from { background-color: #f1f1f1; }
+    to { background-color: #bbbbbb; }
+}
