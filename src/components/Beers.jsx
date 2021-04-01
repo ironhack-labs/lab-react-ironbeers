@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getBeers } from '../services/BaseService';
+import { getAllBeers } from '../services/BaseService';
 import SyncLoader from 'react-spinners/SyncLoader';
 import SingleBeer from './SingleBeer';
 
@@ -10,8 +10,9 @@ class Beers extends Component {
     }
 
     componentDidMount() {
-        getBeers()
+        getAllBeers()
             .then(beers => this.setState({beers, loading: false}))
+            .catch(err => console.log(err))
     }
 
     render() {
@@ -23,13 +24,13 @@ class Beers extends Component {
                     loading
                     ? (
                         <div className="text-center">
-                            <SyncLoader color="blue"  />
+                            <SyncLoader color="#3ec4fc"  />
                         </div>
                     )
                     : (
-                        <div className="row row-cols-1 row-cols-md-2 g-4">
+                        <div className="row row-cols-1 row-cols-md-2 g-4 d-flex">
                             {beers.map(beer => (
-                                <div key={beer.id}>
+                                <div className="flex-row flex-wrap" key={beer._id}>
                                     <SingleBeer {...beer} />
                                 </div>
                             ))}
