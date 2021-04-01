@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getRandomBeer } from '../services/BaseService';
 import SyncLoader from 'react-spinners/SyncLoader';
+import { Link } from 'react-router-dom';
 
 class RandomBeer extends Component {
     state = {

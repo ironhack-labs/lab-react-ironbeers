@@ -7,13 +7,17 @@ const http = axios.create({
 http.interceptors.response.use(response => response.data)
 
 export const getAllBeers = () => {
-    return http.get('/beers')
+    return http.get('/beers');
 }
 
 export const getBeer = (id) => {
-    return http.get(`/beers/${id}`)
+    return http.get(`/beers/${id}`);
 }
 
 export const getRandomBeer = () => {
-    return http.get('/beers/random')
+    return http.get('/beers/random');
+}
+
+export const createBeer = (formFields) => {
+    return http.post('beers/new', {...formFields});
 }
