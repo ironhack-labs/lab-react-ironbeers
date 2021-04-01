@@ -1,5 +1,6 @@
 import React from 'react';
-// import { CreateBeer } from '../services/BaseService'
+import { Redirect } from 'react-router';
+import { createBeer } from '../services/BaseService';
 
 class NewBeer extends React.Component {
     state = {
@@ -8,15 +9,37 @@ class NewBeer extends React.Component {
         description: '',
         first_brewed: '',
         brewers_tips: '',
-        attenuation_level: null,
+        attenuation_level: 0,
         contributed_by: '',
+        redirect: false
+    }
+
+    onChange = (e) => {
+        const { name, value } = e.target;
+
+        this.setState({
+            [name]: value
+        })
+    }
+
+    onSubmit = (e) => {
+        const { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = this.state;
+        e.preventDefault();
+
+        createBeer({name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by})
+            .then(() => this.setState({redirect: true}))
+            .catch(err => console.log(err));
     }
 
     render() {
-        const { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = this.state
+        const { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by, redirect } = this.state;
+
+        if (redirect) {
+            return <Redirect to='/' />
+        }
 
         return(
-            <div className='NewBeer'>
+            <div className='NewBeer container'>
                 <h1>Create New Beer</h1>
                 <form>
                     <div className="form-group">
