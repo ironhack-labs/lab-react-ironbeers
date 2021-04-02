@@ -18,16 +18,18 @@ class Beers extends Component {
             .catch(err => console.log(err))
     }
 
-    onSearch = (e) => {
-        this.setState({ 
+    onSearch = async (e) => {
+
+        await this.setState({ 
             search: e.target.value 
         });
-        
-        searchBeer(this.state.search)
-        .then(foundBeers => this.setState({beers: foundBeers}))
-        .catch(err => console.log(err));
 
-        console.log('this.state.search', this.state.search)
+        searchBeer(this.state.search)
+            .then(foundBeers => this.setState({beers: foundBeers}))
+            .catch(err => console.log(err));
+
+
+        console.log('this.state.search', this.state.search);
     };
 
     render() {

@@ -7,16 +7,16 @@ class SearchBeer extends React.Component {
         search: ''
     }
     
-    onSearch = (e) => {
+    onSearch = (e) => {       
+        searchBeer(this.state.search)
+        .then(foundBeers => this.setState({foundBeers}))
+        .catch(err => console.log(err));
+
         this.setState({ 
             search: e.target.value 
         });
-
-        console.log('this.state.search', this.state.search)
-
-        searchBeer(this.state.search)
-            .then(foundBeers => this.setState({foundBeers}))
-            .catch(err => console.log(err));
+        
+        console.log('this.state.search', this.state.search);
     };
 
     handleSearch = (e) => {
