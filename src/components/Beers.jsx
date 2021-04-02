@@ -3,6 +3,7 @@ import { getAllBeers } from '../services/BaseService';
 import { searchBeer } from '../services/BaseService';
 import SyncLoader from 'react-spinners/SyncLoader';
 import SingleBeer from './SingleBeer';
+import Navbar from './Navbar';
 // import SearchBeer from './SearchBeer';
 
 class Beers extends Component {
@@ -19,7 +20,6 @@ class Beers extends Component {
     }
 
     onSearch = async (e) => {
-
         await this.setState({ 
             search: e.target.value 
         });
@@ -27,16 +27,15 @@ class Beers extends Component {
         searchBeer(this.state.search)
             .then(foundBeers => this.setState({beers: foundBeers}))
             .catch(err => console.log(err));
-
-
-        console.log('this.state.search', this.state.search);
     };
 
     render() {
         const { beers, loading } = this.state
         
         return (
-            <div className='Beers my-3'>
+            <>
+            <Navbar/>
+            <div className='Beers'>
                 {
                     loading
                     ? (
@@ -45,7 +44,7 @@ class Beers extends Component {
                         </div>
                     )
                     : (
-                        <div className="m-3">
+                        <div className="m-1">
                             {/* <SearchBeer searchBeer={this.onSearch} /> */}
                             <div className="SearchBeer">
                                 <form>
@@ -59,10 +58,9 @@ class Beers extends Component {
                                 </form>
                             </div>
 
-                            <div className="row row-cols-1 row-cols-md-2 g-4 d-flex">
-
+                            <div className="row row-cols-1 row-cols-md-2">
                                 {beers.map(beer => (
-                                    <div className="flex-row flex-wrap" key={beer._id}>
+                                    <div key={beer._id}>
                                         <SingleBeer {...beer} />
                                     </div>
                                 ))}
@@ -71,6 +69,7 @@ class Beers extends Component {
                     )
                 }
             </div>
+            </>
         )
     }
 }

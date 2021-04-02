@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navbar from './Navbar';
 import { getRandomBeer } from '../services/BaseService';
 import SyncLoader from 'react-spinners/SyncLoader';
 import { Link } from 'react-router-dom';
@@ -19,10 +20,13 @@ class RandomBeer extends Component {
         const { randomBeer, loading } = this.state
         
         return (
+            <>
+            <Navbar/>
+            {
             loading
             ? (
                 <div className="text-center">
-                    <SyncLoader color="#3ec4fc"  />
+                     <SyncLoader color="#3ec4fc"  />
                 </div>
             )
             : (
@@ -41,8 +45,10 @@ class RandomBeer extends Component {
                     </div>
                 </>
             )
+            }
+            </>
         )
     }
 }
 
-export default RandomBeer;
+// export default RandomBeer;

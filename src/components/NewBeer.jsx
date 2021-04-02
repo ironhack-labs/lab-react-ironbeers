@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './Navbar'
 import { Redirect } from 'react-router';
 import { createBeer } from '../services/BaseService';
 
@@ -39,6 +40,8 @@ class NewBeer extends React.Component {
         }
 
         return(
+            <>
+            <Navbar />
             <div className='NewBeer container'>
                 <h1>Create New Beer</h1>
                 <form>
@@ -94,6 +97,7 @@ class NewBeer extends React.Component {
                     <button type="submit" className="btn text-white" style={{backgroundColor: '#3ec4fc'}}>Create</button>
                 </form>
             </div>
+            </>
         )
     }
 }

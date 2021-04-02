@@ -11,6 +11,10 @@ header {
   background-color: #3ec4fc;
 }
 
+.font-small {
+  font-size: smaller;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

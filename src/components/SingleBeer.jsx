@@ -9,13 +9,19 @@ const SingleBeer = ({
     contributed_by
 }) => {
     return(
-        <div className="card h-100 d-flex flex-row flex-wrap shadow-sm m-2">
-            <img className="card-img" src={image_url} alt={`${name}-beer-img`}/>
-            <div className="card-body">
-                <h5 className="card-title">{name}</h5>
-                <h5 className="card-text text-muted">{tagline}</h5>
-                <p className="card-text"><strong>Created by: </strong>{contributed_by}</p>
-                <Link to={`/beers/${_id}`} className="btn btn-outline-primary btn-sm">See details</Link>
+        <div className="card h-100" style={{borderRadius: 0}}>
+            <div className="row no-gutters">
+                <div className="col-5 img-fluid">
+                    <img className="card-img p-4 w-75 h-100" src={image_url} alt={`${name}-beer-img`}/>
+                </div>
+                <div className="col-7">
+                    <div className="card-body text-left">
+                        <h4 className="card-title">{name}</h4>
+                        <h6 className="card-text text-muted font-weight-bold">{tagline}</h6>
+                        <p className="font-small card-text "><span className="font-weight-bold">Created by: </span>{contributed_by}</p>
+                    <Link to={`/beers/${_id}`} className="btn btn-outline-primary btn-sm mb-3">See details</Link>
+                    </div>
+                </div>
             </div>
         </div>
     )
