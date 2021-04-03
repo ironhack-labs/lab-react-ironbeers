@@ -1,10 +1,10 @@
-.info > p {
+.info-home > p {
     font-size: .8rem;
     text-align: start;
     color: #BFC0C4;
 }
 
-.info > h5 {
+.info-home > h5 {
     text-align: start;
 }
 

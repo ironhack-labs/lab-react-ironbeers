@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
+import { getRandom } from '../../services/BaseService';
 import CircleLoader from 'react-spinners/CircleLoader'
-import { getBeer } from '../../services/BaseService';
 import Navbar from '../Navbar/Navbar';
-import './BeerDetails.css'
 
-class BeerDetails extends Component {
+class BeerRandom extends Component {
     state = {
         beer: null,
         loading: true
     }
 
     componentDidMount() {
-        this.fetchBeer()
-    }
-
-    fetchBeer = () => {
-        const { id } = this.props.match.params
-        
-        getBeer(id)
+        getRandom()
         .then(beer => this.setState({beer, loading: false}))
     }
 
@@ -25,7 +18,7 @@ class BeerDetails extends Component {
         const { beer, loading } = this.state
         
         return (
-            <div className="BeerDetails">
+            <div className="BeerRandom">
                 <Navbar />
                 
                 {
@@ -51,11 +44,11 @@ class BeerDetails extends Component {
                                     <p className="card-text contributed"><b>{beer.contributed_by}</b></p>
                                 </div>
                         </div>    
-                    )
+                        )
                 }
             </div>
         );
     }
 }
 
-export default BeerDetails;
+export default BeerRandom;

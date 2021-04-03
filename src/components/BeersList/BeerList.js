@@ -13,7 +13,10 @@ class BeerList extends Component {
 
     componentDidMount() {
         getBeers()
-        .then(beers => this.setState({beers, loading: false}))
+            .then(beers => {
+                console.log(beers)
+                this.setState({ beers, loading: false })
+            })
     }
 
     render() {
@@ -34,8 +37,8 @@ class BeerList extends Component {
                             <div className="card-group">
                                 {
                                 beers.map(beer => 
-                                    <div className="card" key={beer.id}>
-                                        <Link to={`/beers/${beer.id}`}><img src={beer.image_url} className="card-img-top img-beer" alt="..."/></Link>
+                                    <div className="card beer-card" key={beer._id}>
+                                        <Link to={`/beers/${beer._id}`}><img src={beer.image_url} className="card-img-top img-beer" alt="..."/></Link>
                                         <div className="card-body info-beer">
                                             <h5 className="card-title">{beer.name}</h5>
                                             <p className="card-text tagline mt-3">{beer.tagline}</p>

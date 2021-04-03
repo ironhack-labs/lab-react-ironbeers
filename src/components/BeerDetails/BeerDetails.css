@@ -1,0 +1,12 @@
+.card-beer-details > img {
+    align-self: center;
+}
+
+.info-beer-details > p {
+    text-align: start;
+}
+
+.contributed{
+    font-size: .7rem;
+    color: #5F5F61;
+}
