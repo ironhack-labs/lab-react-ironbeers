@@ -1,0 +1,9 @@
+.card__wrapper:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.card__wrapper{
+    color: black;
+    text-decoration: none;
+}
