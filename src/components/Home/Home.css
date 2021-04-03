@@ -1,0 +1,14 @@
+.info > p {
+    font-size: .8rem;
+    text-align: start;
+    color: #BFC0C4;
+}
+
+.info > h5 {
+    text-align: start;
+}
+
+.link-to {
+    text-decoration: none;
+    color: #000;
+}
