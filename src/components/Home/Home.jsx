@@ -6,9 +6,12 @@ import RandomImage from "../../assets/random-beer.png"
 import NewBeerImage from "../../assets/new-beer.png"
 
 
+
 const Home = () => {
     return (
+        
         <div className='Home'>
+           
             <Link to="/beers" className='card__wrapper'>
                <div className='Card '>
                     <div class="card" style={{ width: "18rem;"}}>
