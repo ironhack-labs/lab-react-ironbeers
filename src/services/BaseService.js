@@ -18,6 +18,6 @@ export const getRandom = () => {
     return http.get('/random')
 }
 
-export const newBeer = () => {
-    return http.post('/new-beer')
+export const newBeer = (fields) => {
+    return http.post('/new', {...fields})
 }
