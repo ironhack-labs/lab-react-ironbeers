@@ -8,9 +8,9 @@ import './Navbar.css'
 const Navbar = () => {
 
     return (
-        <nav class="navbar navbar-expand-lg navbar-light navbar__style">
-            <div class="container-fluid">
-                <Link to="/home"> <h2 className="brand__style"> <FaBeer/> </h2> </Link>
+        <nav className="navbar navbar-expand-lg navbar-light navbar__style">
+            <div className="container-fluid">
+                <Link to="/"> <h2 className="brand__style"> <FaBeer/> </h2> </Link>
             </div>
         </nav>
     )
