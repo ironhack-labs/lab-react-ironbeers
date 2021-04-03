@@ -1,0 +1,10 @@
+.navbar__style{
+    background-color: #43c2fb!important;
+}
+.brand__style{
+    color: yellow;
+}
+
+.brand__style:hover{
+    color: grey;
+}
