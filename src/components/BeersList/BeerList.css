@@ -1,0 +1,23 @@
+.img-beer {
+    width: 2rem;
+    height: 6rem;
+    margin: 1rem 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-beer {
+    text-align: start;
+}
+
+.tagline {
+    font-size: .9rem;
+    color:#BFC0C4;
+}
+
+.creator {
+    font-size: .7rem;
+}
