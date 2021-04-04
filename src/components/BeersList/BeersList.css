@@ -1,0 +1,31 @@
+
+.preloader {
+    margin: 50% 50%;
+  width: 70px;
+  height: 70px;
+  border: 10px solid #eee;
+  border-top: 10px solid #666;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.card__wrapper:hover{
+  
+    text-decoration: none;
+}
+
+.card__wrapper{
+    color: black;
+    text-decoration: none;
+    justify-content: center;
+} 
