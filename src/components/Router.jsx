@@ -28,6 +28,7 @@ class Router extends Component {
                 } 
             )
         })
+        .catch((e) => console.log(e))
     }
 
     getRandomData(){
@@ -40,15 +41,18 @@ class Router extends Component {
                 } 
             )
         })  
+        .catch((e) => console.log(e))
     }
 
     componentDidMount() {
         this.getData() 
-      }
-
-    shouldComponentUpdate(){ 
         this.getRandomData()
-    }
+      }
+ 
+    shouldComponentUpdate(){ 
+        
+        return false
+    } 
 
     
 
@@ -62,7 +66,7 @@ class Router extends Component {
                         <BeersList props={props} data={this.state.data} loading={this.state.loading}/>
                     )}/>
                 <Route exact path='/random' render={(props) => (
-                        <RandomBeer props={props} data={this.state.randomData} loading={this.state.loadingRandom}/>
+                        <RandomBeer props={props} data={this.state.randomData} loading={this.state.loadingRandom} getData={this.getRandomData()}/>
                     )}/>
                 <Route exact path='/new' component={NewBeer}/>
                 <Route  path='/beers/:id' render={(props) => (
