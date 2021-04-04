@@ -8,6 +8,9 @@ const BeersList = ({data, loading}) => {
         return (
             <div className='BeersList'>
                 <NavBar /> 
+                <form>
+                    <input type="text"/>
+                </form>
                 {loading ? (<h1>...loading</h1>) : 
                 <div className='list__wrapper container'>
                     

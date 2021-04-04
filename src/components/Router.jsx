@@ -50,7 +50,6 @@ class Router extends Component {
       }
  
     shouldComponentUpdate(){ 
-        
         return false
     } 
 
