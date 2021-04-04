@@ -6,7 +6,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
     return (
-        <div ClassName='NavBar'>
+        <div className='NavBar'>
             <Link to='/'>
                 <div className='background__nav d-flex justify-content-center align-items-center'>
                 <FontAwesomeIcon icon={faHome} size="4x" color="white"/>
