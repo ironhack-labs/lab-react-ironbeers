@@ -46,9 +46,11 @@ class Router extends Component {
         this.getData() 
       }
 
-    shouldComponentUpdate(){
+    shouldComponentUpdate(){ 
         this.getRandomData()
     }
+
+    
 
     render(){
         return (

@@ -1,0 +1,20 @@
+.input__style{
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    width: 350px;
+}
+
+.textarea__style{
+    height: 200px;
+}
+
+.submit__style{
+    background-color: #3dc4fc;
+    width: 100px;
+    border-radius: 20px;
+    color:white;
+    border:none;
+    height: 40px;
+    width: 340px;
+    margin-top:20px;
+}
