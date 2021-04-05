@@ -9,7 +9,7 @@ class Header extends Component{
                 <div className="container d-flex justify-content-center">
 
                 <Link className="navbar-brand" to="/">
-                <i class="fas fa-house-user">Home</i> 
+                <i className="fas fa-house-user">Home</i> 
                 </Link>
         </div>
       </nav>

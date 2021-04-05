@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router';
 import './App.css';
 import HomePage from './components/HomePage/HomePage'
 import BeersList from './components/BeersList/BeersList';
+import BeersDetails from './components/BeerDetails/BeersDetails';
+import RandomBeer from './components/RandomBeer/RandomBeer';
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route exact path='/beers' component= {BeersList} />
+      <Route exact path='/random-beer' component= {RandomBeer} />
+      <Route exact path='/beers/:id' component= {BeersDetails} />
+    
      
     </Switch>
 

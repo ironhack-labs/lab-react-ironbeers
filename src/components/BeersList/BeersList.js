@@ -31,9 +31,8 @@ class BeersList extends Component{
 
             
             
-                {this.state.loading ? (<div class="preloader"></div>) : 
-                <div className='list__wrapper container'>
-
+                {this.state.loading ? (<div className="preloader"></div>) : 
+                    <div className='container'>
                         {this.state.data.map((beer) => (
                             <Link to={`/beers/${beer._id}`}  className='card__wrapper'>
                                 <div className="row mx-5 my-5" key={beer._id}>
