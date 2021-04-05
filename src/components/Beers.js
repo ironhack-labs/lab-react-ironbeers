@@ -20,7 +20,7 @@ const Beers = () => {
       {loading
         ? 'Loading'
         : beers.map((beer) => {
-            return <Beer key={beer.name} beer={beer} />;
+            return <Beer key={beer._id} beer={beer} />;
           })}
     </div>
   );

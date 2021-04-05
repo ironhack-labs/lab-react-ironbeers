@@ -1,16 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Beer = ({ beer }) => {
-  const { image_url, name, tagline, contributed_by } = beer;
+  const { image_url, name, tagline, contributed_by, _id } = beer;
   return (
-    <div className="Beer card mb-3 h-50" style={{ maxHeight: '10rem' }}>
-      <div className="row">
-        <div className="col-md-4 h-50">
-          <img className="img-fluid mh-100" src={image_url} alt={name} />
+    <div className="Beer card mb-3 ">
+      <div className="row" style={{ maxHeight: '10rem' }}>
+        <div className="col-md-4">
+          <img src={image_url} alt={name} style={{ height: '10rem' }} />
         </div>
-        <div className="col-md-8">
+        <div className="col-md-8 text-left">
           <div className="card-body">
-            <h5 className="card-title">{name}</h5>
+            <Link
+              to={`/${_id}/beer`}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <h5 className="card-title">{name}</h5>
+            </Link>
             <p className="card-text">{tagline}</p>
             <p className="card-text">
               <small className="text-muted">Created by: {contributed_by}</small>
