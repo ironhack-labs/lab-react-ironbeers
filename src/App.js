@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home';
+import AppRouter from './components/AppRouter';
+
 
 function App() {
   return (
-    <div className="App">
-      <Home />
+    <div className="App container">
+   
+      <AppRouter />
  
     </div>
   );
