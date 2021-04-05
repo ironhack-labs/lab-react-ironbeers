@@ -1,10 +1,9 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+const axios = require('axios');
+
 const NewBeer = () => {
-
-
-
 
     return (
         <div className="form__container">
@@ -55,7 +54,12 @@ const NewBeer = () => {
                         alert(JSON.stringify(values, null, 2));
                     }, 400);
 
-                    //TODO: axios POST para añadir la nueva cerveza
+                    axios.post('https://ih-beers-api2.herokuapp.com/beers/new', values)
+                    .then( response => {
+                        console.log('Beer added')
+                    })
+                    .catch( error => console.log(error))
+
                 }}
                 >
 
@@ -63,40 +67,39 @@ const NewBeer = () => {
                     <div className="container">
                         <div className="row justify-content-center m-5">
 
-                                <Form>
-                                    <div className="row m-1">
-                                        <Field type="string" name="name" placeholder="Name"/>
-                                        <ErrorMessage name="name" component="div" />
-                                    </div>
-
-                                    <div className="row m-1">
-                                        <Field type="string" name="tagline" placeholder="tagline"/>
-                                        <ErrorMessage name="tagline" component="div" />
-                                    </div>
-                                    <div className="row m-1">
-                                        <Field type="string" name="description" placeholder="description"/>
-                                        <ErrorMessage name="description" component="div" />
-                                    </div>
-                                    <div className="row m-1">
-                                        <Field type="string" name="first_brewed" placeholder="first brewed"/>
-                                        <ErrorMessage name="first_brewed" component="div" />
-                                    </div>
-                                    <div className="row m-1">
-                                        <Field type="string" name="brewers_tips" placeholder="brewers tips"/>
-                                        <ErrorMessage name="brewers_tips" component="div" />
-                                    </div>
-                                    <div className="row m-1">
-                                        <Field type="number" name="attenuation_level" placeholder="attenuation level"/>
-                                        <ErrorMessage name="attenuation_level" component="div" />
-                                    </div>
-                                    <div className="row m-1">
-                                        <Field type="string" name="contributed_by" placeholder="contributed by"/>
-                                        <ErrorMessage name="contributed_by" component="div" /> 
-                                    </div>
-                                    <div className="row m-2">
-                                        <button type="submit" disabled={isSubmitting}>Submit</button>
-                                    </div>
-                                </Form>
+                            <Form>
+                                <div className="row m-1">
+                                    <Field type="string" name="name" placeholder="Name"/>
+                                    <ErrorMessage name="name" component="div" />
+                                </div>
+                                <div className="row m-1">
+                                    <Field type="string" name="tagline" placeholder="tagline"/>
+                                    <ErrorMessage name="tagline" component="div" />
+                                </div>
+                                <div className="row m-1">
+                                    <Field type="string" name="description" placeholder="description"/>
+                                    <ErrorMessage name="description" component="div" />
+                                </div>
+                                <div className="row m-1">
+                                    <Field type="string" name="first_brewed" placeholder="first brewed"/>
+                                    <ErrorMessage name="first_brewed" component="div" />
+                                </div>
+                                <div className="row m-1">
+                                    <Field type="string" name="brewers_tips" placeholder="brewers tips"/>
+                                    <ErrorMessage name="brewers_tips" component="div" />
+                                </div>
+                                <div className="row m-1">
+                                    <Field type="number" name="attenuation_level" placeholder="attenuation level"/>
+                                    <ErrorMessage name="attenuation_level" component="div" />
+                                </div>
+                                <div className="row m-1">
+                                    <Field type="string" name="contributed_by" placeholder="contributed by"/>
+                                    <ErrorMessage name="contributed_by" component="div" /> 
+                                </div>
+                                <div className="row m-2">
+                                    <button type="submit" disabled={isSubmitting}>Submit</button>
+                                </div>
+                            </Form>
 
                         </div>
                     </div>
