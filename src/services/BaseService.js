@@ -5,7 +5,6 @@ const http = axios.create({
 })
 
 http.interceptors.response.use(response => {
-    //console.log('response.data', response.data)
     return (response.data)
 })
 
@@ -26,6 +25,5 @@ export const createBeer = (formFields) => {
 }
 
 export const searchBeer = (searchQuery) => {
-    //console.log('searchQuery', searchQuery)
     return http.get(`/beers/search?q=${searchQuery}`);
 }

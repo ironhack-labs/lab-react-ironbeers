@@ -4,7 +4,6 @@ import Home from './Home';
 import Beers from './Beers';
 import BeerDetail from './BeerDetail';
 import NewBeer from './NewBeer';
-// import RandomBeer from './RandomBeer';
 
 const AppRouter = () => {
     return(
@@ -13,7 +12,6 @@ const AppRouter = () => {
             <Route exact path='/beers' component={Beers} />
             <Route exact path='/beers/new' component={NewBeer} />
             <Route exact path='/beers/:id' component={BeerDetail} />
-            {/* <Route exact path='/beers/random' component={RandomBeer} /> */}
         </Switch>
     )
 }

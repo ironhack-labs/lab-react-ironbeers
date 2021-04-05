@@ -35,7 +35,8 @@ class BeerDetail extends Component {
                     </div>
                 )
                 : (
-                    <>
+                    <>  
+                    <p>Beer detail</p>
                         <div className="card h-100 d-flex flex-row flex-wrap" style={{border: 0}}>
                             <div className="col-md-12 img-fluid m-3">
                                 <img className="card-img w-25" src={beer.image_url} alt={`${beer.name}-beer-img`}/>
