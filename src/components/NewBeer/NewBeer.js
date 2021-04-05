@@ -9,10 +9,10 @@ class NewBeer extends Component {
         name: '',
         tagline: '',
         description: '',
-        firstBrewed: '',
-        brewersTips: '',
-        attenuation: 0,
-        contributedBy: '',
+        first_brewed: '',
+        brewers_tips: '',
+        attenuation_level: 0,
+        contributed_by: '',
         redirect: false
     }
     onChange = (e) => {
@@ -22,10 +22,10 @@ class NewBeer extends Component {
     }
 
     onSubmit = (e) => {
-        const { name, tagline, description, firstBrewed, brewersTips, attenuation, contributedBy } = this.state
+        const { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = this.state
         e.preventDefault()
 
-        newBeer({ name, tagline, description, firstBrewed, brewersTips, attenuation, contributedBy })
+        newBeer({ name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by })
             .then(() => {
             this.setState({redirect: true})
             })
@@ -33,7 +33,7 @@ class NewBeer extends Component {
     }
 
     render() {
-        const { name, tagline, description, firstBrewed, brewersTips, attenuation, contributedBy, redirect } = this.state
+        const { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by, redirect } = this.state
         
         if (redirect) {
             return <Redirect to='/'></Redirect>
@@ -57,20 +57,20 @@ class NewBeer extends Component {
                         <textarea className="form-control" id="description" name="description" rows="3" onChange={this.onChange} value={description}></textarea>
                     </div>
                     <div className="mb-3 form-newBeer">
-                        <label htmlFor="firstBrewed" className="form-label">First Brewed:</label>
-                        <input type="text" className="form-control" id="firstBrewed" name="firstBrewed" onChange={this.onChange} value={firstBrewed}/>
+                        <label htmlFor="first_brewed" className="form-label">First Brewed:</label>
+                        <input type="text" className="form-control" id="first_brewed" name="first_brewed" onChange={this.onChange} value={first_brewed}/>
                     </div>
                     <div className="mb-3 form-newBeer">
-                        <label htmlFor="brewersTips" className="form-label">Brewers tips:</label>
-                        <input type="text" className="form-control" id="brewersTips" name="brewersTips" onChange={this.onChange} value={brewersTips}/>
+                        <label htmlFor="brewers_tips" className="form-label">Brewers tips:</label>
+                        <input type="text" className="form-control" id="brewers_tips" name="brewers_tips" onChange={this.onChange} value={brewers_tips}/>
                     </div>
                     <div className="mb-3 form-newBeer">
-                        <label htmlFor="attenuation" className="form-label">Attenuation level:</label>
-                        <input type="number" className="form-control" id="attenuation" name="attenuation" onChange={this.onChange} value={attenuation}/>
+                        <label htmlFor="attenuation_level" className="form-label">Attenuation level:</label>
+                        <input type="number" className="form-control" id="attenuation_level" name="attenuation_level" onChange={this.onChange} value={attenuation_level}/>
                     </div>
                     <div className="mb-3 form-newBeer">
-                        <label htmlFor="contributedBy" className="form-label">Contributed by:</label>
-                        <input type="text" className="form-control" id="contributedBy" name="contributedBy" onChange={this.onChange} value={contributedBy}/>
+                        <label htmlFor="contributed_by" className="form-label">Contributed by:</label>
+                        <input type="text" className="form-control" id="contributed_by" name="contributed_by" onChange={this.onChange} value={contributed_by}/>
                     </div>
                     <button type="submit" className="btn btn-info mb-5">ADD NEW</button>
                 </form>
