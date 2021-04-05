@@ -44,7 +44,7 @@ class NewBeer extends React.Component {
             <Navbar />
             <div className='NewBeer container'>
                 <h1>Create New Beer</h1>
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <input
                             type="text" className="form-control mb-2" name="name"

@@ -22,10 +22,10 @@ export const getRandomBeer = () => {
 }
 
 export const createBeer = (formFields) => {
-    return http.post('beers/new', {...formFields});
+    return http.post('/beers/new', {...formFields});
 }
 
 export const searchBeer = (searchQuery) => {
     //console.log('searchQuery', searchQuery)
-    return http.get(`beers/search?q=${searchQuery}`);
+    return http.get(`/beers/search?q=${searchQuery}`);
 }
