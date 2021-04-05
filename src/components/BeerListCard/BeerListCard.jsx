@@ -27,6 +27,7 @@ const BeerListCard = ({beersData}) => {
                 </div>
             </div>
             )
+            return 1
         })
         return list
     }

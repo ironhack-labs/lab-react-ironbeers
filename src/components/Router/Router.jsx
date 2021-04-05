@@ -10,9 +10,6 @@ import BeerDetail from '../views/BeerDetail/BeerDetail'
 
 const Router = ({beersData, loading, props}) => {
 
-    console.log(props)
-
-
     return(
         <Switch>
 

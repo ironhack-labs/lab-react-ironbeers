@@ -1,65 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 
+//components
+import BeerCard from '../../BeerCard/BeerCard'
 import Loader from "react-loader-spinner";
 
-const BeerDetail = ({beersData, loading, props}) => {
-
-    const getBeer = () => {
-    
-        let beer = beersData.filter(beer => (beer._id) === (props.match.params.beerId) )
-        console.log(beer)
-        return beer.map(beer=>{
-            return(
-                <div className="container" key={beer._id}>
-                    <div className="col-xl-10 col-xxl-12">
-                        <div className="row">
-                            <div className="col m-5">
-                                <img src={beer.image_url} alt={beer.name} width="80px"/>
-                            </div>
-                        </div>
-
-                        <div className="row m-3 justify-content-between">
-                            <div className="col-8">
-                                <h1>{beer.name}</h1>
-                            </div>
-                            <div className="col-4">
-                                <h1>{beer.attenuation_level}</h1>
-                            </div>
-                        </div>
-
-                        <div className="row m-3 justify-content-start">
-                            <div className="col-8">
-                                <h5>{beer.tagline}</h5>
-                            </div>
-                            <div className="col-4">
-                                <h6><b>{beer.first_brewed}</b></h6>
-                            </div>
-                        </div>
-
-                        <div className="row m-3">
-                            <div className="col">
-                                <h5 className="text-justify">{beer.description}</h5>    
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            )
-        })
+const axios = require('axios');
 
 
+class BeerDetail extends Component {
+
+    state = {
+        loading: true,
+        beer:null
     }
-    return (
-        <div>
-            {
-                loading ? 
-                <Loader type="TailSpin" color="#00BFFF" height={80} width={80} /> :
-                getBeer()
-            }
-        </div>
-    );
-};
+
+    getBeerDetail (){
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.props.match.params.beerId}`)
+        .then( response => {
+          this.setState({
+              beer: response.data,
+              loading: false
+            })
+          })
+        .catch( error => console.log(error))
+    }
+
+
+    componentDidMount() {
+        this.getBeerDetail()
+      }
+
+    render() {
+
+        return (
+            <div className="BeerDetailContainer">
+                {this.state.loading ?
+                (<div className="container-fluid m-5">
+                    <Loader type="TailSpin" color="#00BFFF" height={80} width={80} />
+                </div>)
+                :
+                    <BeerCard beer={this.state.beer}/>
+                }
+            </div>
+        );
+    }
+}
 
 export default BeerDetail;
