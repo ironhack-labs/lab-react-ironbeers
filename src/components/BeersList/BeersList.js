@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, {Component} from 'react'
+import PacmanLoader from "react-spinners/PacmanLoader";
 import { Link } from 'react-router-dom'
 import './BeersList.css'
 import Header from '../Header/Header'
@@ -31,7 +32,7 @@ class BeersList extends Component{
 
             
             
-                {this.state.loading ? (<div className="preloader"></div>) : 
+                {this.state.loading ? <div style={{textAlign:'center'}}><PacmanLoader color='blue' /></div> : 
                     <div className='container'>
                         {this.state.data.map((beer) => (
                             <Link to={`/beers/${beer._id}`}  className='card__wrapper'>

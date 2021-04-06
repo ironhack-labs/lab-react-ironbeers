@@ -8,12 +8,13 @@ class HomePage extends Component{
         return(
             <div className='container'>
                 <div className='all-beers mt-5'>
-                    <img src='./img/beers.png' alt='beers' />
-                    <h2 className='text-left'>
+                  
+                   
                     <Link className="badge badge-light ml-3" to="/beers">
-                    All beers
+                    <img src='./img/beers.png' alt='beers' />
+                    <h2 className='text-left'>All beers</h2>
                     </Link>
-                    </h2>
+                    
                     <div className='home-text text-left mb-5 mx2'>
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in
@@ -29,12 +30,12 @@ class HomePage extends Component{
                     </div>
                 </div>
                 <div className='random-beer'>
-                    <img src='./img/random-beer.png' alt='beers' />
-                    <h2 className='text-left'>
+
                     <Link className="badge badge-light ml-3" to="/random-beer">
-                    Random Beer
+                    <img src='./img/random-beer.png' alt='beers' />
+                    <h2 className='text-left'> Random Beer </h2>
                     </Link>
-                    </h2>
+
                     <div className='home-text text-left mb-5 mx2'>
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in
@@ -50,12 +51,13 @@ class HomePage extends Component{
                     </div>
                 </div>
                 <div className='new-beer'>
+                    
+                   
+                    <Link className="badge badge-light ml-3" to="/new">
                     <img src='./img/new-beer.png' alt='beers' />
-                    <h2 className='text-left'>
-                    <Link className="badge badge-light ml-3" to="/new-beer">
-                    NewBeer
+                    <h2 className='text-left'> NewBeer </h2>
                     </Link>
-                    </h2>
+                  
                     <div className='home-text text-left mb-5 mx2'>
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in
