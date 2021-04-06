@@ -5,11 +5,11 @@ const Beer = ({ beer }) => {
   const { image_url, name, tagline, contributed_by, _id } = beer;
   return (
     <div className="Beer card mb-3 ">
-      <div className="row" style={{ maxHeight: '10rem' }}>
-        <div className="col-md-4">
+      <div className="row">
+        <div className="col-sm-2 col-md-4">
           <img src={image_url} alt={name} style={{ height: '10rem' }} />
         </div>
-        <div className="col-md-8 text-left">
+        <div className="col-sm-4 col-md-8 text-left">
           <div className="card-body">
             <Link
               to={`/${_id}/beer`}

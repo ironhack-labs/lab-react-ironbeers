@@ -7,14 +7,14 @@ import beersNewImg from '../assets/new-beer.png';
 
 const Home = () => {
   return (
-    <div className="Home vh-100">
+    <div className="Home d-flex flex-column align-items-stretch container mh-100">
       <div className="card text-decoration-none">
         <img src={beersImg} className="card-img-top h-auto" alt="beers" />
         <Link
           to="/beers"
           style={{ color: 'inherit', textDecoration: 'inherit' }}
         >
-          <div className="card-body  ">
+          <div className="card-body">
             <h1 className="card-title">All beers</h1>
             <p className="card-text">
               Commodo eu Lorem elit consequat aliquip proident. Aliqua eiusmod

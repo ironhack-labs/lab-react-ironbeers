@@ -27,7 +27,7 @@ const BeerDetail = (props) => {
     contributed_by,
   } = beer;
   return (
-    <div className="BeerDetail">
+    <div className="BeerDetail container">
       <Header />
       {loading ? (
         'Loading'

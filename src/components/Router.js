@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router';
 import Home from './Home';
 import Beers from './Beers';
-import RandomBeer from './RandomBeer';
 import NewBeer from './NewBeer';
 import BeerDetail from './BeerDetail';
 
