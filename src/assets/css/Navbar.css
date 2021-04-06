@@ -1,0 +1,9 @@
+.Navbar {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+.Navbar > img {
+    width: 10px;
+}
