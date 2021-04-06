@@ -1,0 +1,35 @@
+/* .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.home > section {
+    margin: 50px 0;
+}
+.home > section > h2 {
+    margin: 50px 0;
+}
+
+.home > img {
+
+} */
+
+
+/* flex */
+
+.j-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .j-fd-col {
+      flex-direction: column;
+  }
+  
+  .j-jc-center {
+      justify-content: center;
+  }
