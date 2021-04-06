@@ -1,29 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SingleBeer from './SingleBeer';
 
-class BeerDetails extends Component {
-  state = {
-    beer: {},
-  };
+const Detail = ({ match }) => {
+  const [beer, setBeer] = useState({});
 
-  componentDidMount() {
+  useEffect(() => {
     axios
-      .get(
-        `https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.id}`
-      )
-      .then((response) => this.setState({ beer: response.data }))
+      .get(`https://ih-beers-api2.herokuapp.com/beers/${match.params.id}`)
+      .then((response) => setBeer(response.data))
       .catch((err) => console.log(err));
+    // return () => { } // Cleanup function
+  }, [match.params.id]);
+
+  if (beer.length === 0) {
+    return <div>Currently brewing...</div>;
   }
+  return (
+    <div>
+      <SingleBeer beer={beer} />
+    </div>
+  );
+};
 
-  render() {
-    const { beer } = this.state;
-
-    if (beer.length === 0) {
-      return <div>Currently brewing...</div>;
-    }
-    return <SingleBeer beer={this.state.beer} />;
-  }
-}
-
-export default BeerDetails;
+export default Detail;
