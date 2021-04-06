@@ -32,6 +32,11 @@
   color: white;
 }
 
+.Header i {
+  font-size: 1.5rem;
+  margin-top: 7px;
+}
+
 .navbar {
   display: block !important;
   top: 0;
@@ -46,4 +51,34 @@
 .title {
   font-size: 1.5rem;
   font-weight: bolder;
+}
+
+.List {
+  margin-top: 66px;
+  text-align: left;
+}
+
+.List .title {
+  margin-top: 10%;
+}
+
+.Loader {
+  margin-top: 50%;
+  font-size: 2rem;
+}
+
+.List a {
+  color: #282c34;
+  opacity: 0.7;
+}
+
+.List a:hover {
+  text-decoration: none;
+  opacity: 1;
+  color: #282c34
+}
+
+.List img {
+  max-height: 180px;
+  object-fit: scale-down;
 }

@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card'
 import Beers from '../assets/beers.png'
 import NewBeer from '../assets/new-beer.png'
@@ -10,7 +7,6 @@ import RandomBeer from '../assets/random-beer.png'
 
 function Home() {
   return (
-    <Router>
     <header className="Home">
         <Link to="/beers">
             <Card>
@@ -46,7 +42,6 @@ function Home() {
             </Card>
         </Link>
       </header>
-    </Router>
   );
 }
 
