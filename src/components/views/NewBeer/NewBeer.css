@@ -1,0 +1,29 @@
+.textArea__style{
+    border-radius: 5px;
+    border: 1px solid #cdc7c2;
+    min-height: 100px;
+}
+
+.dateInput__style {
+    height: 34px;
+    color: #767676;
+}
+
+.numberInput__style {
+    width: 80px;
+}
+
+.input__invalid {
+    border: 2px solid red;
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+.error__message {
+    color: red;
+    text-align: left;
+    font-size: small;
+    margin-left: 0;
+    padding: 0;
+}
+

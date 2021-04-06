@@ -1,15 +1,17 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+import './NewBeer.css'
+
 const axios = require('axios');
 
 const NewBeer = () => {
 
+    
     return (
         <div className="form__container">
             <h1>New Beer</h1>
             <Formik
-
                 initialValues={{ 
                     name: '', 
                     tagline: '',
@@ -49,10 +51,7 @@ const NewBeer = () => {
 
                 onSubmit={(values, { setSubmitting }) => {
                     console.log(values)
-                    setTimeout(() => {
-                        setSubmitting(false);
-                        alert(JSON.stringify(values, null, 2));
-                    }, 400);
+                    setSubmitting(false);
 
                     axios.post('https://ih-beers-api2.herokuapp.com/beers/new', values)
                     .then( response => {
@@ -69,35 +68,91 @@ const NewBeer = () => {
 
                             <Form>
                                 <div className="row m-1">
-                                    <Field type="string" name="name" placeholder="Name"/>
-                                    <ErrorMessage name="name" component="div" />
+                                    <div className="col">
+                                        <Field type="string" name="name"  >
+                                        { ({ 
+                                            field, 
+                                            meta: { touched, error } 
+                                            }) => <Field className={ touched && error ? "input__invalid" : "" } placeholder="Name" { ...field } />
+                                        }
+                                        </Field>
+
+                                        <ErrorMessage name="name" component="div" className="error__message"/>
+                                    </div>
                                 </div>
                                 <div className="row m-1">
-                                    <Field type="string" name="tagline" placeholder="tagline"/>
-                                    <ErrorMessage name="tagline" component="div" />
+                                    <div className="col">
+                                        <Field type="string" name="tagline" placeholder="tagline">
+                                        { ({ 
+                                            field, 
+                                            meta: { touched, error } 
+                                            }) => <Field className={ touched && error ? "input__invalid" : "" } placeholder="tagline" { ...field } />
+                                        }
+                                        </Field>
+                                        <ErrorMessage name="tagline" component="div" className="error__message"/>
+                                    </div>
                                 </div>
                                 <div className="row m-1">
-                                    <Field type="string" name="description" placeholder="description"/>
-                                    <ErrorMessage name="description" component="div" />
+                                    <div className="col">
+                                        <Field type="string" name="description" placeholder="description">
+                                        { ({ 
+                                            field, 
+                                            meta: { touched, error } 
+                                            }) => <textarea className={ touched && error ? "input__invalid" : "textArea__style" } placeholder="description" { ...field } />
+                                        }
+                                        </Field>
+                                        <ErrorMessage name="description" component="div" className="error__message"/>
+                                    </div>
                                 </div>
                                 <div className="row m-1">
-                                    <Field type="string" name="first_brewed" placeholder="first brewed"/>
-                                    <ErrorMessage name="first_brewed" component="div" />
+                                    <div className="col">
+                                        <Field name="first_brewed" placeholder="first brewed">
+                                        { ({ 
+                                            field, 
+                                            meta: { touched, error } 
+                                            }) => <Field className={ touched && error ? "input__invalid" : "dateInput__style" } type="date" placeholder="First brewed" { ...field } />
+                                        }
+                                        </Field>
+                                        <ErrorMessage name="first_brewed" component="div" className="error__message"/>
+                                    </div>
+                                    <div className="col">
+
+                                    </div>
                                 </div>
                                 <div className="row m-1">
-                                    <Field type="string" name="brewers_tips" placeholder="brewers tips"/>
-                                    <ErrorMessage name="brewers_tips" component="div" />
+                                    <div className="col">
+                                        <Field type="string" name="brewers_tips" placeholder="brewers tips">
+                                        { ({ 
+                                            field, 
+                                            meta: { touched, error } 
+                                            }) => <Field className={ touched && error ? "input__invalid" : "" } placeholder="Brewers tips" { ...field } />
+                                        }
+                                        </Field>
+                                        <ErrorMessage name="brewers_tips" component="div" className="error__message"/>
+                                    </div>
                                 </div>
                                 <div className="row m-1">
-                                    <Field type="number" name="attenuation_level" placeholder="attenuation level"/>
-                                    <ErrorMessage name="attenuation_level" component="div" />
+                                    <div className="col">
+                                        <Field type="number" name="attenuation_level" placeholder="attenuation level"/>
+                                        <ErrorMessage name="attenuation_level" component="div" className="error__message"/>
+                                    </div>
                                 </div>
                                 <div className="row m-1">
-                                    <Field type="string" name="contributed_by" placeholder="contributed by"/>
-                                    <ErrorMessage name="contributed_by" component="div" /> 
+                                    <div className="col">
+                                        <Field type="string" name="contributed_by" placeholder="contributed by" >
+                                        { ({ 
+                                            field, 
+                                            meta: { touched, error } 
+                                            }) => <Field className={ touched && error ? "input__invalid" : "" } placeholder="Contributed by" { ...field } />
+                                        }
+                                        </Field>
+                                        <ErrorMessage name="contributed_by" component="div" className="error__message"/> 
+                                    </div>
                                 </div>
                                 <div className="row m-2">
-                                    <button type="submit" disabled={isSubmitting}>Submit</button>
+                                    <div className="col">
+                                        <button type="submit" disabled={isSubmitting}  className="btn btn-secondary">Submit</button>
+                                    </div>
                                 </div>
                             </Form>
 

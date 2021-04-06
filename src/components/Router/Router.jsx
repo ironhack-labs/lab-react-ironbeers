@@ -12,16 +12,9 @@ const Router = ({beersData, loading, props}) => {
 
     return(
         <Switch>
-
             <Route exact path="/" component={Home} />
-            <Route 
-                exact path="/beers" 
-                render={ props =>  <AllBeers props={props} beersData={beersData} loading={loading} /> } 
-            /> 
-            <Route 
-                exact path="/beers/:beerId" 
-                render={ props =>  <BeerDetail props={props} beersData={beersData} loading={loading} /> } 
-            /> 
+            <Route exact path="/beers" component={props => <AllBeers {...props} beersData={beersData} loading={loading}/>}/>
+            <Route exact path="/beers/:beerId" component={props => <BeerDetail {...props} beersData={beersData} loading={loading}/>}/>
             <Route exact path="/random-beer" component={RandomBeer} />
             <Route exact path="/new-beer" component={NewBeer} />
         </Switch>
