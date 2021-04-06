@@ -1,5 +1,4 @@
 import React from 'react';
-import '../assets/css/config.css'
 import '../assets/css/Home.css'
 import beers from '../assets/beers.png';
 import randomBeer from '../assets/random-beer.png';
@@ -7,12 +6,13 @@ import newBeer from '../assets/new-beer.png';
 import { Link } from 'react-router-dom';
 const Home = () => {
   return (
-    <div className="j-flex j-fd-col j-jc-center">
-      <h1>Home</h1>
-      <section className="">
-        <img className='' src={beers} alt="beers" />
-        <Link to="/list-beers"><h2>All beers</h2></Link>
-        <p className='col-8'>
+    <div className="__flex __fd-col __jc-center __ta-c">
+      <section className="row">
+        <Link to="/list-beers">
+          <img className='col-12 __mb-1' src={beers} alt="beers" />
+        <h2 className='__mb-2'>All beers</h2>
+        </Link>
+        <p className=''>
           Lorem fistrum qué dise usteer jarl pecador amatomaa papaar papaar va
           usté muy cargadoo por la gloria de mi madre al ataquerl jarl a wan. Te
           va a hasé pupitaa pupita ese pedazo de jarl qué dise usteer sexuarl
@@ -26,9 +26,11 @@ const Home = () => {
           papaar mamaar amatomaa.
         </p>
       </section>
-      <section>
-        <img src={randomBeer} alt="beers" />
-        <Link to="/ramdon-beer"><h2>Ramdon beer</h2></Link>
+      <section className="row">
+        <Link to="/ramdon-beer">
+        <img className='col-12 __mb-1' src={randomBeer} alt="beers" />
+        <h2 className='__mb-2'>Ramdon beer</h2>
+        </Link>
         <p>
           Lorem fistrum qué dise usteer jarl pecador amatomaa papaar papaar va
           usté muy cargadoo por la gloria de mi madre al ataquerl jarl a wan. Te
@@ -43,9 +45,11 @@ const Home = () => {
           papaar mamaar amatomaa.
         </p>
       </section>
-      <section>
-        <img src={newBeer} alt="beers" />
-        <Link to="/new-beer"><h2>New beer</h2></Link>
+      <section  className="row">
+        <Link to="/new-beer">
+        <img className='col-12 __mb-1' src={newBeer} alt="beers" />
+        <h2 className='__mb-2'>New beer</h2>
+        </Link>
         <p>
           Lorem fistrum qué dise usteer jarl pecador amatomaa papaar papaar va
           usté muy cargadoo por la gloria de mi madre al ataquerl jarl a wan. Te
