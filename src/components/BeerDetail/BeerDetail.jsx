@@ -27,7 +27,7 @@ const BeerDetail = () => {
         ? <div className="spin"><BeatLoader size={15} /></div>
         : (
           <div className="BeerDetail">
-          <h1 style={{marginTop: 60, marginLeft: 30, color: "#a90000"}}>Love your beer</h1>
+          <h1 style={{paddingTop: 60, paddingLeft: 30, color: "#a90000"}}>Love your beer</h1>
             <hr/>
             <BeerOne {...states.beer} />
           </div>

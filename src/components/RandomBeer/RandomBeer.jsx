@@ -38,7 +38,7 @@ const RandomBeer = () => {
         ? <div className="spin"><BeatLoader size={15} /></div>
         : (
           <>
-            <h1 style={{marginTop: 60, marginLeft: 30, color: "#a90000"}}>Random Beer</h1>
+            <h1 style={{paddingTop: 60, paddingLeft: 30, color: "#a90000"}}>Random Beer</h1>
             <hr/>
             <BeerOne {...states.beer}/>
           </>
