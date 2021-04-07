@@ -22,6 +22,15 @@ a:active {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Card */
+
+.__card-R {
+  margin: 15px;
+  display: flex;  
+} 
+.__card-R > img {
+  height: 18rem;  
+} 
 /* width */
 
 .__w-1 {
@@ -236,8 +245,9 @@ a:active {
   text-align: center;
 }
 
-.row {
-  margin-top: 2rem;
+.__row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .row::after {

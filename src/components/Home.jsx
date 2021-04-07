@@ -3,22 +3,9 @@ import '../assets/css/Home.css';
 import beers from '../assets/beers.png';
 import randomBeer from '../assets/random-beer.png';
 import newBeer from '../assets/new-beer.png';
-import { getBeers } from '../services/BaseService';
 import { Link } from 'react-router-dom';
 
-class Home extends Component {
-  state = {
-    beers: [],
-    loading: true
-  }
-
-  componentDidMount() {
-    getBeers()
-    .then(countries => this.setState({ countries, loading: false }))
-  }
-
-
-  render() {
+const Home = () => {
     return (
       <div className=" __cont __flex __fd-col __jc-center __ta-c">
         <section className="row">
@@ -80,7 +67,6 @@ class Home extends Component {
         </section>
       </div>
     );
-  }
 }
 
 export default Home;
