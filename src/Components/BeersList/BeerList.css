@@ -1,0 +1,30 @@
+.BeersList {
+    width: 100%;
+  }
+  
+  .BeersList__container {
+    position: relative;
+    top: 10px;
+  }
+  
+  .BeersList__beer-box {
+    border-bottom: 1px solid #666464;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .BeersList__beer-box img {
+    max-width: 25%;
+    margin: 10px;
+    margin-left: 20px;
+  }
+  
+  .BeersList__beer-box > div {
+    margin-left: 10px;
+  }
+  
+  .BeersList__beer-text {
+    color: #1f1e1e;
+    text-decoration: none;
+  }
