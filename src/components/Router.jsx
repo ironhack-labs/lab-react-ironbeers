@@ -9,6 +9,7 @@ export default function Routerr() {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/list-beers" children={<ListBeers />} />
+      
       <Route path="/beer/:id" component={SingleBeer} />
       {/* <Route exact path="/list-beers" component={ListBeers} /> */}
       {/* <Route exact path="/" children={<x />} /> */}
