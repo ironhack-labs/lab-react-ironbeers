@@ -19,7 +19,7 @@ const beerSchema = Yup.object().shape({
 
 const NewBeer = () => {
   return (
-    <div className="container my-4 pt-5">
+    <div className="container mb-4 pt-5">
       <h1 className="mb-3 text-center">Create new beer</h1>
 
         <Formik

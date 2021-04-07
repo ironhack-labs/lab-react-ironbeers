@@ -1,39 +1,40 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
-/* const usePrev = (prevState) => {
-  const ref = useRef()
-  useEffect(() => {
-    ref.current = prevState
-  }, [prevState])
-  return ref.current
-}
-const prevState = usePrev(menuOpen)
-
-if (prevState !== menuOpen) {
-  menuOpen ? setMenuOpen(false) : setMenuOpen(true)
-} */
-
-
-const Navbar = () => {
-  const [ menuOpen, setMenuOpen ] = useState(false)
-
-  const closeMenu = () => {
-    menuOpen ? setMenuOpen(false) : setMenuOpen(true)
+class Navbar extends React.Component {
+  state = {
+      menuOpen: false
   }
 
-  return (
+  handleStateChange (state) {
+    this.setState({menuOpen: state.isOpen})  
+  }
+  
+  closeMenu () {
+    this.setState({menuOpen: false})
+  }
+
+  toggleMenu () {
+    this.setState(state => ({menuOpen: !state.menuOpen}))
+  }
+
+  render() {
+   return (
     <div>
-      <Menu right isOpen={ menuOpen }>
-          <NavLink to="/" activeClassName="selected" onClick={closeMenu}>Home</NavLink>
-          <NavLink to="/beers" activeClassName="selected" onClick={closeMenu}>Beers</NavLink>
-          <NavLink to="/random-beer" activeClassName="selected" onClick={closeMenu}>Random</NavLink>
-          <NavLink to="/new-beer" activeClassName="selected" onClick={closeMenu}>Add a beer</NavLink>
+      <Menu right
+        isOpen={this.state.menuOpen}
+        onStateChange={(state) => this.handleStateChange(state)}
+      >
+        <NavLink to="/" activeClassName="selected" onClick={() => this.closeMenu()}>Home</NavLink>
+        <NavLink to="/beers" activeClassName="selected" onClick={() => this.closeMenu()}>Beers</NavLink>
+        <NavLink to="/random-beer" activeClassName="selected" onClick={() => this.closeMenu()}>Random</NavLink>
+        <NavLink to="/new-beer" activeClassName="selected" onClick={() => this.closeMenu()}>Add a beer</NavLink>
       </Menu>
     </div>
   )
+  }
 }
 
 export default Navbar

@@ -8,7 +8,7 @@ const pic = {
 
 const Home = () => {
   return (
-    <div className="container justify-content-center text-center pt-5" style={{marginTop: 10}}>
+    <div className="container justify-content-center text-center" style={{paddingTop: 60}}>
       <Link to="/beers">
         <Card>
           <div>

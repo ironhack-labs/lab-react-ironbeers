@@ -11,8 +11,8 @@ const BeerOne = ({ name, image_url, tagline, description, brewers_tips }) => {
     lineHeight: "0.7rem"
   }
   return (
-    <div className="container p-5">
-      <div className="row pt-5 justify-content-center ">
+    <div className="container px-5 pb-5">
+      <div className="row justify-content-center ">
         <h1>{name}</h1>
         <h5>{tagline}</h5>
         <p>{description}</p>
