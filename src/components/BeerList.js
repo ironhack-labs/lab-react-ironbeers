@@ -16,7 +16,6 @@ export default class BeerList extends Component {
     componentDidMount() {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
         .then((response) => {
-            console.log(response.data);
             this.setState({beers: response.data, fetch: true})
         })
         .catch((error) => {
@@ -46,7 +45,7 @@ export default class BeerList extends Component {
                                         {beer.tagline}
                                         </Card.Text>
                                         <Card.Text>
-                                        <small>Contributed_by: <strong>{(beer.contributed_by).replace(/ *<[^)]*> */g, "")}</strong></small>
+                                        <small>Created by: <strong>{(beer.contributed_by).replace(/ *<[^)]*> */g, "")}</strong></small>
                                         </Card.Text>
                                     </Col>
                                 </Row>

@@ -82,3 +82,41 @@
   max-height: 180px;
   object-fit: scale-down;
 }
+
+.Detail {
+  margin-top: 66px;
+  text-align: left;
+}
+
+.Detail .title {
+  margin-top: 10%;
+}
+
+.Detail img {
+  max-height: 180px;
+  object-fit: scale-down;
+}
+
+.detailTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.detailNumber {
+  color: gray;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.detailTagline {
+  color: gray;
+  font-size: 1.2rem;
+}
+
+.detailDate {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: right;
+}
