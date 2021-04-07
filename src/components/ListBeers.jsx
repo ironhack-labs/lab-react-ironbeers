@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import Home from './Home';
 import Beer from './Beer';
 import { getBeers } from '../services/BaseService';
 
@@ -16,6 +15,7 @@ class ListBeers extends Component {
 
   render() {
     const { beers } = this.state;
+    console.log(beers)
     return (
       <div className="">
         <Navbar />
@@ -23,7 +23,7 @@ class ListBeers extends Component {
           <h1>Beers</h1>
           <div className="__row">
             {beers.map((b) => (
-              <Beer {...b} />
+              <Beer {...b} key={b._id}/>
             ))}
           </div>
         </div>

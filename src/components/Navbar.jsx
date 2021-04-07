@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div className='Navbar'>
       <Link to="/">
-        <img src={viking} className='__w-2 __mt-1 __mb-1'/>
+        <img src={viking} className='__w-5 __mt-1 __mb-1' alt='Logo'/>
       </Link>
     </div>
   );

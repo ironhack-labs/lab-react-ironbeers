@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../assets/css/Home.css';
 import beers from '../assets/beers.png';
 import randomBeer from '../assets/random-beer.png';

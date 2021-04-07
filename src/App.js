@@ -1,7 +1,6 @@
 import React from 'react';
 import  Router  from './components/Router';
 import './App.css';
-import Home from './components/Home';
 
 
 function App() {
