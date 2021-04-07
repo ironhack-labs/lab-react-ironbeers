@@ -16,30 +16,11 @@ class SigleBeer extends Component {
   }
 
   render() {
-    const {
-      image_url,
-      name,
-      tagline,
-      description,
-      attenuation_level,
-      first_brewed,
-      contributed_by,
-    } = this.state.beer;
-    console.log(this.state.beer);
+    const {beer } = this.state;
     return (
       <div className="">
-        <Navbar />
-        <div className="__cont">
-          <h1>Beers</h1>
-          <div className="__card-R __m-2">
-            <img src={image_url} alt="beer" className='__w-a' />
-            <div>
-              <h1>{name}</h1>
-              <h4>{tagline}</h4>
-              <p>{description}</p>
-            </div>
-          </div>
-        </div>
+          <Navbar />
+          <Beer {...beer}/>
       </div>
     );
   }

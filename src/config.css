@@ -28,6 +28,7 @@ a:active {
 .__card-R {
   margin: 15px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   height: auto;
   max-width: auto;
@@ -35,6 +36,14 @@ a:active {
 .__card-R > img {
   padding-right: 2rem;
 } 
+
+/* Color */
+.__c-l {
+  color: rgb(155, 155, 155);
+}
+.__c-w {
+  color: rgb(255, 186, 75);
+}
 
 
 /* height */
@@ -57,6 +66,22 @@ a:active {
 .__h-a {
   height: auto;
 }
+.__h-1x {
+  height: 2rem;
+}
+.__h-2x {
+  height: 4rem;
+}
+.__h-3x {
+  height: 8rem;
+}
+.__h-4x {
+  height: 16rem;
+}
+.__h-5x {
+  height: 32rem;
+}
+
 /* width */
 
 .__w-1 {
@@ -76,6 +101,22 @@ a:active {
 }
 .__w-a {
   width: auto;
+}
+
+.__w-1x {
+  width: 2rem;
+}
+.__w-2x {
+  width: 4rem;
+}
+.__w-3x {
+  width: 8rem;
+}
+.__w-4x {
+  width: 16rem;
+}
+.__w-5x {
+  width: 32rem;
 }
 
 /* margin */
@@ -266,8 +307,18 @@ a:active {
   flex-direction: column;
 }
 
+.__fw-w {
+  flex-wrap: wrap;
+}
+
 .__jc-center {
   justify-content: center;
+}
+.__jc-between {
+  justify-content: space-between;
+}
+.__jc-around {
+  justify-content: space-around;
 }
 
 .__ta-c {

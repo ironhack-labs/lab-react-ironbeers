@@ -11,9 +11,9 @@ const Home = () => {
         <section className="row">
           <Link to="/list-beers">
             <img className="col-12 __mb-1" src={beers} alt="beers" />
-            <h2 className="__mb-2">All beers</h2>
+            <h1 className="__mb-2">All beers</h1>
           </Link>
-          <p className="">
+          <p className="__px-4 __mb-4">
             Lorem fistrum qué dise usteer jarl pecador amatomaa papaar papaar va
             usté muy cargadoo por la gloria de mi madre al ataquerl jarl a wan.
             Te va a hasé pupitaa pupita ese pedazo de jarl qué dise usteer
@@ -28,11 +28,11 @@ const Home = () => {
           </p>
         </section>
         <section className="row">
-          <Link to="/ramdon-beer">
+          <Link to="/random-beer">
             <img className="col-12 __mb-1" src={randomBeer} alt="beers" />
             <h2 className="__mb-2">Ramdon beer</h2>
           </Link>
-          <p>
+          <p className="__px-4 __mb-4">
             Lorem fistrum qué dise usteer jarl pecador amatomaa papaar papaar va
             usté muy cargadoo por la gloria de mi madre al ataquerl jarl a wan.
             Te va a hasé pupitaa pupita ese pedazo de jarl qué dise usteer
@@ -51,7 +51,7 @@ const Home = () => {
             <img className="col-12 __mb-1" src={newBeer} alt="beers" />
             <h2 className="__mb-2">New beer</h2>
           </Link>
-          <p>
+          <p className="__px-4 __mb-4">
             Lorem fistrum qué dise usteer jarl pecador amatomaa papaar papaar va
             usté muy cargadoo por la gloria de mi madre al ataquerl jarl a wan.
             Te va a hasé pupitaa pupita ese pedazo de jarl qué dise usteer

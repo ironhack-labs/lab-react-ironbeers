@@ -15,15 +15,14 @@ class ListBeers extends Component {
 
   render() {
     const { beers } = this.state;
-    console.log(beers)
     return (
       <div className="">
         <Navbar />
         <div className="__cont">
-          <h1>Beers</h1>
+          <h1 className="__py-3 __c-w">List beers:</h1>
           <div className="__row">
             {beers.map((b) => (
-              <Beer {...b} key={b._id}/>
+              <Beer {...b} key={b._id} list={true}/>
             ))}
           </div>
         </div>
