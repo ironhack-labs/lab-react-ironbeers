@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router';
 import BeerOne from '../BeerOne/BeerOne';
+import BeatLoader from "react-spinners/BeatLoader";
 import { getRandomBeer } from '../../baseService/baseService';
 
 const usePrev = (key) => {
@@ -32,7 +33,13 @@ const RandomBeer = () => {
 
   return (
       <>
-        <BeerOne {...states.beer}/>
+      {
+        states.loader
+        ? <div className="spin"><BeatLoader size={15} /></div>
+        : (
+          <BeerOne {...states.beer}/>
+        )
+      }
       </>
   )
 }
