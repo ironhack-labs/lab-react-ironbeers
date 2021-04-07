@@ -16,6 +16,7 @@ function App() {
     <Header />
     <Router>
         <Switch>
+          <Route exact path="/random-beer" component={BeerDetail} />
           <Route exact path="/beers/:id" component={BeerDetail} />
           <Route exact path="/beers" component={BeerList} />
           <Route exact path="/" component={Home} />

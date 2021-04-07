@@ -14,14 +14,24 @@ export default class BeerDetail extends Component {
     }
 
     componentDidMount() {
-        const id = this.props.match.params.id
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
-        .then((response) => {
-            this.setState({beers: response.data, fetch: true})
-        })
-        .catch((error) => {
-            console.log(error);
-        })
+        if (this.props.location.pathname === '/random-beer') {
+            axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+            .then((response) => {
+                this.setState({beers: response.data, fetch: true})
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        } else {
+            const id = this.props.match.params.id
+            axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
+            .then((response) => {
+                this.setState({beers: response.data, fetch: true})
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        }
     }
 
     render() {
@@ -48,17 +58,17 @@ export default class BeerDetail extends Component {
                                 <Row>
                                     <Col xs={9} md={9}>
                                         <Card.Text>
-                                        <p className="detailTagline">{this.state.beers.tagline}</p>
+                                        <span className="detailTagline">{this.state.beers.tagline}</span>
                                         </Card.Text>
                                     </Col>
                                     <Col xs={3} md={3}>
                                     <Card.Text>
-                                        <p className="detailDate">{this.state.beers.first_brewed}</p>
+                                        <span className="detailDate">{this.state.beers.first_brewed}</span>
                                         </Card.Text>
                                     </Col>
                                     <Col xs={12} md={12}>
                                         <Card.Text>
-                                        <em>"{this.state.beers.description}"</em>
+                                        <br /><em>"{this.state.beers.description}"</em>
                                         </Card.Text>
                                         <Card.Text>
                                         <small>Created by: <strong>{(this.state.beers.contributed_by).replace(/ *<[^)]*> */g, "")}</strong></small>
