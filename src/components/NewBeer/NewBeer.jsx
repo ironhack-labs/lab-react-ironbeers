@@ -1,179 +1,93 @@
+
 import React from 'react'
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
+import toast, { Toaster } from 'react-hot-toast';
 import { createBeer } from '../../baseService/baseService';
 
-const NewBeer = () => {
+const notify = () => toast('Beer succesfully created!');
 
-  validators = values => {
-    const errors = {};
-    if (!values.name) {
-        errors.name = 'Required';
-    } 
-    else if(!values.tagline){
-        errors.tagline = 'Required';
-    }
-    else if(!values.description){
-        errors.description = 'Required';
-    }
-    else if(!values.first_brewed){
-        errors.first_brewed = 'Required';
-    }
-    else if(!values.brewers_tips){
-        errors.brewers_tips = 'Required';
-    }
-    else if(!values.attenuation_level){
-        errors.attenuation_level = 'Required';
-    }
-    else if(!values.contributed_by){
-        errors.contributed_by = 'Required';
-    }
-
-    return errors;
-  }
-
-  return (
-      <div className="NewBeer">
-          <h1>new</h1>
-      </div>
-  )
-}
-
-export default NewBeer
-
+const beerSchema = Yup.object().shape({
+    name: Yup.string().min(1, 'No real beer has less than 2 characters').max(50, 'Thats a long name... Ty again!').required('Required'),
+    tagline: Yup.string().min(1, 'No real beer has less than 2 characters').max(50, 'Thats a long name... Ty again!').required('Required'),
+    description: Yup.string().min(1, 'No real beer has less than 2 characters').max(500, 'Thats a long name... Ty again!').required('Required'),
+    first_brewed: Yup.string().min(1, 'No real beer has less than 2 characters').max(50, 'Thats a long name... Ty again!').required('Required'),
+    brewers_tips: Yup.string().min(1, 'No real beer has less than 2 characters').max(50, 'Thats a long name... Ty again!').required('Required'),
+    attenuation_level: Yup.number().positive('Are you sure?').required('Required'),
+    contributed_by: Yup.string().min(1, 'No real beer has less than 2 characters').max(50, 'Thats a long name... Ty again!').required('Required'),
+});
 
 const NewBeer = () => {
-
-    
     return (
-        <div className="form__container">
-            <h1>New Beer</h1>
+        <div className="container my-4">
+
+            <h1 className="mb-3">Create new beer</h1>
+
             <Formik
-                initialValues={{ 
-                    name: '', 
+                initialValues={{
+                    name: '',
                     tagline: '',
                     description: '',
                     first_brewed: '',
                     brewers_tips: '',
                     attenuation_level: '',
-                    contributed_by: ''
+                    contributed_by: '',
                 }}
-
-                validate={validators}
-
-                onSubmit={(values, { setSubmitting }) => {
-                    setSubmitting(false);
-
-                    axios.post('https://ih-beers-api2.herokuapp.com/beers/new', values)
-                    .then( response => {
-                        console.log('Beer added')
+                validationSchema={beerSchema}
+                onSubmit={ (values) => {
+                    createBeer(values).then(res => {
+                        notify()
                     })
-                    .catch( error => console.log(error))
+                    .catch(e => console.log(e))
+                } }
+            >
 
-                }}
-                >
-
-                {({ isSubmitting }) => (
-                    <div className="container">
-                        <div className="row justify-content-center m-5">
-
-                            <Form>
-                                <div className="row m-1">
-                                    <div className="col">
-                                        <Field type="string" name="name"  >
-                                        { ({ 
-                                            field, 
-                                            meta: { touched, error } 
-                                            }) => <Field className={ touched && error ? "input__invalid" : "" } placeholder="Name" { ...field } />
-                                        }
-                                        </Field>
-
-                                        <ErrorMessage name="name" component="div" className="error__message"/>
-                                    </div>
-                                </div>
-                                <div className="row m-1">
-                                    <div className="col">
-                                        <Field type="string" name="tagline" placeholder="tagline">
-                                        { ({ 
-                                            field, 
-                                            meta: { touched, error } 
-                                            }) => <Field className={ touched && error ? "input__invalid" : "" } placeholder="tagline" { ...field } />
-                                        }
-                                        </Field>
-                                        <ErrorMessage name="tagline" component="div" className="error__message"/>
-                                    </div>
-                                </div>
-                                <div className="row m-1">
-                                    <div className="col">
-                                        <Field type="string" name="description" placeholder="description">
-                                        { ({ 
-                                            field, 
-                                            meta: { touched, error } 
-                                            }) => <textarea className={ touched && error ? "input__invalid" : "textArea__style" } placeholder="description" { ...field } />
-                                        }
-                                        </Field>
-                                        <ErrorMessage name="description" component="div" className="error__message"/>
-                                    </div>
-                                </div>
-                                <div className="row m-1">
-                                    <div className="col">
-                                        <Field name="first_brewed" placeholder="first brewed">
-                                        { ({ 
-                                            field, 
-                                            meta: { touched, error } 
-                                            }) => <Field className={ touched && error ? "input__invalid" : "dateInput__style" } type="date" placeholder="First brewed" { ...field } />
-                                        }
-                                        </Field>
-                                        <ErrorMessage name="first_brewed" component="div" className="error__message"/>
-                                    </div>
-                                    <div className="col">
-
-                                    </div>
-                                </div>
-                                <div className="row m-1">
-                                    <div className="col">
-                                        <Field type="string" name="brewers_tips" placeholder="brewers tips">
-                                        { ({ 
-                                            field, 
-                                            meta: { touched, error } 
-                                            }) => <Field className={ touched && error ? "input__invalid" : "" } placeholder="Brewers tips" { ...field } />
-                                        }
-                                        </Field>
-                                        <ErrorMessage name="brewers_tips" component="div" className="error__message"/>
-                                    </div>
-                                </div>
-                                <div className="row m-1">
-                                    <div className="col">
-                                        <Field type="number" name="attenuation_level" placeholder="attenuation level"/>
-                                        <ErrorMessage name="attenuation_level" component="div" className="error__message"/>
-                                    </div>
-                                </div>
-                                <div className="row m-1">
-                                    <div className="col">
-                                        <Field type="string" name="contributed_by" placeholder="contributed by" >
-                                        { ({ 
-                                            field, 
-                                            meta: { touched, error } 
-                                            }) => <Field className={ touched && error ? "input__invalid" : "" } placeholder="Contributed by" { ...field } />
-                                        }
-                                        </Field>
-                                        <ErrorMessage name="contributed_by" component="div" className="error__message"/> 
-                                    </div>
-                                </div>
-                                <div className="row m-2">
-                                    <div className="col">
-                                        <button type="submit" disabled={isSubmitting}  className="btn btn-secondary">Submit</button>
-                                    </div>
-                                </div>
-                            </Form>
-
+                {({ errors, touched }) => (
+                    <Form>
+                        <div className="mb-3">
+                            <label htmlFor="name" className="form-label">Beer Name</label>
+                            <Field name="name" id="name" className="form-control" />
+                            { errors.name && touched.name && <small className="text-danger">{errors.name}</small> }
                         </div>
-                    </div>
+                        <div className="mb-3">
+                            <label htmlFor="tagline" className="form-label">Tagline</label>
+                            <Field name="tagline" id="tagline" className="form-control" />
+                            { errors.tagline && touched.tagline && <small className="text-danger">{errors.tagline}</small> }
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="description" className="form-label">Description</label>
+                            <Field as="textarea" name="description" id="description" className="form-control" />
+                            { errors.description && touched.description && <small className="text-danger">{errors.description}</small> }
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="first_brewed" className="form-label">First brewed</label>
+                            <Field name="first_brewed" id="first_brewed" className="form-control" />
+                            { errors.first_brewed && touched.first_brewed && <small className="text-danger">{errors.first_brewed}</small> }
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="brewers_tips" className="form-label">Brewers tips</label>
+                            <Field name="brewers_tips" id="brewers_tips" className="form-control" />
+                            { errors.brewers_tips && touched.brewers_tips && <small className="text-danger">{errors.brewers_tips}</small> }
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="attenuation_level" className="form-label">Attenuation level</label>
+                            <Field name="attenuation_level" id="attenuation_level" className="form-control" />
+                            { errors.attenuation_level && touched.attenuation_level && <small className="text-danger">{errors.attenuation_level}</small> }
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="contributed_by" className="form-label">Contributed by</label>
+                            <Field name="contributed_by" id="contributed_by" className="form-control" />
+                            { errors.contributed_by && touched.contributed_by && <small className="text-danger">{errors.contributed_by}</small> }
+                        </div>
+                        <button type="submit" className="btn btn-dark w-100 mt-3">Create beer</button>
+                    </Form>
                 )}
 
             </Formik>
 
+            <Toaster />
         </div>
-    );
-};
+    )
+}
 
-export default NewBeer;
+export default NewBeer
