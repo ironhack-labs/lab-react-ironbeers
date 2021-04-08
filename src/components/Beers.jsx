@@ -28,15 +28,15 @@ class Beers extends Component {
                         loading
                             ?
                             (
-                                <div className="text-center">
-                                    <PacmanLoader color="yellow" />
+                                <div className="text-center" >
+                                    <PacmanLoader color="yellow"/>
                                 </div>
                             )
                             :
                             (
                                 <div className="card mb-3 mt-3"  style={{border:'none'}}>
                                     {beers.map(beer => (
-                                        <div className="row g-0" key={beer._id} style={{ border: '1px solid #D7D7D7' }}>
+                                        <div className="row g-0" key={beer._id} style={{ border: '1px solid #D7D7D7'}}>
                                             <BeersItem {...beer} />
                                         </div>
                                     ))}

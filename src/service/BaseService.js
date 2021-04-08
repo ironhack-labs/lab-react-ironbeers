@@ -9,3 +9,17 @@ http.interceptors.response.use(response => response.data)
 export const getBeers = () => {
     return http.get(`/`)
 }
+
+export const getBeer = (id) => {
+    return http.get(`/${id}`)
+}
+
+export const getRandomBeer = () => {
+    return http.get(`/random`)
+}
+
+export const createBeer = (fields) => {
+    return http.post(`/new`, {
+        ...fields
+    })
+}

@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/css/BeersItem.css'
 
-const BeersItem = ({ name, image_url, tagline, contributed_by}) => {
+const BeersItem = ({ name, image_url, tagline, contributed_by, _id }) => {
     return (
         <>
-            <div className="card-img-beer">
-                <img src={image_url} alt={name} style={{width:'60px', height:'150px'}}/>
+            <div className="card-img-beer" >
+                <Link to={`/beers/${_id}`}>
+                    <img src={image_url} alt={name} style={{ width: '60px', height: '150px' }} />
+                </Link>
             </div>
             <div className="col">
                 <div className="card-body">
@@ -14,7 +17,8 @@ const BeersItem = ({ name, image_url, tagline, contributed_by}) => {
                     <p className="card-text"><small className="text-muted">{contributed_by}</small></p>
                 </div>
             </div>
-      </>
+
+        </>
     );
 };
 
