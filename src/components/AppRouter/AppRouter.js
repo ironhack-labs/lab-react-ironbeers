@@ -11,7 +11,7 @@ const AppRouter = () => {
     return (
         <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/Allbeers' component={AllBeers} />
+            <Route exact path='/allbeers' component={AllBeers} />
             <Route exact path='/RandomBeers' component={RandomBeers} />
             <Route exact path='/NewBeers' component={NewBeer} />
         </Switch>
