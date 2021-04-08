@@ -22,11 +22,13 @@ class AllBeers extends Component {
 
     render() {
         const { beers ,loading} = this.state;
-        console.log (beers)
+ 
 
         return (
+
             <div className="AllBeers">
                 <Header />
+                
                 {beers.map ((beer) => {
                     return (
 

@@ -15,6 +15,7 @@ export const getRandomBeer = () => {
     return http.get('/random')
 };
 
-export const getBeerDetail = () =>{
-    return http.get('/:id')
+export const getBeerDetail = (id) =>{
+    console.log(`ID: ${id}`)
+    return http.get(`/${id}`)
 } 
