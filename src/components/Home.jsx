@@ -28,7 +28,7 @@ const Home = () => {
           </p>
         </section>
         <section className="row">
-          <Link to="/random-beer">
+          <Link to="/random">
             <img className="col-12 __mb-1" src={randomBeer} alt="beers" />
             <h2 className="__mb-2">Ramdon beer</h2>
           </Link>

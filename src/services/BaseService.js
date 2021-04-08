@@ -16,7 +16,7 @@ export const getBeer = (id) => {
 }
 
 export const getRamdon = () => {
-    
+    return http.get('/random')
 }
 
 
