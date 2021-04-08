@@ -14,8 +14,6 @@ export default function Routerr() {
       <Route path="/random" component={RandomBeer} />
       <Route path="/new-beer" component={NewBeer} />
       <Route path="/beer/:id" component={SingleBeer} />
-      {/* <Route exact path="/list-beers" component={ListBeers} /> */}
-      {/* <Route exact path="/" children={<x />} /> */}
     </Switch>
   );
 }

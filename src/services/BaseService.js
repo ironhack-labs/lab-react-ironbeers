@@ -20,8 +20,8 @@ export const getRamdon = () => {
 }
 
 
-export const postBeer = () => {
-    
+export const postBeer = (fields) => {
+    return http.post('/new', {...fields})
 }
 
 export const getSearch = (fields) => {

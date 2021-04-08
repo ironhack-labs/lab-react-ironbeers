@@ -73,6 +73,14 @@ a:active {
 .__c-w {
   color: rgb(255, 186, 75);
 }
+.__c-r {
+  color: rgb(230, 4, 4);
+}
+
+/* border color */
+.__bc-r {
+  border-color: red;
+}
 
 /* height */
 
