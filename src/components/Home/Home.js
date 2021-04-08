@@ -9,29 +9,36 @@ import RandomBeers from '../../assets/random-beer.png';
 const Home = () => {
 
     return (
-        <div className="">
-            <div className="card" style={{width: "18rem"}}>
-                <img src={Beers} className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+
+        <div className="home">
+            <Link to="/allBeers" className="card-section">
+                <div className="card" style={{ width: "18rem" }}>
+                    <img src={Beers} className="card-img-top" alt="..." />
+                    <h2>All beers</h2>
+                    <div className="card-body">
+                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur cursus pharetra. In massa nulla, venenatis nec mollis eu, blandit id erat. Nulla ut velit quis leo faucibus commodo. Proin iaculis finibus urna, nec mollis urna ornare nec. Proin id elit dolor. Aliquam tempor nunc nec ultrices varius.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div className="card" style={{width: "18rem"}}>
-                <img src={NewBeers} className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </Link>
+            <Link to="/randomBeers" className="card-section">
+                <div className="card" style={{ width: "18rem" }}>
+                    <img src={NewBeers} className="card-img-top" alt="..." />
+                    <h2>Random Beer</h2>
+                    <div className="card-body">
+                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur cursus pharetra. In massa nulla, venenatis nec mollis eu, blandit id erat. Nulla ut velit quis leo faucibus commodo. Proin iaculis finibus urna, nec mollis urna ornare nec. Proin id elit dolor. Aliquam tempor nunc nec ultrices varius.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div className="card" style={{width: "18rem"}}>
-                <img src={RandomBeers} className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </Link>
+            <Link to="/newBeers" className="card-section">
+                <div className="card" style={{ width: "18rem" }}>
+                    <img src={RandomBeers} className="card-img-top" alt="..." />
+                    <h2>New Beer</h2>
+                    <div className="card-body">
+                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur cursus pharetra. In massa nulla, venenatis nec mollis eu, blandit id erat. Nulla ut velit quis leo faucibus commodo. Proin iaculis finibus urna, nec mollis urna ornare nec. Proin id elit dolor. Aliquam tempor nunc nec ultrices varius.</p>
+                    </div>
                 </div>
-            </div>
-
-
+            </Link>
         </div>
     )
 
