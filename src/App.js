@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import BeerList from './components/BeerList'
 import BeerDetail from './components/BeerDetail'
+import BeerForm from './components/BeerForm'
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,6 +17,7 @@ function App() {
     <Header />
     <Router>
         <Switch>
+          <Route exact path="/new-beer" component={BeerForm} />
           <Route exact path="/random-beer" component={BeerDetail} />
           <Route exact path="/beers/:id" component={BeerDetail} />
           <Route exact path="/beers" component={BeerList} />
