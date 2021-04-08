@@ -5,8 +5,6 @@ import SyncLoader from 'react-spinners/SyncLoader';
 import Beer from './Beer';
 import { Fragment } from 'react';
 
-
-
 class AllBeers extends Component {
 
     state = {
