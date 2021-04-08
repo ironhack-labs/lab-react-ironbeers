@@ -1,44 +1,56 @@
-import React ,{ Component } from 'react';
+import React, { Component } from 'react';
 import Header from './Header';
-import {getBeers} from '../services/BaseSevices';
+import { getBeers } from '../services/BaseSevices';
 import SyncLoader from 'react-spinners/SyncLoader';
 import Beer from './Beer';
+import { Fragment } from 'react';
 
 
 
 class AllBeers extends Component {
 
     state = {
-        beers : [],
+        beers: [],
         loading: true
     }
 
     componentDidMount() {
         getBeers()
-        .then(beers => this.setState({beers , loading: false}))
+            .then(beers => this.setState({ beers, loading: false }))
 
 
     }
 
     render() {
-        const { beers ,loading} = this.state;
- 
+        const { beers, loading } = this.state;
+
 
         return (
 
             <div className="AllBeers">
                 <Header />
-                
-                {beers.map ((beer) => {
-                    return (
+                {
+                    loading
+                        ?
+                        (
+                            <div className="text-center">
+                                <SyncLoader color="blue" />
+                            </div>
+                        )
+                        :
+                        (
+                            <Fragment>
+                                {
+                                    beers.map((beer) => (
+                                        <div className="Beer" key={beer._id}>
+                                            <Beer {...beer} />
 
-                    
-                        <div className="Beer" key={beer._id}> 
-                            <Beer {...beer} />
-                  
-                        </div>
-                    )
-                })}
+                                        </div>
+                                    ))
+                                }
+                            </Fragment>
+                        )
+                }
 
             </div>
 
