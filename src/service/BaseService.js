@@ -23,3 +23,7 @@ export const createBeer = (fields) => {
         ...fields
     })
 }
+
+export const searchBeer = (query) => {
+    return http.get(`/search?q=${query}`)
+}
