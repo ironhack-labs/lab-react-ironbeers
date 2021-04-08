@@ -1,0 +1,9 @@
+.form-control{
+   border-radius: 20px;
+   width: 420px;
+}
+.form-label{
+   display: flex;
+   margin-left: 10px;
+   font-weight: 600;
+}

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React,{Component} from 'react'
 import Header from '../Header/Header'
+import '../NewBeer/NewBeer.css'
 
 
 class NewBeer extends Component{
@@ -25,7 +26,6 @@ class NewBeer extends Component{
     onSubmit = (e)=>{
         e.preventDefault()
         console.log(this.state)
-
         axios.post("https://ih-beers-api2.herokuapp.com/beers/new", {...this.state})
         .then(response => {
             console.log('muy bien chaval')
@@ -53,7 +53,7 @@ class NewBeer extends Component{
                       
                 </div>
                 <div className="mb-3">
-                        <label htmlFor="tagline" className="form-label">tagline</label>
+                        <label htmlFor="tagline" className="form-label">Tagline</label>
                         <input 
                         type="text" className="form-control" id="tagline" autoComplete='off'
                         name="tagline"  value={tagline} onChange={this.onChange}
@@ -62,7 +62,7 @@ class NewBeer extends Component{
                       
                 </div>
                 <div className="mb-3">
-                        <label htmlFor="description" className="form-label">description</label>
+                        <label htmlFor="description" className="form-label">Description</label>
                         <input 
                         type="text" className="form-control" id="description" autoComplete='off'
                         name="description"  value={description} onChange={this.onChange}
@@ -71,7 +71,7 @@ class NewBeer extends Component{
                       
                 </div>
                 <div className="mb-3">
-                        <label htmlFor="first_brewed" className="form-label">first_brewed</label>
+                        <label htmlFor="first_brewed" className="form-label">First_brewed</label>
                         <input 
                         type="text" className="form-control" id="first_brewed" autoComplete='off'
                         name="first_brewed"  value={first_brewed} onChange={this.onChange}
@@ -80,7 +80,7 @@ class NewBeer extends Component{
                       
                 </div>
                 <div className="mb-3">
-                        <label htmlFor="brewers_tips" className="form-label">brewers_tips</label>
+                        <label htmlFor="brewers_tips" className="form-label">Brewers_tips</label>
                         <input 
                         type="text" className="form-control" id="brewers_tips" autoComplete='off'
                         name="brewers_tips"  value={brewers_tips} onChange={this.onChange}
@@ -89,16 +89,16 @@ class NewBeer extends Component{
                       
                 </div>
                 <div className="mb-3">
-                        <label htmlFor="attenuation_level" className="form-label">attenuation_level</label>
+                        <label htmlFor="attenuation_level" className="form-label">Attenuation_level</label>
                         <input 
-                        type="text" className="form-control" id="attenuation_level" autoComplete='off'
+                        type='number' className="form-control" id="attenuation_level" autoComplete='off'
                         name="attenuation_level"  value={attenuation_level} onChange={this.onChange}
                         />
                          
                       
                 </div>
                 <div className="mb-3">
-                        <label htmlFor="contributed_by" className="form-label">contributed_by</label>
+                        <label htmlFor="contributed_by" className="form-label">Contributed_by</label>
                         <input 
                         type="text" className="form-control" id="contributed_by" autoComplete='off'
                         name="contributed_by"  value={contributed_by} onChange={this.onChange}
