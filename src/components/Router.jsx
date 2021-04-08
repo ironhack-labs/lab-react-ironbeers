@@ -13,9 +13,8 @@ class Router extends Component {
 
     state={
         data: null,
-        randomData: null,
-        loading: true,
-        loadingRandom: true
+        loading: true
+        
     }
 
     getData(){
@@ -31,27 +30,16 @@ class Router extends Component {
         .catch((e) => console.log(e))
     }
 
-    getRandomData(){
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
-        .then(res => {
-            const gottenData = res.data
-            this.setState({
-                randomData: gottenData,
-                loadingRandom: false
-                } 
-            )
-        })  
-        .catch((e) => console.log(e))
-    }
+   
 
     componentDidMount() {
         this.getData() 
-        this.getRandomData()
+        
       }
  
-    shouldComponentUpdate(){ 
-        return false
-    } 
+   componentDidUpdate(){  
+        
+   }
 
     
 
@@ -61,12 +49,10 @@ class Router extends Component {
                 <Route exact path='/' component={Home}/>
                 <Route 
                     exact path='/beers' 
-                    render={(props) => (
-                        <BeersList props={props} data={this.state.data} loading={this.state.loading}/>
+                    component={(props) => (
+                        <BeersList {...props} data={this.state.data} loading={this.state.loading}/>
                     )}/>
-                <Route exact path='/random' render={(props) => (
-                        <RandomBeer props={props} data={this.state.randomData} loading={this.state.loadingRandom} getData={this.getRandomData()}/>
-                    )}/>
+                <Route exact path='/random' component={RandomBeer}/>
                 <Route exact path='/new' component={NewBeer}/>
                 <Route  path='/beers/:id' render={(props) => (
                   <BeerDetail props={props} data={this.state.data} loading={this.state.loading} />
