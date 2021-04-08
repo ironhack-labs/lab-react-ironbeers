@@ -24,10 +24,7 @@ export const postBeer = (fields) => {
     return http.post('/new', {...fields})
 }
 
-export const getSearch = (fields) => {
-    return http.post('/posts', {
-        ...fields,
-        userId: 1
-      })
+export const getSearch = (query) => {
+    return http.get(`/search?q=${query}`)
     
 }

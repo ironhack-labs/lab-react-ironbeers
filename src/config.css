@@ -48,6 +48,16 @@ a:active {
   outline: none;
 }
 
+/* __search */
+
+.__search{
+  width: 100%;
+  padding: 10px;
+  font-size: larger;
+  border-radius: 10px;
+  outline: none;
+}
+
 /* Card */
 
 .__card-R {
