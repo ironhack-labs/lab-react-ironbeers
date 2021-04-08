@@ -11,7 +11,6 @@ body {
   padding: 0;
 }
 
-
 a:link,
 a:visited,
 a:active {
@@ -23,6 +22,32 @@ a:active {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Form */
+
+.__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+.__form > input {
+  width: 80%;
+  margin-top: 1rem;
+  padding: 10px 5px;
+  border-radius: 15px;
+  font-size: large;
+  outline: none;
+}
+.__form > button {
+  border-radius: 15px;
+  height: 3rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-size: large;
+  outline: none;
+}
+
 /* Card */
 
 .__card-R {
@@ -32,10 +57,14 @@ a:active {
   align-items: center;
   height: auto;
   max-width: auto;
-} 
+}
 .__card-R > img {
   padding-right: 2rem;
-} 
+}
+
+.__btn {
+  padding: 1rem 2rem;
+}
 
 /* Color */
 .__c-l {
@@ -44,7 +73,6 @@ a:active {
 .__c-w {
   color: rgb(255, 186, 75);
 }
-
 
 /* height */
 
@@ -319,6 +347,10 @@ a:active {
 }
 .__jc-around {
   justify-content: space-around;
+}
+
+.__ai-center {
+  align-items: center;
 }
 
 .__ta-c {

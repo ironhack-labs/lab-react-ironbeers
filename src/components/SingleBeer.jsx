@@ -11,7 +11,6 @@ class SigleBeer extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    console.log('id: ' + id);
     getBeer(id).then((beer) => this.setState({ beer, loading: false }));
   }
 

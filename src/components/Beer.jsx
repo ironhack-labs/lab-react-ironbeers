@@ -12,7 +12,6 @@ export default function Beer({
   _id,
   list,
 }) {
-  console.log(list);
   return (
     <>
       {!list ? (        
