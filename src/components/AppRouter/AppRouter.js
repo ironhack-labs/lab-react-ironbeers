@@ -19,5 +19,4 @@ const AppRouter = () => {
         </Switch>
     )
 }
-
 export default AppRouter
