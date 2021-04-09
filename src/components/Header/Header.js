@@ -4,11 +4,11 @@ import House from '../../assets/header.png'
 
 const Header = () => {
     return (
-        <div className="">
-            <nav className="navbar navbar-light ">
+        <div className="navbar header">
+            <nav className="navbar navbar-light navbar-expand-lg ">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">
-                        <img src={House} alt="" width="300" height="50" className="d-inline-block align-text-top" />
+                        <img src={House} alt="" className="align-text-top img-responsive" />
                     </a>
                 </div>
             </nav>

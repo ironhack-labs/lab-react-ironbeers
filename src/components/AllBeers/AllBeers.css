@@ -1,0 +1,15 @@
+.Allbeers {
+    color: whitesmoke
+}
+.beer-name {
+    color: black
+}
+.beer-tagline {
+    color: grey
+}
+.beer-created {
+    color:black
+}
+.listBeers {
+    padding:5px;
+}

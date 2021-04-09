@@ -1,10 +1,22 @@
 .home {
-    color: black;
+    background-color: bisque;
 }
 .card-section {
     color: black;
     text-align: left;
+    
 }
 .card-text {
-text-align: left;
+ color: grey
+}
+
+.title {
+    padding: 150px 50px;
+    
+}
+.card-title{
+    padding: 8px;
+}
+.card {
+    border: 1px solid black
 }
