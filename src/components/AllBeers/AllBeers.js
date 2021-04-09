@@ -35,17 +35,17 @@ class AllBeers extends Component {
           <div className="listBeers container">
             {this.state.data.map((beer) => (
               <Link to={`/allbeers/${beer._id}`} className="card-list">
-              <div className="row mx-5 my-5" key={beer._id}>
-                <div className="">
-                  <img src ={beer.image_url} alt="beer" height="250"/>
-                </div>
-                <div className="mx-5 d-flex flex-column align-items-start justify-content-center">
-                  <h2>{beer.name}</h2>
-                  <h4>{beer.tagline}</h4>
-                  <p><strong>Created by:</strong>{beer.contributed_by}</p>
-                </div>
+                <div className="row mx-5 my-5" key={beer._id}>
+                  <div className="">
+                    <img src={beer.image_url} alt="beer" height="250" />
+                  </div>
+                  <div className="mx-5 d-flex flex-column align-items-start justify-content-center">
+                    <h2>{beer.name}</h2>
+                    <h4>{beer.tagline}</h4>
+                    <p><strong>Created by:</strong>{beer.contributed_by}</p>
+                  </div>
 
-              </div>
+                </div>
               </Link>
             ))}
 
