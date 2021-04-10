@@ -16,7 +16,7 @@ const Home = () => {
                 <div className="row">
 
             <Link to="/allBeers" className="card-section col">
-                <div className="card  " >
+                <div className="card-card" >
                     <img src={Beers} className="card-img-top" alt="..." />
                     <h2 className="card-title">All beers</h2>
                     <div className="card-body">
@@ -25,7 +25,7 @@ const Home = () => {
                 </div>
             </Link>
             <Link to="/randomBeers" className="card-section col">
-                <div className="card text-center " >
+                <div className="card-card text-center " >
                     <img src={NewBeers} className="card-img-top" alt="..." />
                     <h2 className="card-title">Random Beer</h2>
                     <div className="card-body">
@@ -34,7 +34,7 @@ const Home = () => {
                 </div>
             </Link>
             <Link to="/newBeers" className="card-section col">
-                <div className="card text-right" >
+                <div className="card-card text-right" >
                     <img src={RandomBeers} className="card-img-top" alt="..." />
                     <h2 className="card-title">New Beer</h2>
                     <div className="card-body">

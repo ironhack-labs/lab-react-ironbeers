@@ -1,6 +1,8 @@
-.home {
-    background-color: bisque;
+.card-section { 
+   
 }
+
+
 .card-section {
     color: black;
     text-align: left;
@@ -17,6 +19,7 @@
 .card-title{
     padding: 8px;
 }
-.card {
-    border: 1px solid black
+.card-card{
+    border: 1px solid black;
+    background-color: bisque;
 }
