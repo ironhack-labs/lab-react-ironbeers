@@ -1,6 +1,8 @@
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 
 const Header = () => {
@@ -9,8 +11,7 @@ const Header = () => {
         <nav className="Header navbar navbar-dark bg-primary justify-content-center" >
 
             <Link to='/' >
-            <img src="../assets/house-door-fill.svg" alt="Bootstrap" width="32" height="32" />
-
+                <FontAwesomeIcon icon={faHome} size="3x" color="white" />
             </Link>
 
 
