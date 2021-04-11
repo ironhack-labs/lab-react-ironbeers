@@ -20,4 +20,4 @@ export const getBeerDetail = (id) =>{
     return http.get(`/${id}`)
 } 
 
-export const createBeer = (body) => http.post('new', body) 
+export const createBeer = (body) => http.post('/new', body) 

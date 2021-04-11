@@ -15,13 +15,12 @@ class NewBeer extends Component {
         contributed_by: '',
     }
     
-    history =useHistory;
+   
     onSubmit = e => {
         e.preventDefault()
     createBeer({...this.state})
     .then(() => {
-    console.log('New Beer Added');
-    this.props.history.push('/beers');
+      this.props.history.push('/beers');
     } )
     }
 

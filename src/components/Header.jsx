@@ -1,21 +1,22 @@
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome , faCamera} from '@fortawesome/free-solid-svg-icons';
 
 
 const Header = () => {
 
     return (
-        <div className="Header">
-            <Link to='/' style={{ color:'#f7f9f9'}}>HOME
-   
+        <nav className="Header navbar navbar-dark bg-primary justify-content-center" >
+
+            <Link to='/' >
+            <img src="../assets/house-door-fill.svg" alt="Bootstrap" width="32" height="32" />
 
             </Link>
 
-        </div>
+
+        </nav>
+
+
     )
 }
-
 export default Header;
