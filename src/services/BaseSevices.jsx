@@ -19,3 +19,5 @@ export const getBeerDetail = (id) =>{
     console.log(`ID: ${id}`)
     return http.get(`/${id}`)
 } 
+
+export const createBeer = (body) => http.post('new', body) 
