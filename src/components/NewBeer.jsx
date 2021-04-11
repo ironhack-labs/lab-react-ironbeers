@@ -14,14 +14,14 @@ class NewBeer extends Component {
         attenuation_level: 0,
         contributed_by: '',
     }
-    
-   
+
+
     onSubmit = e => {
         e.preventDefault()
-    createBeer({...this.state})
-    .then(() => {
-      this.props.history.push('/beers');
-    } )
+        createBeer({ ...this.state })
+            .then(() => {
+                this.props.history.push('/beers');
+            })
     }
 
     onChange = e => {
@@ -39,50 +39,73 @@ class NewBeer extends Component {
                 <Header />
 
                 <form onSubmit={this.onSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="name" className="form-label">Name: </label>
+                    <div className="row g-3 align-items-center">
+                        <div className="col-auto py-3">
+                            <label htmlFor="name" className="col-form-label">Name: </label>
+                        </div>
+                        <div className="col-auto">
 
-                        <input
-                            id="name" name="name" onChange={this.onChange} value={this.value} placeholder="Name">
-                        </input>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="tagline" className="form-label">Tag line: </label>
-                        <input
-                            id="tagline" name="tagline" onChange={this.onChange} value={this.value} placeholder="Tagline">
-                        </input>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="description" className="form-label">Description: </label>
-                        <input
-                            id="description" name="description" onChange={this.onChange} value={this.value} placeholder="Description">
-                        </input>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="first_brewed" className="form-label">First brewed: </label>
-                        <input
-                            id="first_brewed" name="first_brewed" onChange={this.onChange} value={this.value} placeholder="First_brewed">
-                        </input>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="brewers_tips" className="form-label">Brewers tips</label>
-                        <input
-                            id="brewers_tips" name="brewers_tips" onChange={this.onChange} value={this.value} placeholder="Brewers_tips">
-                        </input>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="attenuation_level" className="form-label">Attenuation level: </label>
-                        <input
-                            id="attenuation_level" name="attenuation_level" onChange={this.onChange} value={this.value} placeholder="Attenuation_level"
-                            type="number" min={0}>
+                            <input
+                                id="name" name="name" className="form-control" onChange={this.onChange} value={this.value} placeholder="Name">
+                            </input>
+                        </div>
 
-                        </input>
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="contributed_by" className="form-label">Brewers tips</label>
-                        <input
-                            id="contributed_by" name="contributed_by" onChange={this.onChange} value={this.value} placeholder="Contributed_by">
-                        </input>
+
+
+                    <div className="row g-3 align-items-center">
+
+                        <div className="col-auto py-3">
+
+                            <label htmlFor="tagline" className="col-form-label">Tag line: </label>
+                        </div>
+                        <div className="col-auto">
+                            <input
+                                id="tagline" name="tagline" className="form-control" onChange={this.onChange} value={this.value} placeholder="Tagline">
+                            </input>
+                        </div>
+                    </div>
+                    <div className="row g-3 align-items-center">
+                        <div className="col-auto py-3">
+                            <label htmlFor="description" className="col-form-label">Description: </label>
+                        </div>
+                        <div className="col-auto">
+                            <input
+                                id="description" name="description" className="form-control" onChange={this.onChange} value={this.value} placeholder="Description">
+                            </input>
+                        </div>
+                    </div>
+                    <div className="row g-3 align-items-center">
+                        <div className="col-auto py-3">
+                            <label htmlFor="first_brewed" className="col-form-label">First brewed: </label>
+                        </div>
+                        <div className="col-auto">
+                            <input
+                                id="first_brewed" name="first_brewed" className="form-control" onChange={this.onChange} value={this.value} placeholder="First_brewed">
+                            </input>
+                        </div>
+                    </div>
+                    <div className="row g-3 align-items-center">
+                        <div className="col-auto py-3">
+                            <label htmlFor="brewers_tips" className="col-form-label">Brewers tips: </label>
+                        </div>
+                        <div className="col-auto">
+                            <input
+                                id="brewers_tips" name="brewers_tips" className="form-control" onChange={this.onChange} value={this.value} placeholder="Brewers_tips">
+                            </input>
+                        </div>
+                    </div>
+                    <div className="row g-3 align-items-center">
+                        <div className="col-auto py-3">
+                            <label htmlFor="attenuation_level" className="col-form-label">Attenuation level: </label>
+                        </div>
+                        <div className="col-auto">
+                            <input
+                                id="attenuation_level" name="attenuation_level" className="form-control" onChange={this.onChange} value={this.value} placeholder="Attenuation_level"
+                                type="number" min={0}>
+
+                            </input>
+                        </div>
                     </div>
 
                     <button type="btn btn-primary">Submit</button>
