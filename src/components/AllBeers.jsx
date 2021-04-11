@@ -40,10 +40,10 @@ class AllBeers extends Component {
                             <Fragment>
                                 {
                                     beers.map((beer) => (
-                                        <div className="Beer" key={beer._id}>
+                               
                                             <Beer {...beer} />
 
-                                        </div>
+                               
                                     ))
                                 }
                             </Fragment>
