@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import {Link} from "react-router-dom"
+
+
+import { useTranslation } from 'react-i18next';
+
 
 import BeersImg from '../../../assets/beers.png';
 import RandomBeerImg from '../../../assets/random-beer.png';
 import NewBeerImg from '../../../assets/new-beer.png';
 
 const Home = () => {
+
+    const { t, i18n } = useTranslation();
+
     return(
         <div className="container">
             <div className="row">
@@ -13,10 +20,9 @@ const Home = () => {
                     <div className="row justify-content-center">
                         <div className="col-lg-8">
                             <img src={BeersImg} alt="beers" className="img-fluid rounded m-1"/>
-                            <Link to="/beers"><h2>All Beers</h2></Link>
+                            <Link to="/beers"><h2>{t('home.title1')}</h2></Link>
                             <p className="text-justify">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem 
-                                at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
+                                {t('home.description1')}
                             </p>
                         </div>
                     </div>
@@ -27,12 +33,9 @@ const Home = () => {
                     <div className="row justify-content-center">
                         <div className="col-lg-8">
                             <img src={RandomBeerImg} alt="random-beer" className="img-fluid rounded m-1"/>
-                            <Link to="/random-beer"><h2>Random Beer</h2></Link>
+                            <Link to="/random-beer"><h2>{t('home.title2')}</h2></Link>
                             <p className="text-justify">
-                                Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora 
-                                torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus 
-                                ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin 
-                                quam. Etiam ultrices. 
+                                {t('home.description2')}
                             </p>
                         </div>
                     </div>
@@ -43,11 +46,9 @@ const Home = () => {
                     <div className="row justify-content-center">
                         <div className="col-lg-8">
                             <img src={NewBeerImg} alt="new-beer" className="img-fluid rounded m-1"/>
-                            <Link to="/new-beer"><h2>New Beer</h2></Link>
+                            <Link to="/new-beer"><h2>{t('home.title3')}</h2></Link>
                             <p className="text-justify">
-                                Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet 
-                                risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. 
-                                Nulla quam. Aenean laoreet. 
+                                {t('home.description3')}
                             </p>
                         </div>
                     </div>
@@ -57,4 +58,13 @@ const Home = () => {
     )
 }
 
-export default Home
+
+
+export default function App() {
+    return (
+      <Suspense fallback="loading">
+        <Home />
+      </Suspense>
+    );
+  }
+
