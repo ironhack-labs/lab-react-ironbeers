@@ -20,9 +20,9 @@ const Navbar = () => {
             <div className="container-fluid">
                 <Link to="/"> <h2 className="brand__style"> <FaBeer/> </h2> </Link>
 
-                <select name="cars" id="cars" /* onChange={languageHandler} */>
-                    <option onClick={() => changeLanguage('es')} value="es">es</option>
+                <select name="cars" id="cars">
                     <option onClick={() => changeLanguage('en')} value="en">en</option>
+                    <option onClick={() => changeLanguage('es')} value="es">es</option>
                 </select>
 
             </div>
