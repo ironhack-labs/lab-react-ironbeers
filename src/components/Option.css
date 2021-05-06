@@ -1,0 +1,22 @@
+.option .texts {
+    padding: 0 2em;
+}
+
+.option h1 {
+    margin: 0;
+    text-decoration: none;
+}
+
+.option p {
+    color: rgb(76, 76, 76);
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.option figure {
+    margin: 0;
+}
+
+.option img {
+    width: 100%;
+}

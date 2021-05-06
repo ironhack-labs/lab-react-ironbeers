@@ -1,0 +1,28 @@
+.beerDetails figure {
+    width: 100%;
+    text-align: center;
+    padding: 4em 0;
+    margin: 0;
+}
+
+.beerDetails img {
+    width: 100px;
+}
+
+.beerDetails .mainInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.beerDetails .mainInfo h1 {
+    font-size: 2em;
+}
+
+.beerDetails .mainInfo h2 {
+    color: grey;
+}
+
+.beerDetails .texts {
+    text-align: left;
+    margin: 2em;
+}

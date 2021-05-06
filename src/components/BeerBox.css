@@ -1,0 +1,27 @@
+.beerBox {
+    display: flex;
+    padding: 1em 0 1em 3em;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.beerBox figure {
+    margin: 0;
+    width: 100px;
+    margin-right: 4em;
+    text-align: center;
+}
+
+.beerBox img {
+    height: 180px;
+}
+
+.beerBox h3 {
+    color: grey;
+    margin: 0;
+}
+
+.beerBox p {
+    margin-top: 10px;
+    font-size: small;
+}
