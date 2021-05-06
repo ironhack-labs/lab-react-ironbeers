@@ -1,0 +1,11 @@
+.listedBeer {
+    display: flex;
+    height: 200px;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    margin: 10px 0;
+}
+
+.listedBeer img{
+    height: 75%;
+}
