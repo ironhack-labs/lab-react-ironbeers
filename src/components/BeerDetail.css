@@ -1,0 +1,6 @@
+.BeerDetail>img{
+    height: 200px;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}

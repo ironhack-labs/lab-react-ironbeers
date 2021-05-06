@@ -1,0 +1,16 @@
+.Beers{
+    margin-top: 10px;
+    margin-bottom:10px
+}
+.Beers>hr{
+    margin-top: 10px;
+}
+
+.Beers>div>img{
+    height: 150px;
+}
+
+#search{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
