@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  list-style: none;
+}
+
+.home img {
+  width: 30%;
+  margin: 10px;
+  
+}
+.nav img {
+  width: 30%;
+  margin: 10px;
+}
