@@ -1,0 +1,24 @@
+section{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 30px;
+}
+section img{
+    height: 300px;
+    object-fit: contain;
+}
+#title-label{
+    display: flex;
+    justify-content: space-between;
+}
+#description-label{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+#contributed-label{
+    margin-top: 10px;
+
+}
