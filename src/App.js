@@ -6,8 +6,8 @@ import Home from './pages/Home/Home';
 import NewBeer from './pages/NewBeer/NewBeer';
 import RandomBeer from './pages/RandomBeer/RandomBeer';
 
-
 function App() {
+  console.log('hola')
   return (
     <div>
       <Switch>
