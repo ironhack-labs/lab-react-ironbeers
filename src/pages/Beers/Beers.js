@@ -9,6 +9,7 @@ export default class Beers extends Component {
 
     this.state = {
       beers: [],
+      search: '',
     };
     this.beersService = new BeersService();
   }
@@ -22,16 +23,34 @@ export default class Beers extends Component {
       .catch((err) => console.error(err));
   }
 
-  displayBeers(){
-      return this.state.beers.map(beer => {
-          return <BeerListElement key={beer._id} {...beer} />
+  displayBeers() {
+    return this.state.beers.map((beer) => {
+      return <BeerListElement key={beer._id} {...beer} />;
+    });
+  }
+
+  handleSearch(event) {
+    this.setState({ search: event.target.value });
+    this.beersService
+      .search(this.state.search)
+      .then((response) => {
+        this.setState({beers: response.data});
       })
+      .catch(err => console.error(err));      
   }
 
   render() {
     return (
       <div>
         <NavBar />
+        <input
+          type="text"
+          className="form-control"
+          id="search-input"
+          name="search"
+          placeholder="Find a beer..."
+          onChange={(e) => this.handleSearch(e)}
+        />
         {this.displayBeers()}
       </div>
     );

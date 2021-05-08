@@ -68,6 +68,7 @@ export default class Form extends Component {
                         name="name"
                         value={fields.name}
                         onChange={(e) => this.handleChange(e)}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -79,6 +80,7 @@ export default class Form extends Component {
                         name="tagline"
                         value={fields.tagline}
                         onChange={(e) => this.handleChange(e)}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -89,6 +91,7 @@ export default class Form extends Component {
                         name="description"
                         value={fields.description}
                         onChange={(e) => this.handleChange(e)}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -100,6 +103,7 @@ export default class Form extends Component {
                         name="first_brewed"
                         value={fields.first_brewed}
                         onChange={(e) => this.handleChange(e)}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -111,6 +115,7 @@ export default class Form extends Component {
                         name="brewers_tips"
                         value={fields.brewers_tips}
                         onChange={(e) => this.handleChange(e)}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -122,6 +127,7 @@ export default class Form extends Component {
                         name="attenuation_level"
                         value={fields.attenuation_level}
                         onChange={(e) => this.handleChange(e)}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -133,6 +139,7 @@ export default class Form extends Component {
                         name="contributed_by"
                         value={fields.contributed_by}
                         onChange={(e) => this.handleChange(e)}
+                        required
                     />
                 </div>
                 <button className="btn btn-primary" type="submit">ADD NEW</button>
