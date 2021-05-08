@@ -15,7 +15,7 @@ export default class Beer extends Component {
     }
     
     componentDidMount(){
-        this.getBeer();
+        this.getRandomBeer();
     }
 
 
@@ -32,7 +32,7 @@ export default class Beer extends Component {
     render(){
         return (
             <div>
-                <NavBar />
+                <NavBar />             
                 <BeerDetails {...this.state.beer} />
             </div>
         );
