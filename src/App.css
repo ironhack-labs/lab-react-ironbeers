@@ -4,6 +4,12 @@ a:visited {
   text-decoration: none;
 }
 
+.card {
+  width: 45vw;
+  color: black;
+  margin: 0 auto;
+}
+
 .App {
   text-align: center;
 }
