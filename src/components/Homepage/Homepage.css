@@ -1,0 +1,53 @@
+.Homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100px;
+  background-color: deepskyblue;
+}
+.home-icon{
+  text-decoration: none;
+  font-size: 3rem;
+  color: white;
+}
+.loading-icon{
+  font-size: 5rem;
+  color: black;
+}
+hr{
+  color: gray;
+  width: 95%;
+}
+h4{
+  color: gray;
+}
+.beer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+  /* background-color: aliceblue; */
+}
+.beer img{
+  height: 200px;
+}
+.beer-img{
+  width: 100px;
+}
+.beer-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+}
