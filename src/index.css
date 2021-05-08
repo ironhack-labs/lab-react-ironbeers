@@ -11,3 +11,65 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  text-align: center;
+}
+
+.Navbar {
+  background-color: rgb(0, 174, 255);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home-Logo {
+  width: 50px;
+}
+
+.Home-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Home-links * {
+  text-decoration: none;
+  color: black;
+}
+
+.Home-card {
+  border: 1px solid black;
+}
+
+.Home-img {
+  width: 95vw;
+  margin-top: 20px;
+}
+
+.Beer-card {
+  height: 120px;
+  border: 1px solid black;
+
+}
+
+.Beer-card * {
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.Beer-img {
+  height: 100px;
+  margin: 5px 20px;
+}
