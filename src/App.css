@@ -1,3 +1,9 @@
+body a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }

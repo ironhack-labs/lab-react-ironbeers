@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-direction: column;
+}
+
+.card {
+  width: 30vw;
+  color: black;
+  margin: 0 auto;
+}
