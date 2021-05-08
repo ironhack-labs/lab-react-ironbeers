@@ -28,8 +28,8 @@ export default class Beers extends Component {
     return this.state.beers.map((beer) => {
       return (
           <Beer 
-            name={beer.name}
             image_url={beer.image_url}
+            name={beer.name}
             tagline={beer.tagline}
             contributed_by={beer.contributed_by}
           />

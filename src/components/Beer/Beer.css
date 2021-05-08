@@ -1,0 +1,26 @@
+img{
+    height: 20vh;;
+}
+.beer-card{
+    display: flex;
+}
+.details-link{
+    text-decoration: none;
+}
+.cardname{
+font-size: 30px;
+color: black;
+}
+.cardtag{
+font-size: 20px;
+color: dimgrey;
+}
+.cardcreated{
+font-size: 10px;
+color: black;
+}
+.cardby{
+font-size: 10px;
+font-weight: bold;
+color: black;
+}

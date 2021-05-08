@@ -5,7 +5,7 @@ export default class RandomBeer extends Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header/>
             </div>
         )
     }
