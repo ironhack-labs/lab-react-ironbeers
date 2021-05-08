@@ -1,5 +1,10 @@
+:root {
+  --top: 70px;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +12,102 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header h1 {
+  margin: 0;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.beer-container img {
+  height: 150px;
+}
+
+.beer-container {
+  position: relative;
+  top: var(--top);
+}
+
+.beer-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  justify-items: center;
+  margin: 0 1rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid gray;
+}
+
+.beer-card h3 {
+  color: gray
+}
+
+header {
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--top);
+  text-align: center;
+  background-color: rgb(96, 185, 214);
+}
+
+section img {
+  width: 100%;
+  object-fit: cover;
+}
+
+section {
+  margin-top: var(--top)
+}
+
+.text {
+  justify-self: start;
+  padding: 0 2rem;
+}
+
+.txt p {
+  font-size: 0.8rem;
+}
+.txt h3 {
+  margin-bottom: 0;
+}
+
+.txt {
+  justify-self: start;
+}
+
+.text p {
+  color: gray;
+}
+
+.beer-details img {
+  padding-top: 2rem;
+  width: 50px;
+  margin: 0 auto;
+  display: block;
+}
+
+.beer-details {
+  padding: 0 1rem;
+}
+.flex-text {
+  display: flex;
+  justify-content: space-between;
 }
