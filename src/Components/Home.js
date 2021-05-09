@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 import { Link, Switch, Route, Redirect } from 'react-router-dom';
 import AllBeersPhoto from '../assets/beers.png';
 import RandomBeerPhoto from '../assets/random-beer.png';
@@ -9,7 +10,7 @@ class Home extends React.Component {
     return (
       <div className="home">
         <div>
-          <Link to='/AllBeers'>
+          <Link to='/beers/allbeers'>
             <img src={AllBeersPhoto} alt={this.src} />
             <h1>All Beers</h1>
           </Link>
@@ -22,7 +23,7 @@ class Home extends React.Component {
         </div>
 
         <div>
-          <Link to='/RandomBeer'>
+          <Link to='/beers/RandomBeer'>
             <img src={RandomBeerPhoto} alt="" />
             <h1>Random Beer</h1>
           </Link>
@@ -35,7 +36,7 @@ class Home extends React.Component {
         </div>
 
         <div>
-          <Link to='/NewBeer'>
+          <Link to='/beers/NewBeer'>
             <img src={NewBeerPhoto} alt="" />
             <h1>New Beers</h1>
           </Link>

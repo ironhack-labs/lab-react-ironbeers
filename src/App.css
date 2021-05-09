@@ -20,6 +20,11 @@ background-color: #61dafb;
 color: white;
 }
 
+.navbar p{
+  margin: 0;
+  padding-top: 13px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

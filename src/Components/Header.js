@@ -6,7 +6,7 @@ import { Link, Switch, Route, Redirect } from "react-router-dom";
 class Header extends React.Component {
   render(){  
   return (
-  <div className="Navbar">
+  <div className="navbar">
   <Link to='/'><p>Home</p></Link>
   </div>
     )
