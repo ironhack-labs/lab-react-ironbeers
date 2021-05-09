@@ -2,6 +2,8 @@
     height: 100px;
     background-color: #3dc4fc;
     text-decoration: none;
+    display: flex;
+    justify-content:center;
     
 }
 .house{
