@@ -17,12 +17,12 @@ class App extends React.Component {
       .get('https://ih-beers-api2.herokuapp.com/beers/')
       .then((result) => {
         this.setState({ ...this.state, beers: [...result.data] });
-        // console.log('RESULT' + result);
       })
       .catch((err) => {
         console.log(err);
       });
   }
+
   render() {
     return (
       <div className="App">
