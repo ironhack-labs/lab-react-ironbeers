@@ -7,6 +7,7 @@ import Home from './Components/Home';
 import AllBeers from './Components/AllBeers';
 import BeerDetails from './Components/BeerDetails';
 import RandomBeer from './Components/RandomBeer';
+import NewBeer from './Components/NewBeer';
 
 
 
@@ -32,6 +33,7 @@ class App extends React.Component{
       <Switch>
       <Route path={`/beers/allbeers`} exact component={()=><AllBeers beers={this.state.allBeers}/>}/>
       <Route path={`/beers/randombeer`} exact component={()=><RandomBeer />}/>
+      <Route path={`/beers/newbeer`} exact component={()=><NewBeer />}/>
       <Route path={`/beers/:beer`} exact component={routeProps=> <BeerDetails {...routeProps} beers={this.state.allBeers}/>}/>
       <Route path={``} exact component={()=><Home />}/>
       </Switch>
