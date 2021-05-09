@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Link, Route } from 'react-router-dom';
+import Beers from './components/beers/Beers';
+import NewBeer from './components/newBeer/NewBeer';
+import RandomBeer from './components/randomBeer/RandomBeer';
+import 'bulma/css/bulma.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Link className="py-3 px-3 is-inline-block" to="/beers">Beers List</Link>
+      <Link className="py-3 px-3 is-inline-block" to="/random-beer"> Random Beer</Link>
+      <Link className="py-3 px-3 is-inline-block" to="/new-beer">Add a Beer</Link>
+      <Route path="/beers"><Beers /></Route>
+      <Route path="/random-beer"><RandomBeer /></Route>
+      <Route path="/new-beer"><NewBeer /></Route>
     </div>
   );
 }
