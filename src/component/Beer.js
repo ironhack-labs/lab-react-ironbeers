@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Beer({beer}) {
+export default function Beer({ beer }) {
   if (!beer) return null
   return (
     <section>
@@ -9,7 +9,7 @@ export default function Beer({beer}) {
         <div className="flex-text">
           <div>
             <h1>{ beer.name }</h1>
-            <span>{ beer.tagline }</span>
+            <span><strong>{ beer.tagline }</strong></span>
           </div>
           <div style={ { textAlign: "right" } }>
             <h1>{ beer.attenuation_level }</h1>
@@ -17,6 +17,7 @@ export default function Beer({beer}) {
           </div>
         </div>
         <p>{ beer.description }</p>
+        <span>{ beer.contributed_by }</span>
       </div>
     </section>
   )

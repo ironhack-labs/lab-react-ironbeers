@@ -1,69 +1,72 @@
 import React from 'react';
-import { Switch } from 'react-router';
-import axios from 'axios'
+import axios from 'axios';
+import { Form, Button } from 'react-bootstrap'
+
 
 export default class NewBeer extends React.Component {
   state = {
-    successMessage: null
+    message: null
   }
-  
+
   handleSubmit = (e) => {
     e.preventDefault()
     const { name, tagline, description, first_brew, attenuation_level, contributed_by } = e.target;
-    if (!name.value.length) return
-    axios.post('https://ih-beers-api2.herokuapp.com/beers/new', {
-      name: name.value,
-      tagline: tagline.value,
-      description: description.value,
-      first_brew: first_brew.value,
-      attenuation_level: attenuation_level.value,
-      contributed_by: contributed_by.value
-    })
-      .then(response => {
-        this.setState({
-          successMessage: response.data.message
-        })
+    if (!name.value.length) {
+      this.setState({
+        message: 'name cannot be empty'
       })
+    } else {
+      axios.post('https://ih-beers-api2.herokuapp.com/beers/new', {
+        name: name.value,
+        tagline: tagline.value,
+        description: description.value,
+        first_brew: first_brew.value,
+        attenuation_level: attenuation_level.value,
+        contributed_by: contributed_by.value
+      })
+        .then(response => {
+          this.setState({
+            message: response.data.message
+          })
+        })
+    }
   }
 
   render() {
-    const message = () => {
-      return this.state.successMessage && <p>{ this.state.successMessage }</p>
-    }
-
     return (
       <section>
-        <form onSubmit={ this.handleSubmit }>
+        <Form onSubmit={ this.handleSubmit }>
           <legend>New Beer</legend>
+          <Form.Group >
+            <Form.Label htmlFor="name">Name: </Form.Label>
+            <Form.Control id="name" name="name" type="text" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="tagline">Tagline: </Form.Label>
+            <Form.Control id="tagline" name="tagline" type="text" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="descripton">Descripton: </Form.Label>
+            <Form.Control id="descripton" name="description" as="textarea" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="first_brew">First brew: </Form.Label>
+            <Form.Control id="first_brew" name="first_brew" type="text" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="attenuation_level">Attenuation level: </Form.Label>
+            <Form.Control id="attenuation_level" name="attenuation_level" type="number" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="contributed_by">Contributed by: </Form.Label>
+            <Form.Control id="contributed_by" name="contributed_by" type="text" />
+          </Form.Group>
           <div>
-            <label htmlFor="name">Name: </label>
-            <input id="name" name="name" type="text" />
+            <Button type="submit">create new beer <span role="img" aria-label="beer">🍺</span></Button>
           </div>
-          <div>
-            <label htmlFor="tagline">Tagline: </label>
-            <input id="tagline" name="tagline" type="text" />
-          </div>
-          <div>
-            <label htmlFor="descripton">Descripton: </label>
-            <input id="descripton" name="description" type="text" />
-          </div>
-          <div>
-            <label htmlFor="first_brew">First brew: </label>
-            <input id="first_brew" name="first_brew" type="text" />
-          </div>
-          <div>
-            <label htmlFor="attenuation_level">Attenuation level: </label>
-            <input id="attenuation_level" name="attenuation_level" type="number" />
-          </div>
-          <div>
-            <label htmlFor="contributed_by">Contributed by: </label>
-            <input id="contributed_by" name="contributed_by" type="text" />
-          </div>
-          <div>
-            <button type="submit">create new beer 🍺</button>
-          </div>
-        </form>
-        {this.state.successMessage && <p>{ this.state.successMessage }</p> }
+          { this.state.message && <p>{ this.state.message }</p> }
+        </Form>
+
       </section>
     )
   }

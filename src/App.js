@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import axios from 'axios';
-import Header from './Header'
-import Home from './Home'
-import BeerList from './component/BeerList'
-import BeerDetails from './component/BeerDetails'
-import RandomBeer from './component/RandomBeer'
-import NewBeer from './component/NewBeer'
+import Header from './Header';
+import Home from './Home';
+import BeerList from './component/BeerList';
+import BeerDetails from './component/BeerDetails';
+import RandomBeer from './component/RandomBeer';
+import NewBeer from './component/NewBeer';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 
@@ -19,6 +19,7 @@ export default class App extends Component {
     return (
       <>
         <Header />
+        <main>
         <Switch>
           <Route exact path="/" component={ Home }></Route>
           <Route exact path="/beers" component={ BeerList }></Route>
@@ -26,6 +27,7 @@ export default class App extends Component {
           <Route exact path="/beers/random" component={ RandomBeer }></Route>
           <Route exact path="/beers/:id" component={ BeerDetails }></Route>
         </Switch>
+      </main>
       </>
     )
   }

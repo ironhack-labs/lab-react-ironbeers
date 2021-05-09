@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <main>
+    <>
       <section>
         <img src={ beer } alt="Bar" />
         <div className="text">
@@ -35,6 +35,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-    </main>
+    </>
   )
 }

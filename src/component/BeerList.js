@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Form } from 'react-bootstrap';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default class BeerList extends Component {
   state = {
@@ -26,7 +27,7 @@ export default class BeerList extends Component {
       .catch(err => console.log(err)
       )
   }
-  
+
   handleSearch = (e) => {
     e.preventDefault();
     const input = e.target.q.value
@@ -54,10 +55,9 @@ export default class BeerList extends Component {
     if (!beers) return <h1>Loading ...</h1>;
     return (
       <div className="beer-container">
-        <form onSubmit={ this.handleSearch }>
-          <input type="text" name="q" placeholder="search for beers" />
-          <button>search</button>
-        </form>
+        <Form onSubmit={ this.handleSearch }>
+          <Form.Control type="text" name="q" placeholder="search for beers" />
+        </Form>
         {beers }
       </div>
     )

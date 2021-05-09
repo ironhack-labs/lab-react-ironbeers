@@ -1,7 +1,3 @@
-:root {
-  --top: 70px;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -12,9 +8,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 a:visited {
@@ -24,6 +26,12 @@ a:visited {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* header */
+header {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(96, 185, 214);
 }
 
 header h1 {
@@ -54,27 +62,14 @@ header h1 {
   color: gray
 }
 
-header {
-  z-index: 10;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--top);
-  text-align: center;
-  background-color: rgb(96, 185, 214);
-}
-
 section img {
   width: 100%;
   object-fit: cover;
 }
 
-section {
-  margin-top: var(--top)
+main {
+  overflow-y: auto;
+  flex: 1;
 }
 
 .text {
@@ -106,6 +101,9 @@ section {
 
 .beer-details {
   padding: 0 1rem;
+}
+.beer-details span {
+  color: gray;
 }
 .flex-text {
   display: flex;
