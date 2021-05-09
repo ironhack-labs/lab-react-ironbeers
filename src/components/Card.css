@@ -1,0 +1,10 @@
+.card-text {
+  font-weight: lighter;
+  margin: 0 8vw 8vw 8vw;
+  text-align: left;
+  color: rgb(75, 75, 75);
+}
+
+.card-text h2 {
+  font-weight: normal;
+}

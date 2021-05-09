@@ -1,0 +1,34 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 10vw;
+}
+
+label {
+  padding: 0.3rem 8px;
+  font-size: 0.7rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='number'] {
+  border-radius: 20px;
+  border-style: none;
+  border: 1px solid #d1d1d1;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+input.button {
+  margin: 1.5rem 0;
+  height: 2rem;
+  background: #00c3ff;
+  color: white;
+  border-radius: 30px;
+  border-style: none;
+}
+
+input#description {
+  height: 7rem;
+}

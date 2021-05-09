@@ -1,0 +1,46 @@
+.single-view {
+  padding: 4vh;
+}
+
+.single-view img {
+  max-height: 50vh;
+}
+
+.single-view h1,
+.single-view h3 {
+  font-weight: lighter;
+}
+
+.single-view h3,
+.brewed-attenuation h1,
+.contributed-by {
+  color: grey;
+}
+
+.details .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-tag {
+  text-align: left;
+  width: 70%;
+}
+
+.brewed-attenuation {
+  text-align: right;
+  width: 30%;
+}
+
+.brewed-attenuation p {
+  font-weight: bold;
+}
+
+.description {
+  text-align: left;
+}
+
+.contributed-by {
+  font-size: 0.8rem;
+  text-align: left;
+}
