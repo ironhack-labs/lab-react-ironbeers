@@ -3,9 +3,11 @@ import React from 'react'
 export default function Beer({ beer }) {
   if (!beer) return null
   return (
-    <section>
+    <>
       <div className="beer-details">
-        <img src={ beer.image_url } alt={ beer.name } />
+        <div className="img-container">
+          <img src={ beer.image_url } alt={ beer.name } />
+        </div>
         <div className="flex-text">
           <div>
             <h1>{ beer.name }</h1>
@@ -19,6 +21,6 @@ export default function Beer({ beer }) {
         <p>{ beer.description }</p>
         <span>{ beer.contributed_by }</span>
       </div>
-    </section>
+    </>
   )
 }

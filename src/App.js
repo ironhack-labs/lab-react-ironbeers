@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from './Header';
+import Footer from './Footer'
 import Home from './Home';
 import BeerList from './component/BeerList';
 import BeerDetails from './component/BeerDetails';
@@ -28,6 +29,7 @@ export default class App extends Component {
           <Route exact path="/beers/:id" component={ BeerDetails }></Route>
         </Switch>
       </main>
+        <Footer />
       </>
     )
   }

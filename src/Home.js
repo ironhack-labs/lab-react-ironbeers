@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default function Home() {
   return (
     <>
-      <section>
+      <section className="section">
         <img src={ beer } alt="Bar" />
         <div className="text">
           <Link to="/beers" ><h1>All Beers</h1></Link>
@@ -16,7 +16,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section>
+      <section className="section">
         <img src={ randombeer } alt="tab" />
         <div className="text">
           <Link to="/beers/random" ><h1>Random Beer</h1></Link>
@@ -26,7 +26,7 @@ export default function Home() {
         </div>
 
       </section>
-      <section>
+      <section  className="section">
         <img src={ newbeer } alt="beer" />
         <div className="text">
           <Link to="/beers/new" ><h1>New Beer</h1></Link>
