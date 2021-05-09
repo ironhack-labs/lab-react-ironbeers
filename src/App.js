@@ -5,6 +5,7 @@ import axios from 'axios';
 import './App.css';
 import Home from './Components/Home';
 import AllBeers from './Components/AllBeers';
+import BeerDetails from './Components/BeerDetails';
 
 
 
@@ -24,11 +25,12 @@ class App extends React.Component{
       });
     }
   render(){
-    
+
   return (
     <div className="App">
       <Switch>
       <Route path={`/beers/allbeers`} exact component={()=><AllBeers beers={this.state.allBeers}/>}/>
+      <Route path={`/beers/:beer`} component={routeProps=> <BeerDetails {...routeProps} beers={this.state.allBeers}/>}/>
       <Route path={``} exact component={()=><Home />}/>
       </Switch>
       
