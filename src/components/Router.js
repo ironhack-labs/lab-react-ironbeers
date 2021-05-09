@@ -6,6 +6,8 @@ import Home from './Home/Home';
 
 import ListBeers from './ListBeers/ListBeers';
 
+import SingleBeer from './SingleBeer/SingleBeer';
+
 import NewBeer from './NewBeer/NewBeer';
 
 import RandomBeer from './RandomBeer/RandomBeer';
@@ -17,6 +19,7 @@ export default function Router() {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/beers" component={ListBeers} />
+      <Route exact path="/beers/:id" component={SingleBeer} />
       <Route exact path="/random-beer" component={RandomBeer} />
       <Route exact path="/new-beer" component={NewBeer} />
       <Route component={NotFound} />
