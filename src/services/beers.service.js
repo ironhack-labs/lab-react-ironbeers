@@ -9,5 +9,5 @@ export default class BeersService{
 
 
 get = () => this.instance.get("/");
-// getOne = id => this.instance.get(`/${id}`);
+getOne = id => this.instance.get(`/${id}`);
 }
