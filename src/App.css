@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+.home img{
+  width: 100%;
+}
+.home p{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.navbar{
+width: 100%;
+height: 50px;
+text-align: center;
+background-color: #61dafb;
+color: white;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
