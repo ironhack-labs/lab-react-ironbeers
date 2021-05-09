@@ -6,7 +6,8 @@ import './App.css';
 import Home from './components/Home'
 import ListBeers from './components/ListBeers'
 import SingleBeer from './components/SingleBeer'
-
+import RandomBeer from './components/RandomBeer'
+import NewBeer from './components/NewBeer'
 
 
 
@@ -34,6 +35,8 @@ class App extends React.Component {
           <Route exact path='/' component={()=><Home />} />
           <Route exact path='/beers' component={()=> <ListBeers allBeers={this.state.beers} />} />
           <Route exact path='/beers/:_id' component={(routeProps)=> <SingleBeer {...routeProps} allBeers={this.state.beers} /> } />
+          <Route exact path='/random-beer' component={()=> <RandomBeer  allBeers={this.state.beers}/>} />
+          <Route exact path='/new-beer' component={()=> <NewBeer />} />
         </Switch>
       </div>
     );

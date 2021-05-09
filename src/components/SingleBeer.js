@@ -10,18 +10,24 @@ class SingleBeer extends React.Component {
     console.log(selected);
     return (
       <div className="SingleBeer">
-        <Header />
-        <div className="infoSingleBeer">
-          <img src={selected.image_url} alt={selected.name} />
+        {this.props.allBeers.length === 0 ? (
+          <h1>Loading..</h1>
+        ) : (
           <div>
-            <h2>{selected.name}</h2>
-            <p>{selected.tagline}</p>
-            <p>{selected.first_brewed}</p>
-            <p>{selected.attenuation_level}</p>
-            <p>{selected.description}</p>
-            <p>{selected.contributed_by}</p>
+            <Header />
+            <div className="infoSingleBeer">
+              <img src={selected.image_url} alt={selected.name} />
+              <div>
+                <h2>{selected.name}</h2>
+                <p>{selected.tagline}</p>
+                <p>{selected.first_brewed}</p>
+                <p>{selected.attenuation_level}</p>
+                <p>{selected.description}</p>
+                <p>{selected.contributed_by}</p>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     );
   }
