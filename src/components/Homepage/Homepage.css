@@ -6,6 +6,7 @@
 }
 .nav-bar{
   position: fixed;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,4 +51,13 @@ h4{
   justify-content: center;
   align-items: flex-start;
   padding: 0 20px;
+}
+.new-beer-body{
+  margin-top: 100px;
+}
+.SearchBar{
+  margin: 20px;
+}
+.SearchBar input{
+  min-width: 80%;
 }

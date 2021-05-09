@@ -18,3 +18,24 @@ body::-webkit-scrollbar {
 .beer-details img{
   height: 300px;
 }
+.new-beer-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+}
+.new-beer-form input{
+  min-width: 250px;
+  border-radius: 16px;
+  padding: 5px 10px;
+}
+.new-beer-form textarea{
+  width: auto;
+  border-radius: 16px;
+  padding: 5px 10px;
+}
+.new-beer-form button{
+  font-size: 1.2rem;
+  margin: 30px;
+  border-radius: 5px;
+}

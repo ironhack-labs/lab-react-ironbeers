@@ -1,5 +1,6 @@
 import React from 'react'
 import './Beers.css'
+import axios from 'axios'
 
 import {Link} from 'react-router-dom'
 
@@ -7,12 +8,35 @@ import NavBar from '../NavBar'
 
 class Beers extends React.Component{
     
+    state={
+        beers: []
+    }
+
+    componentDidMount(){
+        const stateCopy = {...this.state}
+        stateCopy.beers = this.props.beers
+        this.setState(stateCopy)
+    }
+
+    updateSearch(event){
+        const {value} = event.target
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${value}`)
+        .then((result) => {
+            const stateCopy = {...this.state}
+            stateCopy.beers = result.data
+            this.setState(stateCopy)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+
     showBeers(){
-        const AllBeers = this.props.beers
-        if(AllBeers.length > 0){
-            return AllBeers.map((beer)=>{
+    const beers = this.state.beers
+        if(beers.length > 0){
+            return beers.map((beer, index)=>{
                 return (
-                    <div>
+                    <div key={index}>
                         <div className="beer">
                             <div className="beer-img"><img src={beer.image_url} alt={beer.name+'-img'} /></div>
                             <div className="beer-data">
@@ -35,11 +59,10 @@ class Beers extends React.Component{
         return(
             <div className="Beers">
                 <NavBar />
-                {/* <Link to='/' className="link">
-                    <div className="nav-bar"><i className="material-icons home-icon">home</i></div>
-                </Link> */}
-
                 <div className="body">
+                    <div className="SearchBar">
+                        <input onChange={(event)=>this.updateSearch(event)} type="text" name="searchBar" />
+                    </div>
                     {this.showBeers()}
                 </div>
             </div>

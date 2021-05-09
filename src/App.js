@@ -9,18 +9,18 @@ import {Switch} from 'react-router-dom'
 import Homepage from './components/Homepage/Homepage'
 import Beers from './components/Beers/Beers'
 import SingleBeer from './components/SingleBeer/SingleBeer'
+import NewBeer from './components/NewBeer/NewBeer'
 
 class App extends React.Component{
 
   state = {
-    beers: '',
+    beers: [],
   }
 
   componentDidMount(){
     axios.get('https://ih-beers-api2.herokuapp.com/beers')
     .then((result)=>{
       this.setState({...this.state, beers: result.data})
-      console.log(this.state.beers)
     })
     .catch((err)=>{
       console.log(err)
@@ -31,6 +31,7 @@ class App extends React.Component{
     return (
       <div className="App">
         <Switch>
+          <Route path="/new-beer" exact component={()=><NewBeer />} />
           <Route path="/random-beer" exact component={()=><SingleBeer random/>} />
           <Route path="/beers/:_id" component={(routeProps)=>{
             return <SingleBeer {...routeProps}/>
