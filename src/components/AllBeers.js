@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './AllBeers.css';
+import Header from './Header';
 
 class AllBeers extends Component {
     constructor(){
@@ -21,6 +22,7 @@ class AllBeers extends Component {
     render(){
         return(
             <div>
+                <Header />
                 <div>
                     {this.state.beers.map((item) => {
                         return(
