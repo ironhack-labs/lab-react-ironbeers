@@ -9,6 +9,7 @@ function App() {
     <div>
       <Route exact path="/" component={Homepage} />
       <Route path="/beers" component={AllBeers} />
+      {/* <Route path="/beers/:id" component={AllBeers} /> */}
     </div>
   );
 }
