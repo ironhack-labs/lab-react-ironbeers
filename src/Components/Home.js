@@ -23,7 +23,7 @@ class Home extends React.Component {
         </div>
 
         <div>
-          <Link to='/beers/RandomBeer'>
+          <Link to='/beers/randombeer'>
             <img src={RandomBeerPhoto} alt="" />
             <h1>Random Beer</h1>
           </Link>
@@ -36,7 +36,7 @@ class Home extends React.Component {
         </div>
 
         <div>
-          <Link to='/beers/NewBeer'>
+          <Link to='/beers/newbeer'>
             <img src={NewBeerPhoto} alt="" />
             <h1>New Beers</h1>
           </Link>
