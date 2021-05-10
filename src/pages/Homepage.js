@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { Router} from 'react-router-dom';
 
 class Homepage extends Component{
 constructor(props){
@@ -13,7 +12,7 @@ render(){
     <div>
       <a href="/beers">Beers</a>
       <a href="/random-beer">Random Beer</a>
-      <a href="/new-beer">Create Beer</a>
+      <a href="/new">Create Beer</a>
     </div>
   )
 }

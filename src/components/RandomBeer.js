@@ -11,9 +11,9 @@ class RandomBeer extends React.Component {
   }
 
   getDetails() {
-    const beerId = this.props.match.params.id;
+    //const beerId = this.props.match.params.id;
     this.beersService
-      .getRandomBeer(beerId)
+      .getRandomBeer()
       .then((response) => {
         this.setState({ beer: response.data });
       })

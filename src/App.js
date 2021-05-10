@@ -5,7 +5,8 @@ import Homepage from "./pages/Homepage";
 import { Route, Switch } from 'react-router';
 import AllBeers from "./components/AllBeers";
 import BeerDetails from "./components/BeerDetails";
-import RandomBeer from "./components/RandomBeer"
+import RandomBeer from "./components/RandomBeer";
+import BeerForm from "./components/BeerForm";
 
 
 
@@ -17,7 +18,8 @@ function App () {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/beers" component={AllBeers} />
         <Route exact path="/beers/:id" component={BeerDetails} />
-        <Route exact path="/beers/:id" component={RandomBeer} />
+        <Route exact path="/random" component={RandomBeer} />
+        <Route exact path="/new" component={BeerForm} />
       </Switch>
     </div>
   );
