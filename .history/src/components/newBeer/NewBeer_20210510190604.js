@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import BeerServices from '../../services/beers.services';
 import Header from '../header/Header';
 
@@ -11,7 +11,7 @@ export default class Form extends Component {
         tagline: '',
         description: '',
         first_brewed: '',
-        brewers_tips: '',
+        brewer_tips: '',
         attenuation_level: '',
         contributed_by: '',
       },
@@ -30,7 +30,7 @@ export default class Form extends Component {
             tagline: '',
             description: '',
             first_brewed: '',
-            brewers_tips: '',
+            brewer_tips: '',
             attenuation_level: '',
             contributed_by: '',
           },
@@ -53,7 +53,6 @@ export default class Form extends Component {
     const { fields } = this.state;
     return (
       <div>
-      <h1>CREATE</h1>
         <form onSubmit={(e) => this.handleSubmit(e)}>
           <div>
             <label htmlFor="name">Name: </label>
@@ -78,43 +77,14 @@ export default class Form extends Component {
           <div>
             <label htmlFor="first_brewed">First brewed: </label>
             <input
-              placeholder="First brewed..."
+              placeholder="First..."
               type="text"
-              name="first_brewed"
-              value={fields.first_brewed}
+              name="description"
+              value={fields.description}
               onChange={(e) => this.handleChange(e)}
             />
           </div>
-          <div>
-            <label htmlFor="brewers_tips">Brewers tips: </label>
-            <input
-              placeholder="Brewed tips..."
-              type="text"
-              name="brewers_tips"
-              value={fields.brewers_tips}
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div>
-            <label htmlFor="attenuation_level">Attenuation level: </label>
-            <input
-              placeholder="Attenuation level..."
-              type="number"
-              name="attenuation_level"
-              value={fields.attenuation_level}
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div>
-            <label htmlFor="contributed_by">Contributed by: </label>
-            <input
-              placeholder="Contributed by..."
-              type="text"
-              name="contributed_by"
-              value={fields.contributed_by}
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
+          description
         </form>
       </div>
     );

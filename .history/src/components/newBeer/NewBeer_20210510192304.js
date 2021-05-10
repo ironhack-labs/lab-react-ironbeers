@@ -53,7 +53,7 @@ export default class Form extends Component {
     const { fields } = this.state;
     return (
       <div>
-      <h1>CREATE</h1>
+      <h1></h1>
         <form onSubmit={(e) => this.handleSubmit(e)}>
           <div>
             <label htmlFor="name">Name: </label>

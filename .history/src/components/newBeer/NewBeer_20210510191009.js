@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import BeerServices from '../../services/beers.services';
 import Header from '../header/Header';
 
@@ -53,7 +53,6 @@ export default class Form extends Component {
     const { fields } = this.state;
     return (
       <div>
-      <h1>CREATE</h1>
         <form onSubmit={(e) => this.handleSubmit(e)}>
           <div>
             <label htmlFor="name">Name: </label>
@@ -110,8 +109,8 @@ export default class Form extends Component {
             <input
               placeholder="Contributed by..."
               type="text"
-              name="contributed_by"
-              value={fields.contributed_by}
+              name="attenuation_level"
+              value={fields.attenuation_level}
               onChange={(e) => this.handleChange(e)}
             />
           </div>

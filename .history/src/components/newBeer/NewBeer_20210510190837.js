@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import BeerServices from '../../services/beers.services';
 import Header from '../header/Header';
 
@@ -53,7 +53,6 @@ export default class Form extends Component {
     const { fields } = this.state;
     return (
       <div>
-      <h1>CREATE</h1>
         <form onSubmit={(e) => this.handleSubmit(e)}>
           <div>
             <label htmlFor="name">Name: </label>
@@ -86,7 +85,7 @@ export default class Form extends Component {
             />
           </div>
           <div>
-            <label htmlFor="brewers_tips">Brewers tips: </label>
+            <label htmlFor="brewers_tips">Brewed tips: </label>
             <input
               placeholder="Brewed tips..."
               type="text"
@@ -96,22 +95,12 @@ export default class Form extends Component {
             />
           </div>
           <div>
-            <label htmlFor="attenuation_level">Attenuation level: </label>
+            <label htmlFor="brewer_tips">Brewed tips: </label>
             <input
-              placeholder="Attenuation level..."
-              type="number"
-              name="attenuation_level"
-              value={fields.attenuation_level}
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div>
-            <label htmlFor="contributed_by">Contributed by: </label>
-            <input
-              placeholder="Contributed by..."
+              placeholder="Brewed tips..."
               type="text"
-              name="contributed_by"
-              value={fields.contributed_by}
+              name="brewer_tips"
+              value={fields.brewer_tips}
               onChange={(e) => this.handleChange(e)}
             />
           </div>
