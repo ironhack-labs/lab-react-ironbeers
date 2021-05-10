@@ -16,7 +16,6 @@ export default class BeerDetails extends Component {
     this.beerService
       .getOne(this.props.match.params.id)
       .then(( response ) => {
-      console.log(response.data)
         this.setState({ beer: response.data });
       })
       .catch((error) => console.error(error));

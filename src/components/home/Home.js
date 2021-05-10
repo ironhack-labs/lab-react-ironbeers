@@ -7,7 +7,7 @@ export default function Home() {
         <div>
             <div>
                 <NavLink exact to="/beers">Beers</NavLink>
-                <NavLink exact to="/random-beer">Random beer</NavLink>
+                <NavLink exact to="/random">Random beer</NavLink>
                 <NavLink exact to="/new-beer">New beer</NavLink>
             </div>
         </div>
