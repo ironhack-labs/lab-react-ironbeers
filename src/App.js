@@ -17,7 +17,7 @@ function App() {
       <Route exact path="/beers"><Beers /></Route>
       <Route path="/random-beer"><RandomBeer /></Route>
       <Route path="/new-beer"><NewBeer /></Route>
-      <Route path="/beers/:beerId"><Details /></Route>
+      <Route path="/beers/:beerId" component={Details} />
     </div>
   );
 }
