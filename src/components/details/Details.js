@@ -9,7 +9,8 @@ function Details() {
     
     return(
         <div>
-            <PageHeader image={beersImage} title="Details" description="Lorem ipsum"/>
+            <PageHeader image={beersImage} title="Selected Beer" description="Lorem ipsum"/>
+            <h2>{beerId}</h2>
         </div>
     )
 }

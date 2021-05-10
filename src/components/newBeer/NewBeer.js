@@ -6,6 +6,7 @@ function NewBeer() {
     return(
         <div>
             <PageHeader image={beersImage} title="New Beer" description="Lorem ipsum"/>
+            <h2>{}</h2>
         </div>
     )
 }
