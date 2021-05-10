@@ -1,3 +1,13 @@
+@import-normalize;
+
+:root {
+  --primaryColor: #3cc4fc;
+  --secondColor: #555;
+  --sectionHeading: 3em;
+  --sectionSubHeading: 1.5em;
+  --sectionMBSpacing: 2em;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +20,38 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.flex-double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  .flex-column {
+    flex: 1;
+  }
+
+  .flex-double-column {
+    flex: 2;
+  }
 }

@@ -1,0 +1,14 @@
+.hero-container {
+  height: 25vh;
+  margin-bottom: var(--sectionMBSpacing);
+}
+
+.hero-container h1 {
+  font-size: var(--sectionHeading);
+  margin: 0 0 0.2em 0;
+}
+
+.hero-container p {
+  font-size: var(--sectionSubHeading);
+  margin: 0 0 0.2em 0;
+}
