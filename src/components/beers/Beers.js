@@ -32,18 +32,15 @@ class Beers extends React.Component {
     render() {
         return (
             <div>
-                <PageHeader
-                    image={beersImage}
-                    title="All Beers"
-                    description="Lorem ipsum"
-                />
+                <PageHeader image={beersImage} title="Beers" description="Lorem ipsum" />
                 <ul>
                     {this.state.listBeers.map((item) => 
                         <li key={item._id}> 
-                        <img className="image" style={{maxHeight:"200px"}} src={item.image_url} alt="beer">
-                        </img> {item.name} {item.tagline} {item.contributed_by} 
-                        <Link to={`/beers/${item._id}`} >Details</Link>
-
+                            <img className="image" style={{maxHeight:"200px"}} src={item.image_url} alt="beer"></img>
+                            {item.name}
+                            {item.tagline}
+                            {item.contributed_by} 
+                            <Link to={`/beers/${item._id}`} >Details</Link>
                         </li>
                     )}
                 </ul>

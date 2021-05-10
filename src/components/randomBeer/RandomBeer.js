@@ -5,7 +5,8 @@ import beersImage from '../../assets/random-beer.png';
 function RandomBeer() {
     return(
         <div>
-                        <PageHeader image={beersImage} title="Random Beer" description="Lorem ipsum"/>
+            <PageHeader image={beersImage} title="Random Beer" description="Lorem ipsum"/>
+            <h2> {} </h2>
         </div>
     )
 }
