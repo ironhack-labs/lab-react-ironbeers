@@ -26,7 +26,7 @@ export default class Beers extends Component {
     }
 
     displayBeers() {
-        return this.state.beers.map(beer => {
+        return this.state.beers.map(beer => 
             return <BeerElement key={beer._id} {...beer} />
         })
     }

@@ -11,7 +11,7 @@ export default function BeerElement({
 
   return (
     <div>
-      <Link to={`/${_id}`}>
+      <Link to={`/${_id}` {...props}}>
         <div>
           <img src={image_url} width="100px"></img>
           <h3>{name}</h3>

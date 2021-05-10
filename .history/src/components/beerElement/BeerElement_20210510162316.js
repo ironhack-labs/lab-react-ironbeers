@@ -13,7 +13,7 @@ export default function BeerElement({
     <div>
       <Link to={`/${_id}`}>
         <div>
-          <img src={image_url} width="100px"></img>
+          <img src={image_url} width="100px></img>
           <h3>{name}</h3>
           <h4>{tagline}</h4>
           <p>{contributed_by}</p>
