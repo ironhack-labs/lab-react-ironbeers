@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BeerServices from '../../services/beers.services';
 import BeerElement from '../beerElement/BeerElement';
+import Header from '../header/Header';
 
 export default class Beers extends Component {
     constructor (props) {
@@ -34,7 +35,10 @@ export default class Beers extends Component {
     render() {
         return (
             <div>
-               {this.displayBeers()}
+                <Header />
+                <div>
+                    {this.displayBeers()}
+                </div>
             </div>
         )
     }

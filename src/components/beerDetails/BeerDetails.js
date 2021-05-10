@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BeerServices from '../../services/beers.services';
+import Header from '../header/Header';
 
 
 export default class BeerDetails extends Component {
@@ -14,27 +15,30 @@ export default class BeerDetails extends Component {
   refreshState() {
     this.beerService
       .getOne(this.props.match.params.id)
-      
-      .then(({ response }) => {
-      console.log(this.props.match.params)
-        this.setState({ beer: response });
+      .then(( response ) => {
+      console.log(response.data)
+        this.setState({ beer: response.data });
       })
       .catch((error) => console.error(error));
   }
 
   componentDidMount() {
-    
     this.refreshState();
   }
 
   render() {
+    const { image_url, name, tagline, contributed_by, first_brewed, attenuation_level, description } = this.state.beer
     return (
       <div>
+        <Header />
         <div>
-          <img src={this.image_url} width="100px"></img>
-          <h3>{this.name}</h3>
-          <h4>{this.tagline}</h4>
-          <p>{this.contributed_by}</p>
+          <img src={image_url} width="100px" alt={name}></img>
+          <h3>{name}</h3>
+          <h4>{tagline}</h4>
+          <p>{first_brewed}</p>
+          <p>{attenuation_level}</p>
+          <p>{description}</p>
+          <p>{contributed_by}</p>
         </div>
       </div>
     );
