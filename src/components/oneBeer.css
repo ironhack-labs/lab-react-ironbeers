@@ -1,0 +1,27 @@
+.beerContainer{
+    margin: 0 60px;
+    width: 60%;
+}
+
+.containerInfo{
+    display: flex;
+    width: 80vw;
+}
+
+.containerInfo img{
+    max-height: 200px;
+    margin: 20px 20px 0 0;
+    padding: 0px;
+}
+
+.containerInfoBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+.containerInfoBox art{
+    color: black;
+    margin-left: 20px;
+}

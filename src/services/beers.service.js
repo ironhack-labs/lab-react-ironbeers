@@ -9,7 +9,7 @@ export default class BeersService {
   }
   getBeers = () => this.instance.get('/');
   getRandomBeer = () => this.instance.get('/random');
-  createBeer = (data) => this.instance.post('/', data);
+  createBeer = (data) => this.instance.post('/new', data);
   getOneBeer = (id) => this.instance.get(`/${id}`);
   searchBeer= (name)=> this.instance.get(`/search?q=${name}`);
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BeersService from '../services/beers.service';
+import Header from './Header';
 
 export default class Form extends Component {
   constructor(props) {
@@ -10,13 +11,14 @@ export default class Form extends Component {
         tagline: '',
         description: '',
         first_brewed: '',
-        brewers_tips:'',
+        brewers_tips: '',
         attenuation_level: '',
         contributed_by: '',
       },
     };
     this.beersService = new BeersService();
   }
+
   componentDidMount() {}
 
   handleSubmit(event) {
@@ -46,8 +48,10 @@ export default class Form extends Component {
   }
 
   render() {
-    const { fields } = this.state.fields;
+    const fields = this.state.fields;
     return (
+      <div>
+      <Header />
       <form
         id="beer-form"
         className="beer-form"
@@ -129,6 +133,7 @@ export default class Form extends Component {
           Create Beer
         </button>
       </form>
+      </div>
     );
   }
 }

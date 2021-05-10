@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import BeersService from '../services/beers.service';
-
+import Header from './Header';
 
 class BeerDetails extends React.Component {
   constructor(props) {
@@ -20,6 +20,7 @@ class BeerDetails extends React.Component {
       })
       .catch((err) => console.error(err));
   }
+
   componentDidMount() {
     this.getDetails();
   }
@@ -33,22 +34,23 @@ class BeerDetails extends React.Component {
       attenuation_level,
       description,
       contributed_by,
-    } = this.state.beer
+    } = this.state.beer;
 
     return (
-    <div>
-    <img src={image_url} alt="image" />
-    <p>Name: {name} </p>
-    <p>{tagline}</p>
-    <p>{first_brewed}</p>
-    <p>{attenuation_level}</p>
-    <p>{description}</p>
-    <p>{contributed_by}</p>
-  </div>
-    )
+      <div>
+        <Header />
+        <div className='oneBeer'>
+          <img src={image_url} alt="image" />
+          <p>{name} </p>
+          <p>{tagline}</p>
+          <p>{attenuation_level}</p>
+          <p>{first_brewed}</p>
+          <p>{description}</p>
+          <p>{contributed_by}</p>
+        </div>
+      </div>
+    );
   }
 }
 
-
 export default BeerDetails;
-

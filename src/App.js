@@ -1,5 +1,4 @@
 import React from 'react';
-import {Component} from "react";
 import './App.css';
 import Homepage from "./pages/Homepage";
 import { Route, Switch } from 'react-router';

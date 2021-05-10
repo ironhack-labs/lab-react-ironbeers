@@ -1,0 +1,30 @@
+.Homepage {
+    margin: 0;
+    padding: 0;
+}
+
+.homePart {
+max-height: 33%;
+}
+
+.homePart img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    margin: 5px 0px 5px 20px;
+    padding: 0;
+    font-size: 20px;
+    font-weight:normal;
+}
+
+p {
+    margin: 0px 0px 20px 20px;
+    font-size: 15px;
+    color: darkgrey;
+}

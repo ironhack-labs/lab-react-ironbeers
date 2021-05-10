@@ -1,23 +1,22 @@
-import React from "react";
+import React from 'react';
+import './Header.css'
+import homeIcon from '../assets/home.png'
 
-class Header extends React.Component{
-constructor(props){
-  super(props);
-  this.state= {
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
+  render() {
+    return (
+      <div className='navBackground'>
+        <a href="/">
+          <img src={homeIcon} alt="home" />
+        </a>
+      </div>
+    );
   }
 }
-
-render(){
-  return(
-    <div>
-      <a href="/"><img src="/src/assets/home.png" alt="home"/></a>
-    </div>
-  )
-}
-
-}
-
-
 
 export default Header;

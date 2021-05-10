@@ -1,0 +1,10 @@
+.navBackground {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+.navBackground img {
+    max-height: 50px;
+    margin:5px;
+}
