@@ -1,22 +1,20 @@
-// import React from "react";
-
-// const Home = props => {
-//  // console.log(props);
-//   return (
-//     <div>
-//       <div>
-//         <h3>Welcome </h3>
-//       </div>
-//     </div>
-//   );
-// };
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
         <div>
-            Welcome
+            <ul>
+                <li>
+                    <Link to="/beers">Beers</Link>
+                </li>
+                <li>
+                    <Link to="/new-beer">New Beer</Link>
+                </li>
+                <li>
+                    <Link to="/random-beer">Random Beer</Link>
+                </li>
+            </ul>
         </div>
     )
 }
