@@ -1,0 +1,19 @@
+.card-horizontal {
+  display: flex;
+}
+.img-square-wrapper {
+  flex: 0 1 50px;
+}
+.card-body {
+  flex: 1;
+}
+.img-square-wrapper {
+  max-height: 150px;
+}
+.img-square-wrapper.biggerimg {
+  max-height: 300px;
+}
+.img-square-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+}

@@ -52,7 +52,8 @@ export default class NewBeer extends Component {
         this.setState({
           error: true,
         });
-      });
+      })
+      .finally(this.clearMessages);
   };
 
   handleChange = (e) => {
@@ -60,6 +61,10 @@ export default class NewBeer extends Component {
     this.setState({
       [name]: value,
     });
+  };
+
+  clearMessages = () => {
+    setTimeout(() => this.setState({ message: '', error: false }), 2000);
   };
 
   render() {
