@@ -5,11 +5,9 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
     return (
         <SCNavbar>
-            <nav>
-                <Link to='/'>
-                    <p>Home</p>
-                </Link>
-            </nav>
+            <Link to='/'>
+                <i class="fas fa-home"></i>
+            </Link>
         </SCNavbar>
     )
 }

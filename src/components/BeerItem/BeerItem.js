@@ -6,11 +6,13 @@ export default function BeerItem({ _id, image_url, name, tagline, contributed_by
     return (
         <SCBeerList>
             <img src={image_url} alt={name} />
-            <Link to={`/beers/${_id}`}>
-                <h2>{name}</h2>
-            </Link>
-            <p>{tagline}</p>
-            <p>{contributed_by}</p>
+            <div>
+                <Link to={`/beers/${_id}`}>
+                    <h2>{name}</h2>
+                </Link>
+                <p>{tagline}</p>
+                <p>Created by: {contributed_by}</p>
+            </div>
         </SCBeerList>
     )
 }

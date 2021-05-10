@@ -31,7 +31,10 @@ export default class BeerList extends Component {
         const { beers } = this.state;
         return beers.map(beer => {
             return (
-                <BeerItem key={beer._id} {...beer} />
+                <>
+                    <BeerItem key={beer._id} {...beer} />
+                    <hr></hr>
+                </>
             )
         })
     }
