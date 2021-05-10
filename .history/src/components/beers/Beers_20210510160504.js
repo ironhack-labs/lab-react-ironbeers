@@ -16,6 +16,7 @@ export default class Beers extends Component {
     refreshState() {
         this.beerService.getAll()
         .then((response) => {
+            console.log(response.data)
             this.setState({ beers: response.data })
         })
         .catch(error => console.error(error))
@@ -27,8 +28,7 @@ export default class Beers extends Component {
 
     displayBeers() {
         return this.state.beers.map(beer => {
-            console.log(beer)
-            return <BeerElement key={beer._id} {...beer} />
+            return <BeerElement  refreshState={()=> this.refreshState()} key={beer._id} {...beer} />
         })
     }
 

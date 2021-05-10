@@ -16,6 +16,7 @@ export default class Beers extends Component {
     refreshState() {
         this.beerService.getAll()
         .then((response) => {
+            console.log(response.data)
             this.setState({ beers: response.data })
         })
         .catch(error => console.error(error))
