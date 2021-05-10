@@ -6,6 +6,7 @@ export default function BeerDetails({ _id, image_url, name, tagline, first_brewe
     return (
         <SCBeerDetails>
             <img src={image_url} alt={name} />
+            <p>{name}</p>
             <p>{tagline}</p>
             <p>{first_brewed}</p>
             <p>{attenuation_level}</p>

@@ -8,7 +8,8 @@ export default class BeerList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            beers: []
+            beers: [],
+            search: ""
         }
 
         this.beersService = new BeersService();
@@ -35,12 +36,24 @@ export default class BeerList extends Component {
         })
     }
 
+    handleSearch(e) {
+        //this.setState({
+        //  search: e.target.value
+        //})
+        this.beersService.searchBeers(e.target.value)
+            .then((response) => {
+                this.setState({ beers: response.data })
+            })
+            .catch(err => console.error(err))
+    }
+
     render() {
         return (
             <div>
                 <Navbar />
                 <SCBeerList>
                     <div>
+                        <input name="search" type='text' placeholder="Search your beer..." onChange={(e) => this.handleSearch(e)}></input>
                         <ul>
                             {
                                 this.displayBeers()

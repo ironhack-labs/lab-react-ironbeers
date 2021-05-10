@@ -12,4 +12,5 @@ export default class BeersService {
     getSingleBeer = id => this.instance.get(`/${id}`)
     getRandomBeer = () => this.instance.get('/random')
     createBeer = data => this.instance.post('/new', data)
+    searchBeers = data => this.instance.get(`/search?q=${data}`)
 }
