@@ -30,6 +30,7 @@ export default class Beers extends Component {
             name={beer.name}
             tagline={beer.tagline}
             contributed_by={beer.contributed_by}
+            _id={beer._id}
           />
       );
     });

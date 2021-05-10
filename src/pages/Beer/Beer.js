@@ -14,12 +14,7 @@ export default class Beer extends Component {
   }
 
   componentDidMount(){
-    this.BeersService.getOne()
-    .then(res => {
-        console.log(res.data);
-        this.setState({beer: res.data})
-    })
-    .catch(err => console.error(err))
+    this.getBeer()
   }
 
  getBeer = () => {
@@ -36,8 +31,9 @@ export default class Beer extends Component {
     return (
       <div>
         <Header />
-        <BeerDetails />
-        {this.getBeer()}
+        <BeerDetails 
+          {...this.state.beer}
+        />
       </div>
     );
   }
