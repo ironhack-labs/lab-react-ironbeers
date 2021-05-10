@@ -11,4 +11,5 @@ export default class BeersService{
 get = () => this.instance.get("/");
 getOne = id => this.instance.get(`/${id}`);
 getRandom = () => this.instance.get("/random");
+create = (patata) => this.instance.post("/new", patata)
 }
