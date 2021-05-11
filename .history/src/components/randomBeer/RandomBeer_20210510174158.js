@@ -31,7 +31,6 @@ export default class RandomBeer extends Component {
         return (
             <div>
                 <Header />
-                <h1>Hola</h1>
                 <div>
                     <img src={image_url} width="100px" alt={name}></img>
                     <h3>{name}</h3>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import BeerServices from '../../services/beers.services';
 import Header from '../header/Header';
 
@@ -23,8 +23,7 @@ export default class Form extends Component {
     event.preventDefault();
     this.beersService
       .create(this.state.fields)
-      .then((newBeer) => {
-        console.log(newBeer)
+      .then(() => {
         this.state = {
           fields: {
             name: '',
@@ -54,8 +53,7 @@ export default class Form extends Component {
     const { fields } = this.state;
     return (
       <div>
-        <Header />
-        <h1>CREATE</h1>
+      <h1>CREATE</h1>
         <form onSubmit={(e) => this.handleSubmit(e)}>
           <div>
             <label htmlFor="name">Name: </label>
@@ -116,8 +114,6 @@ export default class Form extends Component {
               value={fields.contributed_by}
               onChange={(e) => this.handleChange(e)}
             />
-          </div>
-          <div>
             <button type="submit">Create Birruski</button>
           </div>
         </form>

@@ -24,7 +24,6 @@ export default class Form extends Component {
     this.beersService
       .create(this.state.fields)
       .then((newBeer) => {
-        console.log(newBeer)
         this.state = {
           fields: {
             name: '',
