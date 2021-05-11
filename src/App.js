@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import 'bulma/css/bulma.min.css';
+import { Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import NavBar from './components/NavBar.component';
+import RandomBeer from './components/RandomBeer.component';
+import NewBeer from './components/NewBeer.component';
+import AllBeers from './components/AllBeers.component';
+import Home from './components/Home.component';
+import SingleBeer from './components/SingleBeer.component';
+
+export default class App extends Component {
+  render() {
+    return (
+      <>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <NavBar>
+            <Route exact path="/beers" component={AllBeers} />
+            <Route path="/beers/:id" component={SingleBeer} />
+            <Route path="/random-beer" component={RandomBeer} />
+            <Route path="/new-beer" component={NewBeer} />
+          </NavBar>
+        </Switch>
+      </>
+    );
+  }
 }
-
-export default App;
