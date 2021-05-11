@@ -2,6 +2,28 @@
   text-align: center;
 }
 
+.navbar {
+  padding: 20px;
+  
+  background-color: #3DC4FC;
+}
+
+.home img {
+  width:100vw;
+}
+
+.beerListDiv {
+  display: flex;
+  padding: 20px;
+}
+.beerListDiv img {
+  padding: 20px;
+}
+
+.beerDetailsDiv {
+  padding: 30px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
