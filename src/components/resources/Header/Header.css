@@ -1,0 +1,13 @@
+.header {
+  height: 70px;
+  background-color: rgb(50, 123, 179);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.icon-home {
+  color: white;
+  font-size: 4em;
+  text-align: center;
+}

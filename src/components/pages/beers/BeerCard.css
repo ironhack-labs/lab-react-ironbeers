@@ -1,0 +1,11 @@
+.beer-img {
+  height: 140px;
+  object-fit: contain;
+  padding: 8px;
+}
+
+@media (min-width: 768px) {
+  .beer-card {
+    height: 270px;
+  }
+}
