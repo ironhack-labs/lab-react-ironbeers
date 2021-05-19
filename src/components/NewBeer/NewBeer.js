@@ -24,7 +24,7 @@ export default class NewBeer extends React.Component {
     event.preventDefault();
     axios
       .post('https://ih-beers-api2.herokuapp.com/beers/new', this.state)
-      .then((response) => console.log(response.message))
+      .then((response) => console.log(response))
       .catch((error) => console.log(error));
     this.setState({
       name: '',
