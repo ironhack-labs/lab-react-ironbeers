@@ -6,7 +6,7 @@ import './HomeLink.css';
 export default function HomeLink(props) {
   return (
     <Link to="/" className="home-link">
-      <header>⌂</header>
+      <nav className="home-link">⌂</nav>
     </Link>
   );
 }

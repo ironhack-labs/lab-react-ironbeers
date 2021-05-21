@@ -8,6 +8,7 @@ import HomeLink from '../HomeLink/HomeLink';
 export default class Beers extends React.Component {
   state = {
     beers: [],
+    filter: '',
   };
 
   componentDidMount() {
@@ -22,10 +23,28 @@ export default class Beers extends React.Component {
       });
   }
 
+  filterChanged = async (event) => {
+    const { value: filter } = event.target;
+    const { data: beers } = await axios.get(
+      `https://ih-beers-api2.herokuapp.com/beers/search?q=${this.state.filter}`
+    );
+    console.log(beers);
+    this.setState({
+      beers: beers,
+      filter: filter,
+    });
+  };
+
   render() {
     return (
       <div className="beers">
         <HomeLink />
+        <input
+          type="text"
+          value={this.state.filter}
+          onChange={this.filterChanged}
+          name="filter"
+        ></input>
         <ul className="beers-list">
           {this.state.beers.map((beer) => {
             return <BeerListItem key={beer._id} {...beer} />;

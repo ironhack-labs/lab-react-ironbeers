@@ -9,30 +9,21 @@ export default function Home(props) {
         <img src="/assets/beers.png" alt="Image missing" />
         <div>
           <h3>All Beers</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ullam
-            soluta in consequuntur quis numquam.
-          </p>
+          <p>List all the beers!</p>
         </div>
       </Link>
       <Link to="/random-beer">
         <img src="/assets/random-beer.png" alt="Image missing" />
         <div>
           <h3>Random Beer</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt,
-            optio nam debitis placeat dignissimos a.
-          </p>
+          <p>View a random beer!</p>
         </div>
       </Link>
       <Link to="/new-beer">
         <img src="/assets/new-beer.png" alt="Image missing" />
         <div>
           <h3>New Beer</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
-            voluptas, obcaecati ea aut quas nobis.
-          </p>
+          <p>Add your own beer!</p>
         </div>
       </Link>
     </div>
