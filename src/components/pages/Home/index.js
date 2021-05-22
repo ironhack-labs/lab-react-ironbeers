@@ -12,7 +12,9 @@ const Home = () => {
     <div>
       <section className="section-container">
         <img src={beersImage} alt="Beers" />
-        <Link to="/beers">All Beers</Link>
+        <Link className="section-url" to="/beers">
+          All Beers
+        </Link>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           pharetra egestas lectus, sit amet eleifend ex ticidunt in. Nam dictum
@@ -21,7 +23,9 @@ const Home = () => {
       </section>
       <section className="section-container">
         <img src={randomBeerImage} alt="One beer" />
-        <Link to="/random-beer">Random Beer</Link>
+        <Link className="section-url" to="/random-beer">
+          Random Beer
+        </Link>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           pharetra egestas lectus, sit amet eleifend ex ticidunt in. Nam dictum
@@ -30,7 +34,9 @@ const Home = () => {
       </section>
       <section className="section-container">
         <img src={newBeerImage} alt="One beer" />
-        <Link to="/new-beer">New Beer</Link>
+        <Link className="section-url" to="/new-beer">
+          New Beer
+        </Link>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           pharetra egestas lectus, sit amet eleifend ex ticidunt in. Nam dictum

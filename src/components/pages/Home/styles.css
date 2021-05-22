@@ -1,5 +1,23 @@
 .section-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+}
+
+.section-container img {
+  width: 100vw;
+  height: 20vh;
+  object-fit: cover;
+}
+
+.section-url {
+  margin: 5px 10px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+}
+
+.section-container p {
+  color: gray;
+  margin: 0 10px 5px;
 }
