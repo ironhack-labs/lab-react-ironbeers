@@ -75,7 +75,7 @@ Create a **Home Page**. This view should include three links to separate pages:
 - `/random-beer`
 - `/new-beer`
 
-Feel free to design it however you wish, but in case you want to do it the way we did it, you can find the following images in `public/images` folder:
+Feel free to design it however you wish, but in case you want to do it the way we did it, you can find the following images in `src/assets` folder:
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png" height="600px" />
