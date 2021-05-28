@@ -39,5 +39,9 @@
 
 
 .beerImg {
-  height: 200px;
+  width: auto;
+  max-width: 150px;
+  height: auto;
+  max-height: 300px;
+  margin: 0 auto;
 }

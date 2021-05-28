@@ -7,12 +7,17 @@ class Searchbar extends Component {
 
   render() {
     return (
-      <input
-        name="search"
-        value={this.props.value}
-        onChange={this.handleChange}
-        placeholder="Search for a beer"
-      />
+      <div className="m-3">
+        <input
+          name="search"
+          value={this.props.value}
+          onChange={this.handleChange}
+          placeholder="Search for a beer"
+          className="form-control mr-sm-2" 
+          type="search"
+        />
+      </div>
+        
     );
   }
 }

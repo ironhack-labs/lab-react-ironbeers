@@ -55,12 +55,18 @@ class Beers extends React.Component {
       <div>
             {filteredBeers.map((beer) => {
               return (
-                <div>
-                  <img className="beerImg" src={beer.image_url} alt={beer.name} />
-                  <p>{beer.name}</p>
-                  <p>{beer.tagline}</p>
-                  <p>Created by: {beer.contributed_by}</p>
-                  <Link to={`/beers/${beer._id}`}>Check details</Link>
+                <div className="card">
+                  <div className="d-flex justify-content-center p-4">
+                    <div>
+                      <img className="beerImg" src={beer.image_url} alt={beer.name} />
+                    </div>
+                    <div className="m-3">
+                      <p>{beer.name}</p>
+                      <p>{beer.tagline}</p>
+                      <p>Created by: {beer.contributed_by}</p>
+                      <Link to={`/beers/${beer._id}`}>Check details</Link>
+                    </div>
+                  </div>
                 </div>
               );
             })}

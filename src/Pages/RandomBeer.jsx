@@ -31,15 +31,21 @@ class RandomBeer extends React.Component {
       <div>
         <Header />
 
-        {this.state.beer && (
-        <img className="beerImg" src={this.state.beer.image_url} alt={this.state.beer.name} />
-        )}
-        <h1>{this.state.beer && this.state.beer.name}</h1>
-        <h2>{this.state.beer && this.state.beer.tagline}</h2>
-        <p>{this.state.beer && this.state.beer.first_brewed}</p>
-        <p>{this.state.beer && this.state.beer.attenuation_level}</p>
-        <p>{this.state.beer && this.state.beer.description}</p>
-        <p>{this.state.beer && this.state.beer.contributed_by}</p>
+        <div className="card mb-3">
+          {this.state.beer && (
+          <img className="beerImg" src={this.state.beer.image_url} alt={this.state.beer.name}/>
+          )}
+          <div className="card-body">
+            <h5 className="card-title">{this.state.beer && this.state.beer.name}</h5>
+            <p className="card-text">{this.state.beer && this.state.beer.tagline}</p>
+            <p className="card-text">{this.state.beer && this.state.beer.first_brewed}</p>
+            <p className="card-text">{this.state.beer && this.state.beer.attenuation_level}</p>
+            <p className="card-text">{this.state.beer && this.state.beer.description}</p>
+            <p className="card-text"><small class="text-muted">{this.state.beer && this.state.beer.contributed_by}</small></p>
+          </div>
+        </div>
+
+
       </div>
     );
   }
