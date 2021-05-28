@@ -2,6 +2,7 @@ import React from 'react';
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Searchbar from "./../Components/Searchbar"
 
 class Beers extends React.Component {
 
@@ -10,8 +11,15 @@ class Beers extends React.Component {
 
     this.state = {
       beers: [],
+      searchValue: "",
     };
   }
+
+  handleSearchValue = (searchValue) => {
+    this.setState({
+      searchValue: searchValue,
+    });
+  };
 
   componentDidMount() {
     axios
@@ -28,14 +36,25 @@ class Beers extends React.Component {
   }
 
   render() {
+
+    const filteredBeers = this.state.beers.filter((beer) => {
+      return beer.name
+        .toLowerCase()
+        .includes(this.state.searchValue.toLowerCase());
+    });
+
   return (
     <div>
       <NavLink exact to="/">
         Home
       </NavLink>
       <h1>All Beers</h1>
+      <Searchbar
+          value={this.state.searchValue}
+          callbackFn={this.handleSearchValue}
+        />
       <div>
-            {this.state.beers.map((beer) => {
+            {filteredBeers.map((beer) => {
               return (
                 <div>
                   <img className="beerImg" src={beer.image_url} alt={beer.name} />
