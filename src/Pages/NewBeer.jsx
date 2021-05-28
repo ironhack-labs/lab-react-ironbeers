@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import FormBeer from './../Components/FormBeer'
 
 const NewBeer = () => {
   return (
@@ -7,7 +8,7 @@ const NewBeer = () => {
       <NavLink exact to="/">
         Home
       </NavLink>
-      <h1>Add a New Beer</h1>
+      <FormBeer />
     </div>
   )
 }
