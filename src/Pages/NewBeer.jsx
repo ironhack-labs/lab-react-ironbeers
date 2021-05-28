@@ -1,13 +1,11 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import Header from "./../Components/Header";
 import FormBeer from './../Components/FormBeer'
 
 const NewBeer = () => {
   return (
     <div>
-      <NavLink exact to="/">
-        Home
-      </NavLink>
+      <Header />
       <FormBeer />
     </div>
   )

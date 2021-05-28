@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import Header from "./../Components/Header";
 
 class RandomBeer extends React.Component {
   state = {
@@ -29,9 +29,7 @@ class RandomBeer extends React.Component {
 
     return (
       <div>
-        <NavLink exact to="/">
-          Home
-        </NavLink>
+        <Header />
 
         {this.state.beer && (
         <img className="beerImg" src={this.state.beer.image_url} alt={this.state.beer.name} />

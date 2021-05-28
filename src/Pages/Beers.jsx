@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from "axios";
-import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Searchbar from "./../Components/Searchbar"
+import Searchbar from "./../Components/Searchbar";
+import Header from "./../Components/Header";
 
 class Beers extends React.Component {
 
@@ -45,9 +45,8 @@ class Beers extends React.Component {
 
   return (
     <div>
-      <NavLink exact to="/">
-        Home
-      </NavLink>
+      <Header />
+
       <h1>All Beers</h1>
       <Searchbar
           value={this.state.searchValue}
