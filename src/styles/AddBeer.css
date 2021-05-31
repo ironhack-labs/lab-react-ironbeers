@@ -1,0 +1,29 @@
+.Form__container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+}
+
+form > input {
+    width: 500px;
+    border-radius: 25px;
+    padding: 15px;
+    border: 0.5px rgb(204, 202, 202) solid;
+}
+
+form > textarea {
+    width: 500px;
+    border-radius: 25px;
+    padding: 80px 15px;
+    border: 0.5px rgb(204, 202, 202) solid;
+}
