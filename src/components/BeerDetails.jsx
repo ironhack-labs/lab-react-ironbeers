@@ -61,7 +61,7 @@ class BeerDetails extends Component {
           {this.state.singleBeerDetail.description}
         </p>
         <p className="py-3">
-          <strong>Contributed by:</strong>{' '}
+          <strong>Contributed by:</strong>
           {this.state.singleBeerDetail.contributed_by}
         </p>
       </div>
