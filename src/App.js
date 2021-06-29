@@ -12,7 +12,6 @@ import BeerDetails from './components/BeerDetails';
 function App(props) {
   return (
     <div className="m-5">
-      <h1 className="text-4xl">IronBeers</h1>
       <Route exact path="/" component={Home}></Route>
       <Route exact path="/beers" component={Beers}></Route>
       <Route path="/random-beer" component={RandomBeer}></Route>

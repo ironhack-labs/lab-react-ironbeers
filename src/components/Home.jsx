@@ -8,6 +8,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <h1 className="text-4xl">IronBeers</h1>
         <Link to="/beers">
           <img src={Beers} alt="beer__img"></img>
           <h1 className=" text-3xl underline text-blue-600 hover:text-blue-800 visited:text-purple-600>Beers">
