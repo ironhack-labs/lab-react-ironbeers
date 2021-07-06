@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  background-color: #3dc4fc;
+  padding: 1em;
+}
+
+.AllBeers {
+  display: flex;
+}
+
+.beerName {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
