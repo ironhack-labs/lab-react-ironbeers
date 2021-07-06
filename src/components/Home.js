@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import beers from '../assets/beers.png';
 import newbeer from '../assets/new-beer.png';
 import randombeer from '../assets/random-beer.png';
 
-function Home(props) {
+function Home() {
   return (
     <div>
       <Link to="/beers">

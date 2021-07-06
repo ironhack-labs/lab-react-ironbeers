@@ -1,11 +1,10 @@
 import React from 'react';
 import Header from './Header';
 import { useEffect, useState } from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import axios from 'axios';
 
-function AllBeers(props) {
-  //console.log(props);
+function AllBeers() {
   let [listBeers, setListBeers] = useState([]);
 
   useEffect(() => {
@@ -20,7 +19,7 @@ function AllBeers(props) {
       return (
         <Link to={`/beers/${beer._id}`} style={{ textDecoration: 'none' }}>
           <div className="AllBeers">
-            <img src={beer.image_url} style={{ height: '20vh' }} />
+            <img src={beer.image_url} style={{ height: '20vh' }} alt="beer"/>
             <div style={{ textAlign: 'left' }}>
               <h2>{beer.name}</h2>
               <h4>{beer.tagline}</h4>

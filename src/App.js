@@ -1,6 +1,8 @@
+// import { useEffect, useState } from 'react';
+// import { Link, Switch, Route } from 'react-router-dom';
 import React from 'react';
 import './App.css';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import AllBeers from './components/AllBeers';
 import RandomBeer from './components/RandomBeer';

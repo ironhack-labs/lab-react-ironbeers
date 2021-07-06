@@ -16,7 +16,7 @@ function SingleBeer(props) {
         setBeer(res.data);
         console.log(res.data);
       });
-  }, []);
+  }, [props.match.params.dynamicId]);
 
   const ShowBeer = () => {
     return (

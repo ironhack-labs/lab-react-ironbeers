@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import house from '../assets/house.png';
 
-function Header(props) {
+function Header() {
   return (
     <div className="header">
       <nav>
-      
-        <Link to="/"><img src={house} style={{height:'4vh'}}/></Link>
+        <Link to="/">
+          <img src={house} style={{ height: '4vh' }} alt="beer" />
+        </Link>
       </nav>
     </div>
   );
