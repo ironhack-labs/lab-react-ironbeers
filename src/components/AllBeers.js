@@ -18,18 +18,17 @@ function AllBeers(props) {
   const ShowBeers = () => {
     return listBeers.map((beer) => {
       return (
-        <Link to={`/beers/${beer._id}`}>
+        <Link to={`/beers/${beer._id}`} style={{ textDecoration: 'none' }}>
           <div className="AllBeers">
-            <img src={beer.image_url} style={{height: '20vh'}}/>
-            <div>
-              <h3>{beer.name}</h3>
+            <img src={beer.image_url} style={{ height: '20vh' }} />
+            <div style={{ textAlign: 'left' }}>
+              <h2>{beer.name}</h2>
               <h4>{beer.tagline}</h4>
               <h5>{beer.contributed_by}</h5>
             </div>
           </div>
           <hr></hr>
         </Link>
-         // <Link to={`/beers/${beer._id}`} key={beer.name}> {beer.name} </Link> 
       );
     });
   };
@@ -37,7 +36,7 @@ function AllBeers(props) {
   return (
     <div>
       <Header />
-      <h1>ALL BEERS IS WORKING</h1>
+      {/* <h1>ALL BEERS IS WORKING</h1> */}
       <ShowBeers />
       {/* <DebugBeer /> */}
     </div>

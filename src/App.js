@@ -21,6 +21,11 @@ function App() {
         />
         <Route
           exact
+          path="/beers/:dynamicId"
+          render={(props) => <SingleBeer {...props} />}
+        />
+        <Route
+          exact
           path="/random-beer/"
           render={(props) => <RandomBeer {...props} />}
         />
@@ -28,11 +33,6 @@ function App() {
           exact
           path="/new-beer/"
           render={(props) => <NewBeer {...props} />}
-        />
-        <Route
-          exact
-          path="/beers/:dynamicId"
-          render={(props) => <SingleBeer {...props} />}
         />
       </Switch>
     </div>
