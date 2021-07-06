@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header';
 import { useEffect, useState } from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 
 function SingleBeer(props) {
@@ -22,7 +21,7 @@ function SingleBeer(props) {
   const ShowBeer = () => {
     return (
       <div>
-        <img src={beer.image_url} style={{ height: '30vh', paddingTop: '3em' }} />
+        <img src={beer.image_url} style={{ height: '30vh', paddingTop: '3em' }} alt="beer"/>
         <div>
           <div className="beerName">
             <div style={{fontSize:'30px', textAlign:'left'}}>{beer.name}</div>

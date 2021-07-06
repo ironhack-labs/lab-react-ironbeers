@@ -9,7 +9,7 @@ function Home(props) {
     <div>
       <Link to="/beers">
         <div>
-          <img src={beers} />
+          <img src={beers} alt="beer"/>
           <h1>All Beers</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -19,9 +19,9 @@ function Home(props) {
         </div>
       </Link>
 
-      <Link to="/random-beer">
+      <Link to="/beers/random">
         <div>
-          <img src={newbeer} />
+          <img src={newbeer} alt="beer"/>
           <h1>Random Beer</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -33,7 +33,7 @@ function Home(props) {
 
       <Link to="/new-beer">
         <div>
-          <img src={randombeer} />
+          <img src={randombeer} alt="beer"/>
           <h1>New Beer</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias

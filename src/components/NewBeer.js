@@ -4,7 +4,7 @@ import Header from './Header';
 function NewBeer(props) {
   return (
     <div>
-      {Header()}
+          <Header />
       <h1>NEW BEER IS WORKING</h1>
     </div>
   );

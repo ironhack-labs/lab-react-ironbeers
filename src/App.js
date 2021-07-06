@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-import { useEffect, useState } from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
-import axios from 'axios';
 import Home from './components/Home';
 import AllBeers from './components/AllBeers';
 import RandomBeer from './components/RandomBeer';
@@ -26,7 +24,7 @@ function App() {
         />
         <Route
           exact
-          path="/random-beer/"
+          path="/beers/random"
           render={(props) => <RandomBeer {...props} />}
         />
         <Route
