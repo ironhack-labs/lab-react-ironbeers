@@ -19,7 +19,7 @@ function AllBeers() {
       return (
         <Link to={`/beers/${beer._id}`} style={{ textDecoration: 'none' }}>
           <div className="AllBeers">
-            <img src={beer.image_url} style={{ height: '20vh' }} alt="beer"/>
+            <img src={beer.image_url} style={{ height: '20vh' }} alt="beer" />
             <div style={{ textAlign: 'left' }}>
               <h2>{beer.name}</h2>
               <h4>{beer.tagline}</h4>

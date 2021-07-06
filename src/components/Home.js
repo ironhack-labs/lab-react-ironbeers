@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import beers from '../assets/beers.png';
 import newbeer from '../assets/new-beer.png';
 import randombeer from '../assets/random-beer.png';
@@ -9,7 +9,7 @@ function Home() {
     <div>
       <Link to="/beers">
         <div>
-          <img src={beers} alt="beer"/>
+          <img src={beers} alt="beer" />
           <h1>All Beers</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -21,7 +21,7 @@ function Home() {
 
       <Link to="/beers/random">
         <div>
-          <img src={newbeer} alt="beer"/>
+          <img src={newbeer} alt="beer" />
           <h1>Random Beer</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -33,7 +33,7 @@ function Home() {
 
       <Link to="/new-beer">
         <div>
-          <img src={randombeer} alt="beer"/>
+          <img src={randombeer} alt="beer" />
           <h1>New Beer</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
