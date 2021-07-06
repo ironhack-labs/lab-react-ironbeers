@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import { useEffect, useState } from 'react';
-import { Link, } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function AllBeers() {
