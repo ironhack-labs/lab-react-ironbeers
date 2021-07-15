@@ -26,9 +26,9 @@ class BeerDetails extends Component {
   render = () => (
     <>
       {this.state.beer ? (
-        <Container fluid="true">
+        <Container style={{ marginTop: 50 }}>
           <Row style={{ height: '100%' }}>
-            <Col sm={3} style={{ height: '100%' }}>
+            <Col sm={4} style={{ height: '100%' }}>
               <Image
                 src={this.state.beer.image_url}
                 style={{
@@ -39,13 +39,29 @@ class BeerDetails extends Component {
               />
             </Col>
 
-            <Col sm={9}>
-              <h3>{this.state.beer.name}</h3>
-              <p>{this.state.beer.tagline}</p>
-              <p>{this.state.beer.first_brewed}</p>
-              <p>{this.state.beer.attenuation_level}</p>
-              <p>{this.state.beer.description}</p>
-              <p>{this.state.beer.contributed_by}</p>
+            <Col sm={8}>
+              <h2 style={{ textAlign: 'left' }}>{this.state.beer.name}</h2>
+              <p
+                style={{
+                  fontSize: '1.5em',
+                  fontWeight: 500,
+                  color: 'darkgray',
+                }}
+              >
+                {this.state.beer.tagline}
+              </p>
+              <p>First brewed: {this.state.beer.first_brewed}</p>
+              <p>Attenuation level: {this.state.beer.attenuation_level}</p>
+              <p>Description: {this.state.beer.description}</p>
+              <p
+                style={{
+                  fontStyle: 'italic',
+                  color: 'darkgray',
+                  textAlign: 'right',
+                }}
+              >
+                {this.state.beer.contributed_by}
+              </p>
             </Col>
           </Row>
         </Container>

@@ -32,6 +32,15 @@ class SearchForm extends Component {
               name="query"
               value={this.state.query}
               onChange={this.handleInputChange}
+              placeholder="Search"
+              style={{
+                width: '100%',
+                height: '50px',
+                margin: '10px 0 30px',
+                borderRadius: '3px',
+                border: 'none',
+                backgroundColor: 'lightgray',
+              }}
             />
           </form>
         </Col>

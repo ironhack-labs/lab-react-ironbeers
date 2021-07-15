@@ -2,6 +2,10 @@ import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import beersImg from './../../assets/beers.png';
+import newBeerImg from './../../assets/new-beer.png';
+import randomBeer from './../../assets/random-beer.png';
+
 function HomePage() {
   return (
     <Container fluid="true">
@@ -11,12 +15,9 @@ function HomePage() {
             to="/beers"
             style={{ textDecoration: 'none', color: 'darkgray' }}
           >
-            <Image
-              src="https://media-cdn.tripadvisor.com/media/photo-s/1b/78/81/ac/jabeerwocky-craft-beer.jpg"
-              style={{ width: '100%', display: 'block' }}
-            />
-            <Container style={{ margin: '10px 10px' }}>
-              <h2>All Beers</h2>
+            <Image src={beersImg} style={{ width: '100%', display: 'block' }} />
+            <Container fluid="true" style={{ padding: '15px' }}>
+              <h3>All Beers</h3>
               <p>
                 La cerveza (del latín cerevisĭa) es una bebida alcohólica, no
                 destilada, de sabor amargo, que se fabrica con granos de cebada
@@ -26,6 +27,8 @@ function HomePage() {
             </Container>
           </Link>
         </Col>
+
+        <hr />
 
         <Col sm="12">
           <Link
@@ -33,11 +36,11 @@ function HomePage() {
             style={{ textDecoration: 'none', color: 'darkgray' }}
           >
             <Image
-              src="https://www.loscervecistas.es/wp-content/uploads/2020/01/beer-somelier-2.jpg"
+              src={randomBeer}
               style={{ width: '100%', display: 'block' }}
             />
-            <Container style={{ margin: '10px 10px' }}>
-              <h2>Random Beer</h2>
+            <Container fluid="true" style={{ padding: '15px' }}>
+              <h3>Random Beer</h3>
               <p>
                 La cerveza (del latín cerevisĭa) es una bebida alcohólica, no
                 destilada, de sabor amargo, que se fabrica con granos de cebada
@@ -48,17 +51,20 @@ function HomePage() {
           </Link>
         </Col>
 
+        <hr />
+
         <Col sm="12">
           <Link
             to="/new-beer"
             style={{ textDecoration: 'none', color: 'darkgray' }}
           >
-            <Image
-              src="https://prod-discovery.edx-cdn.org/media/course/image/8a140470-bc70-4f7f-a9aa-df0284469b0b-8fd792a7b326.small.jpeg"
+            <img
+              src={newBeerImg}
               style={{ width: '100%', display: 'block' }}
+              alt="new beer"
             />
-            <Container style={{ margin: '10px 10px' }}>
-              <h2>New Beer</h2>
+            <Container fluid="true" style={{ padding: '15px' }}>
+              <h3>New Beer</h3>
               <p>
                 La cerveza (del latín cerevisĭa) es una bebida alcohólica, no
                 destilada, de sabor amargo, que se fabrica con granos de cebada

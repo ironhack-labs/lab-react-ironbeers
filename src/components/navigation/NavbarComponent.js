@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import homeIcon from './../../assets/home.svg';
 
 function NavbarComponent() {
   return (
@@ -17,8 +18,11 @@ function NavbarComponent() {
           fontWeight: 700,
         }}
       >
-        {/* <Image src={'./../../assets/home_black_24dp.svg'} /> */}
-        <span>Home</span>
+        <Image
+          src={homeIcon}
+          style={{ width: '5%', display: 'block', margin: '0 auto' }}
+        />
+        {/* <span>Home</span> */}
       </NavLink>
     </Navbar>
   );
