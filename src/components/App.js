@@ -19,8 +19,10 @@ function App() {
       <Switch>
         <Route path="/" exact render={() => <HomePage />} />
         <Route path="/beers" render={() => <DisplayBeers />} />
-        <Route path="/beer/:_id" render={(props) => <DisplaySpecificBeer {...props} />} />
-        <Route path="/random-beer" render={() => <DisplayRandomBeer />} />
+        <Route path="/beer/:_id" render={(props) => <DisplayBeer {...props} />} />
+        <Route path="/random-beer" render={() => <DisplayBeer />} />
+        {/* <Route path="/beer/:_id" render={(props) => <DisplaySpecificBeer {...props} />} />
+        <Route path="/random-beer" render={() => <DisplayRandomBeer />} /> */}
         <Route path="/new-beer" render={() => <HomePage />} />
       </Switch>
 

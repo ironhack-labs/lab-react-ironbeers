@@ -6,7 +6,7 @@ import BeerDetails from './BeerDetails';
 
 
 class DisplaySpecificBeer extends Component {
-    constructor(props) {
+    constructor() {
         super()
         this.state = {
             beer: undefined
@@ -41,11 +41,6 @@ class DisplaySpecificBeer extends Component {
         )
     }
 }
-
-// const DisplaySpecificBeer = (props) => {
-//     console.log(props.match.params._id)
-//     return (<h1>Hey</h1>)
-// }
 
 
 export default DisplaySpecificBeer

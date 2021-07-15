@@ -9,21 +9,17 @@ class DisplayBeer extends Component {
     constructor() {
         super()
         this.state = {
-            beer: undefined,
-            finalPart: (this.props ? this.props.match.params._id : 'random')
+            beer: undefined
         }
     }
 
     componentDidMount() {
-        console.log(this.state.finalPart)
-        const route = "https://ih-beers-api2.herokuapp.com/" + this.state.finalPart
-        console.log(route)
         axios
-            .get(route)
-            // .get('https://ih-beers-api2.herokuapp.com/beers/')
+            .get("https://ih-beers-api2.herokuapp.com/beers/" + (this.props.match ? this.props.match.params._id : 'random'))
             .then((response) => {
-                this.setState({ beer: response.data.filter(beer => beer._id == this.props.match._id) })
-                // this.setState({ beer: response.data.filter(beer => beer._id == this.props.match._id) })
+                console.log(response.data)
+                // this.setState({ beer: response.data.filter(beer => beer._id == this.props.match.params._id) })
+                this.setState({ beer: response.data })
             })
             .catch((err) => console.error(err))
     }
