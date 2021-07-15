@@ -1,0 +1,12 @@
+  
+.new-beer-form {
+    width: 50%;
+    margin-left: 25%;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.new-beer-form input{
+    width: 100%;
+    margin-bottom: 30px;
+}

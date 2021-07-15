@@ -7,6 +7,7 @@ import DisplayRandomBeer from './DisplayRandomBeer';
 import DisplayBeers from './DisplayBeers';
 import DisplaySpecificBeer from './DisplaySpecificBeer';
 import DisplayBeer from './DisplayBeer';
+import NewBeerForm from './AddBeer';
 
 
 
@@ -23,7 +24,7 @@ function App() {
         <Route path="/random-beer" render={() => <DisplayBeer />} />
         {/* <Route path="/beer/:_id" render={(props) => <DisplaySpecificBeer {...props} />} />
         <Route path="/random-beer" render={() => <DisplayRandomBeer />} /> */}
-        <Route path="/new-beer" render={() => <HomePage />} />
+        <Route path="/new-beer" render={() => <NewBeerForm />} />
       </Switch>
 
     </div>
