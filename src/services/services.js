@@ -11,7 +11,7 @@ class BeerService {
 
     getBeers = () => this.app.get('/beers')
     getNewBeer = beer_info => this.app.get(`/new`,beer_info)
-    getRandomBeer = () => this.app.get(`/random`)
+    getRandomBeer = () => this.app.get('/random')
     getSelectedBeer = beer_id => this.app.get(`/beers/${beer_id}`)
 }
 

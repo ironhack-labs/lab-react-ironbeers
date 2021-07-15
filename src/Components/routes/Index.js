@@ -17,8 +17,8 @@ const Routes = () => {
             <Route path="/" exact render={()=> <Home />}/>
             <Route path="/beers" exact render={(props) => <AllBeers {...props} />} />
             <Route path="/beers/:beer_id" exact render={(props) => <SelectedBeer {...props} />} />
-            <Route path="/new" render={(props) => <RandomBeer {...props} />} />
-            <Route path="/random/:beer_id" render={(props) => <NewBeer {...props} />} />
+            <Route path="/beers/random" render={(props) => <RandomBeer {...props} />} />
+            <Route path="/beers/new" render={(props) => <NewBeer {...props} />} />
 
         </Switch>
     )

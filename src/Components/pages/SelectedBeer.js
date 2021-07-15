@@ -1,4 +1,4 @@
-import { Card, ListGroupItem, ListGroup } from "react-bootstrap"
+import { Card, ListGroupItem, ListGroup, Container, Row } from "react-bootstrap"
 import React, { Component } from 'react';
 import BeerService from "../../services/services";
 
@@ -14,7 +14,7 @@ class SelectedBeer extends Component {
         }
         this.BeerService = new BeerService()
 
-        
+
     }
 
     getSelectedBeer = () => {
@@ -30,8 +30,8 @@ class SelectedBeer extends Component {
             //accedemos a sus propiedades a través del response, en esta caso birra
             .catch(err => console.log(err));
         console.log(this.state.birra)
-        
-        
+
+
     }
 
 
@@ -47,24 +47,28 @@ class SelectedBeer extends Component {
                 <h3>MARCHANDO LA BIRRITA...</h3>
                 :
                 (<>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-                        <Card.Body>
-                            <Card.Title>{this.state.birra.name}</Card.Title>
-                            <Card.Text>
-                                {this.state.birra.description}
-                            </Card.Text>
-                        </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroupItem>Cras justo odio</ListGroupItem>
-                            <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                            <ListGroupItem>Vestibulum at eros</ListGroupItem>
-                        </ListGroup>
-                        <Card.Body>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link>
-                        </Card.Body>
-                    </Card>
+                    <Container>
+                        <Row>
+
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={this.state.birra.image_url} />
+                            </Card>
+                            <Card>
+                                <Card.Body>
+                                    <Card.Title>{this.state.birra.name}</Card.Title>
+                                    <Card.Text>
+                                        {this.state.birra.description}
+
+                                        <ListGroup className="list-group-flush">
+                                            <ListGroupItem>{this.state.birra.tagline}</ListGroupItem>
+                                            <ListGroupItem>{this.state.birra.attenuation_level}</ListGroupItem>
+                                            <ListGroupItem>{this.state.birra.contributed_by}</ListGroupItem>
+                                        </ListGroup>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Row>
+                    </Container>
                 </>)
         )
     }

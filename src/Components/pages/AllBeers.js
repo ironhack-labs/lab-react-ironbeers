@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Card, Button, Container } from 'react-bootstrap';
 import { render } from 'react-dom';
 import { Link } from 'react-router-dom';
+import Image from 'react-bootstrap/Image'
 
 import BeerService from '../../services/services';
 
@@ -44,20 +45,20 @@ class AllBeers extends Component {
 
                             {this.state.birras.map(elm =>
 
-                                
-                                    <Card style={{ width: '18rem' }}>
-                                        <Card.Img variant="top" src={elm.image_url} />
-                                        <Card.Body>
-                                            <Card.Title>{elm.name}</Card.Title>
-                                            <Card.Text>
-                                                {elm.description}
-                                            </Card.Text>
-                                        <Button variant="primary"><Link to={`/beers/${elm._id}` }>See more details</Link></Button>
-                                        </Card.Body>
-                                    </Card>
 
-                                  
-                                
+                                <Card style={{ width: '18rem' }}>
+                                    <Card.Img  variant="top" src={elm.image_url} />
+                                    <Card.Body>
+                                        <Card.Title>{elm.name}</Card.Title>
+                                        <Card.Text>
+                                            {elm.description}
+                                        </Card.Text>
+                                        <Button variant="primary"><Link to={`/beers/${elm._id}`} style={{ color: 'white' }}>See more details</Link></Button>
+                                    </Card.Body>
+                                </Card>
+
+
+
                             )}
 
                         </Row>

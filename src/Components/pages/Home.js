@@ -7,7 +7,7 @@ import { Container, Row } from "react-bootstrap";
 import allbeers from './../../assets/beers.png'
 import newbeer from './../../assets/new-beer.png'
 import randombeer from './../../assets/random-beer.png'
-import SelectedBeer from "./SelectedBeer";
+
 
 
 
@@ -27,25 +27,25 @@ const Home = () => {
                         <article>
                             <img src={allbeers} alt='All Beers' />
                             <h3>All Beers</h3>
-                            <p>lorem ipsum</p>
+                            <p>Aquí un listado de todas esas cervecitas ricas fresquitas</p>
                         </article>
                     </a >
                 </Row>
                 <Row>
-                    <a href="/new" render={(props) => <RandomBeer {...props} />}>
+                    <a href="/beers/new" render={(props) => <RandomBeer {...props} />}>
                         <article>
                             <img src={newbeer} alt='New Beer' />
                             <h3>New Beer</h3>
-                            <p>lorem ipsum</p>
+                            <p>Crea la tuya propia!! maestro cervecero incoming...</p>
                         </article>
                     </a>
                 </Row>
                 <Row>
-                    <a href="/random/:beer_id" render={(props) => <NewBeer {...props} />}>
+                    <a href="/beers/random/" render={(props) => <NewBeer {...props} />}>
                         <article>
                             <img src={randombeer} alt='Random Beer' />
                             <h3>Random Beer</h3>
-                            <p>lorem ipsum</p>
+                            <p>Para los indecisos</p>
                         </article>
                     </a >
                 </Row>
