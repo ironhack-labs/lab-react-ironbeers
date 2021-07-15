@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Container } from 'react-bootstrap';
 import BeerDetails from './BeerDetails';
 import BeerBriefInfoCard from './BeerBriefInfoCard';
+import Header from './Header';
 
 
 class DisplayBeers extends Component {
@@ -32,7 +33,11 @@ class DisplayBeers extends Component {
                         ?
                         <h1>Not Yet</h1>
                         :
-                        this.state.allBeers.map(beer => <BeerBriefInfoCard key={beer._id} {...beer} />)
+                        <>
+                            <Header />
+                            {this.state.allBeers.map(beer => <BeerBriefInfoCard key={beer._id} {...beer} />)}
+                        </>
+
 
                 }
             </Container>
