@@ -1,0 +1,13 @@
+.beercard{
+    box-shadow: inset 3px 0px 11px 6px rgba(128, 128, 128, 0.15);
+    padding: 15px;
+}
+
+
+
+.beercard img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin: 15px;
+}
