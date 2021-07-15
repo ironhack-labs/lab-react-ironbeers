@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+
 class BeersService {
 
     constructor() {
@@ -9,7 +10,7 @@ class BeersService {
     }
 
     getAllBeers = () => this.app.get('/beers')
-    // getOneBeer = beer_id => this.app.get(`/beerdetails/${beer_id}`)
+    getOneBeer = beer_id => this.app.get(`/beers/${beer_id}`)
 }
 
 export default BeersService

@@ -1,0 +1,5 @@
+.beer-details img{
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+}
