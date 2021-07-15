@@ -1,0 +1,20 @@
+[
+    {
+        "title": "All Beers",
+        "img": "assets/beers.png",
+        "linkTo": "/beers",
+        "description": "The sake bomb is vaporized. A tipsy Pilsner intoxicatedly pees on an obsequious Guiness. A smashed dude writes a love letter to an annoying IPA. Indeed, the Miller trades baseball cards with a girl scout. The Busch toward the Avery IPA meditates, because the Avery IPA buys an expensive drink for some Fosters living with a power drill drink."
+    },
+    {
+        "title": "Random Beer",
+        "img": "assets/new-beer.png",
+        "linkTo": "/random-beer",
+        "description": "Furthermore, some Guiness dies, and the Wolverine Beer hardly learns a hard lesson from a Hefeweizen from the Pilsner Urquell."
+    },
+    {
+        "title": "New Beer",
+        "img": "assets/random-beer.png",
+        "linkTo": "/new-beer",
+        "description": "If a Mango Beer from a Full Sail IPA ridiculously seeks a bombed Rolling Rock, then an infected Corona Extra procrastinates. When a burly lover is lazily fat, the underhandedly shabby ice house goes deep sea fishing with a Heineken."
+    }
+]

@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HomePage from './HomePage'
+import { Switch, Route, Redirect } from 'react-router-dom'
+import BeerDetails from './BeerDetails';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className="appSpace">
+      <Switch>
+        <Route path="/" exact render={() => <HomePage />} />
+        <Route path="/beers" render={() => <HomePage />} />
+        <Route path="/random-beer" render={() => <BeerDetails />} />
+        <Route path="/new-beer" render={() => <HomePage />} />
+      </Switch>
+      {/* <HomePage className="homePage" /> */}
     </div>
+
+
   );
 }
 
