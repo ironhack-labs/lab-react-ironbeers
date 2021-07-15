@@ -1,0 +1,29 @@
+/* HOME */
+.home-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.link-litle {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+}
+
+.home-p {
+    font-size: .8em;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+/* BEER CARD */
+.card-img {
+    height: 150px;
+    object-fit: scale-down;
+}
+
+.beer-card {
+    padding: 10px;
+    margin: 10px;
+}
