@@ -31,7 +31,7 @@ class Beers extends React.Component {
               <div className="beers-list-text">
                 <Link
                   activeStyle={{ color: 'red' }}
-                  to={`/${beer._id}`}
+                  to={`/beers/${beer._id}`}
                 >
                   {beer.name}
                 </Link>

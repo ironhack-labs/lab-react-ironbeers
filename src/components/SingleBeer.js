@@ -9,7 +9,7 @@ import {
   CardSubtitle,
 } from 'reactstrap';
 
-class RandomBeer extends Component {
+class BeerDetail extends Component {
   state = {
     image: '',
     name: '',
@@ -21,11 +21,12 @@ class RandomBeer extends Component {
   };
 
   async componentDidMount() {
-
+    const beerId = this.props.match.params.id;
+    
     const response = await axios.get(
-      "https://ih-beers-api2.herokuapp.com/beers/random"
+      `https://ih-beers-api2.herokuapp.com/beers/${beerId}`
     );
-
+   
     this.setState({
       image: response.data.image_url,
       name: response.data.name,
@@ -71,4 +72,4 @@ class RandomBeer extends Component {
   }
 }
 
-export default RandomBeer;
+export default BeerDetail;
