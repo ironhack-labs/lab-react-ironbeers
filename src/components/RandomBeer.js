@@ -1,6 +1,8 @@
 import React from "react"
 import axios from 'axios'
 import { NavLink } from "react-router-dom"
+import Navbar from "./Navbar"
+
 
 class RandomBeer extends React.Component{
     state ={
@@ -32,6 +34,7 @@ class RandomBeer extends React.Component{
         const {image, name, tagline, firstBrewed, attenuationLevel, description, contributedBy} = this.state
         return(
             <>
+            <Navbar/>
             <img src={image} alt="" />
             <h2>{name}</h2>
             <hr />

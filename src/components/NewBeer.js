@@ -11,7 +11,6 @@ class NewBeer extends React.Component{
         brewers_tips:"", 
         attenuation_level:0, 
         contributed_by:"",
-        image_url:""
     }
     handleChange = (event) =>{
         let {name, value} = event.target
@@ -32,40 +31,54 @@ class NewBeer extends React.Component{
             brewers_tips:"", 
             attenuation_level:0, 
             contributed_by:"",
-            image_url:""
+            
         })
     }
 
     render(){
-        const {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by, image_url } = this.state
+        const {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = this.state
         return (
-            <form onSubmit = {this.handleSubmitForm}>
+            <>
+            <Navbar/>
+            <form id="formb" onSubmit = {this.handleSubmitForm}>
+                <div id="div-searchs">
                 <label> Name</label>
-                <input type="text" name="name" onChange={this.handleChange} value={name}/>
+                <input id="searchs" type="text" name="name" onChange={this.handleChange} value={name}/>
+                </div>
 
+                <div id="div-searchs">
                 <label> Tagline</label>
-                <input type="text" name="tagline" onChange={this.handleChange} value={tagline}/>
+                <input id="searchs" type="text" name="tagline" onChange={this.handleChange} value={tagline}/>
+                </div>
 
+                <div id="div-searchs">
                 <label> Description</label>
-                <input type="text" name="description" onChange={this.handleChange} value={description}/>
+                <textarea id="searchs" rows="5" cols="20" name="description" onChange={this.handleChange} value={description}/>
+                </div>
 
+                <div id="div-searchs">
                 <label> First Brewed</label>
-                <input type="text" name="first_brewed" onChange={this.handleChange} value={first_brewed}/>
+                <input id="searchs" type="text" name="first_brewed" onChange={this.handleChange} value={first_brewed}/>
+                </div>
 
+                <div id="div-searchs">
                 <label> Brewers Tips</label>
-                <input type="text" name="brewers_tips" onChange={this.handleChange} value={brewers_tips}/>
+                <input id="searchs" type="text" name="brewers_tips" onChange={this.handleChange} value={brewers_tips}/>
+                </div>
 
+                <div id="div-searchs">
                 <label> Attenuation Level</label>
-                <input type="number" name="attenuation_level" onChange={this.handleChange} value={attenuation_level}/>
+                <input id="searchs" type="number" name="attenuation_level" onChange={this.handleChange} value={attenuation_level}/>
+                </div>
 
+                <div id="div-searchs">
                 <label> Contributed By</label>
-                <input type="text" name="contributed_by" onChange={this.handleChange} value={contributed_by}/>
+                <input id="searchs" type="text" name="contributed_by" onChange={this.handleChange} value={contributed_by}/>
+                </div>
 
-                <label> Image</label>
-                <input type="text" name="image_url" onChange={this.handleChange} value={image_url}/>
-
-                <button type="submit">Create</button>
+                <button id="button-bt" type="submit">Create</button>
             </form>
+            </>
         )
     }
 }

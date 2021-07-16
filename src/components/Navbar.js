@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <div>
             <nav>
-                <NavLink to="/"><h3>🏠</h3></NavLink>
+                <NavLink  to="/home"><h3 id="navbar-dec">🏠</h3></NavLink>
             </nav>
         </div>
     )

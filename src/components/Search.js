@@ -16,7 +16,7 @@ class Search extends React.Component{
     render(){
         const {word} = this.state
         return(
-            <input type="text" name="word" onChange={this.wordChange} value={word}/>
+            <input id="searchs" type="text" name="word" onChange={this.wordChange} value={word} placeholder="Search Beers"/>
         )
     }
 

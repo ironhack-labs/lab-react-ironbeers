@@ -2,6 +2,13 @@ import axios from 'axios'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Search from './Search'
+import Navbar from './Navbar'
+import {
+    Card, CardText, CardBody, CardLink,
+    CardTitle, CardSubtitle
+  } from 'reactstrap';
+
+
 
 class BeersList extends React.Component{
     state={
@@ -32,14 +39,24 @@ class BeersList extends React.Component{
         const {filteredBeers} = this.state
         return(
             <>
+            <Navbar/>
             <Search filterBeers = {this.handleFilterBeer}/>
             {filteredBeers.map((beer)=>{
                 return (
+                    
                     <div key ={beer._id}>
-                        <img src={beer.image_url} alt={beer.name} />
-                        <NavLink to={`/beer-details/${beer._id}`}><h3>{beer.name}</h3></NavLink>
-                        <h4>{beer.tagline}</h4>
-                        <p>Created By: {beer.contributed_by}</p>
+                    <Card>
+                    <img width="6%" height="140px" src={beer.image_url}  alt="Card image cap" />
+                        <CardBody>
+                        <NavLink id="rm-txt" to={`/beer-details/${beer._id}`}><CardTitle tag="h5">{beer.name}</CardTitle></NavLink>
+                        <CardSubtitle tag="h6" className="mb-2 text-muted">{beer.tagline}</CardSubtitle>
+                        <CardText><strong>Created By:</strong>  {beer.contributed_by}</CardText>
+                        </CardBody>
+                        
+                        <CardBody>
+                        
+                        </CardBody>
+                    </Card>
                     </div>
                 )
             })}

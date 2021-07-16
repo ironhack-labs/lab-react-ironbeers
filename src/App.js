@@ -16,9 +16,8 @@ class App extends React.Component {
   render(){
     return (
       <>
-      <Home/>
         <Switch>
-          {/* <Route exact path ="/home" component ={{Home}} /> */}
+          <Route exact path ="/home" component ={Home} />
           <Route path ="/beers-list" component ={BeersList} />
           <Route path ="/new-beer" component ={NewBeer} />
           <Route path ="/random-beer" component ={RandomBeer} />
