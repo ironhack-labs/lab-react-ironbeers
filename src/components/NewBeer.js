@@ -10,7 +10,8 @@ class NewBeer extends React.Component{
         first_brewed:"", 
         brewers_tips:"", 
         attenuation_level:0, 
-        contributed_by:""
+        contributed_by:"",
+        image_url:""
     }
     handleChange = (event) =>{
         let {name, value} = event.target
@@ -30,12 +31,13 @@ class NewBeer extends React.Component{
             first_brewed:"", 
             brewers_tips:"", 
             attenuation_level:0, 
-            contributed_by:""
+            contributed_by:"",
+            image_url:""
         })
     }
 
     render(){
-        const {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by } = this.state
+        const {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by, image_url } = this.state
         return (
             <form onSubmit = {this.handleSubmitForm}>
                 <label> Name</label>
@@ -58,6 +60,9 @@ class NewBeer extends React.Component{
 
                 <label> Contributed By</label>
                 <input type="text" name="contributed_by" onChange={this.handleChange} value={contributed_by}/>
+
+                <label> Image</label>
+                <input type="text" name="image_url" onChange={this.handleChange} value={image_url}/>
 
                 <button type="submit">Create</button>
             </form>
