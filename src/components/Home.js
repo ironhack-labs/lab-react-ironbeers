@@ -8,7 +8,7 @@ return (
 
     <section className="home-page">
         <div className="beers">
-          <img src="../assets/beers.png" alt="craft station img" />
+          <img src="/beers.png" alt="craft station img" />
         </div>
         <div className="beers-text">
           <Link activeStyle={{color: "red"}} to="/beers">All Beers</Link>
@@ -24,7 +24,7 @@ return (
 
       <section className="home-page">
         <div className="beers">
-          <img src="../assets/random-beer.png" alt="craft close-up" />
+          <img src="/random-beer.png" alt="craft close-up" />
         </div>
         <div className="beers-text">
         <Link activeStyle={{color: "red"}} to="/random-beers">Random Beers</Link>
@@ -41,7 +41,7 @@ return (
 
       <section className="home-page">
         <div className="beers">
-          <img src="../assets/new-beer.png" alt="beer-bottle"/>
+          <img src="/new-beer.png" alt="beer-bottle"/>
         </div>
         <div className="beers-text">
         <Link activeStyle={{color: "red"}} to="/new-beer">New Beer</Link>
