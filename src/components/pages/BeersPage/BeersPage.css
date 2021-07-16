@@ -1,0 +1,25 @@
+* {
+    font-size: 0.9rem;
+}
+
+.beer-card {
+    margin-bottom: 40px;
+}
+
+.beer-card h3 {
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+img {
+    height: 120px;
+}
+
+.imgBeer {
+    text-align: center;
+}
+
+.beers {
+    height: auto;
+    width: 100%;
+}
