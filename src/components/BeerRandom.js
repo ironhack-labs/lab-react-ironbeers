@@ -11,7 +11,7 @@ import {
 } from 'reactstrap';
 
 
-class BeerDetail extends Component {
+class RandomBeer extends Component {
   state = {
     image: '',
     name: '',
@@ -26,7 +26,7 @@ class BeerDetail extends Component {
   async componentDidMount() {
     const beerId = this.props.match.params.id;
     const response = await axios.get(
-      `https://ih-beers-api2.herokuapp.com/beers/${beerId}`
+      "https://ih-beers-api2.herokuapp.com/beers/random"
     );
    
    
@@ -79,4 +79,4 @@ class BeerDetail extends Component {
 }
 
 
-export default BeerDetail;
+export default RandomBeer;

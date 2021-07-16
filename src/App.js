@@ -5,13 +5,17 @@ import axios from 'axios';
 import { Switch, Route } from "react-router-dom";
 import Home from './components/Home';
 import Beers from './components/Beers'
+import BeerDetail from './components/BeerDetail';
+import RandomBeer from './components/BeerRandom';
 
 function App() {
   return (
     <div className="App">
         <Switch>
       <Route path="/home"  component={Home}/>
-      <Route path="/beers" component={Beers}/>
+      <Route exact path="/beers" component={Beers}/>
+      <Route path="/beers/:id" component={BeerDetail}/>
+      <Route path="/random-beers" component={RandomBeer}/>
       </Switch>
     </div>
   );
