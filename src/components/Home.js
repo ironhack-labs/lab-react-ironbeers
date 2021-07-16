@@ -6,7 +6,7 @@ function Home() {
     <>
       <section className="home-page">
         <div className="beers-img">
-          <img src="../assets/beers.png" alt="craft station" />
+          <img src="/images/beers.png" alt="craft station" />
         </div>
         <div className="beers-text">
           <Link activeStyle={{ color: 'red' }} to="/beers">
@@ -22,7 +22,7 @@ function Home() {
       </section>
       <section className="home-page">
         <div className="beers-img">
-          <img src="../assets/random-beer.png" alt="craft tap close-up" />
+          <img src="/images/random-beer.png" alt="craft tap close-up" />
         </div>
         <div className="beers-text">
           <Link activeStyle={{ color: 'red' }} to="/random-beer">
@@ -38,7 +38,7 @@ function Home() {
       </section>
       <section className="home-page">
         <div className="beers-img">
-          <img src="../assets/new-beer.png" alt="beer bottle and glass" />
+          <img src="/images/new-beer.png" alt="beer bottle and glass" />
         </div>
         <div className="beers-text">
           <Link activeStyle={{ color: 'red' }} to="/new-beer">
