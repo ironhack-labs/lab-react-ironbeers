@@ -1,0 +1,49 @@
+import React from "react"
+import axios from 'axios'
+import { NavLink } from "react-router-dom"
+
+class RandomBeer extends React.Component{
+    state ={
+        image: "",
+        name:"",
+        tagline: "",
+        firstBrewed:"",
+        attenuationLevel:"",
+        description: "",
+        contributedBy:"",
+    }
+
+
+    async componentDidMount(){
+        const findBeer = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+        console.log(findBeer.data)
+        this.setState({
+            image: findBeer.data.image_url,
+            name: findBeer.data.name,
+            tagline: findBeer.data.tagline,
+            firstBrewed: findBeer.data.first_brewed,
+            attenuationLevel: findBeer.data.attenuation_level,
+            description: findBeer.data.description,
+            contributedBy: findBeer.data.contributed_by
+        })
+    }
+
+    render(){
+        const {image, name, tagline, firstBrewed, attenuationLevel, description, contributedBy} = this.state
+        return(
+            <>
+            <img src={image} alt="" />
+            <h2>{name}</h2>
+            <hr />
+            <h3>{tagline}</h3>
+            <h4>{firstBrewed}</h4>
+            <h3>{attenuationLevel}</h3>
+            <p>{description}</p>
+            <p>{contributedBy}</p>
+            </>
+        )
+    }
+}
+
+
+export default RandomBeer
