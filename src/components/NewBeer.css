@@ -1,0 +1,16 @@
+.newForm{
+    padding: 2px 20px;
+}
+
+.newForm div{
+    padding: 10px 0px;
+}
+
+.newForm input{
+        border-radius: 25px !important;
+}
+.newForm button{
+    background-color: #15caff !important;
+    width: 100%;
+    border-radius: 25px
+}

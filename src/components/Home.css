@@ -1,0 +1,28 @@
+.link{
+    text-decoration: none;
+}
+
+.card{
+    padding: 0 !important;
+    border: none !important;
+}
+
+.card h5{
+    margin: 0;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+}
+
+.card-body {
+    padding: 2px 1rem 1rem !important;
+}
+
+
+.card-body p{
+    font-weight: 400;
+    color: gray;
+    font-size: smaller;
+}
+
+

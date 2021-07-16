@@ -1,0 +1,29 @@
+.beer {
+    border-bottom: solid 1px gainsboro;
+    text-decoration: none;
+    padding: 15px 0;
+    height: 9rem;
+}
+
+.beerUl{
+    padding-left: 0 !important;
+}
+
+
+.beer img  {
+   height: 7rem;
+   padding-left: 15px;
+}
+
+.beer h4{
+    color: black;
+    font-weight: 400;
+}
+.beer h5{
+    color: grey;
+    font-size: 1rem;
+}
+.beer h6{
+    color: black;
+    font-size: 0.8rem;
+}
