@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Card } from 'reactstrap';
 
 class NewBeer extends Component {
   state = {
@@ -12,28 +11,28 @@ class NewBeer extends Component {
     attenuation_level: 0,
     contributed_by: '',
   };
+  handleChange = (event) => {
+    let { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
 
   handleSubmitForm = async (event) => {
     event.preventDefault();
-    const response = await axios.post(
-      `https://ih-beers-api2.herokuapp.com/beers`,
+    const newBeer = await axios.post(
+      'https://ih-beers-api2.herokuapp.com/beers/new',
       this.state
     );
+    console.log(newBeer);
     this.setState({
       name: '',
       tagline: '',
       description: '',
       first_brewed: '',
       brewers_tips: '',
-      attenuationLevel: 0,
+      attenuation_level: 0,
       contributed_by: '',
-    });
-  };
-
-  handleChange = (event) => {
-    let { name, value } = event.target;
-    this.setState({
-      [name]: value,
     });
   };
 
@@ -49,66 +48,90 @@ class NewBeer extends Component {
     } = this.state;
     return (
       <>
-        <Card>
-        <form onSubmit={this.handleSubmitForm}>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={this.handleChange}
-          />
+        
+        <form id="formb" onSubmit={this.handleSubmitForm}>
+          <div id="div-searchs">
+            <label> Name</label>
+            <input
+              id="searchs"
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              value={name}
+            />
+          </div>
 
-          <label>Tagline</label>
-          <input
-            type="text"
-            name="tagline"
-            value={tagline}
-            onChange={this.handleChange}
-          />
+          <div id="div-searchs">
+            <label> Tagline</label>
+            <input
+              id="searchs"
+              type="text"
+              name="tagline"
+              onChange={this.handleChange}
+              value={tagline}
+            />
+          </div>
 
-          <label>Description</label>
-          <input
-            type="text"
-            name="description"
-            value={description}
-            onChange={this.handleChange}
-          />
+          <div id="div-searchs">
+            <label> Description</label>
+            <textarea
+              id="searchs"
+              rows="5"
+              cols="20"
+              name="description"
+              onChange={this.handleChange}
+              value={description}
+            />
+          </div>
 
-          <label>First Brewed</label>
-          <input
-            type="text"
-            name="first_brewed"
-            value={first_brewed}
-            onChange={this.handleChange}
-          />
+          <div id="div-searchs">
+            <label> First Brewed</label>
+            <input
+              id="searchs"
+              type="text"
+              name="first_brewed"
+              onChange={this.handleChange}
+              value={first_brewed}
+            />
+          </div>
 
-          <label>Brewer's Tips</label>
-          <input
-            type="text"
-            name="brewers_tips"
-            value={brewers_tips}
-            onChange={this.handleChange}
-          />
+          <div id="div-searchs">
+            <label> Brewers Tips</label>
+            <input
+              id="searchs"
+              type="text"
+              name="brewers_tips"
+              onChange={this.handleChange}
+              value={brewers_tips}
+            />
+          </div>
 
-          <label>Attenuation Level</label>
-          <input
-            type="number"
-            name="attenuation_level"
-            value={attenuation_level}
-            onChange={this.handleChange}
-          />
+          <div id="div-searchs">
+            <label> Attenuation Level</label>
+            <input
+              id="searchs"
+              type="number"
+              name="attenuation_level"
+              onChange={this.handleChange}
+              value={attenuation_level}
+            />
+          </div>
 
-          <label>Created by</label>
-          <input
-            type="text"
-            name="contributed_by"
-            value={contributed_by}
-            onChange={this.handleChange}
-          />
-          <button type="submit">Create</button>
+          <div id="div-searchs">
+            <label> Contributed By</label>
+            <input
+              id="searchs"
+              type="text"
+              name="contributed_by"
+              onChange={this.handleChange}
+              value={contributed_by}
+            />
+          </div>
+
+          <button id="butt" type="submit">
+            Create
+          </button>
         </form>
-        </Card>
       </>
     );
   }
