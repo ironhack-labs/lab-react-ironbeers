@@ -19,7 +19,7 @@ class FilteredBeer extends React.Component {
     render() {
         const { word } = this.state;
         return (
-            <input type="text" name="word" onChange={this.wordChange} value={word} />
+            <input id="search-bar" type="text" name="word" onChange={this.wordChange} value={word}  placeholder="Search"/>
         )
     }
 }

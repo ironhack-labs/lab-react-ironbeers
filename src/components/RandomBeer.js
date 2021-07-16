@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle
+} from 'reactstrap';
 
 class RandomBeer extends React.Component {
     state = {
@@ -15,7 +19,7 @@ class RandomBeer extends React.Component {
 
 
     async componentDidMount() {
-        
+
         const response = await axios.get('https://ih-beers-api2.herokuapp.com/beers/random');
         console.log('checking', response.data)
 
@@ -31,20 +35,29 @@ class RandomBeer extends React.Component {
         })
     }
 
-    
+
 
     render() {
         const { image, name, tagline, first_brewed, attenuation_level, description, contributed_by } = this.state;
         return (
-            <div>
-                <img src={image} alt="beer" />
-                <h3>{name}</h3>
-                <p>{tagline}</p>
-                <p>{first_brewed}</p>
-                <p>{attenuation_level}</p>
-                <p>{description}</p>
-                <p>{contributed_by}</p>
-            </div>
+
+            <>
+                <Navbar />
+
+                <Card className="card">
+                    <CardImg className="card-img" top width="100%" src={image} alt="beer" />
+                    <CardBody>
+                        <CardTitle tag="h5">{name}</CardTitle>
+                        <CardSubtitle tag="h6" className="mb-2 text-muted">{tagline}</CardSubtitle>
+                        <CardText className="card-text">{first_brewed}</CardText>
+                        <CardText className="card-text">{attenuation_level}</CardText>
+                        <CardText className="card-text">{description}</CardText>
+                        <CardText className="card-text">{contributed_by}</CardText>
+
+                    </CardBody>
+                </Card>
+            </>
+
         )
     }
 }

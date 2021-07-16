@@ -11,9 +11,10 @@ import BeerDetail from './components/BeerDetail';
 function App() {
   return (
     <div className="App">
-      <Homepage />
+      
 
       <Switch>
+        <Route exact path="/" component={Homepage} />
         <Route exact path="/beers" component={BeersList} />
         <Route path="/beers/:id" component={BeerDetail} />
         <Route path="/new-beer" component={NewBeer} />
