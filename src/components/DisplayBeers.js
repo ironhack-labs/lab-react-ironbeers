@@ -6,6 +6,7 @@ import BeerDetails from './BeerDetails';
 import BeerBriefInfoCard from './BeerBriefInfoCard';
 import Header from './Header';
 import NewBeerForm from './AddBeer';
+import Search from './Search';
 
 
 
@@ -13,11 +14,13 @@ class DisplayBeers extends Component {
     constructor() {
         super()
         this.state = {
-            allBeers: undefined
+            allBeers: undefined,
+            search: undefined
         }
     }
 
     componentDidMount() {
+
         axios
             .get('https://ih-beers-api2.herokuapp.com/beers')
             .then((response) => {
@@ -26,7 +29,31 @@ class DisplayBeers extends Component {
                 // console.log(this.state.allBeers)
             })
             .catch((err) => console.error(err))
+
+
     }
+
+    searchProduct = product => {
+
+        this.setState({
+            search: product
+        })
+        let route =
+            axios
+                .get('https://ih-beers-api2.herokuapp.com/beers/search?q=' + this.state.search)
+                .then((response) => {
+                    // console.log(response.data)
+                    this.setState({ allBeers: response.data })
+                    // console.log(this.state.allBeers)
+                })
+                .catch((err) => console.error(err))
+
+    }
+
+
+
+
+
 
     addBeer = newBeer => {
         console.log(newBeer)
@@ -38,10 +65,12 @@ class DisplayBeers extends Component {
             .catch(error => {
                 console.log("Error is: ", error);
             })
-        // const beersCopy = [...this.state.allBeers]
-        // beersCopy.push(newBeer)
-        // this.setState({ allBeers: beersCopy })
+
     }
+
+
+
+
 
     render() {
         return (
@@ -53,6 +82,7 @@ class DisplayBeers extends Component {
                         :
                         <>
                             <Header />
+                            <Search searchProduct={this.searchProduct} search={this.state.search} />
                             {/* <Link className="nav-link" to="/new-beer">NewBeer</Link> */}
                             <NewBeerForm addBeer={this.addBeer} />
                             {this.state.allBeers.map(beer => <BeerBriefInfoCard key={beer._id} {...beer} />)}
