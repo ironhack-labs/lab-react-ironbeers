@@ -1,26 +1,77 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component} from 'react'
+import Header from './components/Header';
+import Home from "./components/Home"
+import { Switch, Route, withRouter} from "react-router-dom";
+import ListBeers from "./components/ListBeers"
+import RandomBeer from "./components/RandomBeer"
+import NewBeer from "./components/NewBeer"
+import SingleBeer from "./components/SingleBeer"
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+//WHY WE NEED TO DO IT HERE????
+  state = {
+    beers: []
+  }
+
+  async componentDidMount(){
+    try {
+      let response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers`)
+      this.setState({
+        beers: response.data
+      })
+    }
+    catch(err){
+      console.log('Beers fetch failed', err)
+    }
+  }
+  
+  handleAddBeer = (e) => {
+    e.preventDefault();
+
+    let newBeer = {
+      name: e.target.name.value,
+      tagline: e.target.tagline.value,
+      first_brewed: e.target.first_brewed.value,
+      brewer_tips: e.target.brewer_tips.value,
+      attenuation_level: e.target.attenuation_level.value,
+      contributed_by: e.target.contributed_by.value
+    }
+  
+  axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`, newBeer)
+    .then((response) => {
+      this.setState({
+        beers: [response.data, ...this.state.beers]
+      }, () => {
+        this.props.history.push('/')
+      })
+    })
+    .catch(() => {
+      console.log('Adding beer failed')
+    })
+  }
+
+  render() {
+    return (
+      <div>
+         <Route exact path={'/'} render={(routeProps) => {
+            return <Home/>  }}/>
+                <Header/>
+              <Switch>
+                <Route path={'/beers'} render={(routeProps) => {
+                  return <ListBeers/> }} />
+                <Route path={'/random-beer'} render={(routeProps) => {
+                  return <RandomBeer/> }} />
+                <Route path={'/new-beer'} render={(routeProps) => {
+                  return <NewBeer onAdd={this.handleAddBeer}/> }} />
+                <Route path={'/beer/:id'} render={(routeProps) => {
+                  return <SingleBeer {...routeProps} /> }} />
+            </Switch>
+      </div>
+    )
+  }
 }
 
-export default App;
+
+export default withRouter(App);
