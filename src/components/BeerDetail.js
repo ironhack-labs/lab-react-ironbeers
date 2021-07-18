@@ -7,7 +7,6 @@ import Card from 'react-bootstrap/Card';
 
 
 function BeerDetail(props) {
-
     const [beerDetail, updateBeerDetail] = useState(null)
 
     useEffect(async () => {
