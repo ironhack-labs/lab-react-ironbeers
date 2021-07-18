@@ -1,38 +1,71 @@
 .App {
+  text-align: left;
+}
+
+
+
+.card-text{
+  color: grey;
+}
+
+.card-link{
+  text-decoration: none;
+  color: black;
+}
+
+.card-link:hover{
+  text-decoration: none;
+  color: rgb(40, 168, 136);
+}
+body{
+  background-color:cadetblue;
+}
+
+#navbar{
+  background-color: rgba(25, 163, 218, 0.822);
+  height: 70px;
   text-align: center;
+  font-size: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card-img{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 150px !important;
+  margin: 20px;
+}
+
+#search-bar{
+
+  border: 1px solid rgb(40, 168, 136);
+  margin: 20px;
+  width: 400px;
+}
+
+form input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  border: 2px solid rgb(40, 168, 136);
+  margin: 5px;
+  border-radius: 10px;
+  height: 30px;
+}
+
+form label{
+color: rgb(40, 168, 136);
+width: 300px;
+margin: 5px;
+}
+
+form button{
+  background-color: rgb(17, 92, 97);
+  border: none;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 10px 5px;
+  border-radius: 10px;
+  height: 50px;
+  width: 100px;
+  font-weight: bolder;
 }

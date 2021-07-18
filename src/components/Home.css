@@ -1,0 +1,26 @@
+.link{
+    text-decoration: none;
+}
+
+.CardContent{
+    padding: 0 !important;
+    border: none !important;
+}
+
+.Typgraphy{
+    margin: 0;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+}
+
+.CardContent {
+    padding: 2px 1rem 1rem !important;
+}
+
+
+.CardContent p{
+    font-weight: 400;
+    color: gray;
+    font-size: smaller;
+}
