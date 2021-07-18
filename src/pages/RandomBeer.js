@@ -6,14 +6,18 @@ import OneBeer from '../components/OneBeer';
 function RandomBeer({match: {params: {id}} }) {
     const [ beer, setBeer ] = useState(null); 
         
-    useEffect(async () => {
-        try {
-            let beerData = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`);
-            setBeer(beerData.data);
+    useEffect(() => {
+        const getRandomBeer = async () => {
+            try {
+                let beerData = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`);
+                setBeer(beerData.data);
+            }
+            catch(error) {
+                throw new Error("Failed to get the beer", error);
+            }
         }
-        catch(error) {
-            throw new Error("Failed to get the beer", error);
-        }
+
+        getRandomBeer();
     }, [])
     
     if (!beer) {

@@ -6,18 +6,22 @@ import { TextField } from '@material-ui/core';
 
 function AllBeers() {
 
-    const [ beers, setBeers ] = useState(null); 
+    // const [ beers, setBeers ] = useState(null); 
     const [ filteredBeers, setFilteredBeers ] = useState(null); 
 
-    useEffect(async () => {
-        try {
-            let allBeerData = await axios.get('https://ih-beers-api2.herokuapp.com/beers');
-            setBeers(allBeerData.data);
-            setFilteredBeers(allBeerData.data);
+    useEffect(() => {
+        const getAllBeerData = async () => {
+            try {
+                let allBeerData = await axios.get('https://ih-beers-api2.herokuapp.com/beers');
+                // setBeers(allBeerData.data);
+                setFilteredBeers(allBeerData.data);
+            }
+            catch(error) {
+                throw new Error("Failed to get all beers", error);
+            }
         }
-        catch(error) {
-            throw new Error("Failed to get all beers", error);
-        }
+
+        getAllBeerData();
     }, [])
 
     const handleSearch = async (event) => {

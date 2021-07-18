@@ -1,7 +1,6 @@
 import React from 'react';
 
 function OneBeer({ beer: {name, description, tagline, image_url, attenuation_level, contributed_by,first_brewed}}) {
-    console.log('name', name)
     return (
         <div className="beerdetails-container">
             <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>

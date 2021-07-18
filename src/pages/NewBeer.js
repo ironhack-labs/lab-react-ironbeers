@@ -21,8 +21,6 @@ function NewBeer() {
                 contributed_by: contributed_by.value
             }
 
-            console.log(newBeer)
-
             await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
 
         }

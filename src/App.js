@@ -12,10 +12,10 @@ function App() {
     <div>
       <Switch>
         <Route exact path={'/'} component={MainPage} />
-        <Route exact path={'/beers/:id'} render={(routeProps) => {
+        <Route exact path={'/beers'} component={AllBeers} />
+        <Route path={'/beers/:id'} render={(routeProps) => {
           return <BeerDetails  {...routeProps} />
         }} />
-        <Route path={'/beers'} component={AllBeers} />
         <Route path={'/random-beer'} component={RandomBeer} />
         <Route path={'/new-beer'} component={NewBeer} />
       </Switch>

@@ -6,7 +6,7 @@ function SingleBeer({ beer: { _id, name, tagline, image_url, contributed_by }}) 
         <Link to={`/beers/${_id}`} style={{ textDecoration: "none"}}>
             <div className="singlebeer-container">
                 <div className="singlebeer-image-container">
-                    <img src={image_url} />
+                    <img src={image_url} alt={name} />
                 </div>
                 <div>
                     <h3>{name}</h3>
