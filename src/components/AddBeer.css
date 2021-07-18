@@ -1,0 +1,31 @@
+#new-beer-container {
+  margin: 20px 0;
+}
+
+#header-create {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.MuiTextField-root {
+  margin: 10px 0 !important;
+}
+
+.MuiTextField-root label {
+  font-weight: bold !important;
+}
+
+#add-button {
+  background-color: #9d0208;
+  border-radius: 50px;
+  width: 50%;
+  margin: 10px auto;
+}
+
+#add-button:hover {
+  background-color: #6a040f;
+}

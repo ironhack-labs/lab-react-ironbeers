@@ -1,0 +1,9 @@
+.beer-image {
+    background-size: 100px 90% !important;
+    height: 300px;
+}
+
+.card-content {
+    padding: 0 20px !important;
+    padding-bottom: 15px !important;
+}

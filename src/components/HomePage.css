@@ -1,0 +1,24 @@
+#beers {
+    background-image: url('../assets/beers.png');
+}
+
+#random-beer {
+    background-image: url('../assets/random-beer.png');
+}
+
+#new-beer {
+    background-image: url('../assets/new-beer.png');
+}
+
+.card-image {
+    height: 200px;
+}
+
+.card-container {
+    margin: 20px 0;
+}
+
+.home-link {
+    text-decoration: none;
+    color: black;
+}
