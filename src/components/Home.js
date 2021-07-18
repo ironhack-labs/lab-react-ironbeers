@@ -19,7 +19,7 @@ class Home extends Component {
                 <Card style={{ width: '45rem' }}>
                     <Link to='/random-beer' style={{textDecoration: 'none'}}>
                         <img src={randomBeerImg} alt="Beer bar tap"></img>
-                        <h2 style={{color: 'black'}}>Random Beers</h2>
+                        <h2 style={{color: 'black'}}>Random Beer</h2>
                         <p style={{color: 'grey'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </Link>
                 </Card>
