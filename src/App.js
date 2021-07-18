@@ -7,6 +7,7 @@ import RandomBeer from "./components/RandomBeer"
 import NewBeer from "./components/NewBeer"
 import SingleBeer from "./components/SingleBeer"
 import axios from 'axios';
+import Search from "./components/Search"
 
 class App extends Component {
 
@@ -52,6 +53,20 @@ class App extends Component {
     })
   }
 
+  handleSearch = async (e) => {
+    e.preventDefault();
+    let query = e.target.value
+    try {
+      let response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+      this.setState({
+        beers: response.data
+      })
+      console.log(response.data)
+    }
+    catch(err){
+      console.log('Beers fetch failed', err)
+    }
+  }
   render() {
     return (
       <div>
@@ -60,7 +75,10 @@ class App extends Component {
                 <Header/>
               <Switch>
                 <Route path={'/beers'} render={(routeProps) => {
-                  return <ListBeers/> }} />
+                  return <div>
+                    <Search onSearch={this.handleSearch} /> 
+                    <ListBeers beers={this.state.beers}/> 
+                  </div>}} />
                 <Route path={'/random-beer'} render={(routeProps) => {
                   return <RandomBeer/> }} />
                 <Route path={'/new-beer'} render={(routeProps) => {

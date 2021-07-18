@@ -1,22 +1,21 @@
 import React, { Component } from 'react'
-import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 class ListBeers extends Component {
 
-    state = {
-        beers: []
-    }
+    // state = {
+    //     beers: []
+    // }
 
-    async componentDidMount(){
-        let response = await axios.get('https://ih-beers-api2.herokuapp.com/beers')
-        this.setState({
-            beers: response.data
-        })
-        console.log(this.state.beers)
-    }
+    // async componentDidMount(){
+    //     let response = await axios.get('https://ih-beers-api2.herokuapp.com/beers')
+    //     this.setState({
+    //         beers: response.data
+    //     })
+    //     console.log(this.state.beers)
+    // }
     render() {
-        const {beers} = this.state
+        const {beers} = this.props
         if (beers.length === 0) {
             return (
                 <div className="spinner-border text-info" role="status">
@@ -26,6 +25,7 @@ class ListBeers extends Component {
         }
         return (
             <div>
+
                 {
                     beers.map((beer, i) => {
                         return <div className="card mb-3" styles="max-width: 540px;" key={beer._id}>
