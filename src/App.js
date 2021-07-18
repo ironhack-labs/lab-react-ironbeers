@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Beers from './components/Beers';
 import NewBeer from './components/NewBeer';
 import RandomBeer from './components/RandomBeer';
+import BeersDetail from './components/BeersDetail';
 
 class App extends Component {
 
@@ -15,9 +16,12 @@ class App extends Component {
           <Route exact path={'/'} render={() => {
             return <Home />
           }} />
-          <Route path={'/beers'} render={() => {
+          <Route exact path ={'/beers'} render={() => {
             return <Beers />
           }} /> 
+          <Route path={'/beers/:beerId'} render={(routeProps) => {
+            return <BeersDetail {...routeProps} />
+          }} />
           <Route path={'/random-beer'} render={() => {
             return <RandomBeer />
           }} />

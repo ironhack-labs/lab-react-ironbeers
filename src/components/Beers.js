@@ -27,12 +27,12 @@ class Beers extends Component {
         return (
             <div>
                 <Nav />
-                <h2>Beers</h2>
+                <h2>All the Beers</h2>
                 {
                     beers.map((beer, i) => {
                         return <div key={i}>
-                                    <img src={beer.image_url} style={{width: '50px'}}/>
-                                    <Link to={`/all-the-beers/${beer._id}`}>{beer.name}</Link>
+                                    <img src={beer.image_url} style={{width: '50px'}} alt={beer.name}/>
+                                    <Link to={`/beers/${beer._id}`}>{beer.name}</Link>
                                     <p>{beer.tagline}</p>
                                     <p>Contributor: {beer.contributed_by} </p>
 
