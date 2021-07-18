@@ -6,6 +6,7 @@ import randomBeerImg from '../assets/random-beer.png';
 import newBeerImg from '../assets/random-beer.png';
 
 class Home extends Component {
+
     render() {
         return (
             <>

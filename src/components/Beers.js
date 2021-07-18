@@ -1,29 +1,11 @@
 import React, { Component } from 'react';
 import Nav from './MyNav';
-import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 class Beers extends Component {
 
-    state = {
-        beers: []
-      }
-    
-    async componentDidMount() {
-        try {
-            let response = await axios.get('https://ih-beers-api2.herokuapp.com/beers')
-            console.log(response.data, 'hello')
-            this.setState({
-            beers: response.data
-          })
-        }
-        catch(error) {
-          console.log('Failed to fetch beers ', error)
-        }
-      }
-
     render() {
-        const {beers} = this.state
+        const {beers} = this.props
         return (
             <div>
                 <Nav />

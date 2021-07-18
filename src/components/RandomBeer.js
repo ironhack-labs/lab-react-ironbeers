@@ -21,7 +21,6 @@ class RandomBeer extends Component {
         }
     }
 
-
     render() {
         const {randomBeer} = this.state
         return (

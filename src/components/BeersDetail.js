@@ -22,7 +22,6 @@ class BeersDetail extends Component {
         }
     }
 
-
     render() {
         const {beersDetail} = this.state
         return (
