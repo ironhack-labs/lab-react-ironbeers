@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom'
+import axios from 'axios'
+import AllBeers from './components/AllBeers'
+import Home from './components/Home'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+class App extends Component {
+
+  state = {
+    beers: []
+  }
+
+  async componentDidMount(){
+    try{
+      let response = await axios.get('https://ih-beers-api2.herokuapp.com/beers')
+      console.log(response)
+      this.setState({
+        beers: response.data
+      })
+    }
+    catch(err){
+      console.log('componentDidMount fail', err)
+    }
+    
+  }
+
+  render() {
+
+    
+    return (
+      <div>
+          
+          <Switch>
+
+            <Route exact path={'/'} render={() => {
+              return <Home />
+            }} />
+
+            <Route exact path={'/beers'} render={() => {
+              return <AllBeers beers={this.state.beers} />
+            }} />
+            
+
+          </Switch>
+
+      </div>
+    )
+  }
 }
+
+
+
 
 export default App;
