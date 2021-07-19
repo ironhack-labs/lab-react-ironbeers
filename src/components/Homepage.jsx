@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-class Homepafe extends Component {
+class Homepage extends Component {
 
 
 
@@ -33,4 +33,4 @@ class Homepafe extends Component {
     }
 }
 
-export default RandomBeer
+export default Homepage

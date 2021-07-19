@@ -70,7 +70,7 @@ handleAddBeer = (event) => {
         () => {
            <Redirect to={'/'} >
 		}
-        }
+        
       );
     })
     .catch((error) => {
@@ -109,7 +109,7 @@ handleFindBeer = (event) => {
           return <BeersList beers={beers}/>
         }}/>
         <Route path={'/signle/:id'} render={(routerProps) => {
-          return <BeerDetails {...routerProps} beers={beers}/>
+          return <BeerDetails {...routerProps} SingleBeer={beers}/>
         }}/>
         <Route path={'/RandomBeer'} render={() => {
           return <RandomBeer/>
