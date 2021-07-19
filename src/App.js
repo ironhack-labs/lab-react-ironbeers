@@ -106,16 +106,16 @@ handleFindBeer = (event) => {
           return <HomePage/>
         }}/>
         <Route exact path={'/Beers'} render={() => {
-          return <BeersList beers={beers}/>
+          return <Beers/>
         }}/>
         <Route path={'/signle/:id'} render={(routerProps) => {
-          return <BeerDetails {...routerProps} SingleBeer={beers}/>
+          return <SingleBeer {...routerProps}/>
         }}/>
         <Route path={'/RandomBeer'} render={() => {
           return <RandomBeer/>
         }}/>
         <Route path={'/NewBeer'} render={() => {
-          return <NewBeer NewBeer={handleNewBeer}/>
+          return <NewBeer/>
         }}/>
       </Switch>
       </div>
