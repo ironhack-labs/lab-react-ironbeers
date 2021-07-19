@@ -1,0 +1,30 @@
+header {
+height: auto;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(53, 228, 252);
+}
+
+header img {
+    width: 5vh;
+}
+
+.beer-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    padding-top: 10px;
+    
+
+}
+
+.beer-container img {
+    width: auto;
+    height: 35vw;
+}
+
+.beer-box {
+    width: 50vw;
+}

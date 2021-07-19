@@ -5,6 +5,7 @@ export default class Homepage extends Component {
   render() {
     return (
       <div>
+        <h1>App Crib 🏞</h1>
         <h2>Home of the beer 🍺</h2>
         <div>
           <Link to="/beers">
