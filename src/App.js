@@ -74,7 +74,7 @@ handleAddBeer = (event) => {
       );
     })
     .catch((error) => {
-      console.log('Creating beer failed ' + `${error}`);
+      console.log(`Creating beer failed ${error}`);
     });
 };
 
@@ -108,7 +108,7 @@ handleFindBeer = (event) => {
         <Route exact path={'/Beers'} render={() => {
           return <BeersList beers={beers}/>
         }}/>
-        <Route path={'/beers/:id'} render={(routerProps) => {
+        <Route path={'/signle/:id'} render={(routerProps) => {
           return <BeerDetails {...routerProps} beers={beers}/>
         }}/>
         <Route path={'/RandomBeer'} render={() => {
