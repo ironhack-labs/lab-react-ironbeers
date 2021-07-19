@@ -1,6 +1,7 @@
 import axios from 'axios'
-import React, {Component, useState, useEffect} from 'react'
-import Header from './Header'
+import React, {Component} from 'react'
+import header from '../assets/header.png'
+import {Link} from 'react-router-dom'
 
 
 
@@ -15,21 +16,22 @@ state = {
 }
 
 
-getData = aysnc () => {
+componentDidMount = async () => {
 
 
+    const {beerIndex} = this.props.match.params
 
-let id = Number(beerIndex)
-let response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
+let response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerIndex}`)
+console.log(response.data)
 let beerDetail = {
-     id: beerIndex,
-     image: image_url,
-     name: name,
-     tagline: tagline,
-     first_brewed: first_brewed,
-     attenuation_level: attenuation_level,
-     description: description,
-     contributed_by: contributed_by
+    // id: beerIndex,        //were not showing id -> not using
+     image: response.data.image_url,
+     name: response.data.name,
+     tagline: response.data.tagline,
+     first_brewed: response.data.first_brewed,
+     attenuation_level: response.data.attenuation_level,
+     description: response.data.description,
+     contributed_by: response.data.contributed_by
 
 }
 
@@ -41,35 +43,24 @@ this.setState({
 
 
 
-componentDidMount(){
-    this.getData()
 
-}
-
-componentDidUpdate() {
-    const {beerIndex} = this.props.params
-let newId= beerIndex    //was in Beerlist als key stand?
-let stateId= this.state.beerDetail.id
-
-if(newId !== stateId){
- this.getData()
-
-  }
-}
 
     render() {
+        const {beerDetail} = this.state
+        if(!this.state.beerDetail){
+
+            return <p>Loading BeerDetails...</p>
+        } 
         return (
             <div>
-                if(!this.state.beerDetail){
-
-                    return <p>Loading BeerDetails...</p>
-                }
-                const {beerDetail} = this.state
-
-                return (
+                <Link to ="/">
+   <img src={header} alt="some beer"/>
+   </Link>
+               
+            
                   <div>
-                  <Header/>
-                 <img src = {beerDetail.image_url} alt="some beer"></img>
+                 
+                 <img src={beerDetail.image} alt="some beer"/>
                    <p>{beerDetail.name}</p>
                    <p>{beerDetail.tagline}</p>
                    <p>{beerDetail.first_brewed}</p>
@@ -79,7 +70,7 @@ if(newId !== stateId){
                   </div>
                    
 
-                )
+        
  
             </div>
         )

@@ -1,24 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import logo from './logo.svg';
 import './App.css';
-import { Route, Switch } from 'react-router-dom'; //only here, where routes are created!!!
+import { Route, Switch, withRouter} from 'react-router-dom'; //only here, where routes are created!!!
 
 //import all components here:
 import Home from './components/Home';
-import Header from './components/Header';
 import BeerDetail from './components/BeerDetail';
 import BeerList from './components/BeerList';
 import RandomBeer from './components/RandomBeer';
 import AddForm from './components/AddForm';
+import axios from 'axios'
+import {useState, useEffect} from 'react'
 
-function App() {
+function App(props) {
   //handle routes in App.js
+const [beers, updateBeers] = useState(null)
 
+useEffect( ()=> {
+ const getBeers = async () => {
 
-  handleAddTodo = (event) => {
+  let response= await axios.get('https://ih-beers-api2.herokuapp.com/beers')
+  updateBeers(response.data)
+ }
+getBeers()
 
-    event.preventDefault()
+}, [])
+
+  const handleAddBeer = (event) => {
+   event.preventDefault()
 
     let newBeer = {
       name: event.target.name.value,
@@ -28,18 +36,14 @@ function App() {
       brewers_tips: event.target.tips.value,
       attenuation_level: event.target.attenuation.value,
       contributed_by: event.target.contributed.value,
-      completed: false
+     
     }
     
     axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`, newBeer)
       .then((response) => {
-
-          this.setState({
-            todos: [response.data, beers]
-          }, () => {
-              
-              this.props.history.push('/')
-          })
+           console.log(response.data)  //reponse message from the API
+          updateBeers([...beers, newBeer])
+          
       })
       .catch(() => {
         console.log('Adding beer failed! :( ')
@@ -47,24 +51,36 @@ function App() {
 
   }
 
+useEffect(()=> {
+
+  props.history.push('/')
+}, [beers])
+
+
 
   return (
     <div>
-      <Home />
-
+     
       <Switch>
-        <Route exact path={'/'} component={BeerList}></Route>
-        <Route path={'/random'} component={RandomBeer}></Route>
-        <Route path={'/:id'} component={BeerDetail}></Route>
-        <Route path={'/new'} render = {()=> {
+        <Route exact path={'/'} component={Home}/>
+        <Route exact path={'/beers'} render={()=> {
+          return <BeerList beers={beers}/>
+        }}/>
+        <Route path={'/random-beer'} component={RandomBeer}/>
+
+        <Route path={'/beers/:beerIndex'} render = {(routeProps)=> {
+          return <BeerDetail   {...routeProps}/>
+        }} />
+
+        <Route path={'/new-beer'} render = {(routeProps)=> {
          return <AddForm  {...routeProps} onAddBeer= {handleAddBeer} />
-        }}
+        }}/>
         
-      </Switch/
+      </Switch>
     </div>
   );
 }
 
 export default withRouter(App);
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+
