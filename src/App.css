@@ -1,10 +1,41 @@
 .App {
   text-align: center;
+  margin: 10px 0;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.Navbar {
+  background-color: #3dc4fc;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.beer-container {
+  display: flex;
+  justify-content: left;
+  padding: 20px;
+  width: 30vw;
+}
+
+.beer-info {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.beer-image {
+  width: 10vw;
+}
+
+hr {
+  width: 30vw;
+  margin: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {

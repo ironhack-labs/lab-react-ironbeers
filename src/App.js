@@ -9,18 +9,23 @@ import BeerDetail from './components/BeerDetail';
 import NewBeer from './components/NewBeer';
 
 class App extends React.Component {
+
 	render() {
 		return (
-		  <div className='App' >
-			<Navbar />
-			<Switch>
-              <Route exact path={["/", "/home"]} component={Home} />
-              <Route exact path="/beers" component={BeersList} />
-              <Route exact path="/random-beer" component={RandomBeer} />
-              <Route exact path="/:_id" component={BeerDetail} />
-              <Route exact path="/beers/newbeer" component={NewBeer} />
-            </Switch>
-		  </div>
+			<>
+			<div className='Navbar'>
+				<Navbar />
+			</div>
+		  	<div className='App' >
+				<Switch>
+				<Route exact path="/" component={Home} />
+				<Route exact path="/beers" component={BeersList} />
+				<Route exact path="/random-beer" component={RandomBeer} />
+				<Route exact path="/:_id" component={BeerDetail} />
+				<Route exact path="/beers/newbeer" component={NewBeer} />
+				</Switch>
+		   	</div>
+			</>
 		);
 	}
 }
