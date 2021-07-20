@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Beers.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export default class Beers extends Component {
@@ -40,11 +40,11 @@ export default class Beers extends Component {
                     {this.state.beers.map(beer => {
                         return(
                             
-                            <div className='beer-container' key={beer._id}>
+                            <div className='beers-container' key={beer._id}>
                                 <img src={beer.image_url} alt={beer.name} />
 
                                 <div className='beer-box'>
-                                    <h3>{beer.name}</h3>
+                                    <Link to={`/beers/${beer._id}`}><h3>{beer.name}</h3></Link>
                                     <p>{beer.tagline}</p>
                                     <h5><b>Created by: {beer.contributed_by}</b></h5>
                                 </div>

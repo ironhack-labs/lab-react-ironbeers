@@ -1,0 +1,42 @@
+h4,
+h3, 
+h5 {
+    color: grey;
+}
+.beer-container {
+    margin-top: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.beer-container img {
+    height: 30vh;
+}
+
+.beer-container p {
+    width: 90vw;
+}
+
+.beer-container h5 {
+    align-self: flex-start;
+    margin-left: 5vw;
+    color:grey
+}
+
+.box {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.firstBox {
+    text-align: start;
+}
+
+.secondBox {
+    text-align: right;
+}
+

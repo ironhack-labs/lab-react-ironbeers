@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './BeerDetails.css';
 
-export default class RandomBeer extends Component {
+export default class BeerDetails extends Component {
 
     state = {
         beer : null
@@ -12,7 +12,7 @@ export default class RandomBeer extends Component {
     getBeer = () => {
         const beerId = this.props.match.params.beerId;
 
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
             .then(response => {
                 this.setState({
                     beer: response.data

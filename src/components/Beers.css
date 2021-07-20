@@ -9,7 +9,7 @@ header img {
     width: 10vw;
 }
 
-.beer-container {
+.beers-container {
     display: flex;
     justify-content: space-around;
     margin: 30px 0px;
@@ -17,7 +17,7 @@ header img {
     border-bottom: 1px solid rgb(177, 176, 176);
 }
 
-.beer-container img {
+.beers-container img {
     height: 22vh;
 }
 
