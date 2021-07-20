@@ -14,7 +14,7 @@ header img {
 .beer-container {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(189, 188, 188);
     padding-top: 10px;
     
 
@@ -27,4 +27,46 @@ header img {
 
 .beer-box {
     width: 50vw;
+}
+
+/* .link {
+text-decoration: none;
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+}
+
+label {
+    align-self: flex-start;
+    padding-inline-start: 10px;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    height: auto;
+    background-color: rgb(181, 243, 252);
+    border-style:none;
+    padding: 2%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+}
+
+button {
+    background-color: rgb(53, 228, 252);
+    width: 100%;
+    padding: 5%;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 10px;
+    border-style: none;
+    margin-top: 7%;
+
 }

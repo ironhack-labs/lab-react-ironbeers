@@ -12,6 +12,7 @@ export default class Beers extends Component {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers')
       .then((response) => {
+        console.log(response.data);
         this.setState({
           beers: response.data,
         });
@@ -38,13 +39,18 @@ export default class Beers extends Component {
         <div>
           {this.state.beers.map((beer) => {
             return (
-              <div className='beer-container' key={beer._id}>
-                <img src={beer.image_url} alt={beer.name} />
-                <div className='beer-box'>
-                  <h2>{beer.name}</h2>
+              <div className="beer-container" key={beer._id}>
+                <Link to={`/beers/${beer._id}`}>
+                  <img src={beer.image_url} alt={beer.name} />
+                </Link>
+                <div className="beer-box">
+                  <Link to={`/beers/${beer._id}`}>
+                    <h2>{beer.name}</h2>
+                  </Link>
                   <h4>{beer.tagline}</h4>
                   <h6>
-                    <b>Created by: </b>{beer.contributed_by.slice(0,9)}
+                    <b>Created by: </b>
+                    {beer.contributed_by ? beer.contributed_by.slice(0, 9) : ''}
                   </h6>
                 </div>
               </div>

@@ -3,15 +3,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Style.css';
 
-export default class RandomBeer extends Component {
-  
-    state = {
+export default class SingleBeerDisplay extends Component {
+  state = {
     beer: null,
   };
 
-  randomBeer = () => {
+  getSingleBeer = () => {
+    const singleBeerId = this.props.match.params.singleBeerId;
+
     axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+      .get(`https://ih-beers-api2.herokuapp.com/beers/${singleBeerId}`)
       .then((response) => {
         this.setState({
           beer: response.data,
@@ -20,7 +21,7 @@ export default class RandomBeer extends Component {
   };
 
   componentDidMount() {
-    this.randomBeer();
+    this.getSingleBeer();
   }
 
   render() {
