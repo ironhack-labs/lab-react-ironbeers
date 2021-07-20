@@ -29,6 +29,17 @@
   align-items: flex-start;
 }
 
+.new-beer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-beer input {
+  width: 20vw;
+  margin-bottom: 20px;
+}
+
 .beer-image {
   width: 10vw;
 }
