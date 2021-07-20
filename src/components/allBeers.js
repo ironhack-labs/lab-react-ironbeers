@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-
 class allBeers extends React.Component {
     state = {
         beers: [],
@@ -23,19 +22,19 @@ componentDidMount() {
 
 render() {
     const mappedBeers = this.state.beers.map(singleBeer => {
-        //console.log(this.state.beers);
         return (
-            <div>
-                <p key={singleBeer.name}></p>
+            <div class="showBeer">
+                {/* <p key={singleBeer.name}></p> */}
                 <Link to={`/beers/${singleBeer._id}`}>{singleBeer.name}</Link>
                 <img src={singleBeer.image_url} width='50' alt="logo" ></img>
+                <p key={singleBeer.tagline}></p>
+                <p key={singleBeer.contributed_by}></p>
             </div>
         ) 
     }) 
     
     return(
         <div>
-            <h1>Hola</h1>
             {mappedBeers}
         </div>
         
@@ -45,6 +44,3 @@ render() {
 }
 export default allBeers;
 
-// I need to print the ALL beers
-// Ceed to put an identifier into the url
-// with the identifier in the url, i can retrive details

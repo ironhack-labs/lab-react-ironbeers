@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav>
       <ul>
-          <h1>Check OUT our BEERS</h1>
+          <h1>IRONBEERS</h1>
       </ul>
     </nav>
   );

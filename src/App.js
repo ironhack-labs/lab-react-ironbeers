@@ -20,8 +20,7 @@ function App() {
           <Route exact path="/beers" component={allBeers} />
           <Route exact path="/beers/:id" component={beerDetail} />
           <Route exact path="/random-beer" component={randomBeer} />
-          <Route exact path="/new-beer" component={newBeer} /> 
-        
+          <Route exact path="/new-beer" component={newBeer} />     
     </div>
   );
 }
