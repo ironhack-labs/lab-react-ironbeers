@@ -9,9 +9,7 @@ export default class RandomBeer extends Component {
         beer : null
     }
 
-    getBeer = () => {
-        const beerId = this.props.match.params.beerId;
-
+    getRandomBeer = () => {
         axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
             .then(response => {
                 this.setState({
@@ -22,7 +20,7 @@ export default class RandomBeer extends Component {
     }
 
     componentDidMount() {
-        this.getBeer()
+        this.getRandomBeer()
     }
 
     render() {

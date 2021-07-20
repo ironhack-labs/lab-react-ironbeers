@@ -3,6 +3,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #3dc4fc;
+    box-shadow: 1px 1px 4px rgb(58, 57, 57);
 }
 
 header img {
