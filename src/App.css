@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.layoutHead {
+  background-color: #3DC4FC;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layoutHead img {
+  height: 45px;
+}
