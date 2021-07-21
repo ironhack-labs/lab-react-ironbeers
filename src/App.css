@@ -48,3 +48,8 @@
 .layoutHead img {
   height: 45px;
 }
+
+.homeLink{
+  text-decoration: none;
+  color: black;
+}
