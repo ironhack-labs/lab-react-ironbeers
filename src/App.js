@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router-dom'
 import axios from 'axios'
 import AllBeers from './components/AllBeers'
 import Home from './components/Home'
+import Beer from './components/Beer'
+import RandonBeer from './components/RandonBeer'
 
 
 
@@ -41,6 +43,14 @@ class App extends Component {
 
             <Route exact path={'/beers'} render={() => {
               return <AllBeers beers={this.state.beers} />
+            }} />
+
+            <Route exact path={'/beers/:beer'} render={(routeProps) => {
+              return <Beer {...routeProps} />
+            }} />
+
+            <Route exact path={'/random-beer'} render={() => {
+              return <RandonBeer />
             }} />
             
 

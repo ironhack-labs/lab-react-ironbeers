@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 
  class Links extends Component {
@@ -10,11 +11,11 @@ import React, { Component } from 'react'
             <div>
                 <div>
                     <img src=''  alt=''/>
-                    <h1>All Beers</h1>
+                  <Link to={`/beers`}> <h1>All Beers</h1> </Link> 
                 </div>
                 <div>
                     <img src='' alt=''/>
-                    <h1>Random Beer</h1>
+                    <Link to={`/random-beer`}> <h1>Random Beer</h1> </Link>
                 </div>
                 <div>
                     <img src='' alt=''/>
