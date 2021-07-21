@@ -1,6 +1,6 @@
 import React , { useState }from 'react'
-import {Link} from "react-router-dom"
 import axios from 'axios'
+import NavBar from "./NavBar"
 
 function NewBeer(){
 
@@ -32,22 +32,28 @@ function NewBeer(){
 
     return (
         <div>
-        <header className="layoutHead"><Link to="/"><img src="assets/house.png" alt="house"/></Link></header>
+        <NavBar />
         <form onSubmit={handleFormSubmit}>
           <label>Name:</label>
-          <input type="text" name="name" value={formState.name} onChange={ e => handleChange(e)}/>
+          <input type="text" name="name" value={formState.name} onChange={ e => handleChange(e)}/><br></br><br></br>
+          
           <label>Tagline:</label>
-          <input type="text" name="tagline" value={formState.tagline} onChange={ e => handleChange(e)}/>
+          <input type="text" name="tagline" value={formState.tagline} onChange={ e => handleChange(e)}/><br></br><br></br>
+          
           <label>Description:</label>
-          <input type="text" name="description" value={formState.description} onChange={ e => handleChange(e)}/>
+          <input type="text" name="description" value={formState.description} onChange={ e => handleChange(e)}/><br></br><br></br>
+          
           <label>First Brewed:</label>
-          <input type="text" name="first_brewed" value={formState.first_brewed} onChange={ e => handleChange(e)}/>
+          <input type="text" name="first_brewed" value={formState.first_brewed} onChange={ e => handleChange(e)}/><br></br><br></br>
+          
           <label>Brewers Tips:</label>
-          <input type="text" name="brewers_tips" value={formState.brewers_tips} onChange={ e => handleChange(e)}/>
+          <input type="text" name="brewers_tips" value={formState.brewers_tips} onChange={ e => handleChange(e)}/><br></br><br></br>
+          
           <label>Attenuation Level:</label>
-          <input type="number" name="attenuation_level" value={formState.attenuation_level} onChange={ e => handleChange(e)}/>
+          <input type="number" name="attenuation_level" value={formState.attenuation_level} onChange={ e => handleChange(e)}/><br></br><br></br>
+          
           <label>Contributed By:</label>
-          <input type="text" name="contributed_by" value={formState.contributed_by} onChange={ e => handleChange(e)}/>
+          <input type="text" name="contributed_by" value={formState.contributed_by} onChange={ e => handleChange(e)}/><br></br><br></br>
           
           <input type="submit" value="Submit" />
         </form>

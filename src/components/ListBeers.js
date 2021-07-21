@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import NavBar from "./NavBar"
 
 export default function ListBeers(){
 
@@ -17,9 +18,9 @@ export default function ListBeers(){
 
     return (
         <div>
-            <header className="layoutHead"><Link to="/"><img src="assets/house.png" alt="house"/></Link></header>
+            <NavBar />
             {listState.map((beer) => {
-                return <div>
+                return <div key={beer._id}>
                     <Link to={`/beers/${beer._id}`}>
                         <img src={beer.image_url} alt="beer" />
                         <h1>{beer.name}</h1>

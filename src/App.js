@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        
+  
         <Switch>
-        
+
           <Route exact path="/" component={Home}/>
           <Route exact path="/ListBeers" component={ListBeers}/>
           <Route exact path="/NewBeer" component={NewBeer}/>
@@ -21,6 +21,7 @@ function App() {
           <Route exact path="/beers/:beerId" component={SingleBeer}/>
 
         </Switch>
+
       </BrowserRouter>
     </div>
   );

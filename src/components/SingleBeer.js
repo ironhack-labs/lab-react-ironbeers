@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom"
 import React, {useState, useEffect} from "react"
 import axios from "axios"
+import NavBar from "./NavBar"
 
 export default function SingleBeer(props){
 
@@ -18,7 +18,7 @@ export default function SingleBeer(props){
 
     return (
         <div>
-            <header className="layoutHead"><Link to="/"><img src="assets/house.png" alt="house"/></Link></header>
+            <NavBar />
             <div>
                 <img src ={beerState.image_url} alt="beer"/>
                 <h1>{beerState.name}</h1>
