@@ -1,38 +1,248 @@
-.App {
+#root{
+ font-family: 'Times New Roman', Times, serif;
+}
+.navBar{
+  width: 100%;
+  height: 15vh;
+  background-color: #2d8dbc;
+  margin-bottom: 5vh;
+}
+
+
+#img1-all-beers{
+  width: 100%;
+  height: 55vh;
+  background-image: url("./assets/beers.png");
+  background-size: cover;
+  
+}
+
+#img2-all-beers{
+  width: 100%;
+  height: 55vh;
+  background-image: url("./assets/random-beer.png");
+  background-size: cover;
+}
+
+#img3-all-beers{
+  width: 100%;
+  height: 55vh;
+  background-image: url("./assets/new-beer.png");
+  background-size: cover;
+}
+
+.all-beers-section a{
+  text-decoration: none;
+  color:black;
+  
+
+}
+
+.all-beers-div{
+margin: 1vh 5vw 1vh 5vw;
+}
+
+.all-beers-div  p {
+  color:grey;
+  font-size: 1.3rem;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+.all-beers-div:hover{
+  background-color: rgb(248, 242, 242);
+}
+
+.navBar{
+  text-align: center;
+
+}
+
+.navBar img{
+  width: 5vw;
+  height: auto;
+  margin-top: 3vh;
+  
+}
+
+.card-beer{
+  display: flex;
+  align-items: center;
+}
+
+.card-beer-img{
+  height: auto;
+  width: 7vw;
+  
+  margin-left: 5vw;
+  margin-right: 10vw;
+}
+
+.card-beer-container a{
+  text-decoration: none;
+}
+
+.card-beer-container h2{
+  font-size: 2rem;
+  color:rgba(0, 0, 0, 0.918);
+  font-weight: 300;
+}
+
+.card-beer-container h3{
+  font-size: 1.5rem;
+  color:gray;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  
+}
+.card-beer-container p{
+  color:black;
+}
+
+.card-beer-container p>span{
+  font-weight: 700;
+}
+
+.single-beer-div-img{
+
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.single-beer-container a{
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.single-beer-img{
+
+  width: auto;
+  height: 30vh;
+}
+.single-beer-div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  
+ 
+}
+.single-beer-name{
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-bottom: 2vh;
+  padding-bottom: 0;
+  height: 10vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.single-beer-name > p {
+  color:rgb(197, 194, 194);
+  font-weight: 700;
+}
+
+.single-beer-tagline{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 8vh;
+  margin-top: 7vh;
+}
+
+.single-beer-tagline h4{
+  color:rgb(197, 194, 194);
+  font-weight: 700;
+  font-size: 1.6rem;
+  
+}
+
+.single-beer-tagline p{
+  color:black;
+  font-weight: 700;
+}
+
+.single-beer-description{
+  font-size: 1.2rem;
+}
+
+.single-beer-container h5{
+  color:rgb(163, 162, 162);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.bts-on{
+  background-color:green !important;
+  color: white;
+  border: 1px solid green !important;
+  
+}
+
+.bts-off{
+  background-color: red !important;
+  color: white;
+  border: 1px solid red !important;
+}
+
+/* form {
+  text-align: center;
+} */
+.message-submit{
+  text-align:center;
+}
+
+.form-addNew{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+label{
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-left: 0.5vw;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-addNew{
+  text-align: center;
+  
+  
+}
+.btn-addNew button{
+ width: 30vw;
+ height: 6vh;
+ border-radius: 2.5vh;
+ background-color: #2d8dbc;
+ font-weight: 700;
+ color: white;
+ border: 1px solid #2d8dbc;
+ cursor: pointer;
+}
+.btn-addNew button:active{
+  width: 29vw;
+  height: 5vh;
+}
+input{
+  width: 30vw;
+  height: 6vh;
+  border-radius: 2.5vh;
+  border:1px solid black ;
+  margin-bottom: 4vh;
+}
+
+input:focus , textarea:focus{
+  outline: none !important;
+  border:1px solid black ;
+}
+
+textarea{
+  width: 30.3vw;
+  height: 6vh;
+  border-radius: 2.5vh;
+  height: 10vh;
+  margin-bottom: 4vh;
+  border:1px solid black ;
 }
