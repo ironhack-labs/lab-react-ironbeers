@@ -9,6 +9,7 @@ import Header from './homeComponent/HeaderHome';
 import Detailallbeers from './all-beers/DetailAllBeers';
 import Eachbeer from './all-beers/Eachbeer';
 import Randombeer from './random-beer/Randombeer';
+import Createnewbeer from './new-beer/Createnewbeer';
 
 
 function App() {
@@ -24,8 +25,10 @@ function App() {
     <Mainnewbeer/>
     </Route>
     <Route path='/beers' component={Detailallbeers} exact/>
+    
     <Route path='/beers/:code' component={Eachbeer}/>
     <Route path='/random' component={Randombeer}/>
+    <Route path='/new-beer' component={Createnewbeer}/>
     </Switch>
        
         
