@@ -1,0 +1,31 @@
+.random-beer-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    align-items: center;
+   
+}
+.random-beer-column{
+    display: table;
+    width: auto;
+    align-items: center;
+}
+.random-beer-img{
+    width: 15vw;
+    height: 35vh;
+    
+}
+.random-beer-name{
+    text-align: start;
+    font-size: 2rem;
+    width: 20rem;
+}
+.random-beer-tagline{
+    width: 20rem;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+.random-beer-description{
+    width: 20rem;
+    font-size: 1.2;
+}

@@ -1,0 +1,19 @@
+
+.img-beers{
+    width: 13vw;
+    height: 20vh;
+}
+.info-beers{
+    display: flex;
+    margin-top: 10vh;
+    width: 50vw;
+    border: 1px solid black;
+}
+.beers-center{
+    display: flex;
+    justify-content: center;
+}
+.info-name-beers{
+    margin-left: 3rem;
+
+}

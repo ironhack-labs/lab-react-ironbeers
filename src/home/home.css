@@ -1,0 +1,16 @@
+.home{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    
+}
+.home-all-beers img{
+  
+    width: 30vw;
+    height: 18vh;
+}
+.home-all-beers{
+    margin-top: 3rem;
+}
