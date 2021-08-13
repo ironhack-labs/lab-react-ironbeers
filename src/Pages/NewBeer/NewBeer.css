@@ -1,0 +1,23 @@
+.beer-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px 50px 0 50px ;
+}
+
+.beer-form > input, .beer-form > textarea {
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 4px;
+    border: solid 1px black;
+}
+
+.create-btn{
+    position: relative;
+    padding: 10px;
+
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    font-weight: 600;
+}

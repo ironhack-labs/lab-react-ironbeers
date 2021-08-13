@@ -1,0 +1,11 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: cadetblue;
+  }
+  
+  .navbar-brand{
+    color: white;
+  }
