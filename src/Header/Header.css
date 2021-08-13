@@ -1,0 +1,13 @@
+.HeaderContainer {
+	border: 8px solid darkturquoise;
+	color: darkolivegreen;
+	padding: 0 50%;
+	width: min-content;
+	
+}
+
+img {
+	width: 4em;
+	height: 4em;
+
+}
