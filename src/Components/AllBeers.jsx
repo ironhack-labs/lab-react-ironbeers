@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-// import OneBeer from './OneBeer';
 
 class AllBeers extends Component {
   state = {
