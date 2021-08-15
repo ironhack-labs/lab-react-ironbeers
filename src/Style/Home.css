@@ -1,0 +1,31 @@
+
+nav > div{
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid gray;
+    box-sizing: content-box;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0px;
+}
+
+nav img{
+    max-height: 150px;
+    border-radius: 10px;
+}
+
+nav p{
+    color: gray;
+    max-width: 350px;
+    margin: 10px;
+}
+
+a{
+     text-decoration: unset;
+     color : black;
+     font-size: 16px;
+     font-weight: bolder;
+     padding : 10px;
+     margin-top: 20px;
+ }

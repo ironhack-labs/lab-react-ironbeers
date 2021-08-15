@@ -1,0 +1,33 @@
+.oneBeer img{
+    max-width : 200px;
+    max-height: 350px;
+    display: block;
+    margin: auto;
+}
+
+.oneBeer{
+    margin : 20px;
+    border : white 1px solid;
+    border-radius: 20px;
+    background-color: azure;
+    padding: 20px;
+}
+
+.description{
+    max-width: 70%;
+}
+
+.oneBeerImg{
+    display : block;
+    margin : auto;
+    
+    
+}
+
+.name{
+    font-size: 24px;
+    font-weight: bold;
+    margin: auto;
+    display: block;
+    text-align: center;
+}

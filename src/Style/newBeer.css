@@ -1,0 +1,29 @@
+
+.form{
+    margin:20px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form input, .form textarea{
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+.form > * {
+    margin: 5px;
+}
+
+.form input{
+    height: 25px;
+}
+
+.form textarea {
+    resize: none;
+    min-height: 75px;
+}

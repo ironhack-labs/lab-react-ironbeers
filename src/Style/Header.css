@@ -1,0 +1,12 @@
+
+.nav-header{
+    border:cornflowerblue 1px solid;
+    background-color: cornflowerblue;
+}
+
+.img-header{
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+    margin: auto;
+}
