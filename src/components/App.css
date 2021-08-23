@@ -31,6 +31,87 @@ header .home-link {
 .page-content {
   text-align: center;
 }
+
+.beer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  border-bottom: 1px solid lightgrey;
+  text-align: left;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.beer-container .beer-image-box {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.beer-container img {
+  max-height: 100px;
+}
+
+.beer-description {
+  width: 80%;
+  line-height: 1.1;
+}
+
+.beer-name-link {
+  text-decoration: none;
+  color: black;
+}
+
+.beer-name-link h2 {
+  font-weight: 500;
+}
+
+.beer-description h3 {
+  color: gray;
+  font-weight: 500;
+}
+
+.beer-description p {
+  font-size: 12px;
+}
+
+.beer-photo {
+  height: 30vh;
+  margin-top: 40px;
+}
+
+.beer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 20px;
+}
+
+.beer-header .left {
+  text-align: left;
+}
+
+.beer-header .left h2,
+.beer-header .left h3 {
+  font-weight: 500;
+}
+
+.beer-header h3,
+.beer-content h5 {
+  color: grey;
+}
+
+.beer-header .right {
+  text-align: right;
+}
+
+.beer-content {
+  text-align: left;
+  margin: 5px 20px;
+}
+
 @media (min-width: 760px) {
   .App {
     text-align: center;
@@ -38,9 +119,10 @@ header .home-link {
     padding: 10px;
   }
 
-  .homepage-box {
+  .homepage,
+  .page-content {
     width: 800px;
-    color: red;
+    margin: 0 auto;
   }
 
   .homepage-box p {
