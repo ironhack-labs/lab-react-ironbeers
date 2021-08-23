@@ -1,0 +1,49 @@
+.App {
+  padding: 10px;
+}
+
+.homepage-box {
+  text-decoration: none;
+  color: black;
+}
+
+.homepage-box img {
+  width: 100%;
+}
+
+header {
+  height: 60px;
+  width: 100 vh;
+  background-color: rgb(189, 194, 201);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+header .home-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 26px;
+}
+
+.page-content {
+  text-align: center;
+}
+@media (min-width: 760px) {
+  .App {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .homepage-box {
+    width: 800px;
+    color: red;
+  }
+
+  .homepage-box p {
+    margin-bottom: 40px;
+  }
+}
