@@ -13,12 +13,14 @@
 
 header {
   height: 60px;
-  width: 100 vh;
   background-color: rgb(189, 194, 201);
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 header .home-link {
@@ -30,6 +32,7 @@ header .home-link {
 
 .page-content {
   text-align: center;
+  width: 100%;
 }
 
 .beer-container {
@@ -40,7 +43,7 @@ header .home-link {
   border-bottom: 1px solid lightgrey;
   text-align: left;
   position: relative;
-  padding-bottom: 20px;
+  max-width: 90%;
 }
 
 .beer-container .beer-image-box {
@@ -55,7 +58,7 @@ header .home-link {
 }
 
 .beer-description {
-  width: 80%;
+  width: 70%;
   line-height: 1.1;
 }
 
@@ -115,14 +118,13 @@ header .home-link {
 @media (min-width: 760px) {
   .App {
     text-align: center;
-    margin: 0 auto;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
   }
 
   .homepage,
   .page-content {
     width: 800px;
-    margin: 0 auto;
   }
 
   .homepage-box p {

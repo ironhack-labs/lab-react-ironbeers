@@ -9,7 +9,7 @@ function SingleBeer(props) {
           Home
         </Link>
       </header>
-      <div>
+      <div className="main">
         <img
           className="beer-photo"
           src={props.image_url}

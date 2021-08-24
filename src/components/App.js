@@ -12,6 +12,7 @@ import './App.css';
 class App extends React.Component {
   state = {
     beersArr: [],
+    randomBeer: {},
   };
 
   componentDidMount() {
@@ -23,6 +24,15 @@ class App extends React.Component {
         })
       )
       .catch((error) => console.log(error));
+
+    axios
+      .get('https://ih-beers-api2.herokuapp.com/beers/random')
+      .then((randomBeer) =>
+        this.setState({
+          randomBeer: randomBeer.data,
+        })
+      )
+      .catch((error) => console.log(error));
   }
 
   renderContent() {
@@ -31,7 +41,9 @@ class App extends React.Component {
         <Route path="/list">
           <ListBeers beersArr={this.state.beersArr} />
         </Route>
+
         <Route
+          exact
           path="/beer/:id"
           render={(routeProps) => {
             const selectedBeer = this.state.beersArr.find(
@@ -39,7 +51,11 @@ class App extends React.Component {
             );
             return <SingleBeer {...selectedBeer} />;
           }}
-        ></Route>
+        />
+
+        <Route path="/random">
+          <RandomBeer {...this.state.randomBeer} />
+        </Route>
       </>
     );
   }
@@ -48,7 +64,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/" component={Homepage} />
+          <Route exact path="/">
+            <Homepage />
+          </Route>
           {this.state.beersArr.length ? this.renderContent() : 'page loading'}
         </Switch>
 

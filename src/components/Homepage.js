@@ -5,7 +5,7 @@ import beer from '../assets/beers.png';
 import newBeer from '../assets/new-beer.png';
 import randomBeer from '../assets/random-beer.png';
 
-function Homepage() {
+function Homepage(props) {
   return (
     <div className="homepage">
       <Link to="/list" className="homepage-box">
@@ -17,8 +17,8 @@ function Homepage() {
           facilisis quam.
         </p>
       </Link>
-      <Link className="homepage-box">
-        <img src={newBeer} alt="" />
+      <Link to="/random" className="homepage-box">
+        <img src={randomBeer} alt="" />
         <h2>Random Beers</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -27,7 +27,7 @@ function Homepage() {
         </p>
       </Link>
       <Link className="homepage-box">
-        <img src={randomBeer} alt="" />
+        <img src={newBeer} alt="" />
         <h2>New Beer</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
