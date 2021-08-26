@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.beerContainer img{
+  max-width: 70px;
+  max-height: 100px;
+}
+
+.beerContainer a {
+  text-decoration: none !important;
+  color: red !important;
+}
