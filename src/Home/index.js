@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   Container,
   BeersContainer,
@@ -13,13 +14,13 @@ function Home() {
   return (
     <Container>
       <BeersContainer>
-        <Beers />
+          <Beers />
       </BeersContainer>
       <RandomContainer>
         <Random />
       </RandomContainer>
       <NewContainer>
-          <New />
+        <New />
       </NewContainer>
     </Container>
   );
