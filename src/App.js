@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/beers" component={Beers} />
+        <Route path="/beers/:id" component={Beers} />
         <Route path="/random-beer" component={RandomBeer} />
         <Route path="/new-beer" component={NewBeer} />
         <Route component={Home} />

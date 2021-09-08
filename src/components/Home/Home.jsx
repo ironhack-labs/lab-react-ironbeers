@@ -18,7 +18,7 @@ export default class Home extends React.Component {
             aliquip ex ea commodo consequat.
           </p>
         </Link>
-        <Link className="Home__img" to="/beers">
+        <Link className="Home__img" to="/random-beer">
           <img src={RandomBeerImg} alt="beers" />
           <h2>Random Beer</h2>
           <p>
@@ -28,7 +28,7 @@ export default class Home extends React.Component {
             aliquip ex ea commodo consequat.
           </p>
         </Link>
-        <Link className="Home__img" to="/beers">
+        <Link className="Home__img" to="/new-beer">
           <img src={NewBeerImg} alt="beers" />
           <h2>New Beer</h2>
           <p>
