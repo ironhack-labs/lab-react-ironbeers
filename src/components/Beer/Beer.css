@@ -1,0 +1,17 @@
+.Beer {
+  width: 540px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.Beer img {
+  height: 200px;
+  padding: 16px;
+}
+
+.Beer__data {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

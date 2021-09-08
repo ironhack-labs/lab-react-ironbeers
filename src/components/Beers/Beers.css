@@ -1,0 +1,16 @@
+.Beers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .Beer__loading {
+    width: 540px;
+    height: 150px;
+    border: 1px solid black;
+  }
+  .Beer__loading h1 {
+    margin-top: 50px;
+  }

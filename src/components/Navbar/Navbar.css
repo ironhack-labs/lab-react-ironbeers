@@ -1,0 +1,15 @@
+.Navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 540px;
+  background-color: #3dc4fc;
+  border: 1px solid black;
+}
+
+.Navbar__icon {
+  width: 125px;
+  font-size: 70px;
+  color: white;
+}
