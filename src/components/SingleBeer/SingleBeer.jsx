@@ -13,13 +13,23 @@ export default function SingleBeer({
   contributed_by,
 }) {
   return (
-    <div className="SingleBeer container">
+    <div className="SingleBeer">
       <Navbar />
-      <div className="card" style={{ width: '18rem' }}>
-        <img src={image_url} className="card-img-top" alt={name} />
-        <div className="card-body SingleBeer__data">
-          <h5>{name}</h5>
-          <p className="card-text">{description}</p>
+      <img src={image_url} className="SingleBeer__image" alt={name} />
+      <div className="SingleBeer__data">
+        <div className="SingleBeer__data__title">
+          <h3>{name}</h3>
+          <h3 className="text-muted">{attenuation_level}</h3>
+        </div>
+        <div className="SingleBeer__data__subtitle">
+          <h5 className="text-muted">{tagline}</h5>
+          <p>{first_brewed}</p>
+        </div>
+        <div className="SingleBeer__data__description">
+          <p>{description}</p>
+        </div>
+        <div className="SingleBeer__data__contributed">
+          <p className="text-muted">{contributed_by}</p>
         </div>
       </div>
     </div>

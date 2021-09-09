@@ -1,0 +1,31 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin-top: 30px;
+}
+
+.Home__link {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  text-decoration: none;
+  color: black;
+}
+
+.Home__link__info {
+  text-decoration: none;
+  color: black;
+}
+
+.Home__link__info h2 {
+  margin: 1rem;
+  text-align: start;
+}
+
+.Home__link__info p {
+    margin: 1rem;
+    text-align: start;
+  }

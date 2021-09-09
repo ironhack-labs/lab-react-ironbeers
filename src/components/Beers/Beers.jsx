@@ -1,10 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-
 import Navbar from '../Navbar/Navbar';
 import Beer from '../Beer/Beer';
-import './Beers.css';
 import { Link } from 'react-router-dom';
+import './Beers.css';
 
 export default class Beers extends React.Component {
   state = {
@@ -18,16 +17,20 @@ export default class Beers extends React.Component {
   }
   render() {
     return (
-      <div className="Beers container">
+      <div className="Beers">
         <Navbar />
         {this.state.beers ? (
           this.state.beers.map((beer) => (
-            <Link to={`/beers/${beer._id}`}>
+            <Link
+              key={beer._id}
+              className="Beers__link"
+              to={`/beers/${beer._id}`}
+            >
               <Beer key={beer._id} {...beer} />
             </Link>
           ))
         ) : (
-          <div className="Beer__loading">
+          <div className="Beers__loading">
             <h1>Loading...</h1>
           </div>
         )}
