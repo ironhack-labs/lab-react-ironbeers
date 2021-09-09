@@ -1,0 +1,117 @@
+.NewBeer {
+  margin-top: 30px;
+  height: 90vh;
+  border: 1px solid black;
+}
+
+.NewBeer__form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1.5rem 1.5rem;
+}
+
+.NewBeer__form__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.NewBeer__form__name input {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.NewBeer__form__tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.NewBeer__form__tagline input {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.NewBeer__form__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.NewBeer__form__description input {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.NewBeer__form__first_brewed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.NewBeer__form__first_brewed input {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.NewBeer__form__brewers_tips {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.NewBeer__form__brewers_tips input {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.NewBeer__form__attenuation_level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.NewBeer__form__attenuation_level input {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.NewBeer__form__contributed_by {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.NewBeer__form__contributed_by input {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.NewBeer__form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NewBeer__form__button button {
+  width: 15vw;
+  height: 3rem;
+  border-radius: 16px;
+  font-weight: bold;
+  background-color: #3dc4fc;
+  color: white;
+}
