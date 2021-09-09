@@ -21,13 +21,12 @@ export default class Beers extends React.Component {
     if (value.length === 0) {
       return;
     }
-    console.log(value);
-    const duplicateBeers = [...this.state.beers];
-    const newBeers = duplicateBeers.filter(
-      (beer) => beer.name.toLowerCase().indexOf(value.toLowerCase()) >= 0
-    );
-    console.log(newBeers);
-    this.setState({ beers: newBeers });
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${value}`)
+      .then((response) => {
+        this.setState({ beers: response.data });
+      })
+      .catch((err) => console.log(err));
   };
 
   render() {

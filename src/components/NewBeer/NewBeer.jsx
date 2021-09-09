@@ -25,6 +25,7 @@ export default class NewBeer extends React.Component {
   };
 
   onSubmit = (event) => {
+    event.preventDefault();
     if (
       !this.state.name ||
       !this.state.tagline ||
@@ -37,10 +38,11 @@ export default class NewBeer extends React.Component {
       return;
     }
     axios
-      .post(`https://ih-beers-api2.herokuapp.com/beers/new/${this.state}`)
+      .post(`https://ih-beers-api2.herokuapp.com/beers/new`, this.state)
       .then((response) => {
-        console.log('Todo correcto');
-      });
+        console.log(response);
+      })
+      .catch((err) => console.log(err));
     this.setState({ ...initialState });
   };
 

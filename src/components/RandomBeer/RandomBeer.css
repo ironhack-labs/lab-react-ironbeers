@@ -7,7 +7,8 @@
 
   .RandomBeer__loading {
     width: 540px;
-    height: 150px;
+    height: 220px;
+    margin-top: 30px;
     border: 1px solid black;
   }
   .RandomBeer__loading h1 {
