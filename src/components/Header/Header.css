@@ -1,0 +1,14 @@
+.Header {
+  height: 90px;
+  background-color: rgb(61, 196, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HomeIcon {
+  height: 80px;
+  width: 80px;
+  padding: 1rem;
+  color:aliceblue
+}
