@@ -1,0 +1,11 @@
+.BeerList {
+    margin: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    color: rgb(62, 129, 206)
+}
