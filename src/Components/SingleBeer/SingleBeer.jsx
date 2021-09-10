@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import "./SingleBeer.css"
 import houseLogo from "../../assets/pngfind.com-white-house-logo-png-5898244.png"
 import axios from "axios"
+import cargando from "../../assets/loading.gif"
 
 class SingleBeer extends Component {
     state = {
@@ -75,7 +76,7 @@ class SingleBeer extends Component {
                     </div>
                 </div>
             </div> :
-            <p>Cargando...</p>
+            <img className="cargando" src={cargando}/>
             }
             
         </div>

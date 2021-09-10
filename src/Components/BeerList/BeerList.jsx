@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import houseLogo from "../../assets/pngfind.com-white-house-logo-png-5898244.png"
 import axios from "axios"
 import "./BeerList.css"
+import cargando from "../../assets/loading.gif"
 
 class BeerList extends Component {
     constructor (props) {
@@ -27,7 +28,7 @@ class BeerList extends Component {
         if(this.state.beers.length === 0) {
             return (
                 <div>
-                    <p>Loading...</p>
+                    <img className="cargando" src={cargando}/>
                 </div>
             )
         }
