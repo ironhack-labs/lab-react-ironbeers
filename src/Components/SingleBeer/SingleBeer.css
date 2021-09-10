@@ -1,0 +1,40 @@
+.beerItem-single img {
+    height: 200px;
+}
+
+.beerInfo-single {
+    text-align: start;
+    margin-right: 0;
+}
+
+.grey {
+    color: #9f9f9f
+}
+
+.attenuation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brewed {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brewed h5 {
+    margin-top: 3px;
+}
+
+.attenuation-level {
+    font-size: 1.5rem;
+    margin-top: 25px;
+}
+
+.attenuation h1:first-child {
+    margin-bottom: 0;
+}
+
+.beerInfo-single h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
