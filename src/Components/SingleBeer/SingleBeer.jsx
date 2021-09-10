@@ -9,6 +9,30 @@ class SingleBeer extends Component {
         beer: null
     }
 
+    componentDidMount() {
+        if(this.props.match.params.id === "random-beer") {
+            axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+            .then((beer) => {
+                this.setState({
+                    beer: beer.data
+                })
+            })
+            .catch((e) => {
+                console.error(e)
+            })
+        } else {
+            axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.id}`)
+            .then((beer) => {
+                this.setState({
+                    beer: beer.data
+                })
+            })
+            .catch((e) => {
+                console.error(e)
+            }) 
+        }
+    }
+
     componentWillUnmount() {
         this.setState({
             beer: null
@@ -21,16 +45,6 @@ class SingleBeer extends Component {
         let authorArr = author.split("<")
         return authorArr[0]
     }
-
-    axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.id}`)
-    .then((beer) => {
-        this.setState({
-            beer: beer.data
-        })
-    })
-    .catch((e) => {
-        console.error(e)
-    })
 
     return (
         <div>
