@@ -17,10 +17,10 @@ class Home extends Component {
                     <img src={randomBeerImg}/>
                     <h1>Random beer</h1>
                 </Link>
-                <div>
+                <Link to="/new-beer">
                     <img src={newBeerImg}/>
                     <h1>New beer</h1>
-                </div>
+                </Link>
             </div>
         )
     }
