@@ -14,6 +14,14 @@
 .attenuation {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+h1.grey.attenuation-level {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .brewed {
@@ -29,6 +37,8 @@
     font-size: 1.5rem;
     margin-top: 25px;
 }
+
+
 
 .attenuation h1:first-child {
     margin-bottom: 0;
