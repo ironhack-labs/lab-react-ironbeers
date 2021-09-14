@@ -1,4 +1,16 @@
 .Home__Data{
     margin-left: 20px;
-    margin-right: 20px
+    margin-right: 20px;
+    text-align: left;
+}
+
+.Home__img{
+    height: 25vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Home__Navlink{
+    text-decoration: none;
+    color:black;
 }

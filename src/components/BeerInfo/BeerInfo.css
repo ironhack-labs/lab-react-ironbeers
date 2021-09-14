@@ -1,0 +1,18 @@
+.BeerInfo__card{
+    margin: 2vh;
+}
+.BeerInfo__card__img{
+    height: 40vh;
+}
+
+.BeerInfo__card__data{
+    display: flex;
+    flex-direction: column;
+    
+}
+.BeerInfo__card__data__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}

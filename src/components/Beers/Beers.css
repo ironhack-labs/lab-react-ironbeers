@@ -1,0 +1,21 @@
+.BeerList__Beercard__image{
+    margin-left: 20px;
+    height: 160px;
+}
+.BeerList__Beercard{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100vw;
+}
+.BeerList__Beercard__content{
+    width: 60vw;
+}
+.BeerList__NavLink{
+    text-decoration: none;
+    color: black;
+}
+hr{
+    display: flex;
+}

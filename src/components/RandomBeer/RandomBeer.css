@@ -1,0 +1,18 @@
+.RandomBeer__card{
+    margin: 2vh;
+}
+.RandomBeer__card__img{
+    height: 40vh;
+}
+
+.RandomBeer__card__data{
+    display: flex;
+    flex-direction: column;
+    
+}
+.RandomBeer__card__data__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
