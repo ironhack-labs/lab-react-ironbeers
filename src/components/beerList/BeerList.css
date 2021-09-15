@@ -9,3 +9,7 @@
 .loading {
     color: rgb(62, 129, 206)
 }
+
+.BeerList_info{
+    text-decoration: none;
+}
