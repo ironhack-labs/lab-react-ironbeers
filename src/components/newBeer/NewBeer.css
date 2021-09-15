@@ -1,0 +1,33 @@
+.NewBeer {
+    display: flex;
+    flex-direction: column;
+}
+
+.NewBeer__form {
+    margin: 30px;
+}
+
+.NewBeer__form__info {
+    display:flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.NewBeer__form__info__input {
+    border-radius: 50px;
+    border: 2px solid gray;
+    padding: 5px;
+
+}
+
+.NewBeer__form__button {
+    background-color: #3DC4FC;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    width: 80vw;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+}
