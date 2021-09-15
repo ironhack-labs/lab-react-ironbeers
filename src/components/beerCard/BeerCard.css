@@ -1,0 +1,24 @@
+.BeerCard {
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.BeerCard__img {
+    height: 25vh;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.BeerCard__container__hr {
+    color: gray;
+    width: 100%;
+}
+
+.BeerCard__container__info {
+    margin-bottom: 50px;
+}
+
+.BeerCard__container__info h2 {
+    color: grey;
+}

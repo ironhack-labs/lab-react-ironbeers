@@ -12,7 +12,7 @@ function App() {
       <div className="App__content">
           <Switch>
             <Route path="/beers" exact component={BeerList} />
-            <Route path="/beers/:beerId" component={Beer} />
+            <Route path="/beers/:_id" component={Beer} />
             {/* <Route path="/random-beer" component={RandomBeer} />
             <Route path="/new-beer" component={NewBeer} /> */}
             <Route path="/" exact component={HomePage} />

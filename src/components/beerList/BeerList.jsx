@@ -1,7 +1,7 @@
 import React from 'react';
 import './BeerList.css';
 import axios from 'axios';
-import Beer from "../beer/Beer";
+import BeerCard from "../beerCard/BeerCard";
 import Header from '../header/Header';
 
 export default class BeerList extends React.Component {
@@ -29,7 +29,7 @@ export default class BeerList extends React.Component {
                 <Header />
                 <div className='BeerList__container'>
                 {this.state.beer.map(beer => (
-                    <Beer
+                    <BeerCard
                     key={beer._id}
                     {...beer}
                     />
@@ -40,3 +40,4 @@ export default class BeerList extends React.Component {
         )
     }
 }
+
