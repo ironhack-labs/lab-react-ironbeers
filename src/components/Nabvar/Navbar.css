@@ -1,0 +1,30 @@
+.HomePage_sectionOne_info{
+    color:black;
+    margin:0 20px;
+}
+
+.HomePage__sectionOne__info p {
+    color:grey;
+}
+
+
+.HomePage{
+    margin: 0 20px;
+}
+.HomePage__sectionTwo__info {
+    color: black;
+    margin: 0 20px;
+}
+
+.HomePage__sectionTwo__info p {
+    color:grey;
+}
+
+.HomePage__sectionThree__info {
+    color: black;
+    margin: 0 20px;
+}
+
+.HomePage__sectionThree__info p {
+    color:grey;
+} 
