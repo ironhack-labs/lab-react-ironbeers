@@ -1,0 +1,10 @@
+.navbar {
+    background-color: #3dc4fd;
+    margin: 0 15px;
+}
+
+.logo {
+    width: 50px;
+    padding: 15px;
+    justify-items: flex-end;
+}
