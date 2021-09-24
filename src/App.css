@@ -48,3 +48,19 @@ img{
 p{
   font-size: 10px;
 }
+.NewBeer{
+  justify-content: center;
+}
+
+.NewBeer>form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+}
+
+.NewBeer>form>input{
+  text-align: center;
+  margin:10px 40px;
+  
+}
