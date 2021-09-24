@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+.beerListCard img{
+
+  max-width: 75px !important;
+  max-height:175px !important;
+  
+}
+
+.beerListCard:hover{
+
+  background-color: #5959f4;
+  
+}
+/* .cardImg img{
+
+  max-width: 120px !important;
+  max-height:150px !important;
+} */
+.beerListCard{
+  display:flex;
+  justify-content: center !important;
+  align-items: center !important;
+  margin:50px;
+  border:2px black solid !important;
+}
+
+.beerListContainer{
+
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}
