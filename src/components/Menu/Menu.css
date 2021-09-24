@@ -1,0 +1,15 @@
+.headerMenu{
+  background-color: rgb(84, 81, 252);
+}
+
+.bigHomeI{
+  width:99vw;
+  color:white;
+  height:50px;
+  text-align: center;
+}
+
+.headerMenu i{
+  font-size: 80px;
+  margin-bottom:30px !important;
+}

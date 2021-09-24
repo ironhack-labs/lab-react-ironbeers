@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+/* -------------------------------- Beers ---------------------------------------- */
+.beerContainer{
+  border:1px solid red;
+}
+.beerContainerSingular{
+  border:1px solid green;
+  display:flex;
+  justify-content: center;
+}
+.beerListImage{
+  width:160px;
+  height:400px;
+  padding:50px;
+}
+.beerInfo{
+  text-align: left;
+  margin: 100px 0 0 30px;
+}
+
+.beerInfo h1{
+  font-size: 60px;
+  font-weight: normal;
+  color:rgb(0, 0, 0);
+}
+
+.beerInfo h3{
+  font-size: 40px;
+  font-weight: normal;
+  color:grey;
+}
+
+.beerInfoSpan{
+  color:black;
+}
+
+.beerInfo p{
+  margin-top:-15px;
+}
+.beerInfoSpan{
+  font-weight:bold;
+}
