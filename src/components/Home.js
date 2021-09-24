@@ -11,17 +11,17 @@ import randomBeer from '../assets/random-beer.png';
 const Home = () => {
 	return (
 		<div className="Home">
-			<Link to="/beers">
+			<Link to="/beers" className="preventClickColor">
 				<img src={beers} alt="Beers" />
 				<h1>All beers</h1>
 			</Link>
 			<Text />
-			<Link to="/random-beer">
+			<Link to="/random-beer" className="preventClickColor">
 				<img src={newBeer} alt="New beer" />
 				<h1>Random beer</h1>
 			</Link>
 			<Text />
-			<Link to="/new-beer">
+			<Link to="/new-beer" className="preventClickColor">
 				<img src={randomBeer} alt="Random beer" />
 				<h1>New beer</h1>
 			</Link>

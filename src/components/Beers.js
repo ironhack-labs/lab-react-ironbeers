@@ -42,8 +42,8 @@ const Beers = () => {
 									<h1>{beer.name}</h1>
 									<h3>{beer.tagline}</h3>
 									<p>
-										<span class="beerInfoSpan">Created by: </span>
-										{beer.name}
+										<span className="beerInfoSpan">Created by: </span>
+										<span className="preventClickColor">{beer.name}</span>
 									</p>
 								</div>
 							</div>

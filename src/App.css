@@ -32,6 +32,10 @@
     transform: rotate(360deg);
   }
 }
+
+.home h1{
+  color: black;
+}
 /* -------------------------------- Beers ---------------------------------------- */
 .beerContainerSingular{
   display:flex;
@@ -73,8 +77,15 @@
   font-weight:bold;
 }
 
-.beerContainer a{
+.beerContainer *{
   text-decoration: none;
+}
+.preventClickColor{
+  color:black;
+}
+
+hr{
+  color:black;
 }
 /* -------------------------------- Single Beer ---------------------------------------- */
 .singleBeerContainer{
