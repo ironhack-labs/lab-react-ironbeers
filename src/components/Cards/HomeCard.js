@@ -6,7 +6,7 @@ const Card = (props) => {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit orci eget lacinia consectetur. Curabitur varius nisi pulvinar nunc efficitur pharetra. Mauris non enim non libero consequat lobortis.';
 
   return (
-    <Link style={{textDecoration: "none", color: "black"}}>
+    <Link to={props.to} style={{textDecoration: "none", color: "black"}}>
       <div className="card mb-2" style={{ width: '22rem'}}>
         <img src={props.image} className="card-img-top" alt={props.name} />
         <div className="card-body pb-2">
