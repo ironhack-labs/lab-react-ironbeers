@@ -12,7 +12,6 @@ function NewBeer() {
   const [brewerTips, setBrewerTips] = useState("")
   const [attenuation, setAttenuation] = useState(0)
   const [contributedBy, setContributedBy] = useState("")
-  const [image,setImage] = useState("")
 
   const history = useHistory();
 
@@ -20,7 +19,6 @@ function NewBeer() {
     e.preventDefault();
     const body = {
       name: beerName,
-      image_url: image,
       tagline: tagline,
       description: description,
       first_brewed: firstBrewed,
@@ -32,7 +30,6 @@ function NewBeer() {
     axios.post("https://ih-beers-api2.herokuapp.com/beers/new", body)
       .then((response)=>{
         setBeerName("");
-        setImage("")
         setTagline("");
         setDescription("");
         setFirstBrewed("");
@@ -57,13 +54,6 @@ function NewBeer() {
           value={beerName}
           placeholder="Name"
           onChange={(e) => setBeerName(e.target.value)}
-        />
-        <input
-          type="text"
-          name="image"
-          value={image}
-          placeholder="Image"
-          onChange={(e) => setImage(e.target.value)}
         />
         <input
           type="text"
