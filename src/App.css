@@ -1,38 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  background-color: rgb(255, 196, 0);
+  height:100%;
+  font-family: Poppins;
   }
+
+  .navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.137);
+
+  }
+
+  .navbar h1 {
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: italic;
+    color: rgb(255, 196, 0);
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+
+  .navbar-bar {
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-bar div {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 196, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.137);
+    border: 1px solid rgb(202, 155, 0);
+  }
+
+  .navbar div a {
+    font-size: 2rem;
+  }
+
+  .home {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+
+  .home div {
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 10px;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .home div a {
+    text-decoration: none;
+    color: rgb(31, 31, 31);
+
+  }
+
+  .home h1 {
+    font-size: 4rem;
+  }
+
+  .home p {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+
+
+
+
+
+
+  .button-search {
+    width: 50%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 196, 0);
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+
+  }
+
+  .search-bar {
+    margin-bottom: 20px;
+    width: 80%;
+    border-radius: 25px;
+    border: none;
+    margin-left: 0;
+
+
+  }
+
+  .search-bar input {
+    height: 50px;
+    outline: none;
+    font-size: 1.2rem;
+    color: rgb(31, 31, 31);
+    padding-left: 20px;
+  }
+.beersList {
+  padding-top: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.beersList div {
+  width: 80%;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: auto;
+  }
+
+  .beersList div img {
+    width: 20%
+  }
+
+  .beersList div a {
+    width: 200px;
+    height: 60px;
+    background-color: rgb(202, 155, 0);
+    border: 1px solid rgb(170, 137, 0);
+    border-radius: 5px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.137);
+    padding-top: 25px;
+    font-size: 1.3rem;
+    overflow: scroll;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+   margin: 30px
+   }
+
+   .beer-card {
+     width: 80%;
+     text-align: center;
+     margin: auto;
+     padding-top: 100px;
+     padding-bottom: 50px;
+
+   }
+
+   .beer-card img {
+     width: 50%;
+   }
+
+   .back-button {
+     width: 70%;
+     height: 50px;
+     border-radius: 25px;
+     border: none;
+     background-color: rgb(255, 255, 255);
+     color: rgb(255, 196, 0);
+     font-size: 1rem;
+     font-weight: 900;
+     margin-bottom: 50px;
+     text-decoration: none;
+     padding: 10px;
+     margin-top: 40px;
+   }
+
+   .form {
+     padding-top: 100px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+}
+.loading {
+  height: 85vh;
+  text-align: center;
+  margin-top: 200px
+
+  }
+
+.beer-loading {
+
+  font-size: 7rem;
+  margin: auto;
+  width: 32%;
+  height: 32%;
+  transform-origin: center center;
+  -webkit-animation: clockwise 2s infinite linear;
+  -moz-animation: clockwise 2s infinite linear;
+  animation: clockwise 2s infinite linear;
 }
 
-.App-link {
-  color: #61dafb;
+@-moz-keyframes clockwise {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
+@keyframes clockwise {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
-  }
+    100% {
+      transform: rotate(360deg);
+    }
 }
