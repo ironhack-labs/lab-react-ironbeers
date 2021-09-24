@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import beers from './assets/beers.png';
+import newBeer from './assets/new-beer.png';
+import randomBeer from './assets/random-beer.png';
+
+import Card from './components/Card';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="container pt-2">
+        <Card image={beers} name='All Beers'/>
+        <Card image={randomBeer} name='Random Beer'/>
+        <Card image={newBeer} name='New Beer'/>
+      </div>
+    </BrowserRouter>
   );
 }
 
