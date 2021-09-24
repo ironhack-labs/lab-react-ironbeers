@@ -1,25 +1,46 @@
 .App {
   text-align: center;
-  margin-top: 50px;
 }
-
+.homePage{
+  margin-top: 50px;
+} 
 
 .App-header {
   background-color: #282c34;
   height: 50px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
 }
+.list{
+  justify-content: center;
+  margin-top: 5%;
+}
+
 .navbar{
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-img{
+.homePage img{
   width: 100%;
+}
+
+.list-image{
+  display: flex;
+  justify-content: center;
+  padding-left: 30%;
+}
+
+.list-data{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 2%;
 }
 
 a {
@@ -27,3 +48,6 @@ a {
   text-decoration: none;
 }
 
+.beersPage img{
+  height: 200px;
+}

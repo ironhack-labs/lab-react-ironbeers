@@ -6,7 +6,7 @@ import newBeer from '../assets/new-beer.png'
 
 function HomePage() {
   return (
-    <div className="container">
+    <div className="homePage container">
        <div className="col-6 mx-auto">
         <Link to="/beers">
             <img src={beers} alt=""/>
