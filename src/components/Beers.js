@@ -20,7 +20,7 @@ const Beers = () => {
 		axios
 			.get('https://ih-beers-api2.herokuapp.com/beers')
 			.then((response) => {
-				console.log('hi', response.data);
+				//console.log('hi', response.data);
 				setBeersData([ ...response.data ]);
 				setFetching(false);
 			})
@@ -42,7 +42,8 @@ const Beers = () => {
 									<h1>{beer.name}</h1>
 									<h3>{beer.tagline}</h3>
 									<p>
-										<span class="beerInfoSpan">Created by:</span>{' '}
+										<span class="beerInfoSpan">Created by: </span>
+										{beer.name}
 									</p>
 								</div>
 							</div>

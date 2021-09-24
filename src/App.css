@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -37,11 +33,7 @@
   }
 }
 /* -------------------------------- Beers ---------------------------------------- */
-.beerContainer{
-  border:1px solid red;
-}
 .beerContainerSingular{
-  border:1px solid green;
   display:flex;
   justify-content: center;
 }
@@ -53,18 +45,21 @@
 .beerInfo{
   text-align: left;
   margin: 100px 0 0 30px;
+  width:100%;
 }
 
 .beerInfo h1{
   font-size: 60px;
   font-weight: normal;
   color:rgb(0, 0, 0);
+  margin: 40px 0 20px 0;
 }
 
 .beerInfo h3{
   font-size: 40px;
   font-weight: normal;
   color:grey;
+  margin: 20px 0 30px 0;
 }
 
 .beerInfoSpan{
@@ -76,4 +71,67 @@
 }
 .beerInfoSpan{
   font-weight:bold;
+}
+
+.beerContainer a{
+  text-decoration: none;
+}
+/* -------------------------------- Single Beer ---------------------------------------- */
+.singleBeerContainer{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divImageContainer{
+  margin-top:50px;
+
+}
+
+.singleBeerImg{
+  width:150px;
+  height:400px;
+}
+
+.beerInfoContainer{
+  display:flex;
+  flex-direction: column;
+  padding: 0 80px 0 80px;
+}
+
+.beerJustifiedContent{
+  display:flex;
+  justify-content: space-between;
+}
+
+.beerJustifiedContent h1{
+  font-size:60px;
+  font-weight: normal !important;
+  margin: 20px 0 20px 0;
+}
+
+.beerJustifiedContent h3,h5{
+  margin: 0 0 20px 0;
+}
+
+.textGrey{
+  color:rgb(189, 186, 186);
+}
+
+.sizedText{
+  font-size:30px;
+}
+
+.sizedText2{
+  font-size:20px;
+}
+
+.textBeerInfo{
+  font-size:30px;
+  margin: 0;
+}
+
+.bolder{
+  font-weight: bold;
 }
