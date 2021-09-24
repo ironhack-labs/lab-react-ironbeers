@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav>
       <NavLink exact to="/">
-        Home
+      <i className="material-icons">home</i>
       </NavLink>
     </nav>
   );

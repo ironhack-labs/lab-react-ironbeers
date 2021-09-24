@@ -4,7 +4,7 @@ import LoremIpsum from 'react-lorem-ipsum'
 
 
 
-function Beers() {
+function Home() {
   // const [beers, setBeers] = useState([]);
 
     return (
@@ -31,4 +31,4 @@ function Beers() {
     );
   }
   
-  export default Beers;
+  export default Home;
