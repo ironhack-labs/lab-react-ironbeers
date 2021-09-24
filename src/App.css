@@ -32,15 +32,14 @@
 .list-image{
   display: flex;
   justify-content: center;
-  padding-left: 30%;
 }
+
 
 .list-data{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-left: 2%;
 }
 
 a {

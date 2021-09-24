@@ -24,10 +24,11 @@ function BeersPage(props) {
             {props.beersList.map((beer) => (
                 <div key={beer._id} >
                     <Link to={`/beers/${beer._id}`} className="row list">
-                        <div className="col-5 list-image">
+                        <div className="col-0 col-sm-0 col-md-1 col-lg-3 col-xl-3"></div>
+                        <div className="col-12 col-sm-10 col-md-4 col-lg-2 col-xl-2 list-image">
                             <img src={beer.image_url} alt={beer.name} />
                         </div>
-                        <div className="col-7 list-data">
+                        <div className="col-12 col-sm-10 col-md-7 col-lg-7 col-xl-7   list-data">
                             <h3>{beer.name}</h3>
                             <h5>{beer.tagline}</h5>
                             <p>Created by: {beer.contributed_by}</p>

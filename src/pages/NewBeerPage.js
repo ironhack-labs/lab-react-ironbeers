@@ -45,7 +45,7 @@ function NewBeerPage() {
     <div className="NewBeerPage">
       <h3>Add New Beer</h3>
       
-      <form onSubmit={handleSubmit} className="row col-4 mx-auto mt-3">
+      <form onSubmit={handleSubmit} className="row col-10 col-sm-10 col-md-8 col-lg-6 col-xl-4 mx-auto mt-3">
         <label>Name</label>
         <input type="text" name="name" onChange={(e) => setName(e.target.value)} value={name}/>
         <label>Tagline</label>

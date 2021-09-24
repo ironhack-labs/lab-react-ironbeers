@@ -40,14 +40,14 @@ function SingleBeerPage(props) {
         <Navbar/>
         {beersList && (
      
-        <div className="beer-detail  container">
+        <div className="beer-detail  container ">
             <h1>Beer Detail</h1>
-                <div key={beersList._id} >
+                <div key={beersList._id} className="row " >
                   
-                        <div className="col-5 list-image">
+                        <div className="col-12 col-sm-10 col-md-5 col-lg-5 col-xl-5 list-image">
                             <img src={beersList.image_url} alt={beersList.name} />
                         </div>
-                        <div className="col-7 list-data">
+                        <div className="col-12 col-sm-10 col-md-7 col-lg-7 col-xl-7 list-data">
                             <h3>{beersList.name}</h3>
                             <h5>{beersList.tagline}</h5>
                             <p>{beersList.first_brewed}</p>
