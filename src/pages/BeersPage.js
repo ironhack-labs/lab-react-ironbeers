@@ -4,17 +4,6 @@ import Navbar from '../components/Navbar';
 import { Link } from "react-router-dom"; 
 
 function BeersPage(props) {
-    /* const [beersList, setBeersList] = useState([]);
-
-    // This effect will run only once after the initial render 
-    useEffect(() => {
-      axios
-        .get("https://ih-beers-api2.herokuapp.com/beers")
-        .then((response) => {
-          console.log("response.data", response.data);
-           setBeersList(response.data); 
-        });
-    }, []); */
 
   return (
     <div>

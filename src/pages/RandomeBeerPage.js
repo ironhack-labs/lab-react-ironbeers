@@ -22,18 +22,19 @@ function RandomBeersPage() {
         <div className="beer-detail container">
             <h1>BeersPage</h1>
        
-                <div key={beerRandom._id} >
+                <div key={beerRandom._id} className="row ">
               
-                        <div className="col-5 list-image">
+                        <div className="col-12 col-sm-10 col-md-5 col-lg-5 col-xl-5 list-image">
                             <img src={beerRandom.image_url} alt={beerRandom.name} />
                         </div>
-                        <div className="col-7 list-data">
+                        <div className="col-12 col-sm-10 col-md-7 col-lg-7 col-xl-7 list-data">
                             <h3>{beerRandom.name}</h3>
                             <h5>{beerRandom.tagline}</h5>
-                            <p>{beerRandom.first_brewed}</p>
-                            <p>{beerRandom.attenuation_level}</p>
+                            <p><span className="bold">First brewed:</span> {beerRandom.first_brewed}</p>
+                            <p><span className="bold">Attenuation level:</span> {beerRandom.attenuation_level}</p>
+                            <p><span className="bold">Description:</span></p>
                             <p>{beerRandom.description}</p>
-                            <p>Created by: {beerRandom.contributed_by}</p>
+                            <p><span className="bold">Created by:</span> {beerRandom.contributed_by}</p>
             
 
                             {/* /beers/:beerId */}
