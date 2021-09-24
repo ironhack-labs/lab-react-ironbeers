@@ -40,7 +40,7 @@ function SingleBeerPage(props) {
         <Navbar/>
         {beersList && (
      
-        <div className="beersPage container">
+        <div className="beer-detail  container">
             <h1>Beer Detail</h1>
                 <div key={beersList._id} >
                   
