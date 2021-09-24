@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import './App.css';
 import Home from './components/Home';
 import Beers from './components/Beers';
 import RandomBeer from './components/RandomBeer';
@@ -9,6 +9,11 @@ import NewBeer from './components/NewBeer';
 
 
 function App() {
+
+
+  // const [beers, setBeers] = useState([]);
+
+
   return (
     <div className="App">
 
