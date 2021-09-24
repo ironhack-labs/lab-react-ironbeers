@@ -5,20 +5,18 @@ import Beers from "./components/beers"
 import RandomBeer from "./components/random-beer"
 import NewBeer from "./components/new-beer"
 import HomePage from "./components/home-page"
+import DetailBeer from "./components/detail-beer"
 
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/"
-              render={(beers) => {
-                  return <HomePage/>}
-              }
-            />
-        <Route path="/beers"
-              render={(beers) => {
-                  return <Beers/>}
+        <Route exact path="/" component={HomePage}/>
+        <Route exact path="/beers" component = {Beers}/>
+        <Route path="/beers/:id"
+              render={(routeProps) => {
+                  return <DetailBeer {...routeProps}/>}
               }
             />
         <Route path="/random"
