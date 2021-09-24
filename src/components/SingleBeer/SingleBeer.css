@@ -1,0 +1,9 @@
+.single-beer-container > img {
+  width: 200px;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.single-beer-container {
+  margin-top: 50px;
+}

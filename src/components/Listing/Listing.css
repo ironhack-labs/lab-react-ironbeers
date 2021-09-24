@@ -1,0 +1,54 @@
+.listing-container {
+  margin-top: 110px;
+}
+
+.listing-search {
+  position: fixed !important;
+  top: 50px !important;
+  height: 60px;
+  background-color: white;
+  z-index: 1;
+}
+
+.listing-search > input {
+  margin: auto;
+  height: 50px;
+}
+
+.listing-search > span {
+  margin: auto;
+  height: 50px;
+}
+
+.listing-container .list-group-item {
+  height: 100px;
+}
+
+.beer-img-container {
+  width: 100px;
+}
+
+.beer-img-container > img {
+  height: 80px;
+}
+.beer-list-info-container {
+  height: 100px;
+  width: 275px;
+}
+
+.beer-list-info-container > h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.beer-list-info-container > h4 {
+  font-size: 0.8em;
+  color: rgb(134, 134, 134);
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.beer-list-info-container > p {
+  font-size: 0.6em;
+  margin: 5px 0;
+}

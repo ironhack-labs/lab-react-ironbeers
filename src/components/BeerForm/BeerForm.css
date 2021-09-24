@@ -1,0 +1,17 @@
+.beer-form-container input,
+.beer-form-container textarea {
+  padding-left: 15px !important;
+}
+
+.beer-form-container textarea {
+  height: 100px;
+  border-radius: 15px;
+}
+
+.beer-form {
+  margin-top: 70px;
+}
+
+.beer-form label {
+  font-size: 0.8em;
+}

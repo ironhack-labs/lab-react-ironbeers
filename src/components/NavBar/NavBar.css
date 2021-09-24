@@ -1,0 +1,8 @@
+.listing-beer-button {
+  height: 50px;
+  border-radius: 0 !important;
+}
+
+.listing-beer-button > * {
+  color: white;
+}
