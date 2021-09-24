@@ -1,0 +1,16 @@
+.formSearch{
+  border:1px solid red;
+  padding: 10px;
+}
+
+.inputFormSearch{
+  width:300px;
+  padding: 10px;
+  border-radius:10px;
+  outline:none;
+  border:2px solid rgb(184, 184, 184);
+}
+.noTePases{
+  margin:0;
+  margin-top:10px;
+}

@@ -33,8 +33,23 @@
   }
 }
 
+/* -------------------------------- Home ---------------------------------------- */
 .home h1{
   color: black;
+}
+
+.loadingFetchingPage{
+  width:100vw;
+  height:90vh;
+  font-weight: bold;
+  color:rgb(248, 122, 122);
+  text-align:center;
+  line-height: 90vh;
+  font-size:20px;
+}
+
+.home{
+  padding:100px;
 }
 /* -------------------------------- Beers ---------------------------------------- */
 .beerContainerSingular{
@@ -109,6 +124,7 @@ hr{
   display:flex;
   flex-direction: column;
   padding: 0 80px 0 80px;
+  min-width: 70vw;
 }
 
 .beerJustifiedContent{
@@ -145,4 +161,66 @@ hr{
 
 .bolder{
   font-weight: bold;
+}
+/* -------------------------------- Beer Form ---------------------------------------- */
+.beerForm{
+  border:1px solid black;
+  display:flex-column;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+}
+.beerFormDataForm{
+  display:flex-column;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+
+  width:50vw;
+  margin:0 auto;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+.displayColumn{
+  display:flex;
+  flex-direction: column;
+}
+
+.form-control{
+  height:30px;
+  border:2px solid rgb(184, 184, 184);
+  border-radius:10px;
+  border-color: rgb(184, 184, 184);
+  margin-bottom:20px;
+  outline: none;
+}
+
+.labelLeftBold{
+  text-align: left;
+  font-weight: bold;
+  margin-left:30px;
+  margin-bottom:5px;
+}
+
+.form-controlTA{
+  height:100px;
+  border:2px solid rgb(184, 184, 184);
+  border-radius:10px;
+  border-color: rgb(184, 184, 184);
+  margin-bottom:20px;
+  resize: none;
+  outline: none;
+}
+
+.btn-danger{
+  background: rgb(231, 116, 116);
+  padding:20px 50px 20px 50px;
+  cursor:pointer;
+  color:white;
+  font-weight: bold;
+}
+
+.btn-danger:hover{
+  background: rgb(226, 154, 154);
 }

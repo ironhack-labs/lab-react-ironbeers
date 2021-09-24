@@ -1,6 +1,4 @@
 import React from 'react';
-//React router dom
-import { Link } from 'react-router-dom';
 //use effect use state
 import { useState, useEffect } from 'react';
 //Axios
@@ -12,7 +10,7 @@ import './../App.css';
 
 const SingleBeer = (props) => {
 	//sincrono - asincrono
-	const [ fetching, setFetching ] = useState(true);
+	const [ fetching, setFetching ] = useState(false);
 	//beer y estado
 	const [ beer, setBeerData ] = useState([]);
 
@@ -26,7 +24,7 @@ const SingleBeer = (props) => {
 				.then((response) => {
 					//console.log('hi', response.data);
 					setBeerData(response.data);
-					setFetching(false);
+					setFetching(true);
 				})
 				.catch((err) => console.error(err));
 		} else {
@@ -35,15 +33,16 @@ const SingleBeer = (props) => {
 				.then((response) => {
 					//console.log('hi', response.data);
 					setBeerData(response.data);
-					setFetching(false);
+					setFetching(true);
 				})
 				.catch((err) => console.error(err));
 		}
+		// eslint-disable-next-line
 	}, []);
 
 	//console.log(beer);
 
-	return (
+	return fetching ? (
 		<div>
 			<Menu />
 			<div className="singleBeerContainer" key={beer._id}>
@@ -65,6 +64,8 @@ const SingleBeer = (props) => {
 				</div>
 			</div>
 		</div>
+	) : (
+		<div className="loadingFetchingPage">Loading</div>
 	);
 };
 
