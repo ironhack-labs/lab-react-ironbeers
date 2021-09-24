@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 50px;
 }
 
 
@@ -11,6 +12,10 @@
   align-items: center;
   justify-content: center;
   color: white;
+}
+.navbar{
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 img{
