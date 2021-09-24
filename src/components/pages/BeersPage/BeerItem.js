@@ -9,8 +9,8 @@ function BeerItem(props) {
 
     return ( 
 
-            <Card className="d-flex align-items-center p-2 mb-2" style={{ width: '18rem', height:'100%'}}>
-                <Card.Img style={{ width: '50px' }} variant="top" src={image_url} />
+            <Card className="d-flex align-items-center p-2 mb-2" style={{ width: '18rem'}}>
+                <Card.Img style={{ width: '50px', height:'50%' }} variant="top" src={image_url} />
                 <Card.Body className="d-flex flex-column align-items-center">
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>{tagline}</Card.Text>

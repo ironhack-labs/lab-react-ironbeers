@@ -59,7 +59,7 @@ class BeerDetails extends React.Component {
     render() {
         return (
             <div>
-                <Container>
+                <Container style={{ display: 'flex', "justify-content":'center' }}>
                     {this.displayBeer()}
                 </Container>
             </div>

@@ -14,6 +14,10 @@ class BeersList extends React.Component {
         this.beersService = new BeersService()
     }
 
+    componentDidMount(prevProps) {
+            this.refreshBeers()
+    }
+
     refreshBeers = () => {
         this.beersService.getBeers()
         .then(res => {
@@ -25,19 +29,18 @@ class BeersList extends React.Component {
         .catch(err => console.error(err))
     }
 
-    componentDidMount() {
-        this.refreshBeers()
-    }
 
-    componentDidUpdate() {
-        this.beersService.searchBeer(this.props.searchedTerm)
-        .then((res) => {
-            this.setState({
-                ...this.state,
-                beers: res.data
+    componentDidUpdate(prevProps) {
+        if (prevProps !== this.props) {
+            this.beersService.searchBeer(this.props.searchedTerm)
+            .then((res) => {
+                this.setState({
+                    ...this.state,
+                    beers: res.data
+                })
             })
-        })
-        .catch(err => console.error(err))
+            .catch(err => console.error(err))
+        }
     }
 
     displayBeers = () => {
@@ -46,7 +49,7 @@ class BeersList extends React.Component {
                 this.state.beers.map(beer => {
                     return (
                         <Col sm={"12"} md={"3"}>
-                            <CardGroup>
+                            <CardGroup style={{ height:'100%'}}>
                                 <BeerItem allBeers key={beer._id} {...beer}/>
                             </CardGroup>
                         </Col>

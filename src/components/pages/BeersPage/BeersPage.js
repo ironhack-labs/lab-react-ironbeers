@@ -8,13 +8,11 @@ class BeersPage extends React.Component {
             searchedTerm: ""
         }
 
-        handleChange = (e) => {
+        handleChange = async (e) => {
             this.setState({
                 ...this.state,
-                searchedTerm: e.target.value
+                searchedTerm: e.target.value.toLowerCase()
             })
-
-            
         }
 
 
@@ -24,7 +22,7 @@ class BeersPage extends React.Component {
 
         return ( 
             <Container>
-                <h1 className="text-center">Beers List</h1>
+                <h1 className="text-center mt-4">Beers List</h1>
                     <Form.Group className="mb-3" controlId="search">
                         <Form.Label>Search for a beer</Form.Label>
                         <Form.Control onChange={this.handleChange} type="text" name="searchedTerm" />

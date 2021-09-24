@@ -5,7 +5,7 @@ import BeerDetails from "../BeerDetailsPage/BeerDetails";
 function BeersPage() {
     return (
         <Container>
-            <h1 className="text-center">Random Beer</h1>
+            <h1 className="text-center mt-3">Random Beer</h1>
             <BeerDetails type="random" />
         </Container>
     );
