@@ -7,6 +7,8 @@ import axios from 'axios';
 import './../App.css';
 //Components
 import Menu from './Menu/Menu.js';
+//import react-dom components
+import { useHistory } from 'react-router-dom';
 
 const NewBeer = () => {
 	//Form consts
@@ -17,6 +19,9 @@ const NewBeer = () => {
 	const [ brewer_tips, setBrewerTips ] = useState('');
 	const [ attenuation_level, setAttenuationLevel ] = useState(0);
 	const [ contributed_by, setContributedBy ] = useState('');
+
+	//dom history to redirect
+	const history = useHistory();
 
 	const handleSubmit = (e) => {
 		// Prevent page reload on submit
@@ -40,6 +45,9 @@ const NewBeer = () => {
 			setBrewerTips('');
 			setAttenuationLevel(0);
 			setContributedBy('');
+
+			// Navigate to the `/` page
+			history.push('/');
 		});
 	};
 
