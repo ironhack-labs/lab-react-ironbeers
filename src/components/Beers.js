@@ -17,25 +17,26 @@ const Beers = () => {
 	//beers y estado
 	const [ beers, setBeersData ] = useState([]);
 	//Filter text
-	const [ filterText, setFilterText ] = useState([]);
+	const [ filteredText, setFilteredText ] = useState([]);
 
 	useEffect(() => {
 		axios.get('https://ih-beers-api2.herokuapp.com/beers').then((response) => {
 			setBeersData(response.data);
-			setFilterText(response.data);
+			setFilteredText(response.data);
 			setFetching(true);
 		});
 
 		// eslint-disable-next-line
 	}, []);
 
-	const filter = (filterInfo) => {
-		let text = beers;
+	const filter = (filteredText) => {
+		let inputText = beers;
 
-		if (filterInfo !== '') {
-			setFilterText(text.filter((beer) => beer.name.startsWith(filterInfo)));
+		if (filteredText === '') {
+			//console.log('hola');
+			setFilteredText(beers);
 		} else {
-			setFilterText(beers);
+			setFilteredText(inputText.filter((beer) => beer.name.includes(filteredText)));
 		}
 	};
 
@@ -44,7 +45,7 @@ const Beers = () => {
 			<Menu />
 			<Search filter={filter} />
 			<div className="beerContainer">
-				{filterText.map((beer) => {
+				{filteredText.map((beer) => {
 					return (
 						<Link to={`/beer/${beer._id}`} key={beer._id}>
 							<div className="beerContainerSingular">
