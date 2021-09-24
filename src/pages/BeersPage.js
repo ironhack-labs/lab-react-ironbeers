@@ -1,11 +1,10 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import { useState, useEffect } from "react";
-import axios from "axios";
+
 import { Link } from "react-router-dom"; 
 
-function BeersPage() {
-    const [beersList, setBeersList] = useState([]);
+function BeersPage(props) {
+    /* const [beersList, setBeersList] = useState([]);
 
     // This effect will run only once after the initial render 
     useEffect(() => {
@@ -15,14 +14,14 @@ function BeersPage() {
           console.log("response.data", response.data);
            setBeersList(response.data); 
         });
-    }, []);
+    }, []); */
 
   return (
     <div>
         <Navbar/>
         <div className="beersPage container">
             <h1>BeersPage</h1>
-            {beersList.map((beer) => (
+            {props.beersList.map((beer) => (
                 <div key={beer._id} >
                     <Link to={`/beers/${beer._id}`} className="row list">
                         <div className="col-5 list-image">

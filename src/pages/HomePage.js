@@ -18,7 +18,7 @@ function HomePage() {
         </Link>
         <Link to="/random-beer">
             <img src={randomBeer} alt=""/>
-            <h3>All Beers</h3>
+            <h3>Random Beer</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Curabitur ac auctor diam. Curabitur vehicula massa quis lorem gravida mattis. 
               Nullam vehicula, sem ac finibus vulputate, ipsum justo interdum urna, eu congue elit nibh vel massa. 
@@ -26,7 +26,7 @@ function HomePage() {
         </Link>
         <Link to="/new-beer">
             <img src={newBeer} alt=""/>
-            <h3>All Beers</h3>
+            <h3>New Beer</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Curabitur ac auctor diam. Curabitur vehicula massa quis lorem gravida mattis. 
               Nullam vehicula, sem ac finibus vulputate, ipsum justo interdum urna, eu congue elit nibh vel massa. 
