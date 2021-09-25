@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Navbar from '../Navbar/Navbar';
 
 
 const RandomBeer = () => {
@@ -29,6 +30,7 @@ const RandomBeer = () => {
       console.log(beer)
 
       return<div>
+      i<Navbar />
       <img src={beer.image_url} alt={beer.name} />
           <h1>{beer.name}</h1>
           <h3>{beer.attenuation_level}</h3>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Navbar from '../Navbar/Navbar';
 
 const SingleBeer = (props, xx) => {
     console.log(props)
@@ -26,6 +27,7 @@ console.log(props)
 
     console.log(beer)
     return<div>
+     <Navbar />
     <img src={beer.image_url} alt={beer.name} />
         <h1>{beer.name}</h1>
         <h3>{beer.attenuation_level}</h3>

@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import Navbar from "../Navbar/Navbar";
 const ListBeers = () => {
     const [beers, setBeers] = useState([]);
 
@@ -17,7 +17,9 @@ const ListBeers = () => {
     }, []);
   
     return (
+      
       <div className="row">
+       <Navbar />
         {beers.map((beerObj) => {
           return (
             <div key={beerObj._id} className="col-4 mb-3">
