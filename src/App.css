@@ -193,3 +193,19 @@ h4 {
   color: #F2F2F2;
 }
 
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+.search-bar label {
+ font-size: 20px;
+ font-weight: 600;
+ margin: 20px 10px;
+}
+
+.search-bar input {
+  width: 70%;
+  height: 20px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+}
