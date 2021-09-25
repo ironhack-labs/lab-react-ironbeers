@@ -1,0 +1,61 @@
+#random-beer {
+  background-color: rgb(95, 95, 95);
+  min-height: calc(100vh - 65.2px);
+}
+
+#random-beer span {
+  margin: 0;
+}
+
+#random-beer .beer-card {
+  border: 2px solid rgb(95, 95, 95);
+  width: 30rem;
+}
+
+#random-beer .beer-img-container {
+  height: 25rem;
+}
+
+#random-beer .beer-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#random-beer .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgb(95, 95, 95);
+  max-width: 30rem;
+}
+
+#random-beer .card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem !important;
+  text-transform: uppercase;
+  color: #de9a57 !important;
+  font-family: roboto;
+}
+
+#random-beer .card-subtitle {
+  font-size: 1.5rem !important;
+  padding: 1.5rem 0 0rem 0;
+  color: white;
+  letter-spacing: 0.08rem;
+  font-family: roboto;
+}
+
+#random-beer .card-text {
+  font-size: 1rem !important;
+  padding: 1rem 0;
+  color: white;
+  letter-spacing: 0.08rem;
+  font-family: roboto;
+}
+#random-beer .description {
+  line-height: 2rem;
+}

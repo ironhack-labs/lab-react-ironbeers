@@ -1,0 +1,29 @@
+#new-beer-form {
+  background-color: rgb(95, 95, 95);
+  min-height: 100vh;
+}
+
+#new-beer-form .form-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #de9a57;
+  font-size: 1.1rem;
+  text-align: left !important;
+}
+
+#new-beer-form button {
+  background-color: #de9a57 !important;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+input,
+textarea {
+  background-color: whitesmoke !important;
+}

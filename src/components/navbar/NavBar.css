@@ -1,0 +1,13 @@
+.navbar {
+  padding: 1rem;
+  font-family: Roboto;
+}
+.navbar i {
+  color: #de9a57 !important;
+  font-size: 1.9rem;
+}
+
+.navbar i:hover,
+.navbar span:hover {
+  color: whitesmoke !important;
+}

@@ -1,0 +1,42 @@
+#home a {
+  text-decoration: none;
+}
+
+#home .card {
+  border: 0 !important;
+}
+
+#home .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgb(95, 95, 95);
+}
+
+#home .card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem !important;
+  text-transform: uppercase;
+  color: #de9a57 !important;
+  font-family: roboto;
+}
+
+#home .card-text {
+  font-size: 1.2rem !important;
+  padding: 1.5rem 0 2rem 0;
+  color: white;
+  letter-spacing: 0.08rem;
+  font-family: roboto;
+}
+
+#home .fa-star {
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+}
+
+#home .card-img-top {
+  border-radius: 0;
+}
