@@ -19,17 +19,19 @@ export default function RandomBeer() {
         <div>
             < Header />
             <div>
-            <img src={randomBeer.image_url} alt={randomBeer.name} width="60" class="random-beer-img"/>
-            <div class="random-beer-section">
-                <h2>{randomBeer.name}</h2> 
-                <h2 class="attenuation-level">{randomBeer.attenuation_level}</h2>
-            </div>
-            <div class="random-beer-section">
-                <h4 class="tagline">{randomBeer.tagline}</h4>
-                <p class="first-brewed"><b>{randomBeer.first_brewed}</b></p>
-            </div>
-            <p>{randomBeer.description}</p>
-            <p class = "contributed-by">{randomBeer.contributed_by}</p>
+                <img src={randomBeer.image_url} alt={randomBeer.name} width="60" class="random-beer-img"/>
+                <div class="random-beer-section">
+                    <h2>{randomBeer.name}</h2> 
+                    <h2 class="attenuation-level">{randomBeer.attenuation_level}</h2>
+                </div>
+                <div class="random-beer-section">
+                    <h4>{randomBeer.tagline}</h4>
+                    <p><b>{randomBeer.first_brewed}</b></p>
+                </div>
+                <div class="random-beer-description">
+                    <p>{randomBeer.description}</p>
+                    <p class="contributed-by">{randomBeer.contributed_by}</p>
+                </div>
             </div>
         </div>
     )
