@@ -11,7 +11,6 @@ function SingleBeer(props) {
       )
       .then((response) => {
         setBeer({ ...response.data });
-        console.log(response.data);
       })
       .catch((err) => console.error(err));
   }, [props.match.params.beerId]);
@@ -42,7 +41,7 @@ function SingleBeer(props) {
               style={{ display: 'flex', alignItems: 'center' }}
             >
               <h1 className="col-9">{beer.name}</h1>
-              <h4 className="mt-2" style={{ width: '4rem', color: '#D3D3D3' }}>
+              <h4 className="mt-2" style={{ width: '5rem', color: '#D3D3D3' }}>
                 {beer.attenuation_level}
               </h4>
             </div>
