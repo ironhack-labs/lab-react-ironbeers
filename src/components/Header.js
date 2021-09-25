@@ -6,7 +6,7 @@ function Header() {
   return (
     <nav>
       <Link exact to="/" className="header">
-        <img src={home} width='40px' alt='homepage icon'/>
+        <img src={home} width='30px' alt='homepage icon'/>
       </Link>
     </nav>
   );

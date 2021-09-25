@@ -1,10 +1,156 @@
 .App {
-  text-align: center;
-  width: 600px;
+  width: 360px;
 }
 
 nav {
+  text-align: center;
   background-color: #3DC4FC;
-  padding: 20px;
-  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.homeContainer {
+  width: 100%;
+  border: 1px solid #F2F2F2;
+}
+
+.home-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-link h3 {
+  font-size: 25px;
+  margin: 0px 30px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.homeContainer p {
+  margin: 0px 30px 20px 30px;
+  font-size: 15px;
+  color: lightgray;
+}
+
+.beers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.beer-container{
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #F2F2F2;
+  width: 100%;
+}
+
+.beer-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  margin: 20px;
+  height: 200px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 30px;
+  margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit; 
+}
+
+h3 {
+  font-size: 30px;
+  margin: 20px 0 0 0;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 20px;
+  color: lightgray;
+  font-weight: 400;
+  margin: 10px 0px;
+}
+
+.right p {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.single-beer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.first-line {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.first-line h3 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.first-line p {
+  margin: 0;
+  font-size: 30px;
+  color: lightgray;
+}
+
+.second-line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.second-line > p:first-child {
+  margin: 0;
+  font-size: 15px;
+  color: lightgray;
+}
+
+.second-line > p:last-child {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.third-line {
+  margin: 10px;
+  width: 100%;
+}
+
+.third-line {
+  margin: 0;
+}
+
+.fourth-line {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  color: lightgray;
 }

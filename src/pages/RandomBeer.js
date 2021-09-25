@@ -18,18 +18,26 @@ export default function RandomBeer(props) {
   return (
     <div>
       <Header />
-      <div className="main-beer-container">
-        <div key={beer._id} className="card" className="beer-container">
-          <img height="250px" src={beer.image_url} alt="beers" />
-          <div>
-            <h3>{beer.name}</h3>
-            <p>{beer.tagline}</p>
-            <p>first brewed : {beer.first_brewed}</p>
-            <p>attenuation level: {beer.attenuation_level}</p>
-            <p>description: {beer.description}</p>
-            <p>Created by: {beer.contributed_by}</p>
-          </div>
-        </div>
+      <div>
+      <div key={beer._id} className='single-beer-container'>
+              <img  height='250px' src={beer.image_url} alt="beers" />
+              <div className="beer-detail">
+                  <div className="first-line">
+                    <h3>{beer.name}</h3>
+                    <p>{beer.attenuation_level}</p>
+                  </div>
+                  <div className="second-line">
+                    <p>{beer.tagline}</p>
+                    <p>{beer.first_brewed}</p>
+                  </div>
+                  <div className="third-line">
+                    <p>{beer.description}</p>
+                  </div>
+                  <div className="fourth-line">
+                    <p>{beer.contributed_by}</p>
+                  </div>
+              </div>
+            </div>
       </div>
     </div>
   );
