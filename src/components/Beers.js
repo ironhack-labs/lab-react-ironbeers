@@ -32,13 +32,9 @@ export default function Beers() {
             <Link to="/">
                 <img src="../assets/header.png" width="300px" alt="header banner"/>
             </Link>
-            
             <div>
                 {beersToRender}
             </div>
-
-            
-
         </div>
     )
 }
