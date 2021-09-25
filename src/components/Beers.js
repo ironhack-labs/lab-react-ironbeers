@@ -18,7 +18,7 @@ export default function Beers() {
         return (
             <div key={beer._id}>
                 <Link to={`/beers/${beer._id}`}>
-                    <img src={beer.image_url} height="200px"></img>
+                    <img src={beer.image_url} height="200px" alt="The beer pic"></img>
                     <h3>{beer.name}</h3>
                 </Link>
                 <h5>{beer.tagline}</h5>

@@ -22,7 +22,7 @@ export default function BeerDetails(props) {
         </Link>
       </div>
       <br /><br />
-      <img src={beer.image_url} height="200px"></img>
+      <img src={beer.image_url} height="200px" alt="The beer pic"></img>
       <h3>{beer.name}</h3>
       <h4>{beer.tagline}</h4>
       <h4>First brewed: {beer.first_brewed}</h4>
