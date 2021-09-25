@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Beers  from "./components/Beers";
 import RandomBeer from "./components/RandomBeer";
 import NewBeer from "./components/NewBeer";
+import SingleBeer from './components/SingleBeer';
 
 function NotFound() {
   return <h1>404 - Not Found</h1>
@@ -18,6 +19,7 @@ function App() {
       <Switch>
       <Route exact path="/" component={Home}/>
       <Route exact path="/beers" component={Beers}/>
+      <Route exact path="/beers/:id" component={SingleBeer}/>
       <Route exact path="/random-beer" component={RandomBeer}/>  
       <Route exact path="/new-beer" component={NewBeer}/>
       <Route component={NotFound} />

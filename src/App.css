@@ -37,6 +37,35 @@ a:visited {
   color: black;
 }
 
+.random-beer-section {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.random-beer-img {
+  padding-top: 50px;
+}
+
+.tagline {
+  color: #969696;
+  text-align: left;
+}
+
+.first-brewed {
+  padding-top: 5px;
+  text-align: right;
+}
+
+.attenuation-level {
+  color: lightgray;
+  text-align: right;
+}
+
+.contributed-by {
+  color: #969696;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

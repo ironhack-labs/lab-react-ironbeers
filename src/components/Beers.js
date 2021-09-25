@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-
+import {Link} from 'react-router-dom';
 
 export default function Beers() {
     const [beerList, setBeerList] = useState([]);
@@ -25,7 +25,7 @@ export default function Beers() {
                return (
                     <div>
                     <img src={beer.image_url} alt={beer.name} width="60"/>
-                    <h3>{beer.name}</h3>
+                    <Link to={`/beers/${beer._id}`}><h3>{beer.name}</h3></Link>
                     <h3>{beer.tagline}</h3>
                     <h3>{beer.contributed_by}</h3>
                     </div>
