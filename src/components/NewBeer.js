@@ -31,6 +31,8 @@ export default function NewBeer() {
         setAttenuation_level(0);
         setContributed_by('');
       })
+
+    alert("Your new beer has been added!");
   }
 
   return (

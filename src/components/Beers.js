@@ -7,12 +7,19 @@ import axios from 'axios';
 export default function Beers() {
 
     const [beersState, setBeersState] = useState([]);
+    const [query, setQuery] = useState('');
 
     useEffect(() => {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
             .then(res => {setBeersState(res.data)})
             .catch(err => console.log(err));
     }, [])
+
+    useEffect(() => {
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+        .then(res => {setBeersState(res.data)})
+        .catch(err => console.log(err));
+    }, [query])
     
     const beersToRender = beersState.map(beer => {
         return (
@@ -32,6 +39,11 @@ export default function Beers() {
             <Link to="/">
                 <img src="../assets/header.png" width="300px" alt="header banner"/>
             </Link>
+            <br /><br />
+
+            <input type="text" name="query" value={query} onChange={e => setQuery(e.target.value)} />
+            <br /><br /><br />
+
             <div>
                 {beersToRender}
             </div>
