@@ -9,15 +9,10 @@ import NewBeer from './components/NewBeer';
 
 
 
-
 function App() {
 
-
-  // const [beers, setBeers] = useState([]);
-
-
   return (
-    <div className="App">
+    <div className="App" >
 
       <Switch>
         <Route exact path="/" component={Home} />

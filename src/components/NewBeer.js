@@ -12,8 +12,6 @@ export default function NewBeer() {
   const [attenuation_level, setAttenuation_level] = useState(0);
   const [contributed_by, setContributed_by] = useState('');
 
-  // https://ih-beers-api2.herokuapp.com/beers/new
-
   const handleSubmit = e => {
     e.preventDefault();
     const body = {name, tagline, description, 
