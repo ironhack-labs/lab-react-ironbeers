@@ -11,7 +11,7 @@ function ListBeers() {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers')
       .then((response) => {
-        setBeers(response.data);
+        setBeers([...response.data]);
         console.log(response);
       })
       .catch((err) => console.error(err));
