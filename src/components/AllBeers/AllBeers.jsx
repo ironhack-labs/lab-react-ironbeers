@@ -2,6 +2,7 @@ import React from "react"
 import Header from "../Header/Header"
 import Loader from "react-loader-spinner"
 import axios from "axios"
+import BeerCard from "../BeerdCard/BeerCard"
 export default class AllBeers extends React.Component{
     state = {
         beers: undefined
@@ -48,20 +49,8 @@ export default class AllBeers extends React.Component{
 
                 {
                     this.state.beers.map(beer =>
-                        <div class="card mb-3" >
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src={beer.image_url} class="img-fluid rounded-start" alt="beer bottle" />
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{beer.name}</h5>
-                                        <p class="card-text">{beer.tagline}</p>
-                                        <p class="card-text"><small class="text-muted">Created by: {beer.name}</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        (<BeerCard key={beer.name} {...beer}/>)
+                       
                     )}
 
             </div>
