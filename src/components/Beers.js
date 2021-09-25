@@ -41,7 +41,7 @@ export default function Beers() {
             </Link>
             <br /><br />
 
-            <input type="text" name="query" value={query} onChange={e => setQuery(e.target.value)} />
+            <input type="text" name="query" placeholder="Search for a beer" value={query} onChange={e => setQuery(e.target.value)} />
             <br /><br /><br />
 
             <div>
