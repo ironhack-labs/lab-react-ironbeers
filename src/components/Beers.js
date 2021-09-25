@@ -17,8 +17,10 @@ export default function Beers() {
     const beersToRender = beersState.map(beer => {
         return (
             <div key={beer._id}>
-                <img src={beer.image_url} height="200px"></img>
-                <h3>{beer.name}</h3>
+                <Link to={`/beers/${beer._id}`}>
+                    <img src={beer.image_url} height="200px"></img>
+                    <h3>{beer.name}</h3>
+                </Link>
                 <h5>{beer.tagline}</h5>
                 <h5>Created by: {beer.contributed_by}</h5>
             </div>
