@@ -19,9 +19,13 @@ function Beers() {
       <h3>List of beers</h3>
 
       {beers.map((beer) => (
-        <div key={beer._id} className="card">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={beer.image_url} />
+        <div key={beer._id} className="card cardStyle">
+          <Card border="primary" style={{ width: '18rem' }}>
+            <Card.Img
+              className="cardImage"
+              variant="top"
+              src={beer.image_url}
+            />
             <Card.Body>
               <Card.Title>{beer.name}</Card.Title>
               <Card.Text>{beer.tagline}</Card.Text>

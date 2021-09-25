@@ -4,9 +4,9 @@ import { Card } from 'react-bootstrap';
 
 function HomePage() {
   return (
-    <div>
+    <div className="homePageBeer">
       <Link to={`/beers`}>
-        <Card style={{ width: '38rem' }}>
+        <Card className="cardsHomePage" style={{ width: '38rem' }}>
           <Card.Img variant="top" src="/beers.png" />
           <Card.Body>
             <Card.Title>All Beer</Card.Title>
@@ -19,7 +19,7 @@ function HomePage() {
       </Link>
 
       <Link to={`/random-beer`}>
-        <Card style={{ width: '38rem' }}>
+        <Card className="cardsHomePage" style={{ width: '38rem' }}>
           <Card.Img variant="top" src="/random-beer.png" />
           <Card.Body>
             <Card.Title>Random Beer</Card.Title>
@@ -32,7 +32,7 @@ function HomePage() {
       </Link>
 
       <Link to={`/new-beer`}>
-        <Card style={{ width: '38rem' }}>
+        <Card className="cardsHomePage" style={{ width: '38rem' }}>
           <Card.Img variant="top" src="/new-beer.png" />
           <Card.Body>
             <Card.Title>New Beer</Card.Title>
