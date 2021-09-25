@@ -11,3 +11,103 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.homepage {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage ul {
+  display: flex;
+}
+
+.homepage li {
+  list-style-type: none;
+  padding: 5em;
+}
+
+.link-test {
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+}
+
+ .beer-list {
+   display: flex;
+   flex-direction: column;
+   justify-content:flex-start;
+   align-items:flex-start;
+   margin-left: 0;
+   padding-left: 0;
+ }
+
+ .beer-list li {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   text-align: left;
+   border-bottom: 1px solid white;
+   width: 100%;
+ }
+
+ .beer-list img {
+   width: 10em;
+ }
+
+ .beer-info {
+   margin-left: 2em;
+ }
+
+ .beer-info h1 {
+   font-size: 4em;
+ }
+
+ .beer-info h2 {
+   color: rgb(37, 37, 37);
+ }
+
+ .beer-info h3 {
+   font-weight: 700;
+ }
+
+ .beer-details {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   max-width: 40em;
+   margin: 10em;
+   background-color: rgba(152, 195, 223, 0.568);
+   padding: 1em;
+ }
+
+ .beer-details img {
+   width: 5em;
+ }
+
+ .info-row {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 100%;
+   margin: 1em 0;
+ }
+
+ .info-row * {
+   margin: .5em 2em;
+ }
+
+ 
+ 
+
+
+
+ 
+
