@@ -1,9 +1,9 @@
 import React from 'react';
-
-import HomePage from "./componants/pages/HomePage";
-import Beers from "./componants/pages/Beers";
-import BeerDetails from "./componants/pages/BeerDetails";
-import RandomBeer from "./componants/pages/RandomBeer";
+import './App.css'
+import HomePage from "./componants/HomePage";
+import Beers from "./componants/Beers";
+import BeerDetails from "./componants/BeerDetails";
+import RandomBeer from "./componants/RandomBeer";
 
 import { Route, Switch } from 'react-router-dom'
 

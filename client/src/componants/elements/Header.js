@@ -3,20 +3,24 @@ import React from "react";
 
 export default function Header() {
   const divStyling = {
-    "backgroundColor": "darkblue",
-    "height": "50px"
+    "backgroundColor": "#68BBE3",
+    "display": "inline-block",
+    "textAlign": "center",
+    "width": "100%"
   };
   const iconStyling = {
     "color": "white",
-    "textAlign": "center"
+    "ariaHidden": "true"
   };
 
   return (
-    <nav>
-    <div style={divStyling}>
-      <Link to="/">
-      <i className="fas fa-home" style={iconStyling}></i>
-      </Link>
+    <nav className="navbar navbar-expand-lg" style={divStyling}>
+      <div className="container-fluid">
+        <p style={divStyling}>
+          <Link className="navbar-brand" to="/">
+            <span className="fas fa-home" style={iconStyling}></span>
+          </Link>
+        </p>
       </div>
     </nav>
   );

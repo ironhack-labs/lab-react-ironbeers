@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../elements/Header';
+import Header from './elements/Header';
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -29,7 +29,7 @@ export default function Beers() {
                   <Link to={`/beers/${beer._id}`}>
                       <h3>{beer.name}</h3>
                   </Link>
-                  <h4>{beer.tagline}</h4>
+                  <h4><small class="text-muted">{beer.tagline}</small></h4>
                   <p>Created by: {beer.contributed_by}</p>                 
                 </div>
             </div>
