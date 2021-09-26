@@ -36,3 +36,111 @@
     transform: rotate(360deg);
   }
 }
+
+.homeOption > img {
+  width: 500px
+}
+
+.homeOption {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-top: 50px;
+}
+
+.homeLink {
+  text-decoration: none;
+  font-size: 2em;
+  text-align: start;
+  margin-left: 20px;
+}
+
+.homeOption > p {
+  color: rgb(131, 131, 131);
+  text-align: start;
+  margin-left: 20px;
+}
+
+.App-header {
+  height: 100px;
+}
+
+.beerList {
+  display: flex;
+  flex-direction: row;
+}
+
+.beerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.beerList {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  width: 400px;
+}
+
+.tagline {
+  font-size: 1.5em;
+  margin: 0;
+  color: rgb(131, 131, 131);
+}
+
+ h2{
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.oneBeer {
+  width: 400px;
+}
+
+.oneBeerFirst {
+  display: flex;
+  justify-content: space-between;
+}
+
+.oneBeerFirst > p {
+  font-size: 1.5em;
+  color: rgb(131, 131, 131);
+}
+
+.oneBeerSecond {
+  display: flex;
+  justify-content: space-between;
+}
+
+.oneBeerSecond > article {
+  font-size: 1.2em;
+  color: rgb(131, 131, 131);
+  margin-top: 10px;
+}
+
+.contributedBy {
+  color: rgb(131, 131, 131);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form > input {
+  border-radius: 15px;
+  height: 20px;
+}
+
+button {
+  border-radius: 15px;
+  height: 20px;
+  background-color: royalblue;
+  margin-top: 10px;
+}
