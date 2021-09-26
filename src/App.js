@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Link, Switch, Route, useParams} from 'react-ro
 import BeerDetails from './components/BeerDetails';
 import RandomBeer from './components/RandomBeer';
 import CreateBeer from './components/CreateBeer';
+import Home from './components/Home';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <div className='homepage'>
     <Router>
       <div>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/beers" className='link-test btn-grad'>Beers</Link>
@@ -26,9 +27,12 @@ function App() {
               <Link to="/new-beer" className='link-test btn-grad'>New Beer</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         <Switch>
+          <Route path='/' exact >
+            <Home />
+          </Route>
           <Route path="/beers" exact>
            <BeerList/>
           </Route>

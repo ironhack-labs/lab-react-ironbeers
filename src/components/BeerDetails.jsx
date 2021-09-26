@@ -16,7 +16,8 @@ export default function BeerDetails(props) {
     })
     
     return (
-        
+        <>
+        <Link to='/' className='link-edit'>Home</Link>
          <div className="beer-details">
             <img src={beer.image_url} alt="" />
             <div className='info-row'>
@@ -30,6 +31,7 @@ export default function BeerDetails(props) {
             <p>{beer.description}</p>
             <h3>{beer.contributed_by}</h3>
         </div>
+        </>
         
     )
 }
