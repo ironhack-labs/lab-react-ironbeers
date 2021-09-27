@@ -19,14 +19,13 @@ function App() {
     <div className="App">
    
       <header className="App-header" style={{backgroundColor: "blue"}}><span>🏠</span> </header>
-    {/* <Switch> */}
       <Homepage />
+      <Switch>
       <Route exact path="/beers" component={ListBeers} />
       <Route exact path="/random-beer" component={RandomBeer}/>
       <Route exact path="/new-beer" component={NewBeer}/>
       <Route exact path='/beers/:id' component={SingleBeer} />
-    {/* </Switch> */}
-      {/* <Homepage /> */}
+    </Switch>
     </div>
   );
 }

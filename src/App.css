@@ -37,6 +37,9 @@
   }
 }
 
+.homepageDiv {
+
+}
 .homeOption > img {
   width: 500px
 }
@@ -46,6 +49,8 @@
   flex-direction: column;
   width: 400px;
   margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .homeLink {
@@ -62,7 +67,7 @@
 }
 
 .App-header {
-  height: 100px;
+  min-height: 80px;
 }
 
 .beerList {
