@@ -27,7 +27,7 @@ export default function Home() {
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </Link>
             <br />
-            <Link to='/beers/new' style={{ textDecoration: 'none', color: 'black' }}>
+            <Link to='/new-beers' style={{ textDecoration: 'none', color: 'black' }}>
                 <img src={newBeers} alt='beers'></img>
                 <h1>New beer</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,

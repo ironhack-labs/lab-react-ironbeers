@@ -17,7 +17,7 @@ function App(props) {
         <Route exact path='/' render={() => <Home />} />
         <Route exact path='/beers' component={Beers} />
         <Route exact path='/beers/:id' component={BeerDetails} />
-        <Route exact path='/beers/new' component={AddBeer} />
+        <Route exact path='/new-beers' render={() => <AddBeer />} />
       </Switch>
     </div>
   );

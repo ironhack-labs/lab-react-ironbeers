@@ -1,11 +1,17 @@
 .App {
   text-align: center;
+  font-family:sans-serif;
+  font-size:large;
+  background-color: aquamarine;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -81,11 +87,47 @@ align-items: center !important;
   max-width: 900px;
   margin-left: 450px;
 padding:100px;
-
 }
 
 .beerDetailsImg{
   max-height: 300px;
   margin-top: 50px;
   padding-bottom: 50px;
+}
+
+.form-control{
+
+  max-width:1700px;
+}
+
+.form-group{
+
+  display:flex;
+  justify-content: center !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+  padding-bottom: 100px;
+  padding-top:50px;
+  margin-left: 100px;
+  width:700px;
+  background-color: rgba(90, 227, 181, 0.461);
+  border-radius: 10px;
+  
+
+}
+
+.formContainer{
+  display: flex;
+  justify-content: space-evenly;  
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width:1700px;
+  margin-left: 80px;
+
+}
+
+h3{
+  color: rgb(43, 109, 87);
+
 }
