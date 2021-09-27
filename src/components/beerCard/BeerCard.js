@@ -7,8 +7,9 @@ import './BeerCard.css';
 
 function BeerCard({ beer }) {
   const cleanText = (text) => {
-    if (text && text.indexOf('<') > 0) return text.slice(0, text.indexOf('<'));
-    else return 'Unknown';
+    if (!text) return 'Unknown';
+    else if (text.indexOf('<') > 0) return text.slice(0, text.indexOf('<'));
+    else return text;
   };
   return (
     <Card className="beer-card col-12 col-md-6 col-lg-4 col-xl-3">
