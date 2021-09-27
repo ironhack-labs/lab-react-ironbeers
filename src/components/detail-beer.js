@@ -35,7 +35,11 @@ useEffect(() => {
                    <h6>{beer.name}</h6>    
                    <img src={beer.image_url}></img>
                    <p>{beer.tagline}</p>
+                   <p>{beer.first_brewed}</p>
+                   <p>{beer.cattenuation_level}</p>
+                   <p>{beer.description}</p>
                    <p>{beer.contributed_by}</p>
+
                 </div>
         </div>
 
