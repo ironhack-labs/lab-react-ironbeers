@@ -11,7 +11,7 @@ function Home() {
     <div className="container pt-2">
       <Card image={beers} name="All Beers" to="/beers" />
       <Card image={randomBeer} name="Random Beer" to="/beers/random" />
-      <Card image={newBeer} name="New Beer" to="/new-beer" />
+      <Card image={newBeer} name="New Beer" to="/beers/new" />
     </div>
   );
 }

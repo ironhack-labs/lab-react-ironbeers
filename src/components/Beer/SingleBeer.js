@@ -10,6 +10,7 @@ function SingleBeer(props) {
         `https://ih-beers-api2.herokuapp.com/beers/${props.match.params.beerId}`
       )
       .then((response) => {
+        console.log(response.data);
         setBeer({ ...response.data });
       })
       .catch((err) => console.error(err));
