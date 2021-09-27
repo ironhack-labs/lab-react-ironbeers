@@ -72,3 +72,20 @@
 
 
 }
+
+.beerDetailsContainer{
+display:flex;
+justify-content: center !important;
+flex-direction: column !important;
+align-items: center !important;
+  max-width: 900px;
+  margin-left: 450px;
+padding:100px;
+
+}
+
+.beerDetailsImg{
+  max-height: 300px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
