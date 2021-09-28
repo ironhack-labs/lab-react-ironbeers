@@ -28,17 +28,20 @@ useEffect(() => {
  else {
     return (
         <div>
-            <Link to="/">Home Page</Link>
-            <h2>Beer</h2>
+            <div className="link-home-page">
+                <Link to="/">Home Page</Link>
+            </div>
+            <h2>{beer.name}</h2>
         
-                <div>         
-                   <h6>{beer.name}</h6>    
+                <div className="beer-card">         
                    <img src={beer.image_url}></img>
-                   <p>{beer.tagline}</p>
-                   <p>{beer.first_brewed}</p>
-                   <p>{beer.cattenuation_level}</p>
-                   <p>{beer.description}</p>
-                   <p>{beer.contributed_by}</p>
+                   <div className="beer-card-info">
+                      <p>{beer.tagline}</p>
+                      <p>{beer.first_brewed}</p>
+                      <p>{beer.cattenuation_level}</p>
+                      <p>{beer.description}</p>
+                      <p>{beer.contributed_by}</p>
+                   </div>
 
                 </div>
         </div>

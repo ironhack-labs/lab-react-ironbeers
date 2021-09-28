@@ -36,3 +36,75 @@
     transform: rotate(360deg);
   }
 }
+
+.homePage {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.HomePage div {
+  margin: 30px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(70, 90, 89);
+}
+
+.HomePage a {
+  text-decoration: none;
+  color: white;
+  font-size: 36px;
+}
+
+.link-home-page {
+  background-color: rgb(64, 64, 83);
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-home-page a{
+  color: white;
+  text-decoration: none;
+}
+
+.beer-card {
+  display: flex;
+  margin: 10px;
+  border: 1px black solid;
+  justify-content: space-between;
+}
+
+.beer-card img{
+  height:300px;
+  margin: 20px;
+}
+
+.beer-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+
+.description {
+  margin: 30px;
+  background-color: rgba(128, 128, 128, 0.514);
+  padding: 20px;
+}
+
+input{
+  margin: 10px 10px 30px 10px;
+}
+
+button{
+  width: 100px;
+  height: 45px;
+}

@@ -8,11 +8,9 @@ function HomePage() {
     
     <div className="HomePage">
         <h2>Home Page</h2>
-        <ul>
-            <li><Link to="/beers">Beers</Link></li>
-            <li><Link to="/random">Random Beer</Link></li>
-            <li><Link to="/new">New Beer</Link></li>
-        </ul>
+            <div><Link to="/beers">All Beers</Link></div>
+            <div><Link to="/random">Random Beer</Link></div>
+            <div><Link to="/new">New Beer</Link></div>
     </div>
     )
 }
