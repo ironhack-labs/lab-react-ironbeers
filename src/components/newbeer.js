@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from './Header';
 
-export const NewBeer = () => {
+const NewBeer = () => {
   return (
     <div>
       <Header />
@@ -9,3 +9,5 @@ export const NewBeer = () => {
     </div>
   );
 };
+
+export default NewBeer;

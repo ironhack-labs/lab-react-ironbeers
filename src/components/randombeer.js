@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from './Header';
 
-export const RandomBeer = () => {
+const RandomBeer = () => {
   return (
     <div>
       <Header />
@@ -9,3 +9,5 @@ export const RandomBeer = () => {
     </div>
   );
 };
+
+export default RandomBeer;
