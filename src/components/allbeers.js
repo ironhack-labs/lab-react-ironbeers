@@ -20,7 +20,7 @@ const AllBeers = () => {
       <div>All Beers</div>
       {allBeers.map((beer) => {
         return (
-          <div key={beer.name}>
+          <div key={beer._id}>
             <div>{beer.name}</div>
             <img src={beer.image} alt={beer.name} />
           </div>
