@@ -29,7 +29,7 @@ function HomeCategories(props) {
       <div className="gradient-left"><img src="./arrow-left.png" alt="Arrow to the left"/></div>
       <div className="home-categories">
 
-        <button type="button" onClick = {handleClick} id="assembly" className="categorie-container">
+        <button type="button" onClick={handleClick} id="assembly" className="categorie-container">
           <img id="assembly" src="./tool-icons/h-montaje.png" alt = "Assembly tools logo"/>
           <h3 id="assembly">
             Assembly

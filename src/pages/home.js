@@ -2,10 +2,22 @@ import React from 'react';
 import HomeCategories from '../components/Carrusel'
 
 function Home() {
+
+const handleClick = (e) => {
+  console.log(hola)
+}
+ 
   return (
     <section className="home">
-    <HomeCategories/>
     <h1>holaaaa</h1>
+    <button type="button" onClick = {handleClick} id="assembly" className="categorie-container">
+          <img id="assembly" src="./tool-icons/h-montaje.png" alt = "Assembly tools logo"/>
+          <h3 id="assembly">
+            Assembly
+            <br />
+            tools
+          </h3>
+        </button>
       <div>
         <a href="/beers">
           <h1></h1>
