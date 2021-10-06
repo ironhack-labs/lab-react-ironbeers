@@ -1,4 +1,5 @@
 import axios from "axios"
+import React from 'react';
 
 function HomeCategories(props) {
   console.log("props: ", props)
