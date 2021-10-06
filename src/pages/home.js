@@ -1,11 +1,14 @@
 import React from 'react';
+import HomeCategories from '../components/Carrusel'
 
 function Home() {
   return (
     <section className="home">
+    <HomeCategories/>
+    <h1>holaaaa</h1>
       <div>
         <a href="/beers">
-          <h1>🍺</h1>
+          <h1></h1>
           <h2>All Beers</h2>
           {/* <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
