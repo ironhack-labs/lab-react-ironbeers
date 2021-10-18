@@ -66,7 +66,6 @@ export default function NewBeer() {
     }
 
 
-
     return (
         <div>
             <Form onSubmit={handleSubmit}>
