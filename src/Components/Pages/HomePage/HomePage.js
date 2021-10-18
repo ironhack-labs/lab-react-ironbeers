@@ -11,31 +11,31 @@ import './HomePage.css'
 export default function HomePage() {
     return (
         <center>
-            <Container>
+            <Container fluid>
                 <Row>
-                    <Link to="/beers">
-                        <img src={allBeers} alt="All beers" />
-                        <h1>All Beers</h1>
+                    <Link exact to="/beers" className='home-link'>
+                        <img src={allBeers} alt="All beers" className='img' />
+                        <h2 className='home-title'>All Beers</h2>
                     </Link>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quae,
+                    <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quae,
                         et amet deserunt nemo fugit tempore facilis rem reiciendis consequuntur sint maxime eaque
                         aliquid saepe dolore commodi perferendis soluta ut cum.</p>
                 </Row>
                 <Row>
-                    <Link to="/new-beer">
-                        <img src={newBeers} alt="New Beer" />
-                        <h1>New Beer</h1>
+                    <Link exact to="/new-beer" className='home-link'>
+                        <img src={newBeers} alt="New Beer" className='img' />
+                        <h2 className='home-title'>New Beer</h2>
                     </Link>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quae,
+                    <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quae,
                         et amet deserunt nemo fugit tempore facilis rem reiciendis consequuntur sint maxime eaque
                         aliquid saepe dolore commodi perferendis soluta ut cum.</p>
                 </Row>
                 <Row>
-                    <Link to="/random-beer">
-                        <img src={randomBeer} alt="Random Beer" />
-                        <h1>Random Beer</h1>
+                    <Link exact to="/random-beer" className='home-link'>
+                        <img src={randomBeer} alt="Random Beer" className='img' />
+                        <h2 className='home-title'>Random Beer</h2>
                     </Link>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quae,
+                    <p className='text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quae,
                         et amet deserunt nemo fugit tempore facilis rem reiciendis consequuntur sint maxime eaque
                         aliquid saepe dolore commodi perferendis soluta ut cum.</p>
                 </Row>

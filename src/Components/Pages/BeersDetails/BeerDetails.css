@@ -1,4 +1,32 @@
 .beer-id-logo{
-    height: 400px;
+    height: 300px;
     width: auto;
+    padding-top: 20px;
+}
+
+.tagline{
+    color: grey;
+}
+
+.attenuation-level{
+    color: grey;
+    text-align: end;
+}
+
+.brewed{
+    text-align: end;
+    font-weight: 700;
+    font-size: small;
+}
+
+.contributed{
+    color: grey;
+    font-weight: 700;
+}
+
+.link-back{
+    width: 70px;
+    height: auto;
+    background-color: grey;
+    border-radius: 5px;
 }

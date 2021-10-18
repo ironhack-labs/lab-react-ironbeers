@@ -9,7 +9,7 @@ class BeersService {
     getBeers = () => this.instance.get("/")
     getOneBeer = (id) => this.instance.get(`/${id}`)
     getRandomBeer = () => this.instance.get("/random")
-    getNewBeer = () => this.instance.post("/new")
+    getNewBeer = (beer) => this.instance.post("/new", beer)
 }
 
 export default BeersService
