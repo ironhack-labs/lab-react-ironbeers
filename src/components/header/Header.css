@@ -1,0 +1,10 @@
+.header {
+  display: block;
+  background-color: #3dc3fc;
+  width: 100vw;
+}
+
+.header img {
+  height: 80px;
+  color: #fff;
+}

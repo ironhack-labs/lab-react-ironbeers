@@ -1,0 +1,19 @@
+.beer-info {
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem;
+}
+
+.beer-description {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: absolute;
+  left: 15rem;
+}
+
+.beer-image {
+  height: 40vh;
+  margin-right: 5vh;
+  place-self: center;
+}
