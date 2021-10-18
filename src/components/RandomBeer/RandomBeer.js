@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import BeersService from '../../services/BeersServices';
 
 
@@ -32,10 +32,10 @@ class RandomBeer extends Component {
                     {
                         this.state.beer ?
                             <Row>
-                                <Col md={4}>
-                                    <img className="image" src={this.state.beer.image_url} alt={this.state.beer.name} />
+                                <Col className='random' md={4} >
+                                    <img className='image-details' src={this.state.beer.image_url} alt={this.state.beer.name} />
                                 </Col>
-                                <Col md={6}>
+                                <Col className='random' md={6}>
                                     <h1>Nombre: {this.state.beer.name}</h1>
                                     <h3>{this.state.beer.tagline}</h3>
                                     <p>{this.state.beer.description}</p>
@@ -45,7 +45,7 @@ class RandomBeer extends Component {
                                 </Col>
                             </Row>
                             :
-                            <p>Loading...</p>
+                            <Spinner className='spinner' animation="border" />
                     }
                 </Container>
             </div>

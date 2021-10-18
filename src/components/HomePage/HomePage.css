@@ -2,6 +2,12 @@
     width: 100%;
 }
 
+.text{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
 .container {
     margin: 0 15px;
 }
