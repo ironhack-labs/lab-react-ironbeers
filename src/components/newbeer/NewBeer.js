@@ -21,9 +21,6 @@ export default class NewBeer extends Component {
         
         // console.log(name, value);
 
-        // this.state["inStock"] = true;
-
-        // [name] in square brackets is to create a dynamic key name in the object
         this.setState({
             [name]: value
         }, () => console.log("state in onChangeHandler: ", this.state))

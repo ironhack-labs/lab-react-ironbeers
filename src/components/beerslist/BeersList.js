@@ -3,6 +3,7 @@ import './BeersList.css'
 import { Link } from 'react-router-dom';
 import BEER_SERVICE from '../../services/BeerService';
 import Header from '../header/Header';
+import SearchBar from '../searchbar/SearchBar';
 
 export default class BeersList extends Component {
     state = {
@@ -25,10 +26,20 @@ export default class BeersList extends Component {
         this.fetchData();
     }
 
+    searchHandler = (query) => {
+        this.setState({ 
+            beers: query,
+        })
+    }
+
     render() {
         return (
             <div>
                 <Header />
+                <SearchBar 
+                onChangeSearchHandler={this.searchHandler} 
+                beers={[...this.state.beers]}
+                />
                 <div>
                     <h1>All Beers</h1>
                     { this.state.beers.map((beer , i) =>{
