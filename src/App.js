@@ -9,6 +9,7 @@ import Home from './components/home/Home';
 import Header from './components/header/Header';
 import BeersList from './components/beerslist/BeersList';
 import BeerDetails from './components/beerdetails/BeerDetails';
+import RandomBeer from './components/randombeer/RandomBeer';
 
 function App() {
   return (
@@ -28,7 +29,12 @@ function App() {
         <Route
           path="/beers/:beerId"
           render = {(props) => <BeerDetails {...props} /> }
-        /> 
+        />
+        <Route
+          path="/beers/random"
+          render = {(props) => <RandomBeer {...props} /> }
+        />
+        
       </Switch>
     </div>
   );

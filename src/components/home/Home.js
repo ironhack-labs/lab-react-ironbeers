@@ -21,7 +21,9 @@ export default function Home(props) {
                 </p>
                 <br/>
                 <img src={randomBeer} alt='icon' />
-                <h1> Random Beer </h1>
+                <Link to='/beers/random'>
+                    <h1> Random Beer </h1>
+                </Link>
                 <p>
                     Sint commodo excepteur velit reprehenderit tempor eiusmod qui sint nostrud esse ut labore. Id fugiat ad ipsum excepteur mollit deserunt. Non tempor dolore deserunt nostrud sit incididunt aute nulla irure tempor officia aliqua Lorem Lorem.
                 </p>
