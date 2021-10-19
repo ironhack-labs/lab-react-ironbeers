@@ -10,6 +10,7 @@ import Header from './components/header/Header';
 import BeersList from './components/beerslist/BeersList';
 import BeerDetails from './components/beerdetails/BeerDetails';
 import RandomBeer from './components/randombeer/RandomBeer';
+import NewBeer from './components/newbeer/NewBeer';
 
 function App() {
   return (
@@ -27,14 +28,20 @@ function App() {
         />
 
         <Route
-          path="/beers/:beerId"
-          render = {(props) => <BeerDetails {...props} /> }
+          exact path="/beers/:beerId"
+          exact render = {(props) => <BeerDetails {...props} /> }
         />
+
         <Route
-          path="/beers/random"
-          render = {(props) => <RandomBeer {...props} /> }
+          exact path="/beers/random"
+          exact render = {(props) => <RandomBeer {...props} /> }
         />
         
+        <Route 
+          exact path="/newbeer"
+          exact render = {(props) => <NewBeer {...props} /> }
+        />
+
       </Switch>
     </div>
   );

@@ -32,8 +32,20 @@ export default class RandomBeer extends Component {
         })
     }
 
+    componentDidMount(){
+        this.getRandomBeer();
+    }
+
     render() {
-        const { image, name, tagline, first_brewed, attenuation_level, description, contributed_by } = this.state;
+        const { 
+            image, 
+            name, 
+            tagline, 
+            first_brewed, 
+            attenuation_level, 
+            description, 
+            contributed_by, 
+        } = this.state;
         return (
             <div>
                 <Header />

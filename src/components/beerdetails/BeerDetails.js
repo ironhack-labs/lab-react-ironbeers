@@ -41,6 +41,10 @@ export default class BeerDetails extends Component {
         // console.log(this.state)
     }
 
+    componentdidUnmount(){
+        this.destroy();
+    }
+
     render() {
         const { image, name, tagline, first_brewed, attenuation_level, description, contributed_by } = this.state;
         return (
