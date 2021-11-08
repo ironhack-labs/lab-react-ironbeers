@@ -34,3 +34,30 @@ h2, p {
   text-decoration:underline white;
   font-weight: 200;
 }
+
+
+/* >>>>>>>> BEERS <<<<<<<< */
+
+.beers-container {
+  width: 50vw;
+    margin: 0 auto;
+}
+
+.beers-single-container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  outline: 1px solid rgb(103, 178, 235);
+}
+
+.beers-single-container div {
+  padding: 1rem;
+  text-align: start;
+  color: black;
+  text-decoration: underline white;
+}
+
+.beers-single-container img{
+  height: 25vh;
+}
