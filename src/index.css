@@ -61,3 +61,27 @@ h2, p {
 .beers-single-container img{
   height: 25vh;
 }
+
+/* >>>>>>> BEER <<<<<<<<< */
+
+.single-beer {
+ width: 50vw;
+  margin:0 auto;
+}
+
+.single-beer div {
+  display: flex;
+  flex-direction: row;
+}
+
+.single-beer div div {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.single-beer h3, h4, h5, p {
+  margin: 0.3rem;
+  text-align: justify;
+}
