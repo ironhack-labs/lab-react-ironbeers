@@ -18,10 +18,10 @@ class App extends Component {
         {/* <Navbar/> */}
          
         <Switch>
-        <Route path='/' component={Homepage} />
-          <Route path='/beers' component={Beers} />
-          <Route path='/newbeer' component={NewBeer} />
-          <Route path='/randombeer' component={RandomBeer} />
+        <Route exact path="/" component={Homepage} />
+          <Route exact path="/beers" component={Beers} />
+          <Route exact path="/new-beer" component={NewBeer} />
+          <Route exact path="/random-beer" component={RandomBeer} />
         </Switch>
       </div>
     )
