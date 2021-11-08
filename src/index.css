@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -16,31 +16,31 @@ code {
 
 .homepage h1 {
   text-shadow: 1px 1px 2px rgb(50, 195, 205);
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .homepage img {
-    width: 50vw;
+  width: 50vw;
 }
 
 .homepage div {
   outline: 1px solid rgb(50, 195, 205);
-    padding: 2rem;
-    margin: 1rem 0;
+  padding: 2rem;
+  margin: 1rem 0;
 }
 
-h2, p {
+h2,
+p {
   color: black;
-  text-decoration:underline white;
+  text-decoration: underline white;
   font-weight: 200;
 }
-
 
 /* >>>>>>>> BEERS <<<<<<<< */
 
 .beers-container {
   width: 50vw;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .beers-single-container {
@@ -58,15 +58,15 @@ h2, p {
   text-decoration: underline white;
 }
 
-.beers-single-container img{
+.beers-single-container img {
   height: 25vh;
 }
 
 /* >>>>>>> BEER <<<<<<<<< */
 
 .single-beer {
- width: 50vw;
-  margin:0 auto;
+  width: 50vw;
+  margin: 0 auto;
 }
 
 .single-beer div {
@@ -81,7 +81,46 @@ h2, p {
   text-align: start;
 }
 
-.single-beer h3, h4, h5, p {
+.single-beer h3,
+h4,
+h5,
+p {
   margin: 0.3rem;
   text-align: justify;
+}
+
+/* >>>>>>> FORM <<<<<<<<< */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form label {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.form input {
+  width: 30vw;
+  margin: 0 1rem;
+  padding: 0.3rem 0.5rem;
+}
+
+form button {
+  font-size: 1.2rem;
+  padding: 0.7rem 4rem;
+  border-radius: 2rem;
+  border: 2px solid rgba(2, 196, 255, 0.749);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgba(2, 196, 255, 0.749);
+  color: white;
+}
+
+form button:hover {
+  color: rgba(2, 196, 255, 0.749);
+  background-color: white;
 }

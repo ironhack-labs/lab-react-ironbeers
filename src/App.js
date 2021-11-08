@@ -4,6 +4,7 @@ import Homepage from './components/HomePage';
 import Beers from './components/Beers';
 import BeerDetails from './components/BeerDetails';
 import RandomBeer from './components/RandomBeer';
+import NewBeer from './components/NewBeer';
 import axios from 'axios';
 import './App.css';
 
@@ -11,6 +12,11 @@ class App extends React.Component {
   state = {
     beers: [],
     randomBeer: '',
+  };
+
+  addBeerHandler = (BeerInfo) => {
+    this.setState({newBeer: BeerInfo})
+    console.log(this.state.newBeer)
   };
 
   componentDidMount() {
@@ -28,11 +34,12 @@ class App extends React.Component {
       .get('https://ih-beers-api2.herokuapp.com/beers/random')
       .then((response) => {
         this.setState({ randomBeer: response.data });
-        console.log(this.state.randomBeer);
+      //  console.log(this.state.randomBeer);
       })
       .catch((e) => {
         console.log('error getting beers from API', e);
       });
+
   }
 
   render() {
@@ -54,7 +61,12 @@ class App extends React.Component {
               return <BeerDetails {...beerToDisplay}></BeerDetails>;
             }}
           ></Route>
-          <Route path='/random-beer'><RandomBeer {...this.state.randomBeer}/></Route>
+          <Route path="/random-beer">
+            <RandomBeer {...this.state.randomBeer} />
+          </Route>
+          <Route path="/new-beer">
+            <NewBeer addBeerHandler={this.addBeerHandler} />
+          </Route>
         </Switch>
       </div>
     );
