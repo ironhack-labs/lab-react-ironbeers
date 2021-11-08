@@ -5,8 +5,32 @@ import NewBeer from './components/NewBeer';
 import Homepage from './components/Homepage';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
+import axios from "axios";
 
 class App extends React.Component {
+
+  constructor(props) {
+    super (props)
+    this.state = {
+      beersArr : []
+    }
+  }
+
+  componentDidMount() {
+    axios
+      .get('https://ih-beers-api2.herokuapp.com/beers')
+      .then((beersFromApi) => {
+        this.setState({
+          beersArr: beersFromApi.data
+        });
+        console.log("number of beers", beersFromApi.data)
+      })
+
+      .catch((error) => {
+        console.log('error getting beers', error);
+      });
+  }
+
   render(){
       return (
 
@@ -19,7 +43,8 @@ class App extends React.Component {
 
                   <Route exact path="/beers">
                     <Header/>
-                    <AllBeers/>
+                    <AllBeers allBeers={this.state.beersArr}/>
+                    
                   </Route>  
 
                   <Route exact path="/new-beer">
