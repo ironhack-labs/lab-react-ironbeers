@@ -1,8 +1,5 @@
 import React from 'react';
 import '../App.css';
-import BeersList from './BeersList'
-import RandomBeer from './RandomBeer'
-import NewBeer from './NewBeer'
 import beersImg from '.././assets/beers.png';
 import randomBeerImg from '.././assets/random-beer.png';
 import newBeersImg from '.././assets/new-beer.png';
@@ -15,12 +12,12 @@ function Home () {
         <div className="container">
             <div className="allbeers">
                 <img src={beersImg} alt="allbeer" />
-                <h1><Link to="/">All Beers</Link></h1>
+                <h1><Link to="/beerslist">All Beers</Link></h1>
                 <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
             </div>
             <div className="randombeers">
                 <img src={randomBeerImg} alt="randomBeerImg" />
-                <h1><Link to="/random">Random Beer</Link></h1>
+                <h1><Link to="/randombeer">Random Beer</Link></h1>
                 <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
             </div>
             <div className="newbeers">
