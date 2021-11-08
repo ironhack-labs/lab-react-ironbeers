@@ -6,9 +6,9 @@ export default function Home() {
         <div>
             <nav>
                 <ul>
-                    <li><NavLink to='/beers' >Beers</NavLink></li>
-                    <li><NavLink to='/random-beer' >Random beer</NavLink></li>
-                    <li><NavLink to='/new-beer' >New beer</NavLink></li>
+                    <li><NavLink exact to='/beers' >Beers</NavLink></li>
+                    <li><NavLink exact to='/random-beer' >Random beer</NavLink></li>
+                    <li><NavLink exact to='/new-beer' >New beer</NavLink></li>
                 </ul>
             </nav>
         </div>
