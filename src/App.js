@@ -10,9 +10,26 @@ class App extends React.Component {
       return (
 
               <div className="App">
+                
                 <Switch>
-                  <Route path="/"><Homepage/></Route>
-                </Switch>                
+                  <Route exact path="/">
+                    <Homepage/>
+                  </Route> 
+
+                  <Route exact path="/beers">
+                    <AllBeers/>
+                  </Route>  
+
+                  <Route exact path="/new-beer">
+                    <NewBeer/>
+                  </Route> 
+
+                   <Route exact path="/random-beer">
+                    <RandomBeer/>
+                  </Route>   
+                            
+                </Switch>
+                         
               </div>
       )
   }
