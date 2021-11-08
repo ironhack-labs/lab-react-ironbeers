@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Homepage {
+  margin: 0 auto;
+  width: 60vw;
+}
+
+.Homepage h1 {
+ font-weight: 150;
+}
+
+.Homepage img {
+  width: 60vw;
+}
+
+h2 {
+  text-decoration-line: underline black;
+}
+h2, p {
+  text-decoration: underline white;
+  color: black;
+  font-weight: 150;
+}
