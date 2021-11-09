@@ -33,3 +33,16 @@ h2, p {
   color: black;
   font-weight: 150;
 }
+
+/* BeersList */
+
+.beer-container {
+  margin: 0 auto;
+  width: 40vw;
+}
+
+.BeerListImage img{
+width: 100px;
+height: auto;
+}
+

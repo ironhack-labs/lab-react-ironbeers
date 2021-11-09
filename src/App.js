@@ -45,6 +45,11 @@ class App extends Component {
           <Route exact path="/beers">
           <Beers beers ={this.state.beers}/>
           </Route>
+          {/* <Route exact path="/beers" render={(props)=>{
+            return (
+              <h1>Beers beers={this.state.beers}</h1>
+            ) */}
+          }}/>
           <Route exact path="/new-beer" component={NewBeer} />
           <Route exact path="/random-beer" component={RandomBeer} />
         </Switch>

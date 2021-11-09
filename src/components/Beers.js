@@ -14,8 +14,8 @@ class Beers extends React.Component {
         {this.props.beers.map((beer)=>{
             return(
                 <div>
-                    <div>
-                        <img src={beer.imgage_url} alt="" />
+                    <div className="BeerListImage">
+                        <img src={beer.image_url} alt="" />
                     </div>
                     <div>
                     <h4>{beer.name}</h4>
@@ -23,6 +23,7 @@ class Beers extends React.Component {
                     <p>{beer.contributed_by}</p>
                   </div>
                   <Link to={`/beers/${beer.id}`} >More details</Link>
+                  <hr/>
                 </div>
             )
         })}
