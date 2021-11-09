@@ -7,7 +7,7 @@ function BeerDetails(props) {
 
     return (
       <div>
-        <Header/> 
+        
         <img src={props.image_url}/>
         <h2>{props.name}</h2>
         <h4>{props.tagLine}</h4>

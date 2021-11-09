@@ -33,6 +33,7 @@ class App extends React.Component {
   }
 
 
+
   render(){
       return (
 
@@ -55,12 +56,12 @@ class App extends React.Component {
                      })
                      
                      return (
-                      
-                     <BeerDetails {...beerToDisplay} />
-                     
+                       <>
+                      <Header/> 
+                      <BeerDetails {...beerToDisplay} />
+                     </>
                      )}}/>
                       
-                       
                     )
                       
                   <Route exact path="/new-beer">
