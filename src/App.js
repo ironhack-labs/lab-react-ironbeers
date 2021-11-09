@@ -43,7 +43,7 @@ class App extends Component {
         <Switch>
         <Route exact path="/" component={Homepage} />
           <Route exact path="/beers">
-          <Beers {this.state.beers}/>
+          <Beers beers ={this.state.beers}/>
           </Route>
           <Route exact path="/new-beer" component={NewBeer} />
           <Route exact path="/random-beer" component={RandomBeer} />

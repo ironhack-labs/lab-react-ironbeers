@@ -11,7 +11,7 @@ class Beers extends React.Component {
         <div className='beer-container'>
         <Header/>
         <h2>All Beers</h2>
-        {this.beers.map((beer)=>{
+        {this.props.beers.map((beer)=>{
             return(
                 <div>
                     <div>
