@@ -1,11 +1,12 @@
 import React from 'react'
-import axios from 'axios'
+import Header from './Header'
 
 export default function BeerDetails(props) {
 
         console.log(props)
         return (
             <div>
+                <Header/>
                 <img src={props.image_url}/>
                 <h1>{props.name}</h1>
                 <h2>{props.tagline}</h2>

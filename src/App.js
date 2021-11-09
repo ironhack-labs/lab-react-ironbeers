@@ -14,7 +14,8 @@ export default class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      listOfBeers: []
+      listOfBeers: [],
+      randomBeer: ''
     }
   }
 
@@ -26,7 +27,7 @@ export default class App extends React.Component {
             <Home/>
           </Route>
           <Route exact path='/random-beer'>
-            <RandomBeer/>
+            <RandomBeer {...this.state.randomBeer}/>
           </Route>
           <Route exact path='/new-beer'>
             <NewBeer/>
@@ -59,5 +60,13 @@ export default class App extends React.Component {
         console.log('error getting characters from API', e);
       });
 
-    }
+    axios
+      .get('https://ih-beers-api2.herokuapp.com/beers/random')
+      .then(response => {
+        console.log('xxxxxxxxx')
+        console.log(response.data)
+        this.setState({randomBeer: response.data})
+      })
+
+  }
   }
