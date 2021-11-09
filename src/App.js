@@ -6,6 +6,7 @@ import Homepage from './components/Homepage';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import axios from "axios";
+import BeerDetails from './components/BeerDetails';
 
 class App extends React.Component {
 
@@ -31,6 +32,28 @@ class App extends React.Component {
       });
   }
 
+  beerDetails() {
+    
+    const beerToDisplay = this.state.beersArr.find((beer) => {
+      console.log(beer)
+      // if(beer._id === props.match.params.id) {
+      //   return true;
+      // }else {
+      // return false
+      // }
+
+    })
+
+    // console.log("beerTo",beerToDisplay)
+
+    // return (
+    //   <div>
+    //     <h2>Name: {beerToDisplay.name}</h2>
+    //   </div>
+    // )
+    
+  }
+
   render(){
       return (
 
@@ -44,9 +67,23 @@ class App extends React.Component {
                   <Route exact path="/beers">
                     <Header/>
                     <AllBeers allBeers={this.state.beersArr}/>
-                    
-                  </Route>  
+                  </Route> 
 
+
+                   <Route path="/beers/:beerId" render= {(props)=>{
+                     const beerToDisplay = this.state.beersArr.find((beer) => {
+                       return beer._id === props.match.params.beerId
+                     })
+                     
+                     return (
+                      
+                     <BeerDetails {...beerToDisplay} />
+                     
+                     )}}/>
+                      
+                       
+                    )
+                      
                   <Route exact path="/new-beer">
                     <Header/>
                     <NewBeer/>
