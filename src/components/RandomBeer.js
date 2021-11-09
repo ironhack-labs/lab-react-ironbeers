@@ -1,25 +1,55 @@
 import React from 'react';
 import Nav from './Nav';
+import axios from 'axios';
 
-function RandomBeer(props) {
-  console.log(props);
-  return (
-    <div className="single-beer">
-      <Nav />
-      <div>
+
+class RandomBeer extends React.Component {
+  state = {
+    randomBeer: {},
+  };
+
+  getRandomBeerFromAxios() {
+    axios
+      .get('https://ih-beers-api2.herokuapp.com/beers/random')
+      .then((response) => {
+        this.setState({ randomBeer: response.data });
+      })
+      .catch((e) => {
+        console.log('error getting beers from API', e);
+      });
+  }
+
+  componentDidMount() {
+    this.getRandomBeerFromAxios()
+  }
+  render() {
+    return (
+      <div className="single-beer">
+        <Nav />
         <div>
-          <img src={props.image_url} alt="beer" style={{ height: '400px' }} />
+          <div>
+            <img
+              src={this.state.randomBeer.image_url}
+              alt="beer"
+              style={{ height: '400px' }}
+            />
+          </div>
+          <div>
+            <h2>{this.state.randomBeer.name}</h2>
+            <h3>{this.state.randomBeer.tagline}</h3>
+            <h4>First brewed: {this.state.randomBeer.first_brewed}</h4>
+            <h5>
+              Attenuation level: {this.state.randomBeer.attenuation_level}
+            </h5>
+            <p>{this.state.randomBeer.description}</p>
+            <p>By: {this.state.randomBeer.contributed_by}</p>
+          </div>
         </div>
-        <div>
-          <h2>{props.name}</h2>
-          <h3>{props.tagline}</h3>
-          <h4>First brewed: {props.first_brewed}</h4>
-          <h5>Attenuation level: {props.attenuation_level}</h5>
-          <p>{props.description}</p>
-          <p>By: {props.contributed_by}</p>
-        </div>
+        <button onClick={this.getRandomBeerFromAxios}>
+          Get new random beer
+        </button>
       </div>
-    </div>
-  );
+    );
+  }
 }
 export default RandomBeer;

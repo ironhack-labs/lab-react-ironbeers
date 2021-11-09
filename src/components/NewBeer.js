@@ -21,7 +21,7 @@ class NewBeer extends React.Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
 
-    const BeerInfo = {
+    const beerInfo = {
       name: this.state.name,
       tagline: this.state.tagline,
       description: this.state.description,
@@ -32,7 +32,7 @@ class NewBeer extends React.Component {
     };
 
     axios
-      .post('https://ih-beers-api2.herokuapp.com/beers/new', BeerInfo)
+      .post('https://ih-beers-api2.herokuapp.com/beers/new', beerInfo)
       .then((response) => {
         console.log('Added new beer successfully');
       })
@@ -69,7 +69,12 @@ class NewBeer extends React.Component {
             </label>
             <label>
               Tagline:
-              <input type="text" name="tagline" onChange={this.handleChange} />
+              <input
+                type="text"
+                name="tagline"
+                value={this.state.tagline}
+                onChange={this.handleChange}
+              />
             </label>
             <label>
               Description:

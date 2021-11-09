@@ -11,7 +11,7 @@ import './App.css';
 class App extends React.Component {
   state = {
     beers: [],
-    randomBeer: '',
+    
   };
 
   addBeerHandler = (BeerInfo) => {
@@ -30,17 +30,8 @@ class App extends React.Component {
         console.log('error getting beers from API', e);
       });
 
-    axios
-      .get('https://ih-beers-api2.herokuapp.com/beers/random')
-      .then((response) => {
-        this.setState({ randomBeer: response.data });
-      //  console.log(this.state.randomBeer);
-      })
-      .catch((e) => {
-        console.log('error getting beers from API', e);
-      });
-
   }
+  
 
   render() {
     return (
@@ -62,7 +53,7 @@ class App extends React.Component {
             }}
           ></Route>
           <Route path="/random-beer">
-            <RandomBeer {...this.state.randomBeer} />
+            <RandomBeer/>
           </Route>
           <Route path="/new-beer">
             <NewBeer addBeerHandler={this.addBeerHandler} />
