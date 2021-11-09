@@ -7,6 +7,7 @@ import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
 import Beers from './components/Beers';
 import axios from 'axios'
+import BeerDetails from './components/BeerDetails';
 
 
 export default class App extends React.Component {
@@ -33,6 +34,12 @@ export default class App extends React.Component {
           <Route exact path='/beers'>
             <Beers beers={this.state.listOfBeers}/>
           </Route>
+          <Route path='/beers/:id' render={(props) => {
+            const beerToDisplay = this.state.listOfBeers.find((beer) => {
+              return beer._id === props.match.params.id
+            })
+            return <BeerDetails {...beerToDisplay}/>
+          }}/>
         </Switch>
       </div>
     );
