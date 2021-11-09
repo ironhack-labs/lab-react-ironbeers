@@ -32,27 +32,6 @@ class App extends React.Component {
       });
   }
 
-  beerDetails() {
-    
-    const beerToDisplay = this.state.beersArr.find((beer) => {
-      console.log(beer)
-      // if(beer._id === props.match.params.id) {
-      //   return true;
-      // }else {
-      // return false
-      // }
-
-    })
-
-    // console.log("beerTo",beerToDisplay)
-
-    // return (
-    //   <div>
-    //     <h2>Name: {beerToDisplay.name}</h2>
-    //   </div>
-    // )
-    
-  }
 
   render(){
       return (
