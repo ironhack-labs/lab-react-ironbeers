@@ -6,7 +6,7 @@ import navImage from '../assets/nav.png';
   render() {
     return (
       <NavLink to='/' exact>
-        <img src={navImage}></img>
+        <img src={navImage} alt="header"></img>
       </NavLink>
     )
   }
