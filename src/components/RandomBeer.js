@@ -2,13 +2,15 @@ import React from 'react';
 import Nav from './Nav';
 import axios from 'axios';
 
-
 class RandomBeer extends React.Component {
-  state = {
-    randomBeer: {},
-  };
+  constructor() {
+    super();
+    this.state = {
+      randomBeer: {},
+    };
+  }
 
-  getRandomBeerFromAxios() {
+  getRandomBeer() {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers/random')
       .then((response) => {
@@ -20,7 +22,7 @@ class RandomBeer extends React.Component {
   }
 
   componentDidMount() {
-    this.getRandomBeerFromAxios()
+    this.getRandomBeer()
   }
   render() {
     return (
@@ -45,7 +47,7 @@ class RandomBeer extends React.Component {
             <p>By: {this.state.randomBeer.contributed_by}</p>
           </div>
         </div>
-        <button onClick={this.getRandomBeerFromAxios}>
+        <button onClick={() => this.getRandomBeer()}>
           Get new random beer
         </button>
       </div>
