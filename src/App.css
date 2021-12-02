@@ -129,6 +129,9 @@ a {
   font-weight: 300;
   letter-spacing: 0ch;
 }
+.newBeer {
+  gap: 1rem;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

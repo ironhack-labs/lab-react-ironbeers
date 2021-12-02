@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from '../../axios/axiosinstance'
 
-function AllBeers() {
+function AllBeers({ onfilter }) {
   const [beers, setBeers] = useState([])
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -25,13 +25,18 @@ function AllBeers() {
 
   }, [])
   //Handlres :
+  const handleChange = (e) => {
+    const value = e.currentTarget.value;
+    //TODO ADD some Delay to prevent calling API on each Keydown but a secuenace
 
+  }
 
   ///
   return (
     <div>
       {error}
       {loading && <h1>Loading  .....</h1>}
+      <input type="text" onChange={handleChange} />
       <ul className="beersList">
         {beers.map(beer => {
           return (
