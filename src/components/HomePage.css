@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.home{
+    margin-top: 101px;
+}
+
+.home div{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    margin: 10px;
+}
+.home p{
+    width: 700px;
+}
+
+.home h2{
+font-size: 3em;
+}
+

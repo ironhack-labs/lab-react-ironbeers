@@ -1,0 +1,14 @@
+.headerHome{
+    background-color: rgb(59, 175, 252);
+    text-align: center;
+    height: 100px;
+    width:100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.headerHome a{
+    text-decoration: none;
+    color: white;
+}
