@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+.beerCard img{
+  width: 50px;
+  height: 100%;
+
+ 
+}
+
+.beerCard{
+  box-shadow: 0 0 15px 0 black;
+  width: 300px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+   flex-wrap: wrap;
+ 
+}
+
+.beerCardDiv img{
+  width: 100px;
+  height: 100%;
+}
+
+.beerCardDiv{
+  width: 50%;
+  margin: 0 auto;
+}
