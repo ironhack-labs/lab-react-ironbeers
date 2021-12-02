@@ -1,0 +1,12 @@
+.beerCard {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: black;
+}
+.beerCard img {
+  height: 150px;
+  margin-left: 30px;
+  margin-right: 30px;
+}

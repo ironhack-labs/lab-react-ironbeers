@@ -1,24 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import Beers from './Components/Beers/Beers';
+import BeersDetails from './Components/BeersDetails/BeersDetails';
+import CreateBeers from './Components/CreateBeers/CreateBeers';
+import HomePage from './Components/HomePage/HomePage';
+import NavBar from './Components/NavBar/NavBar';
+import RandomBeer from './Components/RandomBeer/RandomBeer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        <Route path="/" exact render={(props) => <HomePage {...props} />} />
+        <Route
+          path="/beers"
+          exact
+          render={(props) => (
+            <div>
+              <NavBar {...props} /> <Beers {...props} />
+            </div>
+          )}
+        />
+        <Route
+          path="/beers/random"
+          render={(props) => (
+            <div>
+              <NavBar {...props} /> <RandomBeer {...props} />
+            </div>
+          )}
+        />
+        <Route
+          path="/beers/:id"
+          render={(props) => (
+            <div>
+              <NavBar {...props} /> <BeersDetails {...props} />
+            </div>
+          )}
+        />
+        <Route
+          path="/new-beer"
+          render={(props) => (
+            <div>
+              <NavBar {...props} /> <CreateBeers {...props} />
+            </div>
+          )}
+        />
+      </Switch>
     </div>
   );
 }
