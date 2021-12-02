@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import Navbar from './Navigation';
 import BeersService from "../services/beers.services";
-// import { Container } from 'react-bootstrap'
-// import CoasterService from "../../../services/coaster.service";
-// import CoasterList from "./CoasterList";
+//import {Link} from "react-router-dom";
+
 
 class Beers extends Component {
   constructor() {
@@ -33,9 +33,20 @@ class Beers extends Component {
 
     return (
      <>
-        <h1>Coaster List</h1>
-
-        {this.state.beers.map( (beer, i) => <div key={i}>{beer.name}</div>)}
+        <Navbar />
+        <h1>Beers List</h1>
+        {this.state.beers.map( (beer, i) => 
+            <div key={i} className="cont-beer">
+                <div className="cont-img-beer">
+                  <img src={beer.image_url} alt={beer.name} />
+                </div>
+                <div className="cont-beer-txt">
+                  <p className="beerName">{beer.name}</p>
+                  <p classNam="beerClaim" >{beer.tagline}</p>
+                  <span>Created by: {beer.contributed_by}</span>
+                </div>
+            </div>
+        )}
 
     </>
     )

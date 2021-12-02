@@ -2,12 +2,14 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
+// import Navbar from './components/Navigation';
 import Beers from './components/beers';
 import Home from './components/home';
 
 function App() {
   return (
     <>
+         {/* <Navbar /> */}
         <Switch>
           <Route path="/" exact render={() => <Home />} />
           <Route path="/beers" render={() => <Beers />} />
