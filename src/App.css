@@ -1,18 +1,139 @@
 .App {
   text-align: center;
 }
-
+a {
+  text-decoration: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.flex {
+  display: flex;
+  flex-flow: column;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.conainter {
+  width: 100%;
+  gap: 1rem;
+}
+.principalSection {
+  width: 50%;
+}
+.principalSection img {
+  width: 100%;
+}
+.hero {
+  width: 100%;
+  background-color: #3dc4fc;
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+}
+.hero img {
+  height: 80%;
+}
+.beersList {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.beersList li {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  height: 10rem;
+}
+.beersList li::after,
+.beersList li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  transition: all 0.8s ease-in-out;
+}
+.beersList li::after {
+  border-bottom: solid 3px rgb(26, 48, 179);
+}
+.beersList li::before {
+  border-bottom: solid 2px rgb(170, 19, 175);
+  right: 0;
+  width: 0%;
+  transition-delay: 0.1s;
+}
+.beersList li:hover::after {
+  width: 0%;
+}
+.beersList li:hover::before {
+  width: 100%;
+}
+.beersList a,
+.beersList a:hover,
+.beersList a:active .beersList a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.infobeerlist {
+  display: flex;
+  width: 60%;
+  padding-left: 2rem;
+  flex-flow: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+.infobeerlist * {
+  width: 100%;
+}
+.infobeerlist h4 {
+  color: #989898;
+  margin-top: 0.6rem;
+}
+.infobeerlist p {
+  font-size: 0.7rem;
+}
+.beersList img {
+  height: 80%;
+}
+.singleBeer img {
+  height: 500px;
+}
+.singleBeer {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+.singleBeerInfo {
+  width: 60%;
+}
+.headerInfo h1 {
+  width: 100%;
+}
+.headerInfo h4 {
+  width: 60%;
+}
+.headerInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.bodyInfo {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0ch;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
