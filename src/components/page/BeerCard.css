@@ -1,0 +1,18 @@
+.beer-card {
+    margin-bottom: 40px;
+}
+
+.beer-card h3 {
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.btn-block {
+    width: 100%;
+}
