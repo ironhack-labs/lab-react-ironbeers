@@ -1,5 +1,7 @@
 import './ListItem.css';
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 function ListItem(props){
 	return(
@@ -8,7 +10,9 @@ function ListItem(props){
 				<img src={props.img} alt={props.name}/>
 			</div>
 			<div>
-				<h3>{props.name}</h3>
+				<Link to={`beers/${props.id}`}>
+					<h3>{props.name}</h3>
+				</Link>
 				<p>{props.tagline}</p>
 				<p>Created by: {props.name}</p>
 			</div>

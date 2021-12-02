@@ -13,7 +13,7 @@ function ListBeers(props) {
 
 	useEffect(() => {
 		loadBeers();
-	});
+	}, );
 
 	function loadBeers() {
 		myBeerService.getAllBeers().then(response => {
@@ -26,7 +26,7 @@ function ListBeers(props) {
 
 	return (
 			<div className="list-beers">
-			{beersState?.map(beer => <ListItem key={beer._id} name={beer.name} img={beer.image_url} tagline={beer.tagline}/>)}
+			{beersState?.map(beer => <ListItem key={beer._id} name={beer.name} img={beer.image_url} tagline={beer.tagline} id={beer._id}/>)}
 			</div>
 		);
 }
