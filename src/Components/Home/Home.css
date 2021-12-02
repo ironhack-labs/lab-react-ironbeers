@@ -1,0 +1,97 @@
+.button {
+    width: 300px;
+    height: 60px;
+    border-radius: 12px;
+    background: rgb(255,1,222);
+    background: linear-gradient(232deg, rgba(255, 0, 221, 0.712) 0%, rgba(255, 0, 60, 0.719) 86%);
+    text-decoration: none;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.521);
+    font-weight: 900;
+    box-shadow: rgba(158, 0, 137, 0.336) 0px 0px 20px 0px;
+    transition-duration: 2s;
+}
+
+
+.button:hover {
+    background: rgb(255,1,222);
+    background: linear-gradient(232deg, rgb(255, 35, 226) 0%, rgb(255, 0, 98) 86%);
+    box-shadow: rgb(255, 0, 179) 0px 0px 20px 3px;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body {
+    background-color: #1b1b1c;
+    display: flex;
+    justify-content: center;
+}
+
+
+@keyframes move {
+    from {margin: 0px -500px 30px 0px;}
+    to {margin: 160px 700px 160px 0px ;}
+}
+
+
+@keyframes move2 {
+    from {margin-left: -200px;}
+    to {margin-left: 500px;}
+}
+
+
+@keyframes move3 {
+    from {margin-top: 0px;}
+    to {margin-top: 500px;}
+}
+
+
+.animation-lateral {
+    animation: move2 0.3s infinite 0s alternate;
+}
+
+
+.animation-lateral-right {
+    animation: shadow1 2s infinite 0s alternate, move3 1s infinite 0s alternate;
+}
+
+
+.animation-all-btn {
+    animation: move 0.6s infinite 0s alternate;
+}
+
+
+@keyframes colorcycle {
+    from {background: linear-gradient(232deg, rgb(35, 185, 255) 0%, rgb(35, 68, 255) 86%);}
+    to {background: linear-gradient(232deg, rgb(35, 255, 189) 0%, rgb(119, 0, 255) 86%);}
+}
+
+
+.color-cycle {
+    animation: colorcycle 0.6s infinite 0s alternate;
+}
+
+
+@keyframes shadow1 {
+    0% {box-shadow: rgb(255, 0, 255) 0px 0px 200px 2px;}
+    20% {box-shadow: rgb(255, 0, 119) 0px 0px 200px 2px;}
+    40% {box-shadow: rgb(47, 0, 255) 0px 0px 200px 2px;}
+    60% {box-shadow: rgb(111, 0, 255) 0px 0px 200px 2px;}
+    100% {box-shadow: rgb(255, 0, 140) 0px 0px 200px 2px;}
+}
+
+
+.shadow-cycle {
+    animation: shadow1 3s infinite 0s alternate;
+}
