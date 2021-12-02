@@ -41,11 +41,13 @@ class BeerDetails extends React.Component {
         return(
             <>
                 <HomeButton />
-                <div>
-                    <img src={this.state.image_url} alt={this.state.name} />
-                    <h1>{this.state.name}</h1>
-                    <p>{this.state.tagline}</p>
-                    <p>{this.state.description}</p>
+                <div className="main-new-beer-container">
+                    <div className="form-container">
+                        <img className="beer-list-img" src={this.state.image_url} alt={this.state.name} />
+                        <h1 className="form-label">{this.state.name}</h1>
+                        <p>{this.state.tagline}</p>
+                        <p>{this.state.description}</p>
+                    </div>
                 </div>
             </>
         )

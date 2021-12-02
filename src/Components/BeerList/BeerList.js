@@ -34,18 +34,19 @@ class BeerList extends React.Component {
         return(
             <>
             <HomeButton />
-            {this.state.beers.map(elm =>
-                <div>
-                    <img src={elm.image_url} alt={elm.name} />
-                    <h1>{elm.name}</h1>
-                    <p>{elm.tagline}</p>
-                    <p>{elm.contributed_by}</p>
-                    <div>
-                        <Link to={`/beer/${elm._id}`}>Check this beer</Link>
+            <div>
+                {this.state.beers.map(elm =>
+                    <div className="form-container">
+                        <img className="beer-list-img" src={elm.image_url} alt={elm.name} />
+                        <h1 className="form-label">{elm.name}</h1>
+                        <p>{elm.tagline}</p>
+                        <p>{elm.contributed_by}</p>
+                        <div>
+                            <Link to={`/beer/${elm._id}`}>Check this beer</Link>
+                        </div>
                     </div>
-                </div>
-            )}
-            
+                )}
+            </div>
 
             </>
         )

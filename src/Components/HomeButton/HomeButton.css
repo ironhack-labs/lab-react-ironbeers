@@ -1,0 +1,25 @@
+.home-btn {
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    animation: home-btn 0.2s infinite 0s alternate;
+    text-decoration-skip: 0px;
+}
+
+
+@keyframes home-btn {
+    0% {background-color: white}
+    10% {background-color: blueviolet;}
+    20% {background-color: rgb(226, 43, 43);}
+    30% {background-color: rgb(217, 255, 0);}
+    40% {background-color: rgb(0, 255, 115);}
+    50% {background-color: rgb(4, 0, 255);}
+}
+
+
+h1 {
+    text-decoration: none;
+}

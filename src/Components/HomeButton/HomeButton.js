@@ -17,7 +17,7 @@ class HomeButton extends React.Component {
         return(
             <>
                 <Link to={'/'}>
-                    <h1>Go home</h1>
+                    <h1 className="home-btn">Go home</h1>
                 </Link>
             </>
         )

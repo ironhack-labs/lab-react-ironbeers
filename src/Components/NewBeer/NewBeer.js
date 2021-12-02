@@ -46,37 +46,46 @@ class NewBeer extends React.Component {
     render() {
         return(
             <>  
-                <div>
+                <div className="main-new-beer-container">
                     <HomeButton />
 
-                    <form onSubmit={this.handleSubmit}>
-                        <label>
-                            Name: <input onChange={this.handleChange} value={this.state.name} type='text' name='name' />
+                    <form className="form-container" onSubmit={this.handleSubmit}>
+                    
+                        <label className="form-label">
+                            Name: 
                         </label>
+                            
+                            <input className="form-input" onChange={this.handleChange} value={this.state.name} type='text' name='name' />
 
-                        <label>
-                            Tagline: <input onChange={this.handleChange} value={this.state.tagline} type='text' name='tagline' />
+                        <label className="form-label">
+                            Tagline: 
                         </label>
+                        <input className="form-input" onChange={this.handleChange} value={this.state.tagline} type='text' name='tagline' />
 
-                        <label>
-                            Description: <input onChange={this.handleChange} value={this.state.description} type='text' name='description' />
+                        <label className="form-label">
+                            Description: 
                         </label>
+                        <input className="form-input" onChange={this.handleChange} value={this.state.description} type='text' name='description' />
 
-                        <label>
-                            First Brewed: <input onChange={this.handleChange} value={this.state.first_brewed} type='text' name='first_brewed' />
+                        <label className="form-label">
+                            First Brewed: 
                         </label>
+                        <input className="form-input" onChange={this.handleChange} value={this.state.first_brewed} type='text' name='first_brewed' />
 
-                        <label>
-                            Brewers Tips: <input onChange={this.handleChange} value={this.state.brewers_tips} type='text' name='brewers_tips' />
+                        <label className="form-label">
+                            Brewers Tips: 
                         </label>
+                        <input className="form-input" onChange={this.handleChange} value={this.state.brewers_tips} type='text' name='brewers_tips' />
 
-                        <label>
-                            Attenuation Level: <input onChange={this.handleChange} value={this.state.attenuation_level} type='number' name='attenuation_level' />
+                        <label className="form-label">
+                            Attenuation Level: 
                         </label>
+                        <input className="form-input" onChange={this.handleChange} value={this.state.attenuation_level} type='number' name='attenuation_level' />
 
-                        <label>
-                            Contributed By: <input onChange={this.handleChange} value={this.state.contributed_by} type='text' name='contributed_by' />
+                        <label className="form-label">
+                            Contributed By: 
                         </label>
+                        <input className="form-input" onChange={this.handleChange} value={this.state.contributed_by} type='text' name='contributed_by' />
 
                         {/* <label>
                             Image: <input onChange={this.handleChange} value={this.state.image_url} type='text' name='image_url' />
