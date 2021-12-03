@@ -1,0 +1,22 @@
+.CardBeer {
+  transition: transform 0.2s;
+  border-radius: 15px;
+  border: 1px solid black;
+  margin: 5% 10%;
+  padding: 1%;
+  width: 80%;
+}
+.CardBeer:hover {
+  transform: scale(0.9);
+  box-shadow: 10px 10px rgb(194, 194, 194);
+}
+
+.CardBeer img {
+  display: flex;
+  margin: 0 auto;
+  height: 200px;
+}
+.CardBeer h2 {
+  font-size: 32px;
+  font-weight: 300;
+}

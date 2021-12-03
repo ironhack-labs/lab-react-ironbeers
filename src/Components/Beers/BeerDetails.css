@@ -1,0 +1,13 @@
+.BeerInfo {
+  display: flex;
+  border-bottom: black 1px solid;
+  width: 80%;
+  margin: 0 10%;
+}
+.BeerInfo img {
+  height: 400px;
+  margin: 2% 10%;
+}
+.title {
+  margin: 2% 10%;
+}

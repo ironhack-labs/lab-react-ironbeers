@@ -1,0 +1,26 @@
+.HomeCard {
+  margin: 0 15%;
+}
+.HomeCard a {
+  text-decoration: none;
+  color: black;
+}
+.HomeCard h2 {
+  font-size: 36px;
+  font-weight: 400;
+}
+.Card {
+  transition: transform 0.2s;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 1% 5%;
+  margin-top: 50px;
+}
+.Card:hover {
+  transform: scale(0.9);
+}
+.Card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 10px;
+}
