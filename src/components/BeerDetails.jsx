@@ -36,15 +36,7 @@ const styles = {
 const BeerDetails = () => {
   const { id } = useParams();
 
-  const [beer, setBeer] = useState({
-    name: '',
-    image_url: '',
-    tagline: '',
-    contributed_by: '',
-    attenuation_level: 0,
-    first_brewed: '',
-    description: '',
-  });
+  const [beer, setBeer] = useState({});
 
   useEffect(() => {
     axios
@@ -68,7 +60,7 @@ const BeerDetails = () => {
             <h5 style={styles.tag}>{beer.tagline}</h5>
             <p className="card-text">{beer.description}</p>
           </div>
-          <div class="card-footer">
+          <div className="card-footer">
             <p>{beer.contributed_by}</p>
           </div>
         </div>
