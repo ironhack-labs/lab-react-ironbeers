@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.card {
+  display: flex;
+  border: 1px solid black;
+  margin: 5%;
+  padding: 3%;
+}
+.card-img {
+  display: flex;
+  margin: 3%;
+  padding: 2%;
+}
+
+.card-txt {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+h2 {
+  color: darkgrey;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+  padding: 3%;
+}
+.details-img {
+  margin: 3%;
+  padding: 5%;
+}
+
+.details-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 5%;
+  margin: 2%;
+}
+
+.first-line,
+.second-line {
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.second-line > b {
+  margin: 1.5rem;
+  text-align: right;
+}
+
+.first-line > p {
+  margin: 1.5rem;
+  text-align: right;
+  font-size: 1.5rem;
+  color: darkgrey;
+}
+
+.contributed {
+  color: darkgrey;
+  font-weight: bold;
+}
+
+.add-beer {
+  justify-content: space-between;
+  text-align: justify;
+  text-justify: auto;
+  margin: 10%;
+}
