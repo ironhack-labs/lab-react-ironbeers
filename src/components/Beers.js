@@ -1,5 +1,5 @@
 import React from 'react';
-import beers from '../assets/beers.png';
+
 import Header from './Header';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -17,15 +17,14 @@ function BeersPage() {
   return (
     <div>
       <Header />
-      <h2>Beers component</h2>
-      <img src={beers} alt="beers" />
-      <p>
-        Aenean elit urna, auctor eu dignissim in, varius eget velit. Etiam et
-        malesuada ex. Nulla ipsum orci, ullamcorper et aliquet nec, commodo ac
-        eros. Morbi posuere nec est id rutrum. Suspendisse imperdiet turpis
-        posuere massa rhoncus, eget aliquam diam cursus. Ut non nulla in felis
-        accumsan feugiat et id ante. In a nisl placerat quam dictum iaculis.
-      </p>
+      {beersList.map((beer) => (
+        <div key={beer._id} className="card">
+          <img src={beer.image_url} alt="beer" />
+          <h3>{beer.name}</h3>
+          <h5>{beer.tagline}</h5>
+          <p>Created by: {beer.contributed_by}</p>
+        </div>
+      ))}
     </div>
   );
 }
