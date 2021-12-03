@@ -5,6 +5,7 @@ import './App.css';
 
 // Modules
 import AllBeers from './components/AllBeers/AllBeers';
+import Beer from './components/Beer/Beer';
 import RandomBeer from './components/RandomBeer/RandomBeer';
 import NewBeer from './components/NewBeer/NewBeer';
 import Home from './components/Home/Home';
@@ -31,6 +32,7 @@ function App() {
       <Switch>
         <Route exact path="/" render={() => <Home />} />
         <Route exact path="/beers" render={() => <AllBeers beers={beers}/>} />
+        <Route exact path="/beers/:id" render={() => <Beer beers={beers}/>} />
         <Route exact path="/random-beer" render={() => <RandomBeer />} />
         <Route exact path="/new-beer" render={() => <NewBeer />} />
       </Switch>
