@@ -16,7 +16,7 @@ const Header = () => {
               height="24"
               className="d-inline-block align-text-top"
             /> */}
-            Home Page
+            HOME PAGE
           </Link>
         </div>
       </nav>
