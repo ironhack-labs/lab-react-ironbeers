@@ -21,9 +21,9 @@ function App() {
       {/* <div className="container"> */}
       <Switch>
         <Route exact path="/" render={() => <Home />} />
-        <Route exact path="/AllBeers" render={() => <AllBeers />} />
-        <Route exact path="/RandomBeer" render={() => <RandomBeer />} />
-        <Route exact path="/NewBeer" render={() => <NewBeer />} />
+        <Route exact path="/beers" render={() => <AllBeers />} />
+        <Route exact path="/random-beer" render={() => <RandomBeer />} />
+        <Route exact path="/new-beer" render={() => <NewBeer />} />
       </Switch>
       {/* </div> */}
     </div>

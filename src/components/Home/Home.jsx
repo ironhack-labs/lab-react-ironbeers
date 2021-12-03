@@ -10,17 +10,17 @@ const Home = () => {
     <div className="col" style={{ maxHeight: '90vh'}}>
       <div className="list-group">
         <img src={img1} alt="All beers" />
-        <Link className="list-group-item list-group-item-action" to="/AllBeers">
+        <Link className="list-group-item list-group-item-action" to="/beers">
             <p className="font-weight-bold">All Beers</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </Link>
         <img src={img2} alt="Random Beer" />
-        <Link className="list-group-item list-group-item-action" to="/RandomBeer">
+        <Link className="list-group-item list-group-item-action" to="/random-beer">
             <p className="font-weight-bold">Random Beer</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </Link>
         <img src={img3} alt="New Beer" />
-        <Link className="list-group-item list-group-item-action" to="/NewBeer">
+        <Link className="list-group-item list-group-item-action" to="/new-beer">
             <p className="font-weight-bold">New Beer</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </Link>
