@@ -1,32 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
+import axios from "axios";
 import './App.css';
+
+// Modules
 import AllBeers from './components/AllBeers/AllBeers';
 import RandomBeer from './components/RandomBeer/RandomBeer';
 import NewBeer from './components/NewBeer/NewBeer';
 import Home from './components/Home/Home';
 
 function App() {
-  // const [beers, setBeers] = useState([]);
-  // const [loaded, setLoaded] = useState(false);
+  const [beers, setBeers] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
-  // useEffect(() => {
-
-  //   setBeers(beersFromApi);
-  //   setLoaded(true);
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      const beersFromApi = await axios(
+        "https://ih-beers-api2.herokuapp.com/beers"
+      );
+      console.log(beersFromApi.data)
+      setBeers(beersFromApi.data);
+      setLoaded(true);
+    };
+    fetchData()
+  }, []);
 
   return (
-    <div className="App">
+    loaded && (<div className="App">
       {/* <div className="container"> */}
       <Switch>
         <Route exact path="/" render={() => <Home />} />
-        <Route exact path="/beers" render={() => <AllBeers />} />
+        <Route exact path="/beers" render={() => <AllBeers beers={beers}/>} />
         <Route exact path="/random-beer" render={() => <RandomBeer />} />
         <Route exact path="/new-beer" render={() => <NewBeer />} />
       </Switch>
       {/* </div> */}
-    </div>
+    </div>)
   );
 }
 
