@@ -22,10 +22,10 @@ export default class NewBeer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
+    debugger
     this.service.createBeer(this.state)
       .then(response => {
-        this.props.closeModal()
+          console.log(response)
         this.props.refreshBeer()
       })
       .catch(err => console.log(err))
@@ -42,9 +42,15 @@ export default class NewBeer extends Component {
 
   render() {
     return (
-        <div className="Cerve">
+        <div className="New-Cerve">
       <Navbar/>
       <div>
+
+      <Form.Group className="mb-3" controlId="imageUrl">
+          <Form.Label>Url de la imagen</Form.Label>
+          <Form.Control onChange={this.handleInputChange} value={this.state.image_url} name="image_url" type="text" />
+        </Form.Group>
+
       <Form onSubmit={this.handleSubmit}>
         <Form.Group controlId="title">
           <Form.Label>Name</Form.Label>
@@ -74,11 +80,6 @@ export default class NewBeer extends Component {
         <Form.Group controlId="contributed_by">
           <Form.Label>contributed_by</Form.Label>
           <Form.Control onChange={this.handleInputChange} value={this.state.contributed_by} name="contributed_by" type="text" />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="imageUrl">
-          <Form.Label>Url de la imagen</Form.Label>
-          <Form.Control onChange={this.handleInputChange} value={this.state.image_url} name="image_url" type="text" />
         </Form.Group>
 
         <Button variant="primary" type="submit">
