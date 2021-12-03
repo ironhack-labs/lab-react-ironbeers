@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar-brand img{
+  width: 50px;
+}
+
+.col-md-4 img{
+  width: 100px;
+}
+
+.card img{
+  width: 100px;
+}
+
