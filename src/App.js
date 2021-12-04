@@ -1,11 +1,12 @@
 import React from 'react';
+
 import Home from './components/Home/Home'
 import Beers from './components/Beers/Beers'
 import SingleBeer from './components/SingleBeer/SingleBeer'
 import RandomBeer from './components/RandomBeer/RandomBeer'
 import NewBeer from './components/NewBeer/NewBeer'
 
-import axios from 'axios';
+import axios from 'axios'
 
 import { useState, useEffect } from 'react'
 
@@ -15,9 +16,9 @@ import './App.css';
 
 function App() {
 
-  const [beers, setBeers] = useState();
+  const [beers, setBeers] = useState()
 
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
     const callApi = async () => {
@@ -25,8 +26,8 @@ function App() {
         'https://ih-beers-api2.herokuapp.com/beers'
       );
 
-      setBeers(beersFromApi.data);
-      setLoaded(true);
+      setBeers(beersFromApi.data)
+      setLoaded(true)
     };
     callApi();
   }, []);

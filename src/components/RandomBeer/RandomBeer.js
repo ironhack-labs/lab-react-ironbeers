@@ -25,12 +25,12 @@ const RandomBeer = () => {
           <>
             <Header />
             <div>
-              <img src={randomBeer.image_url} alt={randomBeer.name} />
+              <img className="m-3" src={randomBeer.image_url} alt={randomBeer.name} width="100" />
               <h1>{randomBeer.name}</h1>
               <p>{randomBeer.tagline}</p>
               <p>{randomBeer.first_brewed}</p>
               <p>{randomBeer.attenuation_level}</p>
-              <p>{randomBeer.description}</p>
+              <p className="m-2" >{randomBeer.description}</p>
               <p>{randomBeer.contributed_by}</p>
             </div>
           </>

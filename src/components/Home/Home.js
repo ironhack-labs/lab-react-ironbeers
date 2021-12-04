@@ -13,20 +13,20 @@ import randomBeer from '../../assets/random-beer.png'
 const Home = () => {
 
     return(
-            <div className="col">
-             <div className="list-group">
+            <div className="home col">
+             <div className="list-group m-1 ">
                 <img src={beers} alt="beers" />
-                <Link to="/beers">
+                <Link className="text-decoration-none m-2" to="/beers">
                     <h2>All beers</h2>
                 </Link>
                     <LoremIpsum p={1} />
                 <img src={randomBeer} alt="random beer" />
-                <Link to="/random-beer">
+                <Link className="text-decoration-none m-2" to="/random-beer">
                     <h2>Random Beer</h2>
                 </Link>
                     <LoremIpsum p={1} />
                 <img src={newBeer} alt="new beer" />
-                <Link to="/new-beer">
+                <Link className="text-decoration-none m-2" to="/new-beer">
                     <h2>New Beer</h2>
                 </Link>
                     <LoremIpsum p={1} /> 
