@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import { useParams } from 'react-router-dom'
 import { Input } from "antd";
 
 const apiURL = 'https://ih-beers-api2.herokuapp.com/beers';
