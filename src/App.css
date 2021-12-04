@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .App-logo {
@@ -36,3 +44,40 @@
     transform: rotate(360deg);
   }
 }
+
+.AddBeersPage {
+  display: grid;
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.AddBeersPage label {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.AddBeersPage button[type='submit'] {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+.input {
+  height: 50px;
+}
+.form {
+  width: 50%;
+}
+.search-bar {
+  width: 50%;
+}
+.search-input{
+  border: 1px solid black;
+}
+
