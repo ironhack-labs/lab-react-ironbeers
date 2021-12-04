@@ -39,9 +39,10 @@
 
 .container{
   border: 2px solid black;
-  display: flex;
+  
   flex-direction: row;
-  width: 30%;
+  width: 40%;
   padding: 10px;
   margin: auto;
 }
+
