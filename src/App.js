@@ -49,6 +49,7 @@ function App() {
     }
     let response = await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
     setbeers([response.data, ...beers])
+    setbeersCopy([response.data, ...beers])
 
   }
 
