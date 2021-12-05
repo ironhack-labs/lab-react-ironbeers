@@ -40,7 +40,7 @@ const HomePage = () => {
       <div className="text-area">
         <Link to="/new-beer">
           <img src={`${newBeer}`} alt="new beer" />
-          <h1>All Beers</h1>
+          <h1>New Beer</h1>
         </Link>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

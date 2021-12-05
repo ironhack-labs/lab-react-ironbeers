@@ -39,3 +39,7 @@ a {
   margin: 2rem auto;
   width: 40vw;
 }
+
+form input {
+  width: 30%;
+}

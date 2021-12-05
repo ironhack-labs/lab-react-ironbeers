@@ -32,7 +32,7 @@ const styles = {
 };
 
 const RandomBeer = () => {
-  const [randomBeer, setRandomBeer] = useState(null);
+  const [randomBeer, setRandomBeer] = useState({});
 
   useEffect(() => {
     axios
