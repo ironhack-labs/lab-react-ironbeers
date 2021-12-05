@@ -1,0 +1,12 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+.home-card {
+    border: 1px solid black;
+    max-width: 700px;
+    text-align: left;
+}
+.home-card p, h2 {
+    padding: 0px 20px;
+}

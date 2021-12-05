@@ -1,0 +1,26 @@
+.beer-details-card {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 40px;
+}
+.beer-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.beer-subheading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+.tagline {
+    color: grey;
+    font-weight: bold;
+}
+.contributor, .level {
+    color: grey;
+}

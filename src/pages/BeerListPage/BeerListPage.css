@@ -1,0 +1,20 @@
+p, h3 {
+    text-align: left;
+}
+.beer-list-card {
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid black;
+    padding: 20px; 
+}
+.beer-card-image-col {
+    width: 30%;
+}
+.beer-list-card img {
+    width: 50px;
+}
+.beer-list-card-info-col h3, p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
