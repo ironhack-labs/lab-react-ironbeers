@@ -94,7 +94,7 @@ body {
 .beer-row .beer-info {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding-right: 16px;
 }
 .beer-row .beer-name {
@@ -151,7 +151,37 @@ body {
   margin-top: 20px;
 }
 
+/* Add beer form */
 
+.add-beer-form {
+   padding: 30px;
+}
+
+.add-beer-form .fields{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+.add-beer-form input {
+  margin-top: 10px;
+  padding: 10px;
+  border: solid 1px #ccc;
+  border-radius: 10px; 
+}
+
+.add-beer-form button {
+  background-color: #61dafb;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 30px; 
+  border: none;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 
 @media all and (min-width: 600px) {
@@ -165,7 +195,8 @@ body {
     height: 200px;
   }
 
-  .single-beer-page {
+  .single-beer-page, 
+  .add-beer-form {
     width: 400px;
     margin: auto;
   }
