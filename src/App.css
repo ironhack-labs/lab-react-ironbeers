@@ -75,7 +75,21 @@ body {
 
 /* Beers List */
 
-.beers-list {
+.filter-beers {
+  margin: 20px;
+  display: block;
+  width: 100%;
+}
+.filter-beers input {
+  margin-left: 20px;
+  padding: 10px;
+  border: solid 1px #ccc;
+  border-radius: 10px; 
+  width: 60%;
+}
+.beers-list a {
+  text-decoration: none;
+  color: black;
 }
 .beer-row {
   border-bottom: 1px solid #ccc;
@@ -199,6 +213,12 @@ body {
   .add-beer-form {
     width: 400px;
     margin: auto;
+  }
+
+  .filter-beers {
+    margin: 20px auto;
+    display: block;
+    width: 60%;
   }
 
 }

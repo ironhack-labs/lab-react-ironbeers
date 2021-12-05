@@ -1,5 +1,8 @@
 import React from 'react'
+
 import Header from '../components/Header'
+import BeerDetailsInList from '../components/BeerDetailsInList'
+
 import { useState, useEffect } from 'react'
 import spinner from "../logo.svg"
 import axios from "axios"
@@ -12,6 +15,9 @@ const BeersList = () => {
     const [beers, setBeers] = useState([])
     const [isLoading, setIsLoading] = useState(true)
 
+    const [query, setQuery] = useState("")
+    const [isFilteringLoading, setIsFilteringLoading] = useState(true)
+
     useEffect(() => {
         axios
           .get(apiURL)
@@ -22,12 +28,31 @@ const BeersList = () => {
           .catch(console.log)
       }, []);    
 
+    useEffect( () => {
+        axios
+            .get(`${apiURL}/search?q=${query}`)
+            .then( (response) => {
+                setBeers(response.data)
+                setIsFilteringLoading(false)
+            })
+            .catch()
+    }, [query])  
+
+    const handleSearchInput = (e) => {
+        let userQuery = e.target.value
+        setQuery(userQuery)
+    }
+
     return (
         <div>
             <Header />
 
+            <div className="filter-beers">
+                Filter beers: <input type="text" value={query || ""} name="querySearch" onChange={ (e) => handleSearchInput(e)} />
+            </div>
+
             <div className="beers-list">
-                { isLoading 
+                { (isLoading || isFilteringLoading)
                         && 
                     <p className="loading">
                         Loading beers list...
@@ -36,18 +61,9 @@ const BeersList = () => {
                 }
                 { beers.map( (beer) => {
                     return(
-                        <div className="beer-row">
-                            <div className="beer-image">
-                                <Link to={`/beers/${beer._id}`} key={beer._id}>
-                                    <img src={beer.image_url} alt={`pic beer ${beer.name}`}/>
-                                </Link>
-                            </div>
-                            <div className="beer-info">
-                                <span className="beer-name">{beer.name}</span>
-                                <span className="beer-tagline">{beer.tagline}</span>
-                                <span className="beer-createdby">{beer.contributed_by}</span>
-                            </div>        
-                        </div>
+                        <Link to={`/beers/${beer._id}`} key={beer._id}>
+                            <BeerDetailsInList beer={beer} />
+                        </Link> 
                     )
                 })}
             </div>
