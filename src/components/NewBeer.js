@@ -1,19 +1,79 @@
-import React from 'react';
-import newBeer from '../assets/new-beer.png';
-import Header from "./Header/Header";
+import { Input } from 'antd';
+import axios from 'axios';
+import React, { useState } from 'react';
+import Header from './Header/Header';
 const NewBeers = () => {
+  const [beerName, setBeerName] = useState('');
+  const [beerTag, setBeerTag] = useState('');
+  const [beerDes, setBeerDes] = useState('');
+  const [beerBrew, setBeerBrew] = useState('');
+  const [beerTips, setBeerTips] = useState('');
+  const [beerAten, setBeerAten] = useState(0);
+  const [beerContri, setBeerContri] = useState('');
+
+  const addNewBeer = () => {
+    const beer ={
+      name: beerName,
+      tagline: beerTag,
+      description:beerDes,
+      first_brewed:beerBrew,
+      brewers_tips:beerTips,
+      attenuation_level:beerAten,
+      contributed_by:beerContri
+    };
+    createApiBeer(beer);
+  };
+
+  function createApiBeer(beer) {
+    axios
+      .post(`https://ih-beers-api2.herokuapp.com/beers/new`, beer)
+      .then((response) => {
+        console.log('Info cfreate beer', response.data);
+      });
+  }
+
   return (
     <div>
-     <Header/>
-      <h2>NewBeers component</h2>
-      <img src={newBeer} alt=" new beer" />
-      <p>
-        Aenean elit urna, auctor eu dignissim in, varius eget velit. Etiam et
-        malesuada ex. Nulla ipsum orci, ullamcorper et aliquet nec, commodo ac
-        eros. Morbi posuere nec est id rutrum. Suspendisse imperdiet turpis
-        posuere massa rhoncus, eget aliquam diam cursus. Ut non nulla in felis
-        accumsan feugiat et id ante. In a nisl placerat quam dictum iaculis.
-      </p>
+      <Header />
+      <div>
+        <p>Name: </p>
+        <Input
+          type="text"
+          onChange={(event) => setBeerName(event.target.value)}
+        />
+        <p>Tagline: </p>
+        <Input
+          type="text"
+          onChange={(event) => setBeerTag(event.target.value)}
+        />
+        <p>Description: </p>
+        <Input
+          type="text"
+          onChange={(event) => setBeerDes(event.target.value)}
+        />
+        <p>First Brewed : </p>
+        <Input
+          type="text"
+          onChange={(event) => setBeerBrew(event.target.value)}
+        />
+        <p>Brewers Tips : </p>
+        <Input
+          type="text"
+          onChange={(event) => setBeerTips(event.target.value)}
+        />
+        <p>Attenuation Level : </p>
+        <Input
+          type="number"
+          onChange={(event) => setBeerAten(event.target.value)}
+        />
+        <p>Contributed By : </p>
+        <Input
+          type="text"
+          onChange={(event) => setBeerContri(event.target.value)}
+        />
+
+        <button onClick={() => addNewBeer()}>Create</button>
+      </div>
     </div>
   );
 };
