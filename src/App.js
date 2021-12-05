@@ -3,7 +3,8 @@ import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 
 import Home from './components/Home';
-import BeersPage from './components/Beers';
+import Beers from './components/Beers';
+import SingleBeer from "./components/SingleBeer/SingleBeer";
 import RandomBeer from './components/RandomBeer';
 import NewBeer from './components/NewBeer';
 import Error from './components/Error';
@@ -11,9 +12,7 @@ import Error from './components/Error';
 function App() {
   return (
     <div className="App">
-      <Link to="/">Home</Link>
-      <br />
-      <Link to="/beers">Beers</Link>
+      <Link to="/beers/">Beers</Link>
       <br />
       <Link to="/random-beer">Random Beer</Link>
       <br />
@@ -21,7 +20,8 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/beers" element={ <BeersPage />} />
+        <Route exact path="/beers/" element={ <Beers />} />
+        <Route exact path="/beers/:id" element={ <SingleBeer />} />
         <Route exact path="/random-beer" element={ <RandomBeer />} />
         <Route exact path="/new-beer" element={ <NewBeer />} />
         <Route element={ <Error />} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import newBeer from '../assets/new-beer.png';
-import Header from "./Header";
+import Header from "./Header/Header";
 const NewBeers = () => {
   return (
     <div>

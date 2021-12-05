@@ -1,6 +1,6 @@
 import React from 'react';
 import randomBeer from '../assets/random-beer.png';
-import Header from "./Header";
+import Header from "./Header/Header";
 const RandomBeers = () => {
   return (
     <div>
