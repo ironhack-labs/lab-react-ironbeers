@@ -9,6 +9,49 @@ a {
   color: black;
   text-decoration: none;
 }
+.container {
+  width: 30em;
+  display: inline;
+  align-items: left;
+}
+
+h2 {
+  display: flex;
+  margin-left: 5px;
+  font-size: 30px;
+  font-weight: 400;
+}
+h3 {
+  display: flex;
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: 200;
+  color: grey;
+}
+
+.card {
+  display: flex;
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 40em;
+  text-align: center;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 4px;
+  justify-content: center;
+}
+.card-beer {
+  flex-direction: grid;
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 42em;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  padding: 20px;
+  border-radius: 4px;
+  justify-content: center;
+}
 
 .App-logo {
   height: 40vmin;
@@ -40,15 +83,17 @@ a {
   box-shadow: 0px 2px 3px grey;
   width: 500px;
   text-align: center;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-top: 25px;
+  padding: 30px;
   border-radius: 4px;
 }
 
 .AddBeersPage label {
-  width: 300px;
+  font-weight: 600;
+  font-size: 16px;
+  width: 30em;
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .AddBeersPage button[type='submit'] {
@@ -72,5 +117,18 @@ a {
 
 .homepage {
   width: 45em;
+  justify-content: center;
+}
+.imagesHome {
+  margin-top: 15px;
+}
+
+.card-info {
+  display: inline-block;
+  justify-content: center;
+}
+
+.card-description {
+  display: inline-block;
   justify-content: center;
 }

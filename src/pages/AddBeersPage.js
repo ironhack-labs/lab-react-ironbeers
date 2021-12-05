@@ -56,7 +56,7 @@ function AddBeersPage() {
     if (errorMessage) return <p>{errorMessage}</p>;
 
     return (
-        <div className='AddBeersPage col-auto'>
+        <div className='AddBeersPage'>
             <Header />
             <h2> Add beers page </h2>
             <form onSubmit={handleSubmit}>

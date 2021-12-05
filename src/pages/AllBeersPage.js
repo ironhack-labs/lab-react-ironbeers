@@ -30,11 +30,15 @@ function AllBeersPage() {
                         to={'/beers/' + oneBeer._id}
                         key={oneBeer._id}
                     >
-                        <div className=" card">
-                            <img src={oneBeer.image_url} alt='beers' style={{ width: '50px' }} />
-                            <h3>{oneBeer.name}</h3>
-                            <h3>{oneBeer.tagline}</h3>
-                            <h3>Created by: {oneBeer.contributed_by}</h3>
+                        <div className="card">
+                            <div className="cardimage">
+                                <img src={oneBeer.image_url} alt='beers' style={{ width: '50px' }} />
+                            </div>
+                            <div className="cardinfo">
+                                <h2>{oneBeer.name}</h2>
+                                <h3>{oneBeer.tagline}</h3>
+                                <h4>Created by: {oneBeer.contributed_by}</h4>
+                            </div>
                         </div >
                     </Link >
                 )

@@ -28,15 +28,21 @@ function BeerDetailsPage() {
         <div className="col-auto">
             <Header />
             <h2> Beer Details Page </h2>
-
-            <img src={beerDetail.image_url} alt="beer" style={{ width: '50px' }} />
-            <h1>{beerDetail.name}</h1>
-            <h2>{beerDetail.tagline}</h2>
-            <h3>{beerDetail.first_brewed}</h3>
-            <h3>{beerDetail.attenuation_level}</h3>
-            <h3>{beerDetail.description}</h3>
-            <h3>{beerDetail.contributed_by}</h3>
-
+            <div className="card-beer">
+                <div className="card-image-one">
+                    <img src={beerDetail.image_url} alt="beer" style={{ width: '50px' }} />
+                </div>
+                <div className="card-info">
+                    <h2>{beerDetail.name}</h2>
+                    <h2>{beerDetail.tagline}</h2>
+                    <h3>{beerDetail.first_brewed}</h3>
+                    <h3>{beerDetail.attenuation_level}</h3>
+                </div>
+                <div className="card-description">
+                    <h3>{beerDetail.description}</h3>
+                    <h3>{beerDetail.contributed_by}</h3>
+                </div>
+            </div>
         </div>
     );
 
