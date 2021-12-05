@@ -1,21 +1,28 @@
-import React from 'react';
-import randomBeer from '../assets/random-beer.png';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import BeerView from './BeerView/BeerView';
 import Header from "./Header/Header";
+
+
 const RandomBeers = () => {
+
+  const [randomBeer, setRandomBeer] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+      .then((response) => {
+        console.log('Info single-beer', response.data);
+        setRandomBeer(response.data);
+      });
+  }, []);
   return (
     <div>
      <Header/>
-      <h2>RandomBeers component</h2>
-      <img src={randomBeer} alt=" random beer" />
-      <p>
-        Aenean elit urna, auctor eu dignissim in, varius eget velit. Etiam et
-        malesuada ex. Nulla ipsum orci, ullamcorper et aliquet nec, commodo ac
-        eros. Morbi posuere nec est id rutrum. Suspendisse imperdiet turpis
-        posuere massa rhoncus, eget aliquam diam cursus. Ut non nulla in felis
-        accumsan feugiat et id ante. In a nisl placerat quam dictum iaculis.
-      </p>
+     <BeerView beer={randomBeer}/>
     </div>
   );
 };
 
 export default RandomBeers;
+

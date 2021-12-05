@@ -1,4 +1,4 @@
-.SingleBeer .box{
+.BeerView .box{
     display: flex;
     justify-content: space-between;
     align-items: center;
