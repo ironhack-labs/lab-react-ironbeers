@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
     <Switch>
-      <Route exact path="/" component={Homepage} />
+      <Route exact path="/random-beer" component={RandomBeer} />
+      <Route exact path="/new-beer" component={NewBeer} />
       <Route exact path="/beers/:id" component={SingleBeer} />
       <Route exact path="/beers" component={BeersList} />
-      <Route exact path="/new-beer" component={NewBeer} />
-      <Route exact path="/random-beer" component={RandomBeer} />
+      <Route exact path="/" component={Homepage} />
     </Switch>
   </div>
   );

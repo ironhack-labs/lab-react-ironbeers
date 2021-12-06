@@ -1,6 +1,6 @@
 import React from 'react'
-import spinner from "../logo.svg"
 import Header from '../components/Header'
+import Spinner from './Spinner'
 
 
 const BeerDetails = (props) => {
@@ -11,13 +11,7 @@ const BeerDetails = (props) => {
         <div>
             <Header />
 
-            { isLoading 
-                    && 
-                <p className="loading">
-                    Beer is loading...
-                    <img src={spinner} className="spinner" alt="spinner"/>
-                </p> 
-            }
+            { isLoading && <Spinner /> }
 
             { isError ? 
                 <p>Hey there's an error</p>

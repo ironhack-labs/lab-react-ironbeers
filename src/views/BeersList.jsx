@@ -1,12 +1,10 @@
 import React from 'react'
-
 import Header from '../components/Header'
 import BeerDetailsInList from '../components/BeerDetailsInList'
-
 import { useState, useEffect } from 'react'
-import spinner from "../logo.svg"
 import axios from "axios"
 import { Link } from 'react-router-dom'
+import Spinner from '../components/Spinner'
 
 const apiURL = "https://ih-beers-api2.herokuapp.com/beers"
 
@@ -52,13 +50,7 @@ const BeersList = () => {
             </div>
 
             <div className="beers-list">
-                { (isLoading || isFilteringLoading)
-                        && 
-                    <p className="loading">
-                        Loading beers list...
-                        <img src={spinner} className="spinner" alt="spinner"/>
-                    </p> 
-                }
+                { (isLoading || isFilteringLoading) && <Spinner /> }
                 { beers.map( (beer) => {
                     return(
                         <Link to={`/beers/${beer._id}`} key={beer._id}>

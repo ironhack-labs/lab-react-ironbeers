@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import { useParams } from 'react-router'
-import { useState, useEffect } from 'react'
 import BeerDetails from '../components/BeerDetails'
 
 const apiURL = "https://ih-beers-api2.herokuapp.com/beers"
 
-const SingleBeer = (props) => {
+const SingleBeer = () => {
 
     const params = useParams()
     
