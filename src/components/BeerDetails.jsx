@@ -47,6 +47,8 @@ const BeerDetails = () => {
       })
       .catch((err) => console.log(err));
   });
+
+  if (beer === null) return <h1>Loading ...</h1>;
   return (
     <>
       <Navbar />

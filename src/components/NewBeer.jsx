@@ -42,10 +42,14 @@ const NewBeer = () => {
         description: beer.description,
       };
 
-      setBeer((beer) => (beer = newBeer));
+      setBeer((beer) => {
+        return {
+          ...beer,
+          newBeer,
+        };
+      });
 
-      const res = await axios.post('/new', beer);
-      setBeer(res);
+      await axios.post('/new', beer);
     } catch (err) {
       console.log(err);
     }

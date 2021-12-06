@@ -35,6 +35,7 @@ const Beers = () => {
       })
       .catch((err) => console.log(err));
   }, []);
+
   return (
     <>
       <Navbar />
