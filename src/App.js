@@ -1,8 +1,7 @@
 import "./App.css";
 import React from 'react'
 import Navbar from "./components/Navbar";
-import ApartmentsPage from "./pages/ApartmentsPage";
-import AddApartmentPage from "./pages/AddApartmentPage";
+import AllBeers from "./pages/AllBeers";
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,8 +14,11 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/"  element={<ApartmentsPage />} />
-        <Route path="/apartments/new" element={<AddApartmentPage />} />
+        <Route path="/"  element={<AllBeers />} />
+        <Route
+                path="/beers/:id"
+                element={<AllBeers />}
+              />
       </Routes>
     </div>
   );

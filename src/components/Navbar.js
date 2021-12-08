@@ -7,9 +7,7 @@ function Navbar() {
         <button>Home</button>
       </NavLink>
 
-      <NavLink exact to="/apartments/new">
-        <button>Add Apartment</button>
-      </NavLink>
+     
     </nav>
   );
 }

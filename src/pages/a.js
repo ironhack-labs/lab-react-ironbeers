@@ -1,6 +1,3 @@
-import { useState } from "react";
-import axios from 'axios';
-import { useHistory } from "react-router-dom";
 import React , { Component}  from 'react'
 
 function AddApartmentPage() {
