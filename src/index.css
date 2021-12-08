@@ -1,13 +1,97 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+}
+
+nav {
+  background: #cec8db;
+  color: white;
+  padding: 10px;
+  box-shadow: 0px 1px 2px gray;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button,
+select {
+  padding: 5px 10px;
+  min-width: 50px;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.list {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  width: 400px;
+  padding: 10px;
+  box-shadow: 0px 2px 3px grey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #cfb2d6;
+  border-radius: 4px;
+}
+
+.logo,
+img {
+  width: 200px;
+}
+
+.AddApartmentPage {
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.AddApartmentPage {
+  background: #afd7fb;
+}
+
+.AddApartmentPage label {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.AddApartmentPage input {
+  padding: 10px;
+  display: inline-block;
+  margin: 2px 0 10px;
+}
+
+.AddApartmentPage input[type="number"] {
+  padding: 10px;
+  display: inline-block;
+  margin: 2px 0 10px;
+  text-align: center;
+}
+
+.AddApartmentPage button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 3px;
 }
