@@ -52,7 +52,7 @@ const SingleBeer = () => {
     return (
         <Fragment>
             <div  key={beerDetail._id}>
-            <img src={beerDetail.image_url} alt="country"/>
+            <img src={beerDetail.image_url} alt="beer"/>
             <div>
               <h2>{beerDetail.name}</h2>
               <h2>Level: {beerDetail.attenuation_level}</h2>
