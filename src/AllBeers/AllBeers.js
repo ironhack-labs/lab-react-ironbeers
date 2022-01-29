@@ -32,42 +32,48 @@ const AllBeers = () => {
           </progress>
         </div>
       )}
-      {beers.map(({ image_url, name, tagline, contributed_by, _id }) => {
-        return (
-          <Link to={`/beers/${_id}`} key={_id}>
-            <div className="card is-flex is-align-items-center">
-              <div className="card-image">
-                <figure
-                  className="image p-3"
-                  style={{
-                    height: 120,
-                    width: 80,
-                    display: 'flex',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <img
-                    src={image_url}
-                    style={{ height: 120, width: 'auto' }}
-                    alt="Placeholder"
-                  />
-                </figure>
-              </div>
-              <div className="card-content">
-                <div className="media">
-                  <div className="media-content">
-                    <p className="title is-4">{name}</p>
+      <div className="container p-3">
+        <div className="columns is-multiline">
+          {beers.map(({ image_url, name, tagline, contributed_by, _id }) => {
+            return (
+              <div className="column is-one-third">
+                <Link to={`/beers/${_id}`} key={_id}>
+                  <div className="card is-flex is-align-items-center">
+                    <div className="card-image">
+                      <figure
+                        className="image p-3"
+                        style={{
+                          height: 120,
+                          width: 80,
+                          display: 'flex',
+                          justifyContent: 'center',
+                        }}
+                      >
+                        <img
+                          src={image_url}
+                          style={{ height: 120, width: 'auto' }}
+                          alt="Placeholder"
+                        />
+                      </figure>
+                    </div>
+                    <div className="card-content">
+                      <div className="media">
+                        <div className="media-content">
+                          <p className="title is-4">{name}</p>
+                        </div>
+                      </div>
+                      <div className="content">
+                        <p>{tagline}</p>
+                        <p>Created by {contributed_by}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="content">
-                  <p>{tagline}</p>
-                  <p>Created by {contributed_by}</p>
-                </div>
+                </Link>
               </div>
-            </div>
-          </Link>
-        );
-      })}
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
