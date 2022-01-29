@@ -50,3 +50,8 @@ a {
 .beers-wrapper p {
   color: rgb(32, 31, 31);
 }
+
+.beer-details-wrapper a {
+  text-decoration: none;
+  color: rgb(32, 31, 31);
+}
