@@ -1,10 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import imgAllBeers from "../src/assets/beers.png";
+import imgRandomBeer from "../src/assets/random-beer.png";
+import imgNewBeer from "../src/assets/new-beer.png";
+import React from "react";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-    <h1>Hi</h1>
+      <h1>Hi</h1>
+      <div className="homeScreenLink">
+        <Link to="/beers">
+          <img src={imgAllBeers} alt="all beers"></img>
+          <h2>All the Beers</h2>
+        </Link>
+      </div>
+      <div className="homeScreenLink">
+        <Link to="/random-beer">
+          <img src={imgRandomBeer} alt="all beers" />
+          <h2>A random Beer</h2>
+        </Link>
+      </div>
+      <div className="homeScreenLink">
+        <Link to="/new-beer">
+          <img src={imgNewBeer} alt="all beers" />
+          <h2>Add a bew Beer</h2>
+        </Link>
+      </div>
     </div>
   );
 }

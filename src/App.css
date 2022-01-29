@@ -1,3 +1,11 @@
+.homeScreenLink {
+  margin: 0;
+  text-align: left;
+}
+.homeScreenLink h2{
+  margin: 0 20px 20px;
+}
+
 .App {
   text-align: center;
 }
