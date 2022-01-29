@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+}
+
+.beerList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listItem {
+  width: 30%;
+  height: 500px;
+}
+
+.beerImage {
+  max-width: 100%;
+  height: 300px;
+}
