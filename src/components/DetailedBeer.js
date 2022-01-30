@@ -1,6 +1,7 @@
 import React from 'react';
 import {useParams} from 'react-router-dom'
 import axios from 'axios';
+import Nav from './Nav';
 
 const api = axios.create({baseURL: "https://ih-beers-api2.herokuapp.com/beers/"})
 
@@ -18,6 +19,8 @@ function DetailedBeer() {
     }, [])
 
   return <div>
+          <Nav />
+
       Details of Beer
       <h2>{beer.name}</h2>
       <img width="150px" src={beer.image_url} alt={beer.name}/>

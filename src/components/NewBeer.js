@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import Nav from "./Nav";
 const api = axios.create({
   baseURL: "https://ih-beers-api2.herokuapp.com/beers/",
 });
@@ -21,6 +21,7 @@ function NewBeer() {
   
   return (
     <div>
+      <Nav />
       <h1>new Beer</h1>
       <form
         onSubmit={(event) => {

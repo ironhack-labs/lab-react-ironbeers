@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import RandomBeer from "./components/RandomBeer";
 import Beers from "./components/Beers";
@@ -10,27 +10,18 @@ import DetailedBeer from "./components/DetailedBeer";
 function App() {
   return (
     <div className="App">
-      <Route exact path="/">
-        <Home />
-      </Route>
+      <Routes>
+        <Route exact path="/" element={<Home />}/>
+     
 
-      <Route  exact path="/beers">
-        <Nav />
-        <Beers />
-      </Route>
-      <Route  path="/random-beers">
-        <Nav />
-        <RandomBeer />
-      </Route>
-      <Route  path="/new-beer">
-        <Nav />
+        <Route exact path="/beers" element={<Beers />} />
+        <Route path="/random-beers" element={<RandomBeer />} />
+       
+        <Route path="/new-beer" element={<NewBeer />} />
 
-        <NewBeer />
-      </Route>
-      <Route  path="/beers/:id">
-        <Nav />
-        <DetailedBeer />
-      </Route>
+        <Route path="/beers/:id" element={<DetailedBeer />} />
+        
+      </Routes>
     </div>
   );
 }

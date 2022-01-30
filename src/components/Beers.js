@@ -1,10 +1,12 @@
 import React from "react";
 import axios from "axios";
 import {Link} from "react-router-dom"
+import Nav from "./Nav";
 
 const api = axios.create({baseURL: "https://ih-beers-api2.herokuapp.com/"},)
 function Beers() {
     const [beers, setBeers] = React.useState([])
+
 
     async function getBeers(){
       try{
@@ -22,6 +24,7 @@ function Beers() {
 
   return (
     <div className='beers'>
+      <Nav />
       <h1>Beers</h1>
       {beers.map(beer => 
       <div className='single-beer' key={beer._id}>
