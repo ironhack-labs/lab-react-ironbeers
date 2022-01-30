@@ -1,15 +1,37 @@
 .App {
   text-align: center;
-
+  
 }
 
-nav{
-height: fit-content;
-}
+
 
 nav img {
-  padding: .5em;
+  padding: 0.5em;
   width: 50px;
 }
 
+.beers {
+  text-align: center;
+  margin: auto;
 
+
+}
+
+.single-beer {
+  padding: 0.8em;
+  border: 1px solid black;
+  margin: .5em;
+  background-color: rgba(10, 198, 255, 0.205);
+  height: 40vh;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.2em;
+  
+
+}
+
+.single-beer img {
+
+  height: 100px;
+
+}
