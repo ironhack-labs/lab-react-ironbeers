@@ -21,7 +21,7 @@ function RandomBeer() {
       <Nav />
       <h1>Random Beer</h1>
       <p>{beer.name}</p>
-      <img width="150px" src={beer.image_url} atl={beer.name} />
+      <img width="150px" src={beer.image_url} alt={beer.name} />
     </div>
   );
 }

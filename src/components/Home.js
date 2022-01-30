@@ -19,7 +19,6 @@ function Home() {
         <img style={{ width: "100%"}} src={imgNewBeer} alt="beer" />
         Add me a new Beer!
       </Link>
-
     </div>
   );
 }
