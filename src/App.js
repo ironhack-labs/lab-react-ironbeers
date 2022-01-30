@@ -14,19 +14,20 @@ function App() {
         <Home />
       </Route>
 
-      <Route exact path="/beers">
+      <Route  exact path="/beers">
         <Nav />
         <Beers />
       </Route>
-      <Route exact path="/random-beers">
+      <Route  path="/random-beers">
         <Nav />
         <RandomBeer />
       </Route>
-      <Route exact path="/new-beer">
+      <Route  path="/new-beer">
         <Nav />
+
         <NewBeer />
       </Route>
-      <Route path="/beers/:id">
+      <Route  path="/beers/:id">
         <Nav />
         <DetailedBeer />
       </Route>

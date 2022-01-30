@@ -4,26 +4,12 @@ import axios from "axios";
 const api = axios.create({
   baseURL: "https://ih-beers-api2.herokuapp.com/beers/",
 });
-// name - must be type text
-// tagline - must be type text
-// description - must be type text
-// first_brewed - must be type text
-// brewers_tips - must be type text
-// attenuation_level - must be type number !!!
-// contributed_by - must be type text
+
 function NewBeer() {
-  const [form, setForm] = React.useState({
-    name: "",
-    tagline: "",
-    description: "",
-    first_brewed: "",
-    brewers_tips: "",
-    attenuation_level: 0,
-    contributed_by: "",
-  });
+  const [form, setForm] = React.useState({});
   async function submitBeer() {
     const response = await api.post("new",form)
-    // console.log(response)
+    console.log(response)
   }
 
   const changeHandler = ({ target }) => {
@@ -32,7 +18,7 @@ function NewBeer() {
     });
     console.log(form);
   };
-
+  
   return (
     <div>
       <h1>new Beer</h1>

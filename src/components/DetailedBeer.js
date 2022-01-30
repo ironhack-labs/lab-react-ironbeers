@@ -11,9 +11,12 @@ function DetailedBeer() {
     }
     const {id} = useParams()
     const [beer, setBeer] = React.useState({})
+
     React.useEffect(() => {
         getBeer()
+      
     }, [])
+
   return <div>
       Details of Beer
       <h2>{beer.name}</h2>

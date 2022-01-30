@@ -2,13 +2,13 @@ import React from "react";
 import axios from "axios";
 import {Link} from "react-router-dom"
 
-const api = axios.create({baseURL: "https://ih-beers-api2.herokuapp.com/beers/"},)
+const api = axios.create({baseURL: "https://ih-beers-api2.herokuapp.com/"},)
 function Beers() {
     const [beers, setBeers] = React.useState([])
 
     async function getBeers(){
       try{
-        const {data}= await api.get('/');
+        const {data}= await api.get('beers');
         setBeers(data)
       }catch(error){
         console.error(`Error while fetching Data ${error}`)
