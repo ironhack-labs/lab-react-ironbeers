@@ -2,7 +2,7 @@
   "name": "lab-react-ironbeers",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ignazka@github.io",
+  "homepage": "http://ignazka@github.io/lab-react-ironbeers",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
