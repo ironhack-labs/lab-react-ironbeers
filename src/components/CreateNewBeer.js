@@ -12,10 +12,7 @@ const[attenuation_level, setAttenuation_level] = useState('');
 const[contributed_by, setContributed_by] = useState('');
 const[_id, set_id] = useState('');
 
-const newId = () => {
-    return Math.floor(Math.random() * (1000 - 5 + 1)) + 5;
-}
-let newIdSt = newId.toString()
+
 
 const onSubmit = (e) => {
     e.preventDefault()
@@ -25,6 +22,11 @@ const onSubmit = (e) => {
         return
     }
     onAdd({name, tagline, description, first_brewed, brewers_tips, attenuation_level,contributed_by,_id});
+    const newId = Math.floor(Math.random() * (1000 - 5 + 1)) + 5;
+
+    console.log(newId)
+    let newIdSt = newId.toString()
+    console.log(newIdSt);
 
     setName('');
     setTagline('');
