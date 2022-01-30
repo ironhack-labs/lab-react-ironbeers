@@ -6,12 +6,19 @@ import reportWebVitals from "./reportWebVitals";
 import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
+<<<<<<< HEAD
   <React.StrictMode>
     <HashRouter>
       <App />
     </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
+=======
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+>>>>>>> 268a2d8ec09172e4778f700279349d2c44b59c6d
 );
 
 // If you want to start measuring performance in your app, pass a function

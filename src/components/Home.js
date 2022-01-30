@@ -2,7 +2,7 @@ import React from "react";
 import imgBeers from "../assets/beers.png";
 import imgRandomBeer from "../assets/random-beer.png";
 import imgNewBeer from "../assets/new-beer.png";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -19,7 +19,7 @@ function Home() {
         <img style={{ width: "100%"}} src={imgNewBeer} alt="beer" />
         Add me a new Beer!
       </Link>
-      <Outlet />
+
     </div>
   );
 }
