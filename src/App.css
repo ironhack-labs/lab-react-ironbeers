@@ -35,3 +35,31 @@ nav img {
   height: 100px;
 
 }
+
+.beer-form {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: auto;
+  font-size: 1.2em;
+  font-weight: 500;
+
+}
+.beer-form input {
+  background-color: rgb(197, 197, 197);
+  margin-bottom: 20px;
+  height: 20px;
+}
+
+.beer-form textarea {
+  background-color: rgb(197, 197, 197);
+  height: 80px;
+}
+
+.beer-form button {
+  background-color:#0098ff;
+  height: 50px;
+  font-size: 1.5em;
+
+  margin: 20px;
+}
