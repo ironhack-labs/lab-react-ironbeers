@@ -1,16 +1,34 @@
-import axios from 'axios';
-import './App.css';
-import {Link} from "react-router-dom"
-import imgBeers from "./assets/beers.png"
-import imgRandomBeer from "./assets/random-beer.png"
-import imgNewBeer from "./assets/new-beer.png"
+import axios from "axios";
+import "./App.css";
+import { Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import RandomBeer from "./components/RandomBeer";
+import Beers from "./components/Beers";
+import NewBeer from "./components/NewBeer";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
-      <Link to='/beers'><img src={imgBeers} alt='bar of a pub'/>Show me your Beers!</Link>
-      <Link to='/random-beers'><img src={imgRandomBeer} alt='beer dispensers'/>A Random Beer!</Link>
-      <Link to='/new-beer'><img src={imgNewBeer} alt='beer'/>Add me a new Beer!</Link>
+      <Route exact path="/">
+        <Home />
+      </Route>
+
+      <Route exact path="/beers">
+        {" "}
+        <Nav />
+        <Beers />
+      </Route>
+      <Route exact path="/random-beers">
+        {" "}
+        <Nav />
+        <RandomBeer />
+      </Route>
+      <Route exact path="/new-beer">
+        {" "}
+        <Nav />
+        <NewBeer />
+      </Route>
     </div>
   );
 }
