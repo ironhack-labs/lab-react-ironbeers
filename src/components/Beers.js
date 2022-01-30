@@ -33,11 +33,11 @@ function Beers() {
           <div key={beer._id}>
             <h2>{beer.name}</h2>
             <Link to={`/beers/${beer._id}`}>
-            <img
+              <img
                 src={beer.image_url}
                 alt={beer.name}
                 style={{ width: "100px" }}
-            />
+              />
             </Link>
 
             <p>{beer.tagline}</p>
