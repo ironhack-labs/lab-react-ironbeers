@@ -4,11 +4,11 @@ const HomeCard = ({ image, title, text, alt, to}) => {
 
 
   return (<div className="beer-box">
-      <Link to={`${to}`}>
+      
       <img src={image} alt="Representation of beer"/>
-      <h1>{title}</h1>
+      <Link to={`${to}`}><h1>{title}</h1></Link>
       <p>{text}</p>
-      </Link>
+      
 
   </div>)
 };
