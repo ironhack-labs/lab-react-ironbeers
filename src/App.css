@@ -47,3 +47,43 @@ p {
   font-weight: 200;
   font-size: 20px;
 }
+
+/* RandomBeer */
+
+.product--random{
+  width: 100px;
+  margin-top: 50px
+}
+
+.random--container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.random--name{
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  margin: 0;
+}
+
+.random--tagLine_brewed{
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  margin: 0;
+}
+
+.random--discription{
+  width: 40%;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.random--contibuted_by{
+  width: 40%;
+  color: rgb(181, 181, 181); 
+  margin-left: 30px
+}
