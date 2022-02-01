@@ -4,6 +4,7 @@ import Beers from './components/listBeers'
 import HomeBeer from './components/home'
 import { Route, Switch, Redirect } from 'react-router-dom';
 import BeerInfo from './components/singleBeer'
+import RandomBeer from './components/randomBeer';
 
 const Header = () => {
   return(
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/beerInfo" exact >
           <BeerInfo />
+        </Route>
+        <Route path="/random-beer" exact>
+          <RandomBeer />
         </Route>
         </Switch>
       </div>
