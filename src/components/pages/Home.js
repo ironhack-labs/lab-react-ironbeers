@@ -10,7 +10,7 @@ const Home = () => {
   const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi turpis, sodales placerat suscipit eu, vehicula id ipsum. Vestibulum risus eros, bibendum non tempus eu, tempor sed nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean venenatis orci urna, non efficitur dui auctor semper."
   return <div className="home">
         <HomeCard image={beers} title="All Beers" text={lorem} to="/beers"/>
-        <HomeCard image={randomBeer} title="Random Beer" text={lorem}/>
+        <HomeCard image={randomBeer} title="Random Beer" text={lorem} to="/random"/>
         <HomeCard image={newBeer} title="New Beer" text={lorem}/>
   </div>;
 };
