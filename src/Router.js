@@ -23,7 +23,7 @@ function Router(props) {
     <Routes>
       {/* <Route path="/" element={<CountriesList />}></Route> */}
       <Route path="/" element={<Home beersData={beersData} />} />
-      <Route path="/list-beers" element={<ListBeers />} />
+      <Route path="/list-beers" element={<ListBeers beersData={beersData} />} />
       <Route path="/single-beer" element={<SingleBeer />} />
       <Route path="/random-beer" element={<RandomBeer />} />
       <Route path="/new-beer" element={<NewBeer />} />
