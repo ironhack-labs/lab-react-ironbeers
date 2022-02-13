@@ -1,26 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import './Beers.css';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Beers.css";
+import axios from "axios";
 
-export default function Beers (props){
-    console.log(props)
-    const { id } = useParams();
+export default function Beers() {
+  const [beers, setBeers] = React.useState([]);
+  console.log(beers);
 
-    return (
-        <div className="beers">
-            {props.beers.map(beer => (
-                <div className="beer-card" key={beer.id}>
-                <Link to={`/beers/${id}`}>
-                    <img src={beer.image_url} alt={beer.name} />
-                    <h1>{beer.name}</h1>
-                    <p>{beer.tagline}</p>
-                    <p>{beer.description}</p>
-                    <p>{beer.first_brewed}</p>
-                    <p>{beer.contributed_by}</p>
-                </Link>
-                </div>
-            ))}
+  useEffect(() => {
+    axios
+      .get("https://ih-beers-api2.herokuapp.com/beers")
+      .then((res) => {
+        setBeers(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  return (
+    <div className="beers">
+      {beers.map((beer) => (
+        <div className="beer-card" key={beer._id}>
+          <Link to={`/beers/${beer._id}`}>
+            <img src={beer.image_url} alt={beer.name} />
+            <h1>{beer.name}</h1>
+            <p>{beer.tagline}</p>
+            <p>{beer.contributed_by}</p>
+          </Link>
         </div>
-    )
+      ))}
+    </div>
+  );
 }
