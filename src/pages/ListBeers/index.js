@@ -1,20 +1,37 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import {Link} from 'react-router-dom'
 
-const ListBeers = ({ beersData, ...props }) => {
-  console.log("HOO", beersData);
+const axios = require("axios");
+
+const ListBeers = () => {
+  const [beersData, setBeersData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://ih-beers-api2.herokuapp.com/beers")
+      .then((response) => {
+        setBeersData(response.data);
+      })
+      .catch((err) => console.log("Error en fetching api on App.js", err));
+  }, []);
 
   return (
-    <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+    <div className="list-beer-container">
       {beersData.map((beer) => {
         return (
           <div>
-            <img src={beer.image_url} alt="" />
-            <h3 class="uk-card-title">{beer.name}</h3>
-            <h4>{beer.description}</h4>
-            <p>
-              <strong>Created by: </strong>
-              {beer.contributed_by}
-            </p>
+            <div class="uk-card uk-card-default uk-card-body">
+              <img src={beer.image_url} alt="" />
+              <Link to="/single-beer">
+              <h3 className="uk-card-title">{beer.name}</h3>
+              </Link>
+              <h4>{beer.description}</h4>
+              <p>
+                <strong>Created by: </strong>
+                {beer.contributed_by}
+              </p>
+            </div>
           </div>
         );
       })}

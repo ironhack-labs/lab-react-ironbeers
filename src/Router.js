@@ -6,24 +6,12 @@ import { NavBar } from "./components";
 const axios = require("axios");
 
 function Router(props) {
-  console.log("ROUTER", props);
-
-  const [beersData, setBeersData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://ih-beers-api2.herokuapp.com/beers")
-      .then((response) => {
-        setBeersData(response.data);
-      })
-      .catch((err) => console.log("Error en fetching api on App.js", err));
-  }, []);
 
   return (
     <Routes>
       {/* <Route path="/" element={<CountriesList />}></Route> */}
-      <Route path="/" element={<Home beersData={beersData} />} />
-      <Route path="/list-beers" element={<ListBeers beersData={beersData} />} />
+      <Route path="/" element={<Home/>} />
+      <Route path="/list-beers" element={<ListBeers/>} />
       <Route path="/single-beer" element={<SingleBeer />} />
       <Route path="/random-beer" element={<RandomBeer />} />
       <Route path="/new-beer" element={<NewBeer />} />

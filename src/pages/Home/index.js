@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import {useEffect,useState} from 'react'
+const axios = require("axios");
 
 function Home(props) {
-  console.log("PROPS EN HOME", props.beersData);
+
   return (
     <div className="uk-child-width-1-2@m home-container" uk-grid>
       <Link to="/list-beers">
