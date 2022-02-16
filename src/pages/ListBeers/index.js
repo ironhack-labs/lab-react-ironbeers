@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+
+import "./ListBeer.css";
 
 const axios = require("axios");
 
@@ -21,10 +23,10 @@ const ListBeers = () => {
       {beersData.map((beer) => {
         return (
           <div>
-            <div class="uk-card uk-card-default uk-card-body">
+            <div class="uk-card uk-card-default uk-card-body list-beers">
               <img src={beer.image_url} alt="" />
-              <Link to="/single-beer">
-              <h3 className="uk-card-title">{beer.name}</h3>
+              <Link to={`/single-beer/${beer._id}`}>
+                <h3 className="uk-card-title">{beer.name}</h3>
               </Link>
               <h4>{beer.description}</h4>
               <p>

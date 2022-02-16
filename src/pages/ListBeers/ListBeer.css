@@ -1,3 +1,13 @@
 .list-beer-container {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.list-beers {
+  width: 300px;
+}
+
+.list-beers img {
+  height: 300px;
 }
