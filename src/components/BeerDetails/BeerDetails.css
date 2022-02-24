@@ -1,0 +1,20 @@
+.image_url {
+    width: 100px;
+}
+
+.firstBrewed {
+    font-weight: bold;
+    align-content: flex-end;
+}
+
+.tagline {
+    color: gray;
+}
+
+.contributedBy {
+    color: gray;
+}
+
+.container {
+    margin-top: 40px;
+}
