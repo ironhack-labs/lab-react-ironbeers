@@ -1,0 +1,15 @@
+.beers-container .row{
+    margin: 10px 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.beers-container img{
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+
+.beers-container .card{
+    border-color: transparent !important;
+}
