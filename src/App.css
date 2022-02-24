@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  text-decoration: none;
+  
 }
 
 .App-logo {
@@ -35,4 +37,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar{
+  padding-top: 60px;
+  background-color: rgb(19, 141, 255);
+  
+}
+
+.navbar img{  
+  margin-left: 50%;
+  width: 60px;
+}
+
+.cardImg{
+  height: 350px;
 }
