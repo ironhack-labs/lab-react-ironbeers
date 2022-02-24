@@ -1,0 +1,15 @@
+img{
+    width: 30%;
+}
+
+.Home link{
+    text-decoration: none;
+    text-decoration-color: black;
+}
+.header{
+    background-color: black;
+    width: 100%;
+}
+.header img{
+    width: 10%;
+}

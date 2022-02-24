@@ -1,0 +1,22 @@
+.BeerList{
+    color:black;
+    padding: 30px;
+    margin: 30px;
+    text-decoration: none;
+  
+    
+}
+.Birra{
+ border: solid 3px black;
+ text-decoration: none;
+  color:black;
+    padding: 30px;
+    margin: 30px;
+}
+.Birra a{    text-decoration: none;
+    color:black;
+}
+
+Link{
+    text-decoration: none;
+}

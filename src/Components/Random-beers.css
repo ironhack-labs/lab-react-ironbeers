@@ -1,0 +1,17 @@
+.Birra{
+ border: solid 3px black;
+ text-decoration: none;
+  color:black;
+    padding: 30px;
+    margin: 30px;
+    
+}
+.Birra a{    text-decoration: none;
+    color:black;
+}
+img{
+    width: 30%;
+}
+Link{
+    text-decoration: none;
+}
