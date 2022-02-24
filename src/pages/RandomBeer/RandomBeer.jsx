@@ -34,7 +34,7 @@ const RandomBeer = () => {
                     <p>{contributed_by}</p>
                 </Col>
             </Row>
-            <Link to={'/beers/'}>
+            <Link to={'/'}>
                 <div className="d-grid gap-2 mb-5">
                     <Button variant="dark">Go back</Button>
                 </div>
