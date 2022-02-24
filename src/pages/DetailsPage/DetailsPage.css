@@ -1,0 +1,9 @@
+.details img{
+    height: 450px;
+    object-fit: cover;
+    object-fit: contain;
+    padding-bottom: 40px;
+}
+.details {
+    padding-bottom: 50px;
+}
