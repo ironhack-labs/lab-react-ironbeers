@@ -1,0 +1,16 @@
+.beersList img {
+    margin-right: 50px;
+    height: 250px;
+    object-fit: cover;
+    display: flex;
+    align-self: center;
+}
+
+.beersList li {
+    list-style: none;
+    border-bottom: 1px solid grey;
+}
+
+.eachBeer {
+    display: flex;
+}

@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import Header from '../../components/Header/Header'
 
 const NewBeer = () => {
 
@@ -33,7 +34,9 @@ const NewBeer = () => {
     }
 
     return (
-        <div className="newBeer">
+        <section className="newBeerForm">
+
+            <Header />
 
             <form onSubmit={handleSubmit}>
                 <label>Name </label>
@@ -59,7 +62,7 @@ const NewBeer = () => {
 
                 <button type="submit">ADD NEW</button>
             </form>
-        </div>
+        </section>
     )
 }
 
