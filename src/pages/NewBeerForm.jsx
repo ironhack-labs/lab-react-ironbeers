@@ -30,6 +30,7 @@ const NewBeerForm = () => {
 
         ironbeersService
             .postNewBeer(newBeer)
+            .then((res) => res.status(200))
     }
 
     return (

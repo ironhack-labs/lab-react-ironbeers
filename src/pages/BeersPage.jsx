@@ -1,25 +1,52 @@
 import { useEffect, useState } from 'react'
 import ironbeersService from '../services/ironbeers.service'
-import { Container } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Container, Form } from 'react-bootstrap'
+import { Link, useSearchParams } from 'react-router-dom'
 
 const BeersPage = () => {
     const [disData, setDisData] = useState([])
+    const [searchName, setSearchName] = useState('')
+    const [disDataCopy, setDisDataCopy] = useState([])
 
     useEffect(() => {
-        loadAllBeers()
-    }, [])
-
-    const loadAllBeers = () => {
         ironbeersService
             .getAllBeers()
-            .then(({ data }) => setDisData(data))
+            .then(({ data }) => {
+                setDisData(data)
+                setDisDataCopy(data)
+            })
             .catch(err => console.log(err))
+    }, [])
+
+    const [searchParams, setSearchParams] = useSearchParams()
+
+    const handleSearch = e => {
+        setSearchParams({ search: e.target.value })
+        setSearchName(e.target.value)
+        showFilteredBeers(searchName)
+    }
+
+    const showFilteredBeers = str => {
+        let filteredBeers
+        let input = str.toLowerCase()
+
+        if (input === '') {
+            filteredBeers = [...disDataCopy]
+            setDisData(filteredBeers)
+        }
+        else {
+            filteredBeers = disDataCopy.filter(beer => beer.name.toLowerCase().includes(input))
+            setDisData(filteredBeers)
+        }
     }
 
     return (
         <>
             <Container>
+                <Form.Group className="mb-3" controlId="name">
+                    <Form.Label>Search for a beer</Form.Label>
+                    <Form.Control type="text" value={searchName} onChange={handleSearch} />
+                </Form.Group>
                 {
                     disData.map(eachBeer => {
                         return (
