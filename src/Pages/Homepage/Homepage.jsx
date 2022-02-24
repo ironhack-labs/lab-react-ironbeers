@@ -1,9 +1,6 @@
 
 import { Container } from "react-bootstrap"
 import { Image } from "react-bootstrap"
-import RandomBeerPage from "../RandomBeer/RandomBeerPage"
-import AllBeersPage from "../AllBeers/AllBeersPage"
-import NewBeerPage from "../NewBeer/NewBeerPage"
 
 import beers1 from "../../assets/beers.png"
 import beers2 from "../../assets/random-beer.png"
