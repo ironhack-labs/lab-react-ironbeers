@@ -1,18 +1,10 @@
 import React from 'react';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Spinner from 'react-spinkit';
 
-export default function Beers() {
+export default function Beers(props) {
     
-    const [beers, setBeers] = useState([]);
-
-    useEffect(() => {
-        axios
-            .get('https://ih-beers-api2.herokuapp.com/beers')
-            .then((response) => setBeers(response.data))
-            .catch((err) => console.log("Error getting Beers from API: ", err))
-    }, []);
+    const { beers } = props;
 
     return (
         <div>
@@ -27,8 +19,8 @@ export default function Beers() {
                             <img src={ beer.image_url } alt={ beer.name } />
                         </div>
                         <div>
-                            <h2>{ beer.name }</h2>
-                            <h3>{ beer.tagline }</h3>
+                            <Link to={ `/beers/${beer._id}` }><h2>{ beer.name }</h2></Link>
+                            <h3 className="text-grey">{ beer.tagline }</h3>
                             <p><span>Created by: </span> { beer.contributed_by } </p>
                         </div>
                     </div>

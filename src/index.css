@@ -69,6 +69,29 @@ body {
   justify-content: center;
 }
 
-.beer-card h3 {
+.text-grey {
   color: grey;
 }
+
+.BeerDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BeerDetails > img {
+  margin-top: 50px;
+  height: 400px;
+}
+
+.BeerDetails > div {
+  margin-top: 20px;
+  width: 50%;
+}
+
+.flex-row-apart {
+  display: flex;
+  justify-content: space-between;
+}
+
+
