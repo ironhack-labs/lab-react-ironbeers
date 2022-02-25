@@ -1,14 +1,12 @@
-// src/components/Navbar.js
-
 import { NavLink } from "react-router-dom";
+import HeaderImg from "../assets/header.png";
 
 function Navbar() {
   return (
     <nav>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/beers">Beers</NavLink>
-      <NavLink to="/random-beer">Random Beer</NavLink>
-      <NavLink to="/new-beer">New Beer</NavLink>
+      <NavLink to="/">
+        <img src={HeaderImg} alt="Home" />
+      </NavLink>
     </nav>
   );
 }
