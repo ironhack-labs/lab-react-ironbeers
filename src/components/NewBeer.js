@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function NewBeer() {
-
   const [inputs, setInputs] = useState({
     name: "",
     tagline: "",
@@ -83,7 +82,7 @@ export default function NewBeer() {
             />
           </label>
 
-           <label>
+          <label>
             First brewed:
             <input
               type="text"
@@ -93,7 +92,7 @@ export default function NewBeer() {
             />
           </label>
 
-           <label>
+          <label>
             Brewer's tips:
             <input
               type="text"

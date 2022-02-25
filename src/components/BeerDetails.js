@@ -8,16 +8,16 @@ export default function BeerDetails(props) {
     return elm._id === beerId;
   });
 
-  const renderDetails = (singleBeer) => {
+  const renderDetails = (elm) => {
     return (
       <>
-        <img src={singleBeer.image_url} alt={singleBeer.name} />
-        <h3>Name: {singleBeer.name} </h3>
-        <p>Tagline: {singleBeer.tagline} </p>
-        <p>First brewed: {singleBeer.first_brewed} </p>
-        <p>Att. level: {singleBeer.attenuation_level} </p>
-        <p>Description: {singleBeer.description} </p>
-        <p>Contributed by: {singleBeer.contributed_by} </p>
+        <img src={elm.image_url} alt={elm.name} />
+        <h3>Name: {elm.name} </h3>
+        <p>Tagline: {elm.tagline} </p>
+        <p>First brewed: {elm.first_brewed} </p>
+        <p>Att. level: {elm.attenuation_level} </p>
+        <p>Description: {elm.description} </p>
+        <p>Contributed by: {elm.contributed_by} </p>
       </>
     );
   };
