@@ -16,7 +16,9 @@ code {
   background-color: aqua;
   height: 100px;
 }
-
+.img {
+  width: 400px;
+}
 .card {
   width: 400px;
   padding: 10px;
