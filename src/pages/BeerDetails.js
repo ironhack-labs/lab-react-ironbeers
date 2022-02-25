@@ -19,6 +19,11 @@ function BeerDetails(props) {
   return (
     <div>
       <h1>Beer Details</h1>
+      <Link to={"/"}>
+        <header className="color">
+          <img src="" />
+        </header>
+      </Link>
       <Link to={`/`} key={foundBeer._id}>
         <div className="card">
           <img src={foundBeer.image_url} alt="item" />

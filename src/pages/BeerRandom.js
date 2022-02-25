@@ -16,6 +16,11 @@ function BeerRandom(props) {
 
   return (
     <div>
+      <Link to={"/"}>
+        <header className="color">
+          <img src="" />
+        </header>
+      </Link>
       <h3>Random Beer</h3>
       <Link to={`beers/${beer._id}`} key={beer._id}>
         <div className="card">
