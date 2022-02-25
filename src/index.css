@@ -20,3 +20,25 @@ code {
   background-color: rgb(43, 177, 125);
   height: 70px;
 }
+
+.beer-img {
+  height: 100px;
+}
+
+.beer-details {
+  border: 1px solid rgb(29, 73, 29);
+  margin: 5px;
+}
+
+.tagline {
+  font-weight: bold;
+}
+
+.link {
+  background-color: rgb(28, 114, 81);
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
