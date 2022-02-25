@@ -4,6 +4,13 @@ body {
   font-weight: lighter;
 }
 
+.loading {
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
 .HomePage {
   margin-top: 50px;
   display: flex;
@@ -41,4 +48,27 @@ body {
   color: white;
   font-size: 1.5em;
   font-weight: bolder;
+}
+
+.beer-card {
+  display:flex;
+  justify-content: flex-start;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+  max-width: 90%;
+}
+
+.beer-card img {
+  height: 150px;
+}
+
+.img-container {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.beer-card h3 {
+  color: grey;
 }
