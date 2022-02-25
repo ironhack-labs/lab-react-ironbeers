@@ -25,3 +25,20 @@ body {
 .HomePage h2, p {
   text-align: left
 }
+
+.Header {
+  height: 30px;
+  background-color: slateblue;
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+}
+
+.Header-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
