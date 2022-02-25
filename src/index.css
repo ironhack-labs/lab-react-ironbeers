@@ -42,3 +42,16 @@ code {
   padding: 10px;
   border-radius: 10px;
 }
+
+.single-beer-img {
+  width: 100px;
+  margin: 20px;
+}
+
+.left {
+  text-align: left;
+}
+
+.grey {
+  color: lightslategray;
+}

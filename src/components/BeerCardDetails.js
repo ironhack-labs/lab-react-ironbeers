@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function BeerDetails(props) {
+function BeerCardDetails(props) {
   return (
     <div className="container-fluid d-flex justify-content-around align-items-center  beer-details">
       <img
@@ -12,7 +12,7 @@ function BeerDetails(props) {
         <h4>{props.beer.name}</h4>
         <p className="tagline">{props.beer.tagline}</p>
         <p>{props.beer.contributed_by}</p>
-        <Link className="link" to={`/beers/:${props.beer._id}`}>
+        <Link className="link" to={`/beers/${props.beer._id}`}>
           See details
         </Link>
       </div>
@@ -20,4 +20,4 @@ function BeerDetails(props) {
   );
 }
 
-export default BeerDetails;
+export default BeerCardDetails;

@@ -1,30 +1,15 @@
 import Navbar from "../components/Navbar";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import BeerDetails from "../components/BeerDetails";
 
-function Beers() {
-  const [allBeers, setAllBeers] = useState([]);
-  const url = "https://ih-beers-api2.herokuapp.com/beers";
+import BeerCardDetails from "../components/BeerCardDetails";
 
-  useEffect(() => {
-    axios(url)
-      .then((data) => {
-        console.log(data.data[0]);
-        setAllBeers(data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
+function Beers(props) {
   return (
     <div>
       <Navbar />
-      {allBeers.length === 0 && <h2>Loading ...</h2>}
-      {allBeers.length !== 0 &&
-        allBeers.map((eachBeer) => {
-          return <BeerDetails beer={eachBeer} key={eachBeer._id} />;
+      {props.beers.length === 0 && <h2>Loading ...</h2>}
+      {props.beers.length !== 0 &&
+        props.beers.map((eachBeer) => {
+          return <BeerCardDetails beer={eachBeer} key={eachBeer._id} />;
         })}
     </div>
   );
