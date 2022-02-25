@@ -15,7 +15,7 @@ export default function HomePage() {
         </div>
         <div>
             <img src={ newBeerImg } alt="Beers" />
-            <Link to="/beers/create"><h2>New Beer</h2></Link>  
+            <Link to="/beers/new-beer"><h2>New Beer</h2></Link>  
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, fugiat tenetur dignissimos autem quibusdam esse! Quia quibusdam dolorum quas adipisci commodi aspernatur fuga quod hic exercitationem, dicta minima! Ipsum, mollitia!</p>
             <hr />
         </div>

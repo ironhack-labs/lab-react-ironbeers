@@ -1,10 +1,11 @@
+import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import HomePage from './pages/HomePage';
 import Header from './components/Header';
 import Beers from './pages/Beers';
 import BeerDetails from './pages/BeerDetails';
-import { Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import NewBeer from './pages/NewBeer';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
         <Route path="/" element={ <HomePage /> }></Route>
         <Route path="/beers" element={ <Beers beers={ beers }/>}></Route>
         <Route path="/beers/:beerId" element={ <BeerDetails beers={ beers } />}></Route>
-        <Route path="/beers/create" element={ <div>Create Beer Form</div> }></Route>
+        <Route path="/beers/new-beer" element={ <NewBeer/> }></Route>
         <Route path="/beers/random" element={ <BeerDetails beers={ beers } /> }></Route>
       </Routes>
     </div>

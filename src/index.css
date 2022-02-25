@@ -94,4 +94,40 @@ body {
   justify-content: space-between;
 }
 
+.NewBeer {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 
+.NewBeer>form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.NewBeer>form input {
+  width: 100%;
+  margin: 7px 0px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  border: 0.5px solid grey;
+}
+
+.NewBeer> form label {
+  width: 100%;
+}
+
+.submit-btn {
+  padding: 10px;
+  width: 100%;
+  color: white;
+  background-color: slateblue;
+  border:none;
+  border-radius: 15px;
+  font-size: 1em;
+  margin-top: 15px;
+
+}
