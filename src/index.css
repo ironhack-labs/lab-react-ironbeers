@@ -15,3 +15,8 @@ code {
 .card {
   text-align: left;
 }
+
+.header {
+  background-color: rgb(43, 177, 125);
+  height: 70px;
+}
