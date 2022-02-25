@@ -15,7 +15,7 @@ const BeerDetails = () => {
             .get(`https://ih-beers-api2.herokuapp.com/beers/${beer_id}`)
             .then((response) => {
                 updateOneBeer(response.data);
-                console.log("holi caracoli", response.data)
+
             })
             .catch(err => console.log(err))
 
