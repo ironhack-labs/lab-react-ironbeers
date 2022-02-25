@@ -4,8 +4,11 @@ import { useParams } from 'react-router-dom';
 export default function BeerDetails(props) {
 
     const { beerId } = useParams();
+    const { beers } = props;
 
-    const beer = props.beers.find(beer => beer._id === beerId);
+    const beer = (beerId) ? 
+        beers.find(beer => beer._id === beerId) : 
+        beers[Math.floor(Math.random() * props.beers.length)];
 
     return (
         <div className="BeerDetails">
