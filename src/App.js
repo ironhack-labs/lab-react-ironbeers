@@ -1,18 +1,16 @@
-import './App.css';
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import HomePage from './components/HomePage';
-import BeersList from './components/BeersList';
-import NewBeer from './components/NewBeer';
-import RandomBeer from './components/RandomBeer';
-import BeerDetails from './components/BeerDetails';
-
+import HomePage from "./components/HomePage";
+import BeersList from "./components/BeersList";
+import NewBeer from "./components/NewBeer";
+import RandomBeer from "./components/RandomBeer";
+import BeerDetails from "./components/BeerDetails";
 
 function App() {
-
-const [beers, setBeers] = useState([])
+  const [beers, setBeers] = useState([]);
 
   useEffect(() => {
     axios
@@ -22,7 +20,6 @@ const [beers, setBeers] = useState([])
       })
       .catch();
   }, []);
-
 
   return (
     <div className="App">

@@ -2,7 +2,6 @@ import NavBar from "./NavBar";
 
 export default function RandomBeer(props) {
   const randomIndex = Math.floor(Math.random() * props.beers.length);
-
   const randomBeer = props.beers[randomIndex];
 
   const renderDetails = (randomBeer) => {
