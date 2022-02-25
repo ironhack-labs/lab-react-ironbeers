@@ -1,38 +1,154 @@
 .App {
+  padding: 10px;
+}
+
+.homepage-box {
+  text-decoration: none;
+  color: black;
+}
+
+.homepage-box img {
+  width: 100%;
+}
+
+header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+
+.page-content {
   text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.beer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  border-bottom: 1px solid lightgrey;
+  text-align: left;
+  position: relative;
+  max-width: 90%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.beer-container .beer-image-box {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.beer-container img {
+  max-height: 100px;
+}
+
+.beer-description {
+  width: 70%;
+  line-height: 1.1;
+}
+
+.beer-name-link {
+  text-decoration: none;
+  color: black;
+}
+
+.beer-name-link h2 {
+  font-weight: 500;
+}
+
+.beer-description h3 {
+  color: gray;
+  font-weight: 500;
+}
+
+.beer-description p {
+  font-size: 12px;
+}
+
+.beer-photo {
+  height: 30vh;
+  margin-top: 40px;
+}
+
+.beer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 20px;
+}
+
+.beer-header .left {
+  text-align: left;
+}
+
+.beer-header .left h2,
+.beer-header .left h3 {
+  font-weight: 500;
+}
+
+.beer-header h3,
+.beer-content h5 {
+  color: grey;
+}
+
+.beer-header .right {
+  text-align: right;
+}
+
+.beer-content {
+  text-align: left;
+  margin: 5px 20px;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+form label {
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 40px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+form label input {
+  left: 180px;
+  position: absolute;
+}
+
+form button {
+  margin-top: 30px;
+  width: 120px;
+  margin-left: 40px;
+}
+
+@media (min-width: 760px) {
+  .App {
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .homepage,
+  .page-content {
+    width: 800px;
+  }
+
+  .homepage-box p {
+    margin-bottom: 40px;
+  }
+
+  form label input {
+    width: 400px;
   }
 }
