@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function AllBeers() {
   const [beers, setAllBeers] = useState([]);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     axios
@@ -12,8 +13,33 @@ function AllBeers() {
       .catch((err) => console.log(err));
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+      .then((response) => setAllBeers(response.data))
+      .catch((err) => console.log(err));
+  }, [query]);
+
+  // if (beers.length) {
+  //   return <h1>Loading ...</h1>;
+  // }
   return (
     <div className="container-fluid">
+      <div className="row">
+        <div className="col">
+          <div class="m-5 w-50">
+            <input
+              type="text"
+              class="form-control"
+              id="nameInput"
+              placeholder="Search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+
       {beers.map((beer) => {
         return (
           <div key={beer._id} className="row">

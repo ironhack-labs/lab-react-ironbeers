@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function Navbar() {
   let location = useLocation();
@@ -34,7 +34,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item mx-4">
-              <NavLink className="NavLinksInNavBar" to="/beer-details/random">
+              <NavLink className="NavLinksInNavBar" to="/random">
                 Random Beer
               </NavLink>
             </li>

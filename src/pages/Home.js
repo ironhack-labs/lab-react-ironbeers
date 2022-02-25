@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import AllBeers from "./AllBeers";
 import RandomBeer from "./RandomBeer";
 import NewBeer from "./NewBeer";
@@ -25,7 +25,7 @@ function Home() {
         <div className="col">
           <img className="imagesHomePage" src={randomBeerImage} alt="beers" />
           <NavLink
-            to="/beer-details/random"
+            to="/random"
             element={<RandomBeer />}
             className="NavlinksBelowImages"
           >
