@@ -55,3 +55,11 @@ code {
 .grey {
   color: lightslategray;
 }
+
+label {
+  margin-right: 20px;
+}
+
+form {
+  margin-top: 50px;
+}
