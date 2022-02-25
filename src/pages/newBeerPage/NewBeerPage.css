@@ -1,0 +1,15 @@
+.formNew{
+    width: 60%;
+
+}
+
+input {
+
+  border-radius: 50px;  
+}
+
+.newFormContainer {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}

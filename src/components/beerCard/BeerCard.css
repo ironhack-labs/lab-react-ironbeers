@@ -1,0 +1,28 @@
+.tag{
+    color: grey;
+}
+.beerCard{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.titleTag {
+    display: flex;
+}
+
+.lateral {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    margin-left: 10px;
+    text-align: center;
+    color: grey;
+    font-weight: 600;
+}
+
+.detail {
+    display: flex;
+    
+}

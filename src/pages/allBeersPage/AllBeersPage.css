@@ -1,0 +1,13 @@
+.beerCard img {
+    max-width: 150px;
+}
+
+.beerCard{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.tag{
+    color: grey;
+}

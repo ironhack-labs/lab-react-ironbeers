@@ -1,0 +1,13 @@
+nav{
+    background-color: #3cc3fc;
+    font-size: 4em;
+    color: aliceblue;
+    text-align: center;
+    max-height: 500px;
+    margin-bottom: 50px;
+}
+
+.link_white {
+    color: aliceblue;
+    text-decoration: none;
+}
