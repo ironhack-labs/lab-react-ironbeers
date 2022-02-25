@@ -26,15 +26,13 @@ const [beers, setBeers] = useState([])
 
   return (
     <div className="App">
-
-     <Routes>
+      <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/beers" element={<BeersList beers={beers}/>} />
-        <Route path="/random-beer" element={<RandomBeer />} />
+        <Route path="/beers" element={<BeersList beers={beers} />} />
+        <Route path="/random-beer" element={<RandomBeer beers={beers} />} />
         <Route path="/new-beer" element={<NewBeer />} />
-        <Route path="/beers/:beerId" element={<BeerDetails beers={beers}/>} />
-    </Routes>
-    
+        <Route path="/beers/:beerId" element={<BeerDetails beers={beers} />} />
+      </Routes>
     </div>
   );
 }
