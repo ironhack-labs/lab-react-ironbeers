@@ -16,8 +16,8 @@ code {
     monospace;
 }
 
-.imagesHomePa {
-  width: 100%;
+.imagesHomePage {
+  width: 50%;
 }
 
 .homepageLinkHeadings:hover {
@@ -28,6 +28,9 @@ code {
 .homepageLinkHeadings {
   text-decoration: none;
   color: black;
+  background-color: lightgrey;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .NavlinksBelowImages {
@@ -35,7 +38,6 @@ code {
 }
 
 .NavlinksBelowImages:hover {
-  /* text-decoration: none; */
   color: red;
 }
 
@@ -44,6 +46,25 @@ code {
   font-weight: 500;
 }
 
+.NavLinksInNavBar:hover {
+  color: red;
+}
+
 .active {
   color: red;
+}
+
+.imagesOnAllBeersPage {
+  height: 10%;
+  width: 15%;
+}
+
+.taglineOnAllBeersPage {
+  font-weight: bold;
+  color: grey;
+}
+
+th,
+td {
+  text-align: start;
 }

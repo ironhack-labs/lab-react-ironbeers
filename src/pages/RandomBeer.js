@@ -1,5 +1,7 @@
 function RandomBeer() {
-  return <div>Hello from RandomBeer!</div>;
+  
+  
+  return;
 }
 
 export default RandomBeer;

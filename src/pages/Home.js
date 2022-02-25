@@ -3,7 +3,8 @@ import AllBeers from "./AllBeers";
 import RandomBeer from "./RandomBeer";
 import NewBeer from "./NewBeer";
 import allBeersImage from "./../assets/beers.png";
-import randomBeerImage from "./../assets/beers.png";
+import randomBeerImage from "./../assets/random-beer.png";
+import newBeerImage from "./../assets/new-beer.png";
 
 function Home() {
   return (
@@ -22,9 +23,9 @@ function Home() {
       </div>
       <div className="row">
         <div className="col">
-          <img src={randomBeerImage} alt="beers" />
+          <img className="imagesHomePage" src={randomBeerImage} alt="beers" />
           <NavLink
-            to="/random-beer"
+            to="/beer-details/random"
             element={<RandomBeer />}
             className="NavlinksBelowImages"
           >
@@ -34,7 +35,7 @@ function Home() {
       </div>
       <div className="row">
         <div className="col">
-          <img src="/src/assets/beers.png" alt="beers" />
+          <img className="imagesHomePage" src={newBeerImage} alt="beers" />
           <NavLink
             to="/new-beer"
             element={<NewBeer />}

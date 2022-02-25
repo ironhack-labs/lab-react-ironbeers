@@ -34,8 +34,8 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item mx-4">
-              <NavLink className="NavLinksInNavBar" to="/random-beer">
-                Random Beers
+              <NavLink className="NavLinksInNavBar" to="/beer-details/random">
+                Random Beer
               </NavLink>
             </li>
             <li className="nav-item mx-4">
