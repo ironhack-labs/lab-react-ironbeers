@@ -10,7 +10,7 @@ import randombeer from "../assets/random-beer.png";
 export default function HomePage() {
   return (
     <div>
-      <container className="HomepageBox">
+      <div className="HomepageBox">
         <Link to="/beers" element={<Beers />}>
           <img src={beer} alt="beers" />
           <h1>All Beers</h1>
@@ -21,9 +21,9 @@ export default function HomePage() {
             alias sint expedita quibusdam.
           </p>
         </Link>
-      </container>
+      </div>
 
-      <container className="HomepageBox">
+      <div className="HomepageBox">
         <Link to="/random-beer" element={<RandomBeer />}>
           <img src={randombeer} alt="beers" />
           <h1>Random Beer</h1>
@@ -34,9 +34,9 @@ export default function HomePage() {
             alias sint expedita quibusdam.
           </p>
         </Link>
-      </container>
+      </div>
 
-      <container className="HomepageBox">
+      <div className="HomepageBox">
         <Link to="/new-beer" element={<NewBeer />}>
           <img src={newbeer} alt="beers" />
           <h1>New Beer</h1>
@@ -47,7 +47,7 @@ export default function HomePage() {
             alias sint expedita quibusdam.
           </p>
         </Link>
-      </container>
+      </div>
     </div>
   );
 }

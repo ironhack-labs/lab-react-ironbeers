@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: baseline;
   background-color: black;
+  color: white;
 }
 
 .Header {
@@ -36,4 +37,35 @@
 
 .HomepageBox img {
   width: 100vw;
+}
+
+.BeerBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid white;
+  margin: 10%;
+  padding: 10%;
+}
+
+.Beerbox > div {
+  width: 50%;
+  margin: 10%;
+  padding: 10%;
+}
+
+/* 
+.BeerBox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+  margin: 10%;
+  padding: 10%;
+  text-align: center;
+} */
+
+.BeerBox img {
+  max-height: 10vh;
 }
