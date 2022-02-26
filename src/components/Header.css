@@ -1,0 +1,16 @@
+
+.Header  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    
+    text-decoration: none;
+    background-color: rgb(84, 171, 247);
+}
+
+.Img {
+    width: 60px;
+}

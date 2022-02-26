@@ -1,0 +1,16 @@
+.detailsContainer{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 5%;
+}
+
+.detailsText {
+    width: 30%;
+}
