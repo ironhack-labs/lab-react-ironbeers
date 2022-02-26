@@ -21,6 +21,20 @@ export default function BeersList(props) {
     }
   };
 
+  const renderBeerlist = (list) => {
+    return list.map((elm) => {
+      return (
+        <li>
+          <img src={elm.image_url} alt={elm.name} />
+          <h3>Name: {elm.name} </h3>
+          <p>Tagline: {elm.tagline} </p>
+          <p>Contributed by: {elm.contributed_by} </p>
+          <Link to={`/beers/${elm._id}`}>More details</Link>
+        </li>
+      );
+    });
+  };
+
   return (
     <>
       <NavBar />
@@ -29,28 +43,8 @@ export default function BeersList(props) {
       <div className="BeersList">
         <ul>
           {searchResults.length > 0
-            ? searchResults.map((elm) => {
-                return (
-                  <li>
-                    <img src={elm.image_url} alt={elm.name} />
-                    <h3>Name: {elm.name} </h3>
-                    <p>Tagline: {elm.tagline} </p>
-                    <p>Contributed by: {elm.contributed_by} </p>
-                    <Link to={`/beers/${elm._id}`}>More details</Link>
-                  </li>
-                );
-              })
-            : props.beers.map((elm) => {
-                return (
-                  <li>
-                    <img src={elm.image_url} alt={elm.name} />
-                    <h3>Name: {elm.name} </h3>
-                    <p>Tagline: {elm.tagline} </p>
-                    <p>Contributed by: {elm.contributed_by} </p>
-                    <Link to={`/beers/${elm._id}`}>More details</Link>
-                  </li>
-                );
-              })}
+            ? renderBeerlist(searchResults)
+            : renderBeerlist(props.beers)}
         </ul>
       </div>
     </>
