@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.Navbar {
+  width: auto;
+  height: 100px;
+  /* background: #352275;  */
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.beerList {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.AddNewBeer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+}
+
+
+
+
+
+
