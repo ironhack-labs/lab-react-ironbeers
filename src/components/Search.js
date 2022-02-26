@@ -1,21 +1,13 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Search(props) {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
-
+    
+  const [searchInput, setSearchInput] = useState("");
+ 
   const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-    // props.search(event.target.value)
-  };
-
-  useEffect(() => {
-    const results = props.beers.filter((elm) => {
-      return elm.toLowerCase().includes(searchTerm.toLowerCase());
-    });
-    setSearchResults(results);
-  }, [searchTerm]);
+      setSearchInput (event.target.value);
+      props.filterBeers(event.target.value)
+  }
 
   return (
     <div className="Search">
@@ -23,24 +15,11 @@ export default function Search(props) {
         <input
           type="text"
           placeholder="search for a beer"
-          value={searchTerm}
+          value={searchInput}
           onChange={handleInputChange}
         />
-        <button type="submit">Search</button>
       </form>
 
-      {searchResults.map((elm) => {
-        return (
-          <li>
-            <img src={elm.image_url} alt={elm.name} />
-            <h3>Name: {elm.name} </h3>
-            <p>Tagline: {elm.tagline} </p>
-            <p>Contributed by: {elm.contributed_by} </p>
-
-            <Link to={`/beers/${elm._id}`}>More details</Link>
-          </li>
-        );
-      })}
     </div>
   );
 }

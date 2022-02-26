@@ -8,6 +8,7 @@ import BeersList from "./components/BeersList";
 import NewBeer from "./components/NewBeer";
 import RandomBeer from "./components/RandomBeer";
 import BeerDetails from "./components/BeerDetails";
+import Search from "./components/Search";
 
 function App() {
   const [beers, setBeers] = useState([]);
@@ -21,6 +22,7 @@ function App() {
       .catch();
   }, []);
 
+
   return (
     <div className="App">
       <Routes>
@@ -29,6 +31,7 @@ function App() {
         <Route path="/random-beer" element={<RandomBeer beers={beers} />} />
         <Route path="/new-beer" element={<NewBeer />} />
         <Route path="/beers/:beerId" element={<BeerDetails beers={beers} />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </div>
   );
