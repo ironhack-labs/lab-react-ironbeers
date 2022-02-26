@@ -31,7 +31,7 @@ function App() {
         <Route path="/random-beer" element={<RandomBeer beers={beers} />} />
         <Route path="/new-beer" element={<NewBeer />} />
         <Route path="/beers/:beerId" element={<BeerDetails beers={beers} />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search?:query" element={<Search />} />
       </Routes>
     </div>
   );
