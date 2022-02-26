@@ -1,0 +1,12 @@
+.BeerImage{
+    width: 80px;
+}
+.Colum{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+}
