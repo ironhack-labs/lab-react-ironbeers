@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Beers() {
   const [beers, setBeers] = useState([]);
@@ -8,7 +9,6 @@ export default function Beers() {
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers")
       .then((result) => {
-        console.log(result.data[0]);
         setBeers(result.data);
       })
       .catch((error) => console.log(error));
@@ -20,6 +20,7 @@ export default function Beers() {
         beers.map((beer) => {
           return (
             <div className="BeerBox" key={beer._id}>
+            <Link to={`/beers/${beer._id}`}>
               <div>
                 <img src={beer.image_url} alt={beer.name} />
               </div>
@@ -31,6 +32,7 @@ export default function Beers() {
                   {beer.contributed_by}
                 </p>
               </div>
+              </Link>
             </div>
           );
         })}
