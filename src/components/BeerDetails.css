@@ -1,0 +1,25 @@
+.BeerDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 6rem;
+}
+
+.BeerDetails img {
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+
+.BeerSpec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.details,
+#spec {
+  color: grey;
+}

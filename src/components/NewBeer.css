@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+input {
+  border: solid 2px #8080809e;
+  border-radius: 20px;
+  width: 22rem;
+  height: 2rem;
+}
+
+textarea {
+  border: solid 2px #8080809e;
+  border-radius: 20px;
+  width: 22rem;
+  height: 4rem;
+}
+
+button {
+  border: solid 2px #ffffff;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  background-color: #67dfff;
+  width: 22rem;
+  height: 3rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #2ba5c7;
+}

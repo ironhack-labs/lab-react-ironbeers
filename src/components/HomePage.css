@@ -1,0 +1,22 @@
+.Home-Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 5rem 0;
+}
+
+.Home-Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  color: black;
+  line-height: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
