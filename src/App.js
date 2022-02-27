@@ -11,6 +11,7 @@ function App() {
 const [beers, setBeers] = useState([]);
 const apiURL = "https://ih-beers-api2.herokuapp.com/beers";
 
+//get list of beers from API
 useEffect(() => {
   //get beers from API
   axios.get(apiURL).then((response) => {

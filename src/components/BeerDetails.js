@@ -1,11 +1,11 @@
 import { useParams, Link } from "react-router-dom";
-import { Row, Col, Space } from "antd";
+import { Row, Space } from "antd";
 import { LeftOutlined } from "@ant-design/icons";
 
 function BeerDetails(props) {
   const { beerId } = useParams();
 
-  //get data from props to show chosen beer through its ID
+  //get beer object from beer id
   const chosenBeer = props.beers.find((beerObj) => {
     return beerObj._id === beerId;
   });
@@ -50,21 +50,20 @@ function BeerDetails(props) {
             />
           </Row>
 
-            <h2 style={{ color: "black" }}>{chosenBeer.name}</h2>
-            <h4 style={{ color: "black" }}>
-              Attenuation Level: <b>{chosenBeer.attenuation_level}</b>
-            </h4>
+          <h2 style={{ color: "black" }}>{chosenBeer.name}</h2>
+          <h4 style={{ color: "black" }}>
+            Attenuation Level: <b>{chosenBeer.attenuation_level}</b>
+          </h4>
 
-            <h6 style={{ fontWeight: 700, color: "grey", fontSize: 24 }}>
-              {chosenBeer.tagline}
-            </h6>
+          <h6 style={{ fontWeight: 700, color: "grey", fontSize: 24 }}>
+            {chosenBeer.tagline}
+          </h6>
 
-            <span style={{ fontWeight: 700, color: "grey", fontSize: 24 }}>
-              First Brewed: {chosenBeer.first_brewed}
-            </span>
-            <p style={{fontSize: '1.5rem'}}>{chosenBeer.description}</p>
-            <span>{chosenBeer.contributed_by}</span>
-         
+          <span style={{ fontWeight: 700, color: "grey", fontSize: 24 }}>
+            First Brewed: {chosenBeer.first_brewed}
+          </span>
+          <p style={{ fontSize: "1.5rem" }}>{chosenBeer.description}</p>
+          <span>{chosenBeer.contributed_by}</span>
         </Row>
       )}
     </Row>
