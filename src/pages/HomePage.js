@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import allBeersImage from "../assets/beers.png";
 import newBeerImage from "../assets/new-beer.png";
 import randomBeerImage from "../assets/random-beer.png";
