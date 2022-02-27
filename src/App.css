@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.HomeSection{
+  width: 70%;
+}
+
+.HomeSectionText{
+  width: 90%;
+  text-align: left;
+}
+
+#home{
+  margin: 2rem auto;
+}
+
+.oneBeer img{
+  height: 7rem;
+}
+
+.oneBeer{
+ display: flex;
+ flex-direction: row;
+ margin: 1rem auto;
+ padding: 1rem 2rem;
+ border-bottom: 1px gray solid;
+ width: 20rem;
+}
+
+.oneBeerText {
+  text-align: left;
+  padding-left: 2rem;
+}
