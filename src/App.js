@@ -1,7 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from "react";
+import axios from 'axios';
 
 function App() {
+
+  const [selectedBeers, setSelectedBeers] = useState('');
+
+  useEffect(() => {
+    axios
+      .get('https://ih-beers-api2.herokuapp.com/beers')
+      .then((result) => {
+        console.log(result.data);
+        setSelectedBeers(result.data);
+      })
+      .catch();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
