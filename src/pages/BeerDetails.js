@@ -32,17 +32,17 @@ function BeerDetails(props) {
                 {singleBeer && (
                     <>
                         <div className="large-margin" key={singleBeer._id}>
-                            <img src={singleBeer.image_url} style={{ height: '300px' }} />
+                            <img src={singleBeer.image_url} style={{ height: '300px' }} alt=''/>
                             <div className="row large-space">
                                 <div>
-                                    <table className="border large right-align">
+                                    <table className="large">
                                         <thead></thead>
                                         <tbody className="large-padding">
-                                            <tr>
+                                            <tr className="left-align">
                                                 <td><h4>{singleBeer.name}</h4></td>
                                                 <td className="grey-text large-text">IBU: {singleBeer.ibu}</td>
                                             </tr>
-                                            <tr>
+                                            <tr className="right-align">
                                                 <td><h5>{singleBeer.tagline}</h5></td>
                                                 <td><strong>First brewed: <br />{singleBeer.first_brewed}</strong></td>
                                             </tr>

@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function RandomBeer(props) {
     const [randomBeer, setRandomBeer] = useState(null);
     const [fetching, setFetching] = useState(true);
-
-
-    const { beerId } = useParams();
 
     useEffect(() => {
         axios
@@ -32,7 +29,7 @@ function RandomBeer(props) {
                 {randomBeer && (
                     <>
                         <div className="large-margin" key={randomBeer._id}>
-                            <img src={randomBeer.image_url} style={{ height: '300px' }} />
+                            <img src={randomBeer.image_url} style={{ height: '300px' }} alt=''/>
                             <div className="row large-space">
                                 <div>
                                     <table className="border large right-align">

@@ -120,7 +120,7 @@ function NewBeer() {
                         />
                         </div>
 
-                        <button type="submit" className="responsive large medium-margin">Create Beer</button>
+                        <button type="submit" className="responsive large medium-margin cyan">Create Beer</button>
 
                     </form>
                 </div>

@@ -8,7 +8,7 @@ import RandomBeer from './pages/RandomBeer';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/beers" element={<Beers />} />
