@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { Card, Col, Button } from "antd";
+import { Card, Col} from "antd";
 import imgBeers from "../assets/beers.png";
 import imgRandomBeer from '../assets/random-beer.png';
 import imgNewBeer from '../assets/new-beer.png';
 
 function HomePage() {
   return (
-    <Col>
+    <Col className="card-container">
       <Card className="card">
         <Link to="/beers" className="link">
           <img src={imgBeers} alt="all the beers" className="cardImg" />

@@ -6,10 +6,10 @@ import RandomBeer from "./components/RandomBeer";
 
 function App() {
   return (
-    <div className="app">
-      <HomePage />
+    <div /* className="app" */>
 
       <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<Beers />} />
         <Route path="/random-beer" element={<RandomBeer />} />
         <Route path="/new-beer" element={<RandomBeer />} />
