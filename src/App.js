@@ -8,6 +8,7 @@ import ListOfBeers from "./componets/ListOfBeers"
 // import BeerDetails from "./componets/BeerDetails"
 import CreateBeer from "./componets/CreateBeer"
 import RandomBeer from "./componets/RandomBeer"
+import BeerDetails from "./componets/BeerDetails"
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers')
       .then((result) => {
-        console.log(result.data)
+        // console.log(result.data)
         setBeers(result.data);
       })
       .catch();
@@ -31,7 +32,8 @@ function App() {
       <Routes>
       <Route path='/' element={<Homepage />} />
       <Route path='/beers' element={<ListOfBeers beerList={beers} />} />
-      <Route path='/beers/:Id' element={<RandomBeer />} />
+      <Route path='/beers/:Id' element={<BeerDetails />} />
+      <Route path='/beers/random' element={<RandomBeer  />} />
       <Route path='/beers/create' element={<CreateBeer />} />
     </Routes>
     </div>
