@@ -14,25 +14,37 @@ function Beers(props) {
   return (
     <div>
       <Header />
-      {!props.beers && <h3>Loading...</h3>}
-      {props.beers &&
+      {!beers && <h3>Loading...</h3>}
+      {beers &&
         beers.map((beer) => {
           return (
-            <div key={randomId()}>
+            <div
+              key={randomId()}
+            >
               <NavLink
                 to={`/beers/${beer._id}`}
                 style={{ textDecoration: "none" }}
               >
-                <Row style={{ padding: 24 }}>
-                  <Col span={8}>
+                <Row
+                  style={{
+                    paddingBottom: 8,
+                    paddingLeft: 24,
+                    paddingRight: 24,
+                  }}
+                >
+                  <Col span={2}>
                     <h2 style={{ color: "black" }}>{beer.name}</h2>
                     <img
                       src={beer.image_url}
                       alt="flag"
-                      style={{ height: 120, paddingTop: 8 }}
+                      style={{
+                        height: 200,
+                        padding: 12,
+                        justifyContent: "center",
+                      }}
                     />
                   </Col>
-                  <Col span={8} style={{ lineHeight: 2, paddingTop: 24 }}>
+                  <Col span={2} style={{ lineHeight: 2, padding: 24 }}>
                     <span
                       style={{ fontWeight: 700, color: "grey", fontSize: 24 }}
                     >
@@ -43,9 +55,9 @@ function Beers(props) {
                       <b>Created by:</b>
                       {beer.contributed_by}
                     </span>
-                    <hr />
                   </Col>
                 </Row>
+                <hr style={{color: 'lightgray'}}/>
               </NavLink>
             </div>
           );

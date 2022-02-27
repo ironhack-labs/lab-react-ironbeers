@@ -1,6 +1,6 @@
 import './App.css';
 import HomePage from './components/HomePage';
-import { Routes, Route, useParams } from "react-router-dom"; 
+import { Routes, Route } from "react-router-dom"; 
 import Beers from "./components/Beers";
 import RandomBeer from "./components/RandomBeer";
 import axios from 'axios';
@@ -14,7 +14,6 @@ const apiURL = "https://ih-beers-api2.herokuapp.com/beers";
 useEffect(() => {
   //get beers from API
   axios.get(apiURL).then((response) => {
-    console.log(response.data);
     setBeers(response.data);
   })
   .catch((error) => {
