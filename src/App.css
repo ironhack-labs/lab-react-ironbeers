@@ -14,9 +14,10 @@
   margin-bottom: 24px;
 }
 
-.link h2, p {
+.link h2,
+p {
   font-weight: 200;
-  padding:0 5%;
+  padding: 0 5%;
 }
 
 .link {
@@ -32,4 +33,35 @@
 
 .card-container {
   margin: 24px;
+}
+
+.ant-input {
+  width: 80%;
+  height: 40px;
+  border-color: darkgrey;
+  border-style: none;
+  box-shadow: 0px 1px 0px lightgrey;
+  padding: 12px 8px;
+  margin-top: 12px;
+  font-size: 1.5rem;
+}
+
+.form-field {
+  margin-top: 36px;
+  padding-left: 12px;
+}
+
+.submit-btn {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60px;
+  border-color: darkgrey;
+  border-style: none;
+  box-shadow: 0px 1px 0px lightgrey;
+  padding: 12px 8px;
+  margin: 36px auto;
+  font-size: 1.5rem;
+  background-color: var(--main-bg-color);
 }

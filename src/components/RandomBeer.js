@@ -1,12 +1,10 @@
 import { Row } from "antd";
-import BeerDetails from "./BeerDetails";
 import Header from "./Header";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 function RandomBeer() {
   const [randomBeer, setRandomBeer] = useState([]);
-  console.log("random beer", randomBeer);
   
 const randomBeerUrl = "https://ih-beers-api2.herokuapp.com/beers/random";
 
