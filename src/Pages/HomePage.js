@@ -1,10 +1,14 @@
 import Card from "../components/Card";
+import beers from "../assets/beers.png";
+import newBeer from "../assets/new-beer.png";
+import randomBeer from "../assets/random-beer.png";
 
 function HomePage() {
+
   return (
     <div>
       <Card
-        image="..assets/beers.png"
+        image={beers}
         title="All Beers"
         text="Vangelis billions upon billions circumnavigated venture
              Sea of Tranquility light years. Vastness is bearable only through love Apollonius of Perga vanquish 
@@ -13,7 +17,7 @@ function HomePage() {
         url="/beers"
       />
       <Card
-        image="assets/random-beer.png"
+        image={randomBeer}
         title="Random Beers"
         text="The carbon in our apple pies emerged into consciousness at the edge of forever concept of
            the number one from which we spring emerged into consciousness and billions upon billions upon billions upon 
@@ -21,7 +25,7 @@ function HomePage() {
         url="/random-beer"
       />
       <Card
-        image="assets/new-beer.png"
+        image={newBeer}
         title="New Beer"
         text="Vangelis billions upon billions circumnavigated venture
              Sea of Tranquility light years. Vastness is bearable only through love Apollonius of Perga vanquish 
