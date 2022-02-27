@@ -2,7 +2,7 @@ import Header from "./Header";
 
 function NewBeer() {
     return (
-      <div className="centralize">
+      <div>
         <Header />
         <h1>All Beers</h1>
       </div>
