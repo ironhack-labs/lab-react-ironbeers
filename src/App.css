@@ -28,13 +28,58 @@
   color: #61dafb;
 }
 
-.beer-container {
-  border: 1px solid rgba(0, 0, 0, 0.329);
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: #141e27; */
 }
-.beer-img {
-  width: 100px;
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
 }
 
+#beerlist-page {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #141e27;
+}
+#beerlist-page .beers-container {
+  min-height: 100%;
+}
+#beer-img {
+  width: auto;
+  height: 200px;
+}
+
+.beers-container .beer-card {
+  background-color: #f9d371;
+}
+.beers-container > h1 {
+  margin-top: 2%;
+  color: white;
+  text-align: center;
+}
+.beers-container .form-label {
+  color: white;
+}
+
+.beers-container .btn {
+  background-color: #05aeb4;
+  color: white;
+  border: none;
+}
+.beers-container .btn:hover {
+  background-color: #058c90;
+}
+#header .logo {
+  padding-top: 2%;
+  width: 70px;
+  display: block;
+  margin: auto;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
