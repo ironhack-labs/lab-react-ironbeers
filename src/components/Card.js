@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 
 function Card(props) {
-  console.log(props.image);
   return (
     <div className="container-fluid card">
       <img src={props.image} alt={props.title}></img>
