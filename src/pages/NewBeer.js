@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 //import { useNavigate } from 'react-router-dom';
 
 export default function NewBeer() {
@@ -24,19 +24,22 @@ export default function NewBeer() {
                 // this for some reason only contains a message so redirect to details not possible
                 console.log(response.data);
                 //navigate(`/beers/${response.data._id}`);
-                setIsSuccess(true);
-                console.log("inputs after send:", formInputs);
                 setFormInputs((previous) => {
                     for (let key in previous) {
                         previous[key] = "";
                     }
                     return previous
-                });
-                // this also delays clearning the input fields :(
-                setTimeout(() => setIsSuccess(false), 5000);
+                });                
+                setIsSuccess(true);
             })
             .catch((err) => console.log("Error creating new Beer: ", err))
     }
+
+    useEffect(() => {
+        if (isSuccess) {
+            setTimeout(() => setIsSuccess(false), 3000);
+        }
+    }, [isSuccess])
 
     return (
         <div className="NewBeer">
