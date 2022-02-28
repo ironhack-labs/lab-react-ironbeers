@@ -19,17 +19,15 @@ function BeerDetails(props) {
   }, [beerId]);
 
   return (
-    <>
+    <div>
       <header>
-        <Link to="/">
-          <i>home</i>
-        </Link>
+        <Link to="/">home</Link>
       </header>
         {fetching && <div></div>}
         {details && (
           <>
             <div key={details._id}>
-              <img src={details.image_url} style={{ height: "300px" }} alt="" />
+              <img src={details.image_url} style={{ height: "360px" }} alt="" />
               <h4>{details.name}</h4>
               IBU: {details.ibu}
               <h5>{details.tagline}</h5>
@@ -43,7 +41,7 @@ function BeerDetails(props) {
             {details.contributed_by}
           </>
         )}  
-    </>
+    </div>
   );
 }
 

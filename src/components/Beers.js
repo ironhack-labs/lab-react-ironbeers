@@ -15,11 +15,9 @@ function Beers() {
   }, []);
 
   return (
-    <>
+    <div>
       <header>
-        <Link to="/">
-          <i>home</i>
-        </Link>
+        <Link to="/">home</Link>
       </header>
 
         {fetching && <div></div>}
@@ -44,7 +42,7 @@ function Beers() {
             <hr />
           </div>
         ))}
-    </>
+    </div>
   );
 }
 
