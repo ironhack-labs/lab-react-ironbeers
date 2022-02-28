@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.homeImageLinks {
+  margin-bottom: 20px;
+}
+
+.homeImageLinks a {
+  color: slategray;
+  font-size: 20px;
+  text-decoration: none;
+}
