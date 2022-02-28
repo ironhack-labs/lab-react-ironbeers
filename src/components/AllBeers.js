@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Spinner from "./Spinner";
 import { Link } from "react-router-dom";
+import Search from "./Search";
 
 function AllBeers(props) {
 const {beersList} = props;
@@ -30,6 +31,8 @@ const renderAllBeers = () => {
   return (
     <div>
       <Header />
+      <Search handleSearchInput={props.handleSearchInput}
+        searchInput={props.searchInput}/>
       {beersList.length === 0 ? (
         <Spinner/>
       ) : renderAllBeers()}

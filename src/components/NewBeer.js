@@ -48,27 +48,27 @@ function NewBeer(props) {
       <form onSubmit={handleFormSubmit}>
         <label>
           Name
-          <input type="text" name="name" value={newBeer.name} onChange={(e) => handleInputChange(e)} />
+          <input className="input-field" type="text" name="name" value={newBeer.name} onChange={(e) => handleInputChange(e)} />
         </label>
         <label>
           Tagline
-          <input type="text" name="tagline" value={newBeer.tagline} onChange={(e) => handleInputChange(e)} />
+          <input className="input-field" type="text" name="tagline" value={newBeer.tagline} onChange={(e) => handleInputChange(e)} />
         </label>
         <label>
           Description
-          <input type="text" name="description" value={newBeer.description} onChange={(e) => handleInputChange(e)} />
+          <textarea className="input-field textarea" type="text" name="description" value={newBeer.description} onChange={(e) => handleInputChange(e)} />
         </label>
         <label>
           First brewed
-          <input type="text" name="first_brewed" value={newBeer.first_brewed} onChange={(e) => handleInputChange(e)} />
+          <input className="input-field" type="text" name="first_brewed" value={newBeer.first_brewed} onChange={(e) => handleInputChange(e)} />
         </label>
         <label>
           Brewers tips
-          <input type="text" name="brewers_tips" value={newBeer.brewers_tips} onChange={(e) => handleInputChange(e)} />
+          <input className="input-field" type="text" name="brewers_tips" value={newBeer.brewers_tips} onChange={(e) => handleInputChange(e)} />
         </label>
         <label>
           Attenuation level
-          <input
+          <input className="input-field"
             type="number"
             min="0"
             max="100"
@@ -79,7 +79,7 @@ function NewBeer(props) {
         </label>
         <label>
           Contributed_by
-          <input
+          <input className="input-field"
             type="text"
             name="contributed_by"
             value={newBeer.contributed_by}
