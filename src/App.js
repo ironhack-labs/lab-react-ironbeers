@@ -1,8 +1,12 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import RandomBeer from "./pages/RandomBeer";
 import NewBeer from "./pages/NewBeer";
-import { Routes, Route } from "react-router-dom";
+import ListBeers from "./pages/ListBeers";
+import SingleBeer from "./pages/SingleBeer";
+import AddBeer from "./pages/AddBeer";
+
 
 function App() {
   return (
@@ -10,7 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/random-beer" element={<RandomBeer />} />
-        <Route path="/new-beer" element={<NewBeer />} />
+        <Route path="/beers" element={<ListBeers />} />
+        <Route path="/beers/:beerId" element={<SingleBeer />} />
+        <Route path="/new-beer" element={<AddBeer />} />
       </Routes>
     </div>
   );
