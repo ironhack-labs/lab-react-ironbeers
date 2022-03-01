@@ -21,6 +21,7 @@
 
 # STATE EXAMPLE 1 (one state)
 
+    
 # defining state
   const [newBeer, setNewBeer] = useState({
     name: '',
