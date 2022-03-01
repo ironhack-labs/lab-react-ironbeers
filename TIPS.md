@@ -22,7 +22,6 @@
 # STATE EXAMPLE 1 (one state)
 
 # defining state
-    
   const [newBeer, setNewBeer] = useState({
     name: '',
     tagline: '',
@@ -32,7 +31,7 @@
     attenuation_level: 0,
     contributed_by: '',
   });
-
+    
     <label>
         Name
         type="text" 
@@ -40,7 +39,7 @@
         value={newBeer.name} 
         onChange={(e) => handleInputChange(e)} />
     </label>
-
+    
     const handleInputChange = (e) => {
     setNewBeer({ ...newBeer, [e.target.name]: e.target.value });
   };
