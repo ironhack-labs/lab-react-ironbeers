@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 import { Component } from 'react/cjs/react.development'
 
 
@@ -10,7 +11,8 @@ class AllBeers extends Component {
     }
 
     componentDidMount() {
-        axios.get("https://ih-beers-api2.herokuapp.com/beers")
+        axios
+            .get("https://ih-beers-api2.herokuapp.com/beers")
             .then((response) => {
                 this.setState({
                     beers: response.data
@@ -23,16 +25,18 @@ class AllBeers extends Component {
             <div className='allBeers'>
                 {this.state.beers !== undefined
                     ? this.state.beers.map((beer) => (
-                        <div className='d-flex mt-4' key={beer.name}>
+                        <div className='d-flex mt-4' key={beer.name} style={{ width: 'auto' }}>
                             <div className=''>
-                                <img className='img-responsive' style={{width:'50px'}} src={beer.image_url} alt={beer.name} />
+                                <img className='img-responsive' style={{ width: '50px' }} src={beer.image_url} alt={beer.name} />
                             </div>
                             <div className='justify-content-start ms-5'>
                                 <h5>{beer.name}</h5>
-                                <p style={{color:'grey'}}>{beer.tagline}</p>
+                                <p style={{ color: 'grey' }}>{beer.tagline}</p>
                                 <small><strong>Created by:</strong> {beer.contributed_by}</small>
+                                <div className='mt-2'>
+                                    <Link to={`/beers/${beer.id}`} className="btn btn-info">Go somewhere</Link>
+                                </div>
                             </div>
-
                         </div>
                     )) : "Loading"}
                 <hr />
