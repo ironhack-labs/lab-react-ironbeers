@@ -14,18 +14,13 @@ console.log(beerId)
 
 useEffect(() => {
         axios
-            .get(`https://ih-beers-api2.herokuapp.com/`, {beerId})
+            .get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
             .then((response) => {
-                response.findById(beerId)
-                .then((beerById) => {
-                    console.log(beer)
-                })
                 console.log('response.data', response.data)
-                const oneBeer = response.data
-                setBeer(oneBeer)
+                setBeer(response.data)
             })
             .catch((error) => console.log(error))
-    })
+    }, [])
 
     // const detailsBeer = getBeer.find(beer => beer._id === beerId)
 
@@ -37,7 +32,10 @@ useEffect(() => {
             <div key={beer._id}>
             <img src={beer.image_url} alt="Bierflasche" />
             <h1>{beer.name}</h1>
-            <h3>{beer.tagline}</h3>
+            <h2>{beer.tagline}</h2>
+            <h3>{beer.first_brewed}</h3>
+            <h3>{beer.attenuation_level}</h3>
+            <p>{beer.description}</p>
             <h4>Created by: {beer.contributed_by}</h4>
             </div>
         )}

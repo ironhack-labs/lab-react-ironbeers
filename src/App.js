@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Beer from './pages/Beer'
 import New from './pages/New'
 import Random from './pages/Random'
-import Search from './pages/Search'
 import Detail from './pages/Detail'
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
       <Route path='/beers' element={<Beer />}/>
       <Route path='/new' element={<New />}/>
       <Route path='/random' element={<Random />}/>
-      <Route path='/search'element={<Search/>}/>
       <Route path='beers/:id' element={<Detail />}/>
     </Routes>
     </div>
