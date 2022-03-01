@@ -6,7 +6,7 @@ function NavBar() {
         <div className="nav-div">
             <nav className="navbar navbar-light">
                 <div className="container-fluid justify-content-center">
-                <NavLink ActiveClassName="active" to="/">
+                <NavLink to="/">
                 <i className='fa fa-home' style={{color: 'white'}}></i>
                 </NavLink>
                 </div>
