@@ -22,25 +22,26 @@ class AllBeers extends Component {
 
     render() {
         return (
-            <div className='allBeers'>
-                {this.state.beers !== undefined
-                    ? this.state.beers.map((beer) => (
-                        <div className='d-flex mt-4' key={beer.name} style={{ width: 'auto' }}>
-                            <div className=''>
-                                <img className='img-responsive' style={{ width: '50px' }} src={beer.image_url} alt={beer.name} />
-                            </div>
-                            <div className='justify-content-start ms-5'>
-                                <h5>{beer.name}</h5>
-                                <p style={{ color: 'grey' }}>{beer.tagline}</p>
-                                <small><strong>Created by:</strong> {beer.contributed_by}</small>
-                                <div className='mt-2'>
-                                    <Link to={`/beers/${beer.id}`} className="btn btn-info">Go somewhere</Link>
+            <>
+                <div className='allBeers'>
+                    {this.state.beers !== undefined
+                        ? this.state.beers.map((beer) => (
+                            <div className='d-flex mt-4' key={beer.name} style={{ width: 'auto' }}>
+                                <div className=''>
+                                    <img className='img-responsive' style={{ width: '50px' }} src={beer.image_url} alt={beer.name} />
+                                </div>
+                                <div className='justify-content-start ms-5'>
+                                    <h5>{beer.name}</h5>
+                                    <p style={{ color: 'grey' }}>{beer.tagline}</p>
+                                    <small><strong>Created by:</strong> {beer.contributed_by}</small>
+                                    <div className='mt-2'>
+                                        <Link to={`/beers/${beer._id}`} className="btn btn-info">Detail: <small>{beer.name}</small></Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    )) : "Loading"}
-                <hr />
-            </div>
+                        )) : "Loading"}
+                </div>
+            </>
         )
     }
 }

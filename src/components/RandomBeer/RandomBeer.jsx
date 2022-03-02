@@ -1,9 +1,17 @@
-function RandomBeer (){
-    return(
-        <div>
-            RandomBeer
-        </div>
-    )
+import { Component } from "react"
+
+class RandomBeer extends Component{
+    
+
+    
+
+    render() {
+        return(
+            <div>
+                RandomBeer
+            </div>
+        )
+    }
 }
 
 export default RandomBeer

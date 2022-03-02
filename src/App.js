@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
 import AllBeers from './components/AllBeers/AllBeers';
-import SingleBeerWrapper from './components/SingleBeer/SingleBeer';
+import { SingleBeerWrapper } from './components/Beer/SingleBeer';
 import HomeBeers from './components/HomeBeer/HomeBeer';
 import NavBar from './components/NavBar/NavBar';
 import NewBeer from './components/NewBeer/NewBeer';
