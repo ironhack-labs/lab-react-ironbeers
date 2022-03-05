@@ -1,33 +1,41 @@
 import React from 'react';
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import axios from "axios";
+import { NavLink, useParams } from "react-router-dom";
+import "./RandomBeer.css";
 
 function RandomBeer() {
-  
-  const [selectedBeers, setSelectedBeers] = useState('');
+
+  const [selectedBeer, setSelectedBeer] = useState([]);
 
   useEffect(() => {
     axios
-      .get('https://ih-beers-api2.herokuapp.com/beers')
+      .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
       .then((result) => {
         console.log(result.data);
-        setSelectedBeers(result.data);
+        setSelectedBeer(result.data);
       })
-      .catch();
+      .catch( (ex) => {
+        console.log(ex)
+      });
   }, []);
 
   return (
-    <div className="col-5" style={{maxHeight: '90vh', overflow: 'scroll'}}>
+    <>
     <div className="list-group">
-      {/* { 
-        selectedBeers.countries.map( (element, index) => {
-          return (
-              <a key={index} className="list-group-item list-group-item-action" href={element.alpha3Code}>{element.name.common}</a>
-          )
-        })
-      } */}
+        <div className="list-group-item list-group-item-action">
+        <div><img src={selectedBeer.image_url}></img></div>
+            <div></div> 
+        <div className="name">{selectedBeer.name}</div>
+        <div className="tagline">{selectedBeer.tagline}</div>
+        <div className="firstBrewed">{selectedBeer.first_brewed}</div>
+        <div className="attenuationLevel">{selectedBeer.attenuation_level}</div>
+        <div className="description">{selectedBeer.description}</div>
+
+        <div className="createdBy">created by: {selectedBeer.contributed_by}</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
