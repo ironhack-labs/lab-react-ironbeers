@@ -23,7 +23,7 @@ function RandomBeer() {
   return (
     <>
     <div className="list-group">
-        <div className="list-group-item list-group-item-action">
+        <div className="list-group-item">
         <div><img src={selectedBeer.image_url}></img></div>
             <div></div> 
         <div className="name">{selectedBeer.name}</div>

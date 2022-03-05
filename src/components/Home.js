@@ -27,44 +27,45 @@ function App() {
           <br></br>
           
           <a href="/AllBeers">
-            <img src={allBeersImage} alt="AllBeers" />
+            <img src={allBeersImage} alt="AllBeers" className="m-5"/>
 
-            <h1>All Beers</h1>
+            <h1 className="m-5">All Beers</h1>
 
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+            <div className="container">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
               ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo 
               dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit 
               amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
               ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
               et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            </div>
           </a>
 
           <a href="/RandomBeer">
-            <img src={randomBeerImage} alt="RandomBeer" />
-            <h1>Random Beer</h1>
+            <img src={randomBeerImage} alt="RandomBeer" className="m-5"/>
+            <h1 className="m-5">Random Beer</h1>
 
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+            <div className="container">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
               ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo 
               dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit 
               amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
               ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
               et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            </div>
           </a>
 
           <a href="/NewBeer">
-            <img src={newBeerImage} alt="NewBeer" />
-            <h1>New Beer</h1>
+            <img src={newBeerImage} alt="NewBeer" className="m-5"/>
+            <h1 className="m-5">New Beer</h1>
 
-            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+            <div className="container">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
               ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo 
               dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit 
               amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
               ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
               et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            </div>
           </a>
+          <br></br><br></br><br></br><br></br><br></br><br></br>
         </paragraph>
     </div>
   );
