@@ -7,15 +7,19 @@ import Home from "./components/Home";
 import RandomBeer from "./components/RandomBeer";
 
 function App() {
+
+
+
+  
   return (
     <div className="App">
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} /> 
-        <Route path="/allBeers" element={<AllBeers />} />
-        <Route path="/randomBeer" element={<RandomBeer />} />
-        <Route path="/newBeer" element={<NewBeer />} />
+        <Route path="/AllBeers" element={<AllBeers />} />
+        <Route path="/RandomBeer" element={<RandomBeer />} />
+        <Route path="/NewBeer" element={<NewBeer />} />
       </Routes>
     </div>
   );

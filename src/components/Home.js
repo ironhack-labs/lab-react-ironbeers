@@ -22,12 +22,11 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+
       <paragraph>
           <br></br>
           
-          <a href="/allBeers">
+          <a href="/AllBeers">
             <img src={allBeersImage} alt="AllBeers" />
 
             <h1>All Beers</h1>
@@ -41,7 +40,7 @@ function App() {
             </p>
           </a>
 
-          <a href="/randomBeer">
+          <a href="/RandomBeer">
             <img src={randomBeerImage} alt="RandomBeer" />
             <h1>Random Beer</h1>
 
@@ -54,7 +53,7 @@ function App() {
             </p>
           </a>
 
-          <a href="/newBeer">
+          <a href="/NewBeer">
             <img src={newBeerImage} alt="NewBeer" />
             <h1>New Beer</h1>
 
