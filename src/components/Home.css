@@ -1,0 +1,18 @@
+
+.h1
+{
+  text-align: left;
+}
+
+.text
+{
+  text-align: left;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a { 
+    text-decoration: none; 
+}
