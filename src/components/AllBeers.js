@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 export const AllBeers = () => {
     const [beers, setBeers] = useState([]);
+    const [userSearch, setUserSearch] = useState("");
 
     useEffect(()=>{
 
@@ -17,17 +18,27 @@ export const AllBeers = () => {
 
     },[]);
 
-    if(beers.length === 0) {
+    const handleFilter = (e) => {
+        
+        setUserSearch(e.target.value);
 
-        return (<p>Loading beers...</p>);
-    }
+        (async () => {
+
+            let response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${e.target.value}`);
+            setBeers(response.data);
+            
+        })();
+    };
+
 
     return (
         <div className="AllBeers"> 
             <nav>
                 <Link to="/"> <h3>Home</h3> </Link>
             </nav>
-            
+            <label>
+                <input type="text" id="searchBeer" value={userSearch} onChange={handleFilter}/>
+            </label>
             {beers.map(beer => {
 
                 return(
