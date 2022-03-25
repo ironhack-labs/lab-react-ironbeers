@@ -6,6 +6,7 @@ import { HomePage } from './components/HomePage';
 import { NewBeer } from './components/NewBeer';
 import { RandomBeer } from './components/RandomBeer';
 import { AllBeers } from './components/AllBeers';
+import { BeerDetails } from './components/BeerDetails';
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/beers' element={<AllBeers />} />
         <Route path='/random-beer' element={<RandomBeer />} />
         <Route path='/new-beer' element={<NewBeer />} />
+        <Route path='/beers/:beerId' element={<BeerDetails />} />
       </Routes>
 
       

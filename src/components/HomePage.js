@@ -1,6 +1,6 @@
 //jshint esversion:9
 
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import allBeers from './../assets/beers.png';
 import randomBeer from './../assets/random-beer.png';
 import newBeer from './../assets/new-beer.png';

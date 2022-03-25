@@ -9,26 +9,32 @@ export const AllBeers = () => {
     useEffect(()=>{
 
         (async () => {
+
             let response = await axios.get("https://ih-beers-api2.herokuapp.com/beers");
             setBeers(response.data);
 
-            console.log('response.data =>', response.data);
         })();
 
     },[]);
+
+    if(beers.length === 0) {
+
+        return (<p>Loading beers...</p>);
+    }
 
     return (
         <div className="AllBeers"> 
             <nav>
                 <Link to="/"> <h3>Home</h3> </Link>
             </nav>
-
+            
             {beers.map(beer => {
 
                 return(
-                    <div className="oneBeer">
                     
-                        <div key={beer._id} className="beers-beer-container">
+                    <div key={beer._id} className="beers-beer">
+                    
+                        <div className="beers-beer-container">
 
                             <div className='beers-beer-img-container'>
                                 <img src={beer.image_url} alt="beer" style={{height: "200px"}}/>
