@@ -11,3 +11,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.oneBeer {
+  border-bottom: 1px solid #CCC;
+}
+
+
+.beers-beer-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.beers-beer-img-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.beers-beer-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.beers-beer-info-name a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.beers-beer-tagline {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: left;
+  color: #888;
+}
