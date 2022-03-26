@@ -32,9 +32,14 @@ export const AllBeers = () => {
 
 
     return (
-        <div className="AllBeers"> 
-            <nav>
-                <Link to="/"> <h3>Home</h3> </Link>
+        <div className="AllBeers col-12"> 
+
+            <nav className='navbar navbar-dark bg-primary'>
+
+                <div className="container-fluid">
+
+                    <Link to="/" className="navbar-brand"> <h3>Home</h3> </Link>
+                </div>
             </nav>
             <label>
                 <input type="text" id="searchBeer" value={userSearch} onChange={handleFilter}/>
@@ -60,7 +65,7 @@ export const AllBeers = () => {
                                 </h2>
             
                                 <p className='beers-beer-tagline'>{beer.tagline}</p>
-                                <p><b>Contributed by: </b>{beer.contributed_by.split("<")[0].trim()}</p>
+                                <p><b>Contributed by: </b>{beer.contributed_by}</p>
                             </div>
 
                         </div>

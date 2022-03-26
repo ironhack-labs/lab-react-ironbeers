@@ -11,18 +11,18 @@ import { BeerDetails } from './components/BeerDetails';
 
 
 function App() {
+
   return (
-    <div className="App">
-
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/beers' element={<AllBeers />} />
-        <Route path='/random-beer' element={<RandomBeer />} />
-        <Route path='/new-beer' element={<NewBeer />} />
-        <Route path='/beers/:beerId' element={<BeerDetails />} />
-      </Routes>
-
-      
+    <div className="App container-fluid">
+      <div className="row">
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/beers' element={<AllBeers />} />
+          <Route path='/random-beer' element={<RandomBeer />} />
+          <Route path='/new-beer' element={<NewBeer />} />
+          <Route path='/beers/:beerId' element={<BeerDetails />} />
+        </Routes>
+      </div>
 
     </div>
   );

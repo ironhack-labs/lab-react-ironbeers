@@ -31,8 +31,8 @@ export const RandomBeer = () => {
   return (
 
     <div className="beer-details-container" >
-      <nav>
-          <Link to="/"> <h3>Home</h3> </Link>
+      <nav className='class="navbar navbar-dark bg-primary"'>
+        <Link to="/"> <h3>Home</h3> </Link>
       </nav>
   
 
