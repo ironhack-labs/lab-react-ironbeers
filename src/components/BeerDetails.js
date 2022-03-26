@@ -3,10 +3,9 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {Link} from 'react-router-dom';
 
 export const BeerDetails = () => {
-
+    
     const [beer, setBeer] = useState({});
     const {beerId} = useParams();
 
@@ -33,10 +32,6 @@ export const BeerDetails = () => {
     return(
         
         <div className="beer-details-container" >
-            <nav>
-                <Link to="/"> <h3>Home</h3> </Link>
-            </nav>
-        
 
             <div className='beers-beer-img-container'>
                 <img src={beer.image_url} alt="beer" style={{height: "350px"}}/>

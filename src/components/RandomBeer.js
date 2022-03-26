@@ -31,10 +31,6 @@ export const RandomBeer = () => {
   return (
 
     <div className="beer-details-container" >
-      <nav className='class="navbar navbar-dark bg-primary"'>
-        <Link to="/"> <h3>Home</h3> </Link>
-      </nav>
-  
 
       <div className='beers-beer-img-container'>
           <img src={beer.image_url} alt="beer" style={{height: "350px"}}/>

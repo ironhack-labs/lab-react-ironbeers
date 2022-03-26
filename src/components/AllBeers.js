@@ -1,11 +1,13 @@
 //jshint esversion:9
 import axios from 'axios';
-import {Link} from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 
 export const AllBeers = () => {
+
     const [beers, setBeers] = useState([]);
     const [userSearch, setUserSearch] = useState("");
+    
 
     useEffect(()=>{
 
@@ -34,13 +36,6 @@ export const AllBeers = () => {
     return (
         <div className="AllBeers col-12"> 
 
-            <nav className='navbar navbar-dark bg-primary'>
-
-                <div className="container-fluid">
-
-                    <Link to="/" className="navbar-brand"> <h3>Home</h3> </Link>
-                </div>
-            </nav>
             <label>
                 <input type="text" id="searchBeer" value={userSearch} onChange={handleFilter}/>
             </label>
