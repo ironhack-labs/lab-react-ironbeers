@@ -30,19 +30,23 @@ export const SingleBeer = () => {
           boxShadow: "20px 20px 25px lightgrey",
           marginTop: "40px",
           padding: "35px",
+          backgroundColor: "#f2f2f2",
         }}
       >
         <img
           src={oneBeer.image_url}
           className="card-img-top"
           alt="single beer"
-          style={{ width: "10%", alignSelf: "center" }}
+          style={{
+            width: "10%",
+            alignSelf: "center",
+          }}
         />
         <div className="card-body text-start">
           <h1
             style={{
               color: "#4db8ff",
-              fontSize: "5rem",
+              fontSize: "3.5rem",
               marginTop: "20px",
             }}
             className="text-center"
@@ -51,17 +55,17 @@ export const SingleBeer = () => {
           </h1>
           <h4
             className="card-text text-center"
-            style={{ color: "grey", fontWeight: "bolder" }}
+            style={{ color: "grey", fontWeight: "bolder", fontSize: "1.2rem" }}
           >
             {oneBeer.tagline}
           </h4>
           <p className="card-text" style={{ marginTop: "20px" }}>
-            <small>Attenuation level: {oneBeer.attenuation_level}</small>
+            <small>Attenuation level: {oneBeer.attenuation_level}%</small>
           </p>
           <p className="card-text">
             <small>First brewed: {oneBeer.first_brewed}</small>
           </p>
-          <p className="card-text" style={{ fontSize: "1.5rem" }}>
+          <p className="card-text" style={{ fontSize: "1rem" }}>
             {oneBeer.description}
           </p>
           <p className="card-text">

@@ -11,13 +11,21 @@ import { NewBeer } from "./components/NewBeer";
 function App() {
   return (
     <div className="App">
-      <>
-        <header style={{ backgroundColor: "#4db8ff", height: "50px" }}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <header
+          style={{
+            width: "80%",
+            backgroundColor: "#4db8ff",
+            height: "50px",
+            borderRadius: "0 0 80px 80px",
+            boxShadow: "5px 5px 10px lightgrey",
+          }}
+        >
           <Link to="/">
             <img src={homeIcon} alt="home-icon" />
           </Link>
         </header>
-      </>
+      </div>
 
       <Routes>
         <Route path="/" element={<Homepage />} />

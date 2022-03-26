@@ -5,6 +5,7 @@ import axios from "axios";
 
 export const ListBeers = () => {
   const [beersList, setBeersList] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     const getBeers = async () => {
@@ -12,11 +13,10 @@ export const ListBeers = () => {
         "https://ih-beers-api2.herokuapp.com/beers"
       );
       setBeersList(beersFromApi.data);
+      setLoading(false);
     };
     getBeers();
   }, []);
-
-  console.log(beersList);
 
   return (
     <div
@@ -27,6 +27,12 @@ export const ListBeers = () => {
         justifyContent: "space-around",
       }}
     >
+      {isLoading && (
+        <div className="spinner-border text-info" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      )}
+
       {beersList.map((beer) => {
         return (
           <div
@@ -37,6 +43,7 @@ export const ListBeers = () => {
               marginTop: "40px",
               boxShadow: "10px 10px 25px lightgrey",
               borderRadius: "30px",
+              backgroundColor: "#f2f2f2",
             }}
           >
             <div className="row g-0">

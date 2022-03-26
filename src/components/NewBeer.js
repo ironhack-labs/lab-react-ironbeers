@@ -149,8 +149,12 @@ export const NewBeer = () => {
         <div className="text-center">
           <button
             type="submit"
-            className="btn btn-outline-success"
-            style={{ borderRadius: "20px", fontSize: "1.3rem" }}
+            className="btn btn-outline-success text-center"
+            style={{
+              borderRadius: "20px",
+              fontSize: "1.3rem",
+              marginBottom: "10%",
+            }}
           >
             Create
           </button>
