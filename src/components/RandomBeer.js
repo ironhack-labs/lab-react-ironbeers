@@ -51,21 +51,33 @@ export const RandomBeer = () => {
           >
             {randoBeer.tagline}
           </h4>
-          <p className="card-text" style={{ marginTop: "20px" }}>
-            <small>Attenuation level: {randoBeer.attenuation_level}</small>
-          </p>
-          <p className="card-text">
-            <small>First brewed: {randoBeer.first_brewed}</small>
-          </p>
+          {randoBeer.attenuation_level ? (
+            <p className="card-text" style={{ marginTop: "20px" }}>
+              <small>Attenuation level: {randoBeer.attenuation_level}</small>
+            </p>
+          ) : (
+            <p></p>
+          )}
+          {randoBeer.first_brewed ? (
+            <p className="card-text">
+              <small>First brewed: {randoBeer.first_brewed}</small>
+            </p>
+          ) : (
+            <p></p>
+          )}
           <p className="card-text" style={{ fontSize: "1.5rem" }}>
             {randoBeer.description}
           </p>
-          <p className="card-text">
-            <small>
-              Created by:
-              <i> {randoBeer.contributed_by}</i>
-            </small>
-          </p>
+          {randoBeer.contributed_by ? (
+            <p className="card-text">
+              <small>
+                Created by:
+                <i> {randoBeer.contributed_by}</i>
+              </small>
+            </p>
+          ) : (
+            <p></p>
+          )}
           <Link to="/beers">
             <p>Go back</p>
           </Link>

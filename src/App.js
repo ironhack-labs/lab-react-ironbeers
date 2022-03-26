@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { ListBeers } from "./components/ListBeers";
 import { SingleBeer } from "./components/SingleBeer";
 import { RandomBeer } from "./components/RandomBeer";
+import { NewBeer } from "./components/NewBeer";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Route path="/beers" element={<ListBeers />} />
         <Route path="/beers/:beerId" element={<SingleBeer />} />
         <Route path="/random-beer" element={<RandomBeer />} />
-        <Route path="/new-beer" />
+        <Route path="/new-beer" element={<NewBeer />} />
       </Routes>
     </div>
   );

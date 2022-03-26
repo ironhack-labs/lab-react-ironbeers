@@ -76,12 +76,14 @@ export const Homepage = () => {
           borderRadius: "30px",
         }}
       >
-        <img
-          src={newBeerImg}
-          className="card-img-top"
-          alt="new beer"
-          style={{ borderRadius: "30px" }}
-        />
+        <Link to="/new-beer">
+          <img
+            src={newBeerImg}
+            className="card-img-top"
+            alt="new beer"
+            style={{ borderRadius: "30px" }}
+          />
+        </Link>
         <div className="card-body text-start">
           <h2 className="card-title" style={{ color: "#4db8ff" }}>
             New Beer
