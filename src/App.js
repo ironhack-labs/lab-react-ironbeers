@@ -7,25 +7,31 @@ import { ListBeers } from "./components/ListBeers";
 import { SingleBeer } from "./components/SingleBeer";
 import { RandomBeer } from "./components/RandomBeer";
 import { NewBeer } from "./components/NewBeer";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
+
+  // console.log(location.pathname);
   return (
     <div className="App">
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <header
-          style={{
-            width: "80%",
-            backgroundColor: "#4db8ff",
-            height: "50px",
-            borderRadius: "0 0 80px 80px",
-            boxShadow: "5px 5px 10px lightgrey",
-          }}
-        >
-          <Link to="/">
-            <img src={homeIcon} alt="home-icon" />
-          </Link>
-        </header>
-      </div>
+      {location.pathname !== "/" && (
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <header
+            style={{
+              width: "80%",
+              backgroundColor: "#4db8ff",
+              height: "50px",
+              borderRadius: "0 0 80px 80px",
+              boxShadow: "5px 5px 20px lightgrey",
+            }}
+          >
+            <Link to="/">
+              <img src={homeIcon} alt="home-icon" />
+            </Link>
+          </header>
+        </div>
+      )}
 
       <Routes>
         <Route path="/" element={<Homepage />} />

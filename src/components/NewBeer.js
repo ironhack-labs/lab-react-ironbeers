@@ -151,6 +151,7 @@ export const NewBeer = () => {
             type="submit"
             className="btn btn-outline-success text-center"
             style={{
+              width: "50%",
               borderRadius: "20px",
               fontSize: "1.3rem",
               marginBottom: "10%",
