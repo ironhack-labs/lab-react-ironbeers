@@ -2,11 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { Searchbar } from "./Searchbar";
 
 export const ListBeers = () => {
   const [beersList, setBeersList] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const getBeers = async () => {
@@ -19,23 +19,43 @@ export const ListBeers = () => {
     getBeers();
   }, []);
 
-  //Searchbar
-  // const [filterBeers, setFilterBeers] = useState(beersList);
-
-  // const filterBeerList = (str) => {
-  //   let filteredBeer =
-  //     str === ""
-  //       ? filterBeers
-  //       : filterBeers.filter((beer) =>
-  //           beer.name.toLocaleLowerCase().includes(str.toLocaleLowerCase())
-  //         );
-
-  //   setFilterBeers(filteredBeer);
-  // };
+  // Searchbar;
+  const filterBeerList = (e) => {
+    setQuery(e.target.value);
+    setLoading(true);
+    (async () => {
+      let beerFoundApi = await axios.get(
+        `https://ih-beers-api2.herokuapp.com/beers/search?q=${e.target.value}`
+      );
+      setBeersList(beerFoundApi.data);
+      setLoading(false);
+    })();
+  };
 
   return (
     <>
-      <Searchbar />
+      <div>
+        <label for="searchbar"></label>
+        <input
+          type="text"
+          placeholder="Search by name..."
+          style={{
+            width: "50%",
+            marginTop: "30px",
+            borderRadius: "5px",
+            border: "1px solid lightgrey",
+          }}
+          onChange={filterBeerList}
+          value={query}
+        />
+      </div>
+
+      {isLoading && (
+        <div className="spinner-border text-info" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      )}
+
       <div
         style={{
           display: "flex",
@@ -44,12 +64,6 @@ export const ListBeers = () => {
           justifyContent: "space-around",
         }}
       >
-        {isLoading && (
-          <div className="spinner-border text-info" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
-        )}
-
         {beersList.map((beer) => {
           return (
             <div

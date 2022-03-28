@@ -15,7 +15,6 @@ export const SingleBeer = () => {
         `https://ih-beers-api2.herokuapp.com/beers/${beerId}`
       );
       setOneBeer(beerFromApi.data);
-      console.log(beerFromApi.data);
     };
     getBeer();
   }, [beerId]);
