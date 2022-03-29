@@ -3,7 +3,7 @@ import HomePage from './components/HomePage/HomePage'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar';
 
-
+// info para usar react-router-dom https://v5.reactrouter.com/web/guides/quick-start
 //No se si es buena practica pero he puesto Navbar fuera de routes de esta manera siempre sera visible, presupongo que
 //con el footer pasara igual
 
