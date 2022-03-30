@@ -3,6 +3,7 @@ import './BeerDetails.css'
 import { useParams } from 'react-router-dom'
 import Loading from '../Loading/Loading';
 import { useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 
 function BeerDetails(props) {
@@ -38,6 +39,8 @@ function BeerDetails(props) {
                             </div>
                             </div>
                             <p><strong>Created by: </strong>{beer.contributed_by}</p>
+
+                            <Link to="/beers"><h3>All Beers</h3></Link>
                         </div>
                 </div>
                 
