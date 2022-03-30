@@ -14,7 +14,28 @@ const BeersList = (props) => {
    
     const [loading, setLoading] = useState(true)
     const [APIData, setAPIData] = useState([])
+ 
     const [filteredResults, setFilteredResults] = useState([]);
+
+
+    // useEffect(() => {
+    //     const timeout = setTimeout(() => {
+    //       console.log(state);
+    //     }, 5000);
+    
+    //     return () => {
+    //       // clears timeout before running the new effect
+    //       clearTimeout(timeout);
+    //     };
+    //   }, [state]);
+
+
+    // he añadido 3 segundos de delay para que se pueda cargar la pagina y quede un poco "pro"
+    useEffect(() => {
+        if(beers) {
+            setTimeout(() => setLoading(false), 3000)
+        }
+    }, [beers])
 
     const [searchInput, setSearchInput] = useState('');
     useEffect(() => {
@@ -37,24 +58,20 @@ const BeersList = (props) => {
         }
     }
 
-    useEffect(() => {
-        if(beers) {
-            setLoading(false)
-        }
-    }, [beers])
+    
   
 
     return (
         <>
         <div>
-            
+        {loading ? (<p><Loading/></p>) : (
         <div style={{ padding: 20 }}>
             <Input icon='search'
                 placeholder='Search...'
                 onChange={(e) => searchItems(e.target.value)}
             />
             <Card.Group itemsPerRow={3} style={{ marginTop: 20 }}>
-            {loading ? (<p><Loading/></p>)  :   (
+           
                 <div>
                { searchInput.length > 1 ? (
                     filteredResults.map((beer) => {
@@ -107,10 +124,12 @@ const BeersList = (props) => {
                         )
                     })
                 )} 
-                </div>) }
+                </div>
+
+              
 
             </Card.Group>
-        </div>
+        </div>) }
            
             {/* {loading ? (<p><Loading/></p>) : (
                 beers && beers.map(beer => (

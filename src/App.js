@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import BeerList from './components/BeerList/BeerList'
 import axios from 'axios';
 import BeerDetails from './components/BeerDetails/BeerDetails';
+import BeerForm from './components/BeerForm/BeerForm';
 
 // info para usar react-router-dom https://v5.reactrouter.com/web/guides/quick-start
 //No se si es buena practica pero he puesto Navbar fuera de routes de esta manera siempre sera visible, presupongo que
@@ -36,12 +37,12 @@ function App() {
     <div className="App">
       <Navbar/>
 
-      
+
       <Routes>
         <Route path="/" element={ <HomePage/> }></Route>
         <Route path="/beers" element={ <BeerList beers={ beers }/> }></Route>
         <Route path="/beers/:beerId" element={ <BeerDetails beers={ beers }/> }></Route>
-        <Route PAT></Route>
+        <Route path="/beers/createBeer" element={ <BeerForm/> }></Route>
       </Routes>
     </div>
   );
