@@ -35,6 +35,8 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
+
+      
       <Routes>
         <Route path="/" element={ <HomePage/> }></Route>
         <Route path="/beers" element={ <BeerList beers={ beers }/> }></Route>

@@ -40,7 +40,7 @@ function BeerDetails(props) {
                             </div>
                             <p><strong>Created by: </strong>{beer.contributed_by}</p>
 
-                            <Link to="/beers"><h3>All Beers</h3></Link>
+                            <Link to="/beers"><h4>All Beers</h4></Link>
                         </div>
                 </div>
                 
