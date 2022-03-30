@@ -15,6 +15,7 @@ const BeersList = (props) => {
     const [loading, setLoading] = useState(true)
     const [APIData, setAPIData] = useState([])
     const [filteredResults, setFilteredResults] = useState([]);
+
     const [searchInput, setSearchInput] = useState('');
     useEffect(() => {
         axios.get(`https://ih-beers-api2.herokuapp.com/beers`)
@@ -53,8 +54,9 @@ const BeersList = (props) => {
                 onChange={(e) => searchItems(e.target.value)}
             />
             <Card.Group itemsPerRow={3} style={{ marginTop: 20 }}>
-                
-                {searchInput.length > 1 ? (
+            {loading ? (<p><Loading/></p>)  :   (
+                <div>
+               { searchInput.length > 1 ? (
                     filteredResults.map((beer) => {
                         return (
                             <div className="wrapper">
@@ -104,7 +106,9 @@ const BeersList = (props) => {
                         </div>
                         )
                     })
-                )}
+                )} 
+                </div>) }
+
             </Card.Group>
         </div>
            
