@@ -1,22 +1,30 @@
 import React from 'react'
 import './BeerDetails.css'
 import { useParams } from 'react-router-dom'
-
-
-
+import Loading from '../Loading/Loading';
+import { useState, useEffect} from 'react'
 
 
 function BeerDetails(props) {
 
     const { beerId } = useParams();
 
-    const beer = props.beer.find(beer => beer._id === beerId)
+    const beer = props.beers.find(beer => beer._id === beerId)
 
-    console.log(beer)
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        if(beer) {
+            setLoading(false)
+        }
+    }, [beer])
+  
+
 
     return(
         <>
         <div>
+        {loading ? (<p><Loading/></p>) : (
                     <div className="wrapper">
                         <div className='product-img'>
                         <img src={beer.image_url} width="150" height="350" alt="beer" className="BeerImg"/>
@@ -33,7 +41,7 @@ function BeerDetails(props) {
                         </div>
                 </div>
                 
-           
+        )}
         </div>
         </>
     )

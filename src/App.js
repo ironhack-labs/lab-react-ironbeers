@@ -38,7 +38,8 @@ function App() {
       <Routes>
         <Route path="/" element={ <HomePage/> }></Route>
         <Route path="/beers" element={ <BeerList beers={ beers }/> }></Route>
-        <Route patch="/beers/:beerId" element={ <BeerDetails beers={ beers }/> }></Route>
+        <Route path="/beers/:beerId" element={ <BeerDetails beers={ beers }/> }></Route>
+        <Route PAT></Route>
       </Routes>
     </div>
   );
