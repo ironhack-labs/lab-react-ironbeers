@@ -1,10 +1,11 @@
 import React from 'react';
+import Form from '../../components/misc/Form/Form';
 
 const NewBeer = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <Form></Form>
+        </>
     );
 };
 
