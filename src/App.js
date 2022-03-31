@@ -7,6 +7,7 @@ import Allbeers from './views/AllBeers/AllBeers';
 import BeerItem from './views/BeerItem/BeerItem';
 import Home from './views/Home/Home'
 import RandomBeer from './views/RandomBeer/RandomBeer';
+import Form from './views/Form/Form'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
               <Route path="/allBeers" element={<Allbeers/>} />
               <Route path="/random"   element={<RandomBeer/>} />
               <Route path="/beers/:id" element={<BeerItem/>} />
+              <Route path="/beers/new-beer" element={<Form/>} />
               {/*  <Route path="*" element={<Navigate to="/" replace/>} /> */}
             </Routes>
       

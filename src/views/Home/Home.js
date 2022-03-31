@@ -17,13 +17,13 @@ const Home = () => {
         <Link to="/allBeers">
         <Homecard img={image1} title="All Beers " description={description}/>
         </Link>
-        
+
         <Link to="/random">
         <Homecard img={image2} title="Random Beer " 
         description={description}/>
         </Link>
 
-        <Link to="/new">
+        <Link to="/beers/new-beer">
         <Homecard img={image3} title="New Beer " description={description}/>
         </Link>
     </div>

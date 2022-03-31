@@ -21,7 +21,7 @@ const Navbar = () => {
               <Link to="/random">Random Beer</Link>
             </li>
             <li className="nav-item px-3">
-              <Link to="/new">Form</Link>
+              <Link to="/beers/new-beer">Form</Link>
             </li>
           </ul>
         </div>
