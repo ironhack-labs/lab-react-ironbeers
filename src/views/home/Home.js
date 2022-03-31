@@ -8,7 +8,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-      <div className="row row-cols-1 row-cols-md-1 g-4">
+      <div className="row row-cols-1 row-cols-md-1 g-4 mt-2">
         <div className="col">
           <div className="card">
             <img src={beers} className="card-img-top" alt="..." />

@@ -1,5 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Navbar from '../../components/misc/Navbar'
+import './Beers.css';
 /* import Beer from "./Beer"; */
 
 const Beers = () => {
@@ -12,7 +15,8 @@ const Beers = () => {
   }, []);
 
   return beers ? (
-    <div>
+      <div>
+      <Navbar />
       {beers.map((beer) => {
         return (
           <div className="beerContainer">
@@ -21,13 +25,13 @@ const Beers = () => {
                 <div className="col-md-4">
                   <img
                     src={beer.image_url}
-                    className="img-fluid rounded-start"
+                    className="img-fluid rounded-start "
                     alt={beer.name}
                   />
                 </div>
                 <div className="col-md-8">
                   <div className="card-body text-start">
-                    <h5 className="card-title fs-1">{beer.name}</h5>
+                    <Link to={`/beers/${beer._id}`} className="beersName">{beer.name}</Link>
                     <p className="card-text fs-4 text-muted">{beer.tagline}</p>
                     <p className="card-text">
                       <small className="fs-6 fw-bold">

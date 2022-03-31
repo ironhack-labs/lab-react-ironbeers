@@ -1,0 +1,13 @@
+.beersName {
+    font-size: 3.5rem;
+    text-decoration: none;
+    color: black;
+    text-align: left;
+}
+.beersName:hover {
+    color: #C96E12
+}
+
+.img-fluid {
+    width: 10rem
+}
