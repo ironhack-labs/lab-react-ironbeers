@@ -1,15 +1,30 @@
+import React, { useState, useEffect } from 'react'
 import { Routes, Route, Navigate } from "react-router";
 import Home from './views/Home/Home';
-import Header from './components/Header/Header';
+import ListBeers from "./views/ListBeer/ListBeer";
+import NewBeer from "./views/NewBeer/NewBeer";
+import RandomBeer from "./views/RandomBeer/RandomBeer";
+import { beerList } from './services/BeerService';
 import './App.scss';
 
 function App() {
+  const [beers, setBeers] = useState([])
+
+ useEffect(() => {
+    beerList()
+      .then((response) => {
+        setBeers(response)
+      })
+ },[])
+
+
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/random-beer" element={<Header /> } />
-        <Route path="/new-beer" element={<Header /> } />
+        <Route path="/beers" element={<ListBeers beers={beers} />} />
+        <Route path="/random-beer" element={<RandomBeer />} />
+        <Route path="/new-beer" element={<NewBeer /> } />
       </Routes>
       
     </div>

@@ -10,30 +10,30 @@ const Home = () => {
       <div className="row">
 
         <div className="col">
-          <div className="card" style={{width: "18rem"}}>
-            <Link to="/"><img src={beer} className="card-img-top" alt="my beer" /></Link>
+          <div className="card">
+            <Link to="/beers"><img src={beer} className="card-img-top" alt="my beer" /></Link>
             <div className="card-body">
-              <h5 className="card-title">All Beers</h5>
+              <h2 className="card-title">All Beers</h2>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
         </div>
 
         <div className="col">
-          <div className="card" style={{width: "18rem"}}>
+          <div className="card">
             <Link to="/random-beer"><img src={randomBeer} className="card-img-top" alt="my beer" /></Link>
             <div className="card-body">
-              <h5 className="card-title">Random Beer</h5>
+              <h2 className="card-title">Random Beer</h2>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
         </div>
 
         <div className="col">
-          <div className="card" style={{width: "18rem"}}>
+          <div className="card">
             <Link to="/new-beer"><img src={newBeer} className="card-img-top" alt="my beer" /></Link>
             <div className="card-body">
-              <h5 className="card-title">New Beer</h5>
+              <h2 className="card-title">New Beer</h2>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>

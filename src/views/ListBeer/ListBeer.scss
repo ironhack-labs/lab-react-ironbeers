@@ -1,0 +1,39 @@
+@import '../../assets/styles/general.scss';
+
+.beer {
+  @include flex(flex, row, wrap, center, flex-start);
+  border: solid 1px #f9f9f9;
+  margin: 50px 0px;
+  padding: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+
+  &__capture {
+    width: 35%;
+    text-align: center;
+  }
+
+  &__image {
+    height: 225px;
+    width: auto;
+  }
+
+  &__info {
+    width: 65%;
+  }
+
+  &__name {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+
+  &__tagline {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $grey-color;
+    margin-bottom: 25px;
+  }
+  
+  &__cta {
+    @include btn($primary-color, $white-color);
+  }
+}

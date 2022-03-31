@@ -1,0 +1,66 @@
+/* VARIABLES */
+$primary-color: #1f2535;
+$secondary-color: #61dafb;
+$white-color: #fff;
+$grey-color: #959595;
+
+
+/* MIXINS GENERAL */
+@mixin reset-p-m {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+@mixin flex($dis, $direction, $wrap, $justify, $align) {
+  display: $dis;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+/* MIXIN BTNS */
+@mixin btn($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  border: solid 2px $bg-color;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@mixin btn-border($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  border: solid 2px $color;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer
+}
+
+
+/* GENERAL STYLES */
+* {
+  @include reset-p-m();
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
