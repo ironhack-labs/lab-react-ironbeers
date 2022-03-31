@@ -1,0 +1,10 @@
+.homeLinks {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    text-align: left;
+}
+
+.homeLinks:hover {
+    color: #C96E12
+}
