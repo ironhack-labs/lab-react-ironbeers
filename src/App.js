@@ -8,16 +8,16 @@ import { beerList } from './services/BeerService';
 import './App.scss';
 
 function App() {
-  const [beers, setBeers] = useState([])
+  const [beers, setBeers] = useState([]);
 
- useEffect(() => {
-    beerList()
-      .then((response) => {
-        setBeers(response)
-      })
- }, [])
+  useEffect(() => {
+      beerList()
+        .then((response) => {
+          setBeers(response)
+        })
+  }, [])
 
-
+  const onSubmit = (beer) => setBeers([...beers, beer]);
 
   return (
     <div>
@@ -26,7 +26,9 @@ function App() {
         <Route path="/beers" element={<ListBeers beers={beers} />} />
         <Route path="/beers/:id" element={<SingleBeer beers={beers} />} />
         <Route path="/random-beer" element={<SingleBeer beers={beers} />} />
-        <Route path="/new-beer" element={<NewBeer /> } />
+        <Route path="/random-beer" element={<SingleBeer beers={beers} />} />
+        <Route path="/new-beer" element={<NewBeer onSubmit={onSubmit} /> } />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       
     </div>
