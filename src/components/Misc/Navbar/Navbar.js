@@ -1,31 +1,46 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <a className="navbar-brand align-items-center" href="#">🍺 IronBeers 🍺</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item px-3">
-                            {/* LINK */}
-                            All Beers
-                        </li>
-                        <li className="nav-item px-3">
-                            {/* LINK */}
-                            Random Beer
-                        </li>
-                        <li className="nav-item px-3">
-                            {/* LINK */}
-                            New Beer
-                        </li>
-                    </ul>
-                </div>
+        <div className='container'>
+            <div className='d-flex justify-content-center' style={{ backgroundColor: '#33D7FF' }}>
+                <nav className="navbar navbar-light" style={{ width: 400, backgroundColor: '#33D7FF' }}>
+                    {/* LINK A HOME */}
+                    <a className="navbar-brand" href="/">
+                        <span className="icon-text">
+                            <span className="icon">
+                                <i className="fas fa-home fa-xl mt-2" style={{ color: '#FFF' }}></i>
+                            </span>
+                        </span>
+                    </a>
+                    {/* LINK A RANDOM-BEERS */}
+                    <a className="navbar-brand" href="#">
+                        <span className="icon-text">
+                            <span className="icon">
+                                <i className="fa-solid fa-xl mt-2 fa-shuffle" style={{ color: '#FFF' }}></i>
+                            </span>
+                        </span>
+                    </a>
+                    {/* LINK A ALL-BEERS */}
+                    <Link to="/beers" className="navbar-brand">
+                        <span className="icon-text">
+                            <span className="icon">
+                                <i className="fa-solid fa-beer-mug-empty fa-xl mt-2" style={{ color: '#FFF' }}></i>
+                            </span>
+                        </span>
+                    </Link>
+                    {/* LINK A NEW-BEERS */}
+                    <a className="navbar-brand" href="#">
+                        <span className="icon-text">
+                            <span className="icon">
+                                <i className="fa-solid fa-plus fa-xl mt-2" style={{ color: '#FFF' }}></i>
+                            </span>
+                        </span>
+                    </a>
+                </nav>
             </div>
-        </nav>
+        </div>
     );
 };
 
