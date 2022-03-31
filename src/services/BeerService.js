@@ -1,5 +1,5 @@
 import http from "./BaseSevice";
 
-export const BeerList = http.get("/beers")
-export const BeerRandome = http.get("/beers/random")
-export const BeerDetails = http.get("/beers/:id")
+export const beerList = http.get("/beers")
+export const beerRandome = http.get("/beers/random")
+export const beerDetails = (id) => http.get(`/beers/:${id}`)

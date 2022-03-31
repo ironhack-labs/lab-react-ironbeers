@@ -1,9 +1,9 @@
 import React from 'react'
-import './BeerDetails.css'
-import { useParams } from 'react-router-dom'
 import Loading from '../Loading/Loading';
+import { useParams } from 'react-router-dom'
 import { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import './BeerDetails.css'
 
 
 
@@ -11,8 +11,7 @@ function BeerDetails(props) {
 
     const { beerId } = useParams();
 
-    const beer = props.beers.find(beer => beer._id === beerId)
-    
+    const beer = props.beers.find(beer => beer._id === beerId);
     
     const [loading, setLoading] = useState(true)
 
