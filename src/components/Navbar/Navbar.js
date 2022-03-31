@@ -11,8 +11,9 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-light bg-primary">
         <div className="container">
-          <a className="navbar-brand fa fa-home" href="/">
+          <a className="navbar-brand" href="/">
             <img
+              className='whiteHouse'
               src={ logo }
               alt=""
               width="30"

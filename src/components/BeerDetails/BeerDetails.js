@@ -6,17 +6,19 @@ import { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
 
+
 function BeerDetails(props) {
 
     const { beerId } = useParams();
 
     const beer = props.beers.find(beer => beer._id === beerId)
-
+    
+    
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         if(beer) {
-            setLoading(false)
+            setTimeout(() => setLoading(false), 2000)
         }
     }, [beer])
   

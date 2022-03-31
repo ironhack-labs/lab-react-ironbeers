@@ -33,7 +33,7 @@ const BeersList = (props) => {
     // he añadido 3 segundos de delay para que se pueda cargar la pagina y quede un poco "pro"
     useEffect(() => {
         if(beers) {
-            setTimeout(() => setLoading(false), 3000)
+            setTimeout(() => setLoading(false), 2000)
         }
     }, [beers])
 
