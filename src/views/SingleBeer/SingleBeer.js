@@ -1,26 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate, Navigate } from 'react-router';
+import { useParams } from 'react-router';
 import Header from '../../components/Header/Header';
+import { useLocation } from 'react-router-dom';
+import { randomBeer } from '../../services/BeerService';
 import './SingleBeer.scss'
 
 const SingleBeer = ({beers}) => {
   const { id } = useParams();
   const [beer, setBeer] = useState(null);
-  const [redirect, setRedirect] = useState(false);
-
+  const [randomBeerChoosen, setRandomBeer] = useState(null)
+  const { pathname } = useLocation()
 
   useEffect(() => {
     const beerFound = beers.find(beer => beer._id === id)
     setBeer(beerFound)
   },[])
 
+  useEffect(() => {
+    randomBeer()
+      .then((response) => {
+        setRandomBeer(response)
+      })
+ },[])
+
 
   return (
     <div>
       <Header />
       <div className="container">
-        <h1>Details</h1>
-        {beer ?
+        {beer && pathname !== '/random-beer' &&
           (
             <div className="beer" key={beer._id}>
               <div className="beer__capture">
@@ -36,8 +44,27 @@ const SingleBeer = ({beers}) => {
                 <p className="beer__contributed">{beer.contributed_by}</p>
               </div>
             </div>
-          ) :
-          "...Loading"
+          )  
+        }
+
+        {randomBeerChoosen && pathname === '/random-beer' &&
+        (
+            <div className="beer" key={randomBeerChoosen._id}>
+              <div className="beer__capture">
+                <img className="beer__image" src={randomBeerChoosen.image_url} alt={randomBeerChoosen.name} />
+              </div>
+
+              <div className="beer__info">
+                <h1 className="beer__name">{randomBeerChoosen.name}</h1>
+                <p className="beer__tagline">{randomBeerChoosen.tagline}</p>
+                <p>{randomBeerChoosen.first_brewed}</p>
+                <p>{randomBeerChoosen.attenuation_level}</p>
+                <p>{randomBeerChoosen.description}</p>
+                <p className="beer__contributed">{randomBeerChoosen.contributed_by}</p>
+              </div>
+            </div>
+
+          )
         }
       </div>
     </div>
