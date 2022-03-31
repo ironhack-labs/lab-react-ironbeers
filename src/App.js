@@ -4,6 +4,7 @@ import Home from './views/Home/Home';
 import ListBeers from "./views/ListBeer/ListBeer";
 import NewBeer from "./views/NewBeer/NewBeer";
 import RandomBeer from "./views/RandomBeer/RandomBeer";
+import SingleBeer from './views/SingleBeer/SingleBeer';
 import { beerList } from './services/BeerService';
 import './App.scss';
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/beers" element={<ListBeers beers={beers} />} />
+        <Route path="/beers/:id" element={<SingleBeer beers={beers} />} />
         <Route path="/random-beer" element={<RandomBeer />} />
         <Route path="/new-beer" element={<NewBeer /> } />
       </Routes>
