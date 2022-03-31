@@ -19,7 +19,7 @@ const Home = () => {
                 </p> 
             </div>
             <div>
-                <Link to={'/random-Beer'}>
+                <Link to={'/random-beer'}>
                     <img src={randomBeer} alt="Random Beer" />
                 </Link>
 
@@ -29,7 +29,7 @@ const Home = () => {
                 </p> 
             </div>
             <div>
-                <Link to={'/new-Beer'}>
+                <Link to={'/new-beer'}>
                     <img src={newBeer} alt="New Beer" />
                 </Link>
 

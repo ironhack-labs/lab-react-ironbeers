@@ -12,6 +12,7 @@ import './App.css';
 function App() {
 
   const [beers, setBeers] = useState(null)
+  const [randomBeer, setRandomBeer] = useState(null)
 
   const fetchBeers = useCallback(() => {
       return axios.get("https://ih-beers-api2.herokuapp.com/beers")
@@ -22,6 +23,17 @@ function App() {
       .then(response => setBeers(response.data))
   }, [fetchBeers])
 
+  const fetchRandomBeer = useCallback(() => {
+    return axios.get("https://ih-beers-api2.herokuapp.com/beers/random")
+  },[])
+
+  useEffect(() => {
+    fetchRandomBeer()
+    .then(response => setRandomBeer(response.data))
+  }, [fetchRandomBeer])
+
+
+
 
 
   return (
@@ -31,7 +43,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/beers' element={<BeerList beers={beers}></BeerList>}></Route>
         <Route path='/beers/:id' element={<SingleBeer beers={beers}></SingleBeer>}></Route>
-        <Route path='/random-beer' element={<RandomBeer></RandomBeer>}></Route>
+        <Route path='/random-beer' element={<RandomBeer randomBeer={randomBeer}></RandomBeer>}></Route>
         <Route path='/new-beer' element={<NewBeer></NewBeer>}></Route>
       </Routes>
     </div>

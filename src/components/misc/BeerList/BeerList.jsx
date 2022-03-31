@@ -1,9 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Loading from '../Loading/Loading';
-
-import './BeerList.css'
 import Beer from '../Beer/Beer';
+import './BeerList.css'
 
 const BeerList = ({beers}) => {
 
