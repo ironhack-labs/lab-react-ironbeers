@@ -1,20 +1,36 @@
 import { Route, Routes } from 'react-router';
 import Home from './views/Home/Home';
 import Navbar from './components/misc/Navbar/Navbar';
-import './App.css';
 import BeerList from './components/misc/BeerList/BeerList';
-import RandomBeer from './components/misc/RandomBeer/RandomBeer';
-import NewBeer from './components/misc/NewBeer/NewBeer';
-import SingleBeer from './components/misc/SingleBeer/SingleBeer';
+import RandomBeer from './views/RandomBeer/RandomBeer';
+import NewBeer from './views/NewBeer/NewBeer';
+import SingleBeer from './views/SingleBeer/SingleBeer';
+import { useCallback, useState, useEffect } from 'react';
+import axios from 'axios'
+import './App.css';
 
 function App() {
+
+  const [beers, setBeers] = useState(null)
+
+  const fetchBeers = useCallback(() => {
+      return axios.get("https://ih-beers-api2.herokuapp.com/beers")
+  },[])
+
+  useEffect(() => {
+      fetchBeers()
+      .then(response => setBeers(response.data))
+  }, [fetchBeers])
+
+
+
   return (
     <div className="App">
     <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/beers' element={<BeerList></BeerList>}></Route>
-        <Route path='/beers/:id' element={<SingleBeer></SingleBeer>}></Route>
+        <Route path='/beers' element={<BeerList beers={beers}></BeerList>}></Route>
+        <Route path='/beers/:id' element={<SingleBeer beers={beers}></SingleBeer>}></Route>
         <Route path='/random-beer' element={<RandomBeer></RandomBeer>}></Route>
         <Route path='/new-beer' element={<NewBeer></NewBeer>}></Route>
       </Routes>
