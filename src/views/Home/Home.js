@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Homecard from '../../components/HomeCard/HomeCard';
 import image1 from '../../assets/beers.png'
 import image2 from '../../assets/random-beer.png'
@@ -12,9 +14,18 @@ const Home = () => {
   return (
     <div>
         <h1>Welcome to ironbeers!</h1>
+        <Link to="/allBeers">
         <Homecard img={image1} title="All Beers " description={description}/>
-        <Homecard img={image2} title="Random Beer " description={description}/>
+        </Link>
+        
+        <Link to="/random">
+        <Homecard img={image2} title="Random Beer " 
+        description={description}/>
+        </Link>
+
+        <Link to="/new">
         <Homecard img={image3} title="New Beer " description={description}/>
+        </Link>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React,{ useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { beerList } from './../../services/BeersService';
 
 const Allbeers = () => {
@@ -12,7 +13,13 @@ const Allbeers = () => {
         <div>
             {list.map(beer => {
               return (
-                  <p key={beer._id}>{beer.name}</p>
+                
+                  <div key={beer._id}>
+                    <Link 
+                    to={`/beers/${beer._id}`}
+                    >{beer.name}
+                    </Link>
+                  </div>
               )
           })}
             
