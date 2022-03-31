@@ -1,0 +1,12 @@
+.header {
+  height: 75px;
+  background-color: #3DC4FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    color: white;
+    font-size: 40px
+  }
+}

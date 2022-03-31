@@ -6,7 +6,7 @@ import randomBeer from '../../assets/random-beer.png'
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="row">
 
         <div className="col">
