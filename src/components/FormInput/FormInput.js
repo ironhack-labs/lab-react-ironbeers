@@ -12,13 +12,13 @@ export default function FormInput({handleChange,name,type,value}) {
     };
 
   return (
-    <div className="mb-3">
+    <div >
         {type==="text" &&
-        <div>
+        <div className='fccc'>
             <label htmlFor={name} className="form-label">{toTitleCase(name)}</label>
             <input
             type={type}
-            className="form-control"
+            className="form-control myInput"
             name={name}
             onChange={handleChange}
             />
@@ -26,11 +26,11 @@ export default function FormInput({handleChange,name,type,value}) {
         }
 
         {type==="number" &&
-        <div>
+        <div className='fccc'>
             <label htmlFor={name} className="form-label">{toTitleCase(name)}</label>
             <input
             type={type}
-            className="form-control"
+            className="form-control myInput"
             name={name}
             min={0}
             onChange={handleChange}
@@ -39,12 +39,12 @@ export default function FormInput({handleChange,name,type,value}) {
         }
 
         {type==="textArea" && 
-        <div className="mb-3">
-        <label htmlFor={name} className="form-label">{toTitleCase(name)} </label>
-        <textarea value={value}
-        className="form-control" name="description" rows="3" 
-        onChange={handleChange}>
-        </textarea>
+        <div className="fccc">
+            <label htmlFor={name} className="form-label">{toTitleCase(name)} </label>
+            <textarea value={value}
+            className="form-control myInput" name="description" rows="3" 
+            onChange={handleChange}>
+            </textarea>
         </div>
         }
     </div>

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router';
 import FormInput from '../../components/FormInput/FormInput';
 import { beerNew } from '../../services/BeersService';
 
@@ -6,7 +7,7 @@ import { beerNew } from '../../services/BeersService';
 export default function Form() {
 
     const [allFormsValues, setAllFormsValues] = useState({});
-
+    const navTo = useNavigate()
     const handleChange = (event) => {
         const {name, value} = event.target;
         //console.log("change",name,value)
@@ -17,11 +18,12 @@ export default function Form() {
         e.preventDefault()
         
         beerNew(allFormsValues)
-        .then(()=> console.log("posted!!!",allFormsValues))
+        .then(()=> navTo("/"))
+        .catch((err) => console.log(err))
     }
   return (
-    <div>
-    <form  onSubmit={handleSubmit}>
+    <div className='mt-3'>
+    <form className='fccc' onSubmit={handleSubmit}>
     <FormInput type={"text"}   name={"name"}  handleChange={handleChange}/>
     <FormInput type={"text"}   name={"tagline"}  handleChange={handleChange}/>
     <FormInput type={"textArea"} name={"description"} value={allFormsValues.description} handleChange={handleChange}/>
@@ -29,10 +31,8 @@ export default function Form() {
     <FormInput type={"text"}   name={"brewers_tips"}  handleChange={handleChange}/>
     <FormInput type={"number"} name={"attenuation_level"} handleChange={handleChange} />
     <FormInput type={"text"}   name={"contributed_by"}  handleChange={handleChange}/>
-    <button >submit</button>
+    <button className='submitBtn'>submit</button>
     </form>
-
-    <pre>{JSON.stringify(allFormsValues)}</pre>
     </div>
   )
 }

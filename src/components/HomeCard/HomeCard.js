@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Homecard = ({img, title, description}) => {
+const Homecard = ({img, title, description, link}) => {
     return (
-        <div>
+        <div id='HomeCard'>
             <img src={img} alt={title} />
-            <h2>{title}</h2>
-            <p>{description}</p>
+            <div className='description'>
+                <h2><Link to={link}>{title}</Link></h2>
+                <p>{description}</p>
+            </div>
         </div>
     );
 }

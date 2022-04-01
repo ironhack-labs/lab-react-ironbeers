@@ -1,5 +1,5 @@
 import React  from 'react';
-import { Routes, Route } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 
 import './App.css';
 import Navbar from './components/Navbar/Navbar'
@@ -21,9 +21,8 @@ function App() {
               <Route path="/random"   element={<RandomBeer/>} />
               <Route path="/beers/:id" element={<BeerItem/>} />
               <Route path="/beers/new-beer" element={<Form/>} />
-              {/*  <Route path="*" element={<Navigate to="/" replace/>} /> */}
+              <Route path="*" element={<Navigate to="/" replace/>} />
             </Routes>
-      
       </div>
   );
   

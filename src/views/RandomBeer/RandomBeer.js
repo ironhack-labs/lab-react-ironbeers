@@ -1,4 +1,5 @@
 import React,{ useState, useEffect } from 'react';
+import Itemview from '../../components/ItemView/ItemView';
 import {beerRandom} from './../../services/BeersService'
 export default function RandomBeer() {
     const [randomBeer, setRandomBeer] = useState();
@@ -10,7 +11,9 @@ export default function RandomBeer() {
     }, []);
   return (
     <div>
-        <pre>{JSON.stringify(randomBeer)}</pre>
+      {randomBeer ? <Itemview item={randomBeer} />
+        :
+        <p>...loading</p> }  
     </div>
   )
 }

@@ -1,0 +1,229 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.black{
+    color: black;
+}
+
+.grey{
+    color: grey;
+}
+
+.fccc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.frcc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------------* NAVBAR *-------------------- */
+
+.navColor{
+    background-color: rgb(238, 223, 10);
+}
+
+/* --------------------* HOME PAGE * --------------------- */
+
+#HomeCard .description
+{
+    margin: 5px 20px;
+    color:black;
+}
+
+@media only screen and (max-width: 768px) {
+
+#HomeCard img{
+    max-width: 100%;
+    max-height: 100%;
+}
+}
+
+@media only screen and (min-width: 768px) {
+.home{
+    margin: 0 30px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#HomeCard{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+#HomeCard img{
+    max-width: 60%;
+    max-height: 100%;
+}
+
+}
+
+/* ------------------* ITEM PREVIEW *-------------------- */
+
+@media only screen and (max-width: 768px) {
+    #ItemPreview {
+        height: 20vh;
+        display: flex;
+        align-items: center;
+
+        border-bottom: 1px solid grey;
+        
+        padding: 5px;
+        margin-top: 10px;
+    }
+}
+.imgDiv {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ItemPreview img{
+    height: 100%;
+}
+
+#ItemPreview .description{
+    width: 75%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ItemPreview p{
+    font-size: small;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .allBeers{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #ItemPreview {
+        height: 30vh;
+        width: 45vw;
+        display: flex;
+
+        border: 1px solid grey;
+        
+        padding: 5px;
+        margin: 10px;
+    }
+}
+
+/* ------------------* ITEM VIEW *-------------------- */
+@media only screen and (max-width: 768px) {
+    #itemView{
+        height: 100vw;
+        margin: 0px 20px;
+    }
+
+    .divImg{
+        height: 45vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #itemView .divDescription{
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    
+    #itemView{
+        height: 100vw;
+        margin: 0px 60px;
+        display: flex;
+    }
+
+    .divImg{
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    #itemView .divDescription{
+        height: 100vh;
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+
+#itemView img{
+    height: 90%;
+}
+
+#itemView .line0{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+#itemView .textDescripcion{
+    font-weight: 500;
+}
+
+/* ------------------* FORM *-------------------- */
+
+@media only screen and (max-width: 768px) {
+    
+}    
+
+    .myInput{
+        border-radius: 40px;
+        border-color: rgb(238, 223, 10);
+    }
+
+    label{
+        font-weight: 500;
+    }
+
+    .submitBtn{
+        border-radius: 40px;
+        padding: 10px 20px;
+        background-color: rgb(238, 223, 10);
+    }
+
+
+
+
+@media only screen and (min-width: 768px) {}
+    .myInput{
+        border-radius: 40px;
+        border-color: rgb(238, 223, 10);
+        min-width: 350px;
+        max-width: 600px;
+        margin: -5px 0 20px;
+    }
+
+
+
+
+
+
