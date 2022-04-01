@@ -32,7 +32,7 @@ const Home = () => {
           <div className="card">
             <img src={newBeer} className="card-img-top" alt="..." />
             <div className="card-body">
-              <Link className="homeLinks" to="/random-beer">
+              <Link className="homeLinks" to="/random">
                 Random Beer
               </Link>
               <p className="card-text">
