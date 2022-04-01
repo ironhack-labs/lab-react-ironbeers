@@ -1,0 +1,124 @@
+.beer-img {
+  width: 20vh;
+  height: 30vh;
+}
+
+.card {
+  overflow: auto;
+  width: 60vh;
+  height: 30%;
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.card-content {
+  margin-left: 20px;
+}
+
+.card-content h1 {
+  color: black;
+}
+
+.card-content p {
+  font-size: 18px;
+}
+
+.detail {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 8vh 0 0 0vh;
+}
+
+.detail img {
+  width: 25vh;
+  height: 35vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1vh;
+}
+
+.detail-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.detail-content h4 {
+  font-size: 2vh;
+  color: grey;
+  margin-top: -2vh;
+}
+
+.detail-content h1 {
+  font-size: 8vh;
+}
+
+.link {
+  color: black;
+}
+
+.line-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  color: grey;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: midnightblue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(69, 69, 201);
+}
+
+form {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5vh;
+}
