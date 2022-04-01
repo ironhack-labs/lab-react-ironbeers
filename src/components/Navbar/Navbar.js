@@ -9,10 +9,10 @@ const Navbar = () => {
     <>
       <nav className="Navbar">
       <div className="container">
-      {/* <Link to="/"> */}
+      <Link to="/">
         <img src={home}
         className="home-icon" alt="home icon"/>   
-        {/* </Link> */}
+        </Link>
       </div>
       </nav>
     </>

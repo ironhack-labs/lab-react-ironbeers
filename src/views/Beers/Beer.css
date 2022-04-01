@@ -1,0 +1,19 @@
+.beer-img {
+  width: 50px;
+}
+
+.text-card {
+  align-items: center;
+  margin-left: 20px;
+  text-align: start;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+}
+
+h4 {
+  color: gray;
+  font-weight: normal;
+}

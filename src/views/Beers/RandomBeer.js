@@ -3,7 +3,7 @@ import { React } from "react";
 const RandomBeer = () => {
   return ( 
     <>
-      aqui va la random beer
+      Random beer
     </>
    );
 }
