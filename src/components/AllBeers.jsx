@@ -3,10 +3,13 @@ import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import InputFormComponent from "./InputFormComponent";
+import { useNavigate } from "react-router-dom";
 
 const AllBeers = () => {
   const [beers, setBeers] = useState([]);
   const [query, setQuery] = useState({ searchQuery: "" });
+
+  const navigate = useNavigate();
 
   const getData = async (url) => {
     try {
@@ -17,13 +20,17 @@ const AllBeers = () => {
     }
   };
 
-  useEffect(() => {
-    getData("https://ih-beers-api2.herokuapp.com/beers");
-  }, []);
-
   function handleChange(event) {
     setQuery(event.target.value);
   }
+
+  function handleClick(id) {
+    navigate(`/beers/${id}`);
+  }
+
+  useEffect(() => {
+    getData("https://ih-beers-api2.herokuapp.com/beers");
+  }, []);
 
   useEffect(() => {
     getData(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`);
@@ -55,7 +62,11 @@ const AllBeers = () => {
           marginRight: "auto",
         };
         return (
-          <div style={divStyle} key={index}>
+          <div
+            style={divStyle}
+            key={index}
+            onClick={(event) => handleClick(element._id)}
+          >
             <div style={{ flex: "1", display: "flex" }}>
               <img src={image_url} alt="name" style={imgStyle} />
             </div>
