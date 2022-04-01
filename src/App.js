@@ -20,6 +20,8 @@ function App() {
         // console.log('las cerves', beers)
   }, [])
 
+  const onSubmit = (beer) => setBeers([...beers, beer]);
+
   return (
     <div className="App">
       <Navbar/>
@@ -28,7 +30,7 @@ function App() {
         <Route path="/beers" element={<Beers beers={beers}/>}/>
         <Route path="/beers/:id" element={<BeerDetail beers={beers}/>}/>
         <Route path="/randomBeer" element={<RandomBeer/>}/>
-        <Route path="/newBeer" element={<NewBeer/>}/>
+        <Route path="/new" element={<NewBeer onSubmit={onSubmit}/>} />
       </Routes>
     </div>
   );

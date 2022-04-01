@@ -37,7 +37,7 @@ const Home = () => {
       <div>
         <img className="img-beers-home" src={newBeer} alt=""/>
       </div>
-        <Link style={{textDecoration: "none"}} to="...">
+        <Link style={{textDecoration: "none"}} to="/new">
         <h3>New beer</h3>
         <p>{loremDescription}</p>
         </Link>

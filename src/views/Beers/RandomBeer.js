@@ -10,7 +10,8 @@ const RandomBeer = () => {
     randomBeer()
       .then(response => setRanBeer(response))
   }, [])
-    console.log("birrita aleatoria", ranBeer)
+    // console.log("birrita aleatoria", ranBeer)
+    
   return ( 
     <>
      { ranBeer ?

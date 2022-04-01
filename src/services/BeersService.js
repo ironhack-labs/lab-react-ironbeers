@@ -6,3 +6,5 @@ export const beerDetail = (id) => http.get(`/beers/${id}`);
 
 export const randomBeer = () => http.get('/beers/random');
 
+export const addNewBeer = (body) => http.post('/new', body)
+

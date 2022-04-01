@@ -10,9 +10,9 @@ const BeerDetail = ({beers}) => {
     const beerFound = beers.find(beer => beer._id === id)
     // console.log(id)
     setBeer(beerFound)
-  },[])
+  }, [beers, id])
 
-  console.log('la birrita', beer)
+  // console.log('la birrita', beer)
   return ( 
     <> 
     { beer ?
