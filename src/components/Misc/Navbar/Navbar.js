@@ -15,13 +15,13 @@ const Navbar = () => {
                         </span>
                     </a>
                     {/* LINK A RANDOM-BEERS */}
-                    <a className="navbar-brand" href="#">
+                    <Link to="/beers/random-beer" className="navbar-brand">
                         <span className="icon-text">
                             <span className="icon">
                                 <i className="fa-solid fa-xl mt-2 fa-shuffle" style={{ color: '#FFF' }}></i>
                             </span>
                         </span>
-                    </a>
+                        </Link>
                     {/* LINK A ALL-BEERS */}
                     <Link to="/beers" className="navbar-brand">
                         <span className="icon-text">

@@ -27,7 +27,7 @@ const AllBeers = ({beers}) => {
                                 return (
                                     <div key={beer._id}>
                                         {/* LINK AL ID DE CADA CERVEZA */}
-                                        <Link to={`/beers/${beer._id}`}>
+                                        <Link to={`/beers/${beer._id}`} beers={beers}>
                                             <div className='card'>
                                                 <div className="d-flex mt-5 mx-5">
                                                     <div className="pe-5 mb-3">
