@@ -4,7 +4,7 @@ export const listBeers = () => {
     return http.get("https://ih-beers-api2.herokuapp.com/beers");
 };
 
-export const listSinleBeer = (id) => {
+export const listSingleBeer = (id) => {
     return http.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`);
 };
 
