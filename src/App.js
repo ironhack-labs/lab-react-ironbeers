@@ -1,17 +1,29 @@
-import 'bulma/css/bulma.css';
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Navbar from './components/Misc/Navbar/Navbar';
-import AllBeers from './views/AllBeers/AllBeers';
 import Home from './views/Home/Home';
+import AllBeers from './views/AllBeers/AllBeers';
+import SingleBeer from './views/SingleBeer/SingleBeer';
+import './App.css';
+import 'bulma/css/bulma.css';
 
 function App() {
+  const [beers, setBeers] = useState(null)
+  useEffect(() => {
+    axios.get("https://ih-beers-api2.herokuapp.com/beers").then((getBeers) => {
+        setBeers(getBeers.data);
+    });
+}, []);
+
   return (
     <div className="App">
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/beers" element={<AllBeers/>}/>
+        <Route path="/beers" element={<AllBeers beers={ beers } />}/>
+        <Route path="/beers/:id" element={<SingleBeer beers={ beers } />}/>
+
       </Routes>
     </div>
   );

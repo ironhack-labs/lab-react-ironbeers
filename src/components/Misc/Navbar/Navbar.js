@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className='container'>
+        <div className='Navbar'>
             <div className='d-flex justify-content-center' style={{ backgroundColor: '#33D7FF' }}>
-                <nav className="navbar navbar-light" style={{ width: 400, backgroundColor: '#33D7FF' }}>
+                <nav className="navbar navbar-light container-fluid me-4 ms-4" style={{ backgroundColor: '#33D7FF' }}>
                     {/* LINK A HOME */}
                     <a className="navbar-brand" href="/">
                         <span className="icon-text">

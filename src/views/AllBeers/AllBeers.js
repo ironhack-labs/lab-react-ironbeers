@@ -1,38 +1,33 @@
 import { useEffect, useState } from "react";
 import React from 'react';
-import axios from "axios";
+import { Link } from "react-router-dom";
 
-const AllBeers = () => {
-    const [beers, setBeers] = useState(null)
+const AllBeers = ({beers}) => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-      axios.get("https://ih-beers-api2.herokuapp.com/beers").then((getBeers) => {
-        setBeers(getBeers.data);
-      });
-    }, []);
-    useEffect(() => {
-        if(beers) {
+        if (beers) {
             setLoading(false)
         }
     }, [beers])
 
     return (
-         <div>
-                {loading ? (
-                    <div className='d-flex justify-content-center align-items-center' style={{ height: 100}}>
-                        <div className="spinner-border text-info" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </div>
+        <div>
+            {loading ? (
+                <div className='d-flex justify-content-center align-items-center' style={{ height: 100 }}>
+                    <div className="spinner-border text-info" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
-
-                ) : (
-                    <div className='container-fluid mt-2'>
-                        <div className='d-flex flex-column justify-content-center'>
-                            {
-                                beers.map((beer) => {
-                                    return (
-                                        <div key={beer._id}>
+                </div>
+            ) : (
+                <div className='container-fluid mt-2'>
+                    <div className='d-flex flex-column justify-content-center'>
+                        {
+                            beers.map((beer) => {
+                                return (
+                                    <div key={beer._id}>
+                                        {/* LINK AL ID DE CADA CERVEZA */}
+                                        <Link to={`/beers/${beer._id}`}>
                                             <div className='card'>
                                                 <div className="d-flex mt-5 mx-5">
                                                     <div className="pe-5 mb-3">
@@ -46,14 +41,15 @@ const AllBeers = () => {
                                                     <hr />
                                                 </div>
                                             </div>
-                                        </div>
-                                    )
-                                })
-                            }
-                        </div>
+                                        </Link>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
-                )}
-            </div>
+                </div>
+            )}
+        </div>
     );
 };
 
