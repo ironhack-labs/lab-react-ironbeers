@@ -1,10 +1,16 @@
 .Navbar {
   background-color:cornflowerblue;
   height: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .home-icon {
   width: 30px;
-  margin-top: 10px;
+}
 
+.container {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 10px;
 }

@@ -1,15 +1,42 @@
-import React from 'react';
-// import { beerDetail } from '../../services/BeersService';
-// import { useParams } from 'react-router';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router';
+import './Beer.css';
 
+const BeerDetail = ({beers}) => {
+  const { id } = useParams()
+  const [beer, setBeer] = useState(null);
 
-const BeerDetail = () => {
+  useEffect(()=> {
+    const beerFound = beers.find(beer => beer._id === id)
+    // console.log(id)
+    setBeer(beerFound)
+  },[])
+
+  console.log('la birrita', beer)
   return ( 
-    <>
-      beer detail
+    <> 
+    { beer ?
+      <div>
+        <div>
+          <img className="detail-img" src={beer.image_url} alt={beer.name} />
+        </div>
+        <h2>{beer.name}</h2>
+        <h4>{beer.tagline}</h4>
+        <p>{beer.first_brewed}</p>
+        <p>{beer.attenuation_level}</p>
+        <p>{beer.description}</p>
+        <p>{beer.contributed_by}</p>
+      </div>
+        : 
+        <p>Loading...</p>
+      }
     </>
    );
 }
+
+
+
+
  
 export default BeerDetail;
 

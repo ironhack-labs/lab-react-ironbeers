@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
 .beer-img {
   width: 50px;
 }
@@ -16,4 +22,8 @@
 h4 {
   color: gray;
   font-weight: normal;
+}
+
+.detail-img {
+  width: 50px;
 }
