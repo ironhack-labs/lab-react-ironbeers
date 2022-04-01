@@ -1,0 +1,12 @@
+.home-div img {
+    width: 100vw;
+}
+
+.home-div-info p {
+    font-size: 14px;
+}
+
+.home-div-info a {
+    text-decoration: none;
+    color: #32c3ff;
+}

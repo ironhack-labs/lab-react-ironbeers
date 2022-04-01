@@ -1,0 +1,12 @@
+nav {
+    background-color: #32c3ff;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav i {
+    color: white;
+}

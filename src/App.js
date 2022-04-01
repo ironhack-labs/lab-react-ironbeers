@@ -1,11 +1,14 @@
 import React from 'react';
-import BeersList from './components/BeersList/BeersList';
+import { Routes, Route } from 'react-router';
+import Home from './views/Home/Home';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <BeersList />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 };
