@@ -34,11 +34,11 @@ const NewBeer = (onSubmit) => {
       description,
       firstBrewed,
       brewersTips,
-      attenuationlevel,
+      attenuationlevelNumber,
       contributedBy,
     } = newBeer;
 
-    const attenuationLevelNumber = Number(attenuationlevel);
+    const attenuationLevelNumber = Number(attenuationlevelNumber);
 
     name &&
     tagline &&
@@ -54,6 +54,7 @@ const NewBeer = (onSubmit) => {
               ...newBeer,
               id: uuidv4(),
             });
+            console.log(`petición realizada ${newBeer}`)
             /*  setNewBeer(initialState); */
             navigate("/Beers");
           })
