@@ -8,10 +8,14 @@ export const listSingleBeer = (id) => {
     return http.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`);
 };
 
-export const addNewBeer = () => {
-    return http.post(`https://ih-beers-api2.herokuapp.com/beers/new`);
+export const randomBeer = () => {
+    return http.get(`https://ih-beers-api2.herokuapp.com/beers/random`);
+};
+
+export const addNewBeer = (data) => {
+    return http.post(`https://ih-beers-api2.herokuapp.com/beers/new`, data);
 };
 
 export const searchBeer = (query) => {
-    return http.post(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`);
+    return http.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`);
 }

@@ -18,14 +18,14 @@ const Home = () => {
             <div className="random-beer home-div">
                 <img src={image2} alt="" />
                 <div className="container home-div-info">
-                    <h3 className="mt-3">Random Beer</h3>
+                    <Link to="/beers/random-beer"><h3 className="mt-3">Random Beer</h3></Link>
                     <p className="mx-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed sapien sapien. Nullam non fermentum lectus, ultrices lobortis lorem. Fusce tempor id lorem sed porta.</p>
                 </div>
             </div>
             <div className="new-beer home-div home-div-info">
                 <img src={image3} alt="" />
                 <div className="container">
-                    <h3 className="mt-3">New Beer</h3>
+                    <Link to="/new-beer"><h3 className="mt-3">New Beer</h3></Link>
                     <p className="mx-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed sapien sapien. Nullam non fermentum lectus, ultrices lobortis lorem. Fusce tempor id lorem sed porta.</p>
                 </div>
             </div>
