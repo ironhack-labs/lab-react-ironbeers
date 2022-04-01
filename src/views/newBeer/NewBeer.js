@@ -5,16 +5,16 @@ import { v4 as uuidv4 } from "uuid";
 import Navbar from "../../components/misc/Navbar";
 
 const initialState = {
-  name: '',
-  tagline: '',
-  description: '',
-  firstBrewed: '',
-  brewersTips: '',
-  attenuationLevel: '0',
-  contributedBy: '',
-/*   error: 'false' */
+  name: "",
+  tagline: "",
+  description: "",
+  firstBrewed: "",
+  brewersTips: "",
+  attenuationLevel: "0",
+  contributedBy: ""
+
 };
-const NewBeer = (onSubmit) => {
+const NewBeer = ({ onSubmit }) => {
   const [newBeer, setNewBeer] = useState(initialState);
 
   const handleOnChange = (event) => {
@@ -34,33 +34,35 @@ const NewBeer = (onSubmit) => {
       description,
       firstBrewed,
       brewersTips,
-      attenuationlevelNumber,
+      attenuationLevel,
       contributedBy,
     } = newBeer;
 
-    const attenuationLevelNumber = Number(attenuationlevelNumber);
-
-    name &&
-    tagline &&
-    description &&
-    firstBrewed &&
-    brewersTips &&
-    attenuationLevelNumber &&
-    contributedBy
-      ? axios
-          .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
-          .then(() => {
-            onSubmit({
-              ...newBeer,
-              id: uuidv4(),
-            });
-            console.log(`petición realizada ${newBeer}`)
-            /*  setNewBeer(initialState); */
-            navigate("/Beers");
-          })
-      : 
-      console.log('💩')
-   /*    newBeer.setState({ error: 'true' }); */
+    const attenuationLevelNumber = Number(attenuationLevel);
+    if (
+      name &&
+      tagline &&
+      description &&
+      firstBrewed &&
+      brewersTips &&
+      attenuationLevelNumber &&
+      contributedBy
+    ) {
+      axios
+        .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
+        .then(() => {
+          onSubmit({
+            ...newBeer,
+            id: uuidv4(),
+          });
+          console.log(`petición realizada ${newBeer.data}`);
+          /*  setNewBeer(initialState); */
+          navigate("/Beers");
+        })
+        .catch((err) => console.log(err));
+    } else {
+      console.log("💩");
+    }
   };
 
   return (
@@ -152,7 +154,7 @@ const NewBeer = (onSubmit) => {
           />
         </div>
 
-    {/*     {newBeer.error && <p className="mt-3 ml-4 help is-danger">Invalid fields</p>} */}
+        {/*     {newBeer.error && <p className="mt-3 ml-4 help is-danger">Invalid fields</p>} */}
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
