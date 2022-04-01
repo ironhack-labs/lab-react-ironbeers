@@ -1,0 +1,31 @@
+.beer-div {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.detail-img {
+    height: 250px;
+    margin-bottom: 50px;
+}
+
+.detail-name {
+    font-size: 35px;
+}
+
+.detail-tagline {
+    margin: 20px 0;
+    color: gray;
+    font-size: 18px;
+}
+
+.detail-description {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.loading {
+    padding: 50px;
+}
