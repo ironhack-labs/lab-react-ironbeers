@@ -25,10 +25,29 @@ a{
     justify-content: center;
 }
 
+.frcb{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.spinner{
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
 /* --------------------* NAVBAR *-------------------- */
 
 .navColor{
     background-color: rgb(238, 223, 10);
+}
+.link-active{
+    color: green;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 /* --------------------* HOME PAGE * --------------------- */
@@ -41,49 +60,37 @@ a{
 
 @media only screen and (max-width: 768px) {
 
-#HomeCard img{
-    max-width: 100%;
-    max-height: 100%;
-}
+    #HomeCard img{
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-.home{
-    margin: 0 30px;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-}
+    .home{
+        margin: 0 30px;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-#HomeCard{
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-}
+    }
 
-#HomeCard img{
-    max-width: 60%;
-    max-height: 100%;
-}
+    #HomeCard{
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+    }
 
+    #HomeCard img{
+        max-width: 60%;
+        max-height: 100%;
+    }
 }
 
 /* ------------------* ITEM PREVIEW *-------------------- */
 
-@media only screen and (max-width: 768px) {
-    #ItemPreview {
-        height: 20vh;
-        display: flex;
-        align-items: center;
-
-        border-bottom: 1px solid grey;
-        
-        padding: 5px;
-        margin-top: 10px;
-    }
-}
 .imgDiv {
     height: 100%;
     width: 25%;
@@ -108,6 +115,18 @@ a{
     font-size: small;
 }
 
+@media only screen and (max-width: 768px) {
+    #ItemPreview {
+        height: 20vh;
+        display: flex;
+        align-items: center;
+
+        border-bottom: 1px solid grey;
+        
+        padding: 5px;
+        margin-top: 10px;
+    }
+}
 
 @media only screen and (min-width: 768px) {
     .allBeers{
@@ -129,6 +148,21 @@ a{
 }
 
 /* ------------------* ITEM VIEW *-------------------- */
+
+#itemView img{
+    height: 90%;
+}
+
+#itemView .line0{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+#itemView .textDescripcion{
+    font-weight: 500;
+}
+
 @media only screen and (max-width: 768px) {
     #itemView{
         height: 100vw;
@@ -173,54 +207,25 @@ a{
     }
 }
 
+/* ------------------* FORM *-------------------- */
 
-
-#itemView img{
-    height: 90%;
-}
-
-#itemView .line0{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0px;
-}
-
-#itemView .textDescripcion{
+label{
     font-weight: 500;
 }
 
-/* ------------------* FORM *-------------------- */
+.submitBtn{
+    border-radius: 40px;
+    padding: 10px 20px;
+    background-color: rgb(238, 223, 10);
+}
 
-@media only screen and (max-width: 768px) {
-    
-}    
-
-    .myInput{
-        border-radius: 40px;
-        border-color: rgb(238, 223, 10);
-    }
-
-    label{
-        font-weight: 500;
-    }
-
-    .submitBtn{
-        border-radius: 40px;
-        padding: 10px 20px;
-        background-color: rgb(238, 223, 10);
-    }
-
-
-
-
-@media only screen and (min-width: 768px) {}
-    .myInput{
-        border-radius: 40px;
-        border-color: rgb(238, 223, 10);
-        min-width: 350px;
-        max-width: 600px;
-        margin: -5px 0 20px;
-    }
+.myInput{
+    border-radius: 40px;
+    border-color: rgb(238, 223, 10);
+    min-width: 350px;
+    max-width: 600px;
+    margin: -5px 0 20px;
+}
 
 
 

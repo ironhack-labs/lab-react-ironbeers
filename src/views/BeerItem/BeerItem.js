@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router'
+
 import Itemview from '../../components/ItemView/ItemView';
 import { beerSingle } from '../../services/BeersService';
 
@@ -12,13 +13,15 @@ export default function BeerItem() {
         .then(response => {setBeer(response)})
     }, []);
 
-    console.log(beer)
-
   return (
     <div>
-        {beer ? <Itemview  item={beer} />
-        :
-        <p>...loading</p> }       
+        {beer ? 
+          <Itemview  item={beer} /> 
+          :
+          <div className="spinner-border spinner" role="status">
+          <p>...loading</p>
+          </div>
+        }       
     </div>
   )
 }

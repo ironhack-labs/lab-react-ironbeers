@@ -1,16 +1,16 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router';
+
 import FormInput from '../../components/FormInput/FormInput';
 import { beerNew } from '../../services/BeersService';
-
 
 export default function Form() {
 
     const [allFormsValues, setAllFormsValues] = useState({});
     const navTo = useNavigate()
+
     const handleChange = (event) => {
         const {name, value} = event.target;
-        //console.log("change",name,value)
         setAllFormsValues({...allFormsValues, [name] : value})
     }
 
@@ -21,6 +21,7 @@ export default function Form() {
         .then(()=> navTo("/"))
         .catch((err) => console.log(err))
     }
+    
   return (
     <div className='mt-3'>
     <form className='fccc' onSubmit={handleSubmit}>

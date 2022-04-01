@@ -1,12 +1,10 @@
 import React from 'react';
 
-//name,tagline,first_brewed,attenuation_level,description,contributed_by
 const Itemview = ({item}) => {
 
-        const {image_url,name,tagline,first_brewed,attenuation_level,description,contributed_by} = item
+    const {image_url,name,tagline,first_brewed,attenuation_level,description,contributed_by} = item
     
     return (
-        
         <div id='itemView'>
             <div className='divImg'>
                 <img src={image_url} alt="" />

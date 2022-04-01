@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+
   return (
     <nav className="navbar navbar-expand-lg  sticky-top  navbar-light  navColor">
       <div className="container-fluid">
@@ -9,27 +10,35 @@ const Navbar = () => {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse frcb" id="navbarNav">
           <ul className="navbar-nav d-flex">
 
               <li className="nav-item px-3">
-                <Link to="/">Home</Link>
+                <NavLink
+                  to="/allBeers"
+                  className={({ isActive }) => (isActive ? "link-active" : "")}
+                > All Beers
+                </NavLink>
               </li>
+
               <li className="nav-item px-3">
-                <Link to="/allBeers">All Beers</Link>
+                <NavLink
+                  to="/random"
+                  className={({ isActive }) => (isActive ? "link-active" : "")}
+                > Random Beer
+                </NavLink>
               </li>
+
               <li className="nav-item px-3">
-                <Link to="/random">Random Beer</Link>
-              </li>
-              <li className="nav-item px-3">
-                <Link to="/beers/new-beer">Form</Link>
+                <NavLink
+                  to="/new-beer"
+                  className={({ isActive }) => (isActive ? "link-active" : "")}
+                > Create your Beer!
+                </NavLink>
               </li>
               
           </ul>
-          <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
         </div>
       </div>
     </nav>

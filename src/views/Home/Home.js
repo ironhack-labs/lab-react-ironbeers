@@ -9,7 +9,6 @@ const Home = () => {
 
   const description = "Lorem fistrum ese pedazo de caballo blanco caballo negroorl va usté muy cargadoo quietooor pecador benemeritaar jarl. "
 
-
   return (
     <div className='home'>
       <Homecard 
@@ -30,7 +29,7 @@ const Home = () => {
         img={image3} 
         title="New Beer " 
         description={description}
-        link={"/beers/new-beer"}
+        link={"/new-beer"}
       />
     </div>
   );
