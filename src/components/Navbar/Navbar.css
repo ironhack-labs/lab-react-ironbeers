@@ -1,0 +1,12 @@
+.Navbar {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.nav-container {
+    background-color: rgb(163, 163, 255);
+    height: 50px;
+    width: 100%;
+}
