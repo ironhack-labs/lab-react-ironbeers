@@ -1,0 +1,11 @@
+.Navbar-block {
+  width: 100%;
+  padding: 20px;
+  background-color: #46c89c;
+}
+
+.Navbar-block-icon {
+  width: 40px;
+  height: auto;
+}
+

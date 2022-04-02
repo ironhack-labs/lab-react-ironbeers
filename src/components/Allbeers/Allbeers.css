@@ -1,0 +1,25 @@
+.allBeers-beer {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  margin-bottom: 30px;
+  border: 1px solid #46c89c;
+  border-radius: 10px;
+  transition: .1s ease-in-out;
+}
+
+.allBeers-beer:hover {
+  border: 2px solid #46c89c;
+  box-shadow: rgb(204, 232, 219) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  transition: .1s ease-in-out;
+}
+
+.allBeers-beer_img {
+  width: 40%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.allBeers-beer_info {
+  width: 40%;
+}

@@ -1,0 +1,17 @@
+.NewBeer-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #46c89c;
+}
+
+button {
+  padding: 10px !important;
+  background-color: #46c89c !important;
+}
