@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+body {
+  background-color: #eee;
+}
+.title {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+a, a:hover {
+    color: black;
+}
+
+.card-block {
+  font-size: 1em;
+  position: relative;
+  margin: 0;
+  padding: 1em;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+  box-shadow: none;
+}
+.card {
+  font-size: 1em;
+  overflow: hidden;
+  padding: 5;
+  border: none;
+  border-radius: 0.28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  margin-top: 20px;
+}
+
+.col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+img {
+  margin-top: 10px !important;
+  height: 350px !important;
+  width: auto !important;
+  overflow: hidden !important;
+}
+
+.beer-info {
+  padding-top: 80px ;
+  padding-bottom: 80px ;
+}
+
+
+.card.booking-card.v-2 {
+  background-color: #c7f2e3;
+}
+
+.card.booking-card.v-2 .fa {
+  color: #f7aa00;
+}
+
+.card.booking-card.v-2 .card-body .card-text {
+  color: #250f1270;
+}
+
+.card.card.booking-card.v-2 .chip {
+  background-color: #87e5da;
+}
+
+.card.booking-card.v-2 .card-body hr {
+  border-top: 1px solid #f7aa00;
+}
