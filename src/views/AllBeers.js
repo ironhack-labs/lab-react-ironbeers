@@ -6,23 +6,24 @@ import { useQuery } from "react-query";
 import { getAllBeers } from "../services/beerApi";
 import { BeerCard } from "../components/BeerCard/BeerCard";
 
+
+const useGetAllBeers = (filters) => {
+	return useQuery("beers", getAllBeers,
+	{
+		keepPreviousData: true,
+		select: (beers) => beers.filter(beer => beer.name.startsWith(filters) )
+	});
+}
+
+
 export const AllBeers = () => {
-	
-	const { isLoading, isError, data, error } = useQuery("beers", getAllBeers,
-		{
-			keepPreviousData: true,
-		});
+
+	const [filters, setFilters] = useState("")
+	const { isLoading, isError, data, error } = useGetAllBeers(filters)
 	const { register, handleSubmit, watch, formState: { errors }, } = useForm();
 	
-	const setData = async (searchData) => {
-		const query = await getAllBeers()
-		let newData = query.filter((beer) => { return beer.name.startsWith(searchData.beerSearch) });
-
-		if (newData.length)
-			return queryClient.setQueryData("beers", [...newData]);
-	}
-
-
+	const onChange = (value) => setFilters(value.beerSearch)
+	
 	if (isLoading) {
 		return (
 			<div className="spinner-border text-primary mt-4" role="status">
@@ -41,7 +42,7 @@ export const AllBeers = () => {
 				<div className="container-fluid d-flex justify-content-center mt-4">
 					<div className="col col-lg-4">
 						<div className="navbar-nav">
-							<form className="d-flex" onChange={handleSubmit(setData)}>
+							<form className="d-flex" onChange={handleSubmit(onChange)}>
 								{/* register your input into the hook by invoking the "register" function */}
 								<input className="form-control me-2" placeholder="Search" {...register("beerSearch")} />
 								{/* errors will return when field validation fails  */}

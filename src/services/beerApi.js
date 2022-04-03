@@ -3,6 +3,7 @@ import axios from "axios";
 const API_URL = "https://ih-beers-api2.herokuapp.com/beers";
 
 export const getAllBeers = async () => {
+	console.log("Making API request")
 	const response = await axios.get(`${API_URL}`);
 
 	if (!response.status === 200) throw new Error("Failed to fetch Beers.");
