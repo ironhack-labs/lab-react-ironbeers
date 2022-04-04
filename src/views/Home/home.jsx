@@ -7,14 +7,14 @@ import './Home.scss'
 const Home = () => {
     return(
         <div className='Home'>
-            <a className='home-card' href='/' alt='all beers' >
+            <a className='home-card' href='/beers' alt='all beers' >
                 <img src={Allbeers} alt="All beers" />
                 <div>
                     <h2>All beers</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ex consequuntur corrupti tempore necessitatibus inventore est aspernatur unde.</p>
                 </div>
             </a>
-            <a className='home-card' href='/' alt='random'>
+            <a className='home-card' href='/beers/random' alt='random'>
                 <img src={Random} alt="Random Beer" />
                 <div>
                 <h2>Random Beer</h2>
