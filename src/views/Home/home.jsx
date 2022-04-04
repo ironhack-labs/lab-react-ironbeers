@@ -21,7 +21,7 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ex consequuntur corrupti tempore necessitatibus inventore est aspernatur unde.</p>
                 </div>
             </a>
-            <a className='home-card' href='/' alt='new-beer'>
+            <a className='home-card' href='/new-beer' alt='new-beer'>
                 <img src={NewBeer} alt="New Beer" />
                 <div>
                     <h2>New Beer</h2>
