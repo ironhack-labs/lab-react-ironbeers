@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-width: 60%;
 
     .beer-container{
         display: flex;
@@ -50,5 +51,16 @@
     a:link, a:visited, a:active {
         text-decoration:none;
         color: rgb(47, 47, 47);
+    }
+}
+
+.filter-container {
+    display: flex;
+    justify-content: cetner;
+    align-items: center;
+    width: 60%;
+
+    i {
+        color: black;
     }
 }

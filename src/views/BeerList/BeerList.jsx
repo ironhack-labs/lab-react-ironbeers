@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getBeerList } from '../../services/BeersServices'
+import { getBeerList, filterBeer } from '../../services/BeersServices'
 import './BeerList.scss'
 
 const BeerList = () => {
@@ -13,9 +13,21 @@ const BeerList = () => {
             })
     }, [])
 
+    const handleChange = (e) => {
+        const { value } = e.target
+        filterBeer(value)
+            .then((beerFiltered) => {
+                setBeers(beerFiltered)
+            })
+    }
+
     return(
         
         <div className='BeerList'>
+            <div className='filter-container m-5'>
+                <label className='label-form' htmlFor="filter"><i className="fa-solid fa-magnifying-glass mx-3"></i></label>
+                <input className='form-control' type="text" onChange={handleChange} placeholder="Filter a beer"/>
+            </div>
             <h2>All Beers</h2>
             <div className='beer-container'>
             {beers.length > 0 ? 
