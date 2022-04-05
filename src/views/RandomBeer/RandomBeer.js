@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 
-const RandomBeer = () => {
+const RandomBeer = ({beers}) => {
     const [random, setRandom] = useState();
     const [loading, setLoading] = useState(true)
 
@@ -14,6 +14,12 @@ const RandomBeer = () => {
                 setRandom(randomResult.data);
             });
     }, []);
+
+    useEffect(() => {
+        if (beers) {
+            setLoading(false)
+        }
+    }, [beers])
 
     return (
         <div className="container">

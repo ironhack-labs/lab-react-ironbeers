@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import axios from "axios";
 
 
-const SingleBeer = ({ beers }) => {
+
+const SingleBeer = () => {
     const { id } = useParams()
     const [beer, setBeer] = useState(null);
-    const [loading, setLoading] = useState(true)
-
-    useEffect(() => {
-        if (beers) {
-            setLoading(false)
-        }
-    }, [beers])
+    const [loading, setLoading] = useState(false)
     
-
     useEffect(() => {
-        const beerFound = beers.find(beer => beer._id === id)
-        setBeer(beerFound)
-    }, [])
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`).then((getBeers) => {
+          setBeer(getBeers.data);
+        });
+      }, [id]);
+
 
     return (
         <div className="container">

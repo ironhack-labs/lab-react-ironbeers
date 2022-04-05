@@ -21,7 +21,7 @@ const Navbar = () => {
                                 <i className="fa-solid fa-xl mt-2 fa-shuffle" style={{ color: '#FFF' }}></i>
                             </span>
                         </span>
-                        </Link>
+                    </Link>
                     {/* LINK A ALL-BEERS */}
                     <Link to="/beers" className="navbar-brand">
                         <span className="icon-text">
@@ -31,13 +31,13 @@ const Navbar = () => {
                         </span>
                     </Link>
                     {/* LINK A NEW-BEERS */}
-                    <a className="navbar-brand" href="#">
+                    <Link to="/beers/new-beer" className="navbar-brand">
                         <span className="icon-text">
                             <span className="icon">
                                 <i className="fa-solid fa-plus fa-xl mt-2" style={{ color: '#FFF' }}></i>
                             </span>
                         </span>
-                    </a>
+                    </Link>
                 </nav>
             </div>
         </div>
