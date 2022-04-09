@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #61dafb;
+  background-color: #61dafb;
+  height: 60px;
+  margin-bottom: 20px;
+
+}
+
+.wrapper {
+  border: 2px solid black;
+  border-radius: 50px;
+  margin: 20px;
+  padding-top: 20px;
+
+}
+
+.image {
+  height: 40px;
+}
+
+.img {
+  height: 90px;
+  margin-top: 10px;
+}
+
+.imgTwo {
+  height: 140px;
+  margin-top: 10px;
+}
+
+.imageThree {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50px;
+}
