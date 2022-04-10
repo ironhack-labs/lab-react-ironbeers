@@ -1,0 +1,19 @@
+article > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+article > div > p {
+  text-align: justify;
+  color: black;
+  padding: 0 5%;
+  max-width: 705px;
+}
+
+.link {
+  text-decoration: none;
+}
+
