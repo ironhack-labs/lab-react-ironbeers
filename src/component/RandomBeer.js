@@ -1,7 +1,7 @@
 import React from "react";
 
 const RandomBeer = () => {
-  return <div>Random Beer</div>;
+  return <div className="content">Random Beer</div>;
 };
 
 export default RandomBeer;

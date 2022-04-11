@@ -1,21 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./AppHeader.css";
-import Home from "./Home";
+import HomeImg from "../assets/home.png";
 
 const AppHeader = () => {
   return (
-    <div className="main">
-      <header>
-        <Link className={`App-header`} to="/">
-          <img src={Home} alt="home icon" />
-        </Link>
-        <h1>title</h1>
+    <>
+      <header class>
         <Link className={`App-link`} to="/">
-          Home
+          <img className="home-img" src={HomeImg} alt="home icon" />
         </Link>
       </header>
-    </div>
+      <Outlet />
+    </>
   );
 };
 

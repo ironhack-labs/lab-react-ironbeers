@@ -4,10 +4,19 @@ header {
   justify-content: center;
   background: #3dc4fc;
   height: 45px;
-  border: 1px solid pink;
   color: white;
   padding: 1rem;
   position: fixed;
+  width: 100vw;
   top: 0;
-  z-index: 2;
+}
+
+.home-img {
+  width: 3rem;
+}
+
+.App-link {
+  color: white;
+  text-decoration: none;
+  text-align: center;
 }
