@@ -1,0 +1,20 @@
+.beer {
+  display: flex;
+  justify-content: flex-start;
+  height: 15rem;
+  border: 1px solid #e5e5e5;
+  padding: 2rem 4rem;
+}
+
+.beer > img {
+  width: 20%;
+  object-fit: contain;
+}
+
+.beer > div {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

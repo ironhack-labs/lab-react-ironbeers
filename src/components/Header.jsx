@@ -1,11 +1,15 @@
 import React from 'react'
 
-import { BsFillHouseDoorFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
+
+import { HouseDoorFill } from 'react-bootstrap-icons'
+
+import './Header.css'
 
 const Header = () => {
   return (
     <header>
-      <BsFillHouseDoorFill />
+      <Link to='/'><HouseDoorFill color='white' size={50} /></Link>
     </header>
   )
 }

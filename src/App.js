@@ -1,16 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
 
-import './App.css';
-
-import Beers from './page/Beers';
 import Home from './page/Home';
+import RestPages from './page/RestPages';
+
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={ <Home /> } />
-        <Route path='/beers' element={ <Beers /> } />
+        <Route path='*' element={ <RestPages /> } />
       </Routes>      
     </div>
   );
