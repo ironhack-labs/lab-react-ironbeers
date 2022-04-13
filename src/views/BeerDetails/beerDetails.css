@@ -1,0 +1,22 @@
+.beerDetail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detailContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.img {
+    height: 30rem;
+}
+
+.textContainer {
+    width: 60%;
+    text-align: center;
+}

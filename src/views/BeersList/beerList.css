@@ -1,0 +1,34 @@
+.beerList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 60%;
+}
+
+
+.beerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+}
+
+.beerCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.2s;
+    max-height: 8rem;
+    max-width: 20rem;
+    margin: 1rem;
+}
+
+.img{
+    width: 2rem;
+    margin-right: 2rem;
+}
+
