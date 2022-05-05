@@ -32,7 +32,21 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.text {
+  color: black;
+  text-align: justify;
+  text-decoration: none;
+}
+
+.form-create {
+  width: 50%;
+  display: block;
+  margin-left: 25%;
+  justify-content: flex-end;
 }

@@ -1,0 +1,20 @@
+.image {
+    width: auto;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.title {
+    display: inline;
+    text-align: start;
+    align-content: center;
+    margin-top: 20px;
+
+}
+
+.tag-title {
+    color: gray;
+    font-size: 1.2em;
+}
