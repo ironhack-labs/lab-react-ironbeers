@@ -32,7 +32,37 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.ColIndexBeers {
+  margin-bottom: 40px;
+  font-size: 1.2em;
+  text-align: left;
+
+}
+
+.ColIndexBeers a {
+  text-decoration: none;
+  font-size: 2.5em;
+  color: black;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #61dafb;
+  height: 100px;
+  font-size: 20px;
+  
+}
+
+.navbar a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin: auto;
+
 }
