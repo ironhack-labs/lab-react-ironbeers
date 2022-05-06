@@ -66,3 +66,14 @@
   margin: auto;
 
 }
+
+.img-detail {
+  width: 100px;
+  object-fit:cover;
+}
+
+.Form.Control {
+text-align: center;
+display:block;
+
+}

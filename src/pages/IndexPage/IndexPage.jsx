@@ -1,5 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { Navbar } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 import beers from './../../assets/beers.png'
 import newbeer from './../../assets/newbeer.png'
 import randombeer from './../../assets/randombeer.png'
@@ -7,6 +9,8 @@ import randombeer from './../../assets/randombeer.png'
 const IndexPage = () => {
 
     return (
+
+        
         <Container>
             <Row>
                 <Col md={{ span: 8, offset: 2 }} className="ColIndexBeers">

@@ -4,6 +4,7 @@ class IronBeers {
 
     constructor() {
         this.api = axios.create({ baseURL: 'https://ih-beers-api2.herokuapp.com/beers' })
+
     }
 
     getAllBeers = () => {
@@ -11,11 +12,7 @@ class IronBeers {
     }
 
     getOneBeer = id => {
-        return this.api.get(`/beers/${id}`)
-    }
-
-    getRandomBeer = beer => {
-        return this.api.get('/random', beer)
+        return this.api.get(`/${id}`)
     }
 
     addNewBeer = beer => {

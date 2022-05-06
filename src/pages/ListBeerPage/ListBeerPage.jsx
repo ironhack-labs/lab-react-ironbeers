@@ -6,7 +6,6 @@ import BeerList from './../../components/BeerList/BeerList'
 const ListBeerPage = () => {
 
         const [beers, setBeers] = useState([])
-        // const [showModal, setShowModal] = useState(false)
 
         useEffect(() => {
             loadBeers()
@@ -22,9 +21,7 @@ const ListBeerPage = () => {
     return (
         <Container>
             <Row>
-
-                <BeerList beers={beers} />
-
+                    <BeerList beers={beers} />
             </Row>
         </Container>
     )
