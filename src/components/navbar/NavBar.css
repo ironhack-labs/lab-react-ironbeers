@@ -1,0 +1,13 @@
+.NavBar {
+    padding: 10px;
+    background-color: rgb(44, 2, 151);
+    color: white;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.navlink {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
