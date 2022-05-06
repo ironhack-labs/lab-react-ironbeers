@@ -32,7 +32,36 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+
+  margin: 0 auto;
+  width: 650px;
+  border: 1px solid gray;
+}
+
+.container img {
+
+  width: 650px;
+
+}
+
+.allbeers p,
+h2 {
+
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.allbeers {
+
+  color: black;
+  text-decoration: none;
+
+
 }

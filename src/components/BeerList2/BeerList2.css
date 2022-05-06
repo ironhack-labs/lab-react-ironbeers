@@ -1,0 +1,25 @@
+.contentBeer {
+
+    display: flex;
+    margin: 40px 30%;
+
+}
+
+.contentBeer img {
+
+    height: 150px;
+    margin-right: 20px;
+
+}
+
+.contentBeer .texts {
+
+    width: 350px;
+    text-align: left;
+    padding: 0;
+}
+
+.contentBeer h2 {
+
+    padding: 0;
+}

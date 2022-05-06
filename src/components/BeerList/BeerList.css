@@ -1,0 +1,15 @@
+.contentBeer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 100px;
+}
+
+.texts {
+
+    width: 400px;
+}
+
+.contentBeer img {
+
+    height: 200px;
+}
