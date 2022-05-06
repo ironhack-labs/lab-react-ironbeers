@@ -1,0 +1,17 @@
+.beerCard {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.beerCard img{
+    height: 120px;
+    object-fit:contain;
+}
+
+.beerCard a{
+    text-decoration: none;
+}
+
+.card-body {
+    color: black
+}
