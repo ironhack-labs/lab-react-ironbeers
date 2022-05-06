@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import AppRoutes from './routes/AppRoutes';
+import Navigation from "./components/Navbar/Navbar";
+
 
 function App() {
+
+  let showingNavbar = true
+
+  const showNavbar = () => showingNavbar = true
+  const unshowNavbar = () => showingNavbar = false
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {showingNavbar ? <Navigation /> : <h1>Qué dice el tío?</h1>}
+      <AppRoutes showNavbar={showNavbar} unshowNavbar={unshowNavbar} />
+    </>
+  )
 }
 
 export default App;
