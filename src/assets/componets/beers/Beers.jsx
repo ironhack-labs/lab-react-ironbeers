@@ -1,6 +1,7 @@
 import Beercard from "../BeerCard"
 import apiBeers from "../../../services/Api.service"
 import { useState, useEffect } from 'react'
+import { Row,Container,Col } from "react-bootstrap"
 
 const Beers =()=>{
 
@@ -20,9 +21,23 @@ const Beers =()=>{
     return( 
     <>
     <h1>List Of Beers</h1>
-     { beers.map(elm=>{
-       return(<Beercard {...elm}/>)
-      })}
+
+    <Container>
+        <Row>
+       
+          { beers.map(elm=>{
+                
+         return(
+            <Col md={{span:3}}>
+         <Beercard {...elm}/>
+         </Col>
+         )
+         
+         })}
+       
+      </Row>
+    </Container>
+    
       </>
         
 )
