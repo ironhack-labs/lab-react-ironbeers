@@ -5,18 +5,31 @@ import Header from './Header.js';
 function Beers () {
 
     const [beers, setBeers] = useState([]);
+    const [beersFilter, setBeersFilter] = useState('');
+
+    function handleBeersFilterChange(e) {
+        setBeersFilter(e.target.value);
+    }
     
     useEffect(() => {
         fetch('https://ih-beers-api2.herokuapp.com/beers')
         .then(response => response.json())
         .then(data => setBeers(data)); 
     }, [])
-    console.log(beers);
+    
     return (
         <div className='Beers'>
             <Header></Header>
+            <form className='beers-filter'>
+                <input type='text' value={beersFilter} onChange={handleBeersFilterChange}></input>
+            </form>
+            
             <div className='beers-list'>
-                {beers.map(beer => (
+                {beers
+                .filter(beer => {
+                    return beer.name.toLowerCase().includes(beersFilter.toLowerCase());
+                })
+                .map(beer => (
                     <Link key={beer._id} className='Link' to={`/beers/${beer._id}`}>
                         <div className='Beer'>
                             <div className='col-1'>

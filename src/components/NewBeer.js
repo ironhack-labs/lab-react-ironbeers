@@ -1,14 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import Header from './Header.js';
 
 function NewBeer() {
-    const [name, setName] = useState();
-    const [tagline, setTagline] = useState();
-    const [description, setDescription] = useState();
-    const [firstBrewed, setFirstBrewed] = useState();
-    const [brewersTips, setBrewersTips] = useState();
-    const [attenuationLevel, setAttenuationLevel] = useState();
-    const [contributedBy, setContributedBy] = useState();
+    const navigate = useNavigate();
+
+    const [name, setName] = useState('');
+    const [tagline, setTagline] = useState('');
+    const [description, setDescription] = useState('');
+    const [firstBrewed, setFirstBrewed] = useState('');
+    const [brewersTips, setBrewersTips] = useState('');
+    const [attenuationLevel, setAttenuationLevel] = useState(0);
+    const [contributedBy, setContributedBy] = useState('');
 
     const handleNameChange = event => {
         setName(event.target.value);
@@ -38,15 +41,37 @@ function NewBeer() {
         setContributedBy(event.target.value);
     }
 
-    const handleButtonClick = () => {
-        console.log(name);
-    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const data = {
+            name: name,
+            tagline: tagline,
+            description: description,
+            firstBrewed: firstBrewed,
+            brewersTips: brewersTips,
+            attenuationLevel: attenuationLevel,
+            contributedBy: contributedBy
+        };
+
+        fetch('https://ih-beers-api2.herokuapp.com/beers/new', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => console.log(response))
+        .then(() => {
+            navigate('/')
+        })
+    };
 
     return (
         <div className='NewBeer'>
             <Header></Header>
             <div className='new-beer-form'>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label>Name</label>
                     <input type='text' name='name' value={name} onChange={handleNameChange}></input>
 
@@ -68,7 +93,7 @@ function NewBeer() {
                     <label>Contributed By</label>
                     <input type='text' name='contributed_by' value={contributedBy} onChange={handleContributedByChange}></input>
 
-                    <button onClick={handleButtonClick}>Add New</button>
+                    <button type='submit'>Add New</button>
                 </form>
             </div>
 
