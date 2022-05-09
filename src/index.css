@@ -11,3 +11,85 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar {
+  background-color: #3dc4fc;
+  /* Nega-ironhack */  
+  /* background-color: #c23b03; */
+}
+
+.nav-home {
+  color: white;
+  border: 0;
+  width: 3.5rem;
+}
+
+.beer-search {
+  height: 3rem;
+  font-size: 2rem;  
+}
+
+#beer-list-image {
+  max-width: 5rem;
+  max-height: 10rem;
+  object-fit: contain;
+}
+
+#beer-list-card {
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-title a{
+  text-decoration: none;
+  color: black;
+}
+
+#beer-tagline {
+  font-weight: 600;
+  color: #949494;
+}
+
+#beer-info-image{
+  max-height: 15rem;
+  object-fit: contain;
+}
+
+.first-brew{
+  font-weight: bold;
+}
+
+.beer-level{
+  color: #949494;  
+}
+
+.new-beer-form{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.new-beer-form label {
+  font-weight: bold;
+}
+
+.new-beer-form textarea{
+  height: 10rem;
+}
+
+.form-control {
+  border-radius: 2rem;
+}
+
+.new-beer-form .btn-primary{
+  background-color: #3dc4fc;
+  font-size: 1.5rem;
+  border-radius: 5rem;
+}
+
+.new-beer-form .btn-primary:hover {
+  background-color: #30a3d3;
+}
+
+/* nav img {
+
+} */
