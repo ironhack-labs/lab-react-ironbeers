@@ -1,58 +1,59 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
-function NewBeer(props) {
+function NewBeer() {
 
-    const [foundBeer, setFoundBeer] = useState(null);
+    const [name, setName] = useState('');
+    const [tagline, setTagline] = useState('');
+    const [description, setDescription] = useState('');
+    const [firstBrewed, setfirstBrewed] = useState('');
+    const [brewerTips, setBrewerTips] = useState('');
+    const [attenuationLevel, setAttenuationLevel] = useState(0);
+    const [contributedBy, setContributedBy] = useState('');
 
-    const { beerId } = useParams();
-    console.log('beedId', beerId);
 
-    useEffect(() => {
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const body = { 
+            name: name,
+            tagline: tagline,
+            description: description,
+            firstBrewed: firstBrewed,
+            brewerTips: brewerTips,
+            attenuationLevel: attenuationLevel,
+            contributedBy: contributedBy
+        }
+    
+
         axios
-            .post("https://ih-beers-api2.herokuapp.com/beers/new")
+            .post("https://ih-beers-api2.herokuapp.com/beers/new", body)
             .then((response) => {
-                console.log('response.data', response.data);
-                setFoundBeer(response.data)
+
+
+                navigate('/');
             })
-    }, [beerId] );
+    };
 
 
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column'}}>
         <Header />
-        <h1>Beer Details</h1>
+        <h1>Add New Beer</h1>
 
-                    <div>
-                        <img src={foundBeer.image_url} alt='beer' style={{ height: '200px'}} />
-                    </div>
-                    <div>
-                        <h2>{foundBeer.name}</h2>
-                        <h3>{foundBeer.tagline}</h3>
-                    </div>
-                    <div>
-                        <h2>{foundBeer.attenuation_level}</h2>
-                        <p>{foundBeer.first_brewed}</p>
-                    </div>
-                    <div>
-                        <p>{foundBeer.description}</p>
-                        <h5>{foundBeer.contributed_by}</h5>
-
-                        {/* image, name, tagline, 
-                        first_brewed, attenuation_level, 
-                        description, contributed_by */}
-                    </div>
-
-                    <form >
+                    <form onSubmit={handleSubmit}>
                         <label>Name</label>
                         <input
                         type="text"
-                        name="beerName"
+                        name="name"
                         onChange={(e) => setName(e.target.value)}
-                        value={beerName}
+                        value={name}
                         />
                 
                         <label>Tagline</label>
@@ -90,7 +91,7 @@ function NewBeer(props) {
                         <label>Attenuation Level</label>
                         <input
                         type="number"
-                        name="tagline"
+                        name="attenuationLevel"
                         onChange={(e) => setAttenuationLevel(e.target.value)}
                         value={attenuationLevel}
                         />
@@ -98,7 +99,7 @@ function NewBeer(props) {
                         <label>Contributed By</label>
                         <input
                         type="text"
-                        name="tagline"
+                        name="contributedBy"
                         onChange={(e) => setContributedBy(e.target.value)}
                         value={contributedBy}
                         />                        
@@ -110,8 +111,7 @@ function NewBeer(props) {
                             attenuation_level: Number,
                             contributed_by: String
                          */}
-                        
-                        <button type="submit">Create Apartment</button>
+                        <button type="submit">Create Beer</button>
         
                     </form>
 
