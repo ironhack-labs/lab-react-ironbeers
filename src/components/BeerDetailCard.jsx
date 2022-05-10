@@ -2,7 +2,7 @@ function BeerDetailCard(props) {
 
   return (
     <div className="beerdetailcard">
-      <img src={props.image_url} alt="" />
+      <img className="responsive" src={props.image_url} alt="" />
       <div className="beerdetailtitle">
         <h2>{props.name}</h2>
         <h2>{props.abv}</h2>
