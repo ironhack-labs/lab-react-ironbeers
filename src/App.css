@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  margin: 5px;
+  margin: 15px;
 }
 
 .App-logo {
@@ -54,5 +54,104 @@ a {
   color:  black;
   margin: 0;
 }
+
+.header {
+  height: 60px;
+  background-color: rgb(149, 149, 241);
+  color: white;
+  border-radius: 10px;
+  padding-top: 20px;
+}
+
+.beercard {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.beercard-image img{
+  width: 50px;
+}
+
+.beercard-text {
+  text-align: left;
+  color: black;
+  margin-left: 50px;
+}
+
+.beerdetailcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.beerdetailcard img {
+  width: 100px;
+}
+
+.beerdetailtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+  height: fit-content;
+}
+
+.beerdetailsubtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+  padding:0;
+  margin:0;
+}
+
+.beerdetaildescrip {
+  width: 400px;
+  text-align: left;
+}
+
+.createnewbeer form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: auto;
+  align-items: center;
+}
+
+.createnewbeer label {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.createnewbeer input {
+  width: 400px;
+  height: 25px;
+  border-radius: 25px;
+  border-color: rgba(203, 184, 184, 0.276);
+  border-width: 2px;
+}
+
+#description {
+  height: 200px;
+}
+
+.createbeerlabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.createnewbeer button {
+  height: 40px;
+  background-color: rgb(149, 149, 241);
+  color: white;
+  border-radius: 25px;
+  margin-top: 20px;
+  width: 400px;
+  border: none;
+}
+
 
 

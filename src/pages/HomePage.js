@@ -36,7 +36,6 @@ function HomePage () {
       </Link>
     </>
   )
-
 }
 
 export default HomePage;
