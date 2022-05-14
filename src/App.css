@@ -19,3 +19,7 @@ div.card-body {
 form {
   text-align: left;
 }
+
+.card {
+  padding-top: 15px;
+}
