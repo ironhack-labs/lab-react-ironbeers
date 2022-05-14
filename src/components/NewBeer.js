@@ -7,7 +7,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const NewBeer = () => {
-
   const [name, setName] = useState("");
   const [tagline, setTagline] = useState("");
   const [description, setDescription] = useState("");
@@ -23,10 +22,10 @@ const NewBeer = () => {
       name: name,
       tagline: tagline,
       description: description,
-      firstBrewed: firstBrewed,
-      brewersTips: brewersTips,
+      first_brewed: firstBrewed,
+      brewers_tips: brewersTips,
       attenuationLevel: attenuationLevel,
-      contributedBy: contributedBy,
+      contributed_by: contributedBy,
     };
 
     axios
