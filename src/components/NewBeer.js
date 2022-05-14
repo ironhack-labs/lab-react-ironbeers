@@ -6,7 +6,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const NewBeer = () => {
+const NewBeer = (props) => {
   const [name, setName] = useState("");
   const [tagline, setTagline] = useState("");
   const [description, setDescription] = useState("");
@@ -39,6 +39,7 @@ const NewBeer = () => {
         setAttenuationLevel("");
         setContributedBy("");
         navigate("/beers");
+        props.updateList()
       });
   }
 

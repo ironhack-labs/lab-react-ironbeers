@@ -12,6 +12,10 @@ function App() {
   const [beers, setBeers] = useState([]);
 
   useEffect(() => {
+    getBeers()
+  }, []);
+
+  const getBeers = () => {
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers")
       .then((response) => {
@@ -21,7 +25,7 @@ function App() {
       .catch((error) => {
         console.log("error getting data from API", error);
       });
-  }, []);
+  }
 
   return (
     <div className="App">
@@ -33,7 +37,7 @@ function App() {
           path="/random-beer"
           element={<RandomBeer beersList={beers} />}
         ></Route>
-        <Route path="/new-beer" element={<NewBeer />}></Route>
+        <Route path="/new-beer" element={<NewBeer updateList={getBeers}/>}></Route>
         <Route
           path="/beerdetails/:beerId"
           element={<SingleBeer beersList={beers} />}
