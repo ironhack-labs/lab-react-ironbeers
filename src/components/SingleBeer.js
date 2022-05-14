@@ -1,0 +1,1 @@
+// a page to display the details of the beet the user clicked on 
