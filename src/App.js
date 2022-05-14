@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Beers from './components/Beers';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
 
 function App() {
-
-  "https://ih-beers-api2.herokuapp.com/beers"
 
   return (
     <div className="App">
@@ -13,7 +12,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Homepage />} />
-        <Route path="/beers" element={<Header />} />
+        <Route path="/beers" element={<><Header /> <Beers /></>} />
         <Route path="/random-beer" element={<Header />} />
         <Route path="/new-beer" element={<Header />} />
 
