@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header';
 import Homepage from './components/Homepage';
 
 function App() {
@@ -11,7 +12,10 @@ function App() {
       
       <Routes>
 
-        <Route path="/" element=<Homepage /> />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/beers" element={<Header />} />
+        <Route path="/random-beer" element={<Header />} />
+        <Route path="/new-beer" element={<Header />} />
 
       </Routes>
 
