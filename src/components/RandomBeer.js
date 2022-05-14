@@ -15,7 +15,7 @@ export default function RandomBeer() {
     }, [])
 
     return (
-        <div>
+        <div className="SingleBeer">
             <Link to="/">HOME</Link>
 
             {

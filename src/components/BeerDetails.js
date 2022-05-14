@@ -7,7 +7,7 @@ export default function BeerDetails(props) {
     const renderDetails = () => {
         const foundBeer = beers.find((beer) => { return beer._id === beerId });
         return (
-            <div >
+            <div className='SingleBeer'>
                 <img src={foundBeer.image_url} alt={foundBeer.name} />
                 <div>
                     <h2>Name:<br />{foundBeer.name}</h2>
