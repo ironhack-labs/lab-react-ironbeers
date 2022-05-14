@@ -3,8 +3,9 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import BeersList from "./components/BeersList";
-import RandomBeer from "./components/RandomBeer"
-import NewBeer from "./components/NewBeer"
+import RandomBeer from "./components/RandomBeer";
+import NewBeer from "./components/NewBeer";
+import BeerDetails from "./components/BeerDetails"
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
@@ -50,6 +51,7 @@ function App() {
       <Routes>
         <Route path="/" element={renderHomePage()} />
         <Route path="/beers" element={<BeersList beers={beers} />} />
+        <Route path="/beers/:beerId" element={<BeerDetails beers={beers} />} />
         <Route path="/random-beer" element={<RandomBeer beers={beers} />} />
         <Route path="/new-beer" element={<NewBeer />} />
       </Routes>
