@@ -2,6 +2,9 @@ import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import Home from './components/Home'
 import Listbeers from './components/ListBeers'
+import SingleBeer from './components/SingleBeer'
+import RandomBeer from './components/RandomBeer'
+import NewBeer from './components/NewBeer'
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 
@@ -24,8 +27,9 @@ useEffect(() =>{
      <Route path="/" element={<Home/>}></Route>
        <Route path="/home" element={<Home/>}/>
        <Route path="/beers" element={<Listbeers beersList={beers}/>}/>
-       <Route path="/random-beer" element={<Home/>}></Route>
-       <Route path="/new-beer" element={<Home/>}></Route>
+       <Route path="/random-beer" element={<RandomBeer beersList={beers}/>}></Route>
+       <Route path="/new-beer" element={<NewBeer/>}></Route>
+       <Route path="/beerdetails/:beerId" element={<SingleBeer beersList={beers}/>}></Route>
      </Routes>
     </div>
   );

@@ -2,3 +2,20 @@
   text-align: center;
 }
 
+.home-Image{
+ width: 100%;
+}
+
+
+div.card-body {
+  text-align: left;
+}
+
+.card-titles {
+   position: absolute;
+   left: 80%;
+   text-align: right !important;
+ }
+
+
+ 
