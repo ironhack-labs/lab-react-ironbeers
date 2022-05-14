@@ -1,10 +1,11 @@
 // display all beers
 import Header from "./Header";
+import {Link} from 'react-router-dom'
 
 function ListBeers(props) {
   return (
     <>
-      <Header />
+      <Header/>
       {props.beersList ? (
         props.beersList.map((beer) => {
           console.log(beer);
@@ -25,6 +26,7 @@ function ListBeers(props) {
                     <p class="card-text">
                       <small class="text-muted">Created by {beer.contributed_by}</small>
                     </p>
+                    <Link to={`/beerdetails/${beer._id}`}>More Details</Link>
                   </div>
                 </div>
               </div>
