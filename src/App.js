@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* set the Routes */}
+      {/* Define Routes */}
       <Routes>
         <Route path="/" element={renderHomePage()} />
         <Route path="/beers" element={<BeersList beers={beers} />} />
