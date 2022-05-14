@@ -1,0 +1,31 @@
+.single-beer-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 80%;
+    background-color: brown;
+    color: white;
+    height: 100vh
+}
+
+.single-beer-left, .single-beer-right{
+    width: 40%;
+    margin-top: 0;
+    max-height: 80vh;
+}
+
+.single-beer-right img{
+    height: 80%;
+    margin-top: 10%;
+}
+
+
+.single-beer-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-single-beer-container{
+    background-color: brown;
+}

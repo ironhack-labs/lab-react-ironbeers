@@ -1,0 +1,22 @@
+.homepage img{
+    margin: 10px auto;
+    width: 100%;
+}
+
+.homepage h1{
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    width: 30%;
+    background: none;
+    font-size: 6rem;
+    color: rgb(241, 0, 245);
+    margin: 0;
+}
+
+.footer{
+    background-color: rgb(195, 0, 255);
+    height: 20vh;
+    width: 100vw;
+    margin: 0;
+}

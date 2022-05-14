@@ -1,0 +1,21 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-page{
+    background: brown;
+    height: 100vh;
+    color: white;
+}
+
+input{
+    width: 10%;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+button{
+    width: 10%;
+    margin: 0 auto;
+}
