@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(232, 230, 230);
+}
+
+body a{
+    text-decoration: none;
+    color: black;
+}
+
+.homepage-link img{
+    width: 100vw;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    }
+
+.link-text{
+    margin:  3% 5% 8% 5%;
+}
+
+.link-text p{
+   font-size: 1rem;
+   padding: 3%;
+}
+
+.homepage-link h2{
+    margin: 0px !important;
+    font-weight: 300 !important ;
+    font-size: 2rem !important;
+}
+
+.homepage-link p{
+    margin: 0px !important;
+    color: rgb(77, 75, 75);
+}

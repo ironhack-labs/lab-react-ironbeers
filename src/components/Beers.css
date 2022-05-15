@@ -1,0 +1,20 @@
+.beer-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.list-element{
+    display: flex;
+    background-color: beige;
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
+
+.list-element img{
+    max-height: 20vh;
+    margin: 2rem;
+}
+
+.list-text{
+    text-align: left;
+}

@@ -1,0 +1,11 @@
+.navbar{
+    padding: 1.7rem;
+    /* background-color: #F6C101 */
+    background-image: linear-gradient(white, #F6C101);
+}
+
+.navbar a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}

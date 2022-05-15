@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.beer-details{
+  margin: 5%
+}
+
+.beer-details img{
+max-height: 45vh;
+margin: 5%;
+}
+
+.beer-details h1{
+  font-weight: 300;
+  font-size: 2.5rem;
+  padding: 0% 0% 0% 0% !important;
+}
+
