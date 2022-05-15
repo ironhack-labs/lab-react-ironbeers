@@ -6,8 +6,6 @@ function Beers(props) {
 
     const beersList = props.beers
 
-    console.log(beersList);
-
     return (
         <div>
             <header className="home-return">
