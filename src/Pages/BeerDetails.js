@@ -7,7 +7,6 @@ function BeerDetails() {
     const [details, setDetails] = useState({});
 
     const { beerId } = useParams();
-    console.log(beerId)
 
     useEffect(() => {
         loadBeer()
@@ -17,7 +16,6 @@ function BeerDetails() {
         beersService
             .getOneBeer(beerId)
             .then(({ data }) => {
-                console.log(data)
                 setDetails(data)
             })
             .catch(e => console.log("error getting data from API", e))
