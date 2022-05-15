@@ -8,7 +8,7 @@ function Beers() {
 
     useEffect(() => {
         loadBeers()
-    })
+    },[])
 
     const loadBeers = () => {
         beersService
