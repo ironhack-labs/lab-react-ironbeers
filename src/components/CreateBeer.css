@@ -1,0 +1,19 @@
+.createBeer form {
+  text-align: center;
+  border: 1px solid #2f8f9d;
+  background-color: #b3e8e5;
+  margin: 2rem 2rem 4rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem 0rem #82dbd8;
+}
+
+.createBeer form label {
+  display: block;
+  margin: 1rem;
+}
+
+.createBeer form input {
+  display: block;
+  margin: 0 auto;
+}
