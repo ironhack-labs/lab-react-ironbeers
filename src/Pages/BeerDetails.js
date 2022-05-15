@@ -10,7 +10,7 @@ function BeerDetails() {
 
     useEffect(() => {
         loadBeer()
-    },[])
+    })
 
     const loadBeer = () => {
         beersService

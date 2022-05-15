@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import beersService from "../services/beersService";
 
 function RandomBeer() {
     const [details, setDetails] = useState({});
 
-    const { beerId } = useParams();
-
     useEffect(() => {
         loadBeer()
-    },[])
+    })
 
     const loadBeer = () => {
         beersService
