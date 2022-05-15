@@ -18,3 +18,12 @@
 .list-text{
     text-align: left;
 }
+
+.link{
+    padding: 0.3rem 2rem;
+    border: solid black 1px;
+    font-size: larger;
+    font-weight: 400;
+    background-color: rgb(56, 55, 55);
+    color: white;
+}

@@ -1,0 +1,33 @@
+.input{
+    margin-bottom: 5%;
+    padding: 0;
+}
+
+.input p{
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 1.2rem;
+}
+.input textarea{
+    /* padding: 4rem !important; */
+    width: 70vw;
+    height: 20vh;
+}
+
+.input input{
+    /* padding: 0.5rem 4rem ; */
+    width: 70vw;
+    padding: 0.3rem;
+}
+
+button{
+    width: 72vw;
+    height: 5vh;
+    padding:  0.3rem !important;
+    margin: 5% 0% 10% 0% ;
+    background-color: #F6C101;
+    border: solid black 1px;
+    font-size: 1rem;
+    font-weight: 800;
+}
+

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./CreateBeer.css"
 
 function CreateBeer(props){
 
@@ -41,31 +42,38 @@ const createNewBeer=(e)=>{
         <h1>Create a new Beer</h1>
         <form onSubmit={createNewBeer}>
         <div className="input">
-        Name
+       <p>Name</p>
+        <br/>
             <input type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)}></input>
         </div>
         <div className="input">
-        Tagline
+        <p>Tagline</p>
+        <br/>
             <input type="text" name="tagline" value={tagline} onChange={(e)=>setTagline(e.target.value)}></input>
         </div>
-        <div className="input">
-        Description
-            <input type="text" name="description" value={description} onChange={(e)=>setDescription(e.target.value)}></input>
+        <div className="input description">
+        <p>Description</p>
+        <br/>
+            <textarea type="textarea" name="description" value={description} onChange={(e)=>setDescription(e.target.value)}></textarea>
         </div>
                <div className="input">
-        First brewed
+        <p>First brewed</p>
+        <br/>
             <input type="text" name="firstBrewed" value={firstBrewed} onChange={(e)=>setFirstBrewed(e.target.value)}></input>
         </div>
         <div className="input">
-        Brewers Tips
+        <p>Brewers Tips</p>
+        <br/>
             <input type="text" name="brewersTips" value={brewersTips} onChange={(e)=>setBrewersTips(e.target.value)}></input>
         </div>
         <div className="input">
-        Attenuation Level
+        <p>Attenuation Level</p>
+        <br/>
             <input type="number" name="attenuationLevel" value={attenuationLevel} onChange={(e)=>setAttenuationLevel(e.target.value)}></input>
         </div>
         <div className="input">
-        Contributed by
+        <p>Contributed by</p>
+        <br/>
             <input type="text" name="contributedBy" value={contributedBy} onChange={(e)=>setContributedBy(e.target.value)}></input>
         </div>
        

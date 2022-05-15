@@ -31,7 +31,7 @@ return(
            <h2>{beer.name}</h2>
            <h5>{beer.tagline}</h5>
             <p>Created by:{beer.contributed_by}</p>
-            <NavLink to={`/beers/${beer._id}`}>Details</NavLink>
+            <NavLink to={`/beers/${beer._id}`} className="link">Details</NavLink>
             </div>
            </div>
            
