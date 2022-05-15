@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header"
 import beersService from "../services/beersService";
 
-function BeerDetails({ image, name, tagline, first_brewed, attenuation_level, description, contributed_by }) {
+function BeerDetails() {
     const [details, setDetails] = useState({});
 
     const { beerId } = useParams();
