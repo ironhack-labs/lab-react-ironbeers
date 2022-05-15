@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* base styles */
+
 * {
   margin: 0;
   font-family: "Quicksand";
@@ -35,7 +35,7 @@
 }
 
 
-/* blog previews / list */
+
 .blog-preview {
   padding: 10px 16px;
   margin: 20px 0;
@@ -64,7 +64,7 @@
 }
 
 
-/* create new blog form */
+
 .create {
   max-width: 400px;
   margin: 0 auto;
@@ -76,7 +76,7 @@
 }
 .create h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #5e35f1;
   margin-bottom: 30px;
 }
 .create input, .create textarea, .create select {
@@ -88,7 +88,7 @@
   display: block;
 }
 .create button {
-  background: #f1356d;
+  background: #5e35f1;
   color: #fff;
   border: 0;
   padding: 8px;
