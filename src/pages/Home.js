@@ -1,4 +1,4 @@
-import homeData from "./data/home.data";
+import homeData from "./data/homeData";
 import HomeLink from "../components/HomeLink";
 
 const Home = () => {

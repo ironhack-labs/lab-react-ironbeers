@@ -1,6 +1,11 @@
+import Header from "../components/Header";
+
 const NewBeer = () => {
     return (
-        <div>NewBeers</div>
+        <div>
+            <Header />
+            <p>NewBeer</p>
+        </div>
     );
 };
 

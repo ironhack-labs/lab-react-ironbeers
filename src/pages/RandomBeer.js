@@ -1,6 +1,11 @@
+import Header from "../components/Header";
+
 const RandomBeer = () => {
     return (
-        <div>RandomBeers</div>
+        <div>
+            <Header />
+            <p>RandomBeer</p>
+        </div>
     );
 };
 
