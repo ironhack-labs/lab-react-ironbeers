@@ -6,7 +6,7 @@ import Header from './components/Header';
 import HomePage from './components/HomePage';
 import Beers from './components/Beers';
 import BeerDetails from './components/BeerDetails';
-import { useEffect, useState } from 'react/cjs/react.production.min';
+import { useEffect, useState } from 'react';
 import CreateBeer from './components/CreateBeer';
 
 function App() {
@@ -25,14 +25,15 @@ function App() {
 
   return (
 <div className='App'>
+
+<Header />
+
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/beers" element={<><Header /> <Beers/> </> } />
-      <Route path="/random-beer" element={<Header />} />
-      <Route path="/new-beer" element={<Header />} />
-      <Route path="/beers/1" element={<><Header /> <BeerDetails/> beerArr={beers}</> } />
-      <Route path="/create" element={<><Header /> <CreateBeer/> </> } />
-      <button>Add beer</button>
+      <Route path="/beers" element={<Beers/>  } />
+      <Route path="/random-beer" element="" />
+      <Route path="/beers/1" element={ <BeerDetails/>} beerArr={beers} />
+      <Route path="/create" element={ <CreateBeer/>  } />
     </Routes>
 
     </div>

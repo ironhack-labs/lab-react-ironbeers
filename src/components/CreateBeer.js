@@ -57,6 +57,7 @@ function CreateBeer(props) {
         <input type="text" name="tips" value={tips} placeholder="tips" onChange={(e) => {setTips(e.target.value)} }/>
         <input type="number" name="attenuation" value={attenuation} placeholder="attenuation" onChange={(e) => {setAttenuation(e.target.value)} }/>
         <input type="text" name="contributed" value={contributed} placeholder="contributed" onChange={(e) => {setContributed(e.target.value)} }/>
+        <button>Add beer</button>
     </form>
     </div>
     )

@@ -6,7 +6,7 @@ function HomePage() {
 <div className="HomePage">
     <NavLink to={"/beers"}> Beers </NavLink>
     <NavLink to={"/random-beer"}> Random Beer</NavLink>
-    <NavLink to={"/new-beer"}> New Beer</NavLink>
+    <NavLink to={"/create"}> New Beer</NavLink>
 </div>
     )
 }
