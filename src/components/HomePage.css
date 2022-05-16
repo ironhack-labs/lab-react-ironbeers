@@ -1,0 +1,15 @@
+.BeersList .beer-summary {
+    text-align: center;
+    border: 1px solid rgb(102, 102, 102);
+    background-color: #e6f01e1c;
+    margin: 1rem 1rem 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem 0rem #aaa;
+}
+.BeersList .beer-summary img {
+    max-height: 200px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 1rem;
+}

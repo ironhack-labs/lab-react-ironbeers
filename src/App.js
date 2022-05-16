@@ -3,7 +3,8 @@ import './App.css';
 
 import HomePage from "./components/HomePage";
 import Header from "./components/Header";      
-import AllBeers from "./components/AllBeers";       
+import AllBeers from "./components/AllBeers"; 
+import BeerDetails from "./components/BeerDetails";       
 import RandomBeer from "./components/RandomBeer";     
 import NewBeer from "./components/NewBeer";   
 
@@ -30,9 +31,12 @@ function App() {
   return (
     <div className="App">
 
+    <Header />
+
         <Routes>
           <Route path="/" element={<HomePage />} /> 
-          <Route path="/allbeers" element={<AllBeers beers={beers} />} />
+          <Route path="/beers" element={<AllBeers beers={beers} />} />
+          <Route path="/beers/:beerId" element={<BeerDetails beers={beers}/>} />
           <Route path="/randombeer" element={<RandomBeer />} />
           <Route path="/newbeer" element={<NewBeer />} />
         </Routes>  

@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";   
+import React from 'react';
+import { Link } from "react-router-dom";  
+import "./Header.css" 
  
 function Header() {
   return (
-    <nav className="Header">
+    <header className="Header">
         <Link to="/"> Home </Link>           
-
-
-    </nav>
+    </header>
   );
 }
  
