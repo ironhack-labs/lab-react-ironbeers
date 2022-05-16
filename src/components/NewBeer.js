@@ -12,6 +12,8 @@ const NewBeer = (() => {
     const [brewer_tips, setBrewerTips] = useState()
     const [attenuation_level, setAttenuationLevel] = useState()
     const [contributed_by, setContributor] = useState()
+
+    const navigate = useNavigate()
     // const navigate = useNavigate()
 
 
@@ -29,14 +31,13 @@ const NewBeer = (() => {
 
         axios.post('https://ih-beers-api2.herokuapp.com/beers/new', newApt)
             .then( (response) => {
-                setName()
-                setTagline()
-                setFirstBrewed()
-                setBrewerTips()
-                setAttenuationLevel()
-                setContributor()
-                console.log(response)
-                // navigate('/beers')
+                setName('')
+                setTagline('')
+                setFirstBrewed('')
+                setBrewerTips('')
+                setAttenuationLevel('')
+                setContributor('')
+                navigate('/beers')
             })
             .catch( err => console.log(err))
     }
