@@ -1,9 +1,9 @@
 import { Content, BeerImg, Name, Tagline, ContributedBy } from "./styled/BeerCard.styled";
 import StyledLink from "./styled/StyledLink";
 
-const BeerCard = ({ image_url, name, tagline, contributed_by }) => (
+const BeerCard = ({ _id, image_url, name, tagline, contributed_by }) => (
     <section>
-        <StyledLink to="/">
+        <StyledLink to={`/beers/${_id}`}>
             <Content>
                 <BeerImg src={image_url} alt={name} />
                 <div>

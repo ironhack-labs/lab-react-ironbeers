@@ -11,6 +11,13 @@ class BeersApi {
             setBeers(await data);
         } catch (error) {console.error(`Error on getAllBeers => ${error.message}`, error.response.data)};
     };
+
+    getOneBeer = async (beerId, setBeer) => {
+        try {
+            const { data } = await this.api.get(`/${beerId}`)
+            setBeer(await data);
+        } catch (error) {console.error(`Error on getOneBeer => ${error.message}`, error.response.data)};
+    };
 };
 
 export default new BeersApi();
