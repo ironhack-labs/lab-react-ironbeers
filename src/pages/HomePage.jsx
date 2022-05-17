@@ -9,6 +9,7 @@ const HomePage = ()=>{
   const homeStyle = {
     display:'flex',
     flexDirection:'column'
+  
   }
 return (
 <>
