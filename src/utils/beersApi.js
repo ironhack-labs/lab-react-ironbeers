@@ -5,10 +5,10 @@ class BeersApi {
         this.api = axios.create({ baseURL: `${process.env.REACT_APP_BEERS_URL}/beers` });
     };
 
-    getAllBeers = async () => {
+    getAllBeers = async setBeers => {
         try {
             const { data } = await this.api.get("/");
-            return data;
+            setBeers(await data);
         } catch (error) {console.error(`Error on getAllBeers => ${error.message}`, error.response.data)};
     };
 };
