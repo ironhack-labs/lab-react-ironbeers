@@ -3,18 +3,17 @@ import { useState, useEffect } from "react";
 import beersApi from "../utils/beersApi";
 import Header from "../components/Header";
 import Loading from "../components/Loading";
+import BeerDetails from "../components/BeerDetails";
 
 const Beer = () => {
     const { beerId } = useParams();
     const [beer, setBeer] = useState({});
-
     useEffect(() => {beersApi.getOneBeer(beerId, setBeer)}, [beerId]);
-    console.log(beer);
 
     return (
         <div>
             <Header />
-            {(Object.keys(beer).length === 0) ? <Loading /> : <h1>{beer.name}</h1>}
+            {(Object.keys(beer).length === 0) ? <Loading /> : <BeerDetails {...beer} />}
         </div>
     )
 };
