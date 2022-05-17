@@ -1,18 +1,20 @@
-import { Link } from "react-router-dom";
+import { Content, BeerImg, Name, Tagline, ContributedBy } from "./styled/BeerCard.styled";
+import StyledLink from "./styled/StyledLink";
 
-const BeerCard = ({ image_url, name, tagline, contributed_by }) => {
-    return (
-        <section>
-            <Link to="/">
-                <img src={image_url} alt={name} />
+const BeerCard = ({ image_url, name, tagline, contributed_by }) => (
+    <section>
+        <StyledLink to="/">
+            <Content>
+                <BeerImg src={image_url} alt={name} />
                 <div>
-                    <h1>{name}</h1>
-                    <h3>{tagline}</h3>
-                    <p><strong>Created by:</strong> {contributed_by}</p>
+                    <Name>{name}</Name>
+                    <Tagline>{tagline}</Tagline>
+                    <ContributedBy><strong>Created by:</strong> {contributed_by}</ContributedBy>
                 </div>
-            </Link>
-        </section>
-    );
-};
+            </Content>
+        </StyledLink>
+        <hr />
+    </section>
+);
 
 export default BeerCard;

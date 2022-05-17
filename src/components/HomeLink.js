@@ -1,4 +1,5 @@
-import { StyledHomeLink, StyledLink, BeerImg, Text, Title, Paragraph } from "./styled/HomeLink.styled";
+import { StyledHomeLink, BeerImg, Text, Title, Paragraph } from "./styled/HomeLink.styled";
+import StyledLink from "./styled/StyledLink";
 
 const HomeLink = ({ path, image, title, paragraph }) => (
     <StyledHomeLink>
