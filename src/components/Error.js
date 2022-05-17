@@ -7,4 +7,9 @@ const Error = ({ status, statusText }) => (
     </StyledError>
 );
 
+Error.defaultProps = {
+    status: 500,
+    statusText: "Internal Server Error"
+};
+
 export default Error;

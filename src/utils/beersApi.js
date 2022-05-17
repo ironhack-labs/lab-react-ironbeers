@@ -9,7 +9,10 @@ class BeersApi {
         try {
             const { data } = await this.api.get("/");
             setBeers(await data);
-        } catch (error) {console.error(`Error on getAllBeers => ${error.message}`, error.response)};
+        } catch (error) {
+            console.error(`Error on getAllBeers => ${error.message}`, error.response);
+            setBeers([{ statusText: error.response.statusText, status: error.response.status }]);
+        };
     };
 
     getOneBeer = async (beerId, setBeer) => {
@@ -18,6 +21,16 @@ class BeersApi {
             setBeer(await data);
         } catch (error) {
             console.error(`Error on getOneBeer => ${error.message}`, error.response);
+            setBeer({ statusText: error.response.statusText, status: error.response.status });
+        };
+    };
+
+    getRandomBeer = async setBeer => {
+        try {
+            const { data } = await this.api.get("/random");
+            setBeer(await data);
+        } catch (error) {
+            console.error(`Error on getRandomBeer => ${error.message}`, error.response);
             setBeer({ statusText: error.response.statusText, status: error.response.status });
         };
     };
