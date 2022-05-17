@@ -9,14 +9,17 @@ class BeersApi {
         try {
             const { data } = await this.api.get("/");
             setBeers(await data);
-        } catch (error) {console.error(`Error on getAllBeers => ${error.message}`, error.response.data)};
+        } catch (error) {console.error(`Error on getAllBeers => ${error.message}`, error.response)};
     };
 
     getOneBeer = async (beerId, setBeer) => {
         try {
-            const { data } = await this.api.get(`/${beerId}`)
+            const { data } = await this.api.get(`/${beerId}`);
             setBeer(await data);
-        } catch (error) {console.error(`Error on getOneBeer => ${error.message}`, error.response.data)};
+        } catch (error) {
+            console.error(`Error on getOneBeer => ${error.message}`, error.response);
+            setBeer({ statusText: error.response.statusText, status: error.response.status });
+        };
     };
 };
 
