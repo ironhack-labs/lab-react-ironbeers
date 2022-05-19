@@ -1,10 +1,10 @@
 import Header from "../components/Header";
+//import BeerForm from "../components/BeerForm";
 
 const NewBeer = () => {
     return (
         <div>
             <Header />
-            <p>NewBeer</p>
         </div>
     );
 };
