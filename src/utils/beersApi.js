@@ -37,7 +37,7 @@ class BeersApi {
 
     postBeer = async newBeer => {
         try {
-            const { data } = await this.api("/new", newBeer);
+            const { data } = await this.api.post("/new", newBeer);
             return data;
         } catch (error) {
             console.error(`Error on postBeer => ${error.message}`, error.response);
