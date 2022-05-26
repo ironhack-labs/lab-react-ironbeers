@@ -34,6 +34,16 @@ class BeersApi {
             setBeer({ statusText: error.response.statusText, status: error.response.status });
         };
     };
+
+    postBeer = async newBeer => {
+        try {
+            const { data } = await this.api("/new", newBeer);
+            return data;
+        } catch (error) {
+            console.error(`Error on postBeer => ${error.message}`, error.response);
+            return { statusText: error.response.statusText, status: error.response.status };
+        };
+    };
 };
 
 export default new BeersApi();
