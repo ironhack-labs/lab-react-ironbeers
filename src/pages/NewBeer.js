@@ -1,17 +1,19 @@
 import { useCreateStates, InputsData } from "./data/NewBeer.data";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Header from "../components/Header";
 import BeerForm from "../components/BeerForm";
+import Error from "../components/Error";
 
 const NewBeer = () => {
     const states = useCreateStates();
-    const navigate = useNavigate();
-    const inputsData = new InputsData(states, navigate);
+    const [error, setError] = useState({});
+    const inputsData = new InputsData(states, setError);
 
     return (
         <div>
             <Header />
-            <BeerForm {...inputsData} />
+            {(Object.keys(error).length === 0) && <BeerForm {...inputsData} />}
+            {(Object.keys(error).length !== 0) && <Error {...error} />}
         </div>
     );
 };

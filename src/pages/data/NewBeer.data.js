@@ -1,4 +1,5 @@
 import { useState } from "react";
+import beersApi from "../../utils/beersApi";
 
 export const useCreateStates = () => {
     const [name, setName] = useState("");
@@ -36,9 +37,9 @@ export const useCreateStates = () => {
 };
 
 export class InputsData {
-    constructor(states, navigate) {
+    constructor(states, setError) {
         this.states = states;
-        this.navigate = navigate;
+        this.setError = setError;
         this.inputs = [
             {
                 label: "Name",
@@ -231,8 +232,8 @@ export class InputsData {
 
             const addBeer = window.confirm(`Are you sure you want to add the beer ${newBeer.name}?`);
             if (addBeer) {
-                alert(`${newBeer.name} was added to our database.`);
-                console.log(newBeer);
+                const message = await beersApi.postBeer(newBeer);
+                message.status ? this.setError(message) : alert(message.message);
             };
             this.states.setName("");
             this.states.setTagline("");
