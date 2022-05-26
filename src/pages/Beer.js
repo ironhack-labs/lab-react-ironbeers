@@ -10,7 +10,7 @@ const Beer = () => {
     const { beerId } = useParams();
     const [beer, setBeer] = useState({});
     useEffect(() => {beersApi.getOneBeer(beerId, setBeer)}, [beerId]);
-
+    
     return (
         <div>
             <Header />
