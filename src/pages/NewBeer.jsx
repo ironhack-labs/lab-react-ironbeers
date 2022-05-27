@@ -6,10 +6,10 @@ function NewBeer(props) {
   const [name, setName] = useState("");
   const [tagline, setTagline] = useState("");
   const [description, setDescription] = useState("");
-  const [firstBrewed, setFirstBrewed] = useState("");
-  const [brewersTips, setBrewersTips] = useState("");
-  const [attenuationLevel, setAttenuationLevel] = useState("");
-  const [contributedBy, setContributedBy] = useState("");
+  const [first_brewed, setFirstBrewed] = useState("");
+  const [brewers_tips, setBrewersTips] = useState("");
+  const [attenuation_level, setAttenuationLevel] = useState("");
+  const [contributed_by, setContributedBy] = useState("");
 
   const handleName = (e) => setName(e.target.value);
   const handleTagline = (e) => setTagline(e.target.value);
@@ -26,10 +26,10 @@ function NewBeer(props) {
       name,
       tagline,
       description,
-      firstBrewed,
-      brewersTips,
-      attenuationLevel,
-      contributedBy,
+      first_brewed,
+      brewers_tips,
+      attenuation_level,
+      contributed_by,
     };
 
     axios
@@ -51,7 +51,6 @@ function NewBeer(props) {
   return (
     <div>
       <Header />
-      <h1>Add Beer</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input type="text" name="name" value={name} onChange={handleName} />
@@ -73,35 +72,35 @@ function NewBeer(props) {
           onChange={handleDescription}
         ></textarea>
 
-        <label htmlFor="firstBrewed">First brewed</label>
+        <label htmlFor="first_brewed">First brewed</label>
         <input
           type="text"
-          name="firstBrewed"
-          value={firstBrewed}
+          name="first_brewed"
+          value={first_brewed}
           onChange={handleFirstBrewed}
         />
 
-        <label htmlFor="brewersTips">Brewers tips</label>
+        <label htmlFor="brewers_tips">Brewers tips</label>
         <input
           type="text"
-          name="brewersTips"
-          value={brewersTips}
+          name="brewers_tips"
+          value={brewers_tips}
           onChange={handlebrewersTips}
         />
 
-        <label htmlFor="attenuationLevel">Attenuation level</label>
+        <label htmlFor="attenuation_level ">Attenuation level</label>
         <input
           type="number"
-          name="attenuationLevel"
-          value={attenuationLevel}
+          name="attenuation_level "
+          value={attenuation_level}
           onChange={handleAttenuationLevel}
         />
 
-        <label htmlFor="contributedBy">contributed by</label>
+        <label htmlFor="contributed_by">contributed by</label>
         <input
           type="text"
-          name="contributedBy"
-          value={contributedBy}
+          name="contributed_by"
+          value={contributed_by}
           onChange={handleContributedBy}
         />
 

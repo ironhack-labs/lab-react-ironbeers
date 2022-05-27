@@ -22,27 +22,27 @@ function AllBeers() {
   }, []);
 
   return (
-    <div>
+    <div className="beerListMain">
       <Header />
-      <h1>All beers</h1>
       {beersList.map((beer) => {
         return (
-          <div key={beer._id} className="ProjectCard card">
+          <div key={beer._id} className="beerList">
             <Link to={`/beersList/${beer._id}`}>
               <img src={beer.image_url} alt="beersImg" />
             </Link>
-            <div>
+
+            <div className="TextList">
               <h2>{beer.name}</h2>
               <h4>{beer.tagline}</h4>
               <p>{beer.contributed_by}</p>
+
             </div>
           </div>
         );
       })}
+     
     </div>
   );
 }
-
-
 
 export default AllBeers;
