@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function NewBeer() {
+  const [name, setName] = useState('')
+  const [tagline, setTagline] = useState('')
+  const [description, setDescription] = useState('')
+  
 
 
 
