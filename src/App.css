@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+.homeicon {
+  width: 40px;
+}
+.homeimg {
+  width: 100vw;
+}
+.beerimg {
+  width: 20px;
+}
+.detailbeer {
+  width: 60px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
