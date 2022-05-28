@@ -2,15 +2,23 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import { PacmanLoader } from 'react-spinners';
+import { useNavigate } from 'react-router-dom';
+
 export default function OneBeer(props) {
     console.log(props.beer);
     const { id } = useParams();
     const [beer, setBeer] = useState(null);
+    const navigate = useNavigate();
  
     const getBeer = async () => {
-      const beers = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`);
-      console.log(beers.data);
-      setBeer(beers.data);
+        try{
+            const beers = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`);
+            console.log(beers.data);
+            setBeer(beers.data);
+        }catch(err){
+            navigate("/error");
+        }
+     
     }
     useEffect(() => {
         getBeer();    

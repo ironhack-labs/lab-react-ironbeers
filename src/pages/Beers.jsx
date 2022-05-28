@@ -3,23 +3,34 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import SingleBeer from '../components/SingleBeer';
 import { PacmanLoader } from 'react-spinners';
+import { useNavigate } from 'react-router-dom';
 
 export default function Beers() {
   const [allBeers, setAllBeers] = useState(null);
   const [filteredBeers, setFilteredBeers] = useState(null);
   const [search, setSearch] = useState("");
-
+  const navigate = useNavigate
   const filterBeers = async(e) => {
-    setSearch(e.target.value);
-    const beers = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${search}`);
-    setFilteredBeers(beers.data);
+    try{
+      setSearch(e.target.value);
+      const beers = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${search}`);
+      setFilteredBeers(beers.data);
+    }catch(err){
+      navigate("/error");
+    }
+    
   }
  
   const getAllBeers = async (e) => {
-    const beers = await axios.get('https://ih-beers-api2.herokuapp.com/beers');
-    const sortedBeers = beers.data.sort((a,b) => a.name > b.name ? 1 : -1)
-    setAllBeers(sortedBeers);
-    setFilteredBeers(sortedBeers);
+    try{
+      const beers = await axios.get('https://ih-beers-api2.herokuapp.com/beers');
+      const sortedBeers = beers.data.sort((a,b) => a.name > b.name ? 1 : -1)
+      setAllBeers(sortedBeers);
+      setFilteredBeers(sortedBeers);
+    }catch(err){
+      navigate("/error");
+    }
+   
   }
 
   useEffect(() => {
