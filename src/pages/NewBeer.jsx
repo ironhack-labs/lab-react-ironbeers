@@ -1,86 +1,25 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
-// import Navbar from '../components/Navbar';
-
-// function NewBeer() {
-//   const [name, setName] = useState('');
-//   const [tagline, setTagline] = useState('');
-//   const [description, setDescription] = useState('');
-//   const [first_brewed, setFirst_brewed] = useState('');
-//   const [brewers_tips, setBrewers_tips] = useState('');
-//   const [attenuation_level, setAttenuation_level] = useState('');
-//   const [contributed_by, setContributed_by] = useState('');
-
-//   const handleName= (e) => setName(e.target.value);
-//   const handleTagline = (e) => setTagline(e.target.value);
-//   const handleDescription = (e) => setDescription(e.target.value);
-//   const handleFirst_brewed = (e) => setFirstBrewed(e.target.value);
-//   const handleAttenuationLevel = (e) => setAttenuationLevel(e.target.value);
-//   const handleContributedBy = (e) => setContributedBy(e.target.value);
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-
-//     const body = { name, tagline, description };
-
-//     axios
-//       .post('http://localhost:5005/api/projects', body)
-//       .then(() => {
-//         setName('');
-//         setTagline('');
-//         setDescription("");
-
-//       })
-//       .catch((err) => console.log(err));
-//   };
-
-//   return (
-//     <div>
-//         <Navbar/>
-
-//         <h3>Add Project</h3>
-//       <form onSubmit={handleSubmit}>
-//         <label htmlFor="name">Name</label>
-//         <input type="text" name="title" value={name} onChange={handleName} />
-
-//         <label htmlFor="tagline">Tagline</label>
-//         <input type="text" name="tagline" value={tagline} onChange={handleTagline} />
-
-//         <label htmlFor="description">Description</label>
-//         <textarea
-//           name="description"
-//           cols="30"
-//           rows="10"
-//           value={description}
-//           onChange={handleDescription}
-//         ></textarea>
-
-//         <button type="submit">Add Project</button>
-//       </form>
-
-//     </div>
-//   )
-// }
-
-// export default NewBeer
-
 import React, { useState } from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function NewBeer() {
   const [name, setName] = useState("");
   const [tagline, setTagline] = useState("");
   const [description, setDescription] = useState("");
-  const [firstBrewed, setFirstBrewed] = useState("");
-  const [attenuationLevel, setAttenuationLevel] = useState(0);
-  const [contributedBy, setContributedBy] = useState("");
+  const [first_brewed, setFirst_brewed] = useState("");
+  const [attenuation_level, setAttenuation_level] = useState(0);
+  const [contributed_by, setContributed_by] = useState("");
+
+  const navigate = useNavigate();
 
   const handleName = (e) => setName(e.target.value);
   const handleDescription = (e) => setDescription(e.target.value);
-  const handleTagline = (e) => setTagline(e.tagline.value);
-  const handleFirstBrewed = (e) => setFirstBrewed(e.target.value);
-  const handleAttenuationLevel = (e) => setAttenuationLevel(e.target.value);
-  const handleContributedBy = (e) => setContributedBy(e.target.value);
+  const handleTagline = (e) => setTagline(e.target.value);
+  const handleFirst_brewed = (e) => setFirst_brewed(e.target.value);
+  const handleAttenuation_level = (e) => setAttenuation_level(e.target.value);
+  const handleContributed_by = (e) => setContributed_by(e.target.value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -88,26 +27,28 @@ function NewBeer() {
       name,
       tagline,
       description,
-      firstBrewed,
-      attenuationLevel,
-      contributedBy,
+      first_brewed,
+      attenuation_level,
+      contributed_by,
     };
     axios
-      .post("https://ih-beers-api2.herokuapp.com/beers", body)
+      .post("https://ih-beers-api2.herokuapp.com/beers/new", body)
       .then(() => {
         setName("");
         setDescription("");
         setTagline("");
-        setFirstBrewed("");
-        setAttenuationLevel(0);
-        setContributedBy("");
+        setFirst_brewed("");
+        setAttenuation_level(0);
+        setContributed_by("");
+        navigate("/beers");
       })
       .catch((err) => console.log(err));
   };
 
   return (
     <div className="AddProject">
-      <h3>Add Project</h3>
+      <Navbar />
+      <h3>Add Beer</h3>
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
@@ -130,32 +71,36 @@ function NewBeer() {
           onChange={handleDescription}
         ></textarea>
 
-        <label htmlFor="firstBrewed">First Brewed</label>
+        <label htmlFor="first_brewed">First Brewed</label>
         <input
           type="text"
-          name="firstBrewed"
-          value={firstBrewed}
-          onChange={handleFirstBrewed}
+          name="first_brewed"
+          value={first_brewed}
+          onChange={handleFirst_brewed}
         />
 
-        <label htmlFor="contributedBy">Contributed By</label>
+        <label htmlFor="contributed_by">Contributed By</label>
         <input
           type="text"
-          name="contributedBy"
-          value={contributedBy}
-          onChange={handleContributedBy}
+          name="contributed_by"
+          value={contributed_by}
+          onChange={handleContributed_by}
         />
 
-        <label htmlFor="attenuationLevel">Attenuation Level</label>
+        <label htmlFor="attenuation_level">Attenuation Level</label>
         <input
           type="number"
-          name="attenuationLevel"
-          value={attenuationLevel}
-          onChange={handleAttenuationLevel}
+          name="attenuation_level"
+          value={attenuation_level}
+          onChange={handleAttenuation_level}
         />
 
         <button type="submit">Add</button>
       </form>
+
+      <Link to="/beers">
+        <button>Back to beers</button>
+      </Link>
     </div>
   );
 }
