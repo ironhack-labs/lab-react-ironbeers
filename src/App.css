@@ -74,3 +74,31 @@ button {
 textarea {
   border-radius: 23px;
 }
+
+/*beer details + random beer*/
+.detailsContainer {
+  margin: 5%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.detailsBox{
+  text-align: center;
+  margin-top: 10%;
+  }
+
+.detailsBox img {
+  width: 25vw;
+}
+
+.detailsHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+span {
+  color: gray
+}

@@ -26,14 +26,31 @@ function BeerDetails() {
     <div>
       <Header />
       {beer && (
-        <div>
+        <div className="detailsBox">
           <img src={beer.image_url} alt="beersImg" />
-          <h2>{beer.name}</h2>
-          <h4>{beer.tagline}</h4>
-          <p>{beer.first_brewed}</p>
-          <p>{beer.attenuation_level}</p>
-          <p>{beer.description}</p>
-          <p>{beer.contributed_by}</p>
+          <div className="detailsContainer">
+            <div className="detailsHeader">
+              <div>
+                <h2>{beer.name}</h2>
+                <h4>
+                  <span>{beer.tagline}</span>
+                </h4>
+              </div>
+              <div>
+                <p>
+                  <span>{beer.attenuation_level}</span>
+                </p>
+                <p>
+                  <b>{beer.first_brewed}</b>
+                </p>
+              </div>
+            </div>
+
+            <p>{beer.description}</p>
+            <p>
+              <span>{beer.contributed_by}</span>
+            </p>
+          </div>
         </div>
       )}
     </div>

@@ -23,16 +23,32 @@ function RandomBeers() {
   return (
     <div>
       <Header />
-      <h1>Random Beers</h1>
       {randomBeer && (
-        <div>
+        <div className="detailsBox">
           <img src={randomBeer.image_url} alt="beersImg" />
-          <h2>{randomBeer.name}</h2>
-          <h4>{randomBeer.tagline}</h4>
-          <p>{randomBeer.first_brewed}</p>
-          <p>{randomBeer.attenuation_level}</p>
-          <p>{randomBeer.description}</p>
-          <p>{randomBeer.contributed_by}</p>
+          <div className="detailsContainer">
+            <div className="detailsHeader">
+              <div>
+                <h2>{randomBeer.name}</h2>
+                <h4>
+                  <span>{randomBeer.tagline}</span>
+                </h4>
+              </div>
+              <div>
+                <p>
+                  <span>{randomBeer.attenuation_level}</span>
+                </p>
+                <p>
+                  <b>{randomBeer.first_brewed} </b>
+                </p>
+              </div>
+            </div>
+
+            <p>{randomBeer.description}</p>
+            <p>
+              <span>{randomBeer.contributed_by} </span>
+            </p>
+          </div>
         </div>
       )}
     </div>
