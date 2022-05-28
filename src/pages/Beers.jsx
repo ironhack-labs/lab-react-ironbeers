@@ -9,7 +9,8 @@ export default function Beers() {
   const [allBeers, setAllBeers] = useState(null);
   const [filteredBeers, setFilteredBeers] = useState(null);
   const [search, setSearch] = useState("");
-  const navigate = useNavigate
+  const navigate = useNavigate();
+
   const filterBeers = async(e) => {
     try{
       setSearch(e.target.value);

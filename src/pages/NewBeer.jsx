@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function NewBeer() {
   const [form, setForm] = useState({name: "", tagline: "", description: "", first_brewed: "", brewers_tips: "", attenuation_level: 0, contributed_by: ""});
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault()
