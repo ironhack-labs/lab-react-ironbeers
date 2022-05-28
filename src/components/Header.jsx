@@ -8,7 +8,7 @@ import homeIcon from "../assets/home.png";
 function Header() {
   return (
     <nav className="nav-bar">
-      <Link to="/">
+      <Link  to="/">
         <img className="home-icon" src={homeIcon} alt="home-icon" />
       </Link>
     </nav>

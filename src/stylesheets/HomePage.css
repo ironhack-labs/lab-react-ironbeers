@@ -1,0 +1,16 @@
+.homepage-pics {
+    width: 100vw;
+  }
+  
+  .homepage-article-text {
+    margin: 0 1rem 1rem;
+  }
+  
+  .homepage-article-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .homepage-article-text p {
+    font-size: 0.7rem;
+    color: grey;
+  }

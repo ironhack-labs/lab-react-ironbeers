@@ -1,22 +1,27 @@
-/* Resetting everything  */
+/* Resetting everything and universal  */
 
 * {
   margin: 0;
   padding: 0;
 }
 
+.a-link {
+  text-decoration: none;
+  color: rgb(157, 127, 71);
+}
+
+.a-link:hover {
+  color: rgb(9, 77, 9);
+}
+
 /* Header page */
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .home-icon {
   width: 10vw;
-}
-
-/* Homepage */
-.homepage-pics {
-  width: 100vw;
-}
-
-/* Beers list */
-.each-beer-from-list-img img {
-  height: 30vh;
 }

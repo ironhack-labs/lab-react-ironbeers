@@ -1,0 +1,37 @@
+.new-beer-section {
+  margin: 2rem;
+}
+
+.new-beer-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.new-beer-section label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.new-beer-section input,
+textarea {
+  border-radius: 5px;
+  border: 0.02rem solid gray;
+}
+
+.new-beer-section input {
+  height: 4vh;
+}
+
+.new-beer-section button {
+  margin-top: 0.7rem;
+  border-radius: 15px;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  height: 5vh;
+  background-color: #49a6d6;
+  color: white;
+}

@@ -43,8 +43,6 @@ function NewBeerPage() {
       .catch((err) => console.log(err));
   };
 
-  
-
   return (
     <section className="new-beer-section">
       <form onSubmit={handleSubmit}>
@@ -92,7 +90,7 @@ function NewBeerPage() {
           onChange={handleContributedBy}
         />
 
-        <button type="submit">Create</button>
+        <button type="submit">Add new</button>
       </form>
     </section>
   );

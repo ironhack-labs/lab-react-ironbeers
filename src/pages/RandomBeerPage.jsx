@@ -25,13 +25,13 @@ function RandomBeerPage() {
         {randomBeer && (
           <>
             <img src={randomBeer.image_url} alt="randomBeer-img" />
-            <div className="single-randomBeer-info">
-              <div className="single-randomBeer-name-and-tagline">
+            <div className="single-beer-info">
+              <div className="single-beer-name-and-tagline">
                 <h4>{randomBeer.name}</h4>
-                <h5>{randomBeer.tagline}</h5>
-              </div>
-              <div className="single-randomBeer-attenuation-and-firstbrewed">
                 <h6>{randomBeer.attenuation_level}</h6>
+              </div>
+              <div className="single-beer-attenuation-and-firstbrewed">
+                <h5>{randomBeer.tagline}</h5>
                 <h6>{randomBeer.first_brewed}</h6>
               </div>
               <p>{randomBeer.description}</p>

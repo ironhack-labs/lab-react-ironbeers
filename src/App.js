@@ -1,4 +1,11 @@
 import "./App.css";
+import "./stylesheets/HomePage.css";
+import "./stylesheets/ListBeersPage.css";
+import "./stylesheets/SingleBeerPage.css";
+import "./stylesheets/RandomBeer.css";
+import "./stylesheets/NewBeerPage.css";
+
+//Routes
 import { Route, Routes } from "react-router-dom";
 
 //Importing pages

@@ -1,0 +1,59 @@
+.single-beer-section {
+  margin: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  height: 85vh;
+}
+
+.single-beer-section img {
+  height: 40vh;
+}
+
+.single-beer-section p {
+  overflow-y: scroll;
+}
+
+.single-beer-grey-text {
+  color: grey;
+}
+
+.single-beer-section h4 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.single-beer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.single-beer-name-and-attenuation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-beer-name-and-attenuation h6 {
+  color: grey;
+  font-size: 1.6rem;
+  font-weight: 450;
+}
+
+.single-beer-tagline-and-firstbrewed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-beer-tagline-and-firstbrewed h5 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.contributed-by {
+  font-weight: 800;
+}

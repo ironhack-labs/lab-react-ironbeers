@@ -11,31 +11,36 @@ function HomePage() {
     <main>
       <article className="homepage-article">
         <img className="homepage-pics" src={beer} alt="all-beers" />
-        <Link to="/beers">
-          <h2>All Beers</h2>
-        </Link>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut deleniti
-          rerum magnam tenetur! Cum architecto non labore itaque explicabo
-          maiores, deserunt velit autem provident magnam. Non ipsa ut saepe
-          dolorem.
-        </p>
+        <div className="homepage-article-text">
+          <Link className="a-link" to="/beers">
+            <h2>All Beers</h2>
+          </Link>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
+            deleniti rerum magnam tenetur! Cum architecto non labore itaque
+            explicabo maiores, deserunt velit autem provident magnam. Non ipsa
+            ut saepe dolorem.
+          </p>
+        </div>
       </article>
       <article className="homepage-article">
         <img className="homepage-pics" src={randomBeer} alt="random-beer" />
-        <Link to="random-beer">
-          <h2>Random Beer</h2>
-        </Link>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
-          consequatur ex at, assumenda neque amet praesentium maxime voluptas
-          magni expedita corrupti deleniti non hic aut fuga molestias sint
-          magnam eos.
-        </p>
+        <div className="homepage-article-text">
+          <Link className="a-link" to="random-beer">
+            <h2>Random Beer</h2>
+          </Link>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+            consequatur ex at, assumenda neque amet praesentium maxime voluptas
+            magni expedita corrupti deleniti non hic aut fuga molestias sint
+            magnam eos.
+          </p>
+        </div>
       </article>
       <article className="homepage-article">
         <img className="homepage-pics" src={newBeer} alt="new-beer" />
-        <Link to="new-beer">
+        <div className="homepage-article-text">
+        <Link className="a-link" to="new-beer">
           <h2>New Beer</h2>
         </Link>
         <p>
@@ -44,6 +49,7 @@ function HomePage() {
           praesentium numquam. Ea doloribus reprehenderit ullam blanditiis
           excepturi et ducimus libero!
         </p>
+        </div>
       </article>
     </main>
   );

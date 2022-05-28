@@ -38,18 +38,23 @@ function ListBeersPage() {
       <Searchbeer searchBeers={searchBeers} />
       {beers.map((beer) => {
         return (
-          <div key={beer._id} className="each-beer-from-list">
-            <div className="each-beer-from-list-img">
-              <img src={beer.image_url} alt="beer-img" />
+          <>
+            <div key={beer._id} className="each-beer-from-list">
+              <div className="each-beer-from-list-img">
+                <img src={beer.image_url} alt="beer-img" />
+              </div>
+              <div className="each-beer-from-list-info">
+                <Link className="a-link" to={`/beers/${beer._id}`}>
+                  <h4>{beer.name}</h4>
+                </Link>
+                <h5>{beer.tagline}</h5>
+                <h6>
+                  <b>Created by:</b> {beer.contributed_by}
+                </h6>
+              </div>
             </div>
-            <div className="each-beer-from-list-info">
-              <Link to={`/beers/${beer._id}`}>
-                <h4>{beer.name}</h4>
-              </Link>
-              <h5>{beer.tagline}</h5>
-              <h6>Created by: {beer.contributed_by}</h6>
-            </div>
-          </div>
+            <hr />
+          </>
         );
       })}
     </section>

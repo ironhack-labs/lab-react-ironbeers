@@ -1,0 +1,61 @@
+hr {
+  width: 100vw;
+}
+
+.each-beer-from-list h5 {
+  font-size: 0.9rem;
+  font-weight: 450;
+  color: grey;
+}
+
+.each-beer-from-list h4 {
+  font-size: 1.2rem;
+}
+
+.each-beer-from-list h6 {
+  font-weight: 450;
+  font-size: 0.5rem;
+}
+
+.each-beer-from-list-img img {
+  height: 20vh;
+}
+
+.each-beer-from-list {
+  margin: 1.5rem 1.3rem;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 5%;
+  width: 80vw;
+  /* border-bottom: 0.05rem solid grey; */
+}
+
+.each-beer-from-list-info {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10%;
+}
+
+.search-beers {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-beers input {
+  padding: 0.2rem;
+  border: 0.05rem solid grey;
+  height: 3vh;
+}
+
+.search-beers button {
+  height: 3vh;
+  font-size: 0.6rem;
+  color: grey;
+  background-color: transparent;
+  border: 0.05rem solid grey;
+}
