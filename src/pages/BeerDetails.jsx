@@ -35,10 +35,12 @@ function BeerDetails() {
           <div className="beerDetInnerInfoDiv">
             <h2>{beerDetails.tagline}</h2>
             <h2>{beerDetails.first_brewed}</h2>
-            <h2>{beerDetails.atenuation_level}</h2>
+            <h2>{beerDetails.attenuation_level}</h2>
           </div>
           <h3>{beerDetails.description}</h3>
-          <p><b>Contributed by:</b> {beerDetails.contributed_by}</p>
+          <p>
+            <b>Contributed by:</b> {beerDetails.contributed_by}
+          </p>
         </div>
       )}
     </div>
