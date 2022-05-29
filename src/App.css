@@ -2,37 +2,156 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background-color: #4267b2;
+  color: white;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navBarLink {
+  color: white;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.homePage img {
+  width: 100vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homePageLink {
+  text-decoration: none;
+  color: black;
+}
+
+.homePageLink p {
+  margin-bottom: 70px;
+}
+
+.beerList {
+  display: flex;
+
+  padding: 50px;
+  border-bottom: 2px solid grey;
+}
+
+.beerListLink {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding-left: 50px;
+  text-decoration: none;
+  color: black;
+}
+
+.beerListLink h3 {
+  color: gray;
+}
+
+.beerListImg {
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+}
+
+.beerListImg img {
+  max-width: 15vw;
+  max-height: 20vh;
+}
+
+.beerListInfo {
+  margin-left: 50px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.beerDetails {
+  width: 100vw;
+  height: 100vh;
+}
+
+.beerDetDiv {
+  width: 100vw;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 50px;
+  font-size: larger;
+}
+
+.beerDetDiv img {
+  max-width: 35vw;
+  max-height: 50vh;
+}
+.beerDetDiv h3 {
+  width: 70vw;
+}
+
+.beerDetDiv p {
+  margin-bottom: 3vh;
+}
+
+.beerDetInnerInfoDiv {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.newBeer {
+  width: 100vw;
+  height: 100vh;
+}
+.newBeerForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+
+.newBeerForm label {
+  font-size: larger;
+  width: 70vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+.newBeerForm input {
+  width: 70vw;
+  height: 3vh;
+  border-radius: 15px;
+  margin-bottom: 1vh;
+}
+
+.newBeerForm button {
+  border-radius: 25px;
+  padding: 10px 70px;
+  margin-top: 2vh;
+  background-color: #4267b2;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 800px) {
+  .homePage img {
+    width: 100vw;
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .homePageLink {
+    text-decoration: none;
+    color: black;
+  }
+
+  .homePageLink p {
+    margin-bottom: 50px;
   }
 }
