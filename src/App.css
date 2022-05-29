@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.beerimg {
+  width: 50px;
+}
+.detailbeer {
+  width: 80px;
+}
+
