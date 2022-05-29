@@ -18,8 +18,8 @@ export default function NewBeer() {
     setForm(formCopy);
   }
   return (
-    <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md">
-    <h2 class="text-3xl font-semibold text-gray-700 capitalize">New Beer</h2>
+    <section class="max-w-4xl mt-5 p-6 mx-auto bg-gray-300 rounded-md shadow-md">
+    <h2 class="text-3xl font-semibold text-gray-700 capitalize underline">New Beer</h2>
     
     <form onSubmit={handleSubmit}>
         <div class="grid grid-cols-1 gap-6 mt-4">
