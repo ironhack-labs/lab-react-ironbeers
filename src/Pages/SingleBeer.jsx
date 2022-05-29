@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import BeerDetail from "../components/BeerDetail";
 
 function SingleBeer() {
   const [singleBeer, setSingleBeer] = useState(null);
@@ -25,15 +26,7 @@ function SingleBeer() {
   return (
     <div>
       {singleBeer && (
-        <>
-          <img src={singleBeer.image_url} alt="Beer" height="300" />
-          <h1>{singleBeer.name}</h1>
-          <span>{singleBeer.attenuation_level}</span>
-          <h2>{singleBeer.tagline}</h2>
-          <span>{singleBeer.first_brewed}</span>
-          <p>{singleBeer.description}</p>
-          <h6>{singleBeer.contributed_by}</h6>
-        </>
+    <BeerDetail beer={singleBeer}/>
       )}
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import BeerDetail from "../components/BeerDetail";
 
 function RandomBeer() {
   const [randomBeer, setRandomBeer] = useState(null);
@@ -25,15 +26,7 @@ function RandomBeer() {
   return (
     <div>
       {randomBeer && (
-        <>
-          <img src={randomBeer.image_url} alt="Beer" height="300" />
-          <h1>{randomBeer.name}</h1>
-          <span>{randomBeer.attenuation_level}</span>
-          <h2>{randomBeer.tagline}</h2>
-          <span>{randomBeer.first_brewed}</span>
-          <p>{randomBeer.description}</p>
-          <h6>{randomBeer.contributed_by}</h6>
-        </>
+      <BeerDetail beer={randomBeer}/>
       )}
     </div>
   );

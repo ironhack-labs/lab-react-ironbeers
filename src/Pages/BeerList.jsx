@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import SearchBeers from "../components/SearchBeers";
+import { Container, Image, Box, Flex, SimpleGrid, Heading } from "@chakra-ui/react";
+import Card from "../components/Card";
 
 function BeerList() {
   const [beers, setBeers] = useState([]);
+  const [filteredBeers, setFilteredBeers] = useState([]);
   const { id } = useParams();
 
   const getAllBeers = async () => {
@@ -12,7 +16,7 @@ function BeerList() {
         "https://ih-beers-api2.herokuapp.com/beers"
       );
       setBeers(response.data);
-  
+      setFilteredBeers(response.data);
     } catch (err) {
       console.log(err);
     }
@@ -22,21 +26,24 @@ function BeerList() {
     getAllBeers();
   }, []);
 
+  const filterBeer = (searchTerm) => {
+    let filteredBeers = beers.filter((beer) =>
+      beer.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredBeers(filteredBeers);
+  };
+
   return (
-    <div>
-      {beers.map((beer) => {
-        return (
-          <div key={beer._id}>
-            <img src={beer.image_url} height="200" alt="beer" />
-            <Link to={`/beers/${beer._id}`}>
-              <h3>{beer.name} </h3>
-            </Link>
-            <h4>{beer.tagline}</h4>
-            <p>{beer.contributed_by}</p>
-          </div>
-        );
-      })}
-    </div>
+    <Container>
+      <SearchBeers filterBeer={filterBeer} />
+      <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={2}>
+        {filteredBeers.map((beer) => {
+          return (
+            <Card key={beer._id} beer={beer}/>
+          );
+        })}
+      </SimpleGrid>
+    </Container>
   );
 }
 
