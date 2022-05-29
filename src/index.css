@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.img1 {
+  max-width: 100%;
+  width: 800px;
+  height: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.p1 {
+  padding: 0 300px;
+  text-align: left;
+}
+
+.h2-home {
+  padding: 0 300px;
+  text-align: left;
+}
+
+.img2 {
+  max-width: 100%;
+  width: 100px;
+  height: auto;
+}
+
+.homeb {
+  max-width: 100%;
+  width: 400px;
+  height: 100%;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contact {
+  background: #f9f9f9;
+  padding: 40px;
+  margin: 10px 0;
+}
+
+.contact label {
+  display: block;
+}
+
+.contact input[type="text"],
+.contact input[type="number"],
+.contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 5px;
+}
+
+.contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+.contact button[type="submit"] {
+  cursor: pointer;
+  width: 330px;
+  border: none;
+  background: #0cf;
+  color: #fff;
+  margin: 10px 1px 5px;
+  padding: 10px;
+  font-size: 15px;
 }
