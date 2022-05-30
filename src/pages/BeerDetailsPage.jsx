@@ -13,6 +13,7 @@ function BeerDetailsPage() {
         `https://ih-beers-api2.herokuapp.com/beers/${beerId}`
       );
       setBeer(response.data);
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -27,8 +28,21 @@ function BeerDetailsPage() {
 
   return (
     <div>
-      <h1>{beer.name}</h1>
-      <p>{beer.description}</p>
+      {beer && (
+        <>
+          <img src={beer.image_url} alt="" width="50" />
+          <h1>{beer.name}</h1>
+          <p>
+            <em>{beer.tagline}</em>
+          </p>
+          <p>{beer.description}</p>
+          <p>{beer.first_brewed}</p>
+          <p>{beer.attenuation_level}</p>
+          <p>{beer.contributed_by}</p>
+        </>
+      )}
+      {/*       <h1>{beer.name}</h1>
+      <p>{beer.description}</p> */}
     </div>
   );
 }
