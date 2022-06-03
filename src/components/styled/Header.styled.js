@@ -10,3 +10,11 @@ export const StyledHeader = styled.header`
 export const StyledHomeIcon = styled(HomeIcon)`
     color: white;
 `;
+
+export const Input = styled.input`
+    border: 1px solid #e2e2e2;
+    border-radius: 20px;
+    width: 70%;
+    margin: 5px 0;
+    padding: 5px;
+`;

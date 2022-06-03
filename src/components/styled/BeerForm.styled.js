@@ -33,7 +33,6 @@ export const Input = styled.input`
     border: 1px solid #e2e2e2;
     border-radius: 20px;
     padding: 1.78571% 4px;
-    height: ${({ height }) => `${height}px`};
     ::placeholder {
         color: ${({ placeholder }) => (placeholder !== "MM/YYYY") ? "red" : "gray"};
         opacity: 1;

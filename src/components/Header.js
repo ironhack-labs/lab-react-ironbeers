@@ -1,11 +1,14 @@
-import { StyledHeader, StyledHomeIcon } from "./styled/Header.styled";
+import { StyledHeader, StyledHomeIcon, Input } from "./styled/Header.styled";
 import { NavLink } from "react-router-dom";
 
-const Header = () => (
+const Header = ({ type, value, onChange }) => (
     <StyledHeader>
-        <NavLink to="/">
-            <StyledHomeIcon fontSize="large" />
-        </NavLink>
+        {(type !== "search") ? (
+            <NavLink to="/">
+                <StyledHomeIcon fontSize="large" />
+            </NavLink>
+            ) : <Input type="text" placeholder="Type to search" value={value} onChange={onChange} />
+        }
     </StyledHeader>
 );
 
