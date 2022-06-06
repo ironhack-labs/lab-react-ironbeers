@@ -44,6 +44,16 @@ class BeersApi {
             return { statusText: error.response.statusText, status: error.response.status };
         };
     };
+
+    filterBeers = async (query, setBeers) => {
+        try {
+            const { data } = await this.api.get(`/search?q=${query}`);
+            setBeers((data.length === 0) ? [{ statusText: `${query} was not found!`, status: 404 }] : data);
+        } catch (error) {
+            console.error(`Error on filterBeers => ${error.message}`, error.response);
+            setBeers([{ statusText: error.response.statusText, status: error.response.status }]);
+        }
+    };
 };
 
 export default new BeersApi();
