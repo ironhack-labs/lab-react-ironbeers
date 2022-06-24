@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100vw;
+  background-color: #42C4FC;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  width: 40px;
+  margin: 5px;
+}

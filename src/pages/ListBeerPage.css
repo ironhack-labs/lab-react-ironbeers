@@ -1,0 +1,12 @@
+.list-beer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+  
+}
+
+.list-beer a {
+  text-decoration: none;
+  color: black;
+}

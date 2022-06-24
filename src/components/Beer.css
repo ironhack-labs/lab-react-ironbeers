@@ -1,0 +1,37 @@
+.oneBeer * {
+  /* border: 0.1px solid red; */
+  margin: 0;
+  padding: 0;
+}
+
+.oneBeer {
+  display: flex;
+  margin: 0 30px;
+}
+
+.oneBeer img {
+  width: 30px;
+}
+
+.oneBeer .beer-image {
+  display: flex;
+  align-items: center;
+}
+
+.oneBeer .beer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  margin-left: 30px;
+  gap: 5px;
+}
+
+.oneBeer .tagline {
+  color: grey;
+}
+
+.oneBeer .createdby {
+  font-size: 0.6rem;
+}
