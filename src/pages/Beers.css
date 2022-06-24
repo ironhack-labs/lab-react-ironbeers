@@ -1,0 +1,19 @@
+.beer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.beer img {
+  width: 5rem;
+}
+
+.beer a {
+  text-decoration: none;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}

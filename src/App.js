@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Layout from "./pages/Layout";
+import Beers from "./pages/Beers";
+import BeerDetails from "./pages/BeerDetails";
+import RandomBeer from "./pages/RandomBeer";
+import NewBeer from "./pages/NewBeer";
+
+const baseUrl = "https://ih-beers-api2.herokuapp.com/beers";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="" element={<Layout />}>
+            <Route path="/beers" element={<Beers baseUrl={baseUrl} />} />
+            <Route
+              path="/beers/:id"
+              element={<BeerDetails baseUrl={baseUrl} />}
+            />
+            <Route
+              path="/beers/random-beer"
+              element={<RandomBeer baseUrl={baseUrl} />}
+            />
+            <Route
+              path="/beers/new-beer"
+              element={<NewBeer baseUrl={baseUrl} />}
+            />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
