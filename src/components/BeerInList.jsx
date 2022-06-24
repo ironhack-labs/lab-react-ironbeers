@@ -5,7 +5,10 @@ import "./Beer.css";
 
 const Beer = ({ _id, name, image_url, tagline, contributed_by }) => {
   // Contributed_by without <blablabla>
-  contributed_by = contributed_by.split("<")[0];
+  console.log("contributed_by", contributed_by);
+  if (contributed_by) {
+    contributed_by = contributed_by.split("<")[0];
+  }
 
   return (
     <>
