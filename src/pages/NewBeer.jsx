@@ -75,13 +75,6 @@ const NewBeer = () => {
         onChange={e => handleChange(e)}>
       </textarea>
 
-      {/* <input
-        value={description}
-        type='text'
-        name='description'
-        onChange={e => handleChange(e)}
-      /> */}
-
       <label>First Brewed</label>
       <input
         value={first_brewed}
