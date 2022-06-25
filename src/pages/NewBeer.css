@@ -1,0 +1,13 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+input {
+  margin-bottom: 1.4rem;
+}
+
+[name="description"] {
+  height: 9rem;
+}

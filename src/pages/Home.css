@@ -1,0 +1,19 @@
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+.card > * {
+  width: 100%;
+  margin: 0;
+}
+
+.card p {
+  color: #6b6b6b;
+}

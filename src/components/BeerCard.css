@@ -1,0 +1,38 @@
+.beer.card {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  height: 25rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.2rem;
+  border-bottom: 3px solid rgb(174, 174, 174);
+  margin: 0 2rem;
+  padding: 2rem 0;
+  cursor: pointer;
+}
+
+.beer.card .info *{
+  margin: .3rem;
+}
+
+.card.beer h2 {
+  font-size: 2rem;
+}
+
+.beer.card .tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1.2rem;
+}
+
+.beer.card .created-by {
+  font-size: .9rem;
+  font-weight: 700;
+  color: black;
+}
+
+.beer.card>img {
+  height: 100%;
+  width: auto;
+}
