@@ -1,5 +1,48 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;900&display=swap");
+
+.navbar {
+  background-color: rgb(70, 197, 250);
+  height: 4em;
   text-align: center;
+  color: white;
+}
+
+.homelogo {
+  margin-top: 3%;
+  filter: invert();
+}
+
+a {
+  text-decoration: none !important;
+  color: rgba(0, 0, 0, 0.755);
+}
+
+p {
+  margin-block: unset !important;
+  font-weight: 300;
+  text-align: justify;
+}
+
+h1 {
+  font-weight: 500;
+  padding: 10px 0 5px;
+  margin-block: unset !important;
+}
+
+.comp-home {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+
+.beerHeader {
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
+
+.App {
+  text-align: left;
 }
 
 .App-logo {
@@ -28,11 +71,9 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.beer-card {
+  display: flex;
+  
 }
+
+
