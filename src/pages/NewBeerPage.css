@@ -1,0 +1,46 @@
+.newBeerFrom {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.newBeerFrom div {
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+}
+
+.newBeerFrom .group-input {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.newBeerFrom .group-input label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0 0 5px 5px;
+}
+
+.newBeerFrom .group-input .input-like {
+  border-radius: 20px;
+  border: 0.5px solid grey;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.newBeerFrom textarea {
+  padding-top: 10px;
+}
+
+
+
+.newBeerFrom #description {
+  height: 100px;
+}
+
+.newBeerFrom #submit {
+  color: white;
+  font-weight: bold;
+  background-color: #42C4FC;
+}

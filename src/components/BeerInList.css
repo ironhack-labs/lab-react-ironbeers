@@ -5,17 +5,20 @@
 }
 
 .oneBeer {
+  /* border: 0.1px solid red; */
   display: flex;
   margin: 0 30px;
 }
 
 .oneBeer img {
-  width: 30px;
+  height: 100px;
 }
 
 .oneBeer .beer-image {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 60px;
 }
 
 .oneBeer .beer-info {

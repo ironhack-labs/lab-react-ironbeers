@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./Beer.css";
+import "./BeerInList.css";
 
 const Beer = ({ _id, name, image_url, tagline, contributed_by }) => {
   // Contributed_by without <blablabla>
