@@ -8,9 +8,8 @@ function Random() {
         axios.get('https://ih-beers-api2.herokuapp.com/beers/random')
             .then(({data}) => {
                 setBeer(data)
-                console.log(data)
             }).catch((err) => {console.error(err);})
-    })
+    }, [])
   return (
     <div>
     <Navbar />

@@ -14,7 +14,7 @@ function AllBeers() {
         }).then(({data}) => {
             setBeers(data)
         }).catch(err => console.error(err));
-    }) 
+    }, []) 
   return (
     <div>
     <Navbar />
