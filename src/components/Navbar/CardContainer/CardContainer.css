@@ -1,0 +1,25 @@
+.link-container{
+    text-decoration: none;
+    color: black;
+    width: 60vw;
+ 
+}
+
+
+.link-container>p{
+    display: flex;
+    text-align: justify;
+    align-self: center;
+    width: 70vw;
+    flex-direction: column;
+    margin-left: 15vw;
+    margin-bottom: 2vh;
+}
+
+.beer-img{
+    margin-top: 3vh;
+}
+
+.beer-img>img{
+    width: 70vw;
+}

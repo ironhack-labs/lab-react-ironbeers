@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.form-box{
+    margin-top: 0;
+    min-width: 100%;
+    height: 90vh;
+    margin: 0vw;
+    background-color: rgb(221, 221, 221);
+    
+}
+
+h3{
+margin: 0 0 2vh 0;
+padding-top: 2vh;
+font-size: 20px;
+text-align: center;
+color: rgb(25, 25, 26);
+
+}
+
+.field > label{
+    display: flex;
+    margin-left: 20%;
+    text-align: center;
+    font-size: 16px;
+    
+
+}
+
+.field > input {
+    width: 60%;
+    margin: 0 0 1.5vh 0;
+    text-align: center;
+    font-size: 16px;
+    padding: 0.5rem .8rem .5rem .8rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+.field > textarea {
+    width: 60%;
+    margin: 0 0 1.5vh 0;
+    text-align: center;
+    font-size: 16px;
+    
+    padding: 0.5rem .8rem .5rem .8rem;
+    border: 0;
+    border-radius: 5px;
+}
+.smaller-box{
+    height: 5vh ;
+    width: 60%;
+    margin: 0 0 1.5vh 0;
+    text-align: center;
+    font-size: 16px;
+    padding: 0.5rem .8rem .5rem .8rem;
+    border: 0;
+    border-radius: 5px;
+}
+
+
+.description{
+    height: 10vh;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.wider {
+    height: 9vh;
+}
+
+.submitBtn {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.submitBtn:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.submitBtn:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.submitBtn:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.button-container{
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    min-width: 100%;
+    height: 10vh;
+    background-color: rgb(221, 221, 221);
+    
+
+}

@@ -1,0 +1,68 @@
+.container{
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.beer-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10vw;
+    width: 60vw;
+}
+
+.beer-container >img{
+    width: 12vw;
+    height: 15vh;
+    margin-right: 4vw;
+    margin-left: 6vw;
+   
+}
+
+.text-container{
+    
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+
+.text-container>h2{
+    color:black;
+    margin-bottom: 0.8vh;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.text-container>p{
+    color: rgb(150, 145, 145);
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.creator {
+    font-size: 0.8rem;
+    color: rgb(73, 73, 73);
+}
+
+.creator>span{
+color: rgb(73, 73, 73);
+font-weight: bold;
+}
+
+.link{
+    color: red;}
+
+.search-bar{
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+    padding: 0.5rem .8rem .5rem .8rem;
+    border-radius: 10px;
+    width: 40vw;
+    height: 5vh;
+    margin-left: 30vw;
+    margin-top: 3vh;
+
+}
