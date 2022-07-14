@@ -1,0 +1,15 @@
+.BeerListItem .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.BeerListItem img {
+    height: 150px;
+    width: auto;
+}
+
+.BeerListItem p {
+    margin: 0;
+}
