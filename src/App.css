@@ -28,10 +28,19 @@
   color: #61dafb;
 }
 
+header img {
+  width: 10%;
+}
+
+.beersImage {
+  width: 10%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
