@@ -32,7 +32,52 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.BeerCard {
+  margin: 50px;
+}
+
+.BeerCard img,
+.BeerDetailCard img {
+  align-self: center;
+  width: 200px;
+  object-fit: cover;
+  margin: 20px;
+
+}
+
+
+
+.beerCard {
+  display: block;
+  padding: 10px;
+  margin: 10px;
+
+}
+
+
+.homeIcon {
+  font-size: 4em;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.grayText {
+  color: rgb(115, 115, 115);
+}
+
+.lightGrayText {
+  color: rgb(167, 164, 164);
+}
+
+.cardFooter {
+  text-align: start;
+  color: rgb(73, 73, 73);
+  font-weight: 900;
 }
