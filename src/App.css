@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.HomeText {
+  text-decoration: none;
+}
+
+.beerList img {
+  height: 800px;
+  object-fit: cover;
+}
