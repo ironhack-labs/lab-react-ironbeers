@@ -1,0 +1,11 @@
+.beerCard {
+    border: 1px solid black;
+    /* width: 200px;
+    height: 200px; */
+}
+
+.beerCard img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}

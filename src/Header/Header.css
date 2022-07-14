@@ -1,0 +1,11 @@
+.header {
+    top: 0;
+    height: 50px;
+    background-color: yellow;
+    display: flex;
+}
+
+.header p {
+    margin-left: 10px;
+    margin-top: 10px;
+}
