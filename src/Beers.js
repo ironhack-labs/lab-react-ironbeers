@@ -33,7 +33,7 @@ const Beers = () => {
             alt="beer product shot"
           />
           <div style={{ marginLeft: "1rem" }}>
-            <Link to={`/beers/id:${beer._id}`}>
+            <Link to={`/beers/${beer._id}`}>
               <h1 className="name">{beer.name}</h1>
             </Link>
             <p className="tagline">{beer.tagline}</p>

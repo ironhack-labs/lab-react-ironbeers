@@ -66,3 +66,10 @@
 .contributor {
   font-size: 0.75rem;
 }
+
+.beer-shot-detail {
+  display: flex;
+  width: 20vw;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
