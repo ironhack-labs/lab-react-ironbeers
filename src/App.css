@@ -15,17 +15,13 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +31,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.thumbnail {
+  width: 100vw;
+  height: 30vh;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.intro-text {
+  color: black
+}
+
+.product-shot {
+  width: 20vw;
+  padding-top: 2rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.tagline {
+  color: gray;
+}
+
+.contributor {
+  font-size: 0.75rem;
 }
