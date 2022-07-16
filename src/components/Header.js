@@ -7,7 +7,7 @@ function Header() {
     return (
         <nav className="header-bar">
             <div >
-                <Link to='/' ><img height='40px' src={navbg} alt="home" className="header-img" /></Link>
+                <Link to='/' ><img  src={navbg} alt="home" className="header-img" /></Link>
                
             </div>
         </nav>

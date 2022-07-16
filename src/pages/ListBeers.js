@@ -25,14 +25,21 @@ function ListBeers(props) {
             {beers.map(function (beer) {
                 return (
                     <div key={beer._id} className="beer-list">
-                        <img height='300px' src={beer.image_url} alt="beerImg" className="beer-img" />
-                        
-                        <Link to={`/onebeer/${beer._id}`}>
-                            {beer.name}
-                        </Link>
-                        <span>Tagline: {beer.tagline}</span>
-                        <span>Contributed by: {beer.contributed_by}</span>
-                        <span>First Brewed: {beer.first_brewed}</span>
+
+                        <div className="beer-img-div">
+                        <img  src={beer.image_url} alt="beerImg" className="beer-img" />
+                        </div>
+
+                        <div className="list-beer-text">
+                            {/* <span className="beer-list-name"> */}
+                                <Link className="beer-list-name" to={`/onebeer/${beer._id}`}>
+                                    {beer.name}
+                                </Link>
+                            {/* </span><br/> */}
+                            <span className="beer-list-tagline">Tagline: {beer.tagline}</span>
+                            <span className="beer-list-contributed">Created by: {beer.contributed_by}</span>
+                        </div>
+
                     </div>
                 )
             })
