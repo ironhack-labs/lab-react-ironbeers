@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.beer-list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 6%;
+  padding-top: 3%;
+}
+
+.header-bar{
+/* background-color: rgb(41, 124, 110); */
+background: rgb(46,46,46);
+background: linear-gradient(0deg, rgba(46,46,46,1) 0%, rgba(241,240,238,1) 100%);
+/* border-top:3px solid  #282c34; */
+border-bottom: 3px solid #282c34;
+padding-top: 0.9vh;
+padding-bottom: 0.7vh;
+display: flex;
+align-items: flex-start;
+padding-left: 2%;
+
+
+}
+
+.one-beer-img {
+  margin-top: 5vh;
+}
