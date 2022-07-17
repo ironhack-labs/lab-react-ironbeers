@@ -30,52 +30,30 @@ export default function SingleBeer() {
 
     return (
         <div>
+            
             <Header />
-            <div class="one-beer-img">
-                <img height='400px' src={beer.image_url} alt="beerImg" className="beer-img" />
+            <div className="one-beer-img">
+                <img  src={beer.image_url} alt="beerImg" className="beer-detail-img" />
             </div>
 
-            <div>
-                <span>{beer.name}</span>
-                <span>{beer.attenuation_level}</span>
+            <div className="first-div">
+                <span className="onebeer-name">{beer.name}</span>
+                <span className="onebeer-level">{beer.attenuation_level}</span>
             </div>
 
-
-            <div>
-                <span>Tagline: {beer.tagline}</span>
-                <span>{beer.first_brewed}</span>
+            <div className="second-div">
+                <span className="onebeer-tagline">{beer.tagline}</span>
+                <span className="onebeer-brewed">{beer.first_brewed}</span>
             </div>
 
-            <div>
+            <div className="third-div">
                 <span>{beer.description}</span>
             </div>
 
-
-            <div>
-                <span>{beer.contributed_by}</span>
+            <div className="fourth-div">
+                <span className="onebeer-by">by {beer.contributed_by}</span>
             </div>
-
-            <div>
-                <span>{beer.food_pairing}</span>
-            </div>
-            {/* <ul>
-                <li>{beer.food_pairing[0]}</li>
-                <li>{beer.food_pairing[1]}</li>
-                <li>{beer.food_pairing[2]}</li>
-            </ul> */}
-
-
-            {/* <div>
-            {beer.food_pairing.map(function (pair) {
-                return (
-                    <div >
-                      
-                        <span> {pair}</span>
-                    </div>
-                )
-            })
-            }
-            </div> */}
+        
         </div>
     )
 }

@@ -19,7 +19,7 @@ function HomePage() {
             <div className="item" >
                 <img src={ranImg} alt="page-img" className="page-img" />
                 <h1> <Link to={'/random'}>Random Beer</Link></h1>
-                <span >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempore magna aliqua. Ut enim ad minr in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <span className="home-page-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempore magna aliqua. Ut enim ad minr in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </span>
             </div>
 

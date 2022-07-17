@@ -5,12 +5,10 @@ import NewBeer from './pages/NewBeer';
 import RandomBeer from './pages/RandomBeer';
 import SingleBeer from './pages/SingleBeer';
 import { Routes, Route } from 'react-router-dom';
-// import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      {/* <Header/> */}
       {/*   Add <Route /> components between <Routes> and </Routes>   */}
       <Routes>
         <Route path='/' element={<HomePage />} />
