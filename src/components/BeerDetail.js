@@ -2,9 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const BeerDetail = ({beers}) => {
-  const params = useParams()
-  const beerId = params.id
-  const beer = beers.find(beer => beer._id === beerId)
+  const beer = beers
   console.log(beer)
   return (
     <div>

@@ -10,13 +10,22 @@ import axios from 'axios'
 
 function App() {
   const [beers, setBeers] = useState([])
+  const [randomBeer, setRandomBeer] = useState([])
 
   useEffect(() => {
     axios.get('https://ih-beers-api2.herokuapp.com/beers')
       .then(response => {
         console.log(response.data)
-
         setBeers(response.data)
+      })
+      .catch(err => console.log(err))
+  }, [])
+
+  useEffect(() => {
+    axios.get('https://ih-beers-api2.herokuapp.com/beers/random')
+      .then(response => {
+        console.log(response.data)
+        setRandomBeer(response.data)
 
       })
       .catch(err => console.log(err))
@@ -29,6 +38,7 @@ function App() {
         <Route path='/' element={<HomePage />}/>
         <Route path='/beers' element={<Beers beers={beers} /> }  />
         <Route path='/beers/:id' element={<BeerDetail beers={beers} /> }  />
+        <Route path='/random-beer' element={<BeerDetail beers={randomBeer} /> }  />
         <Route path='*' element={<h1>404- Not Found </h1>} />
       </Routes>  
     </div>
