@@ -20,6 +20,7 @@ export default function BeerDetails() {
         .catch(err => console.log(err))
     },[])
     //alternative(without filter and map:) `https://ih-beers-api2.herokuapp.com/beers${id}`
+    //with this URL we dont need useEffect
   return (
     <div>
     {beer.filter(beer => {
@@ -27,12 +28,12 @@ export default function BeerDetails() {
     }).map(beer => (
         <div key={beer._id}>
         <img src={beer.image_url} height='120' alt='beerPic' />
-        <h1>{beer.name}</h1>
-        <h2>{beer.tagline}</h2>
+        <h1>Name: {beer.name}</h1>
+        <h2>Tagline: {beer.tagline}</h2>
         <h3>First Brewed: {beer.first_brewed}</h3>
         <h4>Attenuation Level: {beer.attenuation_level}</h4>
-        <p>{beer.description}</p>
-        <h5>{beer.contributed_by}</h5>
+        <p>Description: {beer.description}</p>
+        <h5>contributed by: {beer.contributed_by}</h5>
         </div>
     ))}
     </div>

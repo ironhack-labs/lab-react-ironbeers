@@ -25,7 +25,7 @@ export default function Home() {
         <div>
              <img src={beerPic} alt='beerPic' />
             <br />
-             <Link to='/beers/new-beer'>New Beer</Link>
+             <Link to='/beers/new'>New Beer</Link>
              <p className="HomeText">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor.</p>
         </div>
     </div>
