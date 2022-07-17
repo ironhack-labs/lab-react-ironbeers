@@ -1,14 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const BeerDetail = ({beers}) => {
-  const params = useParams()
-  const beerId = params.id
-  const beer = beers.find(beer => beer._id === beerId)
-  console.log(beers)
+const RandomBeer = ({beer}) => {
+  console.log(beer)
   return (
     <div>
-      {/* <RandomBeer beers={beer} /> */}
       <main
   className='text-center d-flex flex-column alto justify-content-center mt-4 '
 >
@@ -24,22 +20,22 @@ const BeerDetail = ({beers}) => {
           </div>
         <div className='col-12 col-lg-8 mt-2 mx-auto '>
           <div className="row">
-            <div className="col-8">
+            <div className="col-6">
               <h2 className="fs-1 fw-light text-start mx-3">
                 {beer.name}
               </h2>
               </div>
-              <div className="col-4">
+              <div className="col-6">
                 <p className='fs-3 text-black-50 text-end mx-3'>
                   {beer.attenuation_level}
                 </p>
               </div>
-              <div className="col-8">
+              <div className="col-6">
                 <p className='text-black-50 text-start mx-3'>
                   {beer.tagline}
                 </p>
               </div>
-              <div className="col-4 text-end">
+              <div className="col-6 text-end">
                 <p className='fw-bold mx-3'>
                   {beer.first_brewed}
                 </p>
@@ -59,9 +55,9 @@ const BeerDetail = ({beers}) => {
         </div>
         </div>
         </main>
-    </div>
+      </div>
       
   );
 };
 
-export default BeerDetail;
+export default RandomBeer;

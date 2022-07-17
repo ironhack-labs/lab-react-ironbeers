@@ -3,6 +3,7 @@ import HomePage from './components/HomePage';
 import Header from './components/Header';
 import Beers from './components/Beers';
 import BeerDetail from './components/BeerDetail';
+import RandomBeer from './components/RandomBeer';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 import axios from 'axios'
@@ -38,7 +39,7 @@ function App() {
         <Route path='/' element={<HomePage />}/>
         <Route path='/beers' element={<Beers beers={beers} /> }  />
         <Route path='/beers/:id' element={<BeerDetail beers={beers} /> }  />
-        <Route path='/random-beer' element={<BeerDetail beers={randomBeer} /> }  />
+        <Route path='/random-beer' element={<RandomBeer beer={randomBeer} /> }  />
         <Route path='*' element={<h1>404- Not Found </h1>} />
       </Routes>  
     </div>

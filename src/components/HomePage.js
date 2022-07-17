@@ -7,8 +7,7 @@ import randomBeer from '../assets/random-beer.png'
 const HomePage = () => {
   return (
     <div>
-      <div className="container-fluid mx-sm-2 p-0">
-        <div>
+      <div className="container col-lg-8 mx-auto p-0">
           <a href="/beers">
             <img className="card-img-top" src={beers} alt="beers"/>
             <h2 className="px-3 mt-1 fw-light text-black" >All Beers</h2>
@@ -40,7 +39,6 @@ const HomePage = () => {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-        </div>
       </div>
     </div>
   );

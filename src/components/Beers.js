@@ -6,7 +6,7 @@ const Beers = ({beers}) => {
   return (
     <div>
       <main
-  class='container text-center d-flex flex-column alto justify-content-center  mt-4'
+  className='container text-center d-flex flex-column alto justify-content-center  mt-4'
 >
       {beers.map(beer => {
         return (
@@ -18,7 +18,7 @@ const Beers = ({beers}) => {
             <img
               src={`${beer.image_url}`}
               alt={`Poster for ${beer.name}`}
-              class='col-4'
+              className='col-4'
             />
           </Link>
         </div>
