@@ -2,6 +2,7 @@ import './App.css';
 import HomePage from './components/HomePage';
 import Header from './components/Header';
 import Beers from './components/Beers';
+import BeerDetail from './components/BeerDetail';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 import axios from 'axios'
@@ -26,7 +27,8 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />}/>
-        <Route path='/beers' element={<Beers beers={beers} /> }  />  
+        <Route path='/beers' element={<Beers beers={beers} /> }  />
+        <Route path='/beers/:id' element={<BeerDetail beers={beers} /> }  />
         <Route path='*' element={<h1>404- Not Found </h1>} />
       </Routes>  
     </div>

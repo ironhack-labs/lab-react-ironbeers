@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 const Beers = ({beers}) => {
   console.log(beers)
@@ -12,13 +13,14 @@ const Beers = ({beers}) => {
       <div className='col-12 col-xl-10 mt-2 border-bottom' key={beer._id}>
         <div className="row my-3">
         <div className='col-4 '>
-          <a href={`/beers/${beer._id}`}>
+          <Link to={`/beers/${beer._id}`}>
+          
             <img
               src={`${beer.image_url}`}
               alt={`Poster for ${beer.name}`}
               class='col-4'
             />
-          </a>
+          </Link>
         </div>
         <div className="col-8 text-start">
           <h2>
