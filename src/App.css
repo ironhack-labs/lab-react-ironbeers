@@ -1,11 +1,4 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +28,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.Heading {
+  text-decoration: none;
+  font-size: 36px;
+  margin-left: 24px;
+}
+.HomeText {
+  font-size: 18px;
+  margin-bottom: 52px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.HomeImages {
+  width: 100vw;
+  margin-bottom: 20px;
+}
+.HomeImgLink {
+  height: 100px;
+}
+.HomeLinkContainer {
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.BeerImg {
+  height: 200px;
+  margin: 0 20px;
+}
+.BeerContainer {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin: 30px 0;
+}
+.BeerDetails {
+  font-size: 16px;
 }
