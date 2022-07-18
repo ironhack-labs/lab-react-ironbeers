@@ -5,9 +5,12 @@ const RandomBeer = ({beer}) => {
   console.log(beer)
   return (
     <div>
+      
       <main
-  className='text-center d-flex flex-column alto justify-content-center mt-4 '
+  className='text-center d-flex flex-column alto justify-content-center mt-5 '
 >
+      <section className="mt-5">
+      </section>
       <div className='col-12 col-sm-8 mt-2 mx-auto ' key={beer._id}>
         <div className="row">
         {/* <div className='border border-0 rounded rounded-3'> */}

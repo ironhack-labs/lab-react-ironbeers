@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     axios.get('https://ih-beers-api2.herokuapp.com/beers')
       .then(response => {
-        console.log(response.data)
+        // console.log(response.data)
         setBeers(response.data)
       })
       .catch(err => console.log(err))
@@ -27,7 +27,7 @@ function App() {
   useEffect(() => {
     axios.get('https://ih-beers-api2.herokuapp.com/beers/random')
       .then(response => {
-        console.log(response.data)
+        //console.log(response.data)
         setRandomBeer(response.data)
 
       })

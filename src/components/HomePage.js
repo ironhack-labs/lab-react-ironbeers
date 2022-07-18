@@ -4,20 +4,14 @@ import newBeer from '../assets/new-beer.png'
 import randomBeer from '../assets/random-beer.png'
 import { useState, useEffect } from 'react';
 
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
 
 const HomePage = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  //const [show, setShow] = useState(false);
 
 
   return (
     <div>
-      <div className="container col-lg-8 mx-auto p-0">
+      <div className="container col-lg-8 mx-auto mt-5 p-0">
           <a href="/beers">
             <img className="card-img-top" src={beers} alt="beers"/>
             <h2 className="px-3 mt-1 fw-light text-black" >All Beers</h2>
