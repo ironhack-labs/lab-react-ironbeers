@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+/* background-color: red;
+display: flex;
+justify-content: baseline;
+align-items: flex-end; */
 }
 
 .App-logo {
@@ -149,11 +153,12 @@ h1 {
   width: 100%;
   margin: auto;
   line-height: 18px;
+
 }
 
 .item {
   /* background-color: #c9e1e765; */
-  margin: auto;
+  /* margin: auto; */
   padding-bottom: 2vh;
 }
 
@@ -165,7 +170,7 @@ h1 {
   .wrap {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: flex-start;
   }
   .item {
     width: 50vw;
