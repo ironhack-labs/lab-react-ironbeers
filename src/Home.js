@@ -7,7 +7,7 @@ import "./App.css";
 
 const Home = () => {
   return (
-    <>
+    <div className="beer-tile">
       <div>
         <div>
           <img src={Beers} alt="all-beer-thumbnail" className="thumbnail" />
@@ -30,7 +30,7 @@ const Home = () => {
           />
         </div>
         <Link to="/random-beer" className="title">
-          Random beers
+          Random beer
         </Link>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -43,7 +43,7 @@ const Home = () => {
           <img src={NewBeer} alt="new-beer-thumbnail" className="thumbnail" />
         </div>
         <Link to="/new-beer" className="title">
-          New beers
+          New beer
         </Link>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -51,7 +51,7 @@ const Home = () => {
           sed diam voluptua.
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

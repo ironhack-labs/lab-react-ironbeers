@@ -33,9 +33,19 @@
   }
 }
 
+.beer-tile {
+  gap: 30px;
+  display: flex;
+}
+
+@media only screen and (max-width: 1000px) {
+  .beer-tile {
+    display: block;
+  }
+}
+
 .thumbnail {
-  width: 100vw;
-  height: 30vh;
+  width: 100%;
   padding-bottom: 1rem;
 }
 
@@ -72,4 +82,46 @@
   width: 20vw;
   margin: 0 auto;
   padding-top: 2rem;
+}
+
+.label {
+  padding: 1rem;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #f3f3f3;
+  width: 100%;
+  margin-top: 1rem;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1000px) {
+  .label {
+    max-width: 30%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.submit-btn {
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+  border-style: none;
+  width: 100%;
+  margin-top: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: darkred;
+}
+
+@media only screen and (min-width: 1000px) {
+  .submit-btn {
+    max-width: 30%;
+    display: block;
+    margin: 0 auto;
+  }
 }

@@ -25,7 +25,11 @@ const Beers = () => {
       {beers.map((beer) => (
         <div
           key={beer._id}
-          style={{ display: "flex", textAlign: "left", padding: "1rem" }}
+          style={{
+            display: "flex",
+            textAlign: "left",
+            padding: "1rem",
+          }}
         >
           <img
             className="product-shot"
