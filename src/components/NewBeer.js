@@ -1,33 +1,41 @@
 import React from "react";
-import newBeer from '../assets/new-beer.png'
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
-import axios from 'axios';
-import { useState } from 'react';
+import newBeer from "../assets/new-beer.png";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
+import axios from "axios";
+import { useState } from "react";
+// import { useState, useEffect } from "react";
 
+const NewBeer = () => {
+  // const [beers, setBeers] = useState([]);
 
-const NewBeer = (props) => {
-  const [show, setShow] = useState(false);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://ih-beers-api2.herokuapp.com/beers")
+  //     .then((response) => {
+  //       // console.log(response.data)
+  //       setBeers(response.data);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, []);
 
   // bootstrap
+  const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
   // adding newbeer states
-  const [name, setName] = useState('');
-  const [tagline, setTagline] = useState('');
-  const [description, setDescription] = useState('');
-  const [first_brewed, setFirstBrewed] = useState('');
-  const [brewers_tips, setBrewersTips] = useState('');
+  const [name, setName] = useState("");
+  const [tagline, setTagline] = useState("");
+  const [description, setDescription] = useState("");
+  const [first_brewed, setFirstBrewed] = useState("");
+  const [brewers_tips, setBrewersTips] = useState("");
   const [attenuation_level, setAttenuationLevel] = useState(0);
-  const [contributed_by, setContributedBy] = useState('');
+  const [contributed_by, setContributedBy] = useState("");
 
-
-  const handleSubmit = event => {
-    
-    event.preventDefault()
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     const newBeer = {
       name,
@@ -36,69 +44,66 @@ const NewBeer = (props) => {
       first_brewed,
       brewers_tips,
       attenuation_level,
-      contributed_by
-    }
-    console.log(newBeer)
+      contributed_by,
+    };
+    console.log(newBeer);
     axios({
-      method: 'post',
-      url: 'https://ih-beers-api2.herokuapp.com/beers/new',
-      data: newBeer
-    })
-    .then(response => {
-      console.log(response)
-    })
-  
-    setName('')
-    setTagline('')
-    setDescription("")
-    setFirstBrewed('')
-    setBrewersTips('')
-    setAttenuationLevel('')
-    setContributedBy("")
+      method: "post",
+      url: "https://ih-beers-api2.herokuapp.com/beers/new",
+      data: newBeer,
+    }).then((response) => {
+      console.log(response);
+    });
 
-  }
+    setName("");
+    setTagline("");
+    setDescription("");
+    setFirstBrewed("");
+    setBrewersTips("");
+    setAttenuationLevel("");
+    setContributedBy("");
+  };
 
-  const handleNewBeerNameChange = event => {
-    setName(event.target.value)
-  }
+  const handleNewBeerNameChange = (event) => {
+    setName(event.target.value);
+  };
 
-  const handleNewTaglineChange = event => {
-    setTagline(event.target.value)
-  }
+  const handleNewTaglineChange = (event) => {
+    setTagline(event.target.value);
+  };
 
-  const handleNewDescriptionChange = event => {
-    setDescription(event.target.value)
-  }
+  const handleNewDescriptionChange = (event) => {
+    setDescription(event.target.value);
+  };
 
-  const handleNewFirstBrewedChange = event => {
-    setFirstBrewed(event.target.value)
-  }
+  const handleNewFirstBrewedChange = (event) => {
+    setFirstBrewed(event.target.value);
+  };
 
-  const handleNewBrewersTipsChange = event => {
-    setBrewersTips(event.target.value)
-  }
+  const handleNewBrewersTipsChange = (event) => {
+    setBrewersTips(event.target.value);
+  };
 
-  const handleNewAttenuationLevelChange = event => {
-    setAttenuationLevel(event.target.value)
-  }
+  const handleNewAttenuationLevelChange = (event) => {
+    setAttenuationLevel(event.target.value);
+  };
 
-  const handleNewContributedByChange = event => {
-    setContributedBy(event.target.value)
-  }
+  const handleNewContributedByChange = (event) => {
+    setContributedBy(event.target.value);
+  };
 
   return (
     <>
-      
-      <img className="card-img-top" src={newBeer} alt="new-beer"/>
+      <img className="card-img-top" src={newBeer} alt="new-beer" />
       <h2 className="px-3 mt-1 fw-light text-black">New Beers</h2>
-      
+
       <p className="px-3 text-black">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
       </p>
-      <Button variant="info text-white mx-3 px-5"  onClick={handleShow}>
+      <Button variant="info text-white mx-3 px-5" onClick={handleShow}>
         Create new Beer
       </Button>
 
@@ -107,9 +112,11 @@ const NewBeer = (props) => {
           <Modal.Title>Create a new beer</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form  onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <label htmlFor="recipient-name" className="col-form-label mt-2">Name of the beer:</label>
+              <label htmlFor="recipient-name" className="col-form-label mt-2">
+                Name of the beer:
+              </label>
               <Form.Control
                 type="text"
                 placeholder="Name"
@@ -118,8 +125,10 @@ const NewBeer = (props) => {
                 autoFocus
                 onChange={handleNewBeerNameChange}
               />
-            <label htmlFor="recipient-name" className="col-form-label mt-2">Tagline:</label>
-            <Form.Control
+              <label htmlFor="recipient-name" className="col-form-label mt-2">
+                Tagline:
+              </label>
+              <Form.Control
                 type="text"
                 placeholder="Tagline"
                 name="tagline"
@@ -130,7 +139,9 @@ const NewBeer = (props) => {
                 onChange={handleNewTaglineChange}
                 autoFocus
               />
-              <label htmlFor="recipient-name" className="col-form-label mt-2">Description:</label>
+              <label htmlFor="recipient-name" className="col-form-label mt-2">
+                Description:
+              </label>
               <Form.Control
                 type="text"
                 placeholder="Description"
@@ -140,7 +151,9 @@ const NewBeer = (props) => {
                 onChange={handleNewDescriptionChange}
                 autoFocus
               />
-              <label htmlFor="recipient-name" className="col-form-label mt-2">First Brewed:</label>
+              <label htmlFor="recipient-name" className="col-form-label mt-2">
+                First Brewed:
+              </label>
               <Form.Control
                 type="text"
                 placeholder="First brewed"
@@ -150,7 +163,9 @@ const NewBeer = (props) => {
                 onChange={handleNewFirstBrewedChange}
                 autoFocus
               />
-              <label htmlFor="recipient-name" className="col-form-label mt-2">Brewers Tips:</label>
+              <label htmlFor="recipient-name" className="col-form-label mt-2">
+                Brewers Tips:
+              </label>
               <Form.Control
                 type="text"
                 placeholder="Brewers tips"
@@ -160,7 +175,9 @@ const NewBeer = (props) => {
                 onChange={handleNewBrewersTipsChange}
                 autoFocus
               />
-              <label htmlFor="recipient-name" className="col-form-label mt-2">Attenuation level:</label>
+              <label htmlFor="recipient-name" className="col-form-label mt-2">
+                Attenuation level:
+              </label>
               <Form.Control
                 type="number"
                 placeholder="Attenuation level "
@@ -181,7 +198,11 @@ const NewBeer = (props) => {
               />
             </Form.Group>
             <Modal.Footer>
-              <Button variant="info text-white col-6 mx-auto" type="submit" onClick={handleClose}>
+              <Button
+                variant="info text-white col-6 mx-auto"
+                type="submit"
+                onClick={handleClose}
+              >
                 Save Changes
               </Button>
             </Modal.Footer>
@@ -190,6 +211,6 @@ const NewBeer = (props) => {
       </Modal>
     </>
   );
-}
+};
 
 export default NewBeer;
