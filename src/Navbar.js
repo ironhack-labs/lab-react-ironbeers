@@ -1,9 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import homePic from './assets/home.png'
-import './App.css'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import homePic from './assets/home.png';
+import './App.css';
 
-export default function Navbar() {
+export default function Navbar(props) {
+const navigate = useNavigate();	
+const handleSearch = event => {
+	navigate('/beers')
+    console.log(event.target)
+    props.setSearch(event.target.value)
+}
 	return (
 		<div>
 			<ul className='navBar'>
@@ -21,7 +27,7 @@ export default function Navbar() {
                     <Link to='/beers/new'>New Beer</Link>
 				</li>
                 <li>
-                    <Link to='/beers/search'>Search for a Beer</Link>
+                    <input type='text' value={props.search} onChange={handleSearch} placeholder='search for a beer' />
 				</li>
 			</ul>
 		</div>
