@@ -1,10 +1,191 @@
-.heading{
-  display:flex;
-  flex-direction: column;
+body {
+  background-image: url("./assets/beerbackground.png");
+  /* background-repeat: ; */
 }
 
-.headingLinks{
-  display:flex;
-  justify-content: space-between;
-  padding:1%;
+.heading {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(67, 86, 49); */
+  width: 60%;
+  margin: 0 20%;
+  /* border: 0.5vw outset gold; */
+  font-family: "Germania One", cursive;
+  justify-content: center;
+  color: black;
+  font-size: 5vw;
+}
+
+.headingLinks {
+  display: flex;
+ justify-content: center;
+  padding: 1%;
+  margin:0%;
+}
+
+.headingLinks a {
+  font-size: 2vw;
+  color: black;
+  text-decoration: none;
+}
+
+.headingLinks img {
+  width: 4vw;
+  margin: 5%;
+}
+
+
+button {
+  margin: 0 2%;
+  width: 10vw;
+  border: 0.25vw outset gold;
+  background-color: rgb(159, 133, 38);
+  text-align: center;
+  border-radius: 50%;
+}
+
+nav {
+  /* background-color: rgb(67, 86, 49);
+  border: 0.5vw outset gold;
+  width: 33.3%;
+  height: 5vw;
+  font-size: 3vw;
+
+  color: black;
+  font-family: "Germania One", cursive; */
+
+  margin: 0 33.3%;
+    font-size: 5vw;
+}
+
+nav img {
+  width: 10vw;
+  margin-bottom: 2%;
+}
+
+nav img:hover{
+  border-bottom: 0.5vw outset gold;
+}
+
+.beerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(67, 86, 49);
+  
+  border: 0.5vw outset gold;
+  width: 60%;
+  margin: 5% 20%;
+}
+
+.beerForm label {
+  font-family: "Germania One", cursive;
+}
+
+.beerForm input {
+  width: 50vw;
+  height: 2vw;
+  margin: 2% 2%;
+}
+
+.beerList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(67, 86, 49, 0.95);
+  border: 0.5vw outset gold;
+  width: 60%;
+  margin: 2% 20%;
+}
+
+.oneBeer {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.25vw solid gold;
+  justify-content: center;
+  align-items:center;
+
+  /* how to align content in center? */
+}
+
+.oneBeer > div img {
+  height: 20vw;
+  width: auto;
+  margin: 5% 10%;
+}
+
+.beerInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+  margin: 1% 10%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Germania One", cursive;
+  margin: 0 0 2% 0;
+}
+
+h2 {
+  background-color: gold;
+  border: 0.5vw outset gold;
+}
+
+.oneBeerDetails {
+  background-color: rgb(67, 86, 49);
+  border: 0.5vw outset gold;
+  width: 80%;
+  margin: 1% 10%;
+}
+
+.mainStuff {
+  background-color: rgba(67, 86, 49, 0.95);
+  width:100%;
+  /* margin: 1% 20% 0 20%; */
+  border: 0.5vw inset gold;
+  
+  font-size: 2vw;
+  padding:2%;
+}
+
+.mainStuff img {
+  height: 20vw;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  
+  
+  .headingLinks img {
+    display: none;
+  }
+
+  .headingLinks a {
+    font-size: 5vw;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+  }
+  .mainStuff {
+    background-color: rgba(67, 86, 49,0);
+   border:none;
+    font-size: 10vw;
+    margin-top: 1%;
+  }
+
+  .mainStuff img{
+    width:100%;
+    height:auto;
+  }
+
+  .beerList {
+    width:80%;
+    margin:0 10%;
+  }
 }

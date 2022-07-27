@@ -1,6 +1,12 @@
+import germanHouse from "../assets/icons8-german-house-48.png"
+
 function NavBar() {
 return(
-<a href="/">🏠</a>
+    <nav>
+<a href="/"><img src={germanHouse} alt=" home" /></a>
+
+
+    </nav>
 
 )
 
