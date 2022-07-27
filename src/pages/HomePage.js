@@ -7,6 +7,7 @@ import glass from '../assets/glass.png';
 
 function HomePage() {
   return (
+
     <div className="home">
       <div className="heading">
         <h1> IronBeers</h1>
@@ -20,7 +21,6 @@ function HomePage() {
 
           <button><Link to="/new-beer">  ➕ <br></br><img src={glass} alt="" /> </Link></button>
         </div> 
-
       <div className="mainStuff">
           <h1> Drink With Us.</h1>
           <img src={aStein} alt="ein Stein" />

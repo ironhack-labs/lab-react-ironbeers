@@ -1,17 +1,24 @@
 body {
   background-image: url("./assets/beerbackground.png");
-  /* background-repeat: ; */
+margin:0;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:98%;
+  margin:0 1%;
 }
 
 .heading {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   /* background-color: rgb(67, 86, 49); */
-  width: 60%;
-  margin: 0 20%;
+  width: 100%;
   /* border: 0.5vw outset gold; */
   font-family: "Germania One", cursive;
-  justify-content: center;
+  text-align: center;
   color: black;
   font-size: 5vw;
 }
@@ -38,13 +45,17 @@ body {
 button {
   margin: 0 2%;
   width: 10vw;
-  border: 0.25vw outset gold;
-  background-color: rgb(159, 133, 38);
+  border: 0.25vw outset rgba(151,83,2,255);
+  background-color: rgba(243,178,84,255);
   text-align: center;
   border-radius: 50%;
+  display:flex;
+  justify-content: center;
 }
 
 nav {
+  display: flex;
+  justify-content: center;
   /* background-color: rgb(67, 86, 49);
   border: 0.5vw outset gold;
   width: 33.3%;
@@ -54,12 +65,12 @@ nav {
   color: black;
   font-family: "Germania One", cursive; */
 
-  margin: 0 33.3%;
+margin: 2% 0;
     font-size: 5vw;
 }
 
 nav img {
-  width: 10vw;
+  width: 9vw;
   margin-bottom: 2%;
 }
 
@@ -71,7 +82,7 @@ nav img:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(67, 86, 49);
+  background-color: rgba(111,138,72,255);
   
   border: 0.5vw outset gold;
   width: 60%;
@@ -92,8 +103,8 @@ nav img:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(67, 86, 49, 0.95);
-  border: 0.5vw outset gold;
+  background-color: rgba(111,138,72,255);
+  border: 0.5vw outset rgba(72,91,42,255);
   width: 60%;
   margin: 2% 20%;
 }
@@ -101,7 +112,7 @@ nav img:hover{
 .oneBeer {
   display: flex;
   flex-direction: row;
-  border-bottom: 0.25vw solid gold;
+  border-bottom: 0.1vw solid rgba(72,91,42,255);
   justify-content: center;
   align-items:center;
 
@@ -127,29 +138,29 @@ h2,
 h3,
 h4 {
   font-family: "Germania One", cursive;
-  margin: 0 0 2% 0;
+  width:80%;
+  margin:0 10%;
 }
 
 h2 {
-  background-color: gold;
-  border: 0.5vw outset gold;
+  background-color: rgba(243,178,84,255);
+  border: 0.5vw outset rgba(151,83,2,255);
 }
 
 .oneBeerDetails {
-  background-color: rgb(67, 86, 49);
-  border: 0.5vw outset gold;
+  background-color: rgba(111,138,72,255);
+  border: 0.5vw outset rgba(72,91,42,255);
   width: 80%;
   margin: 1% 10%;
 }
 
 .mainStuff {
-  background-color: rgba(67, 86, 49, 0.95);
-  width:100%;
-  /* margin: 1% 20% 0 20%; */
-  border: 0.5vw inset gold;
-  
+  background-color: rgba(111,138,72,0.9);
+  /* width:90%;
+margin: 0 5%; */
+  border: 0.5vw inset rgba(72,91,42,0.9);
   font-size: 2vw;
-  padding:2%;
+  /* padding:2%; */
 }
 
 .mainStuff img {
@@ -166,6 +177,12 @@ h2 {
     display: none;
   }
 
+.heading h1{
+  font-size:18vw;
+  width:100%;
+  margin:auto;
+}
+
   .headingLinks a {
     font-size: 5vw;
     color: black;
@@ -175,8 +192,10 @@ h2 {
   .mainStuff {
     background-color: rgba(67, 86, 49,0);
    border:none;
-    font-size: 10vw;
+    font-size: 8vw;
     margin-top: 1%;
+    width:80%;
+    margin:0 10%;
   }
 
   .mainStuff img{
