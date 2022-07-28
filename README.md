@@ -29,7 +29,7 @@ $ npm start
   git push origin master
   ```
 
-- Create Pull Request so your TAs can check up your work.
+- Create Pull Request so that your TAs can check up your work.
 
 ## Introduction
 
@@ -59,6 +59,8 @@ The **IronBeers** project will include the following features:
 - A **Random Beer** page to display a Random Beer
 - A **New Beer** page to show a form where a user can create new beers
 
+<br>
+
 ## Instructions
 
 :exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design! As we said this is bonus, so it's up to you. :+1:
@@ -66,6 +68,8 @@ The **IronBeers** project will include the following features:
 <!-- ### Iteration 1: Create the App
 
 Well, at this point, this comes natural: we will use `create-react-app` to build a new app. Feel free to name it as you wish, but if you need some inspiration, we called it **Reactive BeersJS**. -->
+
+<br>
 
 ### Iteration 1 | Home Page
 
@@ -80,6 +84,7 @@ Feel free to design it however you wish, but in case you want to do it the way w
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png" height="600px" />
 </div>
+<br>
 
 ### Iteration 2 | Header
 
@@ -88,6 +93,7 @@ On every view (except for the `home`), we should add a **header** with a `link` 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png" height="100px" />
 </div>
+<br>
 
 ### Iteration 3 | List all the beers
 
@@ -106,8 +112,9 @@ You should display the following from each of the beers:
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40706960-96223ade-63ef-11e8-9375-b7b6d091e716.png" height="600px" />
 </div>
-
 The first time you call the API, it might take a bit to respond. It's hosted on Heroku, and it goes to sleep after 30 minutes, you know! :wink:
+
+<br>
 
 ### Iteration 4 | Display a single beer
 
@@ -126,6 +133,7 @@ Again, we **strongly recommend to console log the response from the API**.
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707269-84bedd78-63f0-11e8-86c3-b14efb9323a7.png" height="600px" />
 </div>
+<br>
 
 ### Iteration 5 | A random beer
 
@@ -143,6 +151,7 @@ The same way we did with the **Single Beer** view, we should render the followin
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707457-05a22990-63f1-11e8-84b2-a86143b7b821.png" height="600px" />
 </div>
+<br>
 
 ### Iteration 6 | Create a new beer
 
@@ -167,13 +176,20 @@ Since we didn't cover how to upload images yet, don't worry about it now - the A
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
 </div>
+<br>
 
 ### Iteration 7 | Bonus | Filter the beers
 
 Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beers-api2.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
 
+
+
 **We are done!** :trophy:
 
+
+
 Awesome! Grab a beer (if you're not underage :wink: )! Now you are a **React Warrior**, keep training to become the Ninja!
+
+
 
 Happy coding! :heart:
