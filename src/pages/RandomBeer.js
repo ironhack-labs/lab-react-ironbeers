@@ -20,10 +20,10 @@ function RandomBeer() {
       {beerInfo && (
         <div className="oneBeerDetails">
           <h1> {beerInfo.name}</h1>
-          <h2>{beerInfo.tagline}</h2>
-          <p>{beerInfo.first_brewed}</p>
-          <p>Attenuation level: {beerInfo.attenuation_level}</p>
+          <h3>{beerInfo.tagline}</h3>
+          <p>Date First Brewed: {beerInfo.first_brewed}</p>
           <p>{beerInfo.description}</p>
+          <p>Attenuation level: {beerInfo.attenuation_level}</p>
           <p>Contributed By: {beerInfo.contributed_by}</p>
         </div>
       )}
