@@ -11,8 +11,6 @@ function HomePage() {
     <div className="home">
       <div className="heading">
         <h1> IronBeers</h1>
-
-       
       </div> 
       <div className="headingLinks">
           <button><Link to="/beers"> ♾️ <br></br> <img src={bottlecap} alt="" /> </Link></button>
