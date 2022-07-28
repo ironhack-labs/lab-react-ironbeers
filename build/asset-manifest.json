@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da9ecdbc.chunk.css",
+    "main.js": "/static/js/main.88a364fa.chunk.js",
+    "main.js.map": "/static/js/main.88a364fa.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3010c23a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3010c23a.js.map",
+    "static/js/2.5d5ab06d.chunk.js": "/static/js/2.5d5ab06d.chunk.js",
+    "static/js/2.5d5ab06d.chunk.js.map": "/static/js/2.5d5ab06d.chunk.js.map",
+    "static/js/3.f5b9cf3b.chunk.js": "/static/js/3.f5b9cf3b.chunk.js",
+    "static/js/3.f5b9cf3b.chunk.js.map": "/static/js/3.f5b9cf3b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.da9ecdbc.chunk.css.map": "/static/css/main.da9ecdbc.chunk.css.map",
+    "static/js/2.5d5ab06d.chunk.js.LICENSE.txt": "/static/js/2.5d5ab06d.chunk.js.LICENSE.txt",
+    "static/media/beer.35cff99b.png": "/static/media/beer.35cff99b.png",
+    "static/media/index.css": "/static/media/beerbackground.51c382dd.png",
+    "static/media/bottle-cap.8c79efb2.png": "/static/media/bottle-cap.8c79efb2.png",
+    "static/media/glass.be0f8740.png": "/static/media/glass.be0f8740.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3010c23a.js",
+    "static/js/2.5d5ab06d.chunk.js",
+    "static/css/main.da9ecdbc.chunk.css",
+    "static/js/main.88a364fa.chunk.js"
+  ]
+}
