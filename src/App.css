@@ -1,6 +1,10 @@
+body{
+  background-color: rgb(188, 150, 99);
+}
+
 .App {
   text-align: center;
-}
+ }
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +39,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.HomeLinks{
+ font-size: xx-large;
+ font-weight: bolder;
+ margin: 3em;
+}
+header {
+  background-color: rgb(241, 241, 209);
+  height: 3em;
+  font-size: x-large;
+  padding-top: 2em;
+}
+img{
+  max-width: 3em;
+}
+.BeersList{
+  display: inline-block;
+  max-width: 15em;
+  margin: 2em;
+  padding: 2em;
+}
+input{
+display:inline;
+width: 30em;
+height: 2em;
+margin: 1em 2rem;
+border: solid 2px;
+
 }
