@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 function Main() {
   return (
     <div>
-      <NavLink to={"/"}></NavLink>
+      <NavLink to="/">Home</NavLink>
       <AllBeers />
       <NewBeer />
       <RandomBeer />

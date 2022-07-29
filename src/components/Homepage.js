@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function Homepage() {
   return (
     <div>
@@ -6,7 +8,7 @@ function Homepage() {
         alt="beers"
       />
       <h1>
-        <a href="/beers">All Beers</a>
+        <NavLink to="/beers">All Beers</NavLink>
       </h1>
       <p>
         An exquisite selection of beers await. Go to the link below to elevate
@@ -18,7 +20,7 @@ function Homepage() {
         alt="beers"
       />
       <h1>
-        <a href="/random-beer"> Random Beer</a>
+        <NavLink to="/random">Random Beers</NavLink>
       </h1>
       <p>
         Feeling adventurous? Join us in the art of randomness. Once you access
@@ -31,7 +33,7 @@ function Homepage() {
       />
 
       <h1>
-        <a href="/new-beer">New Beer</a>
+        <NavLink to="/new">New Beers</NavLink>
       </h1>
       <p>
         Contribute with the elixir of your choice (as long as it is a beer). Let
