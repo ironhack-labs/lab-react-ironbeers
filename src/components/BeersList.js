@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function BeersList() {
 
@@ -30,6 +31,10 @@ const [beers, setBeers] = useState(null);
             return(
                 <div key="">
                     <img src={element.image_url} alt=""/>
+                    <p>Name: {element.name}</p>
+                    <p>Tagline: {element.tagline}</p>
+                    <p>Contributed by: {element.contributed_by}</p>
+                    <NavLink to={element._id}>More details</NavLink>
                 </div>
             )
         })} 
