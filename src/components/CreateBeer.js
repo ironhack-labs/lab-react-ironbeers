@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // Iteration 4
 function CreateBeer(props) {
-  const [title, setTitle] = useState("");
+  const [name, setName] = useState("");
   const [tagline, setTagline] = useState("");
   const [description, setDescription] = useState("");
   const [firstBrewed, setFirstBrewed] = useState("");
@@ -13,7 +13,7 @@ function CreateBeer(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBeer = {
-      title: title,
+      name: name,
       tagline: tagline,
       description: description,
       first_brewed: firstBrewed,
@@ -30,7 +30,7 @@ function CreateBeer(props) {
     props.createBeer(newBeer);
 
     // clear form
-    // setTitle("");
+    // setName("");
     // setTagline("");
     // setDescription("");
     // setFirstBrewed("");
@@ -43,16 +43,16 @@ function CreateBeer(props) {
     <form onSubmit={handleSubmit}>
       <div>Add Beer Details</div>
       <br />
-      <label>Title</label>
+      <label>Name</label>
 
       {
         <input
           type="text"
-          value={title}
-          name="title"
+          value={name}
+          name="name"
           required
           onChange={(e) => {
-            setTitle(e.target.value);
+            setName(e.target.value);
           }}
         />
       }
