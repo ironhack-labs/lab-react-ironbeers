@@ -24,12 +24,14 @@ function AllBeers(props) {
         <>
             <Navbar />
 
-            <Form style={{ margin: '3rem', textAlign: 'left' }}>
-                <Form.Group>
-                    <Form.Label style={{ fontSize: '1.5rem' }}>Search</Form.Label>
-                    <Form.Control value={search} type="text" onChange={(e) => handleSearch(e.target.value)}></Form.Control>
-                </Form.Group>
-            </Form>
+            <Container>
+                <Form style={{ margin: '3rem', textAlign: 'left' }}>
+                    <Form.Group>
+                        <Form.Label style={{ fontSize: '1.5rem' }}>Search</Form.Label>
+                        <Form.Control value={search} type="text" onChange={(e) => handleSearch(e.target.value)}></Form.Control>
+                    </Form.Group>
+                </Form>
+            </Container>
 
 
             {props.data.map(el => {
