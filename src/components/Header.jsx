@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Wrapper>
       <Link to="/">
-        <AiFillHome fill="white" size="3%" />
+        <HomeIcon fill="white" size="3%" />
       </Link>
     </Wrapper>
   )
@@ -18,4 +18,7 @@ const Wrapper = styled.div`
   padding: 0.5rem 0;
   text-align: center;
   background-color: #3dc4fc;
+`
+const HomeIcon = styled(AiFillHome)`
+  width: 50px;
 `
