@@ -1,0 +1,30 @@
+img {
+    width: 60%;
+
+}
+
+.image-div {
+    max-width: 40%;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.text {
+    text-align: left;
+}
+
+p {
+    color: grey;
+}
+
+span {
+    font-size: .7rem;
+}
