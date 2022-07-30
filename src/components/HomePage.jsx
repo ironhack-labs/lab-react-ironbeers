@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import beers from '../assets/beers.png'
 import newBeer from '../assets/new-beer.png'
@@ -7,9 +8,13 @@ const HomePage = () => {
   return (
     <Wrapper>
       <HomeElement>
-        <img src={beers} alt="beers" />
+        <Link to="/beers">
+          <img src={beers} alt="beers" />
+        </Link>
         <div>
-          <h2>All Beers</h2>
+          <Link style={{ color: 'black' }} to="/beers">
+            <h2>All Beers</h2>
+          </Link>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint nam
             cum cupiditate, error amet qui porro eaque, molestiae quasi corporis
@@ -18,9 +23,13 @@ const HomePage = () => {
         </div>
       </HomeElement>
       <HomeElement>
-        <img src={randomBeer} alt="beers" />
+        <Link to="/random-beer">
+          <img src={randomBeer} alt="random-beer" />
+        </Link>
         <div>
-          <h2>Random Beer</h2>
+          <Link style={{ color: 'black' }} to="/random-beer">
+            <h2>Random Beer</h2>
+          </Link>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint nam
             cum cupiditate, error amet qui porro eaque, molestiae quasi corporis
@@ -29,9 +38,13 @@ const HomePage = () => {
         </div>
       </HomeElement>
       <HomeElement>
-        <img src={newBeer} alt="beers" />
+        <Link to="/new-beer">
+          <img src={newBeer} alt="new-beer" />
+        </Link>
         <div>
-          <h2>New Beer</h2>
+          <Link style={{ color: 'black' }} to="/new-beer">
+            <h2>New Beer</h2>
+          </Link>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint nam
             cum cupiditate, error amet qui porro eaque, molestiae quasi corporis

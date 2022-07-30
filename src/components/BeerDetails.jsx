@@ -22,39 +22,38 @@ const BeerDetails = () => {
 
   useEffect(() => {
     id ? setBeer(fetchBeerDetails()) : setBeer(random)
-    console.log('The beer: ', beer)
   }, [id, random])
 
   return (
     <>
       <Header />
       <Wrapper>
-        {isLoading ? (
+        {isLoading || !beer ? (
           <Loading type="spin" color="#3dc4fc" width="20%" />
         ) : (
           <>
-            <img src={beer?.image_url} alt={beer?.name} />
+            <img src={beer.image_url} alt={beer.name} />
             <Info>
               <table>
                 <tbody>
                   <tr>
                     <LeftCol>
-                      <h1>{beer?.name}</h1>
+                      <h1>{beer.name}</h1>
                     </LeftCol>
                     <RightCol>
                       <h1 style={{ color: '#999' }}>
-                        {beer?.attenuation_level}
+                        {beer.attenuation_level}
                       </h1>
                     </RightCol>
                   </tr>
                   <tr>
                     <LeftCol>
-                      <Tag>
-                        <h2>{beer?.tagline}</h2>
-                      </Tag>
+                      <h2>
+                        <Tag>{beer.tagline}</Tag>
+                      </h2>
                     </LeftCol>
                     <RightCol>
-                      <h2>{beer?.first_brewed}</h2>
+                      <h2>{beer.first_brewed}</h2>
                     </RightCol>
                   </tr>
                 </tbody>
