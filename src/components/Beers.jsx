@@ -40,7 +40,6 @@ const Wrapper = styled.div`
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 1rem;
-  margin-top: 2rem;
 `
 const CustomLink = styled(Link)`
   text-decoration: none;

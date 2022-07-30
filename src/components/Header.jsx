@@ -18,6 +18,7 @@ const Wrapper = styled.div`
   padding: 0.5rem 0;
   text-align: center;
   background-color: #3dc4fc;
+  margin-bottom: 2rem;
 `
 const HomeIcon = styled(AiFillHome)`
   width: 50px;
