@@ -7,6 +7,7 @@ import RandomBeer from "./components/RandomBeer";
 import Homepage from "./components/Homepage";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import BeerDetails from "./components/BeerDetails";
 
 function App() {
   const [beers, setBeers] = useState(null);
@@ -30,6 +31,15 @@ function App() {
             <>
               <Navbar />
               <AllBeers beers={beers} />
+            </>
+          }
+        />
+        <Route
+          path="/beer/:beerId"
+          element={
+            <>
+              <Navbar />
+              <BeerDetails beers={beers} />
             </>
           }
         />

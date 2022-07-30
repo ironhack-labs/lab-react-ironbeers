@@ -15,10 +15,15 @@ img {
     display: flex;
     align-items: center;
     justify-content: baseline;
+    text-decoration: none;
 }
 
 .text {
     text-align: left;
+}
+
+h2 {
+    color: black;
 }
 
 p {
@@ -27,4 +32,5 @@ p {
 
 span {
     font-size: .7rem;
+    color: black
 }
