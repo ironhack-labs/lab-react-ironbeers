@@ -65,4 +65,7 @@ const Wrapper = styled.div`
 const HomeElement = styled.div`
   max-width: 700px;
   margin-bottom: 2rem;
+  > div {
+    align-self: flex-start;
+  }
 `
