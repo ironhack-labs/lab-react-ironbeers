@@ -1,0 +1,18 @@
+.images-home {
+    width: 100%;
+
+}
+.header-home {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.description-home {
+    color: black;
+    margin: 1rem 2rem;
+}
+
+.line-home {
+    border-bottom: 1px solid rgb(161, 157, 157);
+    margin: 2rem 10rem;
+}

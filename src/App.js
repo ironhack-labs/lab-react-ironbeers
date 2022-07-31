@@ -8,6 +8,7 @@ import Homepage from "./components/Homepage";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import BeerDetails from "./components/BeerDetails";
+import SpinningBeer from "./components/SpinningBeer";
 
 function App() {
   const [beers, setBeers] = useState(null);
@@ -44,11 +45,20 @@ function App() {
           }
         />
         <Route
-          path="/random"
+          path="/beers/random/"
           element={
             <>
               <Navbar />
-              <RandomBeer />
+              <RandomBeer beers={beers} />
+            </>
+          }
+        />
+        <Route
+          path="/beers/random/spinning"
+          element={
+            <>
+              <Navbar />
+              <SpinningBeer beers={beers} />
             </>
           }
         />
@@ -57,7 +67,7 @@ function App() {
           element={
             <>
               <Navbar />
-              <NewBeer />
+              <NewBeer beers={beers} />
             </>
           }
         />

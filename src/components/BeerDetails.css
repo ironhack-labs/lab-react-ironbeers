@@ -24,3 +24,7 @@ span {
     border-bottom: 1px solid rgb(161, 157, 157);
     margin: 0 4rem;
 }
+
+.tagline {
+    text-align: center;
+}

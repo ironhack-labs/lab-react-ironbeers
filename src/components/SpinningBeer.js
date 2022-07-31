@@ -6,7 +6,7 @@ function RandomBeer(props) {
   const [beers, setBeers] = useState(null);
   useEffect(() => {
     fetchingRandom();
-  }, []);
+  });
 
   const fetchingRandom = () => {
     axios

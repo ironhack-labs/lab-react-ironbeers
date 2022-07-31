@@ -1,0 +1,32 @@
+.form {
+    display:flex;
+    flex-direction: column;
+    line-height: 3rem;
+    margin: 0 3rem;
+}
+
+.form input {
+    border: 1px solid rgb(203, 199, 199);
+    border-radius: 3rem;
+    padding: .6rem 1rem;
+}
+
+.form textarea {
+    border: 1px solid rgb(203, 199, 199);
+    border-radius: 2rem;
+    padding: .6rem 1rem;
+}
+
+.form button {
+    border: none;
+    border-radius: 3rem;
+    background-color: rgb(105, 105, 201);
+    color: white;
+    padding: .6rem 1rem;
+    margin: 1.5rem 0;
+}
+
+.form label {
+    margin: .3rem 0 0 .6rem;
+    text-align: left;
+}

@@ -12,7 +12,7 @@ function BeerDetails(props) {
         <img src={result.image_url} alt="individual-beer" />
         <h2>Name: {result.name}</h2>
         <div className="line"></div>
-        <p>{result.tagline}</p>
+        <p className="tagline">{result.tagline}</p>
         <div className="container">
           <p>Its first: {result.first_brewed}</p>
           <p>Attenuation: {result.attenuation_level}</p>
