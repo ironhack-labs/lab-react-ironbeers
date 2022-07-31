@@ -2,37 +2,122 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Beers {
+ display: flex;
+ justify-content: left;
+ align-items: center;
+ width: 100%;
+ margin: 0 2vw;
+ text-decoration: none;
+ color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Beers img {
+  height: 200px;
+  width: 100px;
+  object-fit: contain;
+  margin: 20px;
+}
+
+header img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+@media (min-width: 600px) {
+  .Beers {
+    width: 50vw;
+    margin: 0 20vw;
+   }
+   .line {
+    width: 50vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (min-width: 1000px) {
+  .Beers {
+    width: 600px;
+    margin: 0 20vw;
+   }
+  .line {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .Beers {
+    margin: 0 40vw;
+   }
+
+}
+
+
+.Main, .SingleBeer {
+  width: 90%;
+  margin: 5vw;
+}
+
+.Main img {
+  width: 100%
+}
+
+.beers,
+.new-beer,
+.random-beer {
+  text-decoration: none;
+  color: black;
+}
+
+.new-beer img, 
+.random-beer img {
+  margin: 50px 0 0 0;
+}
+
+.SingleBeer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.SingleBeer Img {
+  height: 60vw;
+}
+
+.tagline {
+  color: grey;
+}
+
+.beer-info {
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  margin: 5px;
+}
+
+input {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid grey;
+}
+
+button {
+  margin: 15px;
+  background-color: rgb(61, 196, 252);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 5px;
+  border:rgb(61, 196, 252)
 }
