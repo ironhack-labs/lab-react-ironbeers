@@ -5,7 +5,7 @@ import './App.css';
 import Beers from "./components/Beers"
 import BeerDetails from "./components/BeerDetails"
 import RandomBeer from "./components/RandomBeer"
-import NewBeer from "./components/NewBeer"
+import CreateBeer from "./components/CreateBeer"
 import HomePage from './components/HomePage';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path='/beers' element={<Beers />}></Route>
         <Route path='/beers/:beerId' element={<BeerDetails />}></Route>
         <Route path='/random-beer' element={<RandomBeer />} />
-        <Route path='/new-beer' element={<NewBeer />}></Route>
+        <Route path='/new-beer' element={<CreateBeer />}></Route>
       </Routes>
     </div>
   );
