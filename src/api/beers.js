@@ -6,4 +6,4 @@ export const getOneBeer = (id) => app.get(`/beers/${id}`)
 
 export const getRandomBeer = () => app.get('/beers/random')
 
-export const postBeer = () => app.post('/beers/new')
+export const postBeer = (beer) => app.post('/beers/new', beer)
