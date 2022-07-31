@@ -15,7 +15,6 @@ function Beers() {
             .get(process.env.REACT_APP_API_BASE_URL + '/beers')
             .then((response) => {
                 setBeers(response.data);
-                console.log("axios Beerslist response:", response.data);
             })
             .catch((e) => {
                 console.log(e);
@@ -40,7 +39,7 @@ function Beers() {
         return result;
     }
 
-    
+
     return (
         <>
             <header>
