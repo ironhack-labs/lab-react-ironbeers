@@ -28,3 +28,16 @@ span {
 .tagline {
     text-align: center;
 }
+
+.button-details {
+    border: none;
+    border-radius: 3rem;
+    background-color: rgb(105, 105, 201);
+    padding: .6rem 1rem;
+    margin: 1.5rem 0;
+}
+
+.link {
+    text-decoration: none;
+    color:white;
+} 

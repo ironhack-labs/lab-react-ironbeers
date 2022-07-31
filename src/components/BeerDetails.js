@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import "./BeerDetails.css";
 
 function BeerDetails(props) {
@@ -8,18 +8,27 @@ function BeerDetails(props) {
   });
   const renderDetails = () => {
     return (
-      <div>
-        <img src={result.image_url} alt="individual-beer" />
-        <h2>Name: {result.name}</h2>
-        <div className="line"></div>
-        <p className="tagline">{result.tagline}</p>
-        <div className="container">
-          <p>Its first: {result.first_brewed}</p>
-          <p>Attenuation: {result.attenuation_level}</p>
+      <>
+        <div>
+          <img src={result.image_url} alt="individual-beer" />
+          <h2>Name: {result.name}</h2>
+          <div className="line"></div>
+          <p className="tagline">{result.tagline}</p>
+          <div className="container">
+            <p>Its first: {result.first_brewed}</p>
+            <p>Attenuation: {result.attenuation_level}</p>
+          </div>
+          <p className="description">{result.description}</p>
+          <span>Created by: {result.contributed_by}</span>
         </div>
-        <p className="description">{result.description}</p>
-        <span>Created by: {result.contributed_by}</span>
-      </div>
+        <div>
+          <button className="button-details">
+            <NavLink to="/beers" className="link">
+              Back
+            </NavLink>
+          </button>
+        </div>
+      </>
     );
   };
   return (
