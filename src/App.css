@@ -1,38 +1,144 @@
-.App {
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.home-link {
+  height: 33.3%;
+}
+
+.home-link h1,
+.home-link p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.home-link > a,
+.beer-list > a {
+  text-decoration: none;
+  color: rgb(75, 75, 75);
+}
+
+.home-img {
+  width: 100%;
+  max-height: 50%;
+  object-fit: cover;
+}
+
+.navbar {
+  background-color: rgba(14, 199, 236, 0.738);
+  display: flex;
+  justify-content: center;
+}
+
+.fa-home {
+  color: rgb(255, 255, 255);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.beer-list-card {
+  display: flex;
+  width: 100vw;
+  padding: 2rem 0;
+  border-bottom: solid 1px gray;
+}
+
+.beer-list-card > div h1 {
+  font-size: 2rem;
+}
+
+.beer-list-img {
+  height: 10em;
+  width: 35%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.beer-list-img > img {
+  height: 10em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.beer-list-text {
+  width: 65%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.beer-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.beer-details > img {
+  height: 25rem;
+  margin: 5rem auto 2rem;
+}
+
+.beer-details-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.beer-details-header h1,
+.beer-details-header p {
+  color: rgb(17, 17, 17);
+}
+
+.beer-details-header h3,
+.beer-details-header h2,
+.beer-details-main > span {
+  color: rgb(123, 123, 123);
+}
+
+.beer-details-main {
+  padding: 0 2rem;
+}
+
+.beer-details-main > p {
+  font-size: 1.4rem;
+}
+
+.create-beer-wrapper {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.create-beer-form {
+  text-align: left;
+  margin: 2rem;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create-beer-form label,
+.create-beer-form input,
+.create-beer-form button {
+  display: block;
+}
+
+.create-beer-form input,
+.create-beer-form textarea {
+  width: 100%;
+  border-radius: 25px;
+  border: 2px solid rgb(224, 222, 222);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.create-beer-form label {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.create-beer-form > button {
+  width: 100%;
+  background-color: rgba(14, 199, 236, 0.738);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 25px;
 }
