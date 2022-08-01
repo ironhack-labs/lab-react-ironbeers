@@ -13,7 +13,7 @@ function Beers({ beers }) {
             <h3>{beer.tagline}</h3>
             <p>
               <strong>Created by: </strong>
-              {beer.contributed_by.split("<")[0]}
+              {beer.contributed_by}
             </p>
           </div>
         </div>

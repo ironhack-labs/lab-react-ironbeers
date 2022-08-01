@@ -6,7 +6,6 @@ function BeerDetails({ beers }) {
   const singleBeer = allBeers.find((beer) => {
     return beer._id === beerId;
   });
-  console.log(singleBeer);
 
   return (
     <div className='beer-details'>

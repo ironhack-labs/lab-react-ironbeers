@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     fetchBeers();
-  });
+  }, []);
 
   const fetchBeers = () => {
     axios
