@@ -2,7 +2,6 @@ import { Header } from "./Header"
 import { useState, useEffect } from "react"
 import { NavLink } from 'react-router-dom';
 import { fetchWrapper } from "../function/fetchWrapper";
-// import { Search } from "./Search";
 
 
 export const Beers = () => {
@@ -51,7 +50,6 @@ export const Beers = () => {
     return (
         <>
             <Header/>
-            {/* <Search/> */}
             <div className="Search">
             <label>Search Beers</label>
             <br/>
