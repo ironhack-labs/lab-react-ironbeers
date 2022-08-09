@@ -1,8 +1,12 @@
+import Header from "../components/Header";
 
 const RandomBeer = () => {
   return (
-    <div>Random Beer</div>
-  )
-}
+    <>
+      <Header />
+      <h1> Random Beer </h1>
+    </>
+  );
+};
 
-export default RandomBeer
+export default RandomBeer;

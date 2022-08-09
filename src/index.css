@@ -26,3 +26,15 @@
 p{
   color: gray;
 }
+.header{
+  background-color: #3DC4FC;
+  margin: 5px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerLink{
+  text-decoration: none;
+  color: antiquewhite;
+}

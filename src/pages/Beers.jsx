@@ -1,8 +1,12 @@
+import Header from "../components/Header";
 
 const Beers = () => {
   return (
-    <h1>Beers</h1>
-  )
-}
+    <>
+      <Header />
+      <h1>All Beers </h1>
+    </>
+  );
+};
 
-export default Beers
+export default Beers;
