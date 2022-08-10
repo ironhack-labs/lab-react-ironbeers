@@ -1,9 +1,21 @@
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/Header";
+import { useState } from "react";
+import {getSingleBeer} from '../services/calls'
+import { useEffect } from "react";
 
-const SingleBeer = ({ beerApi }) => {
+const SingleBeer = () => {
+  const [SingleBeer, setSingleBeer] = useState({})
   const { id } = useParams();
-  const beer = beerApi.find((beer) => beer._id === id);
+  useEffect(() => {
+    singlebeer(id)
+  },[id])
+
+  const singlebeer = async(id) => {
+    const aSingleBeer = await getSingleBeer(id)
+    setSingleBeer(aSingleBeer)
+  }
+
   const {
     image_url,
     name,
@@ -12,7 +24,7 @@ const SingleBeer = ({ beerApi }) => {
     attenuation_level,
     description,
     contributed_by,
-  } = beer;
+  } = SingleBeer;
   return (
     <div>
       <div>

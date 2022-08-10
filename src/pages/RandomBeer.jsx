@@ -1,8 +1,21 @@
 import Header from "../components/Header";
 import {Link} from 'react-router-dom'
+import { useState, useEffect } from "react";
+import {getRandomBeer} from '../services/calls'
 
-const RandomBeer = ({beerApi}) => {
-  const randomBeer = beerApi[Math.floor(Math.random() * beerApi.length)]
+const RandomBeer = () => {
+  const [RandomBeer, setRandomBeer] = useState({})
+
+  useEffect(() => {
+    getARandomBeer()
+  },[])
+  
+
+  const getARandomBeer = async() => {
+    const randomBeerFromApi = await getRandomBeer()
+    setRandomBeer(randomBeerFromApi)
+  }
+
 
   const {
     image_url,
@@ -12,7 +25,7 @@ const RandomBeer = ({beerApi}) => {
     attenuation_level,
     description,
     contributed_by,
-  } = randomBeer;
+  } = RandomBeer;
   
   return (
     <div>

@@ -1,14 +1,26 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import {getAllBeers} from '../services/calls'
 
-const Beers = ({ beerApi }) => {
+
+const Beers = () => {
+  const [Beers, setBeers] = useState([])
+
+  useEffect(() =>{
+    allTheBeers()
+  })
+
+  const allTheBeers = async() => {
+    const allBeers = await getAllBeers()
+    setBeers(allBeers)
+  }
+
   return (
     <>
       <Header />
       <h1>All Beers </h1>
-
-      {beerApi.map((beer) => (
+      {Beers.map((beer) => (
         <div key={beer._id}>
           <img src={beer.image_url}  width="125px" alt="" />
           <div>

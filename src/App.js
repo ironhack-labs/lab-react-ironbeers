@@ -6,6 +6,7 @@ import RandomBeer from './pages/RandomBeer'
 import NewBeer from './pages/NewBeer'
 import Axios from 'axios'
 import SingleBeer from './pages/SingleBeer'
+import ErrorPage from './pages/ErrorPage'
 
 
 function App() {
@@ -19,12 +20,14 @@ function App() {
   return (
     <div className="App">
       <Router>
+        {/* nav */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/beers' element={<Beers  beerApi={BeerApi} />} />
           <Route path='/beers/:id' element={<SingleBeer beerApi={BeerApi} />} />
           <Route path='/random-beer' element={<RandomBeer beerApi={BeerApi}  />} />
           <Route path='/new-beer' element={<NewBeer  />} />
+          <Route path='*' element={<ErrorPage/>} />
         </Routes>
       </Router>
     </div>
