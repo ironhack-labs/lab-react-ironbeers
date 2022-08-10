@@ -23,7 +23,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/beers' element={<Beers  beerApi={BeerApi} />} />
           <Route path='/beers/:id' element={<SingleBeer beerApi={BeerApi} />} />
-          <Route path='/random-beer' element={<RandomBeer  />} />
+          <Route path='/random-beer' element={<RandomBeer beerApi={BeerApi}  />} />
           <Route path='/new-beer' element={<NewBeer  />} />
         </Routes>
       </Router>
