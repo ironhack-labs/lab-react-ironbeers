@@ -20,16 +20,14 @@ export const getSingleBeer = async (id) => {
 
 export const getRandomBeer = async() => {
   try {
-    const res = await beersApi.get(`/random`,{
-      
-    })
+    const res = await beersApi.get(`/random`)
     return res.data
   } catch (error) {
     console.log(error)
   }
 };
 
-export const createNewBeer = ({
+export const createNewBeer = async({
   name,
   tagline,
   description,
@@ -37,9 +35,15 @@ export const createNewBeer = ({
   brewers_tips,
   attenuation_level,
   contributed_by,
-}) => {};
+}) => {
+  try {
+    const res = await beersApi.post(`/new`)
+    
+  } catch (error) {
+    console.log(error)
+  }
+};
 
-export const searchBeer = (query) =>{
 
-}
+export const searchBeer = (query) =>{}
 

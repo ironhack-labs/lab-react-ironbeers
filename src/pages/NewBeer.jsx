@@ -4,7 +4,7 @@ const NewBeer = () => {
   return (
     <>
       <Header />
-      <h1>New Beer</h1>
+      <h1>Add a beer</h1>
     </>
   );
 };
