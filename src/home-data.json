@@ -1,0 +1,21 @@
+[{
+    "id":"1",
+    "title":"All Beers",
+    "anchor":"/beers",
+    "cover":"/src/assets/beers.png",
+    "description":"Take a look at all the beers"
+},
+{
+    "id":"2",
+    "title":"Random Beer",
+    "anchor":"/random-beer",
+    "cover":"/src/assets/random-beer.png",
+    "description":"Take a look at a random beer"
+},
+{
+    "id":"3",
+    "title":"New Beer",
+    "anchor":"/new-beer",
+    "cover":"/src/assets/new-beer.png",
+    "description":"Submit your own beer"
+}]
