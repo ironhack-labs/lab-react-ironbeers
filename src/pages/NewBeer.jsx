@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import Input from "../components/Input";
 import { useState } from "react";
 import { createNewBeer } from "../services/calls";
-import { Children } from "react";
 
 const NewBeer = () => {
   const [Name, setName] = useState("");

@@ -10,12 +10,6 @@ import ErrorPage from './pages/ErrorPage'
 
 
 function App() {
-  const [BeerApi, setBeerApi] = useState([])
-
-  useEffect(() => {
-    Axios.get('https://ih-beers-api2.herokuapp.com/beers')
-      .then((res) => setBeerApi(res.data))
-  }, [])
 
   return (
     <div className="App">
@@ -23,9 +17,9 @@ function App() {
         {/* nav */}
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/beers' element={<Beers  beerApi={BeerApi} />} />
-          <Route path='/beers/:id' element={<SingleBeer beerApi={BeerApi} />} />
-          <Route path='/random-beer' element={<RandomBeer beerApi={BeerApi}  />} />
+          <Route path='/beers' element={<Beers />} />
+          <Route path='/beers/:id' element={<SingleBeer />} />
+          <Route path='/random-beer' element={<RandomBeer />} />
           <Route path='/new-beer' element={<NewBeer  />} />
           <Route path='*' element={<ErrorPage/>} />
         </Routes>

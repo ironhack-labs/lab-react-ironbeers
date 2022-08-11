@@ -1,8 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import Header from "../components/Header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {getSingleBeer} from '../services/calls'
-import { useEffect } from "react";
 
 const SingleBeer = () => {
   const [SingleBeer, setSingleBeer] = useState({})
