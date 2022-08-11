@@ -28,16 +28,25 @@ export const getRandomBeer = async() => {
 };
 
 export const createNewBeer = async({
-  name,
-  tagline,
-  description,
-  first_brewed,
-  brewers_tips,
-  attenuation_level,
-  contributed_by,
+  Name : name ,
+  Tagline : tagline,
+  Description : description ,
+  FirstBrewed : first_brewed ,
+  BrewersTips : brewers_tips ,
+  AttenuationLevel : attenuation_level ,
+  ContributedBy : contributed_by 
 }) => {
   try {
-    const res = await beersApi.post(`/new`)
+
+    const res = await beersApi.post(`/new`, {name,
+      tagline,
+      description ,
+      first_brewed ,
+      brewers_tips ,
+      attenuation_level ,
+      contributed_by ,})
+
+      return res.data
     
   } catch (error) {
     console.log(error)
