@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
+import img1 from '../assets/beers.png'
+import img2 from '../assets/new-beer.png'
+import img3 from '../assets/random-beer.png'
 
-function InicioBeers({ imag1, imag2, imag3 }) {
-  const CardBeer = { width: "800px", height: "500px", paddingTop: '0.75em' };
-
+function InicioBeers() {
+  const CardBeer = { width: "800px", height: "500px", paddingTop: '0.75em',paddingLeft:'280px' };
+ 
   return (
     <div style={CardBeer}>
       <section >
-        <Link to='/beer' > <img src={imag1} alt="imag1"></img></Link>
+        <Link to='/list-beer' > <img src={img1} alt="imag1"></img></Link>
         <h2>All Beers</h2>
         <p style={{textAlign:"justify"}} >
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -19,7 +22,7 @@ function InicioBeers({ imag1, imag2, imag3 }) {
       </section>
       <br/>
       <section>
-        <img src={imag2} alt="imag2"></img>
+        <img src={img2} alt="imag2"></img>
         <h2>New Beer</h2>
         <p style={{textAlign:"justify"}}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -32,7 +35,7 @@ function InicioBeers({ imag1, imag2, imag3 }) {
       </section>
       <br/>
       <section>
-        <img src={imag3} alt="imag3"></img>
+        <img src={img3} alt="imag3"></img>
         <h2>Random Beer</h2>
         <p style={{textAlign:"justify"}}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
