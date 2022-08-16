@@ -1,0 +1,1 @@
+export {default as InicioBeers} from './InicioBeers'

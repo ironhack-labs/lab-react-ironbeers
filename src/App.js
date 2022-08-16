@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {  InicioBeers } from './components';
+import img1 from "../src/assets/beers.png"
+import img2 from "../src/assets/new-beer.png"
+import img3 from "../src/assets/random-beer.png"
+import RootRouter from './RootRoutes';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <nav style={{backgroundColor: '#4AD0EE', height:'30px',paddingTop:'10px'}}>🏠</nav>
+      
+      <div style={{paddingLeft:'280px'}}>
+      <InicioBeers imag1={img1} imag2={img2} imag3={img3}/>
+      </div>
+    <RootRouter/>
+  
     </div>
   );
 }
