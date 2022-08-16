@@ -1,0 +1,42 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+export default function Beers() {
+  const [beers, setBeers] = useState();
+  const [loading, setLoading] = useState(true);
+
+  const baseURL = "https://ih-beers-api2.herokuapp.com/beers";
+  useEffect(() => {
+    axios
+      .get(baseURL)
+      .then((response) => {
+        setBeers(() => response.data);
+        console.log(beers)
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  return loading ? (
+    <p>Estoy cargando, porfa espera! </p>
+  ) : (
+    <div>
+      <h1>List of beers</h1>
+      {beers.map((beer) => {
+        return (
+          <div key={beer._id} style={{display:"flex",alignItems: "center",marginTop:"20px", borderBottom:"1px solid"}} >
+<div>
+          <img src={beer.image_url} style={{width:'100px',height:'auto'}} alt="beer"/></div>
+          <div style={{marginLeft:'50px'}}>      
+            <h3>{beer.name}</h3>
+            <h5>{beer.tagline}</h5>
+            <p><b>Created by:</b> {beer.contributed_by}</p>
+</div>   
+
+          </div>
+        );
+      })}
+    </div>
+  );
+}
