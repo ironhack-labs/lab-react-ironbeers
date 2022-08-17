@@ -1,23 +1,24 @@
+//https://ih-beers-api2.herokuapp.com/beers/random
+
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 
-export default function BeerId() {
-  const params = useParams();
-  console.log(params);
+export default function RandomBeer() {
 
-  const [beerId, setBeerId] = useState();
+
+
+  const [randomBeer, setrandomBeer] = useState();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers/${params.id}`)
+      .get("https://ih-beers-api2.herokuapp.com/beers/random")
       .then((response) => {
-        setBeerId(() => response.data);
+        setrandomBeer(() => response.data);
         setLoading(false);
       })
       .catch((error) => console.log(error));
-  }, [params.id]); // qué significa esto?
+  }, []); 
 
   return loading ? (
     <p>Me estoy cargando. dame un momento</p>
@@ -26,31 +27,31 @@ export default function BeerId() {
     
       {" "}
       <img
-        src={beerId.image_url}
+        src={randomBeer.image_url}
         style={{ width: "100px", height: "auto" }}
-        alt="beerId"
+        alt="RandomBeer"
       />
 
       <div style={{
         display:"flex",
       justifyContent:"center",
       alignItems: "center"}}>
-        <h3>{beerId.name}</h3>
-        <p>{beerId.attenuation_level}</p>
+        <h3>{randomBeer.name}</h3>
+        <p>{randomBeer.attenuation_level}</p>
         </div>
 
 <div style={{
  display:"flex",
 justifyContent:"center",
       alignItems: "center"}}>
-      <h5>{beerId.tagline}</h5>
-      <p>{beerId.first_brewed}</p>
+      <h5>{randomBeer.tagline}</h5>
+      <p>{randomBeer.first_brewed}</p>
 </div>
 
-      <p>{beerId.description}</p>
+      <p>{randomBeer.description}</p>
 
       <p>
-        <b>Created by:</b> {beerId.contributed_by}
+        <b>Created by:</b> {randomBeer.contributed_by}
       </p>
 
     </div>
