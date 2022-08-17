@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { useState, useEffect } from "react";
+import NavBar from "../components/navBar";
 
 export default function RandomBeer() {
 
@@ -23,9 +24,10 @@ export default function RandomBeer() {
   return loading ? (
     <p>Me estoy cargando. dame un momento</p>
   ) : (
+<div> <NavBar/>
+
     <div style={{display:"flex", flexDirection:"column",alignItems: "center"}}>
     
-      {" "}
       <img
         src={randomBeer.image_url}
         style={{ width: "100px", height: "auto" }}
@@ -54,6 +56,7 @@ justifyContent:"center",
         <b>Created by:</b> {randomBeer.contributed_by}
       </p>
 
+    </div>
     </div>
   );
 }

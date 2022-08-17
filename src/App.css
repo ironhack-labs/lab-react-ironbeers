@@ -52,6 +52,12 @@
   text-align: left;
 }
 
+#description {
+    font-weight: bold;
+    text-align: left;
+  height: 200px;
+}
+
 .form input{
   border-radius:10px;
   border-color: #282c34;
@@ -70,7 +76,7 @@
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-  font-size: 13px;
+  font-size: 25px;
   font-weight: 400;
   line-height: 1.15385;
   

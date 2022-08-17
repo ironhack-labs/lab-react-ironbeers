@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import NavBar from "../components/navBar";
 
 export default function BeerId() {
   const params = useParams();
@@ -24,6 +25,8 @@ export default function BeerId() {
   ) : (
     <div style={{display:"flex", flexDirection:"column",alignItems: "center"}}>
     
+    <NavBar/>
+
       {" "}
       <img
         src={beerId.image_url}

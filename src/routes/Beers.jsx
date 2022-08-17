@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import {Link} from 'react-router-dom'
+import NavBar from "../components/navBar";
 
 
 export default function Beers() {
@@ -24,6 +25,7 @@ export default function Beers() {
     <p>Estoy cargando, porfa espera! </p>
   ) : (
     <div>
+    <NavBar/>
       <h1 style={{textAlign: 'center',
       marginTop:'40px',
       marginBottom:'40px'}}>List of beers</h1>

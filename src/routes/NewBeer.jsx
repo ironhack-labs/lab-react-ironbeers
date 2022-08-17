@@ -1,6 +1,7 @@
 import {createContact} from '../services/createBeer'
 import { useState } from 'react';
 import "../App.css";
+import NavBar from '../components/navBar';
 
 export default function NewBeer(){
 
@@ -21,6 +22,7 @@ setbeerInfo(
     return (
 
         <div>
+        <NavBar/>
 
 <h1 style={{textAlign: 'center',
       marginTop:'40px',
@@ -34,8 +36,8 @@ setbeerInfo(
         <label>Beer's tagline</label>
         <input name="tagline" type="text" onChange= {handleChange} />
         
-        <label>Beer's description</label>
-        <input name="description" type="text" onChange= {handleChange} />
+        <label >Beer's description</label>
+        <input id='description' name="description" type="text" onChange= {handleChange} />
 
         <label>Beer's first brewed</label>
         <input name="first_brewed" type="text" onChange= {handleChange} />
