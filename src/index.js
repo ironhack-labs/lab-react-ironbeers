@@ -6,6 +6,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Beers from "./routes/Beers";
 import BeerId from './routes/BeerId';
 import RandomBeer from './routes/RandomBeer';
+import NewBeer from './routes/NewBeer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,7 +19,7 @@ root.render(
     <Route path="/beers" element={<Beers />} />
     <Route path="/beers/:id" element={<BeerId/>}/>
  <Route path="/random-beer" element={<RandomBeer />} />
-    {/* <Route path="new-beer" element={<Invoices />} /> */}
+ <Route path="new-beer" element={<NewBeer />} />
  
   </Routes>
 </BrowserRouter>
