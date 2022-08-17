@@ -1,0 +1,1 @@
+export {defaul as SingleBeer} from './SingleBeer'
