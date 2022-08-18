@@ -58,7 +58,3 @@ setbeerInfo(
 }
 
 
-/* 
- do a POST request to https://ih-beers-api2.herokuapp.com/beers/new, passing 
- all the data on the body object. If everything went ok, you would receive a 200 response
-  from the server. */

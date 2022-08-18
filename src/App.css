@@ -92,4 +92,19 @@
   white-space: nowrap;
 }
 
+.beerFilter{
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.beerFilter > input{
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+
+  
+}
 
