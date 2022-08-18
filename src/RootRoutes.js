@@ -3,7 +3,7 @@ import { InicioBeers } from './components';
 
 import AllBeers from './components/AllBeerss/All';
 import SingleBeer from './components/SingleBeer/SingleBeer';
-
+import { RandomBeer } from './components/RandomBeer';
 
 function RootRouter(){
     return(
@@ -11,6 +11,8 @@ function RootRouter(){
             <Route path='/'  element={<InicioBeers/>} />
             <Route path='/list-beer' element={<AllBeers/>}/>
             <Route path='/:_id' element={<SingleBeer/>} />
+            <Route path='/random' element={<RandomBeer/>}/>
+            <Route path='/new' element={<RandomBeer/>}/>
         </Routes>
     )
 }

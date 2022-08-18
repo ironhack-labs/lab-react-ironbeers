@@ -1,30 +1,27 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+
 import api from './axios'
 
-
-function SingleBeer (){
-
-    const params = useParams()
-
+function RandomBeer(){
     const [beerData,setBeerData] = useState({})
     const [loading,setLoading] = useState(true)
 
 
     useEffect(()=>{
-        api.get(`/beers/${params._id}`)
+        api.get(`/beers/random`)
         .then(res=>{
             console.log("el data",res.data)
             setBeerData(res.data)
             setLoading(false)
         })
         .catch(error=>console.log("el error es",error))
-    },[params.id])
+    },[])
 
   
 
     return(
        
+        
         <div>
             <img src={beerData.image_url}  alt="detailBeer"  width={'110px'} height={'210px'}></img>
             <p>{beerData.name}</p>
@@ -37,5 +34,6 @@ function SingleBeer (){
 
     )
 }
+  
 
-export default SingleBeer;
+export default RandomBeer;

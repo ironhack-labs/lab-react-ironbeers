@@ -22,7 +22,7 @@ function InicioBeers() {
       </section>
       <br/>
       <section>
-        <img src={img2} alt="imag2"></img>
+        <Link to='/new'><img src={img2} alt="imag2"></img></Link>
         <h2>New Beer</h2>
         <p style={{textAlign:"justify"}}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -35,7 +35,7 @@ function InicioBeers() {
       </section>
       <br/>
       <section>
-        <img src={img3} alt="imag3"></img>
+      <Link to='/random'><img src={img3} alt="imag3"></img></Link>
         <h2>Random Beer</h2>
         <p style={{textAlign:"justify"}}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
