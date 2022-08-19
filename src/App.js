@@ -1,21 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import beer from '/assets/beers';
+import RandomBeers from '/assets/RandomBeers';
+import newBeers from '/assets/RandomBeers';
+
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={'/assets/beers'} className="beers-logo" alt="beers" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="listBeers"
+          href="/components/ListBeers"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          All Beers
+        </a>
+        <img src={'/assets/random-beer'} className="randomBeer" alt="random-beers" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="randomBeers"
+          href="/components/RandomBeers"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Random Beers
+        </a>
+        <img src={'/assets/new-beer'} className="newBeer" alt="new-beers" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="/components/SingleBeers"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+         New Beers
         </a>
       </header>
     </div>
