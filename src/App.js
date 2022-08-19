@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import BeerList from './components/pages/BeerList';
 import BeerDetail from './components/pages/BeerDetail';
 import RandomBeer from './components/pages/RandomBeer';
+import CreateBeer from './components/pages/CreateBeer';
 
 function App() {
   return (
