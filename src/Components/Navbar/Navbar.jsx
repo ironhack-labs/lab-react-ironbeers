@@ -20,17 +20,17 @@ function Navbar() {
           <ul className="menu menu-horizontal p-0">
             <li>
               <Link to={"/Beers"}>
-                {" "}
-                <p>Beers</p>{" "}
+                <p>Beers</p>
               </Link>
             </li>
 
             <li>
               <p>Random Beers</p>
             </li>
-
             <li>
-              <p>New Beers</p>
+            <Link to={"/NewBeer"}>
+                <p>Add New Beer</p>
+              </Link>
             </li>
           </ul>
         </div>

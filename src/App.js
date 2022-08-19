@@ -3,15 +3,14 @@ import Navbar from "./Components/Navbar/Navbar";
 import "./App.css";
 import Beers from "./pages/Beers";
 import { Routes, Route } from "react-router-dom";
-import {useState, useEffect} from 'react'
-import Homepage from './pages/Homepage.jsx'
+import { useState, useEffect } from "react";
+import Homepage from "./pages/Homepage.jsx";
+import NewBeer from "./pages/NewBeer.jsx"
 import axios from "axios";
-
 
 const beerLink = "https://ih-beers-api2.herokuapp.com/beers";
 
 function App() {
-
   const [beers, setBeers] = useState([]);
 
   const getBeers = async () => {
@@ -25,10 +24,11 @@ function App() {
 
   return (
     <div className="App ">
-    <Navbar/>
+      <Navbar />
       <Routes>
-        <Route path={'/'} element={<Homepage/>}/>
-        <Route path="/Beers" element={<Beers beers={beers} />}/>
+        <Route path={"/"} element={<Homepage />} />
+        <Route path="/Beers" element={<Beers beers={beers} />} />
+        <Route path='/NewBeer' element={<NewBeer/>}/>
       </Routes>
     </div>
   );
