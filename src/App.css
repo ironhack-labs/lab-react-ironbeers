@@ -82,3 +82,9 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+.form-beer {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
