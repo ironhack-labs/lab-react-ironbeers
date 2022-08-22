@@ -4,9 +4,8 @@ import newBeer from '../assets/new-beer.png';
 import randomBeer from '../assets/random-beer.png';
 
 
-function HomePage(props) {
- const {data} = props;
-
+function HomePage() {
+ 
   return (
 
     <div className='cards-div'>

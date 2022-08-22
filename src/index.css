@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar {
+  background-color: blueviolet;
+}
+
+.home-navbar {
+width: 5vw;
+filter:invert(100%)
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 20px;
+}
