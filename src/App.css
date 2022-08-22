@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.links {
+  color: white;
+  text-decoration: none;
+}
+
+.card {
+  border: 1px black solid;
+  border-radius: 20px;
+  width: 40vw;
+  height: 35vw;
+  margin-left: 25vw;
+  background-color: grey;
+  color: white;
+  font-size: 16px;
+
+
+}
+
+.images {
+ width: 40vw;
+ height: 60px;
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+}
+
+.cards-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
