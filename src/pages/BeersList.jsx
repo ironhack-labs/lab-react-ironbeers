@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-function BeerList() {
+function BeersList() {
   const [beers, setBeers] = useState([]);
 
   const getBeers = async () => {
@@ -11,7 +11,6 @@ function BeerList() {
         "https://ih-beers-api2.herokuapp.com/beers"
       );
       console.log(response.data);
-
       setBeers(response.data);
     } catch (error) {
       console.log(error);
@@ -21,6 +20,7 @@ function BeerList() {
   useEffect(() => {
     getBeers();
   }, []);
+
   return (
     <div>
       {beers.map((beer) => {
@@ -47,4 +47,4 @@ function BeerList() {
   );
 }
 
-export default BeerList;
+export default BeersList;

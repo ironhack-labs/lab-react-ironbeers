@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import beers from "../assets/beers.png";
 import newBeer from "../assets/new-beer.png";
 import randomBeer from "../assets/random-beer.png";
-import BeerList from "./BeersList";
 
 function Home() {
   return (
@@ -18,7 +17,7 @@ function Home() {
         </p>
       </Link>
 
-      <Link to={"/randomBeers"}>
+      <Link to={"/randomBeer"}>
         <img src={randomBeer} alt="random beer" />
         <h2>Random Beer</h2>
         <p>

@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import homeSymbol from "../assets/home.png";
 
 function Navbar() {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-primary bg-primary">
-        <img src={homeSymbol} alt="home page" />
-      </nav>
-    </div>
+    <nav className="navbar navbar-expand-lg navbar-primary bg-primary">
+      <Link to="/">
+        <button>Home</button>
+      </Link>
+    </nav>
   );
 }
 
