@@ -25,10 +25,13 @@ function Navbar() {
             </li>
 
             <li>
-              <p>Random Beers</p>
+              <Link to={"/RandomBeer"}>
+                <p>Random Beers</p>
+              </Link>
             </li>
+
             <li>
-            <Link to={"/NewBeer"}>
+              <Link to={"/NewBeer"}>
                 <p>Add New Beer</p>
               </Link>
             </li>
