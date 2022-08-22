@@ -20,8 +20,6 @@ function Beers() {
         getBeers();
     },[])
 
-
-
   return (
 
 
