@@ -1,31 +1,40 @@
 import axios from "axios";
-import React from "react";
 
 import { useState } from "react";
 
-const beerLink = "https://ih-beers-api2.herokuapp.com/beers";
+const beerLink = "https://ih-beers-api2.herokuapp.com/beers/new";
 
 function NewBeer() {
-  const [newBeer, setNewBeer] = useState("");
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [image_url, setImage_url] = useState("");
+  const [tagline, setTagline] = useState("");
 
- /*  const body = {
-    name,
-    image,
-    description,
-    tagline,
-    first_brewed,
-    contributedby,
-    attenuationlevel,
-  }; */
+  const handleName = (e) => setName(e.target.value);
+  const handleDescription = (e) => setDescription(e.target.value);
+  const handleImage = (e) => setImage_url(e.target.value);
+  const handleTagline = (e) => setTagline(e.target.value);
 
-  const createNewBeer = async () => {
-    try {
-      const response = await axios.post(beerLink);
-    } catch (error) {}
-  };
-
+  //This handles the submit of the whole form
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const NewBeer = { name, image_url, tagline, description };
+    console.log(NewBeer);
+
+    const createBeer = async () => {
+      try {
+        const response = await axios.post(beerLink, NewBeer);
+        console.log(response);
+        setName("");
+        setDescription("");
+        setTagline("");
+        setImage_url("");
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    createBeer();
   };
 
   return (
@@ -33,61 +42,43 @@ function NewBeer() {
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <div className="card-actions justify-center">
-            <form actionFor="" onSubmit={handleSubmit}>
-              <label htmlFor="">Name</label>
-              <input
-                type="text"
-                className="input input-bordered w-full max-w-xs"
-              />
+            <div>
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={handleName}
+                />
 
-              <label className="text-center" htmlFor="description">
-                Description
-              </label>
-              <input
-                type="text"
-                className="input input-bordered w-full max-w-xs"
-              />
-              <label className="text-center" htmlFor="image">
-                Image
-              </label>
-              <input
-                type="text"
-                className="input input-bordered w-full max-w-xs"
-              />
-              <label className="text-center" htmlFor="tagline">
-                Tagline
-              </label>
-              <input
-                type="text"
-                className="input input-bordered w-full max-w-xs"
-              />
+                <label htmlFor="description">Description</label>
+                <input
+                  type="text"
+                  name="description"
+                  value={description}
+                  onChange={handleDescription}
+                />
 
-              <label className="text-center" htmlFor="first_brewed">
-                first brewed
-              </label>
-              <input
-                type="text"
-                className="input input-bordered w-full max-w-xs"
-              />
+                <label htmlFor="image_url">Image</label>
+                <input
+                  type="url"
+                  name="image_url"
+                  value={image_url}
+                  onChange={handleImage}
+                />
 
-              <label className="text-center" htmlFor="attenuationlevel">
-                Attenuation Level
-              </label>
-              <input
-                type="number"
-                className="input input-bordered w-full max-w-xs"
-              />
+                <label htmlFor="tagline">Tagline</label>
+                <input
+                  type="text"
+                  name="tagline"
+                  checked={tagline}
+                  onChange={handleTagline}
+                />
 
-              <label className="text-center" htmlFor="contributedby">
-                Contributed by{" "}
-              </label>
-              <input
-                type="text"
-                className="input input-bordered w-full max-w-xs"
-              />
-
-              <button type="submit"> Send new beer</button>
-            </form>
+                <button type="submit">Add beer</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
