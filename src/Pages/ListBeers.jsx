@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function ListBeers() {
@@ -22,6 +23,12 @@ function ListBeers() {
 
   return (
     <div>
+      <Link to={`/beers/random`}>
+        <button className="btn">Random Beer!</button>
+      </Link>
+      <Link to={`/beers/addbeer`}>
+        <button className="btn">Add Beer!</button>
+      </Link>
       <h1 className="text-3xl font-sans">List of beers</h1>
       {beers.map((beer) => {
         return (
@@ -32,6 +39,9 @@ function ListBeers() {
             <h3>{beer.name}</h3>
             <p>{beer.tagline}</p>
             <p>Created by: {beer.contributed_by}</p>
+            <Link to={`/beers/${beer._id}`}>
+              <button className="btn">Beer details</button>
+            </Link>
           </div>
         );
       })}

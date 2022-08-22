@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-function RandomBeer() {
+function BeerDetails() {
   const [beer, setBeer] = useState(null);
+
+  const { id } = useParams();
 
   const getBeer = async () => {
     try {
       let response = await axios.get(
-        `https://ih-beers-api2.herokuapp.com/beers/random`
+        `https://ih-beers-api2.herokuapp.com/beers/${id}`
       );
       setBeer(response.data);
       console.log(response.data);
@@ -44,4 +47,4 @@ function RandomBeer() {
   );
 }
 
-export default RandomBeer;
+export default BeerDetails;
