@@ -7,7 +7,104 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  font-family: 'Helvetica Neue';
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+}
+
+.header {
+  background: #3cc3fc;
+  color: white;
+  padding: 10px;
+  box-shadow: 0px 1px 2px gray;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.header img {
+  width: 50px;
+  height: auto;
+}
+
+button,
+select {
+  padding: 5px 10px;
+  min-width: 50px;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.list {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  width: 400px;
+  padding: 0x;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  background: white;
+  border: 1px solid darkgray;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.logo,
+img {
+  width: 400px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.AddNewBeerPage {
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.AddNewBeerPage {
+  background: #afd7fb;
+}
+
+.AddNewBeerPage label {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.AddNewBeerPage input {
+  padding: 10px;
+  display: inline-block;
+  margin: 2px 0 10px;
+}
+
+.AddNewBeerPage input[type='number'] {
+  padding: 10px;
+  display: inline-block;
+  margin: 2px 0 10px;
+  text-align: center;
+}
+
+.AddNewBeerPage button[type='submit'] {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 3px;
 }
