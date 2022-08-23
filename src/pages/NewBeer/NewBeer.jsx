@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function NewBeer({getBeers}) {
 
@@ -39,6 +40,7 @@ function NewBeer({getBeers}) {
     }
   return (
     <div>
+        <Link to='/'><img src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png" alt="Home" /></Link>
         <h3>Add Beer</h3>
 
 <form onSubmit={handleSubmit}>

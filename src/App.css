@@ -39,3 +39,14 @@
 .beer-img {
   width: 100px;
 }
+body {
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: nowrap
+}
+
+.randomBeer {
+  margin-top: 5vh;
+}
