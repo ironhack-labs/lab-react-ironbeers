@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Header {
+  width: 100vw;
+}
+
+.NewBeer {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: auto;
+  margin-left: 35vw;
+  border: 2px solid black;
+  color: red;
+  background-color: yellow;
+
+}
