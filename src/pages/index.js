@@ -1,0 +1,5 @@
+export * from "./Home"
+export * from "./Beers"
+export * from "./RandomBeer"
+export * from "./NewBeer"
+export * from "./PageNotFound"
