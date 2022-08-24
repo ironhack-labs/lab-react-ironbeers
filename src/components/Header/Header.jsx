@@ -5,13 +5,7 @@ function Header() {
     return(
         <header className="header-container">
             <nav className="home-logo">
-                <ul>
-                    <li><Link to="/">🏠 </Link></li>
-                    <li><Link to="/beers">Beers </Link></li>
-                    <li> <Link to="/random-beer">Random Beers </Link></li>
-                    <li><Link to="/new-beer">New Beer </Link></li>
-                </ul>
-
+                  <Link to="/">🏠 </Link>
                 </nav>
             </header>
     );

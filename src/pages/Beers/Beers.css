@@ -28,3 +28,22 @@ height: 20em;
   margin-left:auto;
   margin-right:auto;
 }
+
+.beers-input {
+  display: flex;
+  flex-direction: column;
+  background-color: #E3CBAE;
+  padding: 10px;
+}
+
+.beers-input label {
+  padding: 5px;
+}
+
+.beers-input input {
+  width: 100%;
+}
+
+.beers-input button {
+  padding: 10px 0px;
+}
