@@ -1,3 +1,4 @@
+/* multiple beers */
 .beer {
  display: flex;
 border-bottom: 1px solid black;
@@ -11,4 +12,19 @@ padding-top: 2em;
 
 .beer-data{
 padding: 0em 2em;
+}
+/* single beer display */
+.beer-display {
+display: flex;
+flex-direction: column;
+border-bottom: 1px solid black;
+padding-top: 2em;
+margin: 0% 10%;
+}
+.beer-display img{
+width: 8em;
+height: 20em;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }

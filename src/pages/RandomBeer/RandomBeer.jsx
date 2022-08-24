@@ -21,14 +21,16 @@ const RandomBeer = () => {
 
   return (
     <div>
-    <h1>Random Beer</h1>
       {randomBeers.length === 0 && <p>🍻Loading...</p>}
-            <div className="beer">
+            <div className="beer-display">
               <img src={randomBeers.image_url}  alt={randomBeers.name} />
-                <div className='beer-data'>
-                  <h4>{randomBeers.name}</h4>
+                <div className='beer-display-data'>
+                  <h2>{randomBeers.name}</h2>
                   <h5>{randomBeers.tagline}</h5>
-                  <h6>Created by: {randomBeers.contributed_by}</h6>           
+                  <p>{randomBeers.ibu?<b>IBU: {randomBeers.ibu}</b>:null}</p>
+                  <p><b>First brewed: </b>{randomBeers.first_brewed}</p>
+                  <p>{randomBeers.description}</p>
+                  <h6>Created by: {randomBeers.contributed_by}</h6>
                 </div>
             </div>
     </div>
