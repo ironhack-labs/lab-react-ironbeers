@@ -13,3 +13,10 @@ div {
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
 }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}

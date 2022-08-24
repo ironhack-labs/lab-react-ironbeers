@@ -1,0 +1,14 @@
+.beer {
+ display: flex;
+border-bottom: 1px solid black;
+padding-top: 2em;
+}
+
+.beer img {
+        width: 35px;
+        height: 120px;
+}
+
+.beer-data{
+padding: 0em 2em;
+}

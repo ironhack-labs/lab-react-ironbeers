@@ -1,7 +1,45 @@
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import "./Beers.css"
+
 const Beers = () => {
+
+  const [ beers, setBeers ] = useState([])
+
+  useEffect(()=>{
+
+    const getBeers = async ()=>{
+
+      const url = 'https://ih-beers-api2.herokuapp.com';
+      const result = await axios.get(url + '/beers');
+      // console.log(result.data)
+
+      setBeers(result.data)
+    }
+    getBeers()
+  },[])
+
+
   return (
-    <h1>Beers</h1>
-  )
+    <div>
+      {beers.length === 0 && <p>🍻Loading...</p>}
+      {
+        beers.map((beer, i)=>{
+          return(
+            <div className="beer" key={i}>
+              <img src={beer.image_url}  alt={beer.name} />
+                <div className='beer-data'>
+                  <h4>{beer.name}</h4>
+                  <h5>{beer.tagline}</h5>
+                  <h6>Created by: {beer.contributed_by}</h6>           
+                </div>
+            </div>
+          )
+        })
+      }
+
+    </div>
+  );
 }
 
 export default Beers

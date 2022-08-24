@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Home.css"
 import allBeersCover from "../../assets/beers.png";
 import randomBeerCover from "../../assets/random-beer.png";
 import newBeerCover from "../../assets/new-beer.png";
@@ -27,9 +28,8 @@ const Home = ( ) => {
                     <img 
                     src={allBeersCover} 
                     alt={allBeersData.title} 
-                    style={{ width: 100, height: 100 }}
                     />
-                    <Link to={allBeersData.anchor}>
+                    <Link to={allBeersData.anchor} className="link">
                     <h2>{allBeersData.title}</h2>
                     <p>{allBeersData.description}</p>
                 </Link>
@@ -39,9 +39,8 @@ const Home = ( ) => {
                     <img 
                     src={randomBeerCover} 
                     alt={randomBeerData.title} 
-                    style={{ width: 100, height: 100 }}
                     />
-                    <Link to={randomBeerData.anchor}>
+                    <Link to={randomBeerData.anchor} className="link">
                     <h2>{randomBeerData.title}</h2>
                     <p>{randomBeerData.description}</p>
                 </Link>
@@ -51,9 +50,8 @@ const Home = ( ) => {
                     <img 
                     src={newBeerCover} 
                     alt={newBeerData.title} 
-                    style={{ width: 100, height: 100 }}
                     />
-                    <Link to={newBeerData.anchor}>
+                    <Link to={newBeerData.anchor} className="link">
                     <h2>{newBeerData.title}</h2>
                     <p>{newBeerData.description}</p>
                 </Link>
