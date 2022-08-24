@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import "./Beers.css"
 
@@ -27,12 +28,15 @@ const Beers = () => {
         beers.map((beer, i)=>{
           return(
             <div className="beer" key={i}>
+              <Link to={`/beers/${beer._id}`}>
               <img src={beer.image_url}  alt={beer.name} />
                 <div className='beer-data'>
                   <h4>{beer.name}</h4>
                   <h5>{beer.tagline}</h5>
-                  <h6>Created by: {beer.contributed_by}</h6>           
+                  <h6>Created by: {beer.contributed_by}</h6>    
+                         
                 </div>
+                </Link>
             </div>
           )
         })

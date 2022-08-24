@@ -27,10 +27,10 @@ const RandomBeer = () => {
                 <div className='beer-display-data'>
                   <h2>{randomBeers.name}</h2>
                   <h5>{randomBeers.tagline}</h5>
-                  <p>{randomBeers.ibu?<b>IBU: {randomBeers.ibu}</b>:null}</p>
+                  <p>{randomBeers.attenuation_level?<b>Attenuation level: {randomBeers.attenuation_level}</b>:null}</p>
                   <p><b>First brewed: </b>{randomBeers.first_brewed}</p>
                   <p>{randomBeers.description}</p>
-                  <h6>Created by: {randomBeers.contributed_by}</h6>
+                  <h5>Created by: {randomBeers.contributed_by}</h5>
                 </div>
             </div>
     </div>
