@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 
 const BeerCard = ({ beer }) => {
+  //   console.log("key", key);
   return (
-    <Link to={beer._id}>
+    <Link to={`/single-beer/${beer._id}`}>
+      {/* // <Link to="/single-beer" id={beer.key}> */}
       <div className="beer-card">
         <img src={beer.image_url} alt={beer.name} />
         <div className="beer-info">
