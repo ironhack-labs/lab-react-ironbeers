@@ -6,6 +6,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
 import NewBeer from "./pages/NewBeer";
 import SingleBeer from "./pages/SingleBeer";
+import RandomBeer from "./pages/RandomBeer";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -13,6 +14,7 @@ let beersData = [];
 
 function App() {
   const [beers, setBeers] = useState([]);
+
   useEffect(() => {
     axios.get("https://ih-beers-api2.herokuapp.com/beers").then((result) => {
       setBeers(result.data);
@@ -27,7 +29,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/beers" element={<BeersList beers={beers} />} />
 
-        <Route path="/random-beer" element={<SingleBeer />} />
+        <Route path="/random-beer" element={<RandomBeer />} />
 
         <Route
           path="/single-beer/:beerId"
