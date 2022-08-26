@@ -9,6 +9,10 @@
   /* font-size: 2rem; */
 }
 
+a {
+  color: black;
+}
+
 a:visited {
   color: black;
 }
@@ -36,4 +40,66 @@ p {
 
 .home-page-card p {
   color: rgb(63, 63, 63);
+}
+
+.navbar {
+  background-color: rgb(56, 188, 248);
+  text-align: center;
+  color: white;
+  font-size: 6rem;
+  height: 8rem;
+  display: flex;
+  /* padding: 2rem 0; */
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 2 0;
+}
+
+.navbar svg {
+  color: white;
+  /* padding: 2rem 0; */
+}
+
+.beer-card {
+  border-bottom: 1px solid rgb(167, 167, 167);
+  height: 15rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.beer-card img {
+  width: 3.5rem;
+  height: auto;
+  object-fit: contain;
+  /* padding: 1rem; */
+}
+
+.beer-info {
+  /* width: 5rem; */
+  height: auto;
+  object-fit: contain;
+  padding: 1rem;
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.beer-info h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.beer-info p {
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+}
+
+.beer-info p:first-of-type {
+  font-size: 1.8rem;
+  color: darkgrey;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  font-weight: normal;
 }
