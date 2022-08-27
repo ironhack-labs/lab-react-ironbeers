@@ -1,0 +1,15 @@
+@media (min-width: 350px) and (max-width: 992px) {
+    .beerslist li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.beerimg {
+    padding: 0%;
+    margin: 0%;
+}
+}

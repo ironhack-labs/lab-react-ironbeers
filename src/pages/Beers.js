@@ -1,8 +1,16 @@
+import BeerCard from "../components/BeerCard";
 import Navbar from "../components/Navbar";
 
+import './Beers.css'
+
 function Beers() {
+
     return (
-        <Navbar />
+        <div>
+            <Navbar />
+            <BeerCard />
+        
+        </div>
     )
 }
 export default Beers;

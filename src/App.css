@@ -27,11 +27,11 @@
   nav {
     background-color: #38c3f8;
     width: 100%;
-    height: 50px; 
+    height: 50%;
   }
 
   nav img {
-    width: 30px;
+    width: 8%;
     margin-top: 6px;
   }
 }
