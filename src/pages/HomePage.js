@@ -10,9 +10,9 @@ function HomePage () {
         <div className="homepage">
         <Link to='./beers'>
             <img src={beers} alt="beers"/>
-        </Link>
             <h1>All Beers</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a finibus diam. Donec consequat, mi sed venenatis ultricies, urna erat luctus orci, eget blandit elit elit vel metus.</p>
+        </Link>
 
         <Link to='./random-beer'>
             <img src={randomBeer} alt="random-beers"/>

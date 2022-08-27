@@ -1,4 +1,4 @@
-@media (min-width: 350) and (max-width: 992) {
+@media (min-width: 350px) and (max-width: 992px) {
   .App {
     text-align: center;
   }
@@ -12,6 +12,16 @@
   }
 
   .homepage h1 {
-    margin: 0%;
+    margin: 0;
+    font-weight: lighter;
+  }
+
+  .homepage p {
+    margin: 0;
+  }
+
+  .homepage a {
+    text-decoration: none;
+    color: black;
   }
 }
