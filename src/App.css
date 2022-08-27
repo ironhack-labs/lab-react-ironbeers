@@ -20,4 +20,15 @@
     text-decoration: none;
     color: black;
   }
+
+  nav {
+    background-color: #5f84ce;
+    width: 100%;
+    height: 10%;
+    margin: 5px;
+  }
+
+  nav img {
+    width: 100px;
+  }
 }
