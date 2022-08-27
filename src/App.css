@@ -24,4 +24,14 @@
     text-decoration: none;
     color: black;
   }
+  nav {
+    background-color: #38c3f8;
+    width: 100%;
+    height: 50px; 
+  }
+
+  nav img {
+    width: 30px;
+    margin-top: 6px;
+  }
 }
