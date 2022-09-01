@@ -1,7 +1,11 @@
+import Navbar from "../components/Navbar"
 
 const RandomBeer = () => {
   return (
-    <div>RandomBeer</div>
+    <div>
+        <Navbar />
+        RandomBeer
+        </div>
   )
 }
 

@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-page">
       <Link to="/AllBeers">
-      <div className="home">
+      <div className="home-page-card">
         <img className="beer1" src={beer1} alt="Pub and beers"></img>
         
         <h2>All Beers</h2>
@@ -22,9 +22,9 @@ const Home = () => {
       </div>
       </Link>
       <Link to="/RandomBeer">
-      <div>
+      <div className="home-page-card">
         <img className="beer2" src={beer2} alt="Pub and beers"></img>
-        <h1 >Random Beer</h1>
+        <h2 >Random Beer</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           magni, corrupti odit eos quibusdam laboriosam eius fuga! Alias,
@@ -34,9 +34,9 @@ const Home = () => {
       </div>
       </Link>
       <Link to="/NewBeer">
-      <div>
+      <div className="home-page-card">
         <img className="beer3" src={beer3} alt="Pub and beers"></img>
-        <h1>New Beer</h1>
+        <h2>New Beer</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           magni, corrupti odit eos quibusdam laboriosam eius fuga! Alias,

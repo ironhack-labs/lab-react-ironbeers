@@ -1,7 +1,11 @@
+import Navbar from "../components/Navbar"
 
 const NewBeer = () => {
   return (
-    <div>NewBeer</div>
+    <div>
+        <Navbar />
+        NewBeer
+        </div>
   )
 }
 
