@@ -1,11 +1,14 @@
 import Navbar from "../components/Navbar"
+import BeerCard from "../components/BeerCard"
 
-const allBeers = () => {
+const allBeers = ({beers}) => {
   return (
 
     <div>
       <Navbar />
-      allBeers
+      {beers.map((beer) => (
+        <BeerCard beer={beer} key={beer._id} />
+      ) )}
       </div>
   )
 }
