@@ -1,0 +1,20 @@
+.container img {
+    width : 100px;
+    /* height: 200px;   */
+}
+
+.container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.container p {
+    width: 200px;
+    /* text-align: center; */
+ }
+
+ body {
+    margin: 0
+ }
