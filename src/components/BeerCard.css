@@ -1,0 +1,15 @@
+@media (min-width: 350px) and (max-width: 992px) {
+    .beer-card {
+        display: flex;
+        flex-direction: column;
+        display: flex;
+	    flex-wrap: nowrap;
+	    justify-content: flex-start;
+	    align-items: flex-start;
+	    align-content: stretch;
+    }
+
+    .beer-datas {
+        text-align: left;
+    }
+}
