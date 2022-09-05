@@ -12,7 +12,6 @@ export const BeerList = ({data, setData}) => {
         console.log(data)
 
         if(search.length === 0) {
-            console.log('HEY')
             setData(data)
         }
 
