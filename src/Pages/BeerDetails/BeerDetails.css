@@ -1,0 +1,13 @@
+.detail-container{
+    margin: 8px 5px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+   }
+
+.detail-title{
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -2,6 +2,7 @@ import NavBar from "../../components/NavBar";
 import axios from 'axios'
 import { useState , useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import "./BeerDetails.css";
 
 function BeerDetails() {
 
@@ -31,31 +32,33 @@ function BeerDetails() {
             
            <>
             <div style={{width: '710px' , margin:"auto"}} >
-                  <NavBar/>
+                  <NavBar />
                 {loading &&(
                     
-                    <div style={{display : "flex", flexDirection:'column', alignItems:'center', borderBottom: '2px gray solid'}}>
-                        <img src={beers.image_url} style={{width:"50px", margin:'20px'}} alt='beer picture'/>
+                    <div className="detail-container">
+                        <div>
+                        <img src={beers.image_url} style={{width:"60px", margin:'25px'}} alt='beer img'/>
                            
-                        <div style={{ width: '710px' ,display:'flex'  , justifyContent:'space-around'}}>
-                            <p style={{marginRight:"70px"}}>{beers.name}</p>
-                            <p>{beers.attenuation_level}</p>
+                        <div style={{ width: '700px' ,display:'flex'  , justifyContent:'space-around'}}>
+                            <p style={{marginRight:"50px", fontesize: "20px", fontWeight:"bold"}}>{beers.name}</p>
+                            <p style={{marginRight:"50px", fontesize: "20px", fontWeight:"bold"}}>{beers.attenuation_level}</p>
                         </div>
 
-                        <div style={{ width: '710px' ,display:'flex'  , justifyContent:'space-around'}}>
+                        <div style={{ width: '700px' ,display:'flex'  , justifyContent:'space-around'}}>
                             <p>{beers.tagline}</p>
                             <p>{beers.first_brewed}</p>
                         </div> 
 
-                        <div style={{ width: '710px'}}>
+                        <div style={{ width: '700px'}}>
                             <p>{beers.description}</p>
                         </div>
 
-                        <div style={{display : "flex", width: '710px'}} >
+                        <div style={{display : "flex", width: '700px'}} >
                             <p>{beers.contributed_by}</p>
                         </div>
 
-                    </div>
+                        </div>
+                    </div>    
                 )}
             </div>
            

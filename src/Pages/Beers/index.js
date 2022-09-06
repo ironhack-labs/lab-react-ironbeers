@@ -37,6 +37,7 @@ function Beers(){
         <>
              <div style={{width: '710px' , margin:"auto"}} >
                   <NavBar/>
+                  <label stlyle={{fontweight: 'bold'}}>Procure a sua cerveja:</label>
                   <input value={search} onChange={handleSearch} />
                 {loading &&(
                         
@@ -54,7 +55,7 @@ function Beers(){
                         <>
                         <div style={{display : "flex", borderBottom: '2px gray solid'}}>
                         <Link to={`/BeerDetails/${element._id}`}>
-                           <img src={element.image_url} style={{width:"50px", margin:'20px'}} alt='beer'/>
+                           <img src={element.image_url} style={{width:"30px", margin:'15px'}} alt='beer'/>
                         </Link>
                             <div style={{display:'flex' , flexDirection:'column' ,alignItems: 'flex-start'}}>
                                 <h2>{element.name}</h2>
