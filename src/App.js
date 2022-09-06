@@ -1,9 +1,10 @@
 import './App.css';
-import { Routes, Route} from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Beers from "./Pages/Beers";
 import RandomBeer from "./Pages/RandomBeer";
 import NewBeer from "./Pages/NewBeer";
+import Details from "./Pages/"
+import { Routes, Route} from "react-router-dom";
 
 
 

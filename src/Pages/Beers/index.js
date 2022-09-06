@@ -1,4 +1,4 @@
-import NavBar from "../NavBar";
+import NavBar from "../../components/NavBar";
 import axios from 'axios'
 import { useState , useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -28,6 +28,10 @@ function Beers(){
     },[])
 
     console.log(search)
+
+    function handleSearch(e){
+        setSearch(e.target.value)
+    }
     
     return(
         <>
