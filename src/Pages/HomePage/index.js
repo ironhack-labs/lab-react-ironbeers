@@ -6,41 +6,44 @@ import newBeer from "../../assets/new-beer.png"
 import randomBeer from "../../assets/random-beer.png"
 
 
+
 function HomePage() {
   return ( 
     
-          <div>
-      <Link to="/Beers">
-        <img src={beers} alt="beer"/>
-        <h1>All Beers</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-          molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-          numquam. 
-        </p>
-      </Link>
+    <div className="home-container">
+      <div className="section-container">
+          <Link to="/Beers">
+           <img src={beers} alt="beer"/>
+            <h3>All Beers</h3>
+          </Link>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+              molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum.
+             </p>
+      </div>
+          
+      <div className="section-container">
+          <Link to="/RandomBeer">
+            <img src={newBeer} alt="beer"/>
+            <h3>Random Beer</h3>
+          </Link>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+              molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum.
+            </p>
+      </div>
 
-      <Link to="/RandomBeer">
-        <img src={newBeer} alt="beer"/>
-        <h1>Random Beer</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-            numquam. 
-          </p>
-      </Link>
-
-      <Link to="/NewBeer">
-        <img src={newBeer} alt="beer"/>
-        <h1>New Beer</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-            numquam. 
-          </p>
-      </Link>
-    
+      <div className="section-container">
+          <Link to="/NewBeer">
+              <img src={newBeer} alt="beer"/>
+              <h1>New Beer</h1>
+          </Link>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+               molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum.
+              </p>
+      
+       </div> 
     </div>
-    
 
-     
+
    );
 }
 
