@@ -28,8 +28,8 @@ function BeerDetails() {
 
 
         return ( 
-            <>
-           
+            
+           <>
             <div style={{width: '710px' , margin:"auto"}} >
                   <NavBar/>
                 {loading &&(
@@ -56,11 +56,12 @@ function BeerDetails() {
                         </div>
 
                     </div>
-
+                )}
             </div>
-
+           
+           
             </>
-    );
+    )
 }
 
 export default BeerDetails;

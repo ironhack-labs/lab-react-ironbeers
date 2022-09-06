@@ -53,7 +53,7 @@ function Beers(){
                     return(
                         <>
                         <div style={{display : "flex", borderBottom: '2px gray solid'}}>
-                        <Link to={`/detalhes/${element._id}`}>
+                        <Link to={`/BeerDetails/${element._id}`}>
                            <img src={element.image_url} style={{width:"50px", margin:'20px'}} alt='beer'/>
                         </Link>
                             <div style={{display:'flex' , flexDirection:'column' ,alignItems: 'flex-start'}}>

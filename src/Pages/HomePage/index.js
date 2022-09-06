@@ -10,7 +10,7 @@ function HomePage() {
   return ( 
     
           <div>
-      <Link to="/beers">
+      <Link to="/Beers">
         <img src={beers} alt="beer"/>
         <h1>All Beers</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
