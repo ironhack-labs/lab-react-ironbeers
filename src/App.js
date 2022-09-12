@@ -10,11 +10,12 @@ import RandomBeer from './Pages/Random-Beer';
 function App() {
   return (
     <div className="App">
-    <NavLink to="/">Home</NavLink>
-    <NavLink to="/beer">Beer</NavLink>
-    <NavLink to="/new-beer">New-beer</NavLink>
-    <NavLink to="/random-beer">Random-beer</NavLink>
-
+      <header>
+        <NavLink to="/"><img src='https://res.cloudinary.com/dxwvgsbzq/image/upload/v1663009771/bird/flappy%20monkey/homeButton_trgdas.png' alt='homePage'/></NavLink>
+        <NavLink to="/beer">Beer</NavLink>
+        <NavLink to="/new-beer">New-beer</NavLink>
+        <NavLink to="/random-beer">Random-beer</NavLink>
+      </header>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/beer' element={<Beer/>}/>
