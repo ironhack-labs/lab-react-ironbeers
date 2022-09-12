@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 function Beer(){
     const [beers, setBeers] = useState([]);
  
@@ -17,9 +18,12 @@ function Beer(){
     <h1>My Beer Page</h1>
     {beers.map((beer) => (
         <div key={beer._id} className="card">
-          <img src={beer.image_url
-} alt="bière" />
-          <h3>{beer.name}</h3>
+          <img src={beer.image_url} alt="bière" />
+          <div>
+            <NavLink to="/beer/:beerId"><h2>{beer.name}</h2></NavLink>         
+          <h3>{beer.tagline}</h3>
+          <b>Created by: {beer.contributed_by}</b>
+          </div>
         </div>
       ))}
     
