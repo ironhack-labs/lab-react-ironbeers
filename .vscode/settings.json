@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "node_modules": "explorerExcludedFiles",
+    ".pnp": "explorerExcludedFiles",
+    ".pnp.js": "explorerExcludedFiles",
+    "coverage": "explorerExcludedFiles",
+    "build": "explorerExcludedFiles",
+    ".DS_Store": "explorerExcludedFiles",
+    ".env.local": "explorerExcludedFiles",
+    ".env.development.local": "explorerExcludedFiles",
+    ".env.test.local": "explorerExcludedFiles",
+    ".env.production.local": "explorerExcludedFiles",
+    "npm-debug.log*": "explorerExcludedFiles",
+    "yarn-debug.log*": "explorerExcludedFiles",
+    "yarn-error.log*": "explorerExcludedFiles"
+  }
+}

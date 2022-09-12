@@ -1,0 +1,96 @@
+a.active{
+  font-weight:bold;
+  color:red
+}
+
+.returnToHome{
+  width: 100%;
+}
+
+.beerDetails{   /* Page beerDetails*/
+  .beerImage{
+    margin-top: 50px;
+    width: 50px;
+    display: flex;
+    margin-inline: auto;
+  }
+
+  .beerGrid{
+    display:flex;
+    align-items: center;
+    margin-inline: 15px;
+
+    div:nth-child(1){ /* Partie gauche de la "grille" */
+      h2{
+        font-size: 26px;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      h3{
+        font-size: 16px;
+        font-weight: 400;
+        color: gray;
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+    }
+
+    div:nth-child(2){ /* Partie droite de la "grille" */
+      margin-left: auto;
+      text-align: right;
+
+      p:nth-child(1){
+        font-size: 22px;
+        font-weight: 500;
+        color: lightgrey;
+        margin-bottom: 0;
+      }
+
+      p:nth-child(2){
+        font-size: 12px;
+        font-weight: 800;
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .beerDescription{
+    margin-inline: 15px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .beerAuthor{
+    font-size: 12px;
+    font-weight: 1000;
+    color: gray;
+    margin-inline: 15px;
+  }
+}
+
+.Beers{ /*  Page de toutes les bierres  */
+  .beerCard{
+    padding-block: 10px;
+    padding-left: 35px;
+    border-bottom: solid 1px lightgrey;
+    a{
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+    }
+
+    img{
+      height: 100px;
+    }
+
+    div:nth-child(1){
+      width: 35px;
+      text-align: center;
+    }
+
+    div:nth-child(2){
+      margin-left: 30px;
+    }
+  }
+}
