@@ -41,3 +41,8 @@ a.active{
   font-weight:bold;
   color:red
 }
+
+form{
+  display:flex;
+  flex-direction: column;
+}
