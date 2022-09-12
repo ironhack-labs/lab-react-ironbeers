@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Routes,Route, NavLink} from "react-router-dom"
 import Home from './Pages/home';
@@ -11,12 +10,16 @@ import RandomBeer from './Pages/Random-Beer';
 function App() {
   return (
     <div className="App">
-    <NavLink to={<Beer/>}>Beer</NavLink>
+    <NavLink to="/">Home</NavLink>
+    <NavLink to="/beer">Beer</NavLink>
+    <NavLink to="/new-beer">New-beer</NavLink>
+    <NavLink to="/random-beer">Random-beer</NavLink>
+
     <Routes>
-    <Route path='/' element={<Home/>}/>
-    <Route path='/beer' element={<Beer/>}/>
-    <Route path='randon-beer'/>
-    <Route path='new-beer'/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/beer' element={<Beer/>}/>
+      <Route path='/random-beer' element={<RandomBeer/>}/>
+    <Route path='/new-beer' element={<NewBeer/>}/>
     </Routes>
     </div>
   );
