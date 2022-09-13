@@ -4,6 +4,15 @@ import axios from 'axios'
 
 export default function Beers() {
     const [beers, setBeers] = useState([])
+    const [search, setSearch]= useState('')
+
+    function findBeer(event){
+        console.log("event.target.value:",event.target.value)
+        setSearch(event.target.value)
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${event.target.value}`)
+        .then(response=>setBeers(response.data))
+        .catch(err=>console.log('error searching beers:',err))       
+    }
 
     useEffect(() => {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
@@ -16,11 +25,13 @@ export default function Beers() {
     return (
         <div className="Beers">
             <NavLink to="/"><img src={"https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png"} alt="home" /></NavLink>
-
+            <label>
+                Find a Beer: <input type="text" value={search} onChange={findBeer}/>
+            </label>
             <div className="totalBeers">
                 {beers.map((beer) => {
                     return (
-                        <div class="beerCard">
+                        <div className="beerCard">
                             <NavLink to={`/beers/${beer._id}`}>
                                 <div>
                                     <img src={beer.image_url} alt="beer" />
