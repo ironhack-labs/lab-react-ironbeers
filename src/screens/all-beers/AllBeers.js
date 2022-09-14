@@ -8,18 +8,34 @@ import BeerCard from '../../components/beer-card/BeerCard'
 
 function AllBeers() {
   const [beers, setBeers] = useState([])
+  const [search, setSearch] = useState(null)
 
   useEffect(() => {
-    axios
-    .get("https://ih-beers-api2.herokuapp.com/beers")
-    .then((res) => {
-      setBeers(res.data)
-    })
-    .catch(error => console.error(error))
-  }, [])
+    search ? (
+      axios
+        .get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${search}`)
+        .then((res) => {
+          setBeers(res.data)
+        })
+        .catch(error => console.error(error))
+    ) : (axios
+          .get("https://ih-beers-api2.herokuapp.com/beers")
+          .then((res) => {
+            setBeers(res.data)
+          })
+          .catch(error => console.error(error))
+  )}, [search])
+
+  const handleSearch = (e) => {
+    const { value } = e.target
+    setSearch(value)
+  } 
   
   return (
-    <div className='mt-2'>
+    <div className='mt-2 container'>
+    <div class="input-group my-3">
+      <input type="text" class="form-control" placeholder="Search" onChange={handleSearch} />
+    </div>
       {beers ? beers.map((beer) => (
        <BeerCard key={beer._id} {...beer}/>)
       ) : "loading"}

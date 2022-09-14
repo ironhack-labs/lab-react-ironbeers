@@ -15,7 +15,6 @@ function NewBeer() {
       .then(navigate("/"))
       .catch((error) => console.error(error))
     console.log(b)
-    alert("beer created")
   }
 
   console.log(beer)
