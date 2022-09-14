@@ -1,0 +1,15 @@
+.detail-beer .detail-beer__header{
+  width: 100%;
+  object-fit: cover;
+}
+
+.detail-beer{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.detail-beer .detail-beer__picture{
+  max-width: 255px;
+  max-height: 300px;
+  object-fit: contain;
+}

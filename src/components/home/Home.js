@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home py-5">
       <Link to={'/beers'}>
-        <div className="card">
+        <div className="card my-2">
           <img src={Beers} className="card-img-top" alt="All beers" />
           <div className="card-body">
             <h5 className="card-title">All beers</h5>
@@ -18,8 +18,8 @@ function Home() {
           </div>
         </div>
       </Link>
-      <Link to={'/random-beer'}>
-        <div className="card">
+      <Link to={'/random'}>
+        <div className="card my-2">
           <img src={RandomBeer} className="card-img-top" alt="All beers" />
           <div className="card-body">
             <h5 className="card-title">Random beers</h5>
@@ -28,7 +28,7 @@ function Home() {
         </div>
       </Link>
       <Link to={'/new-beer'}>
-        <div className="card">
+        <div className="card my-2">
           <img src={NewBeer} className="card-img-top" alt="All beers" />
           <div className="card-body">
             <h5 className="card-title">New beers</h5>
