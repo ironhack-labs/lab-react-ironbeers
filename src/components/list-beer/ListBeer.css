@@ -7,3 +7,8 @@
   width: 50%;
   margin: 0 auto;
 }
+
+.list-beer .list-beer__search{
+  width: 75%;
+  margin: 0 auto;
+}
