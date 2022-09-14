@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link, useParams} from 'react-router-dom';
-import './ListBeers.css'
+import './SingleBeer.css'
 
 function SingleBeer() {
   const { id } = useParams();
@@ -16,11 +16,7 @@ useEffect(() => {
     setBeers(res.data)
   })
   .catch((error)=> console.log(error))
-}, [])
-
-console.log(beer)
-
-console.log(id)
+}, [id])
 
 return (
   <>
