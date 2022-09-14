@@ -6,8 +6,8 @@ function Header() {
   return (
     <>
       <Link to="/">
-        <nav class="navbar bg-primary d-flex">
-          <div class="container justify-content-center">
+        <nav className="navbar bg-primary d-flex mb-3">
+          <div className="container justify-content-center">
             <img
               src={homeLogo}
               alt="Home"

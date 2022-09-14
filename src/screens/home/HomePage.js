@@ -1,5 +1,5 @@
 import React from "react";
-import HomeCard from "../../components/HomeCard/HomeCard";
+import HomeCard from "../../components/home-card/HomeCard";
 import beers from "../../assets/beers.png";
 import randomBeer from "../../assets/random-beer.png";
 import newBeer from "../../assets/new-beer.png";
