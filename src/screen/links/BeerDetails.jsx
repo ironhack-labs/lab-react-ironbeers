@@ -1,21 +1,25 @@
 import React from "react";
-import Header from "../../components/Header";
-import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import Header from "../../components/Header";
 
-const baseURL = "https://ih-beers-api2.herokuapp.com/beers/random";
+const baseURL = "https://ih-beers-api2.herokuapp.com/beers";
 
-function RandomBeer() {
-  const [beer, setBeer] = useState({});
+function BeerDetails() {
+  const { beerId } = useParams();
+  const [beer, setBeers] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`${baseURL}/`)
-      .then((response) => {
-        setBeer(response.data);
-      });
-  }, []);
+    axios.get(`${baseURL}/`).then((response) => {
+      const oneBeer = response.data.find((beer) => beer._id === beerId);
+      if (oneBeer) {
+        setBeers(oneBeer);
+      } else {
+        console.log("Error");
+      }
+    });
+  }, [beerId]);
 
   return (
     <>
@@ -33,6 +37,7 @@ function RandomBeer() {
             </div>
             <div className="d-flex justify-content-between">
               <h2>{beer.name}</h2>
+
               <h2 style={{ color: "grey" }}>{beer.attenuation_level}</h2>
             </div>
             <div className="d-flex justify-content-between mb-4">
@@ -45,11 +50,11 @@ function RandomBeer() {
         )}
       </div>
 
-      <Link to={`/`}>
-        <h4 className="mt-5">Back to home</h4>
+      <Link to={`/beers`}>
+        <h4 className="mt-5">Back to Beers</h4>
       </Link>
     </>
   );
 }
 
-export default RandomBeer;
+export default BeerDetails;
