@@ -6,7 +6,7 @@ import newBeer from "../../assets/new-beer.png";
 
 function HomePage() {
   return (
-    <div className="d-flex flex-column">
+    <div className="d-flex flex-column my-3">
       <HomeCard img={beers} title="All Beers" url="/beers" />
       <HomeCard img={randomBeer} title="Random Beer" url="/random-beer" />
       <HomeCard img={newBeer} title="New Beer" url="/new-beer" />
