@@ -1,0 +1,18 @@
+.new-beer textarea{
+  resize: none;
+}
+
+.new-beer .btn-primary{
+  background-color: #3DC4FC!important;
+  border-color: #3DC4FC!important;
+}
+
+.new-beer{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.new-beer .new-beer__header{
+  width: 100%;
+  object-fit: cover;
+}
