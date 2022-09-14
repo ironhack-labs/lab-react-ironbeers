@@ -1,4 +1,4 @@
-export const Home = () => {
+export const NewBeer = () => {
   return(
     <main></main>
   )
