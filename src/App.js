@@ -7,10 +7,10 @@ function App() {
       <Routes>
         <Route path="*" element={<NoPage />} />
         <Route path='/' element={<HomaPage/>}/>
-        <Route path='/:id' element={<SingleBear/>}/>
+        <Route path='/beers' element={<ListBeers/>}/>
+        <Route path='/beers/:id' element={<SingleBear/>}/>
         <Route path='/random-beer' element={<RandomBeer/>}/>
         <Route path='/new-beer' element={<NewBeer/>}/>
-        <Route path='/search?q={query}' element={<ListBeers/>}/>
       </Routes>
     </div>
   );
