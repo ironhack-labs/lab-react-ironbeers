@@ -2,7 +2,9 @@ import React from 'react'
 
 const RandomBeer = () => {
   return (
-    <div>RandomBeer</div>
+
+   <h1>RandomBeer</h1>
+
   )
 }
 
