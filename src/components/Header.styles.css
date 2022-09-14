@@ -1,0 +1,18 @@
+.header {
+  background-color: var(--blue);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.header svg {
+  width: 50px;
+  height: 50px;
+  color: var(--white)
+}
+
+.button {
+  background-color: var(--blue);
+}
