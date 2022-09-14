@@ -16,7 +16,7 @@ function Detail() {
       setBeer(res.data)  
     })
     .catch((error) => console.error(error))
-  }, [])
+  }, [id])
 
   return (    
       <DetailBeer {...beer}/>    
