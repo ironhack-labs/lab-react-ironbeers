@@ -1,0 +1,10 @@
+.item-beer .item-beer__picture{
+  max-width: 75px;
+  max-height: 105px;
+  object-fit: contain;
+}
+
+.item-beer a {
+  text-decoration: none;
+  color: black;
+}
