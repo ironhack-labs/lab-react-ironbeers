@@ -6,7 +6,7 @@ import { Header } from './components/Header';
 function App() {
   return (
     <div className="App">
-    { window.location.pathname !== '/' ? <Header/> : null}
+    { window.location.pathname !== '/' && <Header/>}
     <Routes>
       <Route path="/" element={<HomePage/>} />
     </Routes>
