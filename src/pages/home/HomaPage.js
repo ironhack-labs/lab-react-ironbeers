@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function HomaPage() {
   return (
     <>
-      <div className="row d-flex">
+      <div className="row d-flex my-5">
         <div className="card col">
           <img src={beers} className="card-img-top" alt="..."/>
           <div className="card-body">
@@ -17,7 +17,7 @@ function HomaPage() {
           </div>
         </div>
       </div>
-      <div className="row d-flex">
+      <div className="row d-flex my-5">
         <div className="card col">
           <img src={randomBeer} className="card-img-top" alt="..."/>
           <div className="card-body">
@@ -27,7 +27,7 @@ function HomaPage() {
           </div>
         </div>
       </div>
-      <div className="row d-flex">
+      <div className="row d-flex my-5">
         <div className="card col">
           <img src={beers} className="card-img-top" alt="..."/>
           <div className="card-body">
