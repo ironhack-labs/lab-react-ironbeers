@@ -12,10 +12,11 @@ const App = () => {
         {routes.map(route => (
           <> 
             <Route path={route.path} element={
-              <div className='App'>
-                <Header />
-                {route.component}
-              </div>} 
+                <>
+                  <Header />
+                  {route.component}
+                </>
+              } 
               key={route.path} exact />
           </>
         ))}

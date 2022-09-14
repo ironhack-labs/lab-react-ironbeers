@@ -6,9 +6,9 @@ import './Header.styles.css'
 
 export const Header = () => {
   const navigate = useNavigate()
-  
+
   const handleClick = () => {
-    navigate("/home")
+    navigate("/all-beers")
   }
   return(
     <header className='header'>
