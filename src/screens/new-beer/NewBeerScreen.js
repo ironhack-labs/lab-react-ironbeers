@@ -4,7 +4,7 @@ import { useState } from 'react'
 import NewBeerForm from '../../components/new-beer-form/NewBeerForm'
 import { useNavigate } from 'react-router'
 
-function NewBeer() {
+function NewBeerScreen() {
   const navigate = useNavigate()
   const [beer, setBeer] = useState([])
   
@@ -25,4 +25,4 @@ function NewBeer() {
   )
 }
 
-export default NewBeer
+export default NewBeerScreen

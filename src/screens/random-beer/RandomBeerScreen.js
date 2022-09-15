@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import DetailBeer from '../../components/detail-beer/DetailBeer'
 
-function RandomBeer() {
-  const [beer, setBeer] = useState({})
+function RandomBeerScreen() {
+  const [beer, setBeer] = useState(null)
 
   useEffect(() => {
     axios
@@ -15,10 +15,14 @@ function RandomBeer() {
       })
   }, [])
   return (
-    <div>
-      <DetailBeer  {...beer}/>
+    <div className='d-flex flex-column align-items-center'>
+      {beer ? (
+        <DetailBeer  {...beer}/>) : (
+          <h1 className='mt-5 pt-5'>Loading...</h1>
+        )
+      }
     </div>
   )
 }
 
-export default RandomBeer
+export default RandomBeerScreen

@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { useParams } from 'react-router'
 import DetailBeer from '../../components/detail-beer/DetailBeer'
 
-function Detail() {
+function DetailScreen() {
   const {id} = useParams()
   const [beer, setBeer] = useState({})
   
@@ -23,4 +23,4 @@ function Detail() {
   )
 }
 
-export default Detail
+export default DetailScreen

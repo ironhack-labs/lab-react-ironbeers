@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router";
 import NavBar from "./components/ui/nav-bar/NavBar";
-import AllBeers from "./screens/all-beers/AllBeers";
-import Detail from "./screens/detail/Detail";
+import AllBeersScreen from "./screens/all-beers/AllBeersScreen";
+import DetailScreen from "./screens/detail/DetailScreen";
 import HomeScreen from "./screens/home-screen/HomeScreen";
-import NewBeer from "./screens/new-beer/NewBeer";
-import RandomBeer from "./screens/random-beer/RandomBeer";
+import NewBeerScreen from "./screens/new-beer/NewBeerScreen";
+import RandomBeerScreen from "./screens/random-beer/RandomBeerScreen";
 
 function App() {
   return (
@@ -12,10 +12,10 @@ function App() {
       <NavBar />
       <Routes >
         <Route path="/" element={<HomeScreen />}></Route>
-        <Route path="/detail/:id" element={<Detail />}></Route>
-        <Route path="/all-beers" element={<AllBeers />}></Route>
-        <Route path="/random-beer" element={<RandomBeer />}></Route>
-        <Route path="/new-beer" element={<NewBeer />}></Route>
+        <Route path="/detail/:id" element={<DetailScreen />}></Route>
+        <Route path="/all-beers" element={<AllBeersScreen />}></Route>
+        <Route path="/random-beer" element={<RandomBeerScreen />}></Route>
+        <Route path="/new-beer" element={<NewBeerScreen />}></Route>
       </Routes >
     </div>
   );
