@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route , useLocation} from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { HomePage } from "./pages/HomePage";
@@ -28,7 +28,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {window.location.pathname !== "/" && <Header />}
+      {useLocation().pathname !== "/" && <Header />}
       {!loading ? <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<BeersPage beers={beers} />} />
