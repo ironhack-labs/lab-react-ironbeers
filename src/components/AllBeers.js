@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Beer = (props) => {
+export const AllBeers = (props) => {
   return (
     <div style={{display:'flex',flexDirection:'row', margin:'40px 10px'}}>
 

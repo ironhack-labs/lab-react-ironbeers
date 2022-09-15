@@ -7,9 +7,9 @@ import { RandomBeers } from '../components/RandomBeers';
 export const HomePage = () => {
   return (
     <div>
-    <Link to="/beers"><Beers/></Link>
-    <Link to="/random-beer"><RandomBeers/></Link>
-    <Link to="/new-beer"><NewBeer/></Link>
+    <Link to="/beers" style={{textDecoration:'none',color:'black'}} ><Beers/></Link>
+    <Link to="/random-beer"  style={{textDecoration:'none',color:'black'}} ><RandomBeers/></Link>
+    <Link  to="/new-beer" style={{textDecoration:'none',color:'black'}}><NewBeer/></Link>
     </div>
   )
 }
