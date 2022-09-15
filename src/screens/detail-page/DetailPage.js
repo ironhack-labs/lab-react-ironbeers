@@ -7,7 +7,7 @@ import DetailBeer from "../../components/detail-beer/DetailBeer";
 
 function DetailPage() {
   const {id} = useParams()
-  const [beer, setBeer] = useState([]);
+  const [beer, setBeer] = useState({});
 
   useEffect(() => {
     axios
