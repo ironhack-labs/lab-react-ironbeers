@@ -8,7 +8,7 @@ export const Header = () => {
   const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate("/all-beers")
+    navigate("/home")
   }
   return(
     <header className='header'>

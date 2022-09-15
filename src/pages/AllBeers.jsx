@@ -1,4 +1,5 @@
 import {useState, useEffect, useCallback} from 'react'
+import { BoxBeer } from '../components'
 
 import { getData } from '../services/getData'
 
@@ -9,7 +10,7 @@ export const AllBeers = () => {
 
   const fetchData = useCallback(async() => {
     try{
-      const response = await getData()
+      const response = await getData("beers")
       const { data } = response
       setDataBeer(data)
     }catch(e){
@@ -24,20 +25,9 @@ export const AllBeers = () => {
   console.log(dataBeer)
   return(
     <main className='main'>
-      <div className='container'>
-        {dataBeer.length && dataBeer.map((beer, index) => {
-          return(
-            <div className='beerBox'>
-              <img src={beer.image_url} alt={beer.name} />
-              <div>
-                <h1>{beer.name}</h1>
-                <h3>{beer.tagline}</h3>
-                <p>Created by: {beer.contributed_by}</p>
-              </div>
-            </div>
-          )
-        })}
-      </div>
+      <BoxBeer 
+        dataBeer={dataBeer}
+      />
       
 
     </main>
