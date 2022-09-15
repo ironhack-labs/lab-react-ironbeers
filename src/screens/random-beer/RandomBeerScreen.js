@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import DetailBeer from '../../components/detail-beer/DetailBeer'
+import NavBar from '../../components/ui/nav-bar/NavBar'
 
 function RandomBeerScreen() {
   const [beer, setBeer] = useState(null)
@@ -15,17 +16,20 @@ function RandomBeerScreen() {
       })
   }, [])
   return (
-    <div className='d-flex flex-column align-items-center'>
-      {beer ? (
-        <DetailBeer  {...beer}/>) : (
-          <div className='mt-5 pt-5'>
-            <div className="spinner-border text-primary" role="status">
-              <span className="visually-hidden"><h1>Loading...</h1></span>
+    <>
+      <NavBar />
+      <div className='d-flex flex-column align-items-center'>
+        {beer ? (
+          <DetailBeer  {...beer}/>) : (
+            <div className='mt-5 pt-5'>
+              <div className="spinner-border text-primary" role="status">
+                <span className="visually-hidden"><h1>Loading...</h1></span>
+              </div>
             </div>
-          </div>
-        )
-      }
-    </div>
+          )
+        }
+      </div>
+    </>
   )
 }
 

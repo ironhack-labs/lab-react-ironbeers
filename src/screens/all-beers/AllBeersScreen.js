@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import BeerCard from '../../components/beer-card/BeerCard'
+import NavBar from '../../components/ui/nav-bar/NavBar'
 
 
 
@@ -32,22 +33,25 @@ function AllBeersScreen() {
   } 
   
   return (
-    <div className='mt-2 container d-flex flex-column align-items-center'>
-      <div className="input-group my-3">
-        <input type="text" className="form-control" placeholder="Search" onChange={handleSearch} />
-      </div>
-      {beers.length === 0 ? 
-        (
-          <div className='mt-5 pt-5'>
-            <div className="spinner-border text-primary" role="status">
-              <span className="visually-hidden"><h1>Loading...</h1></span>
+    <>
+      <NavBar />
+      <div className='mt-2 container d-flex flex-column align-items-center'>
+        <div className="input-group my-3">
+          <input type="text" className="form-control" placeholder="Search" onChange={handleSearch} />
+        </div>
+        {beers.length === 0 ? 
+          (
+            <div className='mt-5 pt-5'>
+              <div className="spinner-border text-primary" role="status">
+                <span className="visually-hidden"><h1>Loading...</h1></span>
+              </div>
             </div>
-          </div>
-        ) : 
-        (beers.map((beer) => (
-          <BeerCard key={beer._id} {...beer}/>))
-      )}
-    </div>
+          ) : 
+          (beers.map((beer) => (
+            <BeerCard key={beer._id} {...beer}/>))
+        )}
+      </div>
+    </>
   )
 }
 

@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router'
 import DetailBeer from '../../components/detail-beer/DetailBeer'
+import NavBar from '../../components/ui/nav-bar/NavBar'
 
 function DetailScreen() {
   const {id} = useParams()
@@ -19,6 +20,8 @@ function DetailScreen() {
   }, [id])
 
   return (
+    <>
+      <NavBar />
       <div className='d-flex flex-column align-items-center'>
         {beer ? 
           (<DetailBeer {...beer}/> ) : 
@@ -30,7 +33,7 @@ function DetailScreen() {
           )
         }
       </div>
-         
+    </>     
   )
 }
 

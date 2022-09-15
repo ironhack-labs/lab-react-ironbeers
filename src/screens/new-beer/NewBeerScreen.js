@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import NewBeerForm from '../../components/new-beer-form/NewBeerForm'
 import { useNavigate } from 'react-router'
+import NavBar from '../../components/ui/nav-bar/NavBar'
 
 function NewBeerScreen() {
   const navigate = useNavigate()
@@ -20,6 +21,7 @@ function NewBeerScreen() {
   console.log(beer)
   return (
     <div>
+      <NavBar />
       <NewBeerForm onCreateBeer={handleCreateBeer}/>
     </div>
   )
