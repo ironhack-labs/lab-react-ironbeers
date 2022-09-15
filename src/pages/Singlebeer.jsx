@@ -1,10 +1,10 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Header from "../components/Header";
-import { Link } from "react-router-dom";
-import React from "react";
 
-function AllBeers() {
+/* implementar o useParams(); */
+
+function BeersDetails() {
   const [beers, setBeers] = useState([]);
 
   useEffect(() => {
@@ -16,18 +16,21 @@ function AllBeers() {
 
   return (
     <div>
-      <Header />
       <h1>All Beers</h1>
+
       {beers.map((beer) => (
         <div key={beer._id} className="card">
           <img src={beer.image_url} className="img" alt="beer" />
           <h3>{beer.name}</h3>
           <h3>{beer.tagline}</h3>
-          <h3>{beer.contributed_by}</h3>
-          <Link to="/beers/:beerId">beer details:</Link>
+          <h3>{beer.first_brewed}</h3>
+          <h3>{beer.attenuation_level}</h3>
+          <h3>{beer.description}</h3>
+          <h3>{beer.contributd_by}</h3>
         </div>
       ))}
     </div>
   );
 }
-export default AllBeers;
+
+export default BeersDetails;

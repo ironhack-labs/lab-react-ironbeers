@@ -2,6 +2,7 @@ import React from "react";
 import firstImages from "../assets/beers.png";
 import secondImages from "../assets/new-beer.png";
 import thirdImages from "../assets/random-beer.png";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -9,7 +10,9 @@ function HomePage() {
       <section className="all-beers">
         <div>
           <img src={firstImages} alt="all-beers" />
-          <h1> All Beers</h1>
+          <Link to="/beers">
+            <h1>All Beers</h1>
+          </Link>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
             nihil harum distinctio eveniet laborum soluta placeat quod
@@ -18,10 +21,13 @@ function HomePage() {
           </p>
         </div>
       </section>
+
       <section className="random-beer">
         <div>
           <img src={thirdImages} alt="random-beer" />
-          <h1> All Beers</h1>
+          <Link to="/random-beer">
+            <h1>Random Beer</h1>
+          </Link>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
             nihil harum distinctio eveniet laborum soluta placeat quod
@@ -33,7 +39,9 @@ function HomePage() {
       <section className="new-beer">
         <div>
           <img src={secondImages} alt="new-beer" />
-          <h1> All Beers</h1>
+          <Link to="/new-beer">
+            <h1>New beer</h1>
+          </Link>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
             nihil harum distinctio eveniet laborum soluta placeat quod
