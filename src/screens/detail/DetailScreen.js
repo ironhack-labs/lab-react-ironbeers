@@ -7,7 +7,7 @@ import DetailBeer from '../../components/detail-beer/DetailBeer'
 
 function DetailScreen() {
   const {id} = useParams()
-  const [beer, setBeer] = useState({})
+  const [beer, setBeer] = useState(null)
   
   useEffect(() => {
     axios
@@ -18,8 +18,19 @@ function DetailScreen() {
     .catch((error) => console.error(error))
   }, [id])
 
-  return (    
-      <DetailBeer {...beer}/>    
+  return (
+      <div className='d-flex flex-column align-items-center'>
+        {beer ? 
+          (<DetailBeer {...beer}/> ) : 
+          (<div className='mt-5 pt-5'>
+              <div className="spinner-border text-primary" role="status">
+                <span className="visually-hidden"><h1>Loading...</h1></span>
+              </div>
+            </div>
+          )
+        }
+      </div>
+         
   )
 }
 

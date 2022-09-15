@@ -18,7 +18,11 @@ function RandomBeerScreen() {
     <div className='d-flex flex-column align-items-center'>
       {beer ? (
         <DetailBeer  {...beer}/>) : (
-          <h1 className='mt-5 pt-5'>Loading...</h1>
+          <div className='mt-5 pt-5'>
+            <div className="spinner-border text-primary" role="status">
+              <span className="visually-hidden"><h1>Loading...</h1></span>
+            </div>
+          </div>
         )
       }
     </div>
