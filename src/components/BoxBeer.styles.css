@@ -20,7 +20,6 @@
 }
 
 @media (min-width: 0px) and (max-width: 600px){
-
   .container{
     display: grid;
     height: 100%;
