@@ -33,40 +33,42 @@ export const NewBeerPage = () => {
    Navigate('/')
   }
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-      <div>
-        <label>Name</label>
-        <input type='text' value={name} onChange={(e)=>{setName(e.target.value)}} /> 
+    <div style={{display:'flex',justifyContent:'center',margin: 20}}>
+      <form onSubmit={handleSubmit} className="card" style={{width:'50%'}} >
+      <div className="card-body" style={{fontWeight:'bolder'}} >
+      <div className="form-group">
+        <label >Name</label>
+        <input type='text' className="form-control" style={{borderRadius:50}} value={name} onChange={(e)=>{setName(e.target.value)}} /> 
         </div>
-        <div>
+        <div className="form-group"  >
         <label>Tagline</label>
-        <input type='text'value={tagline} onChange={(e)=>{setTagline(e.target.value)}} /> 
+        <input type='text' className="form-control"  style={{borderRadius:50}} value={tagline} onChange={(e)=>{setTagline(e.target.value)}} /> 
         </div>
-        <div>
+        <div className="form-group"  >
         <label>Description</label>
-        <textarea type='text' value={description} onChange={(e)=>{setDescription(e.target.value)}} /> 
+        <textarea type='text'className="form-control"  style={{borderRadius:20,height:150}}  value={description} onChange={(e)=>{setDescription(e.target.value)}} /> 
         </div>
-        <div>
-        <label>First Brewed</label>
-        <input type='text' value={firstBrewed} onChange={(e)=>{setFirstBrewed(e.target.value)}} /> 
+        <div className="form-group"  >
+        <label >First Brewed</label>
+        <input type='text' className="form-control"  style={{borderRadius:50}}  value={firstBrewed} onChange={(e)=>{setFirstBrewed(e.target.value)}} /> 
         </div>
-        <div>
+        <div className="form-group"  >
         <label>Brewers Tips</label>
-        <input type='text' value={brewersTips} onChange={(e)=>{setBrewersTips(e.target.value)}} /> 
+        <input type='text'className="form-control" style={{borderRadius:50}}    value={brewersTips} onChange={(e)=>{setBrewersTips(e.target.value)}} /> 
         </div>
-        <div>
+        <div className="form-group"  >
         <label>Attenuation Level</label>
-        <input type='number' value={attenuationLevel} onChange={(e)=>{setAttenuationLevel(e.target.value)}} /> 
+        <input type='number' className="form-control" style={{borderRadius:50}}   value={attenuationLevel} onChange={(e)=>{setAttenuationLevel(e.target.value)}} /> 
         </div>
         <div>
-        <label>Contributed By</label>
-        <input type='text' value={contributedBy} onChange={(e)=>{setContributedBy(e.target.value)}}/> 
+        <label className="form-group">Contributed By</label>
+        <input type='text' className="form-control" style={{borderRadius:50}}   value={contributedBy} onChange={(e)=>{setContributedBy(e.target.value)}}/> 
         </div>
         <div>
-          <button>Add New</button>
+          <button style={{margin:10,borderRadius:50,width:'98%'}} className="btn btn-primary">ADD NEW</button>
+        </div>
         </div>
       </form>
-    </div>
+      </div>
   )
 }
