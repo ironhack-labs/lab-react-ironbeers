@@ -8,7 +8,7 @@ export const Beers = () => {
 
       <div class="card-body">
         <h1 class="card-title display-4">All Beers</h1>
-        <p class="card-text" style={{color:'#9A9A9A', fontSize:'24px'}}>
+        <p class="card-text" style={{ color: "#9A9A9A", fontSize: "24px" }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
