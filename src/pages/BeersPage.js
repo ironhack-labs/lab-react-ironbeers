@@ -1,16 +1,15 @@
 import { AllBeers } from "../components/AllBeers";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
 export const BeersPage = (props) => {
-  const [searchParams,setSearchParams] = useSearchParams()
+  const [searchParams,setSearchParams] = useState('')
   const [beers,setBeers] = useState(props.beers)
   const getSearchParams = async (e)=>{
    setSearchParams(e.target.value)
-   const name = searchParams.get('q')
    try{
-    const {data} = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${name}`)
+    const {data} = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${searchParams}`)
     setBeers(data)
    }catch(error){
       console.log(error)
@@ -20,7 +19,7 @@ export const BeersPage = (props) => {
     <div>
       <div>
       <label>Search</label>
-        <input type="text" value={searchParams} onChange={(e)=>getSearchParams(e)} />
+        <input type="text" value={searchParams} onChange={getSearchParams} />
       </div>
       <ul>
         {beers.map((beer) => {

@@ -14,6 +14,7 @@ function App() {
   const [loading,setLoading] = useState(true)
   const getBeers = async () => {
     try {
+      
       const { data } = await axios.get(
         "https://ih-beers-api2.herokuapp.com/beers"
       );
