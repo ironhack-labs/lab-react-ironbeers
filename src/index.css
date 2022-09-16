@@ -11,3 +11,151 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.navbar {
+    color: white;
+    font-size: 30px;
+    background-color: #34c3eb;
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: sticky;
+    top: 0;
+    padding: 10px 0 0 0;
+}
+
+.link-card {
+    color: black;
+    text-decoration: none;
+    text-align: left;
+    border: 1px solid lightgrey;
+    display: block;
+    width: 40%;
+    margin: 20px auto;
+}
+
+.link-card img {
+    width: 100%;
+}
+
+.link-card h1 {
+    padding-left: 30px;
+}
+
+.link-card p {
+    color: grey;
+    padding: 0px 20px 0px 20px;
+}
+
+.beer-card {
+    width: 40%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: columns;
+    justify-content: flex-start;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    border-bottom: 1px solid lightgrey;
+    margin: 20px auto;
+}
+
+.beer-card img {
+    height: 150px;
+    margin-right: 40px;
+}
+
+.beer-card h3 {
+    color: grey;
+}
+
+.beer-card p span {
+    font-weight: 700;
+}
+
+.beer-details {
+    width: 35%;
+    margin: 0 auto;
+    padding: 40px 0px;
+    display: block;
+    text-align: center;
+}
+
+.beer-details h1, .beer-details h2, .beer-details h3, .beer-details p {
+    text-align: left;
+    font-weight: 400;
+}
+
+.beer-details img {
+    height: 300px;
+}
+
+.beer-details h2{
+    color: grey;
+    margin-top: -15px;
+}
+
+.beer-details span {
+    font-weight: 700;
+}
+
+.beer-details .attenuation {
+    font-size: 30px;
+    color: lightgrey;
+    position: relative;
+    bottom: 100px;
+    left: 200px;
+}
+
+.beer-details .brewed {
+    position: relative;
+    bottom: 70px;
+    left: 240px;
+}
+
+.beer-details p {
+    margin-top: -30px;
+}
+
+.beer-details .contributed {
+    color: grey;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.add-beer-form h2 {
+    text-align: center;
+}
+
+.add-beer-form form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+.add-beer-form label {
+    display: block;
+    padding-left: 20px;
+}
+
+.add-beer-form input, .add-beer-form textarea {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+}
+
+.add-beer-form .field {
+    margin: 10px 0;
+}
+
+.form-btn {
+    color: white;
+    background-color: #34c3eb;
+    font-weight: 900;
+    margin-top: 10px;
+    cursor: pointer;
+}
