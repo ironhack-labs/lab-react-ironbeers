@@ -39,7 +39,7 @@ const NewBeer = () => {
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <Grid container >
           <Grid item xs={12}>
             <Grid
