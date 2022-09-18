@@ -4,6 +4,8 @@ import Beers from "../../assets/beers.png"
 import Random from "../../assets/random-beer.png"
 import New from "../../assets/new-beer.png"
 
+
+
 function HomeScreen() {
   return (
     <div>
