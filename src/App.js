@@ -9,7 +9,7 @@ function App() {
         <Route path="/beers" element={<BeerList />} />
         <Route path="/random" element={<RandomBeer />} />
         <Route path="/new" element={<NewBeer />} />
-        <Route path="/beers/:beerId" element={<BeerDetailScreen />} />
+        <Route path="/beers/:id" element={<BeerDetailScreen />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

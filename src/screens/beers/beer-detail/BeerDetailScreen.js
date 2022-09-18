@@ -11,6 +11,7 @@ function BeerDetailScreeen() {
     axios
       .get(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
       .then((res) => {
+        console.log(id)
         console.log(res.data);
         setBeer(res.data);
       })

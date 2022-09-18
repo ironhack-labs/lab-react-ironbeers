@@ -11,28 +11,27 @@ function BeerDetail({
 }) {
 
   return (
-    <div className="container">
+    <div className="container" style={{ height: 500, width: 500 }}>
       <div className="card">
           <img
             src={image_url}
             className="card-img-top align-self-center mt-3"
             alt={name}
-            style={{ height: 270, width: 800 }}
+            style={{ height: 270, width: 90 }}
           />
           <div className="card-body">
-            <div className="d-flex justify-content-between px-4">
+            <div className="d-flex justify-content-between px-3">
               <h2>{name}</h2>
               <h4 className="text-secondary">{attenuation_level}</h4>
             </div>
-            <div className="d-flex justify-content-between px-4">
-              <h3 className="text-secondary">{tagline}</h3>
-              <h4>{first_brewed}</h4>
+            <div className="d-flex justify-content-between px-3">
+              <h4 className="text-secondary">{tagline}</h4>
+              <h5>{first_brewed}</h5>
             </div>
 
             <div className="card-text fw-bold">
-              <p className="p-4">{description}</p>
-              <br />
-              <p className="text-muted px-4">{contributed_by}</p>
+              <p className="p-3"><b>{description}</b></p>
+              <p className="text-muted px-3"><b>{contributed_by}</b></p>
             </div>
           </div>
         </div>
