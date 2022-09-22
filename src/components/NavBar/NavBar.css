@@ -1,0 +1,9 @@
+.beer-navbar {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.beer-navbar:hover {
+    color: black;
+    font-weight: 500;
+}
