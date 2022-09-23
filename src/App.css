@@ -32,7 +32,18 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.img {
+  width: 30%;
+  height: 40%;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
 }
