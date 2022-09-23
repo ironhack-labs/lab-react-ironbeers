@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.beer-card {
+  display:flex;
+  gap:10px;
+  align-items: center;
+  height: 300px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.beer-card .text-holder {
   display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.beer-card img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+.card-link:hover {
+  cursor: pointer;
+}
+.card-link:visited {
+  color:inherit;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.beer-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  padding: 20px 5px 0 5px;
+}
+
+.beer-details {
+  display:flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 10px;
+}
+.beer-details p {
+  width: 70%;
+}
+.beer-details img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+
+.new-beer-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.form-holder {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  max-width: 90vw;
 }
