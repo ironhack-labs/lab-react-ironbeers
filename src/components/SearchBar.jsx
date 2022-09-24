@@ -12,6 +12,6 @@ export default function SearchBar(props) {
   }
 
   return (
-    <input type="text" name="search" id="search" value={search} onChange={handleSearch} />
+    <input className="beers-search" type="text" name="search" id="search" value={search} onChange={handleSearch} />
   )
 }

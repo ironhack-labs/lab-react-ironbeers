@@ -38,7 +38,7 @@ export default function BeersList(props) {
     <div className="main-container">
 
    
-      <SearchBar key="search" search={search} setSearch={setSearch} />
+      <SearchBar  key="search" search={search} setSearch={setSearch} />
       <div className="beer-holder">
         {displayList.map(eachBeer => {
           return (

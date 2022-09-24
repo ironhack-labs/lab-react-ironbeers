@@ -62,6 +62,12 @@ export default function AddBeerForm(props) {
       }
     }
     sendBeer(newBeer);
+    setName('')
+    setTagline('')
+    setAttenuationLevel(0)
+    setBrewersTips('')
+    setContributedBy('')
+    setDescription('')
   }
 
 

@@ -5,9 +5,12 @@ import randomBeer from "../assets/random-beer.png";
 
 export default function Homepage(props) {
   return (
-    <div className="main-container">
+    <div className="homepage-container">
       <div className="homepage-links">
-        <Link className="link-card" to={"/beers"}>
+        <div className="link-card">
+          <Link className="link" to={"/beers"}>
+            <span></span>
+          </Link>
           <img src={beers} alt="all-beers" />
           <h3>All beers</h3>
           <p>
@@ -17,8 +20,11 @@ export default function Homepage(props) {
             Aliquam vitae tristique turpis, imperdiet lobortis purus. Quisque
             non velit leo. Morbi aliquam sapien at nisi luctus.
           </p>
-        </Link>
-        <Link className="link-card" to={"/random-beer"}>
+        </div>
+        <div className="link-card">
+          <Link className="link" to={"/random-beer"}>
+            <span></span>
+          </Link>
           <img src={randomBeer} alt="random-beer" />
           <h3>Random beer</h3>
           <p>
@@ -28,8 +34,12 @@ export default function Homepage(props) {
             Aliquam vitae tristique turpis, imperdiet lobortis purus. Quisque
             non velit leo. Morbi aliquam sapien at nisi luctus.
           </p>
-        </Link>
-        <Link className="link-card" to={"/new-beer"}>
+        </div>
+        <div className="link-card">
+          <Link className="link" to={"/new-beer"}>
+            <span></span>
+          </Link>
+
           <img src={newBeer} alt="new-beer" />
           <h3>New beer</h3>
           <p>
@@ -39,7 +49,7 @@ export default function Homepage(props) {
             Aliquam vitae tristique turpis, imperdiet lobortis purus. Quisque
             non velit leo. Morbi aliquam sapien at nisi luctus.
           </p>
-        </Link>
+        </div>
       </div>
     </div>
   );
