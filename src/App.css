@@ -67,3 +67,7 @@
   justify-content: center;
   max-width: 90vw;
 }
+
+.link-card {
+  width: 50%;
+}
