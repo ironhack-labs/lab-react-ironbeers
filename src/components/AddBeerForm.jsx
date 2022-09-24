@@ -101,11 +101,3 @@ export default function AddBeerForm(props) {
     </div>
   )
 }
-
-// name - must be type text
-// tagline - must be type text
-// description - must be type text
-// first_brewed - must be type text
-// brewers_tips - must be type text
-// attenuation_level - must be type number !!!
-// contributed_by - must be type text
