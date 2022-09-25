@@ -4,9 +4,8 @@ import axios from 'axios';
 
 function BeerDetails() {
     const API_URL = process.env.REACT_APP_BASE_URL;
-    const [beers, setBeers] = useState([]);
     const [beerDetails, setBeerDetails] = useState({});
-    const [foundProject, setFoundProject] = useState(null);
+   
 
     const params = useParams();
     console.log("params.beerId", params.beerId);
@@ -40,21 +39,21 @@ function BeerDetails() {
             <div>
             <h1>Beer Details</h1>
             <br/>
-            {!foundProject && <h3>Project not found!</h3>}
+            
 
             <div className="beersImg">
-                <img src={beerDetails.image_url} alt="beer" />
+                <img src={beerDetails.image_url} height="200" alt="beer" />
             </div>
 
             <div>
-
-            </div>
-                <h3>{beerDetails.name}</h3>
+            <h3>{beerDetails.name}</h3>
                 <h6>{beerDetails.tagline}</h6>
                 <p>{beerDetails.first_brewed}</p>
                 <p>{beerDetails.attenuation_level}</p>
                 <p>{beerDetails.description}</p>
                 <p>{beerDetails.contributed_by}</p>
+            </div>
+                
             </div>
            
          

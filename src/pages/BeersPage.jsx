@@ -24,7 +24,7 @@ function BeersPage() {
         {beers.map((beer) => (
         <div key={beer._id} className="card" >
             <div className="beersImg">
-                <img src={beer.image_url} alt="beer" />
+                <img src={beer.image_url} height="200" alt="beer" />
             </div>
 
             <div className="beersDetail">
