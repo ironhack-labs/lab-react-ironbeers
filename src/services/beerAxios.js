@@ -15,6 +15,10 @@ class beerAxios {
         return this.axios.get(`/${id}`).then((response) => response.data)
     }
 
+    getRandomBeer() {
+        return this.axios.get('/random').then((response) => response.data)
+    }
+
 }
 
 export default beerAxios;
