@@ -30,10 +30,8 @@ export default function BeerList() {
 											<h2>{beer.name}</h2>
 											<p className="Beer-tag">{beer.tagline}</p>
 											<p className="Beer-created">
-												<strong>Created by:</strong>{" "}
-												{beer.contributed_by
-													.replace("<samjbmason>", "")
-													.replace("<AliSkinner>", "")}
+												<strong>Created by: </strong>
+												{beer.contributed_by}		
 											</p>
 										</div>
 									</div>

@@ -15,5 +15,11 @@ export const fetchRandomBeer = () =>
     .get("https://ih-beers-api2.herokuapp.com/beers/random")
     .then((randomBeers) => randomBeers)
 
-
+export const NewBeer = (data) => 
+  axios({
+      method: 'post',
+      url: 'https://ih-beers-api2.herokuapp.com/beers/new',
+      data: data
+    })
+    .then((beerAdd) => console.log('Success', beerAdd))
     

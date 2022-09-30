@@ -9,8 +9,8 @@ export default function HomeScreen() {
   return (
     <div>
         <BeerCard url='/beers' img={beers} title='All Beers'/>
-        <BeerCard url='/random-beer' img={randombeer} title='Random Beers'/>
-        <BeerCard url='/new-beer' img={newbeer} title='New Beers'/>
+        <BeerCard url='/beers/random' img={randombeer} title='Random Beers'/>
+        <BeerCard url='/beers/new' img={newbeer} title='New Beers'/>
     </div>
   )
 }
