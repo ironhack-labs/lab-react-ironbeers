@@ -15,7 +15,18 @@ export const fetchRandomBeer = () =>
   .get("https://ih-beers-api2.herokuapp.com/beers/random")
   .then(beerRandom => beerRandom)
 
-export const addBeer = () =>
-  axios
-  .post("https://ih-beers-api2.herokuapp.com/beers/new")
-  .then(message => "New beer successfully saved to database!")
+export const addBeer = (data) =>
+  axios({
+    method: 'post',
+    url: 'https://ih-beers-api2.herokuapp.com/beers/new',
+    data: data
+  })
+  .then(message => console.log("New beer successfully saved to database!"))
+
+  export const fetchSearchBeer = (searchText) =>
+  axios  ({
+    method: 'get',
+    url: `https://ih-beers-api2.herokuapp.com/beers/search?q=${searchText}`,
+    data: searchText
+  })
+  .then(beers => beers)
