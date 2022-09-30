@@ -1,0 +1,18 @@
+.Link-container a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.Link-container a img {
+    width: 100vw;
+}
+
+.Link-container a h2, p {
+    text-align: start;
+    padding: 15px;
+}
+
+.Link-container p {
+    color: grey;
+}

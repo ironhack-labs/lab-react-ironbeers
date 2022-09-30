@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar } from './components/misc/Navbar/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import HomeScreen from './screens/Home/HomeScreen';
+import BeersListScreen from './screens/BeersList/BeersListScreen';
+import BeerDetailScreen from './screens/BeerDetail/BeerDetailScreen';
+import RandomBeerScreen from './screens/RandomBeer/RandomBeerScreen';
+import NewBeerScreen from './screens/NewBeer/NewBeerScreen';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar></Navbar>
+
+      <div className="Screens-container">
+        <Routes>
+          <Route path="/" element={<HomeScreen />}></Route>
+          <Route path="/beers" element={<BeersListScreen />}></Route>
+          <Route path="/beers/:id" element={<BeerDetailScreen />}></Route>
+          <Route path="/random-beer" element={<RandomBeerScreen />}></Route>
+          <Route path="/new-beer" element={<NewBeerScreen/>}></Route>
+        </Routes>
+      </div>
     </div>
   );
 }
