@@ -1,8 +1,12 @@
 import React from "react";
+import BeerDetail from "../../components/BeerDetail/BeerDetail";
 
 function DetailScreen() {
   return ( 
-    <h1>Detail Screen</h1>
+    <div>
+      <h1>Beer details:</h1>
+      <BeerDetail/>
+    </div>
    );
 }
 
