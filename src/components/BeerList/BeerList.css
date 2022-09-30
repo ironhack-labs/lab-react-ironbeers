@@ -1,0 +1,36 @@
+.Beer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+    padding: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.Beer-img > img {
+    height: 220px;
+}
+
+.Beer-info  > h2{
+    list-style: none;
+    font-size: 45px;
+    color: black;
+    font-weight: 400;
+    
+}
+
+.Beer-tag {
+    font-size: 30px;
+    color: gray;
+    margin-top: -20px;
+}
+
+.Beer-created {
+    margin-top: -10px;
+    color: black;
+}
+
+.link {
+    text-decoration: none;
+}

@@ -1,0 +1,21 @@
+.Beer-Card-img {
+    width: 100%;
+}
+
+.Beer-Card p {
+    text-align: justify;
+    color: black;
+    margin-left: 40px;
+}
+
+.Beer-Card h1 {
+    text-align: justify;
+    color: black;
+    font-weight: 400;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.Beer-Card-link {
+    text-decoration: none
+}
