@@ -21,24 +21,30 @@ export default function BeerDetail() {
     }, [id])  
 
     return (
-        <div>
+        <div className="BeerDetail">
         {
             beer ? 
-                <div>
-                    <img src={beer.image_url} alt={beer.name} height="400px" />
-                    <div className="flex">
-                        <div>
-                            <h4>{beer.name}</h4>
-                            <h5>{beer.tagline}</h5>
+                <>
+                    <div className="beer-detail-top">
+                        <div className="beer-detail-top-image">
+                            <img src={beer.image_url} alt={beer.name} height="250px" />
                         </div>
-                        <div>
-                            <h4>{beer.attenuation_level}</h4>
-                            <h5>{beer.first_brewed}</h5>
+                        <div className="flex">
+                            <div>
+                                <h4>{beer.name}</h4>
+                                <h5>{beer.tagline}</h5>
+                            </div>
+                            <div>
+                                <h4>{beer.attenuation_level}</h4>
+                                <h5>{beer.first_brewed}</h5>
+                            </div>
                         </div>
                     </div>
-                    <p>{beer.description}</p>
-                    <p>{beer.contributed_by}</p>
-                </div>
+                    <div className="beer-detail-bottom">
+                        <p>{beer.description}</p>
+                        <small>{beer.contributed_by}</small>
+                    </div>
+                </>
             :
                 <p>Loading beer details...</p>
         }

@@ -1,12 +1,101 @@
-.App {
-  text-align: center;
-}
-
 .flex {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .Input {
   max-width: 600px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.Homecard img {
+  width: 100vw;
+  margin: 16px 0;
+}
+
+.Homecard h2 {
+  font-size: 22px;
+  margin-left: 16px;
+}
+
+.Homecard p {
+  font-size: 14px;
+  margin: 0 32px 16px 16px;
+}
+
+.BeersList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beers-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.beers-list-beer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin: 32px 0;
+  width: 80vw;
+}
+
+.beers-list-beer-img {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+}
+
+.beers-list-beer-details {
+  width: 200px;
+  padding: 10px 5px;
+}
+
+.beers-list-beer-details h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.beers-list-beer-details p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.beers-list-beer-details small {
+  font-size: 10px;
+}
+
+.BeerDetail {
+  padding: 22px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.beer-detail-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.BeerDetail h4, .BeerDetail h5 {
+  font-size: 16px;
+}
+
+.beer-detail-top-image {
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.beer-detail-bottom {
+  margin-top: 22px;
 }
