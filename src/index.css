@@ -1,13 +1,99 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* ----------------------------------------------------------------------------------- */
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+.home-container.container {
+  padding: 0 100px;
+}
+.home-link {
+  position: relative;
+  text-align: center;
+  margin-top: 10px;
+}
+.home-link img {
+  opacity: 0.6;
+  width: 75%;
+}
+.home-link:hover {
+  filter: grayscale(100%);
+}
+.home-link h3 {
+  position: absolute;
+  width: 75%;
+  top: 40%;
+  left: 12.5%;
+  color: white;
+  font-size: 2rem;
+  background-color: rgb(44, 48, 51);
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.header-navigation {
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgb(44, 48, 51);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+}
+.header-navigation i {
+  color: white;
+}
+
+.beer-list-container {
+  margin-top: 100px;
+}
+.beer-list-card.card {
+  width: 50%;
+  margin: 0 auto;
+}
+.beer-list-item.card-body {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.beer-list-item img {
+  height: 100px;
+  width: 40px;
+  /* width: 5%; */
+}
+.beer-list-item div {
+  width: 300px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.beer-details-container {
+  margin-top: 200px;
+}
+
+form {
+  margin-top: 200px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input {
+  width: 50%;
+  margin: 0 auto 20px auto;
+  height: 30px;
 }
