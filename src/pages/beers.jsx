@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import axios from "axios";
 import Beer from "../components/Beer";
+import "../styles/beers.css";
 
 function Beers() {
   const [data, setData] = useState([]);

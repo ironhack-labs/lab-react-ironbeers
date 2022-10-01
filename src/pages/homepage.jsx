@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import beersImg from "../assets/beers.png";
 import newBeerImg from "../assets/new-beer.png";
 import randomBeerImg from "../assets/random-beer.png";
+import "../styles/hompage.css";
 
 function Homepage() {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ function Homepage() {
           navigate(`/beers`);
         }}
       >
-        <img src={beersImg} alt="beers"></img>
+        <img class="hp-img" src={beersImg} alt="beers"></img>
         <div>
           <h2>All Beers</h2>
           <p>
@@ -30,7 +31,7 @@ function Homepage() {
           navigate(`/random-beer`);
         }}
       >
-        <img src={randomBeerImg} alt="beers"></img>
+        <img class="hp-img" src={randomBeerImg} alt="beers"></img>
         <div>
           <h2>Random Beer</h2>
           <p>
@@ -46,7 +47,7 @@ function Homepage() {
           navigate(`/new-beer`);
         }}
       >
-        <img src={newBeerImg} alt="beers"></img>
+        <img class="hp-img" src={newBeerImg} alt="beers"></img>
         <div>
           <h2>New Beer</h2>
           <p>
