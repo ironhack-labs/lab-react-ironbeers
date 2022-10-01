@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Beers from "./Pages/Beers/Beers";
 import RandomBeer from "./Pages/RandomBeer/RandomBeer";
 import NewBeer from "./Pages/NewBeer/NewBeer";
+import SingleBeer from "./Pages/SingleBeer/SingleBeer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/beers" element={<Beers />} />
         <Route path="/random-beer" element={<RandomBeer />} />
         <Route path="/new-beer" element={<NewBeer />} />
+        <Route path="/beers/:id" element={<SingleBeer />} />
       </Routes>
     </div>
   );

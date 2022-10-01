@@ -22,3 +22,13 @@ code {
   font-size: 50px;
   color: white;
 }
+
+.beer-info {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.beer-img {
+  height: 300px;
+}
