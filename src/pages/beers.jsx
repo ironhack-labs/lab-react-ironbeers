@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import axios from "axios";
-import SingleBeer from "../components/SingleBeer";
+import Beer from "../components/Beer";
 
 function Beers() {
   const [data, setData] = useState([]);
@@ -24,7 +24,7 @@ function Beers() {
       <div>All Beers</div>
       {data.map((beer) => {
         console.log("Beer: ", beer);
-        return <SingleBeer beerInfo={beer} />;
+        return <Beer beerInfo={beer} />;
       })}
     </div>
   );

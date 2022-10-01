@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function SingleBeer({ beerInfo }) {
+function Beer({ beerInfo }) {
   const { image_url, name, tagline, contributed_by, _id } = beerInfo;
   const navigate = useNavigate();
 
@@ -11,8 +11,8 @@ function SingleBeer({ beerInfo }) {
         navigate(`/beers/${_id}`);
       }}
     >
-      <div>
-        <img src={image_url} alt={name}></img>
+      <div style={{ height: "75px" }}>
+        <img style={{ height: "100%" }} src={image_url} alt={name}></img>
       </div>
       <div>
         <h2>{name}</h2>
@@ -23,4 +23,4 @@ function SingleBeer({ beerInfo }) {
   );
 }
 
-export default SingleBeer;
+export default Beer;
