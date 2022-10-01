@@ -4,15 +4,23 @@ import Beer from "../components/beer";
 
 function Beers() {
   const [beers, setBeers] = useState([]);
-  const [search, setSearch] = useState("");
   useEffect(() => {
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers")
-      .then((result) => {
-        setBeers(result.data);
+      .then((response) => {
+        setBeers(response.data);
       })
       .catch((error) => console.error(error));
   }, []);
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${value}`)
+      .then((response) => {
+        setBeers(response.data);
+      });
+  };
 
   return (
     <div>
@@ -23,16 +31,12 @@ function Beers() {
           name="search"
           id=""
           placeholder="Search da beers"
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={handleChange}
         />
       </form>
-      {beers
-        .filter((beer) =>
-          beer.name.toLowerCase().includes(search.toLowerCase())
-        )
-        .map((beer) => {
-          return <Beer {...beer} key={beer._id} />;
-        })}
+      {beers.map((beer) => {
+        return <Beer {...beer} key={beer._id} />;
+      })}
     </div>
   );
 }
