@@ -19,6 +19,15 @@ function NewBeer() {
       .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
       .then((result) => {
         console.log("New Beer about to be pushed: ", result);
+        setNewBeer({
+          name: "",
+          tagline: "",
+          description: "",
+          first_brewed: "",
+          brewers_tips: "",
+          attenuation_level: 0,
+          contributed_by: "",
+        });
       })
       .catch((err) => console.log("Got an error: ", err));
   };
@@ -31,6 +40,7 @@ function NewBeer() {
           <input
             type="text"
             placeholder="name"
+            value={newBeer.name}
             onChange={(evt) => {
               setNewBeer({ ...newBeer, name: evt.target.value });
             }}
@@ -39,6 +49,7 @@ function NewBeer() {
           <input
             type="text"
             placeholder="tagline"
+            value={newBeer.tagline}
             onChange={(evt) => {
               setNewBeer({ ...newBeer, tagline: evt.target.value });
             }}
@@ -47,6 +58,7 @@ function NewBeer() {
           <input
             type="text"
             placeholder="description"
+            value={newBeer.description}
             onChange={(evt) => {
               setNewBeer({ ...newBeer, description: evt.target.value });
             }}
@@ -55,6 +67,7 @@ function NewBeer() {
           <input
             type="text"
             placeholder="first brewed"
+            value={newBeer.first_brewed}
             onChange={(evt) => {
               setNewBeer({ ...newBeer, first_brewed: evt.target.value });
             }}
@@ -63,6 +76,7 @@ function NewBeer() {
           <input
             type="text"
             placeholder="brewers tips"
+            value={newBeer.brewers_tips}
             onChange={(evt) => {
               setNewBeer({ ...newBeer, brewers_tips: evt.target.value });
             }}
@@ -71,6 +85,7 @@ function NewBeer() {
           <input
             type="number"
             placeholder="attenuation level"
+            value={newBeer.attenuation_level}
             onChange={(evt) => {
               setNewBeer({ ...newBeer, attenuation_level: evt.target.value });
             }}
@@ -79,6 +94,7 @@ function NewBeer() {
           <input
             type="text"
             placeholder="contributed by"
+            value={newBeer.contributed_by}
             onChange={(evt) => {
               setNewBeer({ ...newBeer, contributed_by: evt.target.value });
             }}

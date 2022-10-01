@@ -11,13 +11,9 @@ function SingleBeer() {
 
   useEffect(() => {
     axios
-      .get("https://ih-beers-api2.herokuapp.com/beers")
+      .get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
       .then((result) => {
-        const { data } = result;
-        console.log("Result: ", data);
-        const singleBeer = data.find((e) => e._id === beerId);
-        console.log("Ein Bier: ", singleBeer);
-        setBeer(singleBeer);
+        setBeer(result.data);
       })
       .catch((err) => console.log("Error: ", err));
   }, [beerId]);

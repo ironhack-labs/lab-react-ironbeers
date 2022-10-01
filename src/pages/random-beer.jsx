@@ -9,12 +9,9 @@ function RandomBeer() {
 
   useEffect(() => {
     axios
-      .get("https://ih-beers-api2.herokuapp.com/beers")
+      .get("https://ih-beers-api2.herokuapp.com/beers/random")
       .then((result) => {
-        const { data } = result;
-        const randomIndex = Math.floor(Math.random() * (data.length - 1));
-        const randomBeer = data[randomIndex];
-        setBeer(randomBeer);
+        setBeer(result.data);
       })
       .catch((err) => console.log("Error: ", err));
   }, []);
