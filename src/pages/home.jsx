@@ -1,3 +1,4 @@
+import { isCursorAtEnd } from "@testing-library/user-event/dist/utils";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -30,7 +31,11 @@ function Home() {
     <section>
       {articles.map((item) => {
         return (
-          <article onClick={() => navigate(item.url)} key={item.title}>
+          <article
+            onClick={() => navigate(item.url)}
+            key={item.title}
+            style={{ cursor: "pointer" }}
+          >
             <img src={item.image} alt="beers" />
             <h1>{item.title}</h1>
             <p>
