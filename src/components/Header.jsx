@@ -5,17 +5,17 @@ function Header() {
     <div
       style={{
         background: "#47B5FF",
-        height: "40px",
+        height: "55px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginBottom: "1rem",
+        marginBottom: "2rem",
       }}
     >
       <Link to="/">
         <i
           class="fa fa-house"
-          style={{ color: "white", fontSize: "1.5rem" }}
+          style={{ color: "white", fontSize: "1.6rem" }}
         ></i>
       </Link>
     </div>

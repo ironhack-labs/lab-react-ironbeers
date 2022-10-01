@@ -47,7 +47,7 @@ function AllBeers() {
                     <h5 className="card-text text-muted">{beer.tagline}</h5>
                     <p style={{ fontSize: "0.8rem" }}>
                       <b>Created by: </b>
-                      {beer.name}
+                      {beer.contributed_by}
                     </p>
                   </div>
                 </div>

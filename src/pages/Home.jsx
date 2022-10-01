@@ -6,7 +6,7 @@ import newBeerImg from "../assets/new-beer.png";
 
 function Home() {
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="row my-3">
         <div className="col-md-4">
           <div className="card">
