@@ -20,7 +20,7 @@ function SingleBeer() {
         setBeer(singleBeer);
       })
       .catch((err) => console.log("Error: ", err));
-  }, []);
+  }, [beerId]);
 
   return (
     <div>
