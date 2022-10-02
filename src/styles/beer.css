@@ -36,6 +36,8 @@
 
 h2, h3, p {
     margin: 0;
+    padding: 0;
+    width: fit-content;
 }
 
 h3 {
@@ -43,7 +45,44 @@ h3 {
     margin: 10px 0 5px 0;
 }
 
+/* DETAILS PAGE */
+.beer-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
 
+.beer-detail > img {
+    height: 400px;
+}
+
+.info-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.beer-name {
+    font-size: 46px;
+}
+
+.attenuation {
+    font-size: 40px;
+    font-weight: bold;
+    color: #DCDCDC;
+}
+
+.description {
+    margin: 20px 0;
+}
+
+.contributor {
+    color: #808080;
+    font-weight: bold;
+}
+
+/* SCREEN */
 @media only screen and (min-width: 1000px) {
     .beer-list {
         display: flex;
