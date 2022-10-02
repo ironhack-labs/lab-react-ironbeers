@@ -7,17 +7,20 @@ function Beer({ beerInfo }) {
 
   return (
     <div
+      class="beer-card"
       onClick={() => {
         navigate(`/beers/${_id}`);
       }}
     >
-      <div style={{ height: "75px" }}>
-        <img style={{ height: "100%" }} src={image_url} alt={name}></img>
+      <div class="beer-img">
+        <img src={image_url} alt={name}></img>
       </div>
-      <div>
+      <div class="beer-info">
         <h2>{name}</h2>
         <h3>{tagline}</h3>
-        <p>Created by: {contributed_by}</p>
+        <p>
+          <strong>Created by:</strong> {contributed_by}
+        </p>
       </div>
     </div>
   );

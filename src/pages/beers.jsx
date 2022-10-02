@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import axios from "axios";
 import Beer from "../components/Beer";
-import "../styles/beers.css";
+import "../styles/beer.css";
 
 function Beers() {
   const [data, setData] = useState([]);
@@ -31,13 +31,17 @@ function Beers() {
   return (
     <div>
       <Navigation />
-      <h2>SEARCH</h2>
-      <input type="text" onChange={(e) => setSearch(e.target.value)}></input>
-      <hr />
-      <div>All Beers</div>
-      {data.map((beer) => {
-        return <Beer key={beer._id} beerInfo={beer} />;
-      })}
+      <input
+        class="search"
+        type="text"
+        placeholder="search..."
+        onChange={(e) => setSearch(e.target.value)}
+      ></input>
+      <div class="beer-list">
+        {data.map((beer) => {
+          return <Beer key={beer._id} beerInfo={beer} />;
+        })}
+      </div>
     </div>
   );
 }

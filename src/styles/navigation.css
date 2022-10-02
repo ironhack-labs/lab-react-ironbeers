@@ -8,5 +8,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #00CED1;
+    background-color: #61dafb;
+}
+
+.home-icon {
+    border-radius: 50%;
+    height: 50%;
 }
