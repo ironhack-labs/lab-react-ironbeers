@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import SearchBeer from './components/SearchBeer/SearchBeer';
 import DetailScreen from './screens/DetailScreen/DetailScreen';
 import FormScreen from './screens/FormScreen/FormScreen';
 import HomeScreen from './screens/HomeScreen/HomeScreen';
@@ -13,7 +12,6 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <SearchBeer className="mb-4"/>
       <Routes>
         <Route path='/' element={<HomeScreen/>}/>
         <Route path='/beers' element={<ListScreen/>}/>

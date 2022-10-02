@@ -7,17 +7,17 @@ import newBeer from '../../assets/new-beer.png';
 function HomeScreen() {
   return ( 
     <div className="container">
-      <div >
+      <div className="mb-8">
         <img src={beersPic} alt="beers"/>
         <p>hf w`pifvk `pi s´dfkñ `wgip mgv `wipegf skg w`p </p>
         <Link to="/beers">Go to beer's list</Link>
       </div>
-      <div >
+      <div className="mb-8">
         <img src={randomB} alt="random"/>
         <p>hf w`pifvk `pi s´dfkñ `wgip mgv `wipegf skg w`p </p>
         <Link to="/beers/random">Get random beer</Link>
       </div>
-      <div >
+      <div className="mb-8">
         <img src={newBeer} alt="new"/>
         <p>hf w`pifvk `pi s´dfkñ `wgip mgv `wipegf skg w`p </p>
         <Link to="/new">Create new beer</Link>
