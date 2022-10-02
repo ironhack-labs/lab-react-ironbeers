@@ -32,12 +32,12 @@ function Beers() {
     <div>
       <Navigation />
       <input
-        class="search"
+        className="search"
         type="text"
         placeholder="search..."
         onChange={(e) => setSearch(e.target.value)}
       ></input>
-      <div class="beer-list">
+      <div className="beer-list">
         {data.map((beer) => {
           return <Beer key={beer._id} beerInfo={beer} />;
         })}

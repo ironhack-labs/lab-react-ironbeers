@@ -8,7 +8,7 @@ function Navigation() {
   return (
     <header onClick={() => navigate("/")}>
       <nav>
-        <img class="home-icon" src={homeIcon} alt="home icon" />
+        <img className="home-icon" src={homeIcon} alt="home icon" />
       </nav>
     </header>
   );

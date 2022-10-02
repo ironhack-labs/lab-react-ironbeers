@@ -7,15 +7,15 @@ function Beer({ beerInfo }) {
 
   return (
     <div
-      class="beer-card"
+      className="beer-card"
       onClick={() => {
         navigate(`/beers/${_id}`);
       }}
     >
-      <div class="beer-img">
+      <div className="beer-img">
         <img src={image_url} alt={name}></img>
       </div>
-      <div class="beer-info">
+      <div className="beer-info">
         <h2>{name}</h2>
         <h3>{tagline}</h3>
         <p>

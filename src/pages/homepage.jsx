@@ -15,7 +15,7 @@ function Homepage() {
           navigate(`/beers`);
         }}
       >
-        <img class="hp-img" src={beersImg} alt="beers"></img>
+        <img className="hp-img" src={beersImg} alt="beers"></img>
         <div>
           <h2>All Beers</h2>
           <p>
@@ -31,7 +31,7 @@ function Homepage() {
           navigate(`/random-beer`);
         }}
       >
-        <img class="hp-img" src={randomBeerImg} alt="beers"></img>
+        <img className="hp-img" src={randomBeerImg} alt="beers"></img>
         <div>
           <h2>Random Beer</h2>
           <p>
@@ -47,7 +47,7 @@ function Homepage() {
           navigate(`/new-beer`);
         }}
       >
-        <img class="hp-img" src={newBeerImg} alt="beers"></img>
+        <img className="hp-img" src={newBeerImg} alt="beers"></img>
         <div>
           <h2>New Beer</h2>
           <p>

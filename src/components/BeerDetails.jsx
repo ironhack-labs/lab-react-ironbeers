@@ -10,21 +10,21 @@ function BeerDetails({ beerInfo }) {
   } = beerInfo;
 
   return (
-    <article class="beer-detail">
+    <article className="beer-detail">
       <img src={image_url} alt={name} />
       <div>
-        <div class="info-details">
-          <h2 class="beer-name">{name}</h2>
-          <p class="attenuation">{attenuation_level}</p>
+        <div className="info-details">
+          <h2 className="beer-name">{name}</h2>
+          <p className="attenuation">{attenuation_level}</p>
         </div>
-        <div class="info-details">
+        <div className="info-details">
           <h3>{tagline}</h3>
           <p>
             <strong>{first_brewed}</strong>
           </p>
         </div>
-        <div class="description">{description}</div>
-        <div class="contributor">{contributed_by}</div>
+        <div className="description">{description}</div>
+        <div className="contributor">{contributed_by}</div>
       </div>
     </article>
   );

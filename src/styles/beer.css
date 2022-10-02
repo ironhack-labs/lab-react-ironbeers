@@ -51,6 +51,8 @@ h3 {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin: auto;
+    max-width: 1000px;
 }
 
 .beer-detail > img {
