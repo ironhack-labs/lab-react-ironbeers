@@ -1,7 +1,10 @@
+import {Link} from 'react-router-dom'
+
 const Header = () => {
     return (
-        <div>
-            <p> &#x2302;</p>
+        <div className="header">
+            <Link style={{textDecoration: 'none', color: 'white'}} to='/'>&#x2302;</Link>
+            
         </div>
     )
 }

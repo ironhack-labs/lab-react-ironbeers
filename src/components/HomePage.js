@@ -1,9 +1,7 @@
-import {Link,Routes,Route} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import allBeers from '../assets/beers.png'
 import randomBeer from '../assets/random-beer.png'
 import newBeer from '../assets/new-beer.png'
-import Header from './Header'
-
 const HomePage = () => {
     return (
         <div>

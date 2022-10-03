@@ -17,3 +17,76 @@ code {
   color: black;
   margin-bottom: 3%;
 }
+.header{
+  font-size: 3em;
+  text-align: center;
+  background-color: #3CC3FC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+  margin-top: 1%
+}
+.all-beer{
+  display: flex;
+  justify-content: flex-start;
+  margin: 5% 0 0 5%
+}
+.all-beer-image{
+  height: 150px
+}
+.all-beer-info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%
+}
+.all-beer-info h4{
+  color: #959595;
+}
+.detail{
+  display:flex;
+  flex-direction: column;
+  margin: 5%
+}
+.single-beer-image{
+  width: 20%;
+  align-self: center;
+}
+.beer-row{
+  display:flex;
+  justify-content: space-between;
+}
+.beer-col{
+  display: flex;
+  flex-direction: column;
+}
+.beer-form div,
+.beer-form button{
+  display:flex;
+  flex-direction: column;
+  margin: 5%;
+}
+.beer-form label{
+  font-weight: bolder;
+  margin-left: 5%;
+}
+.beer-form input,
+.beer-description{
+  border: 1px solid #959595;
+  border-radius: 12px;
+  font-size: 1em;
+  padding: 3%;
+}
+.beer-description{
+  height: 200px
+}
+.add-button{
+  background-color: #3CC3FC;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 3% 30%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
