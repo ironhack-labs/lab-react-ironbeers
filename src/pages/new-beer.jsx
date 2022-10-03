@@ -21,7 +21,7 @@ function NewBeer() {
       .then((result) => {
         console.log("New Beer about to be pushed: ", result);
         setNewBeer({
-          id: "",
+          name: "",
           tagline: "",
           description: "",
           first_brewed: "",
@@ -43,9 +43,9 @@ function NewBeer() {
             <input
               type="text"
               id="name"
-              value={newBeer.id}
+              // value={newBeer.name}
               onChange={(evt) => {
-                setNewBeer({ ...newBeer, id: evt.target.value });
+                setNewBeer({ ...newBeer, name: evt.target.value });
               }}
             />
           </div>
@@ -55,7 +55,7 @@ function NewBeer() {
             <input
               type="text"
               id="tagline"
-              value={newBeer.tagline}
+              // value={newBeer.tagline}
               onChange={(evt) => {
                 setNewBeer({ ...newBeer, tagline: evt.target.value });
               }}
@@ -68,7 +68,7 @@ function NewBeer() {
               type="text"
               id="description"
               rows="10"
-              value={newBeer.description}
+              // value={newBeer.description}
               onChange={(evt) => {
                 setNewBeer({ ...newBeer, description: evt.target.value });
               }}
@@ -80,7 +80,7 @@ function NewBeer() {
             <input
               type="text"
               id="firstBrewed"
-              value={newBeer.first_brewed}
+              // value={newBeer.first_brewed}
               onChange={(evt) => {
                 setNewBeer({ ...newBeer, first_brewed: evt.target.value });
               }}
@@ -92,7 +92,7 @@ function NewBeer() {
             <input
               type="text"
               id="brewersTips"
-              value={newBeer.brewers_tips}
+              // value={newBeer.brewers_tips}
               onChange={(evt) => {
                 setNewBeer({ ...newBeer, brewers_tips: evt.target.value });
               }}
@@ -104,7 +104,7 @@ function NewBeer() {
             <input
               type="number"
               id="attenuation"
-              value={newBeer.attenuation_level}
+              // value={newBeer.attenuation_level}
               onChange={(evt) => {
                 setNewBeer({ ...newBeer, attenuation_level: evt.target.value });
               }}
@@ -116,7 +116,7 @@ function NewBeer() {
             <input
               type="text"
               id="contributor"
-              value={newBeer.contributed_by}
+              // value={newBeer.contributed_by}
               onChange={(evt) => {
                 setNewBeer({ ...newBeer, contributed_by: evt.target.value });
               }}
