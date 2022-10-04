@@ -27,8 +27,27 @@ code {
   display: flex;
   flex-direction: row;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 
 .beer-img {
   height: 300px;
+}
+
+.beer-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.routes-container {
+  position: absolute;
+  left: 500px;
+  top: 50px;
+}
+
+.beer-description {
+  max-width: 500px;
 }
