@@ -51,3 +51,7 @@ code {
 .beer-description {
   max-width: 500px;
 }
+
+.description-to-beers {
+  max-width: 800px;
+}

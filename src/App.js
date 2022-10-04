@@ -9,6 +9,7 @@ import axios from "axios";
 
 function App() {
   const [beerData, setBeerData] = useState([]);
+  const [randomBeer, setRandomBeer] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -27,6 +28,23 @@ function App() {
         setIsLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    setIsLoading(true);
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+      .then((result) => {
+        setRandomBeer(result.data);
+      })
+      .catch((err) => {
+        setIsError(true);
+        console.log(err);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+
   if (isLoading) {
     return <div>Getting the data...</div>;
   }
@@ -41,7 +59,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/beers" element={<Beers beerData={beerData} />} />
-          <Route path="/random-beer" element={<RandomBeer />} />
+          <Route
+            path="/random-beer"
+            element={<RandomBeer randomBeer={randomBeer} />}
+          />
           <Route path="/new-beer" element={<NewBeer />} />
           <Route
             path="/beers/:id"

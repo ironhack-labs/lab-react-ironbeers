@@ -13,7 +13,7 @@ const Homepage = () => {
           <img src={BeerImg} alt="beer" />
           <h2>All Beers</h2>
         </Link>
-        <p>
+        <p className="description-to-beers">
           Veniam minim ex minim nostrud non Lorem laborum sit Lorem aliquip
           eiusmod aliquip labore. Do sunt dolore esse ad dolor eiusmod ut id.
           Duis laborum est dolor officia nostrud amet eiusmod in incididunt.
@@ -27,7 +27,7 @@ const Homepage = () => {
           <img src={RandombeerImg} alt="random-beer" />
           <h2>Random Beer</h2>
         </Link>
-        <p>
+        <p className="description-to-beers">
           Velit velit cillum ea dolor tempor non. Cillum veniam non sit commodo
           laborum eu. Aliqua tempor voluptate sunt Lorem voluptate proident
           excepteur nostrud nulla velit ea commodo.
@@ -39,7 +39,7 @@ const Homepage = () => {
           <img src={NewbeerImg} alt="new-beer" />
           <h2>New beer</h2>
         </Link>
-        <p>
+        <p className="description-to-beers">
           Nostrud Lorem quis ex esse deserunt adipisicing irure. Commodo est
           tempor Lorem amet aliqua sint. Ea commodo eu proident ad eu. Excepteur
           id nostrud elit excepteur aliqua anim tempor in in ea voluptate minim.
