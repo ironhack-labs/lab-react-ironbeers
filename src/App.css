@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.form {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  font-weight: bolder;
+
+}
+
+.input {
+  width: 20%;
+  box-sizing: border-box;
+  height: 2rem;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  border: 2px solid #ccc;
+}
+
+.textarea {
+  width: 20%;
+  height: 150px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  resize: none;
+}
