@@ -32,6 +32,7 @@ code {
 }
 
 .beer-img {
+  padding-top: 50px;
   height: 300px;
 }
 
@@ -54,4 +55,19 @@ code {
 
 .description-to-beers {
   max-width: 800px;
+}
+
+.beer-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
 }

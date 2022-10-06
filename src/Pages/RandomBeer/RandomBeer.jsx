@@ -7,7 +7,7 @@ const RandomBeer = ({ randomBeer }) => {
       <Header />
       <div className="beer-detail-container">
         <div className="beer-detail-info">
-          <div key={randomBeer._id}>
+          <div key={randomBeer._id} className="beer-detail">
             <img
               src={randomBeer.image_url}
               alt="single-beer"
