@@ -1,13 +1,13 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 
-const Beer = (props) => {
-  const [beer, setBeer] = useState(null);
-  const { beerId } = useParams();
 
-  const getPost = () => {         
+function Beer (props) {
+  const [beer, setBeer] = useState(null);
+  const { beerId } = useParams();  
+
+  const getBeer = () => {        
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers")
       .then((response) => {
@@ -16,32 +16,35 @@ const Beer = (props) => {
       })
       .catch((error) => console.log(error));
   };
-  
-  
-  useEffect(()=> {               
-    getPost();
+  useEffect(()=> {                
+    getBeer();
   }, [] );
- 
 
+ 
+  
   return (
-      <div>
+    <div className="">
       {beer && (
         <>
-          <div>
-              <img src={beer.image} alt="beer" className="beer-img" />
-            </div>
-            <div>
-              <h3>{beer.name}</h3>
-              <p>{beer.tagline}</p>
-              <p>{beer.first_brewed}</p>
-              <p>{beer.attenuation_level}</p>
-              <p>{beer.description}</p>
-              <p>{beer.contributed_by}</p>
-            </div>
+        <div className="card-single">
+          <div className="image">
+            <img src={beer.image} width={50} height={100}></img>
+          </div>
+          <div className="content">
+            <h2>{beer.name}</h2>
+            <em>{beer.tagline}</em>
+            <i>{beer.first_brewed}</i>
+            <p>{beer.attenuation_level}</p>
+            <p>{beer.description}</p>
+            <p>{beer.contributed_by}</p>
+          </div>
+        </div>
+       
         </>
       )}
-      </div>
-        );
-};
+
+    </div>
+  );
+}
 
 export default Beer;
