@@ -1,8 +1,17 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Header from "../components/header";
 
-function RandomBeer({ beerData, isLoading, isError }) {
+function SingleBeer({ beerData, isLoading, isError }) {
   // console.log(beerData);
+  const { id } = useParams();
+  // console.log(id);
+
+  const singleBeer = beerData.filter((beer) => {
+    return beer._id === id;
+  });
+
+  console.log("singleBeer: ", singleBeer);
 
   if (isLoading) {
     return (
@@ -35,32 +44,25 @@ function RandomBeer({ beerData, isLoading, isError }) {
   }
 
   if (!isLoading) {
-    // setTimeout(() => {}, 1000);
-
-    const randomIndex = Math.floor(Math.random() * beerData.length);
-    console.log(randomIndex);
-    const randomBeerData = beerData[randomIndex];
-    console.log(randomBeerData);
-
     return (
       <div>
         <div>
           <Header />
         </div>
         <div className="beerImg">
-          <img src={randomBeerData.image_url} alt="yummy beer"></img>
+          <img src={singleBeer[0].image_url} alt="yummy beer"></img>
         </div>
         <div className="beerDescription">
-          <h2>{randomBeerData.name}</h2>
-          <p>{randomBeerData.attenuation_level}</p>
-          <p>{randomBeerData.tagline}</p>
-          <p>{randomBeerData.first_brewed}</p>
-          <p>{randomBeerData.description}</p>
-          <p>{randomBeerData.contributed_by}</p>
+          <h2>{singleBeer[0].name}</h2>
+          <p>{singleBeer[0].attenuation_level}</p>
+          <p>{singleBeer[0].tagline}</p>
+          <p>{singleBeer[0].first_brewed}</p>
+          <p>{singleBeer[0].description}</p>
+          <p>{singleBeer[0].contributed_by}</p>
         </div>
       </div>
     );
   }
 }
 
-export default RandomBeer;
+export default SingleBeer;

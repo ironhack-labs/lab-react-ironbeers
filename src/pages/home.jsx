@@ -25,7 +25,7 @@ function Home() {
             <img src={randomBeer} alt="Random Beeeeers"></img>
           </div>
           <div>
-            <h3>Random Beers</h3>
+            <h3>Random Beer</h3>
             <p>Lorem ipsum tu vieja</p>
           </div>
         </Link>

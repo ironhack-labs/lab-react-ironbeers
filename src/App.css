@@ -45,3 +45,41 @@
   font-size: 1.5rem;
   color: white
 }
+
+.beerMainDiv {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer
+}
+
+.beerImg {
+  max-height: 300px
+}
+
+.beerImg img {
+  height: 200px;
+  margin-right: 30px;
+/* width: 0px; */
+/* transform: scale(0.5); */
+/* aspect-ratio: auto;  */
+/* object-fit: contain */
+
+}
+
+.beersDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.beerDescription {
+ display: flex;
+ flex-direction: column;
+ 
+}
+
+.beerTaglineP {
+  max-width: 275px;
+  text-overflow: clip;
+}
