@@ -10,7 +10,6 @@ const RandomBeer = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log("beer", beer);
   const {
     name,
     tagline,
@@ -20,11 +19,12 @@ const RandomBeer = () => {
     contributed_by,
     image_url,
   } = beer;
-  
+
   return (
     <div style={{ width: "50%", margin: "0 auto" }}>
       <img
-        style={{ maxHeight: "300px", margin: "15px" }}
+        style={{ margin: "15px" }}
+        height="300"
         src={image_url}
         alt=""
       />
