@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Header from "../components/header";
 
 function Newbeer() {
   const [newBeer, setNewBeer] = useState({});
 
   function handleChange(e) {
-    console.log(e);
+    // console.log(e);
     const { name, value } = e.target;
 
     setNewBeer({ ...newBeer, [name]: value });
@@ -14,7 +15,7 @@ function Newbeer() {
   function submitBeer(e) {
     e.preventDefault();
 
-    console.log({ newBeer });
+    // console.log({ newBeer });
 
     axios
       .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
@@ -27,74 +28,97 @@ function Newbeer() {
   }
 
   return (
-    <div>
-      <h1>New beer</h1>
+    <div className="beerFormDaddy">
+      <Header />
 
-      <form onSubmit={submitBeer}>
+      <form className="beerFormMain" onSubmit={submitBeer}>
         <label>
-          Name
+          <b>Name</b>
+          <br />
           <input
+            className="createBeerInput"
             type="text"
             name="name"
             onChange={handleChange}
             value={newBeer.name}
           />
         </label>
+        <br />
         <label>
-          Tagline
+          <b>Tagline</b>
+          <br />
           <input
+            className="createBeerInput"
             type="text"
             name="tagline"
             onChange={handleChange}
             value={newBeer.tagline}
           />
         </label>
+        <br />
         <label>
-          Description
+          <b>Description</b>
+          <br />
           <input
+            className="createBeerDescriptionInput"
             type="text"
             name="description"
             onChange={handleChange}
             value={newBeer.description}
           />
         </label>
+        <br />
         <label>
-          First Brewed
+          <b>First Brewed</b>
+          <br />
           <input
+            className="createBeerInput"
             type="text"
             name="firstBrewed"
             onChange={handleChange}
             value={newBeer.firstBrewed}
           />
         </label>
+        <br />
         <label>
-          Brewers Tips
+          <b>Brewers Tips</b>
+          <br />
           <input
+            className="createBeerInput"
             type="text"
             name="brewersTips"
             onChange={handleChange}
             value={newBeer.brewersTips}
           />
         </label>
+        <br />
         <label>
-          Attenuation Level
+          <b>Attenuation Level</b>
+          <br />
           <input
+            className="createBeerInput"
             type="number"
             name="attenuationLevel"
             onChange={handleChange}
             value={newBeer.attenueationLevel}
           />
         </label>
+        <br />
         <label>
-          Contributed By
+          <b>Contributed By</b>
+          <br />
           <input
+            className="createBeerInput"
             type="text"
             name="contributedBy"
             onChange={handleChange}
             value={newBeer.contributedBy}
           />
         </label>
-        <button type="submit">ADD NEW</button>
+        <br />
+        <button className="formButton" type="submit">
+          ADD NEW
+        </button>
       </form>
     </div>
   );

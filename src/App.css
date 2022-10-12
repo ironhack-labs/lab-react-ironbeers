@@ -1,3 +1,60 @@
+/*** CSS RESET ***/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/*** END OF RESET ***/
+
 .App {
   text-align: center;
 }
@@ -37,23 +94,71 @@
   }
 }
 
+/* HOMEPAGE */ 
+
+.mainHomeDiv {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+}
+
+.mainLink {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainInnerText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NAVBAR */
 .navNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
   background-color:#61dafb
 }
 
 .navHouse {
-  font-size: 1.5rem;
-  color: white
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
 }
+
+/* ALL BEERS */
 
 .beerMainDiv {
   display: flex;
   flex-direction: row;
-  cursor: pointer
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  width: 560px;
+  border: 1px solid rgb(228, 226, 226);
+  padding: 12px;
 }
 
 .beerImg {
-  max-height: 300px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 300px;
+  width: 150px;
 }
 
 .beerImg img {
@@ -76,10 +181,101 @@
 .beerDescription {
  display: flex;
  flex-direction: column;
- 
+ justify-content: center;
+ align-items: flex-start;
 }
 
 .beerTaglineP {
   max-width: 275px;
   text-overflow: clip;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* SINGLE BEER*/
+
+.singleBeerMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 64px 12px;
+  border: solid 1px rgb(228, 226, 226);
+}
+
+
+.singleBeerDescription {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.singleBeerLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.singleBeerDescriptionP {
+  display: flex;
+  justify-content: flex-start;
+  text-align:left;
+  font-weight: 500;
+}
+
+/* CREATE A NEW BEER */
+
+.beerFormDaddy{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.beerFormDaddy nav {
+  width: 100%;
+}
+
+.beerFormMain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  width: 500px;
+}
+
+.beerFormMain label {
+  text-align: left;
+  text-indent: 24px;
+  width: 100%;
+}
+
+.createBeerInput {
+  width: 100%;
+  border-radius: 25px;
+  border: solid 2px rgb(228, 226, 226);
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.createBeerDescriptionInput{
+  width: 500px;
+  border-radius: 25px;
+  border: solid 2px rgb(228, 226, 226);
+  padding: 10px;
+  margin-bottom: 24px;
+  height: 300px;
+}
+
+.formButton{
+  border-radius: 25px;
+  width: 100%;
+  color: #fff;
+  background-color:#61dafb;
+  border-style: none;
+  padding: 12px;
 }

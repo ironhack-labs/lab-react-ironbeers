@@ -38,29 +38,111 @@ function RandomBeer({ beerData, isLoading, isError }) {
     // setTimeout(() => {}, 1000);
 
     const randomIndex = Math.floor(Math.random() * beerData.length);
-    console.log(randomIndex);
+    // console.log(randomIndex);
     const randomBeerData = beerData[randomIndex];
-    console.log(randomBeerData);
+    // console.log(randomBeerData);
 
     return (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
         <div>
           <Header />
         </div>
-        <div className="beerImg">
-          <img src={randomBeerData.image_url} alt="yummy beer"></img>
-        </div>
-        <div className="beerDescription">
-          <h2>{randomBeerData.name}</h2>
-          <p>{randomBeerData.attenuation_level}</p>
-          <p>{randomBeerData.tagline}</p>
-          <p>{randomBeerData.first_brewed}</p>
-          <p>{randomBeerData.description}</p>
-          <p>{randomBeerData.contributed_by}</p>
+        <div className="singleBeerMainDiv">
+          <div className="beerImg" style={{ marginBottom: "40px" }}>
+            <img
+              style={{ height: "300px" }}
+              src={randomBeerData.image_url}
+              alt="yummy beer"
+            ></img>
+          </div>
+          <div className="singleBeerDescription">
+            <div className="singleBeerLine">
+              <h2>{randomBeerData.name}</h2>
+              <p style={{ fontSize: "2rem", color: "#aaa" }}>
+                {randomBeerData.attenuation_level}
+              </p>
+            </div>
+            <div className="singleBeerLine">
+              <p
+                style={{
+                  fontSize: "1.25rem",
+                  color: "#aaa",
+                  fontWeight: "500",
+                }}
+              >
+                {randomBeerData.tagline}
+              </p>
+              <p>
+                <b>{randomBeerData.first_brewed}</b>
+              </p>
+            </div>
+            <p className="singleBeerDescriptionP">
+              {randomBeerData.description}
+            </p>
+            <p style={{ textAlign: "left", color: "#aaa", fontWeight: "500" }}>
+              {randomBeerData.contributed_by}
+            </p>
+          </div>
         </div>
       </div>
     );
   }
 }
-
+/*
+<div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        <div>
+          <Header />
+        </div>
+        <div className="singleBeerMainDiv">
+          <div className="beerImg" style={{ marginBottom: "40px" }}>
+            <img
+              style={{ height: "300px" }}
+              src={randomBeerData.image_url}
+              alt="yummy beer"
+            ></img>
+          </div>
+          <div className="singleBeerDescription">
+            <div className="singleBeerLine">
+              <h2>{randomBeerData.name}</h2>
+              <p style={{ fontSize: "2rem", color: "#aaa" }}>
+                {randomBeerData.attenuation_level}
+              </p>
+            </div>
+            <div className="singleBeerLine">
+              <p
+                style={{
+                  fontSize: "1.25rem",
+                  color: "#aaa",
+                  fontWeight: "500",
+                }}
+              >
+                {randomBeerData.tagline}
+              </p>
+              <p>
+                <b>{randomBeerData.first_brewed}</b>
+              </p>
+            </div>
+            <p className="singleBeerDescriptionP">
+              {randomBeerData.description}
+            </p>
+            <p style={{ textAlign: "left", color: "#aaa", fontWeight: "500" }}>
+              {randomBeerData.contributed_by}
+            </p>
+          </div>
+        </div>
+      </div>
+    
+*/
 export default RandomBeer;

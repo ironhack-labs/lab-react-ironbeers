@@ -1,12 +1,11 @@
 import React from "react";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function BeerInfo({ beer }) {
   const navigate = useNavigate();
   return (
     <div
-      className="beerMainDiv"
+      className="beerMainDiv "
       onClick={() => {
         navigate(`/beers/${beer._id}`);
       }}
@@ -17,7 +16,7 @@ function BeerInfo({ beer }) {
       <div className="beerDescription">
         <h4>{beer.name}</h4>
         <p className="beerTaglineP">{beer.tagline}</p>
-        <p>{beer.contributed_by}</p>
+        <p>Created by: {beer.contributed_by}</p>
       </div>
     </div>
   );

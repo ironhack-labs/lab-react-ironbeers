@@ -1,21 +1,20 @@
 import "./App.css";
 import Home from "./pages/home";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Beers from "./pages/beers";
 import RandomBeer from "./pages/random-beer";
 import Newbeer from "./pages/new-beer";
 import SingleBeer from "./pages/single-beer";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   const [beerData, setBeerData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
-  const navigate = useNavigate();
-
-  console.log("App is renderin");
+  // console.log("App is renderin");
 
   useEffect(() => {
     setIsLoading(true);

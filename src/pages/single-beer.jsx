@@ -11,7 +11,7 @@ function SingleBeer({ beerData, isLoading, isError }) {
     return beer._id === id;
   });
 
-  console.log("singleBeer: ", singleBeer);
+  // console.log("singleBeer: ", singleBeer);
 
   if (isLoading) {
     return (
@@ -45,20 +45,52 @@ function SingleBeer({ beerData, isLoading, isError }) {
 
   if (!isLoading) {
     return (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
         <div>
           <Header />
         </div>
-        <div className="beerImg">
-          <img src={singleBeer[0].image_url} alt="yummy beer"></img>
-        </div>
-        <div className="beerDescription">
-          <h2>{singleBeer[0].name}</h2>
-          <p>{singleBeer[0].attenuation_level}</p>
-          <p>{singleBeer[0].tagline}</p>
-          <p>{singleBeer[0].first_brewed}</p>
-          <p>{singleBeer[0].description}</p>
-          <p>{singleBeer[0].contributed_by}</p>
+        <div className="singleBeerMainDiv">
+          <div className="beerImg" style={{ marginBottom: "40px" }}>
+            <img
+              style={{ height: "300px" }}
+              src={singleBeer[0].image_url}
+              alt="yummy beer"
+            ></img>
+          </div>
+          <div className="singleBeerDescription">
+            <div className="singleBeerLine">
+              <h2>{singleBeer[0].name}</h2>
+              <p style={{ fontSize: "2rem", color: "#aaa" }}>
+                {singleBeer[0].attenuation_level}
+              </p>
+            </div>
+            <div className="singleBeerLine">
+              <p
+                style={{
+                  fontSize: "1.25rem",
+                  color: "#aaa",
+                  fontWeight: "500",
+                }}
+              >
+                {singleBeer[0].tagline}
+              </p>
+              <p>
+                <b>{singleBeer[0].first_brewed}</b>
+              </p>
+            </div>
+            <p className="singleBeerDescriptionP">
+              {singleBeer[0].description}
+            </p>
+            <p style={{ textAlign: "left", color: "#aaa", fontWeight: "500" }}>
+              {singleBeer[0].contributed_by}
+            </p>
+          </div>
         </div>
       </div>
     );
