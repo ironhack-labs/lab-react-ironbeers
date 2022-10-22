@@ -5,27 +5,381 @@
 }
 
 @media (max-width: 415px) {
-  .Home{
+  .Home {
     color: rgb(17, 144, 17);
     display: flex;
     flex-direction: column;
   }
-  
-  .homepageImage{
+
+  .homepageImage {
     max-width: 400px;
     flex-direction: column;
     border: 1px solid black;
   }
 
-  .homepageLink{
+  .homepageLink {
     text-decoration: none;
     color: black;
     font-weight: 500;
   }
 
-  .homepageText{
+  .homepageText {
     color: black;
     font-style: italic;
   }
+
+  .NewBeer {
+    display: flex;
+    flex-direction: row;
+    max-width: 415px;
+  }
+
+  .newBeerForm input {
+    margin: 5px;
+    border-radius: 5px;
+    border: 0.5px solid grey;
+    max-width: 300px;
+  }
+
+  .newBeerForm button {
+    margin: 5px;
+    border-radius: 5px;
+    border: 0.5px solid grey;
+    width: 300px;
+    padding: 5px;
+    background-color: rgb(70, 186, 244);
+    color: white;
+  }
+
+  .formField {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerIcon {
+    max-width: 400px;
+  }
+
+  .ListBeers {
+    width: 415px;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .beerImage {
+    max-width: 200px;
+    max-height: 190px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .beerText {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+
+  .eachBeer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tagline {
+    font-style: italic;
+    color: darkgray;
+  }
+
+  .SingleBeer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 415px;
+  }
+  .SingleBeer img {
+    max-width: 150px;
+    max-height: auto;
+    margin: auto;
+    padding: auto;
+  }
+
+  .singleBeerInfo1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .singleBeerInfo2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .singleBeerInfo2 h3 {
+    color: grey;
+    font-style: italic;
+  }
+
+  .singlebeerText {
+    margin: 0 10px;
+  }
 }
 
+/* tablet size */
+
+@media (min-width: 415px) and (max-width: 715px) {
+  .Home {
+    color: rgb(17, 144, 17);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homepageImage {
+    max-width: 700px;
+    flex-direction: column;
+    border: 1px solid black;
+  }
+
+  .homepageLink {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+
+  .homepageText {
+    color: black;
+    font-style: italic;
+  }
+
+  .NewBeer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 715px;
+  }
+
+  .newBeerForm input {
+    margin: 5px;
+    border-radius: 5px;
+    border: 0.5px solid grey;
+    max-width: 515px;
+  }
+
+  .newBeerForm button {
+    margin: 5px;
+    border-radius: 5px;
+    border: 0.5px solid grey;
+    width: 515px;
+    padding: 5px;
+    background-color: rgb(70, 186, 244);
+    color: white;
+  }
+
+  .formField {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerIcon {
+    max-width: 715px;
+  }
+
+  .ListBeers {
+    width: 715px;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .beerImage {
+    max-width: 400px;
+    max-height: 190px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .beerText {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .eachBeer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tagline {
+    font-style: italic;
+    color: darkgray;
+  }
+
+  .SingleBeer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 715px;
+  }
+  .SingleBeer img {
+    max-width: 450px;
+    max-height: auto;
+    margin: auto;
+    padding: auto;
+  }
+
+  .singleBeerInfo1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .singleBeerInfo2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .singleBeerInfo2 h3 {
+    color: grey;
+    font-style: italic;
+  }
+
+  .singlebeerText {
+    margin: 0 10px;
+  }
+}
+
+/* largescreen */
+
+@media (min-width: 715px) {
+  .Home {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .homepageImage {
+    flex-direction: column;
+    border: 1px solid black;
+    max-width: 500px;
+  }
+
+  .homeOption {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+  }
+  .homeOptionText {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homepageLink {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+
+  .homepageText {
+    color: black;
+    font-style: italic;
+  }
+
+  .NewBeer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .newBeerForm input {
+    margin: 5px;
+    border-radius: 5px;
+    border: 0.5px solid grey;
+    max-width: 515px;
+  }
+
+  .newBeerForm button {
+    margin: 5px;
+    border-radius: 5px;
+    border: 0.5px solid grey;
+    width: 515px;
+    padding: 5px;
+    background-color: rgb(70, 186, 244);
+    color: white;
+  }
+
+  .formField {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerIcon {
+    width: 600px;
+    height: 90px;
+    margin-bottom: 20px;
+  }
+
+  .headerinFull {
+    display: flex;
+    justify-content: center;
+  }
+
+  .listUnderHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .beerImage {
+    max-width: 300px;
+    max-height: 190px;
+    margin: 0px 50px;
+    padding: 20px;
+  }
+
+  .beerText {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .eachBeer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+  }
+
+  .tagline {
+    font-style: italic;
+    color: darkgray;
+  }
+
+  .SingleBeer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .SingleBeer img {
+    max-width: 450px;
+    max-height: 200px;
+    margin: auto;
+    padding: auto;
+  }
+
+  .singleBeerInfo1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .singleBeerInfo2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .singleBeerInfo2 h3 {
+    color: grey;
+    font-style: italic;
+  }
+
+  .singlebeerText {
+    margin: 0 10px;
+  }
+}
