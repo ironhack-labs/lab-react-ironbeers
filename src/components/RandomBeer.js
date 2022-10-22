@@ -19,7 +19,13 @@ useEffect(()=>{
         <div>
             <Header/>
             <h1>Some Random Beer:</h1>
-            <p> {randomBeer.name}</p>
+            <img src={randomBeer.image_url} alt="beer"/>
+            <p>{randomBeer.name}</p>
+            <p>{randomBeer.tagline}</p>
+            <p>{randomBeer.first_brewed}</p>
+            <p>{randomBeer.attenuation_level}</p>
+            <p>{randomBeer.description}</p>
+            <p>{randomBeer.contributed_by}</p>
         </div>
     )
 }

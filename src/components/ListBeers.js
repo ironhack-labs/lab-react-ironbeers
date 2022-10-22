@@ -13,15 +13,14 @@ useEffect(()=>{
         <div>
             <Header/>
             <h1>All of our Beers:</h1>
-            <p>{props.beers.name}</p>
             {props.beers.map(beer=>{
                 return(
                     <div>
                     <img src={beer.image_url} alt="beerlogo"/>
-                    <h2>{beer.name}</h2>
-                    <h3>{beer.tagline}</h3>
-                    <h4>{beer.contributed_by}</h4>
-<Link to="/beers/:beerId"> More details </Link>
+                    <h2>Name:{beer.name}</h2>
+                    <h3>Tagline:{beer.tagline}</h3>
+                    <h4>Contributed By: {beer.contributed_by}</h4>
+<Link to={`/beers/${beer._id}`}> More details </Link>
                     </div>
                 )
             })}

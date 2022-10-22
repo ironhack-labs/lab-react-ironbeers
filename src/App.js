@@ -30,8 +30,8 @@ const getBeersFromApi = ()=>{
 <Route path='/' element={<Home/>}></Route>
   <Route path='/random-beer' element={<RandomBeer/>}></Route>
   <Route path='/beers' element={<ListBeers callbackToGetBeers={getBeersFromApi} beers={allBeers}/>}></Route>
-  <Route path='/beers/:beerId' element={<SingleBeer/>}></Route>
   <Route path='/new-beer' element={<NewBeer/>}></Route>
+  <Route path='/beers/:beerId' element={<SingleBeer/>}></Route>
 </Routes>
     </div>
 }
