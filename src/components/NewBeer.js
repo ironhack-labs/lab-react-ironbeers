@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
+import "./NewBeer.css";
 
 function NewBeer({ callbackToFetchBeers }) {
   const [name, setName] = useState("");
@@ -9,7 +10,7 @@ function NewBeer({ callbackToFetchBeers }) {
   const [description, setDescription] = useState("");
   const [first_brewed, setFirst_brewed] = useState("");
   const [brewers_tips, setBrewers_tips] = useState("");
-  const [attenuation_level, setAttenuation_level] = useState(0);
+  const [attenuation_level, setAttenuation_level] = useState("");
   const [contributed_by, setContributed_by] = useState("");
 
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ function NewBeer({ callbackToFetchBeers }) {
   return (
     <div className='NewBeer'>
       <Header />
-      <form onSubmit={handleFormSubmit}>
+      <form className='col-lg-6 offset-lg-3 ' onSubmit={handleFormSubmit}>
         <div className='form-group'>
           <label htmlFor='formGroupExampleInput'>Name</label>
           <input
@@ -124,7 +125,7 @@ function NewBeer({ callbackToFetchBeers }) {
             }}
           />
         </div>
-        <button>ADD NEW</button>
+        <button className='btn btn-primary'>ADD NEW</button>
       </form>
     </div>
   );

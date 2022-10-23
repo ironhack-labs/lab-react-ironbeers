@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
+import "./Header.css";
 
 function Header() {
   return (

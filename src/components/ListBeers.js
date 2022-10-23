@@ -2,9 +2,12 @@ import Header from "./Header";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import SyncLoader from "react-spinners/SyncLoader";
+import "./ListBeers.css";
 
 function ListBeers({ beers }) {
   const [searchInput, setSearchInput] = useState("");
+  const [loading, setLoading] = useState(true);
   const [filteredArray, setfilteredArray] = useState(beers);
 
   const inputHandler = (e) => {
@@ -16,6 +19,7 @@ function ListBeers({ beers }) {
     axios
       .get(`${process.env.REACT_APP_API_URL}/beers/search?q=${searchInput}`)
       .then((response) => {
+        setLoading(false);
         setfilteredArray(response.data);
       })
       .catch((e) => console.log("error getting characters from API", e));
@@ -25,12 +29,19 @@ function ListBeers({ beers }) {
     <div>
       <Header />
       <input
+        className='search'
         value={searchInput}
         type='text'
         onChange={(e) => {
           inputHandler(e);
         }}
         placeholder='Enter search query'
+      />
+      <SyncLoader
+        loading={loading}
+        size={15}
+        aria-label='Loading Spinner'
+        data-testid='loader'
       />
       {searchInput.length === 0
         ? beers.map((beer) => {

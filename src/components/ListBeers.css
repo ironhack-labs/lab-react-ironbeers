@@ -1,0 +1,14 @@
+.card {
+  margin: 3%;
+}
+
+.card .d-flex .flex-row img {
+  margin: 5%;
+  max-width: 15%;
+  height: auto;
+}
+
+.search {
+  margin-top: 2%;
+  margin-left: 3%;
+}

@@ -2,10 +2,11 @@ import beers from "../assets/beers.png";
 import newBeer from "../assets/new-beer.png";
 import randomBeer from "../assets/random-beer.png";
 import { Link } from "react-router-dom";
+import "./HomePage.css";
 
 function HomePage() {
   return (
-    <div>
+    <div className='HomePage'>
       <div className='card' style={{ width: "30rem" }}>
         <img src={beers} className='card-img-top' alt='...' />
         <div className='card-body'>

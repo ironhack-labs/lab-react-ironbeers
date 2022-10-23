@@ -1,0 +1,9 @@
+.card .d-flex .align-items-center img {
+  max-width: 15%;
+  height: auto;
+}
+
+.card-body {
+  width: 100%;
+  height: auto;
+}

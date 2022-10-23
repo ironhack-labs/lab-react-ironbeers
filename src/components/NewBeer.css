@@ -1,0 +1,20 @@
+.NewBeer label {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.NewBeer button {
+  margin-top: 5%;
+  border-radius: 200px;
+  width: 100%;
+}
+
+.NewBeer input {
+  border-radius: 200px;
+  margin-bottom: 1rem;
+}
+
+.NewBeer textarea {
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
