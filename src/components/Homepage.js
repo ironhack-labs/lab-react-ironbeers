@@ -9,7 +9,7 @@ function Homepage() {
       <div className="container">
         <img src={beers} alt="All Beers" />
       </div>
-      <h2><Link to="/all-beers"> All Beers</Link></h2>
+      <h2><Link to="/all-beers">All Beers</Link></h2>
       <p>All beers on the website.</p>
 
       <div className="container">
