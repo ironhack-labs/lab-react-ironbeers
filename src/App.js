@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import HomePage from "./components/HomePage";
 import ListBeers from "./components/ListBeers";
+import SingleBeer from "./components/SingleBeer";
 import RandomBeer from "./components/RandomBeer";
 import NewBeer from "./components/NewBeer";
 import { useEffect } from "react";
@@ -31,6 +32,10 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/beers' element={<ListBeers beers={beersArray} />} />
+        <Route
+          path='/beers/:beerId'
+          element={<SingleBeer beers={beersArray} />}
+        />
         <Route path='/random-beer' element={<RandomBeer />} />
         <Route path='/new-beer' element={<NewBeer />} />
       </Routes>

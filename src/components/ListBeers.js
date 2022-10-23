@@ -2,13 +2,16 @@ import Header from "./Header";
 import { Link } from "react-router-dom";
 
 function ListBeers({ beers }) {
-  console.log(beers);
   return (
     <div>
       <Header />
       {beers.map((beer) => {
         return (
-          <div className='card d-flex flex-row' style={{ width: "30rem" }}>
+          <div
+            key={beer._id}
+            className='card d-flex flex-row'
+            style={{ width: "30rem" }}
+          >
             <img
               src={beer.image_url}
               className='card-img-top'
