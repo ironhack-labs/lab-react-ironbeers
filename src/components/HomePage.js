@@ -1,9 +1,10 @@
+import "./HomePage.css"
 import { Routes, Route, Link } from "react-router-dom";
+
 
 function BeerList() {
     return (
         <div>
-            {/* <img src={BeerListImage} alt="beers" className="homepageImage"/> */}
             <h1>HomePage</h1>
             <ul>
                 <li><Link to={'/'}>Home</Link></li>
