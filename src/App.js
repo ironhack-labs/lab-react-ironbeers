@@ -18,8 +18,6 @@ function App() {
       .get('https://ih-beers-api2.herokuapp.com/beers')
         .then((result) => {
             setbeers(result.data);
-            console.log(result.data);
-
       })
       .catch((error) => console.log(error));
   }, []);
@@ -31,9 +29,8 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/beers" element={<AllBeers beers={beers} />} />
         <Route path="/random-beer" element={<RandomBeer />} />
-        <Route path="/single-beer/:_id" element={<DetailBeer beers={beers}/>} />
+        <Route path="/single-beer/:beerId" element={<DetailBeer beers={beers}/>} />
         <Route path="/create-beer" element={<NewBeer />} />
-
       </Routes>
     </div>
   );
