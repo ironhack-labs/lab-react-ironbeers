@@ -37,7 +37,10 @@ function App() {
           element={<SingleBeer beers={beersArray} />}
         />
         <Route path='/random-beer' element={<RandomBeer />} />
-        <Route path='/new-beer' element={<NewBeer />} />
+        <Route
+          path='/new-beer'
+          element={<NewBeer callbackToFetchBeers={fetchBeers} />}
+        />
       </Routes>
     </div>
   );
