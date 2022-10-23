@@ -26,7 +26,6 @@ function App() {
       </NavLink>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/random-beer"></Route>
         <Route path="/new-beer"></Route>
         <Route
           path="/beers"
@@ -36,6 +35,8 @@ function App() {
           path="/beers/:id"
           element={<BeerDetails beers={beers} />}
         ></Route>
+        <Route path="/random-beer" element={<BeerDetails />} />
+        {/* <Route path="/new-beer" element={<NewBeer />} /> */}
       </Routes>
     </div>
   );

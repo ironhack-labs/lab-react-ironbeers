@@ -1,12 +1,25 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function BeerDetails({ beers }) {
+  const [beer, setBeer] = useState(null);
   const { id } = useParams();
-  const beer = beers.find((beer) => beer._id === id);
+
+  useEffect(() => {
+    if (id !== undefined && beers !== null) {
+      setBeer(beers.find((beer) => beer._id === id));
+    } else {
+      axios
+        .get(`${process.env.REACT_APP_BEERS_API}/beers/random`)
+        .then((response) => setBeer(response.data))
+        .catch((error) => console.log("Error fetching data:", error));
+    }
+  }, []);
 
   return (
     <div className="container">
-      {beer !== [] ? (
+      {beer !== null ? (
         <>
           <div className="row">
             <div className="col col-12 text-center">
@@ -41,7 +54,7 @@ function BeerDetails({ beers }) {
           </div>
         </>
       ) : (
-        <p>not found</p>
+        <p>loading...</p>
       )}
     </div>
   );
