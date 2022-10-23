@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 function BeerDetails({ beers }) {
   const { id } = useParams();
   const beer = beers.find((beer) => beer._id === id);
-  console.log("beer>>>", beer);
+
   return (
     <div className="container">
       {beer !== [] ? (

@@ -1,23 +1,23 @@
-import HomePage from "./components/HomePage";
-import "./App.css";
-import { Routes, Route, NavLink } from "react-router-dom";
-import home from "./assets/home.png";
-import { useEffect, useState } from "react";
 import axios from "axios";
-import Beers from "./components/Beers";
+import { useState } from "react";
+import { NavLink, Route, Routes } from "react-router-dom";
+import "./App.css";
+import home from "./assets/home.png";
 import BeerDetails from "./components/BeerDetails";
+import Beers from "./components/Beers";
+import HomePage from "./components/HomePage";
 
 function App() {
   // console.clear();
 
   const [beers, setBeers] = useState(null);
 
-  useEffect(() => {
+  const fetchData = () => {
     axios
       .get(`${process.env.REACT_APP_BEERS_API}/beers`)
       .then((response) => setBeers(response.data))
       .catch((error) => console.log("Error fetching data:", error));
-  }, []);
+  };
 
   return (
     <div className="App">
@@ -26,9 +26,12 @@ function App() {
       </NavLink>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/beers" element={<Beers beers={beers} />}></Route>
         <Route path="/random-beer"></Route>
         <Route path="/new-beer"></Route>
+        <Route
+          path="/beers"
+          element={<Beers beers={beers} callBackFetchData={fetchData} />}
+        ></Route>
         <Route
           path="/beers/:id"
           element={<BeerDetails beers={beers} />}

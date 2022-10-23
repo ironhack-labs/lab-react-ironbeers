@@ -1,6 +1,9 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-function Beers({ beers }) {
+function Beers({ beers, callBackFetchData }) {
+  useEffect(() => callBackFetchData(), [callBackFetchData]);
+
   return (
     <>
       {beers === null ? (
