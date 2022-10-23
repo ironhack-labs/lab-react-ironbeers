@@ -22,7 +22,7 @@ function App() {
         console.log(response.data);
         setBeers(response.data);
       })
-      .catch(e => console.log("error getting characters from API", e));
+      .catch(e => console.log("error getting beers from API", e));
   }
 
   return (
