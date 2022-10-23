@@ -13,7 +13,7 @@ function BeerDetails() {
         setBeers(response.data);
       })
       .catch((error) => {
-        console.log("error getting beers from the API", error);
+        console.log("error getting beer from the API", error);
       });
   }, [beerId]);
 
