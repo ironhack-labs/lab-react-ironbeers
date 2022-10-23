@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import Header from "./Header";
 
 function BeerDetails({ beers }) {
   const { beerId } = useParams();
@@ -12,6 +13,7 @@ function BeerDetails({ beers }) {
 
   return (
     <div>
+      <Header />
       <div
         className='card d-flex align-items-center justify-content-center'
         style={{ width: "30rem" }}
