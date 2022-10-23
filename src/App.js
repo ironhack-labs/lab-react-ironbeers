@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
 
-//import BeerDetails from './components/BeerDetails';
+import BeerDetails from './components/BeerDetails';
 import BeersList from './components/BeersList';
 import CreateBeer from './components/CreateBeer';
 import HomePage from './components/HomePage';
@@ -12,7 +12,7 @@ import RandomBeer from './components/RandomBeer';
 
 function App() {
 
-  const [beers, setBeers] = useState([])
+  const [beers, setBeers] = useState([]);
 
   useEffect(() => {
     axios
@@ -32,7 +32,7 @@ function App() {
         <Route path='/beers' element={<BeersList />} />
         <Route path='/random-beer' element={<RandomBeer />} />
         <Route path='/new-beer' element={<CreateBeer />} />
-    {/*    <Route path='/beers/:id' element={<BeerDetails beers={beers} />} /> */}
+        <Route path='/beers/:beerId' element={<BeerDetails beers={beers} />} /> 
       </Routes>
     </div>
   );
