@@ -6,8 +6,6 @@ import NavBar from './NavBar'
 function BeerDetails() {
   const { beerId } = useParams();
 
-//   const navigate = useNavigate();
-
   const [details, setDetails] = useState({});
 
 
@@ -30,8 +28,6 @@ function BeerDetails() {
       <p>Attenuation Level: {details.attenuation_level} </p>
       <p>Description:{details.description} </p>
       <p>Contribubted by: {details.contributed_by}</p>
-
-      {/* <button onClick={deleteBeer}>DELETE THIS CHARACTER</button> */}
     </div>
   );
 }

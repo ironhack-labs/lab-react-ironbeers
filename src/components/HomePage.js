@@ -12,15 +12,15 @@ function HomePage() {
         <div>
         <div>
         <img src={beers} alt="beers" />
-        <NavLink to={`/beers`}className="navbar-brand">Beers</NavLink>
+        <NavLink to={`/beers`} >Beers</NavLink>
         </div>
         <div>
         <img src={random} alt="random beer" />
-        <NavLink to={`/random-beer`}className="navbar-brand">Random Beer</NavLink>
+        <NavLink to={`/random-beer`}>Random Beer</NavLink>
         </div>
         <div>
         <img src={newBeer} alt="new beer" />
-        <NavLink to={`/new-beer`} className="navbar-brand">Add new beer</NavLink>
+        <NavLink to={`/new`} >Add new beer</NavLink>
         </div>
          </div>
         </div>
