@@ -1,5 +1,7 @@
 .homepage{ 
-    text-align: start;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
     text-decoration: none;
     
 }

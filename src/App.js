@@ -7,18 +7,12 @@ import Navbar from './components/Navbar';
 import NewBeer from "./components/NewBeer"
 import RandomBeer from "./components/RandomBeer"
 import SingleBeer from "./components/SingleBeer"
-import logoHome from "./assets/logoHome.png"
-
-
 
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Link to="/">
-        <img src={logoHome} alt="example" />
-      </Link>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/beers" element={<ListBeers />} />

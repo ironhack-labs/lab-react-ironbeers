@@ -5,16 +5,15 @@ import randombeer from "../assets/random-beer.png"
 import "../Homepage.css"
 
 
-
 export default function Homepage() {
     return (
         <div className="homepage">
             <img src={beers} alt="beer" />
-            <NavLink to="/beers">Beers</NavLink>
+            <NavLink to="/beers"><h2>Beers</h2></NavLink>
             <img src={randombeer} alt="beer2" />
-            <NavLink to="/random-beer" > Random Beer</NavLink>
+            <NavLink to="/random-beer" ><h2> Random Beer</h2> </NavLink>
             <img src={newbeer} alt="beer3" />
-            <NavLink to="/new-beer" > Create Beer</NavLink>
+            <NavLink to="/new-beer" > <h2>Create Beer</h2></NavLink>
         </div>
     )
 }
