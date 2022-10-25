@@ -31,7 +31,7 @@ function NewBeer() {
                 
                 //console.log(response);
 
-                redirect("/beers");
+                redirect("/");
             })
             .catch((error) => {
                 console.log(error);
