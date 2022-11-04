@@ -20,7 +20,6 @@ function ListBeers() {
       const response = await axios.get(
         "https://ih-beers-api2.herokuapp.com/beers"
       );
-      console.log(response.data);
       // actualizar estado
       setList(response.data);
       setIsFetching(false);
@@ -32,8 +31,6 @@ function ListBeers() {
   if (isFetching === true) {
     return <h3>...loading</h3>;
   }
-
-  const contributed = list;
 
   // render
   return (
