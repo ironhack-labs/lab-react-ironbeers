@@ -8,14 +8,14 @@ function BeersList() {
   const [list, setList] = useState([]);
   //const [showList, setShowList] = useState([])
   const [isFetching, setIsFetching] = useState(true);
-  const [searchInput, setSearchInput] = useState("")
-  
+  const [searchInput, setSearchInput] = useState("");
+
   /* regex for short contributed name */
-    const regex = /([<])\w+/g;
-    
+  const regex = /([<])\w+/g;
+
   useEffect(() => {
     getData();
-  },[]);
+  }, []);
 
   // Get data from API, both the commented route and the other one render the list of beers, but the one used generates a name search according to the strings in "searchInput".
   const getData = async () => {
@@ -37,20 +37,18 @@ function BeersList() {
 
   //I don't need to create another list to be displayed, the api allows me to simplify
   //i call the function "getData()"" to launch new calls according to the changes.
-  console.log(searchInput)
+  console.log(searchInput);
   const handleSearch = (event) => {
-    setSearchInput(event.target.value)
-    getData()
-    
-  
-  }
+    setSearchInput(event.target.value);
+    getData();
+  };
 
   return (
     <div>
       <NavBar />
       <div>
-      <label>Search Beer</label>
-        <input value={searchInput} type="text" onChange={handleSearch}/>
+        <label>Search Beer</label>
+        <input value={searchInput} type="text" onChange={handleSearch} />
       </div>
       <div
         style={{

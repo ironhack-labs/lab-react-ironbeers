@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react'
 import NavBar from '../components/NavBar';
 
 function AddBeer(props) {
-
-
   const [nameInput, setNameInput] = useState("")
   const [taglineInput, setTaglineInput] = useState("")
   const [descriptionInput, setDescriptionInput] = useState("")
@@ -25,12 +23,8 @@ function AddBeer(props) {
       attenuation_level: attenuationLevelInput,
       contributed_by: contributedByInput
     }
-    console.log(newBeer)
 
-    
     try {
-      
-      
       await axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`, newBeer)
 
     } catch (error) {
@@ -47,7 +41,6 @@ function AddBeer(props) {
   const handleContributedByChange = (event) => setContributedByInput(event.target.value)
   console.log(handleContributedByChange)
     
-  
   return (
 
     <div>
