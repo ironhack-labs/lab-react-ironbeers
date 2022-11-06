@@ -22,7 +22,6 @@ function SingleBeer() {
       // actualizar estado
       setDetails(response.data);
       setIsFetching(false);
-      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
