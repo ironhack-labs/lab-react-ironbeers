@@ -51,6 +51,10 @@
   border: 1px solid grey;
 }
 
+.sectionList img{
+  width: 100%;
+}
+
 .linkList {
   color: black;
   text-decoration: none;

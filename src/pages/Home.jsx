@@ -21,7 +21,7 @@ function Home() {
 
       <Link to="/random-beer" className="linkList">
         <div className="sectionList">
-          <img src={ImageRandom} />
+          <img src={ImageRandom}/>
           <h2>Random Beer</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
