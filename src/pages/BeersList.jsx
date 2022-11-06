@@ -17,12 +17,12 @@ function BeersList() {
     getData();
   },[]);
 
+  // Get data from API, both the commented route and the other one render the list of beers, but the one used generates a name search according to the strings in "searchInput".
   const getData = async () => {
     try {
       const beerList = await axios.get(
         `https://ih-beers-api2.herokuapp.com/beers/search?q=${searchInput}`
         //"https://ih-beers-api2.herokuapp.com/beers"
-//La ruta de search me renderiza todas las cervezas si no hay string automaticamente... Aunque podria, no necesitaria crear estados para renderizar como en otros ejercicios
       );
       console.log(beerList.data);
       setList(beerList.data);
@@ -35,6 +35,8 @@ function BeersList() {
     <p>Loading...</p>;
   }
 
+  //I don't need to create another list to be displayed, the api allows me to simplify
+  //i call the function "getData()"" to launch new calls according to the changes.
   console.log(searchInput)
   const handleSearch = (event) => {
     setSearchInput(event.target.value)
