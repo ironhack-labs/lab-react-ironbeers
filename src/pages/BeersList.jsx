@@ -32,17 +32,17 @@ function BeersList() {
   }
 
   return (
-    <div>
+    <div className="fatherDiv">
       <Navbar />
       {beerList.map((eachBeer) => {
         return (
-          <div key={eachBeer._id}>
-            <div>
+          <div key={eachBeer._id} className="divList" >
+            <div className="divImage">
               <img src={eachBeer.image_url} alt="" width={50} />
             </div>
-            <div>
+            <div className="divText">
               <Link to={`/beers/${eachBeer._id}`}>
-                {" "}
+      
                 <h3>{eachBeer.name}</h3>
               </Link>
 

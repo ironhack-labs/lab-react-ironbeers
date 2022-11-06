@@ -7,8 +7,8 @@ import ImageNewBeer from '../assets/new-beer.png'
 function Home() {
   return (
     <div className="home">
-      <Link to="/beers">
-        <div>
+      <Link to="/beers" className="linkList">
+        <div className="sectionList">
           <img src={ImageBeers}/>
           <h2>All Beers</h2>
           <p>
@@ -19,8 +19,8 @@ function Home() {
         </div>
       </Link>
 
-      <Link to="/random-beer">
-        <div>
+      <Link to="/random-beer" className="linkList">
+        <div className="sectionList">
           <img src={ImageRandom} />
           <h2>Random Beer</h2>
           <p>
@@ -31,8 +31,8 @@ function Home() {
         </div>
       </Link>
 
-      <Link to="/new-beer">
-        <div>
+      <Link to="/new-beer" className="linkList">
+        <div className="sectionList">
           <img src={ImageNewBeer} />
           <h2>New Beer</h2>
           <p>
