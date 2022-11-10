@@ -35,3 +35,9 @@
   align-self: center;
   padding-left: 30px;
 }
+
+.linkFromHome {
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
+}

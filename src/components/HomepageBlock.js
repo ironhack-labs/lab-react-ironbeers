@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
+
 function HomepageBlock({ img, headline, link }) {
-  console.log(img, headline);
   return (
     <div>
       <img src={img} alt={headline} />
       <div className="textPart">
-        <h2>{headline}</h2>
+        <Link to={link} className="linkFromHome">{headline}</Link>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia
           quam et nulla malesuada, a lacinia lectus placerat. Aliquam vehicula,
