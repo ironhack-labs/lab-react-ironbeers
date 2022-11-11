@@ -25,6 +25,7 @@ function NewBeer() {
           <TextField required id="outlined-required" InputLabelProps={{ shrink: true }} type="date" label="First Brewed" />
           <TextField required id="outlined-required" type="number" label="Attenuation Level" />
           <TextField required id="outlined-required" multiline label="Description" />
+          <TextField required id="outlined-required" multiline label="Brewers Tips" />
           <TextField required id="outlined-required" label="Contributed By" />
           <Button variant="outlined">Submit</Button>
         </div>
