@@ -7,7 +7,7 @@ import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { TableCell } from '@mui/material';
+import TableCell from '@mui/material/TableCell';
 
 function Beers() {
   const { beers, loading } = useContext(BeerContext);
@@ -20,11 +20,6 @@ function Beers() {
   const imageStyle = {
     height: '200px',
     margin: '10px 20px',
-  };
-  const imgContainerStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    width: '30%',
   };
 
   const getOnlyName = (name) => {
@@ -40,7 +35,7 @@ function Beers() {
         </div>
       )}
       {!loading && (
-        <TableContainer sx={{ margin: 'auto', marginTop: '100px' }} component={Paper}>
+        <TableContainer sx={{ margin: 'auto', maxWidth: '400px', marginTop: '100px' }} component={Paper}>
           <Table>
             <TableBody>
               {beers.map((beer) => {
