@@ -1,27 +1,10 @@
-import { useEffect, useState } from 'react';
 import GridLoader from 'react-spinners/GridLoader';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { BeerContext } from '../context/beer.context';
 
 function Beers() {
-  const [beers, setBeers] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchallBeers() {
-      const apiURL = 'https://ih-beers-api2.herokuapp.com/beers';
-      const response = await fetch(apiURL);
-      const data = await response.json();
-
-      setBeers(data);
-      setLoading(false);
-    }
-    fetchallBeers();
-  }, []);
-
-  // image
-  // name
-  // tagline
-  // contributed_by
-  // Also, add the link to check the details of each beer. The link should navigate to /beers/:beerId
+  const { beers, loading } = useContext(BeerContext);
 
   const containerStyle = {
     display: 'flex',
@@ -45,14 +28,20 @@ function Beers() {
 
   return (
     <>
-      {loading && <GridLoader color="#36d7b7" size={150} />}
+      {loading && (
+        <div className="flex">
+          <GridLoader color="#36d7b7" />
+        </div>
+      )}
       {!loading &&
         beers.map((beer) => {
           return (
             <div key={beer._id}>
               <div style={containerStyle}>
                 <div style={imgContainerStyle}>
-                  <img src={beer.image_url} style={imageStyle} alt={beer.name} />
+                  <Link to={beer._id}>
+                    <img src={beer.image_url} style={imageStyle} alt={beer.name} />
+                  </Link>
                 </div>
 
                 <div>
