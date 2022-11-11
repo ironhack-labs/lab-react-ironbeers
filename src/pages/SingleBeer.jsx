@@ -1,52 +1,66 @@
 import { useParams } from 'react-router-dom';
 import { useContext } from 'react';
 import { BeerContext } from '../context/beer.context';
-
-const imageStyle = {
-  height: '300px',
-  marginTop: '40px',
-};
-
-const imageDivStyle = {
-  display: 'flex',
-  justifyContent: 'center',
-};
-
-const rowStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-};
+import SingleBeerComponent from './SingleBeerComponent';
+import GridLoader from 'react-spinners/GridLoader';
 
 function SingleBeer() {
-  const { beers } = useContext(BeerContext);
+  const { beers, loading } = useContext(BeerContext);
   const { beerId } = useParams();
+
   const selectedBeer = beers.find((beer) => {
     return beer._id === beerId;
   });
 
+  // setSelectedBeer(
+  //   beers.find((beer) => {
+  //     return beer._id === beerId;
+  //   })
+  // );
+
+  // const findBeer = (beerId) => {
+  //   if (!loading) {
+  //     beers.find((beer) => {
+  //       return beer._id === beerId;
+  //     });
+  //   }
+  // };
+
+  // async function oneBeer() {
+  //   beers.find((beer) => {
+  //     return beer._id === beerId;
+  //   });
+  // }
+
   return (
     <>
-      <div style={{ padding: '20px' }}>
-        <div style={imageDivStyle}>
-          <img src={selectedBeer.image_url} style={imageStyle} alt={selectedBeer.name} />
+      {loading && (
+        <div className="flex">
+          <GridLoader color="#36d7b7" />
         </div>
-        <div style={rowStyle}>
-          <p style={{ fontSize: '40px', marginTop: '12px' }}>{selectedBeer.name}</p>
-          <p style={{ fontSize: '28px', fontWeight: '600', color: '#bbb', marginTop: '12px' }}>{selectedBeer.attenuation_level}</p>
-        </div>
-        <div style={rowStyle}>
-          <p style={{ fontSize: '20px', fontWeight: '600', color: '#888', marginTop: '12px' }}>{selectedBeer.tagline}</p>
-          <p style={{ fontWeight: '700', marginTop: '12px' }}>{selectedBeer.first_brewed}</p>
-        </div>
-        <div>
-          <p style={{ fontSize: '18px', fontWeight: '600', marginTop: '12px' }}>{selectedBeer.description}</p>
-        </div>
-        <div>
-          <p style={{ fontWeight: '600', color: '#888', marginTop: '12px' }}>{selectedBeer.contributed_by}</p>
-        </div>
-      </div>
+      )}
+      {!loading && <SingleBeerComponent aBeer={selectedBeer} />}
     </>
   );
 }
 export default SingleBeer;
+
+// const [selectedBeer, setSelectedBeer] = useState();
+// const [loading, setLoading] = useState();
+
+// useEffect(() => {
+//   // if (beerId) {
+//   async function fetchOneBeer() {
+//     const apiURL = `https://ih-beers-api2.herokuapp.com/beers/${beerId}`;
+//     const response = await fetch(apiURL);
+//     const data = await response.json();
+//     setSelectedBeer(data);
+//     setLoading(false);
+//     console.log(data);
+//   }
+//   fetchOneBeer();
+//   // }
+//   return function () {
+//     setSelectedBeer({});
+//   };
+// }, [beerId]);

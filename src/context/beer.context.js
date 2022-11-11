@@ -14,7 +14,7 @@ function BeerProviderWrapper(props) {
 
       setBeers(data);
       setLoading(false);
-      console.log(data[0]);
+      // console.log(data[0]);
     }
     fetchallBeers();
   }, []);
