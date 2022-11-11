@@ -10,9 +10,9 @@ const Lorem =
 function HomePage() {
   return (
     <>
-      <MyCard title="All Beers" subtitle="Here you find all our beers" description={Lorem} img={AllBeers} link="AllBeers" />
-      <MyCard title="Random Beer" subtitle="Feelin adventurous? Check out a random beer!" description={Lorem} img={RandomBeer} link="RandomBeer" />
-      <MyCard title="New Beer" subtitle="You´re brewing? Awesome!" description={Lorem} img={NewBeer} link="NewBeer" />
+      <MyCard title="All Beers" subtitle="Here you find all our beers" description={Lorem} img={AllBeers} link="beers" />
+      <MyCard title="Random Beer" subtitle="Feelin adventurous? Check out a random beer!" description={Lorem} img={RandomBeer} link="random-beer" />
+      <MyCard title="New Beer" subtitle="You´re brewing? Awesome!" description={Lorem} img={NewBeer} link="new-beer" />
     </>
   );
 }

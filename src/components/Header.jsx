@@ -6,14 +6,15 @@ import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import ShuffleOnRoundedIcon from '@mui/icons-material/ShuffleOnRounded';
 import AllInclusiveRoundedIcon from '@mui/icons-material/AllInclusiveRounded';
 
-const iconStyle = { fontSize: '30px', color: '#fff' };
+const iconStyle = { fontSize: '20px', color: '#fff', margin: '5px 10vw' };
 const containerStyle = {
   display: 'flex',
-  justifyContent: 'space-around',
+  justifyContent: 'center',
   backgroundColor: '#123456',
   padding: '5px',
-  position: 'fixed',
-  bottom: '0',
+  minWidth: '100vw',
+  position: 'sticky',
+  top: '0',
 };
 
 function Header() {
@@ -23,13 +24,13 @@ function Header() {
         <Link to={'/'}>
           <HomeRoundedIcon sx={iconStyle} />
         </Link>
-        <Link to={'/AllBeers'}>
+        <Link to={'/beers'}>
           <AllInclusiveRoundedIcon sx={iconStyle} />
         </Link>
-        <Link to={'/NewBeer'}>
+        <Link to={'/new-beer'}>
           <AddCircleRoundedIcon sx={iconStyle} />
         </Link>
-        <Link to={'/RandomBeer'}>
+        <Link to={'/random-beer'}>
           <ShuffleOnRoundedIcon sx={iconStyle} />
         </Link>
       </Container>
