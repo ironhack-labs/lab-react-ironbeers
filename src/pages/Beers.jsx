@@ -1,6 +1,6 @@
 import GridLoader from 'react-spinners/GridLoader';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { BeerContext } from '../context/beer.context';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -8,13 +8,25 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import TableCell from '@mui/material/TableCell';
+import TextField from '@mui/material/TextField';
 
 function Beers() {
-  const { beers, loading } = useContext(BeerContext);
+  const { beers, setBeers, loading, setLoading } = useContext(BeerContext);
+  const [inputState, setInputState] = useState('');
 
-  const containerStyle = {
-    display: 'flex',
-    padding: '10px',
+  async function fetchBeerSearch(input) {
+    const apiURL = `https://ih-beers-api2.herokuapp.com/beers/search?q=${input}`;
+    const response = await fetch(apiURL);
+    const data = await response.json();
+
+    setBeers(data);
+    setLoading(false);
+  }
+
+  const handleChange = (e) => {
+    setLoading(true);
+    setInputState(e.target.value);
+    fetchBeerSearch(e.target.value);
   };
 
   const imageStyle = {
@@ -29,13 +41,14 @@ function Beers() {
 
   return (
     <>
+      <TextField sx={{ margin: '20px' }} onChange={handleChange} value={inputState} label="Filter Beer" />
       {loading && (
         <div className="flex">
           <GridLoader color="#36d7b7" />
         </div>
       )}
       {!loading && (
-        <TableContainer sx={{ margin: 'auto', maxWidth: '400px', marginTop: '100px' }} component={Paper}>
+        <TableContainer sx={{ margin: 'auto', maxWidth: '400px', marginTop: '20px' }} component={Paper}>
           <Table>
             <TableBody>
               {beers.map((beer) => {

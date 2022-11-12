@@ -8,7 +8,7 @@ function MyCard({ title, subtitle, description, img, link }) {
   return (
     <>
       <Link to={link}>
-        <img src={img} sx={{ maxWidth: '90%' }} alt="something here" />
+        <img src={img} style={{ maxWidth: '100%' }} alt="something here" />
       </Link>
       <Card sx={{ minWidth: 275 }}>
         <CardContent>
