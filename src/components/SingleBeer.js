@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
+import SingleBeerDisplay from "./SingleBeerDisplay";
 
 function SingleBeer({ beers }) {
   const params = useParams();
@@ -19,23 +20,16 @@ function SingleBeer({ beers }) {
     return (
       <>
         <Header />
-        <div className="singleBeerPage">
-          <img src={singleBeer.image_url} alt={singleBeer.name} />
-          <div className="singleBeerPageText">
-            <h2>{singleBeer.name} <span>{singleBeer.attenuation_level}</span></h2>
-            <h4 style={{ color: "grey" }}>
-              {singleBeer.tagline}
-              <span>{singleBeer.first_brewed}</span>
-            </h4>
-            <p>{singleBeer.description}</p>
-            <p style={{fontWeight: "lighter"}}>{singleBeer.contributed_by}</p>
-          </div>
-        </div>
+        <SingleBeerDisplay singleBeer={singleBeer} />
       </>
     );
   }
-  return <>Loading..</>
-  
+  return (
+    <>
+      <Header />
+      <p>Loading..</p>
+    </>
+  );
 }
 
 export default SingleBeer;

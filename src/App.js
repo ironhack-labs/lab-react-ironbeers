@@ -4,26 +4,30 @@ import Homepage from "./components/Homepage";
 import BeersList from "./components/BeersList";
 import SingleBeer from "./components/SingleBeer";
 import { useEffect, useState } from "react";
-const url = "https://ih-beers-api2.herokuapp.com/beers";
+import RandomBeer from "./components/RandomBeer";
+import NewBeer from "./components/NewBeer";
+export const BASE_URL = "https://ih-beers-api2.herokuapp.com/";
 
 function App() {
   const [beers, setBeers] = useState([]);
   useEffect(() => {
-    async function fetchCountries() {
-      const response = await fetch(url);
+    async function fetchBeers() {
+      const response = await fetch(BASE_URL + "beers");
       const data = await response.json();
       console.log(data);
       setBeers(data);
     }
-    fetchCountries();
+    fetchBeers();
   }, []);
 
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/beers" element={<BeersList beers={beers}/>} />
-        <Route path="/beers/:id" element={<SingleBeer beers={beers}/>} />
+        <Route path="/beers" element={<BeersList beers={beers} />} />
+        <Route path="/beers/:id" element={<SingleBeer beers={beers} />} />
+        <Route path="/random-beer" element={<RandomBeer />} />
+        <Route path="/new-beer" element={<NewBeer />} />
       </Routes>
     </div>
   );
