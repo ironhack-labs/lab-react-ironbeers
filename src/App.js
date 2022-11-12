@@ -24,7 +24,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/beers" element={<BeersList beers={beers} />} />
+        <Route
+          path="/beers"
+          element={<BeersList beers={beers} setBeers={setBeers} />}
+        />
         <Route path="/beers/:id" element={<SingleBeer beers={beers} />} />
         <Route path="/random-beer" element={<RandomBeer />} />
         <Route path="/new-beer" element={<NewBeer />} />
