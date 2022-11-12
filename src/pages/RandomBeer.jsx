@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import GridLoader from 'react-spinners/GridLoader';
-import SingleBeerComponent from './SingleBeerComponent';
+import SingleBeerComponent from '../components/SingleBeerComponent';
 
 function RandomBeer() {
   const [randomBeer, setRandomBeer] = useState(null);

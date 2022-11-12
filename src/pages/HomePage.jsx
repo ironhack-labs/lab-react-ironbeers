@@ -18,9 +18,17 @@ function HomePage() {
           <p style={{ fontSize: '20px', position: 'absolute', top: '32px', right: '0' }}>again... -.-</p>
         </div>
       </div>
-      <MyCard title="All Beers" subtitle="Here you find all our beers" description={Lorem} img={AllBeers} link="beers" />
-      <MyCard title="Random Beer" subtitle="Feelin adventurous? Check out a random beer!" description={Lorem} img={RandomBeer} link="random-beer" />
-      <MyCard title="New Beer" subtitle="You´re brewing? Awesome!" description={Lorem} img={NewBeer} link="new-beer" />
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <MyCard title="All Beers" subtitle="Here you find all our beers" description={Lorem} img={AllBeers} link="beers" />
+        <MyCard
+          title="Random Beer"
+          subtitle="Feeling adventurous? Check out a random beer!"
+          description={Lorem}
+          img={RandomBeer}
+          link="random-beer"
+        />
+        <MyCard title="New Beer" subtitle="You´re brewing? Awesome!" description={Lorem} img={NewBeer} link="new-beer" />
+      </div>
     </>
   );
 }

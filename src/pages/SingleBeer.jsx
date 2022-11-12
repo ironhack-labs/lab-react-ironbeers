@@ -1,11 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
-import { BeerContext } from '../context/beer.context';
-import SingleBeerComponent from './SingleBeerComponent';
+import { useEffect, useState } from 'react';
+import SingleBeerComponent from '../components/SingleBeerComponent';
 import GridLoader from 'react-spinners/GridLoader';
 
 function SingleBeer() {
-  const { beers, loading } = useContext(BeerContext);
   const { beerId } = useParams();
 
   const [selectedBeer, setSelectedBeer] = useState();

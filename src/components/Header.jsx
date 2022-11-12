@@ -13,7 +13,6 @@ const containerStyle = {
   backgroundColor: '#123456',
   padding: '5px',
   minWidth: '100vw',
-  position: 'sticky',
   top: '0',
 };
 
@@ -34,7 +33,6 @@ function Header() {
           <ShuffleOnRoundedIcon sx={iconStyle} />
         </Link>
       </Container>
-
       <Outlet />
     </>
   );
