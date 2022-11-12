@@ -41,3 +41,25 @@
   color: black;
   font-size: 35px;
 }
+
+.singleBeerPage {
+  margin: 15px 10px 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;  
+}
+
+.singleBeerPage img {
+  height: 225px;
+  width: auto;
+}
+
+.singleBeerPageText {
+  margin-right: 20vw;
+}
+
+.singleBeerPageText span {
+  float: right;
+}

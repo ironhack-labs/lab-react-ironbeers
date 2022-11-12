@@ -18,7 +18,6 @@ function App() {
     fetchCountries();
   }, []);
 
-
   return (
     <div className="App">
       <Routes>
