@@ -7,12 +7,9 @@ function SearchBeer({ setBeers }) {
     setSearchValue(e.target.value);
   }
   useEffect(() => {
-    console.log(searchValue);
-    console.log(BASE_URL + "beers/search?q=" + searchValue);
     async function fetchBeers() {
       const response = await fetch(BASE_URL + "beers/search?q=" + searchValue);
       const data = await response.json();
-      console.log(data);
       setBeers(data);
     }
     fetchBeers();

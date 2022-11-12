@@ -5,7 +5,7 @@ function HomepageBlock({ img, headline, link }) {
     <div>
       <img src={img} alt={headline} />
       <div className="textPart">
-        <Link to={link} className="linkFromHome">{headline}</Link>
+        <Link to={link} className="linkFromHome"><h2>{headline}</h2></Link>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia
           quam et nulla malesuada, a lacinia lectus placerat. Aliquam vehicula,

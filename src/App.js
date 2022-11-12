@@ -14,7 +14,6 @@ function App() {
     async function fetchBeers() {
       const response = await fetch(BASE_URL + "beers");
       const data = await response.json();
-      console.log(data);
       setBeers(data);
     }
     fetchBeers();

@@ -16,6 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .listBeer {
@@ -39,7 +40,6 @@
 .linkFromHome {
   text-decoration: none;
   color: black;
-  font-size: 35px;
 }
 
 .singleBeerPage {
