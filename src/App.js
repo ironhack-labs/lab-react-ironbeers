@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { json, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Home } from "./components/Home";
+import beersImg from "./assets/beers.png";
+import randomBeersImg from "./assets/new-beer.png";
+import newBeersImg from "./assets/random-beer.png";
+import { Layout } from "./components/Layout";
+import { BeerList } from "./components/BeerList";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route index element={<Home {...{ beersImg, newBeersImg, randomBeersImg }} />} />
+        <Route element={<Layout />}>
+          <Route
+            path="beer-list"
+            element={<BeerList />}
+            loader={async () => {
+              const getBeers = await fetch("https://ih-beers-api2.herokuapp.com/beers/");
+              return getBeers;
+            }}
+          />
+          <Route path="random-beer"></Route>
+          <Route path="new-beer"></Route>
+        </Route>
+      </Routes>
     </div>
   );
 }
