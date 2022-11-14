@@ -33,7 +33,7 @@ function NewBeer() {
         .post(BASE_URL + "beers/new", newBeer)
         .then((response) => {
             setNewBeer(defaultState);
-            navigate("/");
+            navigate("/beers");
         });
   }
 
