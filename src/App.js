@@ -1,12 +1,24 @@
 import "./App.css";
-import { Homepage } from "./components/Homepage";
-import { Container } from "react-bootstrap";
+import { Routes, Route } from "react-router-dom";
+import { HomePage } from "./components/HomePage";
+import { Beers } from "./components/Beers";
+import { RandomBeer } from "./components/RandomBeer";
+import { NewBeer } from "./components/NewBeer";
+import { Header } from "./components/Header";
 
 function App() {
   return (
-    <Container style={{ width: "75vw" }}>
-      <Homepage />
-    </Container>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+
+      <Route element={<Header />}>
+        <Route path="/beers" element={<Beers />} />
+        <Route path="/random-beer" element={<RandomBeer />} />
+        <Route path="/new-beer" element={<NewBeer />} />
+
+        <Route path="*" element={"Error: Page Not Found"} />
+      </Route>
+    </Routes>
   );
 }
 

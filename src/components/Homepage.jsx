@@ -4,9 +4,9 @@ import newBeerImg from "../assets/new-beer.png";
 import randomBeerImg from "../assets/random-beer.png";
 import { Container, Card } from "react-bootstrap";
 
-export const Homepage = () => {
+export const HomePage = () => {
   return (
-    <>
+    <Container>
       <Card style={{ margin: "1.7rem" }}>
         <Card.Img src={beersImg} alt="All Beers" />
         <Card.Body style={{ textAlign: "left" }}>
@@ -51,6 +51,6 @@ export const Homepage = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-    </>
+    </Container>
   );
 };
