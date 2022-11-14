@@ -12,7 +12,6 @@ const containerStyle = {
   justifyContent: 'center',
   backgroundColor: '#123456',
   padding: '5px',
-  minWidth: '100vw',
   top: '0',
 };
 

@@ -17,7 +17,7 @@ function BeerProviderWrapper(props) {
     fetchallBeers();
   }, []);
 
-  return <BeerContext.Provider value={{ beers, setBeers, loading, setLoading }}>{props.children}</BeerContext.Provider>;
+  return <BeerContext.Provider value={{ beers, loading }}>{props.children}</BeerContext.Provider>;
 }
 
 export { BeerContext, BeerProviderWrapper };

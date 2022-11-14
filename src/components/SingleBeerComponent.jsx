@@ -1,3 +1,4 @@
+// No idea if this is good or bad practice, but at least the component is clean
 const imageStyle = { height: '300px', marginTop: '40px' };
 const imageDivStyle = { display: 'flex', justifyContent: 'center' };
 const rowStyle = { display: 'flex', justifyContent: 'space-between', alignItems: 'center' };
@@ -8,7 +9,13 @@ const firstBrewedStyle = { fontWeight: '700', marginTop: '12px' };
 const descriptionStyle = { fontSize: '18px', fontWeight: '600', marginTop: '12px' };
 const contributedByStyle = { fontWeight: '600', color: '#888', marginTop: '12px' };
 const containerStyle = { display: 'flex', justifyContent: 'center', marginTop: '20px', padding: '10px' };
-const cardStyle = { padding: '20px', maxWidth: '400px', borderRadius: '25px 10px', border: '2px solid #123456', boxShadow: '2px 2px 0px #123456' };
+const cardStyle = {
+  padding: '20px',
+  width: '400px',
+  borderRadius: '25px 10px',
+  border: '2px solid #123456',
+  boxShadow: '2px 2px 0px #123456',
+};
 
 function SingleBeerComponent({ aBeer }) {
   return (

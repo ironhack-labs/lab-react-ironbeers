@@ -1,14 +1,8 @@
 import GridLoader from 'react-spinners/GridLoader';
-import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { BeerContext } from '../context/beer.context';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableContainer from '@mui/material/TableContainer';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import TableCell from '@mui/material/TableCell';
-import TextField from '@mui/material/TextField';
+
+import BeerListCard from '../components/BeerListCard';
 
 function Beers() {
   const { beers, setBeers, loading, setLoading } = useContext(BeerContext);
@@ -29,51 +23,22 @@ function Beers() {
     fetchBeerSearch(e.target.value);
   };
 
-  const imageStyle = {
-    height: '200px',
-    margin: '10px 20px',
-  };
-
-  const getOnlyName = (name) => {
-    const index = name.indexOf('<');
-    return name.slice(0, index);
-  };
-
   return (
     <>
-      <TextField sx={{ margin: '20px' }} onChange={handleChange} value={inputState} label="Filter Beer" />
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <input className="input-style" onChange={handleChange} value={inputState} placeholder="Filter Beer" />
+      </div>
       {loading && (
         <div className="flex">
           <GridLoader color="#36d7b7" />
         </div>
       )}
       {!loading && (
-        <TableContainer sx={{ margin: 'auto', maxWidth: '400px', marginTop: '20px' }} component={Paper}>
-          <Table>
-            <TableBody>
-              {beers.map((beer) => {
-                return (
-                  <TableRow key={beer._id}>
-                    <TableCell align="center">
-                      <Link to={beer._id}>
-                        <img src={beer.image_url} style={imageStyle} alt={beer.name} />
-                      </Link>
-                    </TableCell>
-                    <TableCell align="left">
-                      <div>
-                        <p style={{ fontSize: 32 }}>{beer.name}</p>
-                        <p style={{ fontSize: 18, color: '#999' }}>{beer.tagline}</p>
-                        <p>
-                          <span style={{ fontWeight: '500', fontSize: '14px' }}>Created by:</span> {getOnlyName(beer.contributed_by)}
-                        </p>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                );
-              })}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          {beers.map((beer) => (
+            <BeerListCard key={beer._id} beer={beer} />
+          ))}
+        </div>
       )}
     </>
   );
