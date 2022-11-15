@@ -39,8 +39,6 @@ export const createNewBeer = async (post) => {
   });
   if (!response.ok) {
     console.error();
-  } else if (response.ok) console.log(response.ok);
-  const beer = response.json();
-  console.log(beer.value);
-  return beer;
+  }
+  console.log("Success!");
 };
