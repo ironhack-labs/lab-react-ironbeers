@@ -12,7 +12,10 @@ import newBeersImg from "./assets/random-beer.png";
 import { Layout } from "./components/Layout";
 import { BeerList } from "./components/BeerList";
 import { Root } from "./components/Root";
-import { getBeer } from "./util/api";
+import { getBeer, randomBeer } from "./util/api";
+import { SingleBeer, singleBeerLoader } from "./components/SingleBeer";
+import { RandomBeer } from "./components/RandomBeer";
+import { action, NewBeerForm } from "./components/NewBeerForm";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,8 +23,9 @@ const router = createBrowserRouter(
       <Route index element={<Home {...{ beersImg, newBeersImg, randomBeersImg }} />} />
       <Route element={<Layout />}>
         <Route path="beer-list" element={<BeerList />} loader={getBeer} />
-        <Route path="random-beer"></Route>
-        <Route path="new-beer"></Route>
+        <Route path="beer-list/:id" element={<SingleBeer />} loader={singleBeerLoader} />
+        <Route path="random-beer" element={<RandomBeer />} loader={randomBeer} />
+        <Route path="create-new-beer" element={<NewBeerForm />} action={action}></Route>
       </Route>
     </Route>
   )

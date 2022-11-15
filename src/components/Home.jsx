@@ -12,7 +12,7 @@ export function Home({ beersImg, newBeersImg, randomBeersImg }) {
           quia quisquam facere voluptatibus accusantium sed qui!
         </p>
       </Link>
-      <Link style={{ textDecoration: "none", color: "black" }} to={"/random-beer"}>
+      <Link style={{ textDecoration: "none", color: "black" }} to={"random-beer"}>
         <img src={newBeersImg} alt="shining beer taps" />
         <h1>Random Beer</h1>
         <p>
@@ -21,7 +21,7 @@ export function Home({ beersImg, newBeersImg, randomBeersImg }) {
           cupiditate? Ut debitis odit sit accusantium consequatur.
         </p>
       </Link>
-      <Link style={{ textDecoration: "none", color: "black" }} to={"/new-beer"}>
+      <Link style={{ textDecoration: "none", color: "black" }} to={"create-new-beer"}>
         <img src={randomBeersImg} alt="closeup of beer bottle and glass" />
         <h1>New Beer</h1>
         <p>
