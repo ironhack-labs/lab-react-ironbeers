@@ -1,3 +1,15 @@
+import { Header } from "./Header";
+import { Container } from "react-bootstrap";
+
 export const RandomBeer = () => {
-  return <div>RandomBeer</div>;
+  return (
+    <>
+      <Header />
+      <Container>
+        <div>
+          <h1>Random Beer</h1>
+        </div>
+      </Container>
+    </>
+  );
 };

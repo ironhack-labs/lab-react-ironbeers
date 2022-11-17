@@ -3,8 +3,8 @@ import { LinkContainer } from "react-router-bootstrap";
 
 export const Header = () => {
   return (
-    <>
-      <Navbar bg="primary" expand="lg">
+    <div>
+      <Navbar bg="primary" expand="lg" sticky="top">
         <Container style={{ justifyContent: "center" }}>
           <LinkContainer to="/">
             <NavLink>
@@ -18,6 +18,6 @@ export const Header = () => {
           </LinkContainer>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 };
