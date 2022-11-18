@@ -1,11 +1,48 @@
 .App {
   text-align: center;
+  padding: 10px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.homePage {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 50vw;
+  border: 2px solid rgba(123, 113, 113, 0.662);
+  text-align: center;
+  padding: 10px;
+}
+
+.beer-list {
+  max-width: 40vw;
+  border: 2px solid rgba(123, 113, 113, 0.662);
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeImg {
+  margin: 0 auto;
+  width: 50vw;
+  align-items: center;
+  text-align: center;
+}
+
+.beer-img {
+  width: 150px;
+  height: 350px;
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
