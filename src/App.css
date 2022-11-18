@@ -36,3 +36,134 @@
     transform: rotate(360deg);
   }
 }
+
+.cards-section,
+.home-card img,
+.nav-section img {
+  max-width: 25vw;
+}
+
+.beer-card img {
+  max-width: 10vw;
+}
+
+.single-beer-card img {
+  max-width: 10vw;
+}
+
+.cards-section {
+  text-align: justify;
+  margin: 25px auto;
+}
+
+.cards-section a {
+  text-decoration: none;
+  color: #333;
+}
+
+.cards-section img {
+  border-radius: 10px 10px 0 0;
+}
+
+.cards-section h1 {
+  margin: 0;
+}
+
+.beer-card h2,
+.beer-card h3 {
+  margin: 0;
+}
+
+.cards-section .home-card {
+  margin-bottom: 50px;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.cards-section .beer-card {
+  border: 1px solid #333;
+  margin-bottom: 5px;
+  padding: 15px;
+  display: flex;
+}
+
+.cards-section .single-beer-card {
+  border: 1px solid #333;
+  margin-bottom: 5px;
+  padding: 15px;
+  text-align: center;
+}
+
+.cards-section .beer-card div {
+  padding: 10px;
+}
+
+.cards-section .home-card-text {
+  padding: 15px;
+}
+
+.home-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.home-card:hover {
+  scale: 0.95;
+}
+
+.cards-section .single-beer-card form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.cards-section .single-beer-card form input {
+  margin: 10px;
+  border-radius: 5px;
+  height: 25px;
+  border: 1px solid #baaf0e;
+}
+
+.cards-section .single-beer-card form button {
+  margin: 25px;
+}
+
+/* CSS Button */
+.cards-section .button-custom {
+  --b: 3px;
+  --s: 0.45em;
+  --color: #baaf0e;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.cards-section .button-custom:hover,
+.cards-section .button-custom:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.cards-section .button-custom:active {
+  background: var(--color);
+  color: #fff;
+}
