@@ -34,7 +34,7 @@ function AddBeer() {
       //The body of the request NEEDS to be an object
       const body = { name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by};
 
-      await axios.post('https://ironbnb-m3.herokuapp.com/apartments', body);
+      await axios.post('https://ih-beers-api2.herokuapp.com/beers/new', body);
 
       setName('');
       setTagline('');
