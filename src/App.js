@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { useContext } from "react";
+// import { ThemeContext } from "./contexts/theme";
+
+import Beers from "./pages/Beers";
+import Newbeer from "./pages/Newbeer";
+import Randombeer from "./pages/Randombeer";
+import Home from "./pages/Home";
+import BeerDetails from "./pages/BeerDetails";
 
 function App() {
+  // const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="beers" element={<Beers />} />
+        <Route path="newbeer" element={<Newbeer />} />
+        <Route path="randombeer" element={<Randombeer />} />
+        <Route path="/:beerId" element={<BeerDetails />} />
+      </Routes>
     </div>
   );
 }
