@@ -7,6 +7,7 @@ import RandomBeer from './pages/RandomBeer';
 import NewBeer from './pages/NewBeer';
 
 function App() {
+  console.log('App')
   return (
     <div className="App">
       <Routes>

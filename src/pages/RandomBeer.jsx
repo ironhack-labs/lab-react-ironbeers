@@ -6,12 +6,13 @@ import Image from 'react-bootstrap/Image';
 
 
 function RandomBeer() {
-
+    console.log('Random beer')
     const [beer, setBeer] = useState([]);
     const getBeer = async () => {
         try {
             const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`);
             setBeer(response.data);
+            console.log(response.data.name)
 
         } catch (error) {
             console.log(error)
