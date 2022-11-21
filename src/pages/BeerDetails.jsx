@@ -4,7 +4,7 @@ import axious from 'axious'
 
 
 function BeerDetails() {
-    const [tisBeer, setThisBeer] = useState[null]
+    const [beer, setThisBeer] = useState[null]
     const { id } = useParams();
     
     const getThisBeer = async () => {
