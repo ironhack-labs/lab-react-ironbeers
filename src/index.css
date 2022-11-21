@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.beerimg{
+  width: 200px;
+  height: 300px;
+}
+
+
+
+.bigdiv{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+  border: 2px solid rgb(134, 134, 134);
+  margin: 10px;
+  width: 400px;
+}
