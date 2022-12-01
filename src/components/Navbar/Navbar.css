@@ -1,0 +1,10 @@
+.Navbar a {
+    display: flex;
+    background: #1792eb;
+    padding: 15px 180px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: larger;
+    text-decoration: none;
+}
