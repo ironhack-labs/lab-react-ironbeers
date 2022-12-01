@@ -6,6 +6,7 @@ const BeerCard = ({ image_url, name, tagline, contributed_by, _id }) => {
 
     return (
         <Row>
+            <h1>Enserio tio, ocurro</h1>
             <Card>
                 <Card.Img variant="top" src={image_url} />
                 <Card.Body>

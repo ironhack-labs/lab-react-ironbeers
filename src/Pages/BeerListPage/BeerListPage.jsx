@@ -25,6 +25,7 @@ const BeerListPage = () => {
     return (
         <Container>
             <Row className='d-flex justify-content-center flex-wrap'>
+                <h1>IronBeers List</h1>
                 {<BeerList data={data} />}
             </Row >
         </Container>
