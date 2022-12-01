@@ -1,0 +1,12 @@
+
+.ImageBeer{
+    height: 200px !important;
+    width: 50px !important;
+    object-fit: cover;
+ 
+
+}
+
+.BeerCard{
+    height: 30%;
+}
