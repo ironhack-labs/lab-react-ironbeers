@@ -11,7 +11,7 @@ const BeerListPage = () => {
     const handleBeers = () => {
         beersService
             .getBeers()
-            .then(data => setBeers(data))
+            .then((data) => setBeers(data))
             .catch(err => console.log(err))
     }
 
@@ -21,14 +21,13 @@ const BeerListPage = () => {
 
     const { data } = beers
 
-
     return (
         <Container>
-            <Row className='d-flex justify-content-center flex-wrap'>
-                <h1>IronBeers List</h1>
-                {<BeerList data={data} />}
-            </Row >
-        </Container>
+            <h1>IronBeers List</h1>
+
+            {beers.length === 0 ? <h1>Loading...</h1> : <BeerList data={data} />}
+
+        </Container >
 
 
     )

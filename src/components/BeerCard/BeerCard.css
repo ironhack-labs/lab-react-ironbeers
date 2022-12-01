@@ -1,0 +1,5 @@
+.BeerCard img {
+    height: 450px;
+    width: auto;
+    object-fit: cover;
+}

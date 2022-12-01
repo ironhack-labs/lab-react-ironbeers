@@ -1,15 +1,18 @@
-import { Card } from 'react-bootstrap';
-import { Row } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import BeerCard from '../BeerCard/BeerCard';
 const BeerList = ({ data }) => {
+
     return (
-        <Row>
-            <h1>Sigo ocurriendo</h1>
-            {data?.map(elm => {
-                < BeerCard {...elm} />
-            })}
+        <Row className="d-flex flex-wrap">
+            <Col>
+                {data?.map(elm => {
+                    return < BeerCard key={elm._id} {...elm} />
+                })}
+            </Col>
         </Row>
     )
+
+
 }
 
 export default BeerList
