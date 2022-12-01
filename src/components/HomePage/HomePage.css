@@ -1,0 +1,24 @@
+.HomePage {
+	text-align: left;
+}
+
+.HomePage div div {
+	margin-block: 20px;
+}
+
+.HomePage img {
+	width: 100%;
+}
+
+.linkTitle {
+	text-decoration: none;
+}
+
+.HomePage h1 {
+	color: black;
+	font-weight: 300;
+}
+
+.HomePage p {
+	font-weight: 100;
+}

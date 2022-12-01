@@ -1,0 +1,28 @@
+.BeerPage img {
+	object-fit: contain;
+	height: 200px;
+	width: 60px;
+	margin-inline: 20px;
+}
+
+.beersLink,
+.beersLink:hover {
+	text-decoration: none;
+	color: black;
+	border-bottom: 1px solid black;
+}
+
+.imgContainer {
+	max-width: 200px;
+}
+
+.BeerPage div div {
+	display: flex;
+}
+
+.BeerPage div div div {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	justify-content: center;
+}
