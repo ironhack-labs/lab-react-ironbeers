@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+nav {
+  background-color: #e3f2fd;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar svg {
+  height: 2rem;
+  width: 2rem;
+  color: rgb(43, 193, 223);
+}
+
+.card {
+ border: 1px solid #d9ecfa;
+ padding: 1rem;
+}
+
+.card-img-top {
+  width: 18rem;
+  object-fit: contain;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.list-img {
+  height: 4rem;
+  width: 4rem;
+  object-fit: contain;
+}
