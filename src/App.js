@@ -1,25 +1,54 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Homepage from "./components/Homepage";
+import AllBeers from "./components/AllBeers";
+import BeerDetails from "./components/BeerDetails";
+import RandomBeer from "./components/RandomBeer";
+import NewBeer from "./components/NewBeer";
+import axios from 'axios';
+
+const apiURL = "https://ih-beers-api2.herokuapp.com/beers";
 
 function App() {
+  const [fetching, setFetching] = useState(true);
+  const [beers, setBeers] = useState([]);
+
+  useEffect(() => {
+    console.log("useEffect - Initial render (Mounting)");
+    axios.get(apiURL)
+      .then((response) => {
+        setBeers(response.data);
+        setFetching(false);
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      {/* {fetching && <p>Loading ...</p>} */}
+      <Routes>
+        <Route path="/" element={<Homepage />}/>
+        <Route 
+          path="/beers"
+          element={<AllBeers beers={beers}/>}
+        />
+        <Route 
+          path="/beers/:beerId"
+          element={<BeerDetails beers={beers}/>}
+        />
+        <Route 
+          path="/random-beer"
+          element={<RandomBeer />}
+        />
+        <Route 
+          path="/new-beer"
+          element={<NewBeer />}
+        />
+      </Routes>
     </div>
-  );
+  )
 }
 
 export default App;

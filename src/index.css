@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card.beer-list-card {
+  flex-direction: row;
+  margin: 5px;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+.card.beer-list-card img {
+  max-height: 200px;
+}
+
+.img-details img{
+  max-height: 50vh;
+}
+
+.new-beer-form {
+  width: 80%;
+  margin: auto;
+}
+.new-beer-form label {
+  display: block;
+  text-align: left;
+}
+.new-beer-form input {
+  width: 100%;
+}
+
