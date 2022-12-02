@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Navbar from "./Navbar";
 const RandomBeer = ({ beer }) => {
   const { _id } = useParams();
   const [singleBeerDetail, setSingleBeerDetail] = useState({});
@@ -15,12 +16,13 @@ const RandomBeer = ({ beer }) => {
   }, [_id]);
   return (
     <>
+      <Navbar/>
       <div className="card" style={{ width: "30rem" }}>
         <img
           src={singleBeerDetail.image_url}
           className="card-img-top"
           alt="single-beer-img"
-          style ={{height:'30rem',width:'15rem'}}
+          style={{ height: "30rem", width: "15rem" }}
         />
         <div className="card-body">
           <h5 className="card-title">{singleBeerDetail.name}</h5>
@@ -37,10 +39,7 @@ const RandomBeer = ({ beer }) => {
             Contributed By {singleBeerDetail.contributed_by}
           </li>
         </ul>
-        <div className="card-body">
-          {/* <a href="#" className="card-link">Card link</a>
-      <a href="#" className="card-link">Another link</a> */}
-        </div>
+        <div className="card-body"></div>
       </div>
     </>
   );
