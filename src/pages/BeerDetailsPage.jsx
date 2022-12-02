@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -17,7 +16,7 @@ function BeerDetails({ beers }) {
       ) : (
         <section>
           <div className='beer-img'>
-            <img src={foundBeer.image_url} alt='beer image' />
+            <img src={foundBeer.image_url} alt='beer' />
           </div>
           <div className='beer-info'>
             <div className='first-container row-container'>
@@ -48,22 +47,23 @@ const Wrapper = styled.main`
     align-items: center;
   }
   section .beer-img {
+    margin-top: 60px;
     width: 100%;
-    height: 55%;
+    height: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   img {
-    width: 150px;
-    height: 350px;
+    width: 120px;
+    height: 300px;
   }
   section .beer-info {
     margin-top: 20px;
     width: 85%;
     max-width: 450px;
-    height: 45%;
+    height: 5%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

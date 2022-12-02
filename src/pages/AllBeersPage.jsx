@@ -8,9 +8,9 @@ function AllBeersPage({ beers }) {
       <div className='outlined'></div>
       {beers.map((beer) => {
         return (
-          <section>
+          <section key={beer.name}>
             <div className='beer-img'>
-              <img src={beer.image_url} alt='beer image' />
+              <img src={beer.image_url} alt='beer' />
             </div>
             <div className='beer-info'>
               <Link className='heading-two' to={`/beers/${beer.name}`}>
