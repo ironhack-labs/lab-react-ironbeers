@@ -17,7 +17,7 @@ const Home = () => {
   </div>
 </div>
 </Link>
-<Link to={`/Randombeers`}>
+<Link to={`/random-beer`}>
         <div className="card" style={{width : "100rem"}}>
   <img src={randomBeerImg} className="card-img-top" alt="all-beer"/>
   <div className="card-body">

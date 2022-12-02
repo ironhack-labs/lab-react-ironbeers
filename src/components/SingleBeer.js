@@ -15,11 +15,12 @@ const SingleBeer = ({ beer }) => {
   }, [_id]);
   return (
     <>
-      <div className="card" style={{ w_idth: "18rem" }}>
+      <div className="card" style={{ width: "30rem" }}>
         <img
           src={singleBeerDetail.image_url}
           className="card-img-top"
           alt="single-beer-img"
+          style ={{height:'30rem',width:'15rem'}}
         />
         <div className="card-body">
           <h5 className="card-title">{singleBeerDetail.name}</h5>
