@@ -16,7 +16,7 @@ function Navbar() {
 const Wrapper = styled.nav`
   .navbar {
     width: 100vw;
-    height: 10vh;
+    height: 12vh;
     background-color: #56382d;
     display: flex;
     justify-content: center;
