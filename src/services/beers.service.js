@@ -12,9 +12,10 @@ class BeersService {
         return this.api.get('/')
     }
 
-    // getOneBeer() {
-    //     return this.api.get(`/:${beer_id}`)
-    // }
+    getOneBeer(beer_id) {
+
+        return this.api.get(`/${beer_id}`)
+    }
 
     getRandomBeer() {
         return this.api.get('/random')
