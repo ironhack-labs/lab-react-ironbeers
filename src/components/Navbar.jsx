@@ -24,7 +24,7 @@ const Wrapper = styled.nav`
   }
   i {
     color: #fff;
-    font-size: 40px;
+    font-size: 35px;
   }
 `;
 

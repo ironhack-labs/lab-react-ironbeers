@@ -1,32 +1,21 @@
-import axios from 'axios';
 import styled from 'styled-components';
-import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-function AllBeersPage() {
-  const [beersList, setBeersList] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get('https://ih-beers-api2.herokuapp.com/beers')
-      .then((res) => {
-        console.log(res.data);
-        setBeersList(res.data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
+function AllBeersPage({ beers }) {
   return (
     <Wrapper>
       <h1>Our Beers</h1>
       <div className='outlined'></div>
-      {beersList.map((beer) => {
+      {beers.map((beer) => {
         return (
           <section>
             <div className='beer-img'>
               <img src={beer.image_url} alt='beer image' />
             </div>
             <div className='beer-info'>
-              <h2>{beer.name}</h2>
+              <Link className='heading-two' to={`/beers/${beer.name}`}>
+                {beer.name}
+              </Link>
               <p>{beer.tagline}</p>
               <h5>Contributed by: {beer.name}</h5>
             </div>
@@ -40,7 +29,7 @@ function AllBeersPage() {
 const Wrapper = styled.main`
   h1 {
     text-align: center;
-    margin: 10px 0 5px 0;
+    margin: 10px 0 10px 0;
     color: #53001d;
     text-shadow: 1px 1px #000;
   }
@@ -64,12 +53,14 @@ const Wrapper = styled.main`
   img {
     height: 25vh;
   }
-  .beer-info h2 {
-    margin-bottom: 15px;
+  .beer-info .heading-two {
+    font-size: 25px;
+    font-weight: 800;
     color: #56382d;
+    text-decoration: none;
   }
   .beer-info p {
-    margin-bottom: 15px;
+    margin: 15px 0;
     color: #bf2a2e;
     font-size: 20px;
     text-shadow: 1px 1px #bf2a2e;
