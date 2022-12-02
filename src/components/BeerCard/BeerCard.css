@@ -1,0 +1,21 @@
+.beerCard img {
+    display: block;
+    height: 150px;
+    object-fit: cover;
+}
+
+.beerCard {
+    display: flex;
+    margin-bottom: 1.5rem;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 5%;
+    padding: 0.5rem;
+
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
