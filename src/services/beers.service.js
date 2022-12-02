@@ -21,8 +21,8 @@ class BeersService {
         return this.api.get('/random')
     }
 
-    createNewBeer() {
-        return this.api.post('/new')
+    createNewBeer(newBeerData) {
+        return this.api.post('/new', newBeerData)
     }
 
     // searchBeer() {
