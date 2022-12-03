@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
-//import dataJSON from "../data.json";
 
 const apiURL = "https://ih-beers-api2.herokuapp.com/beers";
 
