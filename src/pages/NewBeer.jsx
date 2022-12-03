@@ -6,10 +6,10 @@ const emptyDataObj = {
   name: "",
   tagline: "",
   description: "",
-  firstBrewed: "",
-  brewersTips: "",
-  attenuationLevel: 0,
-  contributedBy: "",
+  first_brewed: "",
+  brewers_tips: "",
+  attenuation_level: 0,
+  contributed_by: "",
 };
 
 const NewBeer = () => {
@@ -18,24 +18,14 @@ const NewBeer = () => {
   const handleInputData = e => {
     const { value, name, valueAsNumber } = e.target;
     setData({ ...data, [name]: valueAsNumber || value });
-    console.log(data);
   };
 
   const handleFormSubmit = e => {
     e.preventDefault();
-    const body = {
-      name: data.name,
-      tagline: data.tagline,
-      description: data.description,
-      first_brewed: data.firstBrewed,
-      brewers_tips: data.brewersTips,
-      attenuation_level: data.attenuationLevel,
-      contributed_by: data.contributedBy,
-    };
     axios
-      .post("https://ih-beers-api2.herokuapp.com/beers/new", body)
+      .post("https://ih-beers-api2.herokuapp.com/beers/new", data)
       .then(response => {
-        console.log("response :", response);
+        console.log("response: ", response);
         setData(emptyDataObj);
       })
       .catch(error => {
@@ -57,16 +47,16 @@ const NewBeer = () => {
         <textarea id="input-description" type="text" name="description" rows={5} value={data.description} onChange={handleInputData} />
 
         <label htmlFor="input-first-brewed">First Brewed </label>
-        <input id="input-first-brewed" type="text" name="firstBrewed" value={data.firstBrewed} onChange={handleInputData} />
+        <input id="input-first-brewed" type="text" name="first_brewed" value={data.first_brewed} onChange={handleInputData} />
 
         <label htmlFor="input-brewers-tips">Brewers Tips</label>
-        <input id="input-brewers-tips" type="text" name="brewersTips" value={data.brewersTips} onChange={handleInputData} />
+        <input id="input-brewers-tips" type="text" name="brewers_tips" value={data.brewers_tips} onChange={handleInputData} />
 
         <label htmlFor="input-attenuation">Attenuation Level</label>
-        <input id="input-attenuation" type="number" name="attenuationLevel" value={data.attenuationLevel} onChange={handleInputData} />
+        <input id="input-attenuation" type="number" name="attenuation_level" value={data.attenuation_level} onChange={handleInputData} />
 
         <label htmlFor="input-contributed">Contributed By</label>
-        <input id="input-contributed" type="text" name="contributedBy" value={data.contributedBy} onChange={handleInputData} />
+        <input id="input-contributed" type="text" name="contributed_by" value={data.contributed_by} onChange={handleInputData} />
 
         <button>ADD NEW</button>
       </form>
