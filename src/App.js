@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home"
+import NewBeer from "./pages/NewBeerPage";
+import BeersPage from "./pages/BeersPage";
+import RandomBeer from "./pages/RandomBeerPage";
+import BeerDetails from "./components/BeerDetails";
 
-function App() {
+import axios from "axios";
+
+const App = () => {
+  const [beers, setBeer] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://ih-beers-api2.herokuapp.com/beers")
+      .then((response) => {
+        setBeer(response.data);
+      });
+  }, []);
+  console.log(beers)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Home/>
+      <Routes>
+      <Route path="/" element={Home} />
+      <Route path="/beers" element={<BeersPage beers={beers} />} /> 
+      <Route path="/beers/:id" element={<BeerDetails beers={beers} />} />
+        {/* <Route path="/add" element={<AddBeerPage />} />
+        <Route path="/random" element={<RandomBeerPage />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
