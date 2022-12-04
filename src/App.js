@@ -3,8 +3,9 @@ import "./App.css";
 import { useState, useEffect } from "react"
 import Home from "./components/Home";
 import Beer from "./components/Beer";
-import RandomBeer from "./components/RandomBeer";
+import TheBeer from "./components/TheBeer";
 import NewBeer from "./components/NewBeer";
+import RandomBeer from "./components/RandomBeer";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/beer" element={<Beer beers={beers} />} />
+        <Route path="/beer/:id" element={<TheBeer beers={beers}/>} />
         <Route path="/random-beer" element={<RandomBeer />} />
         <Route path="/new-beer" element={<NewBeer />} />
       </Routes>

@@ -22,7 +22,23 @@
   text-decoration: none;
   font-size: 2em;
 }
-.beer-img {
+.beers-img {
   height: 200px;
-  width: auto;
+  width: 100px;
+}
+.small-link {
+  font-size: 0.8em;
+  text-decoration: none;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+}
+.beers-text {
+  margin-left: 5%;
+}
+.random-beer {
+  max-width: 400px;
+  margin: 5%;
 }
