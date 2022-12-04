@@ -17,7 +17,7 @@ function App() {
       fetch("https://ih-beers-api2.herokuapp.com/beers")
         .then(response => response.json())
         .then(data => {
-          data = data.splice(0, 30); //doing it bc data are poluted and i wanna keep just a real beers :)
+          //data = data.splice(0, 30); //doing it bc data are poluted and i wanna keep just a real beers :)
           setBeers(data);
         })
         .catch(error => {
