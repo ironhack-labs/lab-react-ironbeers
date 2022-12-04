@@ -1,8 +1,12 @@
 import React from "react";
+import Navbars from "./Navbars";
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 const Beers = ({ beers }) => {
     return (
-    <div>
+    <div>        
+        <Navbars />
         {beers.map((beer) => {
             return(
             <div key={beer._id}>
