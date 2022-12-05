@@ -8,17 +8,17 @@ const BeerDetails = ({ beers }) => {
     return singleBeer._id === id;
   });
   return (
-    <div>
+    <>
       {foundBeer && (
         <>
-          <h1 className="p-5">{foundBeer.namen}</h1>
+          <h1>{foundBeer.name}</h1>
           <h1>Brewed: {foundBeer.first_brewed}</h1>
           <h1>Level: {foundBeer.attenuation_level}</h1>
        
         </>
           )}
-      )
-    </div>
+      
+    </>
   );
 };
 
