@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Beers from "./components/Beers";
 import RandomBeer from "./components/RandomBeer";
@@ -10,8 +10,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function App() {
-
+  const [showNav, setShowNav] = useState(true)
   const [beers, setBeers] = useState([]);
+  const location = useLocation()
 
   useEffect(() => {
     axios
@@ -23,6 +24,15 @@ function App() {
 
   }, [] );
 
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setShowNav(false)
+    } else {
+      setShowNav(true)
+    }
+  }, [location])
+
+
   const addNewBeer = (beer) => {
     const updatedBeers = [...beers, beer];
 
@@ -31,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
+      {showNav && <Navbar/>}
        <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<Beers beers={beers} />} />
