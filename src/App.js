@@ -12,6 +12,12 @@ import RandomBeerPage from './pages/RandomBeerPage';
 function App() {
   const [beersList, setBeersList] = useState([]);
 
+  const addNewBeer = (newBeer) => {
+    const updatedBeersList = [...beersList, newBeer];
+
+    setBeersList(updatedBeersList);
+  };
+
   useEffect(() => {
     axios
       .get('https://ih-beers-api2.herokuapp.com/beers')
@@ -32,7 +38,10 @@ function App() {
           path='/beers/:beerName'
           element={<BeerDetailsPage beers={beersList} />}
         />
-        <Route path='/new-beer' element={<NewBeerPage />} />
+        <Route
+          path='/new-beer'
+          element={<NewBeerPage addNewBeer={addNewBeer} />}
+        />
         <Route path='/random-beer' element={<RandomBeerPage />} />
       </Routes>
     </div>

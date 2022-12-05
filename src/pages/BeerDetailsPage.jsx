@@ -69,6 +69,7 @@ const Wrapper = styled.main`
     align-items: flex-start;
     justify-content: flex-start;
     padding-left: 20px;
+    color: #56382d;
   }
   section .beer-info .row-container {
     margin-bottom: 20px;
@@ -76,6 +77,9 @@ const Wrapper = styled.main`
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  h1 {
+    text-shadow: 1px 1px #000;
   }
   .description {
     margin-bottom: 10px;
