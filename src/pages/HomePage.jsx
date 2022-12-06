@@ -14,7 +14,7 @@ const HomePage = () => {
           <p>Scroll down && get familiar with the Ironbeers Collection</p>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0.9} className="section2" style={{ color: "black" }}>
+        <ParallaxLayer offset={1} speed={0.9}>
           <Link to="/beers" className="Link">
             <section>
               <img src={beersImg} alt="All Beers" />
