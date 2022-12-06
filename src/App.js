@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Beers from "./pages/Beers";
+import Navbar from "../src/pages/components/Navbar";
+import Homepage from "./pages/Homepage";
+import NewBeer from "./pages/NewBeer";
+import Random from "./pages/RandomBeers";
+import SingleBeer from "./pages/SingleBeer";
 
 function App() {
+  const [showNav, setShowNav] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setShowNav(false);
+    } else {
+      setShowNav(true);
+    }
+  }, [location.pathname, showNav]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>{showNav && <Navbar />}</nav>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/beers" element={<Beers />} />
+        <Route path="/beers/:id" element={<SingleBeer />} />
+        <Route path="/random" element={<Random />} />
+        <Route path="/new" element={<NewBeer />} />
+      </Routes>
     </div>
-  );
+  ); //
 }
 
 export default App;
