@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
 import Header from "../components/Header";
 
 const SingleBeer = () => {
@@ -9,15 +8,13 @@ const SingleBeer = () => {
   const [beer, setBeer] = useState([]);
 
   useEffect(() => {
-    //! it renders twice, in dev mode => solution: run in production mode
+    //? it renders twice, in dev mode => solution: run in production mode
     if (id) {
       axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`).then(response => {
-        console.log(response.data);
         setBeer(response.data);
       });
     } else {
       axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`).then(response => {
-        console.log(response.data);
         setBeer(response.data);
       });
     }

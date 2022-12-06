@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-
 import Header from "../components/Header";
+
 const emptyDataObj = {
   name: "",
   tagline: "",
@@ -18,6 +18,7 @@ const NewBeer = () => {
   const handleInputData = e => {
     const { value, name, valueAsNumber } = e.target;
     setData({ ...data, [name]: valueAsNumber || value });
+    console.log(data);
   };
 
   const handleFormSubmit = e => {
@@ -25,7 +26,6 @@ const NewBeer = () => {
     axios
       .post("https://ih-beers-api2.herokuapp.com/beers/new", data)
       .then(response => {
-        console.log("response: ", response);
         setData(emptyDataObj);
       })
       .catch(error => {

@@ -1,9 +1,9 @@
 //Coloring
 $base-color: #00aaff;
-$tone-color: #ccc;
+$tone-color: #aaa;
 //responsive size variables
 $mobile: 768px;
-$tablet: 992px;
+$tablet: 769px;
 $desktop: 1200px;
 //Shadows and decoration variables:
 
@@ -12,17 +12,19 @@ $desktop: 1200px;
     @content;
   }
 }
-
 @mixin normal {
   @media (min-width: #{$tablet}) {
     @content;
   }
 }
-
 @mixin large {
   @media (min-width: #{$desktop}) {
     @content;
   }
+}
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
 }
 
 *,
@@ -45,17 +47,9 @@ body {
     position: fixed;
     top: -10px;
     left: 0;
-    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0 10px #000000cc;
     z-index: 2;
   }
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-.App {
-  //text-align: center;
 }
 
 .Link {
@@ -63,16 +57,10 @@ code {
   color: inherit;
 }
 
-//.main-page {
-//  @include normal {
-//  }
-//}
-
 section {
   margin: 0rem 1rem;
   border: 2px solid $tone-color;
-  display: flex;
-  flex-direction: column;
+  @include flexCol();
   align-items: flex-start;
   div {
     margin: 1rem;
@@ -82,7 +70,6 @@ section {
       color: black;
     }
   }
-
   @include small {
     flex-direction: column;
     img {
@@ -91,54 +78,112 @@ section {
       object-fit: cover;
     }
   }
-  //@include normal {
-  //  width: ;
-  //}
-  @include large {
-    flex-direction: row-reverse;
-    height: 254px;
-    margin: 1rem 0;
+  @include normal {
+    margin: 0 auto;
+    width: 705px;
+
+    img {
+      width: 705px;
+    }
   }
 }
-
 //Header Component
 .Header {
   background-color: $base-color;
   width: 100vw;
   padding: 1rem;
-  text-align: center;
+  box-shadow: 0px 0 10px #000000cc;
+  @include flexCol();
+  justify-content: center;
+  align-items: center;
+  @include normal {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  @include large {
+    justify-content: space-between;
+  }
   .icon {
     width: 3rem;
     height: 3rem;
-    fill: rgb(255, 255, 255);
+    fill: white;
+  }
+  div {
+    @include small {
+      width: 90%;
+    }
+    @include normal {
+      width: 60%;
+    }
+    position: relative;
+    ::placeholder {
+      color: white;
+    }
+    input {
+      width: 100%;
+      padding: 1rem 1rem 1rem 2rem;
+      color: white;
+      background-color: #00000033;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 2px solid white;
+      border-radius: 10px;
+      outline: none;
+    }
+    .search-icon {
+      width: 1.25rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 1.25rem;
+      fill: white;
+    }
   }
 }
-
-//list of beers
+//list of beers //responsive shrinking until 339px width
 .beer-list {
-  margin-top: 2rem;
+  margin: 2rem;
   padding: 0;
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
   li {
     border-bottom: 2px solid $tone-color;
-    img {
-      height: 256px;
-      padding: 1rem 0;
+    .list {
+      display: flex;
     }
-    div {
-      // text-align: left;
-      margin-left: 1rem;
-      width: 70%;
+    .imgDiv {
+      width: 190px;
+      height: 220px;
+      padding: 1rem;
+      text-align: center;
+      img {
+        height: 100%;
+      }
+    }
+    .content-preview {
+      width: 100%;
+      @include flexCol();
+      justify-content: center;
+      h2 {
+        font-weight: 400;
+        font-size: 1.9rem;
+        margin: 0 0 1rem 0;
+      }
+      p {
+        margin: 0 0 0.5rem 0;
+      }
+      P:first-of-type {
+        color: grey;
+        font-size: 1.35rem;
+        font-weight: 500;
+      }
     }
   }
 }
-
 //single beer || random beer
 .single-beer {
-  display: flex;
-  flex-direction: column;
+  @include flexCol();
+  border: none;
+  margin: 2rem;
   img {
     margin: 0 auto;
     padding: 1rem;
@@ -146,24 +191,36 @@ section {
     width: auto;
   }
   div {
+    font-size: 1.5rem;
     color: black;
+    h2 {
+      font-weight: 400;
+    }
     span {
       color: black;
       float: right;
-      font-weight: bold;
     }
     .greyed {
-      color: grey;
+      color: $tone-color;
       font-weight: bold;
     }
   }
+  @include normal {
+    margin: 0 auto;
+  }
+  @include large {
+    flex-direction: row;
+    margin: 0 auto;
+    width: 70%;
+    img {
+      height: 500px;
+    }
+  }
 }
-
 // form for new beer
 form {
   margin: 2rem;
-  display: flex;
-  flex-direction: column;
+  @include flexCol();
   justify-content: center;
   label {
     margin: 1rem 0 0 1rem;
@@ -184,5 +241,9 @@ form {
     background-color: $base-color;
     border: none;
     color: white;
+  }
+  @include normal {
+    width: 70%;
+    margin: 0 auto;
   }
 }

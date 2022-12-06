@@ -5,7 +5,7 @@ import randomBeerImg from "../assets/random-beer.png";
 
 const HomePage = () => {
   return (
-    <main className="main-page">
+    <main>
       <Link to="/beers" className="Link">
         <section>
           <img src={beersImg} alt="All Beers" />
