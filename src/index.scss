@@ -5,8 +5,7 @@ $tone-color: #aaa;
 $mobile: 768px;
 $tablet: 769px;
 $desktop: 1200px;
-//Shadows and decoration variables:
-
+//Responsive mixins
 @mixin small {
   @media (max-width: #{$mobile}) {
     @content;
@@ -55,6 +54,14 @@ body {
 .Link {
   text-decoration: none;
   color: inherit;
+}
+//Start Page / no nest
+.greeter {
+  height: 100vh;
+  color: white;
+  display: grid;
+  place-items: center;
+  background-color: $base-color;
 }
 
 section {
