@@ -1,0 +1,34 @@
+.detailsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8vh 5vw;
+}
+
+.titleCard {
+    display: flex;
+    align-items: center;
+    margin: 2vh 0;
+}
+
+.detailImg {
+    height: 30vh;
+}
+
+.nameAndTag {
+    width: 75vw;
+}
+
+.nameAndTag h5, .numbers h1 {
+    color: grey;
+}
+
+.numbers {
+    text-align: end;
+}
+
+.footer {
+    margin-top: 2vh;
+    color: rgb(87, 87, 87);
+}

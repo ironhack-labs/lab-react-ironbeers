@@ -1,0 +1,27 @@
+.beerCard {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3vh;
+    border-bottom: 1px solid grey;
+    height: 25vh;
+}
+
+.beerCard img {
+    height: 40vw;
+}
+
+.imageCard {
+    width: 20vw;
+}
+
+.imageCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textCard {
+    width: 60vw;
+}
+

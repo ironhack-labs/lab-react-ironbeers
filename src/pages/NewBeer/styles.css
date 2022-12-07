@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
+
+.form input {
+    margin-bottom: 3vh;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.formCard {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.button {
+    background-color: #3BABD4;
+    color: white;
+    border-radius: 20px;
+    border-style: none;
+    height: 30px;
+}

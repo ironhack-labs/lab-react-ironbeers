@@ -1,0 +1,9 @@
+.homeImages {
+    width: 100vw;
+    height: 20vh;
+    object-fit: cover;
+}
+
+.homeText {
+    margin: 1vh 7vw 5vh;
+}
