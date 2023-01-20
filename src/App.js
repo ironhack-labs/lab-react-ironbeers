@@ -14,10 +14,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/beers" element={<ListBeers />} />
-        <Route path="/beers/:id" element={<SingleBeer />} />
-        <Route path="/random-beer" element={<RandomBeer />} />
-        <Route path="/new-beer" element={<NewBeer />} />
+        <Route path="/beers" element={<ListBeers devAPI={devAPI} />} />
+        <Route path="/beers/:id" element={<SingleBeer devAPI={devAPI} />} />
+        <Route path="/random-beer" element={<RandomBeer devAPI={devAPI} />} />
+        <Route path="/new-beer" element={<NewBeer devAPI={devAPI} />} />
       </Routes>
     </div>
   );
