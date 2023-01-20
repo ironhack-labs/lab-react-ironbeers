@@ -27,11 +27,37 @@ function App() {
         console.log(response.data);
 
         setbeersArr(response.data);
+
+
+
+
       })
       .catch((e) => {
         console.log(e);
       });
   }
+
+  const createBeer = (newBeerObj) =>{
+    axios
+    .post(baseUrl+ '/new', newBeerObj)
+    .then((response) => {
+      console.log(response.data);
+      getbeersFromApi();
+   
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+  
+  }
+
+
+
+
+
+
+
+
 
   return (
     <div className="App">
@@ -42,7 +68,7 @@ function App() {
 <Route path ="/beers" element ={  <AllBeers beersArr ={beersArr}/>}></Route>
 <Route path ="/beers/:beerId" element ={  <SingleBeer beersArr ={beersArr}/>}></Route>
 <Route path ="/random-beer" element ={  <RandomBeer/>}></Route>
-<Route path ="/new-beer" element ={  <NewBeer/>}></Route>
+<Route path ="/new-beer" element ={  <NewBeer callbackToCreate={createBeer}/>}></Route>
 </Routes>
  
 
