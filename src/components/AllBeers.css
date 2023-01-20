@@ -1,0 +1,12 @@
+.beerObj {
+    display: flex;
+    justify-content: center;
+}
+
+.beerObj img {
+    width: 20%;
+}
+
+.beerObj div {
+    margin: 10px;
+}
