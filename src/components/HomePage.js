@@ -2,11 +2,12 @@ import beersImg from "../assets/beers.png";
 import randomBeerImg from "../assets/random-beer.png";
 import newBeerImg from "../assets/new-beer.png";
 import { Link } from "react-router-dom";
+import './HomePage.css';
 
 function HomePage() {
   return (
     <>
-      <div>
+      <div className="homepage">
         <Link to="/beers">
           <img src={beersImg} alt="all beers"></img>
           <h1>All Beers</h1>
@@ -21,7 +22,7 @@ function HomePage() {
           </p>
         </Link>
       </div>
-      <div>
+      <div className="homepage">
         <Link to="/random-beer">
           <img src={randomBeerImg} alt="random beer"></img>
           <h1>Random Beer</h1>
@@ -36,7 +37,7 @@ function HomePage() {
           </p>
         </Link>
       </div>
-      <div>
+      <div className="homepage">
         <Link to="/new-beer">
           <img src={newBeerImg} alt="new beer"></img>
           <h1>New Beer</h1>
