@@ -26,9 +26,9 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/beers' element={<Beers beersList={beersList}/>} />
-        <Route path='/beers/:beerId' element={<Beer beersList={beersList}/>} />
+        <Route path='/beers/:beerId' element={<Beer beersList={beersList} />} />
         <Route path='/random-beer' element={<RandomBeers />} />
-        <Route path='/new-beer' element={<NewBeer />} />
+        <Route path='/new-beer' element={<NewBeer getInfoFromAPI={getInfoFromAPI}/>} />
       </Routes>
     </div>
   );
