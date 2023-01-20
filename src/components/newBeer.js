@@ -4,15 +4,15 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-export default function NewBeer(props){
+export default function NewBeer(props) {
     const [name, setName] = useState("")
     const [tagline, setTagline] = useState("")
     const [description, setDescription] = useState("")
     const [firstBrewed, setFirstBrewed] = useState("")
     const [brewersTips, setBrewersTips] = useState("")
     const [attenuationLevel, setAttenuationLevel] = useState(null)
-    const [contributedBy, setContributedBy] = useState("")   
-    
+    const [contributedBy, setContributedBy] = useState("")
+
     const navigate = useNavigate()
 
     const handelSubmit = (e) => {
@@ -27,6 +27,7 @@ export default function NewBeer(props){
             "contributedBy": contributedBy
         }
         createNewBeer(newBeerObj);
+
         setName("")
         setTagline("")
         setDescription("")
@@ -34,21 +35,20 @@ export default function NewBeer(props){
         setBrewersTips("")
         setAttenuationLevel("")
         setContributedBy("")
+
         navigate("/beers")
     }
-    const createNewBeer = (newBeerObj) => {
-        console.log(newBeerObj)
+    const createNewBeer = (newBeerObj) => {        
         axios
-           .post(process.env.REACT_APP_API_URL+ "/new", newBeerObj)
-           .then((r) => {
-              console.log(r)
-              props.getInfoFromAPI()
-           })
-           .then(() => console.log('New beer successfully saved to database!'))
-           .catch((e) => console.log("error creating new Beer", e))
+            .post(process.env.REACT_APP_API_URL + "/new", newBeerObj)
+            .then(() => {                
+                props.getInfoFromAPI()
+            })
+            .then(() => console.log('New beer successfully saved to database!'))
+            .catch((e) => console.log("error creating new Beer", e))
     }
 
-    return(
+    return (
         <form onSubmit={handelSubmit}>
             <label>
                 <input
@@ -77,7 +77,7 @@ export default function NewBeer(props){
                     placeholder="Beer's description"
                     value={description}
                     required={true}
-                    rows="4" 
+                    rows="4"
                     cols="5"
                     onChange={(e) => { setDescription(e.target.value) }}
                 />
