@@ -1,0 +1,14 @@
+.beerBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.beerImage {
+    width: 15%;
+    margin: 10%;
+}
+.beerText {
+    text-align: left;
+    margin: 10%;
+}
