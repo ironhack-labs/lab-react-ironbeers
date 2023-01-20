@@ -1,23 +1,92 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import "./App.css";
+import HomePage from "./components/HomePage";
+import ListBeers from "./components/ListBeers";
+import RandomBeer from "./components/RandomBeer";
+import SingleBeer from "./components/SingleBeer";
+import NewBeer from "./components/NewBeer";
 
 function App() {
+  const baseURL = process.env.REACT_APP_API_URL;
+  const [beers, setBeers] = useState([]);
+  const [name, setName] = useState([]);
+  const [tagline, setTagline] = useState([]);
+  const [description, setDescription] = useState([]);
+  const [firstBrewed, setFirstBrewed] = useState([]);
+  const [brewersTips, setBrewersTips] = useState([]);
+  const [attenuationLevel, setAttenuationLevel] = useState([]);
+  const [contributedBy, setContributedBy] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    axios
+      .get(baseURL)
+      .then((response) => {
+        setBeers(response.data);
+      })
+      .catch((e) => console.log("error getting apts from DB", e));
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const newBeer = {
+      name,
+      tagline,
+      description,
+      firstBrewed,
+      brewersTips,
+      attenuationLevel,
+      contributedBy,
+    };
+
+    axios
+    .post(baseURL + "/new", newBeer)
+    .then((response) => {
+      setBeers([...beers, newBeer]);
+      console.log("new beer created", newBeer);
+    })
+    .catch((e) => console.log("error creating new beer"));
+    setName("");
+    setTagline("");
+    setDescription("");
+    setAttenuationLevel("");
+    setFirstBrewed("");
+    setBrewersTips("");
+    setContributedBy("");
+    navigate("/beers");
+  }
+
+  
+  
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/beers" element={<ListBeers beers={beers} />} />
+        <Route path="/beers/:beerId" element={<SingleBeer beers={beers} />} />
+        <Route path="/random-beer" element={<RandomBeer />} />
+        <Route
+          path="/new-beer"
+          element={
+            <NewBeer
+              setName={setName}
+              setTagline={setTagline}
+              setDescription={setDescription}
+              setFirstBrewed={setFirstBrewed}
+              setBrewersTips={setBrewersTips}
+              setAttenuationLevel={setAttenuationLevel}
+              setContributedBy={setContributedBy}
+              callbackToHandleSubmit={handleSubmit}
+            />
+          }
+        />
+      </Routes>
     </div>
   );
 }
