@@ -1,7 +1,12 @@
+import Header from "./Header";
+
 function Beers() {
 
-    return(
-        <h1>It's Beers page</h1>
+    return (
+        <div>
+            <Header />
+            <h1>It's Beers page</h1>
+        </div>
     )
 }
 

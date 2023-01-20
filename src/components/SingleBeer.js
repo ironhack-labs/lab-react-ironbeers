@@ -1,7 +1,13 @@
+import Header from "./Header";
+
 function SingleBeer() {
 
     return(
-        <h1>It's Single Beer page</h1>
+        <div>
+            <Header />
+            <h1>It's Single Beer page</h1>
+        </div>
+        
     )
 }
 
