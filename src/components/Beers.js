@@ -10,7 +10,6 @@ export function Beers() {
     axios
       .get(process.env.REACT_APP_API_URL)
       .then((response) => {
-        console.log("Response from the API: ", response.data);
         setBeersList(response.data);
       })
       .catch((error) => {
