@@ -1,16 +1,31 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 //import noBeerImg from '../assets/no-beer.png';
 
 function BeerList(props) {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const beersToDisplay = props.beerArr.filter ( (beerDetails) => {
+    return beerDetails.name.toLowerCase().includes(searchQuery.toLowerCase());
+  });
+  
   return (
     <>
+    <input 
+    type='text' 
+    className='form-control mb-2' 
+    name='searchQuery'
+    placeholder='Find beer(s)'  
+    value={searchQuery} 
+    onChange={(e) => { setSearchQuery(e.target.value) }} />
         {props.beerArr === null
           ? 'Loading...'
-          : props.beerArr.map((beerDetails, index) => {
+          : beersToDisplay.map((beerDetails, index) => {
               //console.log(beerDetails);
               return (
-                <>
-                <Link to={'/beers/' + beerDetails._id} key={index}>
+                <div key={index}>
+                
+                <Link to={'/beers/' + beerDetails._id}>
                 <div className='card mb-3 text-bg-dark'>
                     <div className='row g-0'>
                         <div className='col-4 text-bg-light text-center card'>
@@ -28,7 +43,7 @@ function BeerList(props) {
                     </div>
                 </div>
                 </Link>
-                </>
+                </div>
               )
           })}
       </>
