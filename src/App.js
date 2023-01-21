@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import HomePage from "./components/HomePage";
 import ListBeers from "./components/ListBeers";
@@ -18,8 +18,9 @@ function App() {
   const [brewersTips, setBrewersTips] = useState([]);
   const [attenuationLevel, setAttenuationLevel] = useState([]);
   const [contributedBy, setContributedBy] = useState([]);
+  const [query, setQuery] = useState([]);
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     axios
       .get(baseURL)
@@ -28,6 +29,16 @@ function App() {
       })
       .catch((e) => console.log("error getting apts from DB", e));
   }, []);
+
+  useEffect(() => {
+    axios.get(baseURL + '/search?q=' + query)
+      .then((response) => {
+        setBeers(response.data)
+      })
+      .catch(e=>console.log(e, 'error searching '))
+   
+  },[query])
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -68,7 +79,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/beers" element={<ListBeers beers={beers} />} />
+        <Route path="/beers" element={<ListBeers beers={beers} setQuery={setQuery} />} />
         <Route path="/beers/:beerId" element={<SingleBeer beers={beers} />} />
         <Route path="/random-beer" element={<RandomBeer />} />
         <Route

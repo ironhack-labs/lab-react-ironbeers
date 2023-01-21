@@ -1,11 +1,17 @@
 import "./ListBeers.css";
 import Header from "./Header";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function ListBeers(props) {
+  const baseURL = process.env.REACT_APP_API_URL;
+
   return (
     <div className="ListBeers">
       <Header />
+      <input onChange={(e) => {
+        props.setQuery(e.target.value)
+      }} />
       <h1>Beers List</h1>
       {props.beers.slice(0).reverse().map((beer) => {
         return (
