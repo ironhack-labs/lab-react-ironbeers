@@ -1,31 +1,21 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
 
-const ListBeers = ({ devAPI }) => {
-  const [beersArr, setBeersArr] = useState();
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    getListofBeers();
-  }, []);
-
-  const getListofBeers = () => {
-    axios
-      .get(devAPI + "/beers")
-      .then((response) => {
-        console.log(response.data);
-
-        setBeersArr(response.data); // I want to access and display the API's response
-        setIsLoading(false);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  };
+const ListBeers = ({ beersArr, isLoading }) => {
+  /*
+  1. data from API is fetched
+  2. data still not there, therefore beersArr undefinde (asynchronous JS)
+  3. if beersArr is not yet defined, show the picture (or sth else) and go back to App.js
+  4. in app.js the state of the array is update (with the API data)
+  5. the conditions here are not true anymore and the code underneath is executed successfully
+  */
 
   if (isLoading) {
-    return <div>isLoading</div>;
+    return (
+      <div>
+        Still waiting for second state update of the array so that it can be
+        displayed.
+      </div>
+    );
   }
 
   return (
@@ -49,9 +39,11 @@ const ListBeers = ({ devAPI }) => {
                 </p>
                 <p>Description: {individualBeerofArr.description}</p>
                 <p>Contributed by: {individualBeerofArr.contributed_by}</p>
+                <br />
                 <Link to={"/beers/" + individualBeerofArr._id}>
                   More Details
                 </Link>
+                <hr />
               </div>
             );
           })}

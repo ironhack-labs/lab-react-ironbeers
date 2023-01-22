@@ -1,10 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const RandomBeer = (devAPI) => {
+const RandomBeer = ({ devAPI, isLoading, setIsLoading }) => {
   const [randomBeer, setRandomBeer] = useState();
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getRandomBeer();
@@ -15,7 +14,6 @@ const RandomBeer = (devAPI) => {
       .get(devAPI + "/beers/random")
       .then((aRandomBeer) => {
         console.log(aRandomBeer);
-
         setRandomBeer(aRandomBeer); // I want to access and display the API's response
         setIsLoading(false);
       })
@@ -35,12 +33,13 @@ const RandomBeer = (devAPI) => {
           Home
         </NavLink>
       </nav>
-      <h2>Title: {randomBeer.name}</h2>
-      <p>Tagline: {randomBeer.tagline}</p>
-      <p>First Brewed: {randomBeer.first_brewed}</p>
-      <p>Attenuation Level: {randomBeer.attenuation_level}</p>
-      <p>Description: {randomBeer.description}</p>
-      <p>Contributed by: {randomBeer.contributed_by}</p>
+      <h2>Title: {aRandomBeer.name}</h2>
+      <p>Tagline: {aRandomBeer.tagline}</p>
+      <p>First Brewed: {aRandomBeer.first_brewed}</p>
+      <p>Attenuation Level: {aRandomBeer.attenuation_level}</p>
+      <p>Description: {aRandomBeer.description}</p>
+      <p>Contributed by: {aRandomBeer.contributed_by}</p>
+      <Link to="/">Back</Link>
     </div>
   );
 };
