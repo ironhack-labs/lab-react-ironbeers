@@ -40,6 +40,10 @@
     justify-content: center;    
     }
 
+    a{
+    text-decoration: none;
+    }
+
     img {
     height:min-content;
     margin: 0 auto;
@@ -48,6 +52,7 @@
     }
 
     h1 {
+        color: black;
     font-size: 30px;
     }
 
@@ -58,4 +63,5 @@
 
     p {
     font-size: 15px;
+    color: black;
     }
