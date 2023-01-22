@@ -13,9 +13,6 @@ function SingleBeer() {
             .then((response) => {
                 setBeers(response.data);
             })
-            .catch((err) => {
-                console.log("error getting beers from API", err);
-            })
     }, [])
 
     const foundBeer = beers.find((beerDetails) => {
