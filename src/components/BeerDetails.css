@@ -1,0 +1,7 @@
+.beer-img-container{
+    height: 300px;
+}
+.beer-img-container img{
+    height: 80%;
+    margin: 2rem;
+}

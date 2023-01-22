@@ -1,0 +1,12 @@
+header{
+    background-color:rgb(27,167,205);
+    padding:0.2rem;
+}
+.home-img-container{
+    max-width: 50px;
+    margin: auto;
+}
+header img{
+    width: 100%;
+    filter: invert(100%);
+}
