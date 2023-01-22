@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const RandomBeer = ({ devAPI, isLoading, setIsLoading }) => {
-  const [randomBeer, setRandomBeer] = useState();
+  const [aRandomBeer, setARandomBeer] = useState();
 
   useEffect(() => {
     getRandomBeer();
@@ -13,8 +13,8 @@ const RandomBeer = ({ devAPI, isLoading, setIsLoading }) => {
     axios
       .get(devAPI + "/beers/random")
       .then((aRandomBeer) => {
-        console.log(aRandomBeer);
-        setRandomBeer(aRandomBeer); // I want to access and display the API's response
+        //console.log(aRandomBeer.data);
+        setARandomBeer(aRandomBeer.data); // I want to access and display the API's response
         setIsLoading(false);
       })
       .catch((e) => {
@@ -22,8 +22,8 @@ const RandomBeer = ({ devAPI, isLoading, setIsLoading }) => {
       });
   };
 
-  if (isLoading) {
-    return <div>isLoading</div>;
+  if (aRandomBeer === undefined) {
+    return <div>waiting for the data to arrive</div>;
   }
 
   return (
@@ -33,11 +33,9 @@ const RandomBeer = ({ devAPI, isLoading, setIsLoading }) => {
           Home
         </NavLink>
       </nav>
+      <img src={aRandomBeer.image_url} alt="a beer" />
       <h2>Title: {aRandomBeer.name}</h2>
       <p>Tagline: {aRandomBeer.tagline}</p>
-      <p>First Brewed: {aRandomBeer.first_brewed}</p>
-      <p>Attenuation Level: {aRandomBeer.attenuation_level}</p>
-      <p>Description: {aRandomBeer.description}</p>
       <p>Contributed by: {aRandomBeer.contributed_by}</p>
       <Link to="/">Back</Link>
     </div>
