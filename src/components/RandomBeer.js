@@ -1,7 +1,10 @@
-import {  NavLink,Link } from "react-router-dom";
+
 import axios from 'axios';
 import { useState,useEffect } from 'react';
+import { NavLink, Link } from "react-router-dom";
+import { Navbar,  Image } from 'react-bootstrap';
 
+import logo from '../assets/house-fill (2).svg'
 function RandomBeer (){
 
     const [randomBeer, setRandomBeer] = useState([]);

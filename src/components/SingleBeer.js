@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 
 import { Link} from "react-router-dom";
 
+import { Navbar,  Image } from 'react-bootstrap';
+
+import logo from '../assets/house-fill (2).svg'
 
 function SingleBeer (props){
 
@@ -41,6 +44,12 @@ function SingleBeer (props){
 
     return (
 <div>
+
+        <Navbar bg="primary" variant="dark" expand="lg" style={{backgroundColor: 'blue'}}>
+        <Navbar.Brand href="/" className="mx-auto">
+        <Image src={logo}width="35" height="30" className="d-inline-block align-top" alt="Home" />
+        </Navbar.Brand>
+        </Navbar>
 
 <h2>Details of beers</h2>
     {details && renderDetails()}
