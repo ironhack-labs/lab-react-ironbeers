@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeCard = ({ title, img }) => {
     return (
-        <div>
+        <div className="card">
             <h2>{title}</h2>
             <img src={img} alt={title} />
 
