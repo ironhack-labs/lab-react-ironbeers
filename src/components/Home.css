@@ -23,3 +23,39 @@
 .card img {
     width: 100vw;
 }
+
+.header {
+    width: 100vw;
+    height: 20vh;
+}
+
+.beerCard {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 30vh;
+    padding: 5rem 0;
+    margin: 2rem auto;
+    border: 2px solid lightgray;
+    justify-content: center;    
+    }
+
+    img {
+    height:min-content;
+    margin: 0 auto;
+    height: 60%
+    
+    }
+
+    h1 {
+    font-size: 30px;
+    }
+
+    h2 {
+    font-size: 20px;
+    color: gray;
+    }
+
+    p {
+    font-size: 15px;
+    }
