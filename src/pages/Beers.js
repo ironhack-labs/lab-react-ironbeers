@@ -10,7 +10,7 @@ function Beers(){
         axios
           .get("https://ih-beers-api2.herokuapp.com/beers")
           .then((response) => {
-            console.log('response.data', response.data);
+          /*   console.log('response.data', response.data); */
             setBeers(response.data)
           });
         
@@ -24,7 +24,7 @@ function Beers(){
 {beers.map((beer) => (
   <div key={beer._id} className="beerList">
     <img src={beer.image_url} alt="beerPic" />
-    <Link to={`beers/${beer._id}`}> 
+    <Link to={`/beers/${beer._id}`}> 
     <h2>{beer.name}</h2>
     </Link>
     <p>{beer.tagline}</p>
