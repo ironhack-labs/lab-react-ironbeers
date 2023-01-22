@@ -80,3 +80,26 @@
     height: 50%;
     margin-top: 10rem;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 1rem;
+}
+
+input {
+    width: 15rem;
+    margin-left: 1rem;
+}
+
+#newButton {
+    width: 7rem;
+    height: 2rem;
+    margin: 1rem auto;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
