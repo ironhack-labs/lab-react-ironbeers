@@ -34,9 +34,8 @@ function App() {
       <Routes>
         <Route path="/" element=<Home /> />
         <Route path="/beers" element=<Beers /> />
-        <Route path="/random-beer" element=<RandomBeer 
-          randomIndex={randomIndex()}
-          beers={beers}
+        <Route path="/random-beer" element=<RandomBeer
+          randomBeer={beers[randomIndex()]}
         /> />
         <Route path="/new-beer" element=<NewBeer /> />
         <Route path="/beers/:id" element=<SingleBeer /> />
