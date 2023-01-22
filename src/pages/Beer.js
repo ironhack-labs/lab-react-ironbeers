@@ -3,10 +3,10 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function Beer() {
- 
+  const { beerId } = useParams()
   let [beer, setBeer] = useState([])
   useEffect(() => {
-    fetch(`https://ih-beers-api2.herokuapp.com/beers/random`)
+    fetch(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
         .then(res => res.json())
     .then(data=>{ 
         setBeer(data)})
@@ -15,7 +15,7 @@ export default function Beer() {
     return (
         <>
             <Header />
-            <img src={beer.image_url} height='100px' width='auto' alt= "beerImage"/>
+            <img src={beer.image_url} height='100px' width='auto'/>
             <h1>{beer.name}</h1>
             <div>{beer.tagline}</div>
             <div>{beer.first_brewed}</div>

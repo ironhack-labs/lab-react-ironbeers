@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function BeerListItem({ data }) {
-    let { image_url, name, tagline, contributed_by } = data;
+    const navigate = useNavigate();
+    let { image_url, name, tagline, contributed_by, _id } = data;
     return (
-        <div className="card">
+        <div className="card" onClick={() => navigate(`/beer/${_id}`)} >
             <img src={image_url} alt={name} width='100px'/>
             <div>
                 <div>{name}</div>
