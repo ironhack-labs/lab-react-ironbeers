@@ -26,7 +26,7 @@ function SingleBeer(props) {
 
     const renderInfo = (beer) => {
         return (
-            <div className="beerCard">
+            <div className="singleBeerCard">
                 <img src={beer?.image_url} alt="" />
                 <div className="beerText">
                     <h1>{beer.name}</h1>

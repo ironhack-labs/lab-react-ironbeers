@@ -1,13 +1,42 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 
-function RandomBeer() {
+function RandomBeer(props) {
+    
+
+    console.log(props.randomIndex);
+    
+    const randomBeer = props.beers[props.randomIndex];
+    
+    
+    console.log(randomBeer);
+
+
+    const renderInfo = (beer) => {
+        return (
+            <div className="singleBeerCard">
+                <img src={beer?.image_url} alt="" />
+                <div className="beerText">
+                    <h1>{beer.name}</h1>
+                    <h2>{beer.tagline}</h2>
+                    <h3>{beer.attenuation_level}</h3>
+                    <p>{beer.first_brewed}</p>
+                    <p>{beer.description}</p>
+                    <p><strong>Created by: </strong>{beer.contributed_by}</p>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div>
             <Header />
-            <h1>It's Random Beer page</h1>
+            {!randomBeer
+                ? <h1>Loading...</h1>
+                : renderInfo(randomBeer)
+           }
         </div>
-
     )
 }
 

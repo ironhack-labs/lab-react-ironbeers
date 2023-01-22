@@ -25,7 +25,7 @@ function Beers() {
                 : beers.map((beer, index) => {
                     return (
                         <Link to={"/beers/" + beer._id} key={index}>
-                            <div className="singleBeerCard">
+                            <div className="beerCard">
                                 <img src={beer.image_url} alt="" />
                                 <div className="beerText">
                                     <h1>{beer.name}</h1>

@@ -65,3 +65,18 @@
     font-size: 15px;
     color: black;
     }
+
+.singleBeerCard {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 50vh;
+    padding: 5rem auto;
+    margin: 2rem auto;
+    justify-content: center;  
+}
+
+.singleBeerCard img {
+    height: 50%;
+    margin-top: 10rem;
+}
