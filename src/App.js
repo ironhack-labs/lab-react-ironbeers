@@ -8,6 +8,8 @@ import HomeCard from './components/HomeCard';
 import randomBeer from './assets/random-beer.png'
 import newBeer from './assets/new-beer.png'
 import Navbar from './components/Navbar';
+import RandomBeer from './pages/RandomBeer';
+import CreateBeer from './pages/CreateBeer';
 
 function App() {
   return (
@@ -16,8 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<Beers />} />
-        <Route path="/random-beer" element={<HomeCard title="Random Beer" img={randomBeer} />} />
-        <Route path="/new-beer" element={<HomeCard title="New Beer" img={newBeer} />} />
+        <Route path="/random-beer" element={<RandomBeer />} />
+        <Route path="/new-beer" element={<CreateBeer />} />
         <Route path="/beer/:id" element={<BeerDetails />} />
 
       </Routes>

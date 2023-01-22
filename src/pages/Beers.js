@@ -6,6 +6,16 @@ import { Link } from 'react-router-dom'
 const Beers = () => {
     const [beers, setBeers] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [search, setSearch] = useState('')
+
+    const handleChange = (event) => {
+        setSearch(event.target.value)
+    }
+
+    const filteredBeers = beers.filter(beer => {
+        return beer.name.toLowerCase().includes(search.toLowerCase())
+    })
+
 
     useEffect(() => {
         console.log('fetching from API')
@@ -23,9 +33,10 @@ const Beers = () => {
 
     return (
         <div>
-            {beers.map(beer => {
+            <input type="text" placeholder="Search" onChange={handleChange} />
+            {filteredBeers.map(beer => {
                 return (
-                    <Link to={`/beer/${beer._id}`}>
+                    <Link to={`/beer/${beer._id}`} key={beer._id}>
                         <BeerCard
                             key={beer._id}
                             {...beer}
