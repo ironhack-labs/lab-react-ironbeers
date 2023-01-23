@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 export default function Beers(props) {
     const [searchQuery, setSearchQuery] = useState("");
-
+     //useSearchParams   the difference between Usestate and useSearchParams in this part, is useSearchParams can changed url, and share the URL with other users. useState can not.
     const findBeerToDisplay = (e) => {
         setSearchQuery(e.target.value)
         axios.get(process.env.REACT_APP_API_URL + "/search?q=" + searchQuery)

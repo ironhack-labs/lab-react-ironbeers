@@ -8,7 +8,7 @@ export default function NewBeer(props) {
     const [name, setName] = useState("")
     const [tagline, setTagline] = useState("")
     const [description, setDescription] = useState("")
-    const [firstBrewed, setFirstBrewed] = useState("")
+    const [first_brewed, setfirst_brewed] = useState("")
     const [brewersTips, setBrewersTips] = useState("")
     const [attenuationLevel, setAttenuationLevel] = useState(null)
     const [contributedBy, setContributedBy] = useState("")
@@ -21,7 +21,7 @@ export default function NewBeer(props) {
             "name": name,
             "tagline": tagline,
             "description": description,
-            "firstBrewed": firstBrewed,
+            "first_brewed": first_brewed,
             "brewersTips": brewersTips,
             "attenuationLevel": attenuationLevel,
             "contributedBy": contributedBy
@@ -31,7 +31,7 @@ export default function NewBeer(props) {
         setName("")
         setTagline("")
         setDescription("")
-        setFirstBrewed("")
+        setfirst_brewed("")
         setBrewersTips("")
         setAttenuationLevel("")
         setContributedBy("")
@@ -84,12 +84,12 @@ export default function NewBeer(props) {
             </label><br />
             <label>
                 <input
-                    name="firstBrewed"
+                    name="first_brewed"
                     type="text"
                     placeholder="first_brewed"
-                    value={firstBrewed}
+                    value={first_brewed}
                     required={true}
-                    onChange={(e) => { setFirstBrewed(e.target.value) }}
+                    onChange={(e) => { setfirst_brewed(e.target.value) }}
                 />
             </label><br />
             <label>
