@@ -1,11 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import Header from "./Header";
-import Home from "./Home";
 
 function RandomBeer(props) {
-    const randomBeer = props.randomBeer;
+    const [randomBeer, setBeers] = useState([])
+
+    useEffect(() => {
+        axios.get(process.env.REACT_APP_API_URL + "/random")
+            .then((res) => {
+                setBeers(res.data);
+            })
+            .catch((err) => {
+                console.log("error getting beers from API", err);
+            })
+    }, [])
     
     const renderInfo = (beer) => {
         return (
@@ -25,8 +33,7 @@ function RandomBeer(props) {
 
     return (
         <div>
-            {/* fix bug of just render one random beer of useEffect run once, but it's not single page website anymore*/}
-            <a href="/"><img className="header" src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png" alt=""></img></a>
+            <Header />
             {!randomBeer
                 ? <h1>Loading...</h1>
                 : renderInfo(randomBeer)
