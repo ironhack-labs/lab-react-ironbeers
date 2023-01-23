@@ -18,7 +18,6 @@ export default function RandomBeer() {
   if (!ramdomBeer) {
     return <p>Loading...</p>;
   }
-  console.log(beers[0]);
   return (
     <div className="beer-details">
       <img src={ramdomBeer.image_url} alt="" width={80} />

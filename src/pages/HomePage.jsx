@@ -33,7 +33,10 @@ export default function HomePage() {
         </Link>
       </div>
       <div className="new-beer">
-        <Link style={{ textDecoration: "none", color: "black" }}>
+        <Link
+          to={"/new-beer"}
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <img src={newBeer} alt="" />
           <h2>New Beer</h2>
           <p>
