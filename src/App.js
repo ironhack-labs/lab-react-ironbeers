@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import homeIcon from "./assets/homeIcon48.svg";
 import Beers from "./pages/Beers";
 import SingleBeer from "./pages/SingleBeer";
+import RandomBeer from "./pages/RandomBeer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<Beers />} />
         <Route path="/beers/:_id" element={<SingleBeer />} />
+        <Route path="/random-beer" element={<RandomBeer />} />
       </Routes>
     </div>
   );
