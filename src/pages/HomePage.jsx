@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div>
       <div className="all-beers">
-        <Link style={{ textDecoration: "none", color: "black" }}>
+        <Link to={"/beers"} style={{ textDecoration: "none", color: "black" }}>
           <img src={beers} alt="" />
           <h2>All Beers</h2>
           <p>

@@ -2,13 +2,14 @@ import "./App.css";
 import { Route, Routes, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import homeIcon from "./assets/homeIcon48.svg";
+import Beers from "./pages/Beers";
 
 function App() {
   return (
     <div className="App">
       <header
         style={{
-          backgroundColor: "blue",
+          backgroundColor: "#61dafb",
           height: "56px",
           display: "flex",
           justifyContent: "center",
@@ -21,6 +22,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/beers" element={<Beers />} />
       </Routes>
     </div>
   );
