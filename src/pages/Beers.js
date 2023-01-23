@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";     // <== IMPORT useEffect
+import { useState, useEffect } from "react";   
 import axios from "axios";     
 import { Link } from "react-router-dom"; 
 
@@ -6,7 +6,7 @@ import Header from "../components/Header";
 
 function Beers(){
     const [beers, setBeers] = useState([]);
-    useEffect(() => {                                // <== ADD THE EFFECT
+    useEffect(() => {                              
         axios
           .get("https://ih-beers-api2.herokuapp.com/beers")
           .then((response) => {
