@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SingleBeer from "./SingleBeer";
 
 export default function Beers() {
   const [beers, setBeers] = useState([]);
@@ -19,7 +20,7 @@ export default function Beers() {
       {beers.map((beer) => {
         return (
           <Link
-            to={`/beers/:${beer._id}`}
+            to={`/beers/${beer._id}`}
             key={beer._id}
             style={{ textDecoration: "none", color: "black" }}
           >

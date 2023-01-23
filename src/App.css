@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .beer {
   display: flex;
   gap: 16px;
@@ -19,4 +24,49 @@
 
 .contributed_by {
   font-size: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.beer-details {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.beer-details img {
+  align-self: center;
+}
+
+.beer-name,
+.attenuation_level {
+  font-size: 24px;
+  font-weight: 700;
+}
+.m-b-16 {
+  margin-bottom: 16px;
+}
+.attenuation_level {
+  color: gray;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.column {
+  flex-direction: column;
+}
+.description {
+  font-size: 14px;
+}
+.beer-contributedBy {
+  font-size: 12px;
+  font-weight: 700;
+  color: gray;
 }

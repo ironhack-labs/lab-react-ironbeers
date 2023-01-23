@@ -3,6 +3,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import homeIcon from "./assets/homeIcon48.svg";
 import Beers from "./pages/Beers";
+import SingleBeer from "./pages/SingleBeer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<Beers />} />
+        <Route path="/beers/:_id" element={<SingleBeer />} />
       </Routes>
     </div>
   );
