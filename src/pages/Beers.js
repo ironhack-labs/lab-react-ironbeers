@@ -22,13 +22,17 @@ function Beers(){
         <h1>All Beers</h1>
 
 {beers.map((beer) => (
-  <div key={beer._id} className="beerList">
+  <div className="beerList">
+   
     <img src={beer.image_url} alt="beerPic" />
-    <Link to={`/beers/${beer._id}`}> 
+    
+    <Link to={`/beers/${beer._id}`} key={beer._id}> 
     <h2>{beer.name}</h2>
     </Link>
+    
     <p>{beer.tagline}</p>
     <p>Created By: {beer.contributed_by}</p>
+    
   </div>
 ))}
 
