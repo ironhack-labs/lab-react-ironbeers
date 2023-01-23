@@ -10,7 +10,6 @@ function Beers(){
         axios
           .get("https://ih-beers-api2.herokuapp.com/beers")
           .then((response) => {
-          /*   console.log('response.data', response.data); */
             setBeers(response.data)
           });
         
