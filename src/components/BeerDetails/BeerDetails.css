@@ -1,0 +1,33 @@
+
+.smaller{
+    width: 60px;
+    margin-top: 35px;
+}
+
+.flexing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centered{
+
+    margin: 15px;
+}
+
+.tagline2{
+    font-size: 15px;
+    color:gray;
+    font-style: italic;
+
+}
+
+.small-font{
+    font-size: 12px;
+}
+
+.big{
+    font-size: 20px;
+    font-weight: bold;
+    color: lightgray
+}

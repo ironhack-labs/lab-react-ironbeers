@@ -1,0 +1,27 @@
+.flex-c{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.left{
+    text-align: left;
+}
+
+.margined{
+    margin:15px
+}
+
+input{
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.buttony{
+    margin: 0 auto;
+    border: 1px blue solid;
+    border-radius: 55px;
+    width: 25%;
+    font-size: 18px;
+}
