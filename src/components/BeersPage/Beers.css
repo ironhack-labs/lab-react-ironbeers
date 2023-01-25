@@ -1,0 +1,17 @@
+.beerCard {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    border: 1px solid gray;
+}
+
+.beerInfo {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+}
+.beerTagline {
+    color: gray;
+}
