@@ -37,18 +37,21 @@ return filterBeers
         <div>
         
        <Header/>
-        
-<input
+      <div className="search">
+      <label>Search for beer:</label>
+      <input id="searchInput"
 value={searchInput}
 onChange={(e) => setSearchInput(e.target.value)}
 />
+      </div>
 
-          <h3>List of beers</h3>
+
+          <h2>List of beers</h2>
           {filteredBeers().map((beer) => (
             <div key={beer._id} className="beerCard">
               <img src={beer.image_url} alt="beer" style={{width: "50px"}} />
              <div className="beerInfo">
-              <Link to={`/beers/${beer._id}`}>{beer.name}</Link> 
+              <Link to={`/beers/${beer._id}`} className="beersLink">{beer.name}</Link> 
               <p className="beerTagline">{beer.tagline}</p>
               <p><strong>Created by:{beer.contributed_by}</strong></p>
               </div>

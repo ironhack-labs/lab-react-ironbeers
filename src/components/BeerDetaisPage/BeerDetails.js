@@ -3,6 +3,7 @@ import Beers from '../BeersPage/Beers';
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect} from "react";
 import axios from 'axios';
+import './BeerDetails.css';
 
 function BeersDetails (props){
 
@@ -27,12 +28,14 @@ function BeersDetails (props){
 
 <div className="BeerDetailsCard">
 {selectedBeer ? ( <div>
-    <img src={selectedBeer.image_url} alt="beer"/>
+    <img src={selectedBeer.image_url} className="beerImage" alt="beer"/>
 {console.log("the selected beer", selectedBeer)}
 
  <h1>{selectedBeer.name}</h1>
- <p id='beertagline'>{selectedBeer.tagline}</p>
+ <section id='section'>
+ <strong> <p id='beertagline'>{selectedBeer.tagline}</p></strong>
  <p id='beerFirstBrewed'>{selectedBeer.first_brewed}</p>
+ </section>
  <p id='beerAttenuationLevel' >{selectedBeer.attenuation_level}</p>
  <p id='beerDiscription' >{selectedBeer.description}</p>
  <p id='beerContributedBy' >{selectedBeer.contributed_by}</p>

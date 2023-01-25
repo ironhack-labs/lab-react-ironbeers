@@ -1,0 +1,19 @@
+.beerImage {
+    height: 250px;
+}
+
+.BeerDetailsCard {
+    padding: 15px;
+}
+#beerDiscription{
+    color: black;
+}
+#beertagline{
+    color: black;
+}
+
+#section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

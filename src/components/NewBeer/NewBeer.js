@@ -1,7 +1,8 @@
-import Header from "./Header/Header";
+import Header from "../Header/Header";
 import { useState } from "react"; 
 import axios from 'axios'; 
 import { useNavigate } from "react-router-dom"; 
+import './NewBeer.css'
 
 function NewBeer (){
   const [name, setName] = useState("");
@@ -42,9 +43,9 @@ function NewBeer (){
 return (
     <div className="AddBeerPage">
         <Header/>
-        <h3>Add New Beer</h3>
+        <h2>Add New Beer</h2>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} id="addBeerForm">
         <label>Name:</label>
         <input
           type="text"
@@ -62,7 +63,7 @@ return (
         />
 
         <label>Description:</label>
-        <input
+        <input id="descriptionInput"
           type="text"
           name="description"
           onChange={(e) => setDescription(e.target.value)}

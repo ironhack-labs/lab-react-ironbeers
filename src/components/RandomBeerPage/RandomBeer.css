@@ -1,0 +1,17 @@
+.beerImage {
+    height: 300px;
+}
+
+
+#beerDiscription{
+    color: black;
+}
+#beertagline{
+    color: black;
+}
+
+#section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

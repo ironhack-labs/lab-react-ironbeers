@@ -15,3 +15,19 @@
 .beerTagline {
     color: gray;
 }
+
+.beersLink{
+    color: black;
+    text-decoration: none;
+    font-size: x-large;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+#searchInput{
+    width: 80%;
+    margin-top: 15px;
+}
+label{
+    margin-top: 17px;
+    color: gray;
+}
