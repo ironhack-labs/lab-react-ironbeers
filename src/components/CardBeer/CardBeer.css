@@ -1,0 +1,28 @@
+.container {
+    border-bottom: solid 2px gray;
+    margin: 0 10px 0px 10px;
+}
+
+.content-cardBeer {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 20px 40px;
+}
+
+.img-cardBeer img {
+    width: 100px;
+}
+
+.info-cardBeer {
+    text-align: justify;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.info-cardBeer h1 {
+    margin-bottom: 30px;
+}
+
+.info-cardBeer h2 {
+    color: grey;
+}

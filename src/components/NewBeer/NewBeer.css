@@ -1,0 +1,20 @@
+.NewBeer-div h1 {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.NewBeer-div img {
+    width: 98%;
+    margin: 0 10px 0 10px;
+}
+
+.text-NewBeer {
+    text-justify: distribute;
+    text-align: justify;
+    margin: 0 55px 50px 55px;
+}
+
+.link-newBeer {
+    text-decoration: none;
+    color: black;
+}

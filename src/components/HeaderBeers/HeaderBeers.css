@@ -1,0 +1,14 @@
+.container-header {
+  position: fixed;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background: #51a0e0;
+}
+
+
+.container-header img {
+    margin-top: 20px;
+}
+

@@ -1,0 +1,21 @@
+
+.AllBeers-div h1 {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.AllBeers-div img {
+    width: 98%;
+    margin: 0 10px 0 10px;
+}
+
+.text-AllBeers {
+    text-justify: distribute;
+    text-align: justify;
+    margin: 0 55px 50px 55px;
+}
+
+.link-beers {
+    text-decoration: none;
+    color: black;
+}

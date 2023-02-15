@@ -1,0 +1,20 @@
+.RandomBeer-div h1 {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.RandomBeer-div img {
+    width: 98%;
+    margin: 0 10px 0 10px;
+}
+
+.text-RandomBeer {
+    text-justify: distribute;
+    text-align: justify;
+    margin: 0 55px 50px 55px;
+}
+
+.link-randomBeer {
+    text-decoration: none;
+    color: black;
+}
