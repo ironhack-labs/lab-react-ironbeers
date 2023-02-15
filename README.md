@@ -14,9 +14,9 @@ Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mis
 - Clone this repo
 
 ```shell
-cd lab-react-ironbeers
+cd lab-react-ironbeers-vite
 npm install
-npm start
+npm run dev
 ```
 
 ## Submission
@@ -26,10 +26,10 @@ npm start
   ```
   git add .
   git commit -m "done"
-  git push origin master
+  git push
   ```
 
-- Create Pull Request so that your TAs can check up your work.
+- Submit your lab on the student portal
 
 ## Introduction
 
@@ -67,7 +67,7 @@ The **IronBeers** project will include the following features:
 
 <!-- ### Iteration 1: Create the App
 
-Well, at this point, this comes natural: we will use `create-react-app` to build a new app. Feel free to name it as you wish, but if you need some inspiration, we called it **Reactive BeersJS**. -->
+Well, at this point, this comes natural: we will use `vite` to build a new app. Feel free to name it as you wish, but if you need some inspiration, we called it **Reactive BeersJS**. -->
 
 <br>
 
@@ -192,21 +192,20 @@ Happy coding! :heart:
 
 ## FAQs
 
-
 <details>
   <summary>I am stuck and don't know how to solve the problem or where to start. What should I do?</summary>
 
   <br>
 
-  If you are stuck in your code and don't know how to solve the problem or where to start, you should take a step back and try to form a clear question about the specific issue you are facing. This will help you narrow down the problem and come up with potential solutions.
+If you are stuck in your code and don't know how to solve the problem or where to start, you should take a step back and try to form a clear question about the specific issue you are facing. This will help you narrow down the problem and come up with potential solutions.
 
-  For example, is it a concept that you don't understand, or are you receiving an error message that you don't know how to fix? It is usually helpful to try to state the problem as clearly as possible, including any error messages you are receiving. This can help you communicate the issue to others and potentially get help from classmates or online resources. 
+For example, is it a concept that you don't understand, or are you receiving an error message that you don't know how to fix? It is usually helpful to try to state the problem as clearly as possible, including any error messages you are receiving. This can help you communicate the issue to others and potentially get help from classmates or online resources.
 
-  Once you have a clear understanding of the problem, you will be able to start working toward the solution.
+Once you have a clear understanding of the problem, you will be able to start working toward the solution.
 
   <br>
 
-  [Back to top](#faqs)
+[Back to top](#faqs)
 
 </details>
 
@@ -215,27 +214,27 @@ Happy coding! :heart:
 
   <br>
 
-  The error "Cannot find module" in a Node.js application means that the module you are trying to import or use does not exist in your project or cannot be found by Node.js.
+The error "Cannot find module" in a Node.js application means that the module you are trying to import or use does not exist in your project or cannot be found by Node.js.
 
-  There are a few things you can try to resolve the issue:
+There are a few things you can try to resolve the issue:
 
-  1. **Dependencies are not installed**: Make sure that all dependencies are installed.
+1. **Dependencies are not installed**: Make sure that all dependencies are installed.
    To do this, run the command `npm install` in the root folder of your project.
    This will install all of the dependencies listed in the project's `package.json` file, and ensure that all of the modules that your Node'js application requires are available.
 
-  2. **Module is not installed**: Make sure that the *package* you are trying to use is listed in the project's `package.json` and that it is installed.
+2. **Module is not installed**: Make sure that the _package_ you are trying to use is listed in the project's `package.json` and that it is installed.
    To do this, run the command `npm install <package_name>`, replacing the `<package_name>` with the name of the package.
    This will add the package to the list of dependencies in the `package.json` file, and install it in the project.
 
-  3. **Module is not imported:** Make sure that you've imported the module/package correctly and that the `import` statement is spelled correctly and available in the correct place in your code.
+3. **Module is not imported:** Make sure that you've imported the module/package correctly and that the `import` statement is spelled correctly and available in the correct place in your code.
 
-  4. **Wrong file path:** If you are importing another file as a module, make sure that the file you are trying to *import* is located in the correct folder and that you are using the correct file path.
+4. **Wrong file path:** If you are importing another file as a module, make sure that the file you are trying to _import_ is located in the correct folder and that you are using the correct file path.
 
-  5. **Wrong module/package name:** Check the spelling of the package name you are trying to import.
+5. **Wrong module/package name:** Check the spelling of the package name you are trying to import.
 
   <br>
 
-  [Back to top](#faqs)
+[Back to top](#faqs)
 
 </details>
 
@@ -244,43 +243,42 @@ Happy coding! :heart:
 
   <br>
 
-  This message means that another process is already using the specified port. This could be another instance of your React app, or it could be another application that is using that port.
+This message means that another process is already using the specified port. This could be another instance of your React app, or it could be another application that is using that port.
 
-  To resolve this, you can change the port your React app is running on by typing Y when prompted. This will kill the process and automatically start the server on another port.
+To resolve this, you can change the port your React app is running on by typing Y when prompted. This will kill the process and automatically start the server on another port.
 
-  Another approach is to manually terminate the process using the port in question and then try running the app again.
+Another approach is to manually terminate the process using the port in question and then try running the app again.
 
   <br>
 
-  [Back to top](#faqs)
+[Back to top](#faqs)
 
 </details>
-
 
 <details>
   <summary>How do I display an <em>image</em> in a React component?</summary>
 
   <br>
 
-  To display an image in a React component, you should first `import` the image in the component and then render it. Here is an example of how to do this:
+To display an image in a React component, you should first `import` the image in the component and then render it. Here is an example of how to do this:
 
-  ```jsx
-  import example from "./example.png"; // Import the image file
+```jsx
+import example from './example.png' // Import the image file
 
-  function App() {
-    return (
-      <img src={example} alt="example" /> // Display the image
-    )
-  }
+function App() {
+  return (
+    <img src={example} alt='example' /> // Display the image
+  )
+}
 
-  export default App;
-  ```
+export default App
+```
 
-  In the above example, the `example` variable is assigned the value of the imported image file. The image is then displayed using the `<img>` element, with the `src` attribute set to the `example` variable.
+In the above example, the `example` variable is assigned the value of the imported image file. The image is then displayed using the `<img>` element, with the `src` attribute set to the `example` variable.
 
   <br>
 
-  [Back to top](#faqs)
+[Back to top](#faqs)
 
 </details>
 
@@ -289,13 +287,13 @@ Happy coding! :heart:
 
   <br>
 
-  This warning is a linting error thrown by a linting tool in your React project, and it is warning you that the variable is created, but that it is never being used in your code.
+This warning is a linting error thrown by a linting tool in your React project, and it is warning you that the variable is created, but that it is never being used in your code.
 
-  To resolve this issue, you can either use the variable in your code, or you can simply remove the variable if you don't need it.
+To resolve this issue, you can either use the variable in your code, or you can simply remove the variable if you don't need it.
 
   <br>
 
-  [Back to top](#faqs)
+[Back to top](#faqs)
 
 </details>
 
@@ -304,50 +302,50 @@ Happy coding! :heart:
 
   <br>
 
-  The warning *"Each child in a list should have a unique “key” prop"*  means that you are trying to render a list of elements, but one or more elements is missing the `key` prop.
-  
-  To fix this, add a `key` prop to each element you return from the `map()` when rendering the list. The key should be a unique identifier for that element, such as an item ID or the id of the document from the database.
-  
-  For example, if you have an array of objects with the following structure:
+The warning _"Each child in a list should have a unique “key” prop"_ means that you are trying to render a list of elements, but one or more elements is missing the `key` prop.
 
-  ```js
-  const projects = [
-    { id: "127fae", name: "EatBCN", stack: "React, Express" },
-    { id: "985afw", name: "Levels", stack: "React, Express" },
-    { id: "347eef", name: "IronClub", stack: "React, Java" }
-  ];
-  ```
+To fix this, add a `key` prop to each element you return from the `map()` when rendering the list. The key should be a unique identifier for that element, such as an item ID or the id of the document from the database.
 
-  <br>
+For example, if you have an array of objects with the following structure:
 
-  Inside your component, you would render the list in the following way:
-
-  ```jsx
-  {
-    projects.map((el) => {
-      return (
-        <div key={el.id}>
-          <h3>{project.name}</h3>
-          <p> Tech Stack: {project.stack} </p>
-        </div>
-      
-    })
-  }
-  ```
-
-  In the above example, the objects in the `projects` array all have a common property `id`,  which is a unique id string, and therefore we can use it to set the `key` prop.
-
-  When creating lists we must always assign the `key` prop to the outermost (enclosing) element returned from the `map()`, in this case the `div`. We are setting the `key` prop to each `div` element we render in the list.
-
-  **Important**: You should not use *index* of the `map` as *key*. This is considered an *anti-pattern* that may lead to unpredictable results.
+```js
+const projects = [
+  { id: '127fae', name: 'EatBCN', stack: 'React, Express' },
+  { id: '985afw', name: 'Levels', stack: 'React, Express' },
+  { id: '347eef', name: 'IronClub', stack: 'React, Java' },
+]
+```
 
   <br>
 
-  For more information, check: [React Docs - Rendering Lists](https://beta.reactjs.org/learn/rendering-lists#keeping-list-items-in-order-with-key)
+Inside your component, you would render the list in the following way:
+
+```jsx
+{
+  projects.map((el) => {
+    return (
+      <div key={el.id}>
+        <h3>{project.name}</h3>
+        <p> Tech Stack: {project.stack} </p>
+      </div>
+
+  })
+}
+```
+
+In the above example, the objects in the `projects` array all have a common property `id`, which is a unique id string, and therefore we can use it to set the `key` prop.
+
+When creating lists we must always assign the `key` prop to the outermost (enclosing) element returned from the `map()`, in this case the `div`. We are setting the `key` prop to each `div` element we render in the list.
+
+**Important**: You should not use _index_ of the `map` as _key_. This is considered an _anti-pattern_ that may lead to unpredictable results.
 
   <br>
 
-  [Back to top](#faqs)
+For more information, check: [React Docs - Rendering Lists](https://beta.reactjs.org/learn/rendering-lists#keeping-list-items-in-order-with-key)
+
+  <br>
+
+[Back to top](#faqs)
 
 </details>
 
@@ -356,54 +354,52 @@ Happy coding! :heart:
 
   <br>
 
-  To render a list of elements from an array in a React component, you can use the method `map()` to loop over the `projects` array and return JSX elements to be rendered. 
+To render a list of elements from an array in a React component, you can use the method `map()` to loop over the `projects` array and return JSX elements to be rendered.
 
-  To render a filtered list, where some items are skipped, you can use the `filter()` method.
+To render a filtered list, where some items are skipped, you can use the `filter()` method.
 
-  Each element returned should have a *unique* `key` prop assigned to them. It's important to note that the `key` prop should always be assigned to the outermost (enclosing) element returned from the `map()`.
+Each element returned should have a _unique_ `key` prop assigned to them. It's important to note that the `key` prop should always be assigned to the outermost (enclosing) element returned from the `map()`.
 
-  Here is an example of rendering a list of elements using the `map()` method:
+Here is an example of rendering a list of elements using the `map()` method:
 
-  ```js
+```js
 const projects = [
-    { id: "127fae", name: "EatBCN", stack: "React, Express" },
-    { id: "985afw", name: "Levels", stack: "React, Express" },
-    { id: "347eef", name: "IronClub", stack: "React, Java" }
-  ]
+  { id: '127fae', name: 'EatBCN', stack: 'React, Express' },
+  { id: '985afw', name: 'Levels', stack: 'React, Express' },
+  { id: '347eef', name: 'IronClub', stack: 'React, Java' },
+]
 
-  function ProjectList() {
-    return (
-      <div>
-        {
-          projects.map((el) => {
-            return (
-              <div key={el.id}>
-                <h3>{el.name}</h3>
-                <p>Tech Stack: {el.stack}</p>
-              </div>
-            )
-          })
-        }
-      </div>
-    )
-  }
+function ProjectList() {
+  return (
+    <div>
+      {projects.map(el => {
+        return (
+          <div key={el.id}>
+            <h3>{el.name}</h3>
+            <p>Tech Stack: {el.stack}</p>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
 
-  export default ProjectList;
-  ```
+export default ProjectList
+```
 
-  In the above code example, we use `map()` inside of the component to loop over the `projects` array, and for each project, return a `div` element with the `project.name` and the `project.stack` as its contents. 
+In the above code example, we use `map()` inside of the component to loop over the `projects` array, and for each project, return a `div` element with the `project.name` and the `project.stack` as its contents.
 
-  Each object in the `projects` array contains a common property `id` which we use as the `key` prop. 
+Each object in the `projects` array contains a common property `id` which we use as the `key` prop.
 
-  The `key` prop must be set on the outermost element returned from the `map()`, in this case, the `div` element.
+The `key` prop must be set on the outermost element returned from the `map()`, in this case, the `div` element.
 
-  **Important**: You should not use *index* of the `map` as *key*. This is considered an *anti-pattern* that may lead to unpredictable results.
+**Important**: You should not use _index_ of the `map` as _key_. This is considered an _anti-pattern_ that may lead to unpredictable results.
 
-  For more information, check: [React Docs - Rendering Lists](https://beta.reactjs.org/learn/rendering-lists#keeping-list-items-in-order-with-key) 
+For more information, check: [React Docs - Rendering Lists](https://beta.reactjs.org/learn/rendering-lists#keeping-list-items-in-order-with-key)
 
   <br>
 
-  [Back to top](#faqs)
+[Back to top](#faqs)
 
 </details>
 
@@ -412,33 +408,33 @@ const projects = [
 
   <br>
 
-  To update a state variable in a React component, you should use the `useState` hook. This hook returns an array with two elements: the **current value** of the state variable and a **function to update it**. Here is an example of how to use `useState` to update the `count` state variable:
+To update a state variable in a React component, you should use the `useState` hook. This hook returns an array with two elements: the **current value** of the state variable and a **function to update it**. Here is an example of how to use `useState` to update the `count` state variable:
 
-  ```jsx
-  import { useState } from "react";
+```jsx
+import { useState } from 'react'
 
-  function MyComponent() {
-    const [count, setCount] = useState(0);
+function MyComponent() {
+  const [count, setCount] = useState(0)
 
-    const handleClick = () => {
-      setCount(count + 1);
-    }
-
-    return (
-      <div>
-        <button onClick={handleClick}> Increment </button>
-        <p>Count: {count}</p>
-      </div>
-    )
+  const handleClick = () => {
+    setCount(count + 1)
   }
-  ```
 
-  In the above example, the `handleClick` function is called when the button is clicked, and it updates the `count` state variable by calling the `setCount` function with the new value: `setCount(count + 1)`. 
-  The component will re-render every time a state variable gets updated.
+  return (
+    <div>
+      <button onClick={handleClick}> Increment </button>
+      <p>Count: {count}</p>
+    </div>
+  )
+}
+```
+
+In the above example, the `handleClick` function is called when the button is clicked, and it updates the `count` state variable by calling the `setCount` function with the new value: `setCount(count + 1)`.
+The component will re-render every time a state variable gets updated.
 
   <br>
 
-  [Back to top](#faqs)
+[Back to top](#faqs)
 
 </details>
 
@@ -447,124 +443,121 @@ const projects = [
 
   <br>
 
-  The `useEffect` hook (also called the *Effect Hook*) allows you to run your side effects. Data fetching, setting up a subscription, starting a timer, and manually changing the DOM in React components are all examples of common actions (aka *side effects*) that you may want to set up in your components.
+The `useEffect` hook (also called the _Effect Hook_) allows you to run your side effects. Data fetching, setting up a subscription, starting a timer, and manually changing the DOM in React components are all examples of common actions (aka _side effects_) that you may want to set up in your components.
 
-  The `useEffect` hook allows you to run side effects during all three lifecycle phases:
+The `useEffect` hook allows you to run side effects during all three lifecycle phases:
 
-  - **Mounting phase**
-  - **Update phase**
-  - **Unmounting phase**
-
-  <br>
-
-  ##### Syntax
-
-  The syntax of the `useEffect` is the following:
-
-  ```jsx
-  // Actual syntax
-  useEffect(() => {}, [])
-  ```
-
-  As you can see `useEffect` takes two arguments:
-
-  ```jsx
-  // Pseudo code:
-  useEffect(didUpdate, dependencyArray)
-  ```
-
-  - `didUpdate` - a function containing the code (side effect) we want to run.
-  - `dependencyArray` - the array of values that the effect depends on. React watches this array for any change and when a value in this array changes, the effect will run.
+- **Mounting phase**
+- **Update phase**
+- **Unmounting phase**
 
   <br>
 
-  ##### `useEffect` - Mounting phase
+##### Syntax
 
-  We can set the `useEffect` to **run code in the mounting phase**, **only once** right after the component is rendered for the first time. 
+The syntax of the `useEffect` is the following:
 
-  To do so, we use the `useEffect` Hook with the following syntax:
+```jsx
+// Actual syntax
+useEffect(() => {}, [])
+```
 
-  ```jsx
-  // Run the effect only once 
-  // during the mounting phase
-  
-  useEffect(() => {
-    // Do something ...
-  }, [])
-  ```
+As you can see `useEffect` takes two arguments:
 
-  The empty array `[]` means that “this effect doesn’t depend on anything”, and will therefore run only once, after the initial render.
+```jsx
+// Pseudo code:
+useEffect(didUpdate, dependencyArray)
+```
 
-  <br>
-
-  ##### `useEffect` - Unmounting phase
-
-  Often, *effects* create resources that need to be cleaned up before the component leaves the screen, such as a subscription or a timer, like in the previous example. Before the component *unmounts*, we should cancel all remaining processes to prevent memory leaks.
-
-  To do this, the function passed to **`useEffect` may return a cleanup function**. Example:
-
-  ```jsx
-  useEffect(() => {
-    // Do something ...
-
-    // Returned function is known as a "cleanup function",
-    // which React will automatically run
-    // right before the component is removed from the DOM
-    return () => {
-      // Perform clean up actions here
-    };
-    
-  }, [])
-  ```
+- `didUpdate` - a function containing the code (side effect) we want to run.
+- `dependencyArray` - the array of values that the effect depends on. React watches this array for any change and when a value in this array changes, the effect will run.
 
   <br>
 
-  ##### `useEffect` - Conditional updates (Update phase)
+##### `useEffect` - Mounting phase
 
-  The `useEffect` Hook can also be used to run code during the *Update* phase, whenever there is an update of state or props.
+We can set the `useEffect` to **run code in the mounting phase**, **only once** right after the component is rendered for the first time.
 
-  As you may have noticed, `useEffect` takes a second argument `[]` the *dependency array*. A dependency array is used to specify the values that the effect depends on. Additionally, React keeps track of this array to know if it should re-run the effect. Example:
+To do so, we use the `useEffect` Hook with the following syntax:
 
-  ```jsx
-  useEffect(() => {
-    // Do something ...
-    
-    // Effect will run again if either `a` or `b` change or are updated
-  }, [a, b]
-  ```
+```jsx
+// Run the effect only once
+// during the mounting phase
 
-  <br>
+useEffect(() => {
+  // Do something ...
+}, [])
+```
 
-  **Important**: Whenever a value specified in the dependency array updates, React re-runs the effect.
-
-  <br>
-
-  For detailed explanation, check the following documentation pages:
-
-  - [React Docs: Synchronizing with Effects](https://beta.reactjs.org/learn/synchronizing-with-effects)
-  - [React Docs: `useEffect`](https://beta.reactjs.org/reference/react/useEffect)
+The empty array `[]` means that “this effect doesn’t depend on anything”, and will therefore run only once, after the initial render.
 
   <br>
 
-  [Back to top](#faqs)
+##### `useEffect` - Unmounting phase
+
+Often, _effects_ create resources that need to be cleaned up before the component leaves the screen, such as a subscription or a timer, like in the previous example. Before the component _unmounts_, we should cancel all remaining processes to prevent memory leaks.
+
+To do this, the function passed to **`useEffect` may return a cleanup function**. Example:
+
+```jsx
+useEffect(() => {
+  // Do something ...
+
+  // Returned function is known as a "cleanup function",
+  // which React will automatically run
+  // right before the component is removed from the DOM
+  return () => {
+    // Perform clean up actions here
+  }
+}, [])
+```
+
+  <br>
+
+##### `useEffect` - Conditional updates (Update phase)
+
+The `useEffect` Hook can also be used to run code during the _Update_ phase, whenever there is an update of state or props.
+
+As you may have noticed, `useEffect` takes a second argument `[]` the _dependency array_. A dependency array is used to specify the values that the effect depends on. Additionally, React keeps track of this array to know if it should re-run the effect. Example:
+
+```jsx
+useEffect(() => {
+  // Do something ...
+  // Effect will run again if either `a` or `b` change or are updated
+}, [a, b])
+```
+
+  <br>
+
+**Important**: Whenever a value specified in the dependency array updates, React re-runs the effect.
+
+  <br>
+
+For detailed explanation, check the following documentation pages:
+
+- [React Docs: Synchronizing with Effects](https://beta.reactjs.org/learn/synchronizing-with-effects)
+- [React Docs: `useEffect`](https://beta.reactjs.org/reference/react/useEffect)
+
+  <br>
+
+[Back to top](#faqs)
 
 </details>
-
 
 <details>
   <summary>I am getting an error: "not defined". How do I fix it?</summary>
 
   <br>
 
-  The "ReferenceError: variable is not defined" error in JavaScript occurs when you try to access a variable or a function that has not been defined yet or is out of scope. 
+The "ReferenceError: variable is not defined" error in JavaScript occurs when you try to access a variable or a function that has not been defined yet or is out of scope.
 
-  To fix the issue, check that you have defined the variable or function that you are trying to use and double-check the spelling to make sure you are using the correct name.
+To fix the issue, check that you have defined the variable or function that you are trying to use and double-check the spelling to make sure you are using the correct name.
 
-  In case the variable or a function is defined in another file, make sure that the file has been imported or loaded correctly.
+In case the variable or a function is defined in another file, make sure that the file has been imported or loaded correctly.
 
   <br>
 
-  [Back to top](#faqs)
+[Back to top](#faqs)
 
 </details>
 
@@ -573,30 +566,28 @@ const projects = [
 
   <br>
 
-  There are a couple of possible reasons why you may be unable to *push* changes to a Git repository:
+There are a couple of possible reasons why you may be unable to _push_ changes to a Git repository:
 
-  1. **You have not committed your changes:** Before you can push your changes to the repository, you need to commit them using the `git commit` command. Make sure you have committed your changes and try pushing again. To do this, run the following terminal commands from the project folder:
+1. **You have not committed your changes:** Before you can push your changes to the repository, you need to commit them using the `git commit` command. Make sure you have committed your changes and try pushing again. To do this, run the following terminal commands from the project folder:
 
-  ```bash
-  git add .
-  git commit -m "Your commit message"
-  git push
-  ```
+```bash
+git add .
+git commit -m "Your commit message"
+git push
+```
 
-  2. **You do not have permission to push to the repository:** If you have cloned the repository directly from the main Ironhack repository without making a *Fork* first, you do not have write access to the repository.
-  To check which remote repository you have cloned, run the following terminal command from the project folder:
+2. **You do not have permission to push to the repository:** If you have cloned the repository directly from the main Ironhack repository without making a _Fork_ first, you do not have write access to the repository.
+   To check which remote repository you have cloned, run the following terminal command from the project folder:
 
-  ```bash
-  git remote -v
-  ```
+```bash
+git remote -v
+```
 
-  If the link shown is the same as the main Ironhack repository, you will need to fork the repository to your GitHub account first, and then clone your fork to your local machine to be able to push the changes.
-  Note: You may want to make a copy of the code you have locally, to avoid losing it in the process.
+If the link shown is the same as the main Ironhack repository, you will need to fork the repository to your GitHub account first, and then clone your fork to your local machine to be able to push the changes.
+Note: You may want to make a copy of the code you have locally, to avoid losing it in the process.
 
   <br>
 
-  [Back to top](#faqs)
+[Back to top](#faqs)
 
 </details>
-
-
