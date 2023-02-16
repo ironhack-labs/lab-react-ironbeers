@@ -22,7 +22,7 @@ const NewBeerPage = () => {
             const response = await createNewBeer(body);
             console.log('Que es response', response)
         } catch (error) {
-            console.log('Error en el form')
+            console.log('Error en el form', error)
         }
       };
 
