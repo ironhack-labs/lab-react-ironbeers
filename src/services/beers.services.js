@@ -1,10 +1,14 @@
 import _api from './api'
 
-const getAllBeers = () => {
-    return _api.get('/beers');
-};
+const getAllBeers = () => _api.get('/beers');
+
+const getBeerById = (id) => _api.get(`/beers/${id}`);
+
+const createNewBeer = (data) => _api.post('/beers',data);
 
 
 export {
-    getAllBeers
+    getAllBeers,
+    getBeerById,
+    createNewBeer
 }

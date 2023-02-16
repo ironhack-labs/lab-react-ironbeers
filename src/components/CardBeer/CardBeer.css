@@ -10,7 +10,7 @@
 }
 
 .img-cardBeer img {
-    width: 100px;
+    height: 400px;
 }
 
 .info-cardBeer {
@@ -19,8 +19,16 @@
     margin-top: 50px;
 }
 
+.link-cardBeer {
+    text-decoration: none;
+}
+
 .info-cardBeer h1 {
     margin-bottom: 30px;
+}
+
+.info-cardBeer h1, h3 {
+    color: black;
 }
 
 .info-cardBeer h2 {

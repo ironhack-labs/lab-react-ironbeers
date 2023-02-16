@@ -3,3 +3,4 @@ export {default as NewBeer} from './NewBeer/NewBeer.jsx';
 export {default as RandomBeer} from './RandomBeer/RandomBeer.jsx';
 export {default as HeaderBeers} from './HeaderBeers/HeaderBeers.jsx';
 export {default as CardBeer} from './CardBeer/CardBeer.jsx';
+export {default as DetailCardBeer} from './DetailCardBeer/DetailCardBeer.jsx'

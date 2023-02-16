@@ -1,5 +1,5 @@
 import './App.css';
-import { HomePage, NewBeerPage, RandomBeerPage } from './pages';
+import { HomePage, NewBeerPage, RandomBeerPage, DetailBeerPage } from './pages';
 import { Routes, Route } from 'react-router-dom';
 import { BeerPage } from './pages';
 
@@ -11,6 +11,7 @@ function App() {
         <Route path='/beers' element={<BeerPage />} />
         <Route path='/random-beer' element={<RandomBeerPage />} />
         <Route path='/new-beer' element={<NewBeerPage />} />
+        <Route path='/beer-detail/:beerId' element={<DetailBeerPage />} />
       </Routes>
     </div>
   );

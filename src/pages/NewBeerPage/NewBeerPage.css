@@ -1,0 +1,36 @@
+.containerInputs {
+    display: flex;
+    justify-content: center;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.containerForm input {
+    font-size: medium;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.containerForm textarea {
+    border-radius: 20px;
+}
+
+.containerForm button {
+    height: 30px;
+    background-color: #51a0e0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+.containerForm div{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding-top: 20px;
+}
