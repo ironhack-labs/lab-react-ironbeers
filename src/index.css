@@ -11,3 +11,67 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Navbar{
+  background-color: #3CC3FC;
+  padding: 16px 0px;
+}
+
+.Container{
+  width: 80%;
+  margin: auto;
+  line-height: 140%;
+  text-decoration: none;
+  margin-bottom: 40px;
+  color: black;
+}
+
+a:link { 
+  text-decoration: none;
+  color: black
+}
+a:visited {
+text-decoration: none;
+color: black
+}
+
+.BeerCard{
+  display: flex;
+    margin: auto;
+    flex-direction: row;
+    padding-left: 30%;
+    margin: 60px 0px;
+}
+
+.BeerCard-Content{
+  text-align: left;
+  margin-left: 20px;
+}
+
+.New{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 40px;
+}
+
+.input{
+  margin-bottom: 60px;
+  height: 40px;
+  text-align: center;
+}
+
+.label{
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+button{
+  height: 40px;
+  font-size: 18px;
+}
+
+.New{
+  display: flex;
+  flex-direction: column;
+  margin: 40px 100px;
+}

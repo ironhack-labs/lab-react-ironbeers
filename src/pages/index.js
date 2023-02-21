@@ -1,0 +1,5 @@
+export {default as AllBeers} from "./AllBeers"
+export {default as NewBeer} from "./NewBeer"
+export {default as RandomBeer} from "./RandomBeer"
+export {default as DetailBeer} from "./DetailBeer"
+export {default as Home} from "./Home"
