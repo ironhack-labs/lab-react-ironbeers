@@ -34,11 +34,21 @@ function App() {
         />
         <Route
           path="/beers"
-          element={<Beers beers={beers} />}
+          element={
+            <Beers
+              beers={beers}
+              showDetails={false}
+            />
+          }
         />
         <Route
           path="/random"
-          element={<RandomBeer beer={randomBeer} />}
+          element={
+            <RandomBeer
+              beer={randomBeer}
+              showDetails={true}
+            />
+          }
         />
         <Route
           path="/new"

@@ -1,14 +1,20 @@
-function Beer({ beer }) {
+import { Card } from "antd";
+
+function Beer({ beer, showDetails }) {
   return (
-    <div className="beer">
+    <Card
+      className="beer-card"
+      style={{ margin: 20 }}
+    >
       <img
         src={beer.image_url}
         alt={beer.name}
       ></img>
       <h3>{beer.name}</h3>
       <p>{beer.tagline}</p>
-      <p>{beer.contributed_by}</p>
-    </div>
+      {showDetails && <p>{beer.description}</p>}
+      {showDetails && <p>{beer.contributed_by}</p>}
+    </Card>
   );
 }
 
