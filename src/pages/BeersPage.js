@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 const imgURL = "https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png"
 
 function BeersPage() {
-
 const [beers, setBeers] = useState([])
 
 useEffect(() => {
@@ -26,7 +25,7 @@ setBeers(response.data)
          <div key={beer._id} className="beer">
           <img src={beer.image_url} alt="" style={{height: "10vh"}}/>
           <div className="beer-description">
-          <h3>{beer.name} </h3>
+          <h3><Link to={`/beers/${beer._id}`} >{beer.name}</Link></h3>
           <p>{beer.tagline}</p>
           <h6>{beer.contributed_by}</h6>
           <hr style={{width: "100vw"}} />

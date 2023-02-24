@@ -51,3 +51,41 @@ text-decoration: none;
   margin-top: 0;
   margin-bottom: 2vh; 
 }
+
+.beer-picture{
+  margin-top: 5vh;
+}
+
+.single-beer-description {
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 5vw;
+}
+
+.beer-boxes {
+  display: flex;
+  flex-direction: row;
+}
+
+.box-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.box-left p {
+ color: grey;
+}
+
+.box-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 22vw;
+  text-align: right;
+}
+
+.box-right p {
+  color: grey;
+ }
