@@ -14,7 +14,6 @@ import Error from "./pages/Error";
 function App() {
   const [beers, setBeers] = React.useState([]);
   const [randomBeer, setRandomBeer] = React.useState([]);
-
   const apiURL = "https://ih-beers-api2.herokuapp.com/beers";
 
   React.useEffect(() => {
