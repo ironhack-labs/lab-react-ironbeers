@@ -24,5 +24,30 @@ color: black;
 text-align: left;
  margin-left: 5vw;
 text-decoration: none;
-margin-bottom: 5vh;
+}
+
+.beer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.beer-description {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 10vw;
+}
+
+.beer-description p {
+  color: grey;
+  margin-top: 0;
+  margin-bottom: 0; 
+}
+
+.beer-description h6 {
+  margin-top: 0;
+  margin-bottom: 2vh; 
 }
