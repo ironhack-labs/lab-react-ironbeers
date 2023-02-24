@@ -1,9 +1,10 @@
 import { Card } from "antd";
+import { Link } from "react-router-dom";
 
 function Beer({ beer, showDetails }) {
   return (
     <>
-      <a href={`beers/{beer._id}`}>
+      <Link to={`/${beer._id}`}>
         <Card
           className="beer-card"
           style={{ margin: 20 }}
@@ -19,7 +20,7 @@ function Beer({ beer, showDetails }) {
           </p>
           {showDetails && <p>{beer.description}</p>}
         </Card>
-      </a>
+      </Link>
     </>
   );
 }

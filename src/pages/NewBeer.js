@@ -29,8 +29,6 @@ function NewBeer() {
     axios
       .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
       .then((response) => {
-        console.log(response.data);
-
         setName("");
         setTagline("");
         setDescription("");
