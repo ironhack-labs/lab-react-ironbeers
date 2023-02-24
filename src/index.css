@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.home-beers {
+display: flex;
+flex-direction: column;
+width: 100vw;
+
+}
+
+.home-beers-text {
+color: black; 
+text-align: left;
+ margin-left: 5vw;
+text-decoration: none;
+margin-bottom: 5vh;
+}
