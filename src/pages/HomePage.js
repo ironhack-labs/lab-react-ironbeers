@@ -15,7 +15,7 @@ function HomePage() {
 
 <img src={randomBeerImage} alt="random-beer"/>
 <div className="home-beers-text">
-<Link to="/random-beer" style={{ textDecoration: 'none' }}><h2>Random Beer</h2></Link>
+<Link to="/random-beer"  style={{ textDecoration: 'none' }}><h2>Random Beer</h2></Link>
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi consequatur laboriosam, fuga quisquam praesentium</p>
 </div>
 
