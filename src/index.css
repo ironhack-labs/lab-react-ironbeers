@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.beers-container {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.beers-container p{
+  color:darkgray;
+  margin: 10px;
+
+}
+.random-beer-container{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.random-beer-container p{
+  color:darkgray;
+  margin: 10px;
+
+}
+.new-beer-container {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.new-beer-container p{
+  color:darkgray;
+  margin: 10px;
+
+}
+
+
