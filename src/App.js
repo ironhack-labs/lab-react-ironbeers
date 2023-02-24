@@ -6,6 +6,7 @@ import axios from "axios";
 import{useState, useEffect} from "react"
 import Beers from './pages/Beers';
 import BeerDetails from './components/BeerDetails';
+import RandomBeer from './pages/Random-beer';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/Beers' element={ <Beers beers={beers}/>}/>
         <Route path='/Beers/:id' element={ <BeerDetails beers={beers}/>}/>
+        <Route path='/Random-beer' element={ <RandomBeer beers={beers}/>}/>
         
       </Routes>
     </div>

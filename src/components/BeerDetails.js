@@ -17,7 +17,7 @@ function BeerDetails({beers}) {
                 <h5>{selectedBeer.contributed_by}</h5> 
 
         </div>
-     );
+    );
 }
 
 export default BeerDetails;
