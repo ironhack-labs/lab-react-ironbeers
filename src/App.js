@@ -8,19 +8,34 @@ import Home from "./pages/Home";
 import Beers from "./pages/Beers";
 import RandomBeer from "./pages/RandomBeer";
 import NewBeer from "./pages/NewBeer";
+import Error from "./pages/Error";
 
 function App() {
   const [beers, setBeers] = React.useState([]);
   const [randomBeer, setRandomBeer] = React.useState([]);
+  const [selectedBeer, setSelectedBeer] = React.useState([]);
 
   const apiURL = "https://ih-beers-api2.herokuapp.com/beers";
 
   React.useEffect(() => {
-    axios.get(apiURL).then((response) => setBeers(response.data));
+    axios
+      .get(apiURL)
+      .then((response) => setBeers(response.data))
+      .catch((error) => console.log(error));
   }, []);
 
   React.useEffect(() => {
-    axios.get(`${apiURL}/random`).then((response) => setRandomBeer(response.data));
+    axios
+      .get(`${apiURL}/random`)
+      .then((response) => setRandomBeer(response.data))
+      .catch((error) => console.log(error));
+  }, []);
+
+  React.useEffect(() => {
+    axios
+      .get(`${apiURL}/:beerId`)
+      .then((response) => setSelectedBeer(response.data))
+      .catch((error) => console.log(error));
   }, []);
 
   return (
@@ -32,6 +47,7 @@ function App() {
           path="/"
           element={<Home />}
         />
+
         <Route
           path="/beers"
           element={
@@ -41,6 +57,17 @@ function App() {
             />
           }
         />
+
+        <Route
+          path="/beers/:beerId"
+          element={
+            <RandomBeer
+              beers={selectedBeer}
+              showDetails={true}
+            />
+          }
+        />
+
         <Route
           path="/random"
           element={
@@ -50,9 +77,15 @@ function App() {
             />
           }
         />
+
         <Route
           path="/new"
           element={<NewBeer />}
+        />
+
+        <Route
+          path="*"
+          element={<Error />}
         />
       </Routes>
     </div>
