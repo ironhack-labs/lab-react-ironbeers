@@ -6,7 +6,7 @@ const imgURL = "https://user-images.githubusercontent.com/23629340/40707029-cb2f
 
 
 function RandomBeerPage() {
-    const [randomBeer, setRandomBeer] = useState({})
+    const [randomBeer, setRandomBeer] = useState([])
 
     const { random } = useParams()
 
@@ -16,7 +16,7 @@ function RandomBeerPage() {
     console.log(response.data)
     setRandomBeer(response.data)
     })
-    },{})
+    },[])
   
     
     return ( 

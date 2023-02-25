@@ -7,7 +7,7 @@ const imgURL = "https://user-images.githubusercontent.com/23629340/40707029-cb2f
 
 
 function BeerDetailsPage({beers}) {
-    const [singleBeer, setSingleBeer] = useState({})
+    const [singleBeer, setSingleBeer] = useState([])
 
     const { id } = useParams()
 
@@ -17,7 +17,7 @@ function BeerDetailsPage({beers}) {
     console.log(response.data)
     setSingleBeer(response.data)
     })
-    },{})
+    },[])
   
   
     return ( 
