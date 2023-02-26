@@ -7,13 +7,13 @@ import BeerCard from "../components/BeerCard"
 export default function RandomBeer() {
   const [beer, setBeer] = useState({})
 
-  async function getRandmonBeer(){
+  async function getRandomBeer(){
     const { data } = await axios.get('https://ih-beers-api2.herokuapp.com/beers/random')
     setBeer(data)
   }
 
   useEffect(() => {
-    getRandmonBeer()
+    getRandomBeer()
   }, [])
   
   return (
