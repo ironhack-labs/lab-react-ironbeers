@@ -9,6 +9,7 @@ import BeerDetails from './components/BeerDetails';
 import RandomBeer from './pages/Random-beer';
 import NewBeer from './pages/New-beer';
 
+
 function App() {
 
   const { pathname } = useLocation(); //para agarrar la lokeishon actual

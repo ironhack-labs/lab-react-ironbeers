@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import SearchBar from '../components/SearchBar';
 
 function Beers({beers}) {
+
+
+    
     return ( 
         <div>
+
+        <SearchBar/>
+
         {beers.map(beer =>{
             return(
                 <div>
@@ -16,7 +23,7 @@ function Beers({beers}) {
             )
         })}
         </div>
-     );
+    );
 }
 
 export default Beers;
