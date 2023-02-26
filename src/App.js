@@ -7,6 +7,7 @@ import{useState, useEffect} from "react"
 import Beers from './pages/Beers';
 import BeerDetails from './components/BeerDetails';
 import RandomBeer from './pages/Random-beer';
+import NewBeer from './pages/New-beer';
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
     })
 }, [])
 
+
+
   return (
     <div className="App">
       
@@ -35,6 +38,7 @@ function App() {
         <Route path='/Beers' element={ <Beers beers={beers}/>}/>
         <Route path='/Beers/:id' element={ <BeerDetails beers={beers}/>}/>
         <Route path='/Random-beer' element={ <RandomBeer beers={beers}/>}/>
+        <Route path="/New-beer" element={<NewBeer />} />
         
       </Routes>
     </div>

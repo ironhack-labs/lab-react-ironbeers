@@ -14,6 +14,11 @@ function RandomBeer({beers}) {
     // let randomBeer = beers[Math.floor(Math.random()*beers.length)]
     // console.log("THIS IS THE RANDOM BEER:", randomBeer)
 
+
+    if(!randomBeer){
+        return <div><p>Loading</p></div>
+    }
+    else{
     return ( 
     
         <div>
@@ -27,6 +32,7 @@ function RandomBeer({beers}) {
 
         </div>
     );
+    }
 }
 
 export default RandomBeer;
