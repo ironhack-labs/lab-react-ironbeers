@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import Root from './pages/Root'
 import Beers, { BeersLoader } from './pages/Beers'
 import RandomBeer from './pages/RandomBeer'
-import NewBeer, { newBeerAction } from './pages/NewBeer'
+import NewBeer from './pages/NewBeer'
 import BeerDetails, { beerDetailsLoader } from "./pages/BeerDetails";
 
 
@@ -28,14 +28,14 @@ const router = createBrowserRouter([
                 element:<BeerDetails/>
             },
             {
+                path:"newbeer",
+                element:<NewBeer/>
+            },
+            {
                 path:"random",
                 element:<RandomBeer/>
             },
-            {
-                path:"newbeer",
-                action: newBeerAction,
-                element:<NewBeer/>
-            }
+           
         ]
     }
 ])  

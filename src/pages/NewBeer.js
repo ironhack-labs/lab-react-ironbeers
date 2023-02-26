@@ -1,29 +1,35 @@
-import { Button, Col, Form, Input, Row } from 'antd'
+import { Button, Col, Divider, Input, Row } from 'antd'
 import React from 'react'
-import { redirect } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { createNewBeer } from '../service/services'
 
-export const newBeerAction = async({request}) => {
-  let formData = await request.formData()
-	const name = formData.get("name")
-	const tagline = formData.get("tagline")
-	const description = formData.get("description")
-	const first_brewed = formData.get("first_brewed")
-	const brewers_tips = formData.get("brewers_tips")
-	const attenuation_level = formData.get("attenuation_level")
-	const contributed_by = formData.get("contributed_by")
-
-
-    await createNewBeer({name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by})
-    console.log ({name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by}) 
-    return redirect ('/beers')
-  }
 
   function NewBeer () {
+
+    const navigate = useNavigate()
+    async function createBeer(e) {
+      e.preventDefault()
+
+      const name = e.target[0].value
+      const tagline = e.target[1].value
+      const description = e.target[2].value
+      const first_brewed = e.target[3].value
+      const brewers_tips = e.target[4].value
+      const attenuation_level = e.target[5].value
+      const contributed_by = e.target[6].value
+
+      await createNewBeer({name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by})
+  
+      navigate("/")
+
+      console.log (name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by) 
+  
+    }
     return (
     <Row justify="center">
         <Col span={20}>
-          <Form method="post" action='/new'>
+        <Divider orientation="center">Create a new beer</Divider>
+          <form onSubmit={createBeer}>
             <label htmlFor="name">
               Name:
               <Input type="text" name="name" id="name"/>
@@ -58,11 +64,12 @@ export const newBeerAction = async({request}) => {
               block
               style={{ marginTop: "1rem" }}
             >
-              Create Beer
+              Create
             </Button>
-          </Form>
+          </form>
         </Col>
       </Row>
     )
 }
+
 export default NewBeer
