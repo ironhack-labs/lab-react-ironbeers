@@ -1,13 +1,72 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.beersMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeBeers {
+  border-radius: 20px;
+}
+
+.textHbeers {
+  text-align: center;
+  margin: 15px;
+  font-size: 17px;
+}
+
+.linkHomePage {
+  text-decoration: none;
+}
+
+.MenuBar {
+  display: flex;
+  justify-content: center;
+}
+
+.imgBeer {
+  height: 200px;
+}
+
+.imageBeer {
+  height: 200px;
+  width: 60px;
+}
+
+.beers {
+  display: flex;
+  flex-direction: column;
+}
+
+.beersCard {
+  text-align: center;
+}
+
+.card {
+  font-size: 20px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleInfo {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  padding: 5px;
 }
