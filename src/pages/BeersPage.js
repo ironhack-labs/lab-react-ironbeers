@@ -6,7 +6,7 @@ const imgURL = "https://user-images.githubusercontent.com/23629340/40707029-cb2f
 
 function BeersPage() {
   const [beers, setBeers] = useState([])
-  const [query, setQuery] = useState("")
+  const [query, setQuery] = useState([])
 
   useEffect(() => {
     axios.get("https://ih-beers-api2.herokuapp.com/beers")
@@ -15,10 +15,6 @@ function BeersPage() {
         setBeers(response.data)
       })
   }, [])
-
-    const handleSelect = (e) => {
-        setQuery(e.target.value)
-      }
 
 
   return (
@@ -29,8 +25,14 @@ function BeersPage() {
       <div className="search">
         <h3>Search</h3>
         <form>
-          <label htmlFor="name"></label>
-          <input type="text" name="name" value={query} onChange={(e) => handleSelect(e)} />
+          <input type="text" onChange={(e) => {
+            const query = e.target.value
+            axios.get("https://ih-beers-api2.herokuapp.com/beers/search?q=${query}")
+              .then(response => {
+                setQuery(response.data)
+              })
+
+          }} />
         </form>
       </div>
 
