@@ -137,3 +137,12 @@ text-decoration: none;
   border-radius: 15px;
   border: 1px solid grey;
  }
+
+ .search input {
+  display: flex;
+  width: 80vw;
+  height: 3vh;
+  margin: 0 auto 4vh auto ;
+  border-radius: 15px;
+  border: 1px solid grey;
+ }
