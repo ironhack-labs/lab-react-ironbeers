@@ -89,3 +89,51 @@ text-decoration: none;
 .box-right p {
   color: grey;
  }
+
+ .new-beer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+ }
+
+.new-beer label {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 3vw;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+ .new-beer input {
+  display: flex;
+  width: 80vw;
+  height: 3vh;
+  margin: 0 auto 4vh auto ;
+  border-radius: 15px;
+  border: 1px solid grey;
+ }
+
+ .new-beer button {
+  display: flex;
+  width: 80vw;
+  height: 4vh;
+  border-radius: 15px;
+  border: 1px solid grey;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #3dc4fc;
+  color: white;
+  border-color: #3dc4fc;
+ }
+
+ .special input {
+  display: flex;
+  width: 80vw;
+  height: 20vh;
+  margin: 0 auto 4vh auto ;
+  border-radius: 15px;
+  border: 1px solid grey;
+ }
