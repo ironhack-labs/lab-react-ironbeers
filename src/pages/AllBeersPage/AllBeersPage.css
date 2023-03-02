@@ -1,0 +1,8 @@
+img {
+    width: 100%;
+}
+
+.beer-img {
+    height: 300px;
+    object-fit: contain;
+}
