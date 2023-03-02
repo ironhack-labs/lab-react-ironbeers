@@ -1,0 +1,13 @@
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+img {
+    width: 100%;
+}
+
+.BeerCard {
+    height: 300px;
+    object-fit: contain;
+}
