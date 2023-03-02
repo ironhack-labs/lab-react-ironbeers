@@ -1,0 +1,32 @@
+.home {
+  text-align: left;
+  margin: 10px;
+  border: 1px solid;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.homeP {
+  margin-left: 20px;
+}
+
+.Home {
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+  margin: 0px 10px;
+}
+
+.imgHome img {
+  width: 100px;
+}
+
+
+.cardLink {
+  text-decoration: none;
+  color: black;
+}
