@@ -1,0 +1,8 @@
+.BeersCard {
+    border: 1px solid black;
+}
+
+.BeersCard img {
+    height: 150px;
+    object-fit: cover;
+}
