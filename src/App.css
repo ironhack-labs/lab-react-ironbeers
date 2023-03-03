@@ -32,7 +32,21 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.NavBar {
+  background-color: rgb(67, 67, 175);
+
+}
+
+.NavBar a {
+  color: white;
+}
+
+.img {
+  width: 100%;
 }
