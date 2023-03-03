@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.home{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+}
+
+.card-beer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.beer-info {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 10vw;
+}
