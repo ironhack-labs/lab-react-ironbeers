@@ -24,6 +24,36 @@
   color: white;
 }
 
+.header {
+  height: 10vh;
+  background-color: rgb(41, 187, 206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-img {
+  height: 5vh;
+}
+
+.HomepageImage {
+  width: 100vw;
+  height:40vh;
+}
+
+.homepage-h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+.text-section {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 5vh;
+  color:grey
+}
+
+
 .App-link {
   color: #61dafb;
 }
