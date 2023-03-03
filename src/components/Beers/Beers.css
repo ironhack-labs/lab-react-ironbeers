@@ -1,0 +1,9 @@
+.fit {
+  object-fit: contain;
+  height: 150px;
+  width: 100%;
+}
+
+.space {
+    margin: 10px
+}
