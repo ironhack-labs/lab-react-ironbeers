@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function AllBeers() {
-  const [allBeers, setAllBeers] = useState(null);
+  const [allBeers, setAllBeers] = useState([]);
 
   useEffect(() => {
     getData();
@@ -14,7 +15,7 @@ function AllBeers() {
       const response = await axios.get(
         "https://ih-beers-api2.herokuapp.com/beers"
       );
-      //   console.log(response);
+      console.log(response);
       setAllBeers(response.data);
     } catch (error) {
       console.log(error);
@@ -25,14 +26,16 @@ function AllBeers() {
       <h3>Todas las cervezas</h3>
       {allBeers.map((cadaCerveza) => {
         return (
-          <div key={cadaCerveza._id}>
-            <img src={cadaCerveza.image_url} alt="" width="100px" />
-            <h5>{cadaCerveza.name}</h5>
+          <div>
+          <img src={cadaCerveza.image_url} alt="" width="50px" />
+            <h4>{cadaCerveza.name}</h4>
             <h6>{cadaCerveza.tagline}</h6>
-            <p>{cadaCerveza.contributed_by}</p>
+            <h6>{cadaCerveza.contributed_by}</h6>
+            <Link to={`/beer-details/${cadaCerveza._id}`}>Saber más</Link>
+            <br />
           </div>
         );
-      })}
+      })} 
     </div>
   );
 }
