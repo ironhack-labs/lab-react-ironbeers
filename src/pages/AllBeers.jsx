@@ -5,6 +5,23 @@ import { Link } from "react-router-dom";
 
 function AllBeers() {
   const [allBeers, setAllBeers] = useState([]);
+  const [searchInput, setSearchInput]= useState("")
+
+  const filterBeer = (searchInput) => {
+    const filteredBeer = allBeers.filter((cadaCerveza) => {
+      if (cadaCerveza.name.includes(searchInput)) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    setAllBeers(filteredBeer);
+  };
+
+  const handleSearch = (event)=>{
+    setSearchInput(event.target.value)
+    filterBeer(event.target.value)
+  }
 
   useEffect(() => {
     getData();
@@ -24,10 +41,18 @@ function AllBeers() {
   return (
     <div>
       <h3>Todas las cervezas</h3>
+
+      <label htmlFor="search">Buscar:</label>
+      <input
+        value={searchInput}
+        name="search"
+        type="text"
+        onChange={handleSearch}
+      />
       {allBeers.map((cadaCerveza) => {
         return (
           <div>
-          <img src={cadaCerveza.image_url} alt="" width="50px" />
+            <img src={cadaCerveza.image_url} alt="" width="50px" />
             <h4>{cadaCerveza.name}</h4>
             <h6>{cadaCerveza.tagline}</h6>
             <h6>{cadaCerveza.contributed_by}</h6>
@@ -35,7 +60,7 @@ function AllBeers() {
             <br />
           </div>
         );
-      })} 
+      })}
     </div>
   );
 }
