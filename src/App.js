@@ -11,7 +11,7 @@ import NewBeer from './pages/NewBeer';
 
 function App() {
   return <div className="App">
-  <Header></Header>
+ 
   
   
   <Routes>

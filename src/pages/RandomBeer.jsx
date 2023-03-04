@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import {useState, useEffect} from "react"
 import { Link } from 'react-router-dom'
+import Header from '../components/Header'
 
 const apiURL = 'https://ih-beers-api2.herokuapp.com/beers/random'
 
@@ -25,7 +26,7 @@ function RandomBeer() {
 
   return (
     <div >
-      
+      <Header/>
         {randomBeer && (
 
         <div key={randomBeer._id}>

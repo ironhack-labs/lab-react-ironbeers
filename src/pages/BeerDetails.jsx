@@ -3,6 +3,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import Header from '../components/Header'
 
 function BeerDetails() {
     const [oneBeerDetails, setOneBeerDetails] = useState([])
@@ -23,11 +24,13 @@ function BeerDetails() {
     }, [id])
 
   return (
+    
     <div>
-        <div key={oneBeerDetails._id} >
+     
+     <Header/>
        
         <div key={oneBeerDetails._id}>
-        <img src={oneBeerDetails.image_url} alt="one random beer"></img>
+        <img src={oneBeerDetails.image_url} alt="one beer details"></img>
         <h3>{oneBeerDetails.name}</h3>
         <h4>{oneBeerDetails.tagline}</h4>
         <p>{oneBeerDetails.first_brewed}</p>
@@ -35,7 +38,7 @@ function BeerDetails() {
         <p>{oneBeerDetails.contributed_by} </p>
  </div>
     </div>
-    </div>
+   
   )
 }
 

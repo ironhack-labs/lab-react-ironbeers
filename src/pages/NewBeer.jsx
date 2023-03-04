@@ -2,7 +2,7 @@
  import { useState } from "react"
  import axios from "axios"
  import { useNavigate } from "react-router-dom"
-
+ import Header from '../components/Header'
  
  function NewBeer() {
    const [name, setName] = useState("")
@@ -44,6 +44,7 @@
 
    return (
      <div>
+     <Header/>
        <form onSubmit={handleSubmit} className="new-beer">
          <div>
          <label htmlFor="name">Name</label>
