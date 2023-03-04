@@ -11,3 +11,112 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav-bar {
+  background-color: rgb(15, 155, 155);
+  margin-bottom: 30px;
+}
+
+.nav-bar img {
+  width: 5vw;
+  margin: 15px;
+}
+
+.container-home-p {
+  text-align: left;
+  margin: 20px 20px 60px 20px;
+}
+
+.container-home-link {
+  text-decoration: none;
+  color: black;
+  font-size: 3vw;
+}
+
+.container-home-link h3 {
+  text-align: left;
+  margin: 20px;
+}
+
+.backto-link {
+  color: black;
+}
+
+.all-beers {
+  display: flex;
+  margin: 50px;
+}
+
+.all-beers img {
+  width: 5vw;
+}
+
+.information-beer {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.beer-link {
+  text-decoration: none;
+  color: black;
+}
+
+.information-beer h3 {
+ color:rgba(128, 128, 128, 0.597);
+}
+
+.random-flex {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 50px;
+}
+
+.image-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.random-image {
+  text-align: center;
+  width: 12vw;
+}
+
+.each-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.color-grey {
+  color: rgba(128, 128, 128, 0.597);
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-flex label {
+  font-weight: bolder;
+  font-size: 1.5vw;
+  text-align: left;
+  margin-left: 100px;
+}
+
+.form-flex input {
+  border: 2px solid rgb(234, 232, 232);
+  border-radius: 20px;
+  height: 4.5vh;
+  margin: 0 70px 30px 70px;
+  padding: 10px;
+}
+
+.form-flex button {
+  border-radius: 20px;
+  margin: 0 70px 30px 70px;
+  background-color: rgb(15, 155, 155);
+  border: none;
+  padding: 20px;
+  color: white;
+}
