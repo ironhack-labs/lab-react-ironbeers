@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Header from "../components/Header";
 
 function AddBeer() {
   const navigate = useNavigate();
@@ -65,6 +66,7 @@ function AddBeer() {
 
   return (
     <div>
+    <Header />
       <form>
         <label htmlFor="name">Name: </label>
         <input

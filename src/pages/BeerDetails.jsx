@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Header from "../components/Header";
 
 function BeerDetails() {
   const params = useParams();
-//   console.log(params)
+  //   console.log(params)
   const [beerDetails, setBeerDetails] = useState([]);
   const { idBeer } = params;
 
@@ -14,9 +15,11 @@ function BeerDetails() {
 
   const getData = async () => {
     try {
-        const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${idBeer}`)
-        console.log(response.data)
-        setBeerDetails(response.data)
+      const response = await axios.get(
+        `https://ih-beers-api2.herokuapp.com/beers/${idBeer}`
+      );
+      console.log(response.data);
+      setBeerDetails(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -24,6 +27,7 @@ function BeerDetails() {
 
   return (
     <div>
+      <Header />
       <img src={beerDetails.image_url} alt="beer-details" width="60px" />
       <h3>{beerDetails.name}</h3>
       <h5>{beerDetails.tagline}</h5>

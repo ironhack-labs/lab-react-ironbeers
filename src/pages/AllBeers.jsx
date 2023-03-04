@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 function AllBeers() {
   const [allBeers, setAllBeers] = useState([]);
@@ -52,6 +53,7 @@ function AllBeers() {
       {allBeers.map((cadaCerveza) => {
         return (
           <div>
+          <Header />
             <img src={cadaCerveza.image_url} alt="" width="50px" />
             <h4>{cadaCerveza.name}</h4>
             <h6>{cadaCerveza.tagline}</h6>

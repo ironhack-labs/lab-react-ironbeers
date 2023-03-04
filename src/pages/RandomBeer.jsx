@@ -2,15 +2,16 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import Header from "../components/Header";
 
 function RandomBeer() {
-  const params= useParams()
-  const {idBeer}=params
+  const params = useParams();
+  const { idBeer } = params;
   const [randomBeer, setRandomBeer] = useState([]);
 
   useEffect(() => {
-    getData()
-  },[idBeer]);
+    getData();
+  }, [idBeer]);
 
   const getData = async () => {
     try {
@@ -24,6 +25,7 @@ function RandomBeer() {
   };
   return (
     <div>
+      <Header />
       <img src={randomBeer.image_url} alt="beer-details" width="60px" />
       <h3>{randomBeer.name}</h3>
       <h5>{randomBeer.tagline}</h5>
