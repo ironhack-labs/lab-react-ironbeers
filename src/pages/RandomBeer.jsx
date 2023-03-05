@@ -23,13 +23,20 @@ function RandomBeer() {
   return (
     <div>
       <Header />
-      <img src={randomBeer.image_url} alt={randomBeer.name} width={"250px"} />
-      <h3>{randomBeer.name}</h3>
-      <p>{randomBeer.tagLine}</p>
-      <p>{randomBeer.first_brewed}</p>
-      <p>{randomBeer.attenuation_level}</p>
-      <p>{randomBeer.description}</p>
-      <p>{randomBeer.contributed_by}</p>
+      <div class="single-beer-container">
+        <img
+          class="beer-img"
+          src={randomBeer.image_url}
+          alt={randomBeer.name}
+          width={"250px"}
+        />
+        <h3>{randomBeer.name}</h3>
+        <p>{randomBeer.tagLine}</p>
+        <p>{randomBeer.first_brewed}</p>
+        <p>{randomBeer.attenuation_level}</p>
+        <p class="description">{randomBeer.description}</p>
+        <p class="tagline">{randomBeer.contributed_by}</p>
+      </div>
     </div>
   );
 }

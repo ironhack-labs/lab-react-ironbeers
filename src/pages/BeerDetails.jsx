@@ -26,13 +26,22 @@ function BeerDetails() {
   return (
     <div>
       <Header />
-      <img src={beerDetails.image_url} alt={beerDetails.name} width={"250px"} />
-      <h3>{beerDetails.name}</h3>
-      <p>{beerDetails.tagLine}</p>
-      <p>{beerDetails.first_brewed}</p>
-      <p>{beerDetails.attenuation_level}</p>
-      <p>{beerDetails.description}</p>
-      <p>{beerDetails.contributed_by}</p>
+      <div class="single-beer-container">
+        <img
+          class="beer-img"
+          src={beerDetails.image_url}
+          alt={beerDetails.name}
+          width={"250px"}
+        />
+        <h3>{beerDetails.name}</h3>
+        <p>{beerDetails.tagLine}</p>
+        <p>{beerDetails.first_brewed}</p>
+        <p>{beerDetails.attenuation_level}</p>
+        <p class="description">{beerDetails.description}</p>
+        <p class="tagline">
+          <b>{beerDetails.contributed_by}</b>
+        </p>
+      </div>
     </div>
   );
 }

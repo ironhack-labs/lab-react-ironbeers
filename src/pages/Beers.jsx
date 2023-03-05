@@ -47,7 +47,7 @@ function Beers() {
               <Link to={`/beers/${_id}`}>
                 <h3>{name}</h3>
               </Link>
-              <p id="tagline">{tagline}</p>
+              <p class="tagline">{tagline}</p>
               <p>
                 <b>Created by: </b>
                 {contributed_by}
