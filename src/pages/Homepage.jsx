@@ -19,8 +19,8 @@ function Homepage() {
       </p>
       <img src={NewBeer} alt="beers" />
       <Link to={"/newbeers"}>
-      </Link>
-      <h2>New Beers</h2>
+      
+      <h2>New Beers</h2></Link>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
         blanditiis nostrum pariatur laudantium ab mollitia rerum illo recusandae
@@ -28,8 +28,8 @@ function Homepage() {
       </p>
       <img src={RandomBeer} alt="beers" />
       <Link to={"/randombeers"}>
-      </Link>
-      <h2>Random Beers</h2>
+      
+      <h2>Random Beers</h2></Link>
       
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
