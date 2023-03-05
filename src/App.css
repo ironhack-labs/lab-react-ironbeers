@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 #home {
@@ -11,6 +13,51 @@ h2 {
   text-decoration: none;
 }
 
+h3 {
+  font-size: 1.5em;
+  color: black;
+  text-align: left;
+  margin: 0;
+  font-weight: 100;
+}
+
 #home-banner {
   width: 100vw;
+}
+
+#beers-container {
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  padding: 5px;
+  margin: 10px;
+  align-items: flex-end;
+}
+
+#beers-container img {
+  width: 80px;
+  height: 150px;
+  object-fit: contain;
+  margin: 10px;
+}
+
+#beers-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+#beers-details a {
+  text-decoration: none;
+}
+
+#tagline {
+  color: grey;
+  margin: 5px;
+}
+
+p {
+  text-align: left;
+  margin: 5px;
 }

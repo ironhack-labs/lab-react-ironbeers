@@ -39,15 +39,20 @@ function Beers() {
     <div>
       <Header />
       {allBeers.map((eachBeer) => {
-        const { image_url, name, tagLine, contributed_by, _id } = eachBeer;
+        const { image_url, name, tagline, contributed_by, _id } = eachBeer;
         return (
-          <div>
-            <img src={image_url} alt={name} height={"100px"} />
-            <Link to={`/beers/${_id}`}>
-              <h3>{name}</h3>
-            </Link>
-            <p>{tagLine}</p>
-            <p>{contributed_by}</p>
+          <div id="beers-container">
+            <img src={image_url} alt={name} />
+            <div id="beers-details">
+              <Link to={`/beers/${_id}`}>
+                <h3>{name}</h3>
+              </Link>
+              <p id="tagline">{tagline}</p>
+              <p>
+                <b>Created by: </b>
+                {contributed_by}
+              </p>
+            </div>
           </div>
         );
       })}
