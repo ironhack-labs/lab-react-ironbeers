@@ -54,7 +54,7 @@ function AddBeer() {
       contributed_by: contributedBy,
     };
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://ih-beers-api2.herokuapp.com/beers/new",
         newBeer
       );

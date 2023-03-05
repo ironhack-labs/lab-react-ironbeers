@@ -6,7 +6,7 @@ import Header from "../components/Header";
 
 function AllBeers() {
   const [allBeers, setAllBeers] = useState([]);
-  const [searchInput, setSearchInput]= useState("")
+  const [searchInput, setSearchInput] = useState("");
 
   const filterBeer = (searchInput) => {
     const filteredBeer = allBeers.filter((cadaCerveza) => {
@@ -19,10 +19,10 @@ function AllBeers() {
     setAllBeers(filteredBeer);
   };
 
-  const handleSearch = (event)=>{
-    setSearchInput(event.target.value)
-    filterBeer(event.target.value)
-  }
+  const handleSearch = (event) => {
+    setSearchInput(event.target.value);
+    filterBeer(event.target.value);
+  };
 
   useEffect(() => {
     getData();
@@ -41,6 +41,7 @@ function AllBeers() {
   };
   return (
     <div>
+      <Header />
       <h3>Todas las cervezas</h3>
 
       <label htmlFor="search">Buscar:</label>
@@ -53,7 +54,6 @@ function AllBeers() {
       {allBeers.map((cadaCerveza) => {
         return (
           <div>
-          <Header />
             <img src={cadaCerveza.image_url} alt="" width="50px" />
             <h4>{cadaCerveza.name}</h4>
             <h6>{cadaCerveza.tagline}</h6>
