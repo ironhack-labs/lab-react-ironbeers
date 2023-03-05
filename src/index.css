@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.homeLogo {
+  width: 4vw;
+}
+
+.navBar {
+  background-color: rgb(31, 129, 194);
+}
+
+.beerImage {
+  height: 30vh;
+}
+
+.info {
+  display: flex;   display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+ 
+}
