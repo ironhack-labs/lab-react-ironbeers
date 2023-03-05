@@ -1,25 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Beers from './components/Beers';
+import NewBeer from './components/NewBeer';
+import BeerId from './components/Beerld';
+import axios from 'axios';
+import React, { useState, useEffect, UseContext } from 'react';
+import { ApiContext } from './contexts/api.context';
+
 
 function App() {
+  const [beers, setBeers] = useState([]);
+  const { apiUrl } = useContext(ApiContext);
+
+  const getBeers = async () => {
+    try {
+      let response = await axios.get(apiUrl);
+      setBeers(response.data);
+   
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getBeers();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/beers" element={<Beers beers={beers} />} />
+        <Route path="/randomBeer" element={<RandomBeer />} />
+        <Route path="/newBeer" element={<NewBeer />} />
+        <Route path="/beers/:beerId" element={<BeerId beers={beers} />} />
+      </Routes>
     </div>
   );
 }
+
 
 export default App;
