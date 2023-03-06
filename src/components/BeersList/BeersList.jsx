@@ -10,6 +10,7 @@ const BeersList = ({ beers }) => {
                 beers.map(elm => {
                     <Col md={{ span: 3 }} key={elm._id}>
                         <BeersCard {...elm} />
+                        <h1>hahahaha</h1>
                     </Col>
                 })
             }
