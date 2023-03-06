@@ -1,5 +1,7 @@
 import React from 'react'
+import './Navbar.css'
 import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 
 function Navbar() {
   return (
@@ -7,7 +9,9 @@ function Navbar() {
 
 <Link to={"/"}>
         {" "}
-            <button>Home</button>
+        <div className='home'>
+            <Button variant="primary" size="lg">Home</Button>
+            </div>
         </Link>
         
 

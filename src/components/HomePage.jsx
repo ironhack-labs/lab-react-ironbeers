@@ -1,4 +1,5 @@
 import React from 'react'
+import './HomePage.css'
 import { Link } from 'react-router-dom'
 
 function HomePage() {
@@ -7,18 +8,36 @@ function HomePage() {
 
         <Link to={"/beers"}>
         {" "}
-            <button>List</button>
+        <div className='botones1'>
+        <img src={"./beers.png"} />
+            </div>
+            <div className='all'>
+            <p>All Beers</p>
+            </div>
         </Link>
 
         <Link to={"/random-beer"} >
         {" "}
-            <button>Random </button>
+        <div className='botones2'>
+        <img src={"./n.png"} />
+            </div>
+            <div className='random'>
+            <p>Random Beer</p>
+            </div>
         </Link>
 
         <Link to={"/new-beer"} >
         {" "}
-            <button>New</button>
+        <div className='botones3'>
+        <img src={"./r.png"} />
+            </div>
+            <div className='new'>
+            <p>New Beer</p>
+            </div>
         </Link>
+      
+        
+
     </div>
   )
 }

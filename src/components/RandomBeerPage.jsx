@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useEffect, useState} from 'react'
+import './RandomBeerPage.css'
 
 function RandomBeerPage() {
     const [random, setRandom]=useState([]);
@@ -17,13 +18,15 @@ function RandomBeerPage() {
 
   return (
     <div>
+      <div className='random'>
                <img src={random.image_url}  alt=""/>
-            <h3> name  {random.name}</h3>
-        <p>tagline {random.tagline}</p>
-        <p>first_brewed {random.first_brewed}</p>
-        <p>attenuation_level {random.attenuation_level}</p>
-        <p>description {random.description}</p>
-        <p>contributed_by{random.contributed_by}</p>
+            <h3> {random.name}</h3>
+        <p>{random.tagline}</p>
+        <p> {random.first_brewed}</p>
+        <p> {random.attenuation_level}</p>
+        <p> {random.description}</p>
+        <p>{random.contributed_by}</p>
+        </div>
     </div>
   )
 }

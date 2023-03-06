@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
+import './SingleBeerPage.css'
 
 function SingleBeerPage() {
 const [view, setView]=useState([]);
@@ -19,13 +20,17 @@ const [view, setView]=useState([]);
 
   return (
     <div>
+      <div className='single'>
             <img src={view.image_url}  alt=""/>
-            <h3> name  {view.name}</h3>
-        <p>tagline {view.tagline}</p>
-        <p>first_brewed {view.first_brewed}</p>
-        <p>attenuation_level {view.attenuation_level}</p>
-        <p>description {view.description}</p>
-        <p>contributed_by{view.contributed_by}</p>
+            <div className='texto'>
+            <h3>{view.name}</h3>
+        <p> {view.tagline}</p>
+        <p className='fecha'> {view.first_brewed}</p>
+        <p className='numero'> {view.attenuation_level}</p>
+        <p> {view.description}</p>
+        <p> {view.contributed_by}</p>
+        </div>
+        </div>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Card from './Card';
 import { Link } from 'react-router-dom';
+import './ListBeersPage.css'
 
 function ListBeersPage() {
     const  [beers, setBeers] =useState([]);
@@ -16,6 +17,8 @@ function ListBeersPage() {
 
   return (
     <div>
+      <div className='cerveza'>
+
      {beers.map(beer=>{
         
         return (
@@ -23,6 +26,8 @@ function ListBeersPage() {
         <Card key={beer._id} element={beer}/></Link>)
      })
      } 
+     
+</div>
 
     </div>
   )

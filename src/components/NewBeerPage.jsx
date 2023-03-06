@@ -1,5 +1,9 @@
 import React from 'react'
 import axios from 'axios'
+import './NewBeerPage.css'
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Label from 'react-bootstrap/Form';
 
 function NewBeerPage() {
 
@@ -35,27 +39,28 @@ function NewBeerPage() {
 
   return (
     <div>
+<div className='formulario'>
+<Form onSubmit={submitForm}>
 
-<form onSubmit={submitForm}>
-
-    <label htmlFor="name">Name</label>
+    <Label htmlFor="name">Name</Label>
     <input type="text" id="name" name="name"/>
-    <label htmlFor="name">Tagline</label>
+    <Label htmlFor="name">Tagline</Label>
     <input type="text" id="tagline" name="tagline"/>
-    <label htmlFor="name">Description</label>
+    <Label htmlFor="name">Description</Label>
     <input type="text" id="description" name="description"/>
-    <label htmlFor="name">First_brewed</label>
+    <Label htmlFor="name">First_brewed</Label>
     <input type="text" id="first_brewed " name="first_brewed"/>
-    <label htmlFor="name">Brewers_tips</label>
+    <Label htmlFor="name">Brewers_tips</Label>
     <input type="text" id="brewers_tips" name="brewers_tips"/>
-    <label htmlFor="name">Attenuation_level</label>
+    <Label htmlFor="name">Attenuation_level</Label>
     <input type="number" id="attenuation_level" name="attenuation_level"/>
-    <label htmlFor="name">Contributed_by</label>
+    <Label htmlFor="name">Contributed_by</Label>
     <input type="text" id="contributed_by" name="contributed_by"/>
    
 
-  <button type="submit">Enviar un mensaje</button>
-</form>
+  <Button type="submit">Enviar un mensaje</Button>
+</Form>
+</div>
     </div>
   )
 }

@@ -1,0 +1,28 @@
+.single{
+    margin-left: 500px;
+    margin-right: 500px;
+    text-align: justify;
+}
+
+.single img{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.texto{
+    margin-top: 50px;
+}
+
+.numero{
+    position: absolute;
+    margin-left: 440px;
+    margin-top: -90px;
+    font-size: 30px;
+    color: gray;
+}
+
+.fecha{
+    position: absolute;
+    margin-left: 420px;
+    margin-top: -45px;
+}

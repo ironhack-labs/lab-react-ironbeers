@@ -1,0 +1,40 @@
+.botones1{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 740px;
+}
+
+.botones2{
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 740px;
+}
+
+
+.botones3{
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 740px;
+}
+
+.all{
+    margin-top: 100px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+
+.random{
+    margin-top: 150px;
+    text-decoration: none;
+    color:black;
+    text-align: center;
+}
+
+.new{
+    margin-top: 60px;
+    text-decoration: none;
+    color:black;
+    text-align: center;
+}
