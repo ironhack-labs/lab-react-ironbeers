@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.home-container {
+  max-width: 1280px;
+  padding: 0;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.homeimage {
+  object-fit: cover;
+  width: 100%;
+}
+
+p {
+  color: gray;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+h1 {
+  margin-left: 40px;
+}
