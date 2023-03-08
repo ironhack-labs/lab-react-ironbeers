@@ -58,3 +58,8 @@ p {
 h1 {
   margin-left: 40px;
 }
+
+.home-link:link, .home-link:visited, .home-link:hover, .home-link:active {
+  text-decoration: none;
+  color: black;
+}
