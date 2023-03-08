@@ -49,17 +49,52 @@
   width: 100%;
 }
 
-p {
+.paragraph-home {
   color: gray;
   font-size: 20px;
   margin-left: 40px;
 }
 
-h1 {
+.home-link:link,
+.home-link:visited,
+.home-link:hover,
+.home-link:active {
+  text-decoration: none;
+  color: black;
   margin-left: 40px;
 }
 
-.home-link:link, .home-link:visited, .home-link:hover, .home-link:active {
-  text-decoration: none;
-  color: black;
+.nav-container {
+  padding: 3%;
+  font-size: 600%;
+  background-color: #61dafb;
+}
+
+.beer-image {
+  width: 15%;
+  height: auto;
+}
+
+.all-beers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.one-beer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+
+.information-beer {
+  text-align: left;
+}
+
+.beer-icon {
 }
