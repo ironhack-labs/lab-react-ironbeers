@@ -119,3 +119,8 @@
   align-items: left;
   justify-content: left;
 }
+
+.AddBeer {
+  display: flex;
+
+}
