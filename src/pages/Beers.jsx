@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 function Beers() {
     const [beers, setBeers] = useState([]);
@@ -13,9 +14,9 @@ function Beers() {
     }, [])
     return (
         <div className="all-beers">
-            {beers.map((oneBeer, index) => {
+            {beers.map((oneBeer) => {
                 return (
-                    <div key={index} className="one-beer">
+                    <div key={oneBeer._id} className="one-beer">
                         <div className="beer-icon">
                             <img src={oneBeer.image_url} alt="" className="beer-image" />
                         </div>
@@ -23,6 +24,7 @@ function Beers() {
                             <h3>{oneBeer.name}</h3>
                             <h5><h3>{oneBeer.tagline}</h3></h5>
                             <p>Created by: {oneBeer.contributed_by}</p>
+                            <Link to={`beers/${oneBeer._id}`}>More Details</Link>
                         </div>
                     </div>
                 )
