@@ -22,19 +22,21 @@ function BeerDetails() {
     <div>
       <Header />
       {beer.name && (
-        <>
+        <div className="card">
           <img
             src={beer.image_url}
             alt={beer.name}
-            style={{ height: "200px" }}
+            className="card__img"
           />
-          <h1>{beer.name}</h1>
-          <p>{beer.tagline}</p>
-          <p>First brewed: {beer.first_brewed}</p>
-          <p>Attenuation level: {beer.attenuation_level}</p>
-          <p>{beer.description}</p>
-          <p>Contributed by: {beer.contributed_by}</p>
-        </>
+          <div className="card__details">
+            <h1>{beer.name}</h1>
+            <p>{beer.tagline}</p>
+            <p>First brewed: {beer.first_brewed}</p>
+            <p>Attenuation level: {beer.attenuation_level}</p>
+            <p>{beer.description}</p>
+            <p>Contributed by: {beer.contributed_by}</p>
+          </div>
+        </div>
       )}
     </div>
   );
