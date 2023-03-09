@@ -33,37 +33,37 @@ function NewBeer() {
     }
 
     return (
-        <div className="AddBeer">
+        <div className="form-box">
             <form action="" onSubmit={handleSubmit}>
                 <label htmlFor="">
-                    Name:
+                    Name
                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
                 </label>
                 <label htmlFor="">
-                    Tagline:
+                    Tagline
                     <input type="text" value={tagline} onChange={(e) => setTagline(e.target.value)} />
                 </label>
                 <label htmlFor="">
-                    Description:
+                    Description
                     <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
                 </label>
                 <label htmlFor="">
-                    First Brewed:
+                    First Brewed
                     <input type="date" value={first_brewed} onChange={(e) => setFirstBrewed(e.target.value)} />
                 </label>
                 <label htmlFor="">
-                    Brewers Tips:
+                    Brewers Tips
                     <input type="text" value={brewers_tips} onChange={(e) => setBrewersTips(e.target.value)} />
                 </label>
                 <label htmlFor="">
-                    Attenuation Level:
+                    Attenuation Level
                     <input type="number" value={attenuation_level} onChange={(e) => setAttenuationLevel(e.target.value)} />
                 </label>
                 <label htmlFor="">
-                    Contributed By:
+                    Contributed By
                     <input type="text" value={contributed_by} onChange={(e) => setContributedBy(e.target.value)} />
                 </label>
-                <button>ADD NEW</button>
+                <button className="addBtn">ADD NEW</button>
             </form>
         </div>
     );
