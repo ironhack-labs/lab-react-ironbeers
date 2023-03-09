@@ -3,6 +3,8 @@ import React from 'react';
 import {Routes, Route} from 'react-router-dom'
 import Home from './Components/Homepage'
 import Beers from './Components/Beers'
+import BeersDetails from './Components/BeersDetails'
+import RandomBeer from './Components/RandomBeer';
 
 
 function App() {
@@ -11,9 +13,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/beers' element={<Beers/>}/>
-      </Routes>
-      
+        <Route path="/beers/:beerId" element={<BeersDetails />} />
+        <Route path='/random-beer' element={<RandomBeer/>}/>
 
+      </Routes>
     </div>
   );
 }

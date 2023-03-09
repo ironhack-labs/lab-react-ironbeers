@@ -1,38 +1,128 @@
-.App {
+.beers-container {
+  margin: 20px;
+}
+
+.beer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.beer-item {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.beer-image {
+  height: 100px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.beer-tagline {
+  font-style: italic;
+  color: #999;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.beer-contributor {
+  margin-bottom: 10px;
+}
+
+.beer-details-link {
+  display: inline-block;
+  background-color: #f2f2f2;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.beer-details-link:hover {
+  background-color: #ddd;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b1b1b;
+  height: 80px;
+  padding: 0 20px;
+}
+
+.header__link {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.homepage__title {
+  font-size: 48px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.homepage__subtitle {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.homepage__links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.homepage__links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homepage__link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
 }
+
+.homepage__link {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.homepage__link-image {
+  margin-right: 20px;
+  width: 100px;
+}
+
+.homepage__link:hover {
+  text-decoration: underline;
+}
+
+.homepage__link-description {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
