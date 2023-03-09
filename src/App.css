@@ -66,7 +66,7 @@
 
 .nav-container {
   padding: 3%;
-  font-size: 600%;
+  font-size: 400%;
   background-color: #61dafb;
 }
 
@@ -96,5 +96,26 @@
   text-align: left;
 }
 
-.beer-icon {
+.beer-details {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 2% auto;
+  width: 70%;
+}
+
+.beer-div2,
+.beer-div3 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.beer-div4 {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: left;
+  justify-content: left;
 }
