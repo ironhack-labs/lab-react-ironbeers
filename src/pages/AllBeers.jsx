@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import Navigation from '../components/Navigation'
-import Search from '../components/Search'
+// import Search from '../components/Search'
 
 
 function AllBeers() {
@@ -31,9 +31,9 @@ function AllBeers() {
   return (
     <div className='allbeers'>
     <Navigation/>
-    <h1>AllBeers</h1>
+    <h1>Ironbeers</h1>
 
-    <input type='text' value={userInput} onChange={(e) => setUserInput(e.target.value)} placeholder='Search for a beer name'/>
+    <input className="searchall" type='text' value={userInput} onChange={(e) => setUserInput(e.target.value)} placeholder='Search for a beer name'/>
 
     {/* <Search/> */}
 

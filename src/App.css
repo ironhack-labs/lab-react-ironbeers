@@ -58,6 +58,13 @@
   text-align: center;
 }
 
+.searchall {
+  height: 30px;
+  width: 350px;
+  border: solid skyblue;
+  border-radius: 15px;
+}
+
 .allbeersImg {
   max-height: 200px;
   align-items: center;
