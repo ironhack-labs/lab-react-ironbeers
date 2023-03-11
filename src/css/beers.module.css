@@ -1,0 +1,38 @@
+.beers {
+  padding: 20px;
+}
+
+.beers h1 {
+  text-align: center;
+}
+
+.beers img {
+  height: 150px;
+}
+
+.beers__listItem {
+  display: flex;
+  gap: 20px;
+}
+
+.beers__left {
+  min-width: 200px;
+  text-align: center;
+}
+.beers__right {
+  display: flex;
+  flex-direction: column;
+  /* gap: .8rem; */
+  justify-content: space-between;
+}
+
+.beers__listTitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.beers__listTagline {
+  color: #dedede;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
