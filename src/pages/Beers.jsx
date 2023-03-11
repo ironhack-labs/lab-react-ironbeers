@@ -4,16 +4,35 @@ import { Link } from 'react-router-dom'
 
 function Beers() {
     const [beers, setBeers] = useState([]);
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
         axios.get("https://ih-beers-api2.herokuapp.com/beers")
             .then((result) => {
-                console.log(result.data)
                 setBeers(result.data)
             })
     }, [])
+
+    const handleSearch = (userInput) => {
+        setSearch(userInput.target.value);
+    }
+
+    useEffect(() => {
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${search}`)
+            .then((result) => {
+                setBeers(result.data)
+            })
+    }, [search])
+
+
     return (
+
         <div className="all-beers">
+
+            <label htmlFor="">
+                <div>Find a Beer</div>
+                <input type="text" onInput={handleSearch} value={search} placeholder="Search.." />
+            </label>
             {beers.map((oneBeer) => {
                 return (
                     <div key={oneBeer._id} className="one-beer">
