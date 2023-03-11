@@ -23,7 +23,7 @@ function RandomBeer() {
     <Navigation/>
 
     <h1>And our recommendation is: </h1>
-    <p className='detailselected'>{randomBeer.name}</p>
+   
 
     {!randomBeer && <h3>Beer is sold out!</h3>}
 
