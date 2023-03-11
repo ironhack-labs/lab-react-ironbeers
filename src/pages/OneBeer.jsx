@@ -1,17 +1,19 @@
-import { useState, useParams, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useParams } from 'react-router-dom';
 
 function SingleBeer() {
     const [beers, setBeers] = useState([])
-    let {id} = useParams();
+    let { beerId }  = useParams();
     
     useEffect(()=>{
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
         .then((result)=>{
             setBeers(result.data)
-            console.log(id)
+            console.log(beerId)
         })
-    },[])
+        .catch(err=>console.log('Something wrong in one beer'))
+    },[beerId])
 
     return(
         <div>
