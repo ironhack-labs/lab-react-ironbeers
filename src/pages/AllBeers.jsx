@@ -3,15 +3,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const AllBeers = () => {
+function AllBeers () {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers")
       .then((response) => setData(response.data))
-      .then((res) => {
-        console.log(data);
-      });
   }, [data]);
 
   return (
