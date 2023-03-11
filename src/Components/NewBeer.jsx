@@ -71,7 +71,7 @@ function NewBeer() {
         </label>
         <label>
           Attenuation Level
-          <input type="number" value={attenuationLevel} onChange={e => setAttenuationLevel(e.target.value)} required />
+          <input type="number" value={attenuationLevel} onChange={e => setAttenuationLevel(parseInt(e.target.value))} required />
         </label>
         <label>
           Contributed By
