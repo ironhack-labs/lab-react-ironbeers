@@ -9,7 +9,7 @@ import Search from '../components/Search'
 function AllBeers() {
 
     const [beers, setBeers] =useState([])
-    const [beerSearch, setBeerSearch] = useState()
+    const [userInput, setUserInput] = useState('')
 
     useEffect(() => {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
@@ -20,26 +20,44 @@ function AllBeers() {
     
     }, [])
 
+    useEffect(() => {
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${userInput}`)
+        .then((response) => {
+            console.log(response.data)
+            setBeers(response.data)
+        })
+    }, [userInput])
+
   return (
     <div className='allbeers'>
     <Navigation/>
     <h1>AllBeers</h1>
 
-    <Search/>
+    <input type='text' value={userInput} onChange={(e) => setUserInput(e.target.value)} placeholder='Search for a beer name'/>
+
+    {/* <Search/> */}
 
     {beers.map(allBeers => {
         return (
             <div key={allBeers._id} className='allbeersTeaser'>
+           
+            <div className='flexcontainer'>
+            <div className='flexleft'>
             <img src={allBeers.image_url} alt='Beer' className='allbeersImg'/>
-            <p>{allBeers.name}</p>
-            <p>{allBeers.tagline}</p>
-            <p>{allBeers.contributed_by}</p>
-            <Link to={`/beers/${allBeers._id}`}>
+            </div>
+            <div className='flexright'>
+            <p className='flexname'>{allBeers.name}</p>
+            <p className='flextag'>{allBeers.tagline}</p>
+            <p className='flexcontributed'>Created by: {allBeers.contributed_by}</p>
+            <Link to={`/beers/${allBeers._id}`} className='flexlink'>
             Beer details 
             </Link>
+            </div>
+            
+            </div>
 
 
-
+           
             </div>
         )
     })}

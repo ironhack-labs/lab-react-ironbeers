@@ -35,47 +35,76 @@ function NewBeer() {
     }
 
   return (
-    <div>
+    <div className='newbeer'>
 
     <Navigation/>
     
-    <h1>New Beer</h1>
+    <h1>Add your brand new beer</h1>
 
-    <form action="" onSubmit={handleSubmit}>
-    <label htmlFor="">
+    <form action="" onSubmit={handleSubmit} className="newform">
+    <div className='oneinput'>
+    <label htmlFor="" className='label'>
         Name
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+        <br/>
+        <input className='input' type="text" value={name} onChange={(e) => setName(e.target.value)}/>
     </label>
+    </div>
+    <br/>
 
-    <label htmlFor="">
+    <div className='oneinput'>
+    <label htmlFor="" className='label'>
         Tagline
-        <input type="text" value={tagline} onChange={(e) => setTagline(e.target.value)}/>
+        <br/>
+        <input className='input' type="text" value={tagline} onChange={(e) => setTagline(e.target.value)}/>
     </label>
+    </div>
+    <br/>
 
-    <label htmlFor="">
+    <div className='oneinput'>
+    <label htmlFor="" className='label'>
         Description
-        <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
+        <br/>
+        <input className='input' type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
     </label>
+    </div>
+    <br/>
 
-    <label htmlFor="">
+    <div className='oneinput'>
+    <label htmlFor="" className='label'>
         First brewed
-        <input type="text" value={firstBrewed} onChange={(e) => setFirstBrewed(e.target.value)}/>
+        <br/>
+        <input className='input' type="text" value={firstBrewed} onChange={(e) => setFirstBrewed(e.target.value)}/>
     </label>
+    </div>
+    <br/>
 
-    <label htmlFor="">
+    <div className='oneinput'>
+    <label htmlFor="" className='label'>
         Brewers tips
-        <input type="text" value={brewersTips} onChange={(e) => setBrewersTips(e.target.value)}/>
+        <br/>
+        <input className='input' type="text" value={brewersTips} onChange={(e) => setBrewersTips(e.target.value)}/>
     </label>
+    </div>
+    <br/>
 
-    <label htmlFor="">
+    <div className='oneinput'>
+    <label htmlFor="" className='label'>
         Attenuation level
-        <input type="number" value={attenuation} onChange={(e) => setAttenuation(e.target.value)}/>
+        <br/>
+        <input className='input' type="number" value={attenuation} onChange={(e) => setAttenuation(e.target.value)}/>
     </label>
+    </div>
+    <br/>
 
-    <label htmlFor="">
+    <div className='oneinput'>
+    <label htmlFor="" className='label'>
         Contributed by
-        <input type="text" value={contributed} onChange={(e) => setContributed(e.target.value)}/>
+        <br/>
+        <input className='input' type="text" value={contributed} onChange={(e) => setContributed(e.target.value)}/>
     </label>
+    </div>
+    <br/>
+    
     <button>Add your beer!</button>
 
 

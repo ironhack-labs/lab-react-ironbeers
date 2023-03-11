@@ -19,24 +19,42 @@ function RandomBeer() {
     }, [])
 
   return (
-    <div>
+    <div className='detailpages'>
     <Navigation/>
 
-    <h1>BeerDetails</h1>
+    <h1>And our recommendation is: </h1>
+    <p className='detailselected'>{randomBeer.name}</p>
 
     {!randomBeer && <h3>Beer is sold out!</h3>}
 
     {randomBeer && (
     <>
-    <img src={randomBeer.image_url} alt='Beer' className='allbeersImg'/>
-    <p>{randomBeer.name}</p>
-    <p>{randomBeer.tagline}</p>
-    <p>{randomBeer.first_brewed}</p>
-    <p>{randomBeer.attenuation_level}</p>
-    <p>{randomBeer.description}</p>
-    <p>{randomBeer.contributed_by}</p>
+    <div className='detailbox'>
+    <div className='detailcontainer'>
+    <div className='imgflex'>
+    <img src={randomBeer.image_url} alt='Beer' className='detailImg'/>
+    </div>
+    <div className='contentflex'>
+    <div className='detailheader'>
+    <div className='headerleft'>
+    <p className='detailname'>{randomBeer.name}</p>
+    <p className='detailtag'>{randomBeer.tagline}</p>
+    </div>
+    <div className='headerright'>
+    <p className='detailatt'>{randomBeer.attenuation_level}</p>
+    <p className='detailbrewed'>{randomBeer.first_brewed}</p>
+    </div>
+    </div>
+    <div className='detailcontent'> 
+    <p className='detaildescription'>{randomBeer.description}</p>
+    <p className='detailcontributed'>{randomBeer.contributed_by}</p>
+  
 
-    <Link to="/beers">Back</Link> 
+    <Link to="/beers" className='detailback'>Back</Link> 
+    </div>
+    </div>
+    </div>
+    </div>
     </>
     )}
     </div>
