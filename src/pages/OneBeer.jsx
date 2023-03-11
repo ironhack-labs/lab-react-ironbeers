@@ -4,16 +4,16 @@ import { useParams } from 'react-router-dom';
 
 function SingleBeer() {
     const [beers, setBeers] = useState([])
-    let { beerId }  = useParams();
+    let { id }  = useParams();
     
     useEffect(()=>{
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
         .then((result)=>{
             setBeers(result.data)
-            console.log(beerId)
+            console.log(id)
         })
         .catch(err=>console.log('Something wrong in one beer'))
-    },[beerId])
+    },[id])
 
     return(
         <div>
