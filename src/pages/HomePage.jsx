@@ -7,15 +7,16 @@ import RandomBeerImg from "../assets/random-beer.png";
 function Homepage() {
   return (
     <div>
-      <Link to="/beers">
+      <Link className="home-link" to="/beers">
         <img src={BeersImg} alt="" />
         <h3>All Beers</h3>
+      
      </Link>
-      <Link to="/new-beer">
+      <Link className="home-link" to="/new-beer">
         <img src={NewBeerImg} alt="" />
         <h3>New Beers</h3>
       </Link>
-      <Link to="/random-beer">
+      <Link className="home-link" to="/random-beer">
         <img src={RandomBeerImg} alt="" />
         <h3>Random Beers</h3>
       </Link>
