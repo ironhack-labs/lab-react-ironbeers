@@ -30,18 +30,22 @@ function AllBeers() {
         beers.map((singleBeer) => {
           return (
             <div key={singleBeer._id} className="all-beers">
-              <img
-                className="all-beers-img"
-                src={singleBeer.image_url}
-                alt={singleBeer.name}
-              />
-              <h1>{singleBeer.name}</h1>
-              <h3>{singleBeer.tagline}</h3>
-              <p>
-                <b>Created By: </b>
-                {singleBeer.contributed_by}
-              </p>
-              <Link to={`/beers/${singleBeer._id}`}>More Details</Link>
+              <div>
+                <img
+                  className="all-beers-img"
+                  src={singleBeer.image_url}
+                  alt={singleBeer.name}
+                />
+              </div>
+              <div className="beer-details">
+                <h1>{singleBeer.name}</h1>
+                <h3>{singleBeer.tagline}</h3>
+                <p>
+                  <b>Created By: </b>
+                  {singleBeer.contributed_by}
+                </p>
+                <Link to={`/beers/${singleBeer._id}`}>More Details</Link>
+              </div>
             </div>
           );
         })}

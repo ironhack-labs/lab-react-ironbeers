@@ -22,18 +22,25 @@ function MoreDetails() {
       <nav>
         <Navbar />
       </nav>
-      <div>
+      <div className="more-details">
         <img
           src={singleBeer.image_url}
           alt={singleBeer.name}
-          id="single-beer-img"
+          className="single-beer-img"
         />
-        <h1>{singleBeer.name}</h1>
-        <h2>{singleBeer.tagline}</h2>
-        <h3>{singleBeer.first_brewed}</h3>
-        <h1>{singleBeer.attenuation_level}</h1>
-        <p>{singleBeer.description}</p>
-        <p>
+        <div className="details">
+          <div className="details-header">
+            <h1>{singleBeer.name}</h1>
+            <h2>{singleBeer.tagline}</h2>
+          </div>
+
+          <div className="details-numbers">
+            <h1>{singleBeer.attenuation_level}</h1>
+            <h3>{singleBeer.first_brewed}</h3>
+          </div>
+        </div>
+        <p className="details-description">{singleBeer.description}</p>
+        <p className="contributor">
           <b>{singleBeer.contributed_by}</b>
         </p>
       </div>

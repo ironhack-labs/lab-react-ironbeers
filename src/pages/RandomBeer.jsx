@@ -22,18 +22,26 @@ function RandomBeer() {
       <nav>
         <Navbar />
       </nav>
-      <div>
+      <div className="more-details">
         <img
           src={randomBeer.image_url}
           alt={randomBeer.name}
-          id="single-beer-img"
+          className="single-beer-img"
         />
-        <h1>{randomBeer.name}</h1>
-        <h2>{randomBeer.tagline}</h2>
-        <h3>{randomBeer.first_brewed}</h3>
-        <h1>{randomBeer.attenuation_level}</h1>
-        <p>{randomBeer.description}</p>
-        <p>
+        <div className="details">
+          <div className="details-header">
+            <h1>{randomBeer.name}</h1>
+            <h2>{randomBeer.tagline}</h2>
+          </div>
+
+          <div className="details-numbers">
+            <h1>{randomBeer.attenuation_level}</h1>
+            <h3>{randomBeer.first_brewed}</h3>
+          </div>
+        </div>
+
+        <p className="details-description">{randomBeer.description}</p>
+        <p className="contributor">
           <b>{randomBeer.contributed_by}</b>
         </p>
       </div>
