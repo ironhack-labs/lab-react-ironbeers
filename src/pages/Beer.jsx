@@ -5,22 +5,22 @@ import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';  
 
 function Beer () {
-    const [foundBeer, setFoundBeer] = useState(''); 
+    const [foundBeer, setFoundBeer] = useState({}); 
     const { beerId } = useParams();
-
+console.log(beerId)
   
     useEffect(()=>{
         axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
         .then(response=>{
-            console.logo(response.data)
+            console.log(response.data)
              setFoundBeer(response.data)
             })
             .catch(error => {
-                console.log(error);
+                console.log("Error getting beer details", error);
               });
     
-          }, []);
-    
+          }, [beerId]);
+      
     return (
                    <div>
             <img alt="beerDetails" src={foundBeer.image_url}></img>
