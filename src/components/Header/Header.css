@@ -1,0 +1,10 @@
+.home-div.home-div img {
+  width: 50px;
+}
+
+.home-div {
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(165, 213, 255);
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+.BeerForList {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 30px;
+  border-bottom: 2px solid gray;
+}
+
+.image-div {
+  width: 75px;
+  display: flex;
+  justify-content: center;
+}
+
+.BeerForList div img {
+  height: 100px;
+}
+
+.BeerForList div {
+  text-align: start;
+}
