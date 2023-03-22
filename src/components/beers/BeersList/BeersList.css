@@ -1,0 +1,16 @@
+.loader{
+    transform: perspective(140px) rotateX(-45deg);
+    width: 32px;
+    height: 72px;
+    position: relative;
+    border: 2px solid rgb(1, 1, 1);
+    animation: load 1.5s infinite alternate;
+    margin-left: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%
+}
+
+@keyframes load {
+    0% {box-shadow: 0 0 #fff310 inset;}
+    100% {box-shadow: 0 -70px #e8d73c inset}
+}

@@ -1,0 +1,9 @@
+.navbar-container {
+    width: 100vw;
+    height: 20vh;
+    color: white;
+    background-color: rgb(11, 11, 11);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
