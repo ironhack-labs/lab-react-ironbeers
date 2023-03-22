@@ -21,10 +21,12 @@ function HomePage() {
                 />
             </Link>
             
-            <HomeCards
-                image = { newBeer }
-                title = 'New Beer'
-            />
+            <Link to='/beers/new'>
+                <HomeCards
+                    image = { newBeer }
+                    title = 'New Beer'
+                />
+            </Link>
         </div>
      );
 }
