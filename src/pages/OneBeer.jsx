@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 function SingleBeer() {
     const [beers, setBeers] = useState([])
@@ -17,6 +18,7 @@ function SingleBeer() {
 
     return(
         <div>
+            <Navbar></Navbar>
             <div key={beers._id}>
                 <img src={beers.image_url} alt="one beer" />
                 <h3>{beers.name}</h3>

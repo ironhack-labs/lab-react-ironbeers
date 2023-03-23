@@ -3,7 +3,6 @@ import Homepage from './pages/Homepage'
 import Beer from './pages/Beers'
 import RandomBeer from './pages/RandomBeer'
 import NewBeer from './pages/NewBeer'
-import Navbar from './components/Navbar'
 import OneBeer from './pages/OneBeer'
 import React from "react";
 
@@ -14,7 +13,6 @@ function App() {
   
   return (
     <div className="App">
-       <Navbar />
       <Routes>
         <Route path='/' element={ <Homepage />} />
         <Route path='/beers' element={<Beer />} />

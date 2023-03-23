@@ -1,6 +1,8 @@
+import Navbar from '../components/Navbar';
 import { useEffect, useState } from "react";
-import axios from 'axios'
+import axios from 'axios';
 import { NavLink } from 'react-router-dom'
+
 
 function Beer() {
     const [beer, setBeer] = useState([])
@@ -8,19 +10,17 @@ function Beer() {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
         .then((beerData) =>{
             setBeer(beerData.data)
-            console.log(beerData.data)
         })
     },[])
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //   };
+    
     return(
         <div>
+           <Navbar></Navbar>
             {beer.map((beers) => {
                 
                 return(
-                    
-                  
+                 
+                 
                 <div key={beers._id}>
                    
                    <NavLink
