@@ -4,6 +4,7 @@ import NavBar from './components/misc/NavBar/NavBar';
 import Home from './views/Home/Home';
 import ListBeers from './views/ListBeers/ListBeers';
 import SingleBeer from './views/SingleBeer/SingleBeer';
+import RandomBeer from './views/RandomBeer/RandomBeer';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="beers" element={<ListBeers />} />
       <Route path="/beers/:id" element={<SingleBeer />} />
+      <Route path="beers/random" element={<RandomBeer />} />
       </Routes>
 
       </div>
