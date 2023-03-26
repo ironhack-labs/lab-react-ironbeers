@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import NavBar from './components/misc/NavBar/NavBar';
 import Home from './views/Home/Home';
 import ListBeers from './views/ListBeers/ListBeers';
+import SingleBeer from './views/SingleBeer/SingleBeer';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="beers" element={<ListBeers />} />
+      <Route path="/beers/:id" element={<SingleBeer />} />
       </Routes>
 
       </div>
