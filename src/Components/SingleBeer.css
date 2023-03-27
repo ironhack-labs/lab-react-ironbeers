@@ -1,0 +1,52 @@
+.single-beer-img{
+    width: 15vw;
+    margin-left: 42vw;
+    margin-top: 10vh;
+}
+
+h1{
+    font-weight: 400;
+    margin-left: 5vw;
+    margin-bottom: 0;
+}
+
+.main-info{
+    display: flex;
+}
+
+.main-info p{
+margin-left: 5vw;
+
+}
+.date {
+    width:15vw;
+}
+.date h4{
+margin-left: 28vw;
+color: gray;
+font-size: 1.2em;
+}
+
+.date p{
+    margin-left: 20vw;
+    color: black;
+}
+
+.featured p{
+    font-size: 1.2em;
+    margin-top: 1vh;
+}
+
+.beer-description{
+    width: 90%;
+}
+.beer-description p{
+color: black;
+font-weight: 600;
+font-size: 17px;
+margin-left: 5vw;
+}
+
+.beer-description p:nth-of-type(2) {
+    color: gray;
+}
