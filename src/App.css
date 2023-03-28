@@ -36,3 +36,31 @@
   padding-top: 5px;
   padding-bottom: 10px;
 }
+
+.beer-container {
+  display: flex;
+  background-color: blue;
+  align-items: center;
+  justify-content: space-around;
+  height: 150px;
+}
+
+.beer-img {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.beer-description {
+  margin-right: 100px;
+}
+
+.beer-description h2, p {
+  margin: 0px
+}
+
+.beer-creator{
+  margin-top: 15px;
+  font-size: 10px;
+  font-weight: bold;
+}
