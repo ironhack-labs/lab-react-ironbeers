@@ -1,6 +1,7 @@
 import { getEachBeer, getRandomBeer } from "../../services/beerService";
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './BeerDetail.css'
 
 export default function BeerDetail() {
     const [loading, setLoading] = useState(true);
@@ -41,15 +42,17 @@ export default function BeerDetail() {
         {
             beer &&
             <>
-                <img src={ beer.image_url } alt={ beer.name }/>
-                <div className="beer-detail-content">
-                    <h3>{ beer.name }</h3>
-                    <h6>{ beer.tagline}</h6>
-                    <p>{ beer.first_brewed }</p>
-                    <p>{ beer.atenuation_level }</p>
-                    <p>{ beer.description }</p>
-                    <p>{ beer.contributed_by }</p>
-                </div> 
+                <div className="beer-container">
+                    <img className='beer-img' width='100px' src={ beer.image_url } alt={ beer.name }/>
+                    <div className="beer-detail-content">
+                        <h3>{ beer.name }</h3>
+                        <h6>{ beer.tagline}</h6>
+                        <p>{ beer.first_brewed }</p>
+                        <p>{ beer.atenuation_level }</p>
+                        <p>{ beer.description }</p>
+                        <p>{ beer.contributed_by }</p>
+                    </div> 
+                </div>
             </>
         }
         {

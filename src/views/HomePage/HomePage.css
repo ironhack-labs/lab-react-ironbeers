@@ -1,0 +1,13 @@
+.HomePage {
+    padding-top: 120px;
+}
+
+
+.links-content {
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+}
+
+.links-content:hover{
+    color: rgb(235, 235, 227);
+}

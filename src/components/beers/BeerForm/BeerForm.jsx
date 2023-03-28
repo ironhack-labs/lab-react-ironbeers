@@ -1,6 +1,7 @@
 import React, {  useState } from 'react';
 import { postNewBeer } from '../../../services/beerService';
 import { useNavigate } from 'react-router-dom';
+import './BeerForm.css'
 
 export default function BeerForm () {
     const navigate = useNavigate();
@@ -39,7 +40,7 @@ export default function BeerForm () {
                 error && 
                 <div>{ error }</div>
             }
-            <form>
+            <form className='form-container'>
                 <div className='input-group mb-3'>
                     <input type='text' className='form-control' name='name' placeholder='name' value={beer.name} onChange={handleOnChange} />
                 </div>

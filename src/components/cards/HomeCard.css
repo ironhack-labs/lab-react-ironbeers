@@ -1,0 +1,16 @@
+.home-card {
+    padding-bottom: 30px;
+}
+
+.home-card h3 {
+    font-size: 22px;
+    margin-left: 16px;
+  }
+
+.home-card img {
+    width: 100vw;
+}
+
+.home-card:hover {
+    background-color: rgb(32, 32, 32);
+}

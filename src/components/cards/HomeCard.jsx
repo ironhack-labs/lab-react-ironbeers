@@ -1,3 +1,5 @@
+import './HomeCard.css'
+
 const HomeCards = ({image, title}) => {
     return (
         <div className="home-card">

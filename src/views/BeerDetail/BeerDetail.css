@@ -1,0 +1,14 @@
+.BeerDetail {
+    padding-top: 10%;
+}
+
+.beer-img {
+    display: flex;
+}
+
+.beer-container {
+display: flex;
+gap: 150px;
+padding: 30px;
+margin: 30px;
+}

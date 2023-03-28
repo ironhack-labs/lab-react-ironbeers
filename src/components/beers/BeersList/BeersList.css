@@ -6,11 +6,44 @@
     border: 2px solid rgb(1, 1, 1);
     animation: load 1.5s infinite alternate;
     margin-left: 50%;
-    margin-top: 10%;
-    margin-bottom: 10%
+    margin-top: 20%;
+    margin-bottom: 40%
 }
 
 @keyframes load {
     0% {box-shadow: 0 0 #fff310 inset;}
     100% {box-shadow: 0 -70px #e8d73c inset}
+}
+
+.BeersList {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.link-each-beer {
+    text-decoration: none;
+    color: white;
+}
+
+.each-list-beer-container {
+    background-color: rgb(61, 61, 61);
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    align-items: center;
+    margin-top: 50%;
+    margin-bottom: 20%;
+}
+
+.each-list-beer-container:hover{
+    background-color: #b7b072;
+}
+
+.link-each-beer:hover {
+    color: black;
+}
+
+.each-list-beer-container img {
+    width: 70px;
 }

@@ -19,10 +19,10 @@ const BeersList = () => {
         <div className='BeersList'>
             { listBeer.length > 0 ?
               listBeer.map(listBeer => (
-                <Link to={`/beers/${listBeer._id}`} key={ listBeer._id }>
-                    <div className='each-listBeer-container'>
+                <Link className='link-each-beer' to={`/beers/${listBeer._id}`} key={ listBeer._id }>
+                    <div className='each-list-beer-container'>
                         <img src={ listBeer.image_url } alt={ listBeer.name } width='100px'/>
-                        <div className='each-listBeer-content'>
+                        <div className='each-lis-beer-content'>
                             <h1>{ listBeer.name }</h1>
                         </div>
                     </div>
