@@ -36,7 +36,7 @@ const HomePage = () => {
       </div>
 
       <div className="home-page-all">
-        <img className="all-beers-img" src={createBeerImg} alt="create-beer" />
+       <Link className="all-beers-img"  to = "/new-beer" > <img className="all-beers-img" src={createBeerImg} alt="create-beer" /> </Link> 
         <h2> New Beer </h2>
         <p>
           Are you a beer enthusiast with a creative streak? Click here to create

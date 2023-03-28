@@ -7,14 +7,14 @@ const BeersList = ({ beers }) => {
       {!beers ? (
         <p>Loading...</p>
       ) : (
-        <div className="beers-list">
+        <div>
           {beers.map((beer) => {
             return (
-              <Link to={`/beers/${beer._id}`} key={beer._id}>
-                <div>
-                  <div className="beer-image">
-                    <img src={beer.image_url} alt="beer" />
-                  </div>
+              <Link className="link" to={`/beers/${beer._id}`} key={beer._id}>
+                <div className="beers-list">
+                  
+                    <img className = "img-beers-all" src={beer.image_url} alt="beer" />
+                 
 
                   <div className="beer-information">
                     <h3>{beer.name}</h3>

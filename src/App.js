@@ -6,6 +6,7 @@ import SingleBeer from './Components/SingleBeer';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 import RandomBeer from './Components/RandomBeer';
+import NewBeer from './Components/NewBeer';
 
       
 
@@ -35,12 +36,15 @@ function App() {
       <Header/>
       <SingleBeer beers = {beers}/>
       </div>}/>
-      <Route path = "/random-beer" element = {
-        <div>
+      
+      <Route path = "/random-beer" element = {<div><Header/> <RandomBeer/> </div>}/>
+       
+          <Route path = "/new-beer" element = {<div>
           <Header/>
-          <RandomBeer beers = {beers}/>
-        </div>
-      } />
+          <NewBeer/>
+           </div>}/>
+          
+      
      </Routes>
      
      
