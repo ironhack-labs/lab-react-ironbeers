@@ -39,24 +39,28 @@
 
 .beer-container {
   display: flex;
-  background-color: blue;
   align-items: center;
   justify-content: space-around;
   height: 150px;
 }
 
-.beer-img {
+.beer-img img {
   width: 100px;
   height: 100px;
-  background-color: red;
+  object-fit: contain;
 }
 
 .beer-description {
-  margin-right: 100px;
+  margin-right: none;
 }
 
 .beer-description h2, p {
   margin: 0px
+}
+
+.beer-description p {
+  font-size: 10px;
+  width: 200px
 }
 
 .beer-creator{

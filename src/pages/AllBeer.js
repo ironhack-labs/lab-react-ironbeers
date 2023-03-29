@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import Beer from './Beer'
-import beersAPI from '../api_controler/api-controler';
+import axios from 'axios';
 
 function AllBeer () {
     
     const [beers, setBeers] = useState([]);
 
     useEffect(() => {
-        beersAPI.getAllBeers()
+        axios.get("https://ih-beers-api2.herokuapp.com/beers")
         .then((response) => {
-            setBeers(response);
-            console.log(response)
+            setBeers(response.data);
         })
     }, [])
 
