@@ -6,7 +6,7 @@ import { getBeerDetail } from "../services/BeersService";
 
 export const BeerDetail = () => {
   const { beerId } = useParams();
-  const [beer, setBeer] = useState([]);
+  const [beer, setBeer] = useState(null);
 
   useEffect(() => {
     getBeerDetail(beerId)
