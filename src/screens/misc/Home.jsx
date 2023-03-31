@@ -1,9 +1,9 @@
 import React from "react";
-import beers from "../assets/beers.png";
-import randomBeer from "../assets/random-beer.png";
-import newBeer from "../assets/new-beer.png";
+import beers from "../../assets/beers.png";
+import randomBeer from "../../assets/random-beer.png";
+import newBeer from "../../assets/new-beer.png";
 
-import { HomePageLink } from "../components/misc/HomePageLink/HomePageLink";
+import { HomePageLink } from "../../components/misc/HomePageLink/HomePageLink";
 
 export const Home = () => {
   return (

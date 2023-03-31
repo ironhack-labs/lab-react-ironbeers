@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { BeerItem } from "../components/Beers/BeerItem";
-import { Navbar } from "../components/misc/Navbar/Navbar";
-import { listBeers } from "../services/BeersService";
+import { BeerItem } from "../../components/Beers/BeerItem";
+import { Navbar } from "../../components/misc/Navbar/Navbar";
+import { listBeers } from "../../services/BeersService";
 
 export const List = () => {
   const [beers, setBeers] = useState([]);
