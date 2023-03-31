@@ -1,3 +1,3 @@
 import http from "./BaseService";
 
-export const listBeers = () => http.get("/");
+export const listBeers = () => http.get("/beers");
