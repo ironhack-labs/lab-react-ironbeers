@@ -9,7 +9,6 @@ export const List = () => {
   useEffect(() => {
     listBeers()
       .then((allBeers) => {
-        console.log(beers);
         setBeers(allBeers);
       })
       .catch((err) => console.error(err));
