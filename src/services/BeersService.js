@@ -24,3 +24,5 @@ export const newBeer = ({
     attenuation_level,
     contributed_by,
   });
+
+export const searchBeer = (query) => http.get(`/beers/search?q=${query}`);

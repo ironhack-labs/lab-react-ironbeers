@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <nav className="mb-3">
-      <div>
+      <div style={{ textAlign: "center" }}>
         <Link className="navbar-brand" to="/">
           <img
             src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png"

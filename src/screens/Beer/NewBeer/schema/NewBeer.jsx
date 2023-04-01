@@ -1,11 +1,11 @@
 import { useFormik } from "formik";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import FormControl from "../../../components/misc/FormControl/FormControl";
-import Input from "../../../components/misc/Input/Input";
-import { Navbar } from "../../../components/misc/Navbar/Navbar";
-import { newBeer } from "../../../services/BeersService";
-import { newBeerSchema } from "./schema/newBeer.schema";
+import FormControl from "../../../../components/misc/FormControl/FormControl";
+import Input from "../../../../components/misc/Input/Input";
+import { Navbar } from "../../../../components/misc/Navbar/Navbar";
+import { newBeer } from "../../../../services/BeersService";
+import { newBeerSchema } from "./newBeer.schema";
 
 const initialValues = {
   name: "",
