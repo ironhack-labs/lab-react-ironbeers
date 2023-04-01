@@ -1,12 +1,13 @@
 
 import React from "react";
 import { Navbar } from "../components/misc/NavBar";
+import BeerForm from "../components/Beers/BeerForm";
 
 export const NewBeer = () => {
     return (
         <div>
             <Navbar />
-            <h1>New Beer</h1>
+            <BeerForm />
         </div>
     );
 };
