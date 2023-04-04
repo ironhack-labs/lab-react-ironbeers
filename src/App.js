@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import BeerList from './components/BeersList/BeerList';
+import { getBeers } from './services/BeersService';
 
 function App() {
+
+  const [beersData, setBeersData] = useState([])
+
+  useEffect(() => {
+    getBeers()
+      .then(beers => {
+        console.log(beers)
+        setBeersData(beers)})
+  }, [])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BeerList  beersData={beersData} />
     </div>
   );
 }
