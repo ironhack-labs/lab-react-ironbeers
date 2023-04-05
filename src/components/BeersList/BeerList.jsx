@@ -3,8 +3,11 @@ import Beer from '../Beer/Beer'
 
 function BeerList({ beersData }) {
   return (
-    <div>
-      <Beer beersData={beersData} />
+    <div className=''>
+      {beersData
+        .map(beer => (
+          <Beer beer={beer} />
+        ))}
     </div>
   )
 }

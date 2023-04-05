@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+.card {
+  max-width: 700px
+}

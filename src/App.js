@@ -10,14 +10,14 @@ function App() {
   useEffect(() => {
     getBeers()
       .then(beers => {
-        console.log(beers)
-        setBeersData(beers)})
+        setBeersData(beers)
+      })
   }, [])
 
 
   return (
-    <div className="App">
-    <BeerList  beersData={beersData} />
+    <div className="App d-flex justify-content-center">
+      <BeerList beersData={beersData} />
     </div>
   );
 }
