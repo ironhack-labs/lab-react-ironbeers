@@ -4,7 +4,11 @@ function Navbar(){
 
     return(
         <>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">
+            <div className="navBar">
+                ⌂
+            </div>
+            </NavLink>
         </>
     )
 }

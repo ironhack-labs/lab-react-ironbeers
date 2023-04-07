@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 
-function RandomBeer() {
+function BeerDetails() {
   const { id } = useParams();
   const [details, setDetails] = useState(null);
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API}/random`)
+      .get(`${process.env.REACT_APP_API}/${id}`)
       .then((response) => {
         setDetails(response.data);
       })
@@ -19,8 +19,8 @@ function RandomBeer() {
   function renderDetails() {
     return (
       <div className="beersDiv">
-        <Navbar />
-        <br />
+      <Navbar />
+        <br/>
         <img src={details.image_url} alt="beerImg" />
         <h1>{details.name}</h1>
         <p>{details.tagline}</p>
@@ -31,6 +31,10 @@ function RandomBeer() {
       </div>
     );
   }
-  return <>{details ? renderDetails() : "loading..."}</>;
+  return(
+    <>
+    { details  ? renderDetails() : "loading..."}
+    </>
+    )
 }
-export default RandomBeer;
+export default BeerDetails;

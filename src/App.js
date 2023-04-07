@@ -1,11 +1,11 @@
 
 import './App.css';
-import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Beers from './components/Beers';
 import NewBeer from './components/NewBeer';
 import HomePage from './components/HomePage';
 import RandomBeer from './components/RandomBeer';
+import BeerDetails from './components/BeerDetails';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="/beers" element={<Beers />} />
         <Route path="/new-beer" element={<NewBeer />} />
         <Route path="/random-beer" element={<RandomBeer />} />
+        <Route path="/beers/:id" element={<BeerDetails />} />
       </Routes>
     </div>
   );
