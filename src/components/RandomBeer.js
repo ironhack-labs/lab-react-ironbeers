@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
-const SingleBeer = () => {
+const RandomBeer = () => {
 	const { id } = useParams()
 	const [beer, setBeer] = useState(null)
 
 	useEffect(() => {
 		const fetchBeer = async () => {
-			const response = await fetch(`https://ih-beers-api2.herokuapp.com/beers/${id}`)
+			const response = await fetch(`https://ih-beers-api2.herokuapp.com/beers/random`)
 			const data = await response.json()
 			setBeer(data)
 		}
 		fetchBeer()
-	}, [id])
+	}, [])
 
 	if (!beer) {
 		return <div>Loading...</div>
@@ -48,4 +48,4 @@ const SingleBeer = () => {
 	)
 }
 
-export default SingleBeer
+export default RandomBeer
