@@ -8,4 +8,7 @@ const getOneBeer = (id) => axios.get(`${html}/${id}`).then((res) => res.data);
 
 const getRandomBeer = () => axios.get(`${html}/random`).then((res) => res.data);
 
-export { getAllBeers, getOneBeer, getRandomBeer };
+const postNewBeer = (newBeer) =>
+  axios.post(`${html}/new`, newBeer).then((res) => res.data);
+
+export { getAllBeers, getOneBeer, getRandomBeer, postNewBeer };

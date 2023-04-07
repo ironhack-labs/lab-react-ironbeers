@@ -131,3 +131,40 @@
   font-weight: 600;
   margin-top: 2rem;
 }
+
+/* Form */
+
+.form {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.form input,
+.form textarea {
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+  border: 1px solid #272727;
+}
+
+.form button {
+  border-radius: 20px;
+  background-color: #3dc4fc;
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-block: 0.3rem;
+  margin-top: 2rem;
+}
