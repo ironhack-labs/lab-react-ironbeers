@@ -4,6 +4,7 @@ import Header from "./components/layout/Header";
 import Beers from "./components/beers/Beers";
 import NewBeer from "./components/beers/NewBeer";
 import RandomBeer from "./components/beers/RandomBeer";
+import SingleBeer from "./components/beers/SingleBeer";
 import "./App.css";
 
 const App = () => {
@@ -16,9 +17,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/beers" element={<Beers />} />
-        <Route path="/random-beer" element={<NewBeer />} />
-        <Route path="/new-beer" element={<RandomBeer />} />
-        <Route path="/beers/:beerId" element={<></>} />
+        <Route path="/beers/:beerId" element={<SingleBeer />} />
+        <Route path="/random-beer" element={<RandomBeer />} />
+        <Route path="/new-beer" element={<NewBeer />} />
       </Routes>
     </div>
   );

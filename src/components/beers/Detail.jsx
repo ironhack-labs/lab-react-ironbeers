@@ -1,26 +1,34 @@
-import { Link } from "react-router-dom";
-
-const Detail = ({ image_url, name, tagline, contributed_by, _id }) => {
-  const shortContributor = contributed_by.split(" ").splice(0, 2).join(" ");
-
+const Detail = ({
+  image_url,
+  name,
+  tagline,
+  attenuation_level,
+  first_brewed,
+  description,
+  contributed_by,
+}) => {
   return (
-    <Link to={`/beers/${_id}`} className="link">
-      <div className="detail-container">
-        <div className="img">
-          <img src={image_url} alt={name} />
-        </div>
-        <div className="text">
-          <h1>{name}</h1>
+    <div className="detail-container">
+      <div className="img">
+        <img src={image_url} alt={name} />
+      </div>
+      <div className="text">
+        <div className="title">
           <div>
+            <h1>{name}</h1>
             <h3>{tagline}</h3>
-            <p>
-              <span>Created by:</span> {shortContributor}
-            </p>
+          </div>
+          <div>
+            <h3>{attenuation_level}</h3>
+            <p>{first_brewed}</p>
           </div>
         </div>
+        <div className="description">
+          <p>{description}</p>
+          <p>{contributed_by?.split(" ").splice(0, 2).join(" ")}</p>
+        </div>
       </div>
-    </Link>
+    </div>
   );
 };
-
 export default Detail;

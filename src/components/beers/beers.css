@@ -43,8 +43,8 @@
   }
 }
 
-/* Detail */
-.detail-container {
+/* Beer Template */
+.beertemplate-container {
   display: grid;
   grid-template-columns: 30% 70%;
   border-bottom: 1px solid #000;
@@ -52,32 +52,82 @@
   color: #292929;
 }
 
-.detail-container .img {
+.beertemplate-container .img {
   height: 150px;
   margin: 0 auto;
 }
 
-.detail-container img {
+.beertemplate-container img {
   height: 150px;
 }
 
-.detail-container .text {
+.beertemplate-container .text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.detail-container h1 {
+.beertemplate-container h1 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 
-.detail-container h3 {
+.beertemplate-container h3 {
   color: #6f6f6f;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.detail-container span {
+.beertemplate-container span {
   font-weight: bold;
+}
+
+/* Detail */
+.detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-container .img {
+  margin: 3rem auto;
+}
+
+.detail-container img {
+  height: 350px;
+}
+
+.detail-container .text {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-container .text .title {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: baseline;
+}
+
+.detail-container .text .title div:last-child {
+  text-align: right;
+}
+
+.detail-container .title h1,
+.detail-container .title div:last-child h3 {
+  margin-bottom: 0.5rem;
+}
+
+.detail-container .title h3 {
+  color: #6f6f6f;
+}
+
+.detail-container .title p {
+  font-weight: 600;
+}
+
+.detail-container .description p:last-child {
+  color: #6f6f6f;
+  font-weight: 600;
+  margin-top: 2rem;
 }
