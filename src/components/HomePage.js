@@ -13,7 +13,7 @@ function HomePage() {
             </div>
             <div>
                 <img src={randomBeerImg} alt="random beer" />
-                <Link to={"/"}><h1>Random Beer</h1></Link>
+                <Link to={"/random-beer"}><h1>Random Beer</h1></Link>
                 <p>Some Text for random</p>
             </div>
             <div>

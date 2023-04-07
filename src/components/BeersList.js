@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function BeersList() {
 
@@ -23,7 +24,7 @@ function BeersList() {
                     return (
                         <>
                             <img src={beer.image_url} alt={beer.name} />
-                            <h3>{beer.name}</h3>
+                            <Link to={`/beers/${beer._id}`}><h3>{beer.name}</h3></Link>
                             <h4>{beer.tagline}</h4>
                             <p>Created by: {beer.contributed_by}</p>
                         </>
@@ -35,6 +36,8 @@ function BeersList() {
 
     return (
         <>
+            <NavBar />
+
             {beersArr ? renderBeers() : <h1>Loading...</h1>}
         </>
     );
