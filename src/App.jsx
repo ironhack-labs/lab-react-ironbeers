@@ -8,7 +8,7 @@ import "./App.css";
 
 const App = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
+
   return (
     <div className="App">
       {pathname !== "/" && <Header />}
@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/beers" element={<Beers />} />
         <Route path="/random-beer" element={<NewBeer />} />
         <Route path="/new-beer" element={<RandomBeer />} />
+        <Route path="/beers/:beerId" element={<></>} />
       </Routes>
     </div>
   );
