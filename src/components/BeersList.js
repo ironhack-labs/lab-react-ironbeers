@@ -10,7 +10,7 @@ function Beer() {
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers")
       .then((response) => {
-        console.log(response.data[0][0]);
+        console.log(response.data);
         setBeers(response.data);
       })
       .catch((err) => {
@@ -23,7 +23,7 @@ const renderBeers = ()=>{
         <>
     {beers.map((beer) => {
         return (
-          <section>
+          <section key={beer._id}>
             <img src={beer.image_url} alt={beer.name} />
             <h2>{beer.name}</h2>
             <h3>{beer.tagline}</h3>
@@ -40,6 +40,9 @@ const renderBeers = ()=>{
 
   return (
     <>
+    <header>
+        <Link to={"/"}> Home</Link>
+    </header>
       {beers ? renderBeers()
       : <h1> Loading .....</h1>}
       
