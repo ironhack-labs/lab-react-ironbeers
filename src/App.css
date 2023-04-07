@@ -1,38 +1,91 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  text-decoration: none;
+}
+nav{
+  background-color: aqua;
+  padding: 20px;
+}
+section p{
+  margin: 20px 10%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section img{
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section *{
+  text-decoration: none;
+  color: black;
+}
+
+article{
+  margin: 0 20%;
+}
+
+i{
+  color: rgb(199, 0, 0);
+}
+
+.nav-bar{
+  font-size: 3rem;
+}
+
+.card{
+  border: 1px solid grey;
+  border-radius: 20px;
+  margin: 30px;
+  color: black;
+}
+
+.card-details{
+  margin-top: 50px;
+}
+.card-details img, .card img{
+  margin: 20px;
+  width: 20%;
+  max-width: 100px;
+}
+
+.beer-details-h1{
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.light-grey{
+  color: grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input, textarea{
+  max-width: 700px;
+  width: 80%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+}
+input{
+  text-align: center;
+}
+textarea{
+  height: 100px;
+}
+
+form > *{
+  margin: 10px;
+  font-weight: bold;
+}
+
+form button{
+  margin-top: 40px;
+  max-width: 700px;
+  width: 80%;
+  border: none;
+  background-color: aqua;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
 }
