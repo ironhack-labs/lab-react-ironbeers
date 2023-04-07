@@ -1,0 +1,11 @@
+.nav-container {
+  background-color: #3dc4fc;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container img {
+  width: 40px;
+  padding: 0.3rem 0;
+  cursor: pointer;
+}
