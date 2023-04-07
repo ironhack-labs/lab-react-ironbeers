@@ -1,0 +1,27 @@
+.beer-element {
+    border: 2px solid white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(97, 218, 251, 0.5);
+    transition: 0.3s;
+    background-color: #444444;
+    width: 99%;
+}
+
+.beer-element:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(97, 218, 251, 0.5);
+}
+
+.link-router {
+    text-decoration: none;
+    color: #fff;
+}
+
+.link-router:hover {
+    color: #0487ab;
+}
+
+h5 {
+    color: #61dafb;
+}
