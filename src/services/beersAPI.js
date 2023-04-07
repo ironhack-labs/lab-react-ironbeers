@@ -2,7 +2,8 @@ import axios from "axios";
 
 const html = "https://ih-beers-api2.herokuapp.com/beers";
 
-const getAllBeers = () => axios.get(html).then((res) => res.data);
+const getAllBeers = (search) =>
+  axios.get(html + "/search?q=" + search).then((res) => res.data);
 
 const getOneBeer = (id) => axios.get(`${html}/${id}`).then((res) => res.data);
 

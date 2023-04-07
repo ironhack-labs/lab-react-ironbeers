@@ -1,4 +1,20 @@
 /* Beers */
+.search label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: bold;
+  padding: 2rem 2rem 4rem;
+  text-align: center;
+}
+
+.search input {
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+  border: 1px solid #272727;
+}
+
 .beers-container {
   display: flex;
   justify-content: center;

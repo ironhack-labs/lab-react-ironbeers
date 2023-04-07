@@ -1,17 +1,31 @@
 import { useEffect, useState } from "react";
 import { getAllBeers } from "../../services/beersAPI";
-import "./beers.css";
 import { Link } from "react-router-dom";
+import "./beers.css";
 
 const Beers = () => {
   const [beers, setBeers] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-    getAllBeers().then((beers) => setBeers(beers));
-  }, []);
+    getAllBeers(search).then((beers) => {
+      setBeers(beers);
+    });
+  }, [search]);
+
+  const handleSeach = (e) => {
+    setSearch(e.target.value);
+  };
 
   return (
     <div>
+      <form className="search">
+        <label htmlFor="title">
+          Search by title
+          <input type="text" id="title" value={search} onChange={handleSeach} />
+        </label>
+      </form>
+
       {beers.length ? (
         beers.map((beer) => (
           <Link to={`/beers/${beer._id}`} className="link" key={beer._id}>
