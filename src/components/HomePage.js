@@ -6,7 +6,7 @@ const HomePage = () => {
 		<div className='flex flex-col items-center justify-center h-fit'>
 			<div
 				onClick={() => (window.location.href = '/beers')}
-				className='mb-10 cursor-pointer'>
+				className='mb-2 cursor-pointer'>
 				<h1 className='text-4xl font-bold mb-2'>Beers</h1>
 				<p className='text-lg mb-4'>Discover our collection of unique and flavorful beers.</p>
 				<img
@@ -16,7 +16,7 @@ const HomePage = () => {
 			</div>
 			<div
 				onClick={() => (window.location.href = '/random-beer')}
-				className='mb-10 cursor-pointer'>
+				className='mb-2 cursor-pointer'>
 				<h1 className='text-4xl font-bold mb-2'>Random Beer</h1>
 				<p className='text-lg mb-4'>Get surprised by our selection of random beers.</p>
 				<img
