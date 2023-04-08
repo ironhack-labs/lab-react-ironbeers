@@ -11,7 +11,7 @@ function Home() {
     <NavLink to="/">HOME</NavLink> |{" "}
     <NavLink to="/beers">BEERS</NavLink> |{" "}
     <NavLink to="/random-beer">RANDOM BEER</NavLink> |{" "}
-    <NavLink to="/">CREATE A BEER</NavLink>
+    <NavLink to="/new-beer">CREATE A BEER</NavLink>
   </nav>
     <div className="home col-12">
       <div className="card-home">
