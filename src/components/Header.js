@@ -5,7 +5,7 @@ function Header(){
     const navigate = useNavigate();
     return (
         <div className="container" onClick={()=>{navigate("/");}}>
-      <nav class="navbar navbar-light bg-light">
+      <nav className="navbar navbar-light bg-light">
         {/* <img src={header} alt="header" /> */}
       </nav>
     </div>
