@@ -26,11 +26,15 @@ function NewBeer(){
             contributed_by
           };
 
-console.log("createdBeer......",createdBeer)
-axios.post(process.env.REACT_APP_APIURL + "/new", createdBeer)
-.then(response =>{
+console.log("createdBeer......", createdBeer);
+axios
+  .post(process.env.REACT_APP_APIURL + "/new", createdBeer)
+  .then((response) => {
     console.log("after creating", response)
-})
+  })
+  .catch((e) => {
+    console.log("error creating a new beer...", e);
+  });
 
 
         }
