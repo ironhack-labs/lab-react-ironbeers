@@ -7,7 +7,7 @@ import newBeerImage from "../assets/new-beer.png";
 function Home() {
   return (
     <div className="home col-12">
-      <div className="card">
+      <div className="card-home">
         <img src={beersImage} alt="beer image" className="beer-image" />
         <Link className="link-offset-2 link-underline link-underline-opacity-0" to="/beers">
           <h2>All Beers</h2>
@@ -22,7 +22,7 @@ function Home() {
           neque blandit, molestie mauris non, commodo nibh.
         </p>
       </div>
-      <div className="card">
+      <div className="card-home">
         <img src={randomBeerImage} alt="beer image" className="beer-image" />
         <Link className="link-offset-2 link-underline link-underline-opacity-0" to="/random-beer">
           <h2>Random Beer</h2>
@@ -37,7 +37,7 @@ function Home() {
           neque blandit, molestie mauris non, commodo nibh.
         </p>
       </div>
-      <div className="card">
+      <div className="card-home">
         <img src={newBeerImage} alt="beer image" className="beer-image" />
         <Link className="link-offset-2 link-underline link-underline-opacity-0" to="/new-beer">
           <h2>New Beer</h2>

@@ -5,14 +5,16 @@
   text-align: center;
 }
 
-.card {
+.card-home {
   background-color: #bc6c25;
   width: 95vw;
   margin: 20px;
   padding-bottom: 20px;
   border-radius: 0px;
 }
-
+.beer-image{
+  width: 95vw;
+}
 .text-box {
   color:#fefae0;
   margin: 0 7vw;
@@ -25,4 +27,33 @@ h2 {
 }
 h2:hover {
   text-transform: uppercase;
+}
+
+.img-beer {
+  height: 150px;
+  object-fit: contain;
+}
+
+.card-height {
+  height: 100%;
+}
+
+.row {
+  margin: 15px; /* Add negative margin to the row to offset the card spacing */
+}
+
+.card {
+  margin: 5px; /* Add margin to the cards to create spacing between them */
+}
+
+.card-details {
+  flex: 1;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.beer-image {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
 }
