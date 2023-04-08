@@ -40,12 +40,15 @@ const[beerList, setBeerList] = useState([])
       return (
         <>
           <Header></Header>
+          <div id="searchInput" className="form-floating mb-3">
           <input
-            type="text"
+            type="text" className="form-control" id="floatingInput" placeholder="name@example.com"
             onChange={(e) => {
               retrieveSearch(e.target.value);
             }}
           />
+          <label for="floatingInput">Search for your beer</label>
+          </div>
           {beerList ? (
             beerList.map((beer) => {
               return (
@@ -54,7 +57,7 @@ const[beerList, setBeerList] = useState([])
                     navigate("/beer-details/" + beer._id);
                   }}
                   className="card mb-3"
-                  style={{ maxWidth: 240 + "px", maxHeight: 440 + "px" }}
+
                   key={beer._id}
                 >
                   <div className="row g-0">

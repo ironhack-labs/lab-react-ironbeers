@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState, } from "react";
+import Header from "./Header";
 
 
 
@@ -24,23 +25,30 @@ function RandomBeer(){
 
     return (
         <>
+        <Header></Header>
         { beerDetails ? (
         
-            
-            <div className="card" style={{width: 18 + "rem"}}>
-            <img src={beerDetails.image_url} className="card-img-top" alt="..."/>
-            <div className="card-body">
+            <div className="containe text-center ">
+                <div className="row align-items-center">
+                    <div className="col-3">
+
+            <div classNameName="card" style={{width: 18 + "rem"}}>
+            <img src={beerDetails.image_url} classNameName="card-img-top" alt="..."/>
+            <div classNameName="card-body">
           
-              <h2 className="card-text">{beerDetails.name}</h2>
-              <p className="card-text">{beerDetails.tagline}</p>
-              <p className="card-text">{beerDetails.first_brewed}</p>
-              <p className="card-text">{beerDetails.attenuation_level}</p>
-              <p className="card-text">{beerDetails.description}</p>
-              <p className="card-text">{beerDetails.contributed_by}</p>
+              <h2 classNameName="card-text">{beerDetails.name}</h2>
+              <p classNameName="card-text">{beerDetails.tagline}</p>
+              <p classNameName="card-text">{beerDetails.first_brewed}</p>
+              <p classNameName="card-text">{beerDetails.attenuation_level}</p>
+              <p classNameName="card-text">{beerDetails.description}</p>
+              <p classNameName="card-text">{beerDetails.contributed_by}</p>
+            </div>
             </div>
           </div>
+          </div>
+          </div>
        
-          
+   
 
         ) : (
             "loading...."

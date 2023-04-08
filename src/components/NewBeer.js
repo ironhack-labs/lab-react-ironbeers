@@ -43,43 +43,43 @@ axios
         <div>
         <Header></Header>
         <form onSubmit={handleSubmit}>
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="title" name="title" value={name} onChange={(e) => { setName(e.target.value); }}/>
+    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="title" name="title" value={name} onChange={(e) => { setName(e.target.value); }}/>
   </div>
 
-  <div class="form-group">
+  <div className="form-group ">
     <label for="exampleInputEmail1">Tagline</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="tagline" name="tagline" value={tagline} onChange={(e) => { setTagline(e.target.value); }}/>
+    <input  type="text" className="form-control" id="exampleInputEmail1" aria-describedby="tagline" name="tagline" value={tagline} onChange={(e) => { setTagline(e.target.value); }}/>
   </div>
 
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputEmail1">Description</label>
-    <input type="textarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="description" value={description} onChange={(e) => { setDescription(e.target.value); }}/>
+    <input type="textarea" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="description" value={description} onChange={(e) => { setDescription(e.target.value); }}/>
   </div>
 
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputEmail1">First Brewed</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="first_brewed" name="first_brewed" value={first_brewed} onChange={(e) => { setFirst_brewed(e.target.value); }}/>
+    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="first_brewed" name="first_brewed" value={first_brewed} onChange={(e) => { setFirst_brewed(e.target.value); }}/>
   </div>
 
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputEmail1">Brewers Tips</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="brewers_tips" name="brewers_tips" value={brewers_tips} onChange={(e) => { setBrewers_tips(e.target.value); }}/>
+    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="brewers_tips" name="brewers_tips" value={brewers_tips} onChange={(e) => { setBrewers_tips(e.target.value); }}/>
   </div>
 
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputEmail1">Attenuation Level</label>
-    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="attenuation_level" name="attenuation_level" value={attenuation_level} onChange={(e) => { setAttenuation_level(e.target.value); }}/>
+    <input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="attenuation_level" name="attenuation_level" value={attenuation_level} onChange={(e) => { setAttenuation_level(e.target.value); }}/>
   </div>
 
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputEmail1">Contributed By</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="contributed_by" name="contributed_by" value={contributed_by} onChange={(e) => { setContributed_by(e.target.value); }}/>
+    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="contributed_by" name="contributed_by" value={contributed_by} onChange={(e) => { setContributed_by(e.target.value); }}/>
   </div>
   
 
-  <button type="submit" class="btn btn-primary">Create</button>
+  <button type="submit" className="btn btn-primary">Create</button>
 </form>
 </div>
     )
