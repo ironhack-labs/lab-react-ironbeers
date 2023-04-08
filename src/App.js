@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react'
 import './App.css';
+import BeersList from './components/BeersList';
+import { getBeers } from './services/BeersService'
 
 function App() {
+  const [beersList, setBeersList] = useState([])
+
+  useEffect(() => {
+    getBeers()
+    .then((beers) => {
+      setBeersList(beers)
+    })
+    .catch((error) => console.error(error))
+  }, [])
+
+  console.log(beersList);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BeersList beers={beersList}/>
     </div>
   );
 }
