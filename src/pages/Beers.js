@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Header from "./Header";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 function Beers() {
   const [beers, setBeers] = useState([]);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     axios
@@ -18,15 +19,24 @@ function Beers() {
       });
   }, []);
 
+  const filteredBeers = useMemo (()=>{
+    return beers.filter((element) =>{
+      return element.name.toLowerCase().includes(query.toLowerCase())
+    })
+  }, [beers, query])
+
   return (
     <div>
       <Header />
       <div>
-        <h1>All Beers</h1>
+      <h1>All Beers</h1>
+      <h3> Search Beers</h3>
+      <input type= "search" value={query} onChange={e => setQuery(e.target.value)} className="App form-size" />
+       
       </div>
       <div className="row">
-        {beers ? (
-          beers.map((beerDetail, index) => {
+        {filteredBeers ? (
+            filteredBeers.map((beerDetail, index) => {
             return (
               <div key={index} className="col-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="card row">
