@@ -1,0 +1,36 @@
+.lds-ripple div {
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 4rem;
+    left: 4rem;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 4rem;
+    left: 4rem;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 4rem;
+    left: 4rem;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0rem;
+    left: 0rem;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+  }
+}
