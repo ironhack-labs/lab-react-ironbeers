@@ -57,3 +57,9 @@ h2:hover {
   max-height: 150px;
   object-fit: contain;
 }
+
+.one-beer-image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
