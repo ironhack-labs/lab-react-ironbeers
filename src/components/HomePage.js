@@ -8,7 +8,7 @@ function Homepage() {
   return (
     <div>
       <div>
-        <Link to="/beers">
+        <Link to={"/beers"}>
           <img src={BeersImg} alt="allbeer" />
           <h1>All beers</h1>
         </Link>

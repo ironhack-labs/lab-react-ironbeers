@@ -13,6 +13,7 @@ function App() {
    <Route path='/beers' element= {<Beers/>} />
    <Route path='/randomBeer' element= {<RandomBeer/>} />
    <Route path='/newBeer' element= {<NewBeer/>} />
+   
    </Routes>
    </>
   );
