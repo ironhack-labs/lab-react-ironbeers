@@ -5,6 +5,7 @@ import RandomBeer from "./components/RandomBeer";
 import NewBeer from "./components/NewBeer";
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
+import SingleBeer from './components/SingleBeer';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
      <Route path='/beers' element={<ListBeers/>}/>
       <Route path='/random-beer' element={<RandomBeer/>}/>
       <Route path='/new-beer' element={<NewBeer/>}/>
+      <Route path='/beers/:beerId' element={<SingleBeer/>}/>
 
 
      </Routes>
