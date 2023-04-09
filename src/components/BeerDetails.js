@@ -1,6 +1,7 @@
 import { useEffect, useState, } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import Header from "./Header";
 
 function BeerDetails(){
     const [beer, setBeer] = useState(null);
@@ -42,17 +43,21 @@ function BeerDetails(){
     }
 
     return(
+        <>
+            <Header />
+                <div className="container">
 
-        <div className="container">
+                    {beer ?
+                    renderDetails() :
+                    <div className="spinner-grow" role="status">
+                        <span className="visually-hidden" >Loading...</span>
+                    </div>
+                    }
+                    <Link to="/beers">back to the beers list</Link>
+                </div>
+        </>
 
-            {beer ?
-            renderDetails() :
-            <div className="spinner-grow" role="status">
-                <span className="visually-hidden" >Loading...</span>
-            </div>
-            }
-            <Link to="/beers">back to the beers list</Link>
-        </div>
+
 
     )
 }

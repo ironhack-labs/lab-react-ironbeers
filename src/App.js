@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
-import Header from './components/Header';
+
 import Homepage from './components/Homepage';
 import Beers from './components/Beers';
 import BeerDetails from './components/BeerDetails';
@@ -14,33 +14,10 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Homepage /> } />
-        <Route path='/beers' element={
-          <>
-            <Header />
-            <Beers />
-          </>
-          }
-        />
-        <Route path='/random-beer' element={
-          <>
-            <Header />
-            <RandomBeer />
-          </>
-          }
-        />
-        <Route path='/new-beer' element={
-          <>
-            <Header />
-            <NewBeer />
-          </>
-          } 
-        />
-        <Route path='/beers/:beerId' element={
-          <>
-            <Header />
-            <BeerDetails />
-          </>
-        } />
+        <Route path='/beers' element={<Beers />} />
+        <Route path='/random-beer' element={<RandomBeer /> }/>
+        <Route path='/new-beer' element={<NewBeer />} />
+        <Route path='/beers/:beerId' element={<BeerDetails />} />
       </Routes>
 
       

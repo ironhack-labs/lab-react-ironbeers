@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 function Beers(){
     const [beersArr, setBeersArr] = useState(null)
@@ -40,6 +41,8 @@ function Beers(){
     
     return(
         <>
+            <Header />
+
             <div className="container">
                 <input type="text" value={search} placeholder="Search" onChange={ e => setSearch(e.target.value)} />            
             </div>

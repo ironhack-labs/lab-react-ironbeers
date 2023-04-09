@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 function RandomBeer(){
     const [randomBeer, setRandomBeer] = useState(null);
@@ -43,15 +44,18 @@ function RandomBeer(){
     }
 
     return(
-        <div className="container">
-            {randomBeer ? 
-            renderDetails() :
-            <div className="spinner-grow" role="status">
-                <span className="visually-hidden" >Loading...</span>
+        <>
+            <Header />
+            <div className="container">
+                {randomBeer ? 
+                renderDetails() :
+                <div className="spinner-grow" role="status">
+                    <span className="visually-hidden" >Loading...</span>
+                </div>
+                }
+                <Link to="/" onClick={resetRandom}>back to Home</Link>
             </div>
-            }
-            <Link to="/" onClick={resetRandom}>back to Home</Link>
-        </div>
+        </>
     )
 }
 
