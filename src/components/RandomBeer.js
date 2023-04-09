@@ -6,7 +6,7 @@ function RandomBeer() {
 
   useEffect(() => {
     axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+      .get(`https://ih-beers-api2.herokuapp.com/beers` + `random`)
       .then((response) => {
         setBeer(response.data);
       })
