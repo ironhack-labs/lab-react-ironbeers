@@ -77,7 +77,7 @@ function NewBeer(){
                         <input type="text" name="contributedBy" value={contributedBy} className="form-control" onChange={ e => setContributedBy(e.target.value)} />
                     </label>
                 </div>
-                <Link to='/beers'>
+                <Link to="/beers">
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </Link>
                 

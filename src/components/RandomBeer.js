@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function RandomBeer(){
     const [randomBeer, setRandomBeer] = useState(null);
@@ -9,6 +10,7 @@ function RandomBeer(){
             .get(process.env.REACT_APP_BASE_URL + "/random")
             .then( response => {
                 setRandomBeer(response.data)
+                console.log(response.data);
             })
             .catch( err => console.log("error getting random beer from API", err))
     }, [])
@@ -18,7 +20,7 @@ function RandomBeer(){
         return(
             <div className="card mb-3">
                 <div className="img-container">
-                    <img src={randomBeer.image_url} class="details-img" alt="..." />
+                    <img src={randomBeer.image_url} className="details-img" alt="..." />
                 </div>
                 <div className="card-body">
                     <div className="beer-detail">
@@ -36,6 +38,10 @@ function RandomBeer(){
         )     
     }
 
+    const resetRandom = () => {
+        setRandomBeer(null)
+    }
+
     return(
         <div className="container">
             {randomBeer ? 
@@ -44,6 +50,7 @@ function RandomBeer(){
                 <span className="visually-hidden" >Loading...</span>
             </div>
             }
+            <Link to="/" onClick={resetRandom}>back to Home</Link>
         </div>
     )
 }
