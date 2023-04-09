@@ -16,7 +16,7 @@ export default function HomePage() {
     
         <div class="col">
           <div class="card">
-          <NavLink to="/beers">
+          <NavLink to="/beers" style={{textDecoration:'none', color: 'black'}}>
           <img src={beers} alt="beers" />
           <h1> All Beers</h1>
           </NavLink>
@@ -26,7 +26,7 @@ export default function HomePage() {
         </div>
         <div class="col">
           <div class="card">
-          <NavLink to="/random-beer">
+          <NavLink to="/random-beer" style={{textDecoration:'none', color: 'black'}}>
           <img src={randombeer} alt="random beer" />
           <h1>Random Beer</h1>
           </NavLink>
@@ -36,7 +36,7 @@ export default function HomePage() {
         </div>
         <div class="col">
           <div class="card">
-          <NavLink to="/new-beer">
+          <NavLink to="/new-beer" style={{textDecoration:'none', color: 'black'}}>
           <img src={newbeer} alt="new beer" />
           <h1> New Beer</h1>
           </NavLink>

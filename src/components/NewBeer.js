@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Form, Input, InputNumber, Button } from "antd";
 
 export default function NewBeer() {
   const [name, setName] = useState("");
@@ -11,6 +12,7 @@ export default function NewBeer() {
   const [attenuationLevel, setAttenuationLevel] = useState("");
   const [contributedBy, setContributedBy] = useState("");
   const navigate = useNavigate();
+  const { TextArea } = Input;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,10 +47,16 @@ export default function NewBeer() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label> Name: </label>
-        <input
+    <Form onSubmit={handleSubmit} 
+    
+    style={{ display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    margin:"50px"
+   }}>
+      <Form.Item label="Name">
+        <Input
           type="text"
           name="name"
           value={name}
@@ -56,9 +64,10 @@ export default function NewBeer() {
             setName(e.target.value);
           }}
         />
+      </Form.Item>
 
-        <label> Tagline: </label>
-        <input
+      <Form.Item label="Tagline">
+        <Input
           type="text"
           name="tagline"
           value={tagline}
@@ -66,19 +75,22 @@ export default function NewBeer() {
             setTagline(e.target.value);
           }}
         />
+      </Form.Item>
 
-        <label> Description : </label>
-        <input
+      <Form.Item label="Description">
+        <TextArea
+          rows={3}
           type="text"
           name="description "
-          value={description }
+          value={description}
           onChange={(e) => {
             setDescription(e.target.value);
           }}
         />
+      </Form.Item>
 
-        <label> First Brewed: </label>
-        <input
+      <Form.Item label=" First Brewed:">
+        <Input
           type="text"
           name="firstBrewed"
           value={firstBrewed}
@@ -86,9 +98,10 @@ export default function NewBeer() {
             setFirstBrewed(e.target.value);
           }}
         />
+      </Form.Item>
 
-        <label> Brewers Tips: </label>
-        <input
+      <Form.Item label=" Brewers Tips:">
+        <Input
           type="text"
           name="brewersTips"
           value={brewersTips}
@@ -96,19 +109,21 @@ export default function NewBeer() {
             setBrewersTips(e.target.value);
           }}
         />
+      </Form.Item>
 
-        <label>Attenuation Level:</label>
-        <input
+      <Form.Item label="Attenuation Level:">
+        <InputNumber
           type="number"
           name="attenuationLevel"
           value={attenuationLevel}
-          onChange={(e) => {
-            setAttenuationLevel(e.target.value);
+          onChange={(value) => {
+            setAttenuationLevel(value);
           }}
         />
+      </Form.Item>
 
-        <label> Contributed By: </label>
-        <input
+      <Form.Item label="Contributed By:">
+        <Input
           type="text"
           name="contributedBy"
           value={contributedBy}
@@ -116,9 +131,11 @@ export default function NewBeer() {
             setContributedBy(e.target.value);
           }}
         />
-       <button type='submit'>Add Beer</button>
+      </Form.Item>
 
-      </form>
-    </div>
+    
+        <Button htmlType="submit" onClick={handleSubmit}>Add Beer</Button>
+     
+    </Form>
   );
 }
