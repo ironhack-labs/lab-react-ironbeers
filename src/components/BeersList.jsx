@@ -7,16 +7,16 @@ export default function BeersList({ beers }) {
     <>
       <Header />
       {beers.map((beer) => (
-        <div className="card mb-3" key={beer._id}>
+        <div className="card mb-3" key={beer.id}>
           <div className="row g-0">
             <div className="col-md-4">
-              <img src={beer.image_url} className="img-fluid rounded-start h-36" alt="beer" />
+              <img src={beer.image} className="img-fluid rounded-start h-36" alt="beer" />
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <Link to={`/beers/${beer._id}`} className="card-title text-2xl font-semibold">{beer.name}</Link>
+                <Link to={`/beers/${beer.id}`} className="card-title text-2xl font-semibold">{beer.name}</Link>
                 <p className="card-text font-extralight text-lg">{beer.tagline}</p>
-                <p className="card-text text-xs"><small className="text-body-secondary font-bold text-sm">Created by: </small>{beer.contributed_by}</p>
+                <p className="card-text text-xs"><small className="text-body-secondary font-bold text-sm">Created by: </small>{beer.contributedBy}</p>
               </div>
             </div>
           </div>
