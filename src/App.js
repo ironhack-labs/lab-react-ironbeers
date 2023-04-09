@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import BeersList from './components/BeersList';
 import BeerDetails from './components/BeerDetails';
+import BeerForm from './components/BeerForm';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/beers' element={<BeersList />}/>
         <Route path='/beers/:beerId' element={<BeerDetails />}/>
         <Route path='/random-beer' element={<BeerDetails />}/>
+        <Route path='/new-beer' element={<BeerForm />}/>
       </Routes>
       
     </div>

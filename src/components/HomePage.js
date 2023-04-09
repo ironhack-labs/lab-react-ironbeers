@@ -18,7 +18,7 @@ function HomePage() {
             </div>
             <div>
                 <img src={newBeerImg} alt="new beer" />
-                <Link to={"/"}><h1>New Beer</h1></Link>
+                <Link to={"/new-beer"}><h1>New Beer</h1></Link>
                 <p>Some Text for new</p>
             </div>
         </>
