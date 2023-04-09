@@ -30,7 +30,7 @@ function BeerDetails() {
 
         <div className="container mx-auto bg-white  shadow-lg rounded-lg drop-shadow-sm hover:drop-shadow-xl pb-4 m-8">
           <div className="text-gray-700 text-base font-sans font-semiboild">
-            <p>Beers Details</p>
+            <p className="text-xl mb-4">Beer Details</p>
             <img
               className="w-32 h-128 rounded-lg shadow-lg mx-auto"
               src={details.image_url}

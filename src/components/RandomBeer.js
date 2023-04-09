@@ -25,11 +25,12 @@ function RandomBeer() {
         <header>
           <NavBar />
         </header>
-
-        <h1>Beers Details</h1>
+        <div>
+        <p className="text-lg mb-4">Random Beer</p>
+        </div>
         <div className="container mx-auto bg-white  shadow-lg rounded-lg drop-shadow-sm hover:drop-shadow-xl pb-4 m-8">
           <div className="text-gray-700 text-base font-sans font-semiboild">
-            <p>Beers Details</p>
+            
             <img
               className="w-32 h-128 rounded-lg shadow-lg mx-auto"
               src={details.image_url}
@@ -49,11 +50,13 @@ function RandomBeer() {
               <br />
               <p>Contributed by: </p>
               <p>{details.contributed_by ?? ""}</p>
+
               <Link
                 className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 mb-8 hover:subpixel-antialiased mt-6"
                 to={"/beers"}>
                 Back
               </Link>
+            
             </div>
           </div>
         </div>
