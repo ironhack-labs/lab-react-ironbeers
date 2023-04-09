@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const BeersList = () => {
   const [beerList, setBeerList] = useState(null);
-
+  const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
     getData();
   }, []);
@@ -21,18 +21,35 @@ const BeersList = () => {
       .catch((err) => console.error(err));
   };
   const renderList = () => {
-    return (
+    return beerList.length > 0 ? (
       <section className="BeerList">
         {beerList.map((beer) => {
           return <BeerCard key={beer._id} beer={beer} />;
         })}
       </section>
+    ) : (
+      <section className="BeerList">
+        <h3 className="text-md font-semibold">Sorry, no beers found!</h3>
+      </section>
     );
+  };
+
+  const onChangeHandler = (event) => {
+    setSearchQuery(event.target.value);
+    setBeerList(null);
+    axios
+      .get(process.env.REACT_APP_API + `/search?q=${searchQuery}`)
+      .then((response) => {
+        console.log(response);
+        setBeerList(response.data);
+      })
+      .catch((err) => console.error(err));
   };
 
   return (
     <>
       <Header />
+      <SearchField value={searchQuery} onChangeHandler={onChangeHandler} />
       {beerList ? renderList() : <Spinner />}
     </>
   );
@@ -59,6 +76,18 @@ const BeerCard = (props) => {
         </div>
       </div>
     </Link>
+  );
+};
+
+const SearchField = (props) => {
+  return (
+    <>
+      <input
+        type="text"
+        value={props.value}
+        onChange={(event) => props.onChangeHandler(event)}
+      />
+    </>
   );
 };
 

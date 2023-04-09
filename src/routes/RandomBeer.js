@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import Spinner from "../components/Spinner";
 import BeerDetails from "../components/BeerDetails";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 
 const RandomBeer = () => {
   const [details, setDetails] = useState(null);
