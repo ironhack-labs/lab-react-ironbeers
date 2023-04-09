@@ -11,7 +11,6 @@ function BeerDetail(props) {
   const [beerDetail, setBeerDetail] = useState(null);
 
   const fetchBeerDetail = async () => {
-    //console.log("props.isRandom...", props.isRandom)
     try {
         let res ;
         if(props.isRandom){
@@ -20,7 +19,6 @@ function BeerDetail(props) {
             res = await axios.get(baseURL + "/beers/" + beerId);
         }
       setBeerDetail(res.data);
-      //console.log("res.data from beer detail......", res.data);
     } catch (e) {
       console.error(e);
     }

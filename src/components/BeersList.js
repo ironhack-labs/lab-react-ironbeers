@@ -8,12 +8,17 @@ function BeersList() {
   const baseURL = "https://ih-beers-api2.herokuapp.com";
 
   const [beersList, setbeersList] = useState(null);
+  const [searchValue, setSearchValue] = useState(null);
 
   const fetchBeersList = async () => {
     try {
-      const res = await axios.get(baseURL + "/beers");
+      let res
+      if(searchValue !== null){
+        res = await axios.get(baseURL + "/beers/search?q="+ searchValue);
+      } else {
+        res = await axios.get(baseURL + "/beers");
+      }
       setbeersList([...res.data]);
-      //console.log("res.data from beers List......", res.data);
     } catch (e) {
       console.error(e);
     }
@@ -21,22 +26,30 @@ function BeersList() {
 
   useEffect(() => {
     fetchBeersList();
+  }, [searchValue]);
+
+  useEffect(() => {
+    fetchBeersList();
   }, []);
 
   const displayBeersList = () => {
-    return beersList.map((element) => {
+    return beersList.map((element, index) => {
       return (
-        <div key={element._id}>
-          {element.image_url ? (
-            <img src={element.image_url} alt={element.name} style={{height:"200px"}} />
-          ) : (
-            ""
-          )}
-          <h3>{element.name}</h3>
-          <p>Tagline: {element.tagline}</p>
-          <p>Contributed By: {element.contributed_by}</p>
-          <Link to={"./" + element._id}>More Detail</Link>
-        </div>
+          <div key={index}>
+            {element.image_url ? (
+              <img
+                src={element.image_url}
+                alt={element.name}
+                style={{ height: "200px" }}
+              />
+            ) : (
+              ""
+            )}
+            <h3>{element.name}</h3>
+            <p>Tagline: {element.tagline}</p>
+            <p>Contributed By: {element.contributed_by}</p>
+            <Link to={"./" + element._id}>More Detail</Link>
+          </div>
       );
     });
   };
@@ -44,6 +57,17 @@ function BeersList() {
   return (
     <>
       <Header />
+      <div className="search">
+        <label>
+          Search
+          <input
+            type="search"
+            onChange={(e) => {
+              setSearchValue(e.target.value);
+            }}
+          />
+        </label>
+      </div>
       {beersList ? displayBeersList() : <p>..loading</p>}
     </>
   );
