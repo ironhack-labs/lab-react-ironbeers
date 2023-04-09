@@ -2,19 +2,26 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "./NavBar";
+import { RingLoader } from "react-spinners";
+
 
 function Beers(props) {
+  const [loading, setLoading] = useState(false);
+
   const [beers, setBeers] = useState(null);
 
   useEffect(() => {
+    setLoading(true);
     axios
       .get(process.env.REACT_APP_APIURL + "/")
       .then((response) => {
         console.log("response from API", response.data);
         setBeers(response.data);
+        setLoading(false);
       })
       .catch((e) => {
         console.log("error getting beer from the API.....", e);
+        setLoading(false);
       });
   }, []);
 
@@ -23,13 +30,20 @@ function Beers(props) {
       <header>
         <NavBar />
       </header>
+      {loading ? (
+      <div className="flex justify-center items-center h-screen">
+        <RingLoader color="#1A202C" loading={loading} size={50} />
+      </div>
+    ) : (
       <SearchBeers beers={beers} setBeers={setBeers} />
+    )}
     </>
   );
 }
 
 function SearchBeers({ beers, setBeers }) {
   const [searchBeers, setSearchBeers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -54,14 +68,17 @@ function SearchBeers({ beers, setBeers }) {
   return (
     <>
       <div>
-        <input className="mx-auto placeholder:italic placeholder:text-slate-400 block bg-white w-300 justify-center border border-slate-300 rounded-md py-2 pl-9 pr-3 mt-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm " placeholder="Search for a beer..." 
+        <input
+          className="mx-auto placeholder:italic placeholder:text-slate-400 block bg-white w-300 justify-center border border-slate-300 rounded-md py-2 pl-9 pr-3 mt-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm "
+          placeholder="Search for a beer..."
           type="text"
           onChange={(e) => {
             retrieveSearch(e.target.value);
           }}
         />
       </div>
-           
+      
+
       {searchBeers &&
         searchBeers.map((beer) => {
           return (

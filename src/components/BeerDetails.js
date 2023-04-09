@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "./NavBar";
 
-
 function BeerDetails() {
   const { Id } = useParams();
   const [details, setDetails] = useState(null);
@@ -23,10 +22,9 @@ function BeerDetails() {
   function renderDetails() {
     return (
       <>
-      <header>
-        <NavBar />
-      </header>
-        
+        <header>
+          <NavBar />
+        </header>
 
         <div className="container mx-auto bg-white  shadow-lg rounded-lg drop-shadow-sm hover:drop-shadow-xl pb-4 m-8">
           <div className="text-gray-700 text-base font-sans font-semiboild">
@@ -51,12 +49,10 @@ function BeerDetails() {
               <p>Contributed by: </p>
               <p>{details.contributed_by ?? ""}</p>
               <Link
-  className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 mb-8 hover:subpixel-antialiased mt-6"
-  to={"/beers"}
->
-  Back
-</Link>
-
+                className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 mb-8 hover:subpixel-antialiased mt-6"
+                to={"/beers"}>
+                Back
+              </Link>
             </div>
           </div>
         </div>
