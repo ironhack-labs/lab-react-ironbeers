@@ -8,16 +8,18 @@ export default function BeersDetail() {
 
   const { id } = useParams({})
 
-  console.log(id)
-
   useEffect(() => {
     if (id) {
       beersService.detail(id)
         .then((foundBeer) => {
-          console.log(foundBeer)
           setBeer(foundBeer)
         })
         .catch(console.error)
+    } else {
+      beersService.random()
+        .then((randomBeer) => {
+          setBeer(randomBeer)
+        })
     }
   }, [id])
 
