@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function NewBeer() {
   const [name, setName] = useState("");
@@ -38,8 +38,8 @@ function NewBeer() {
   return (
     <>
       <header>
-          <Link to={"/"}>Home</Link>
-        </header>
+        <NavBar />
+      </header>
 
       <h1>Create a new beer!</h1>
       <form onSubmit={handleSubmitCreateBeer}>

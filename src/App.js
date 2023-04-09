@@ -5,6 +5,7 @@ import RandomBeer from "./components/RandomBeer";
 import NewBeer from "./components/NewBeer";
 import Homepage from "./components/Homepage";
 import BeerDetails from "./components/BeerDetails";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
