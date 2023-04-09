@@ -50,12 +50,10 @@ function RandomBeer() {
               <p>Contributed by: </p>
               <p>{details.contributed_by ?? ""}</p>
               <Link
-  className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 mb-8 hover:subpixel-antialiased mt-6"
-  to={"/beers"}
->
-  Back
-</Link>
-
+                className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 mb-8 hover:subpixel-antialiased mt-6"
+                to={"/beers"}>
+                Back
+              </Link>
             </div>
           </div>
         </div>
