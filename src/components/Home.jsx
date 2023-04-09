@@ -10,21 +10,21 @@ export default function Home() {
       <div className="card border-0 max-w-screen-lg">
         <img src={beers} className="card-img-top" alt="Beers" />
         <div className="card-body">
-          <Link to={"/beers"} className="card-title font-bold text-2xl">All Beers</Link>
+          <Link to="/beers" className="card-title font-bold text-2xl">All Beers</Link>
           <p className="card-text text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, earum aliquam. Fuga ullam optio odio veniam recusandae deserunt officia aperiam corporis, beatae, dolor magni facere ipsa incidunt, reiciendis laboriosam fugiat.</p>
         </div>
       </div>
       <div className="card border-0 max-w-screen-lg">
         <img src={randomBeer} className="card-img-top" alt="Beers" />
         <div className="card-body">
-          <Link to={"/random-beer"} className="card-title font-bold text-2xl">Random Beer</Link>
+          <Link to="/random-beer" className="card-title font-bold text-2xl">Random Beer</Link>
           <p className="card-text text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, earum aliquam. Fuga ullam optio odio veniam recusandae deserunt officia aperiam corporis, beatae, dolor magni facere ipsa incidunt, reiciendis laboriosam fugiat.</p>
         </div>
       </div>
       <div className="card border-0 max-w-screen-lg">
         <img src={newBeer} className="card-img-top" alt="Beers" />
         <div className="card-body">
-          <Link to={"/new-beer"} className="card-title font-bold text-2xl">New Beer</Link>
+          <Link to="/new-beer" className="card-title font-bold text-2xl">New Beer</Link>
           <p className="card-text text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, earum aliquam. Fuga ullam optio odio veniam recusandae deserunt officia aperiam corporis, beatae, dolor magni facere ipsa incidunt, reiciendis laboriosam fugiat.</p>
         </div>
       </div>
