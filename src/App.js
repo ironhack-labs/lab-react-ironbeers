@@ -1,4 +1,4 @@
-import { Link, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import BeersList from "./routes/BeersList";
 import Home from "./routes/Home";
 import NewBeer from "./routes/NewBeer";
@@ -11,8 +11,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/beers/" element={<BeersList />} />
-        <Route path="/beers/random-beer/" element={<RandomBeer />} />
-        <Route path="/beers/new-beer" element={<NewBeer />} />
+        <Route path="/random-beer/" element={<RandomBeer />} />
+        <Route path="/new-beer/" element={<NewBeer />} />
         <Route path="/beers/:id" element={<SingleBeer />} />
       </Routes>
     </div>

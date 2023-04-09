@@ -27,12 +27,17 @@ const BeerDetails = (props) => {
         <p className="mb-2">{props.beer.description}</p>
         <h3 className="text-md font-semibold">Brewer’s Tipps</h3>
         <p className="mb-2">{props.beer.brewers_tips}</p>
-        <h3 className="text-md font-semibold">Food Pairings</h3>
-        <ul className="mb-2">
-          {props.beer.food_pairing.map((item, index) => {
-            return <li key={index}>{item}</li>;
-          })}
-        </ul>
+        {props.beer.food_pairing && (
+          <>
+            <h3 className="text-md font-semibold">Food Pairings</h3>
+
+            <ul className="mb-2">
+              {props.beer.food_pairing.map((item, index) => {
+                return <li key={index}>{item}</li>;
+              })}
+            </ul>
+          </>
+        )}
       </div>
     </section>
   );

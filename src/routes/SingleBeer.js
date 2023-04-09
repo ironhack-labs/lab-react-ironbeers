@@ -30,7 +30,7 @@ const SingleBeer = () => {
       <Header />
       {details ? <BeerDetails beer={details} /> : <Spinner />}
       <Link
-        className="py-2 px-4 mb-8 text-gray-500 font-semibold text-sm inline-block right-0 absolute"
+        className="py-2 px-4 mt-4 bg-gray-500 text-gray-50 rounded font-semibold text-sm uppercase tracking-wide inline-block right-4 absolute"
         to="/beers/"
       >
         Back to beers

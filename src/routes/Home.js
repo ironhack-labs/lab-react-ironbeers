@@ -40,7 +40,7 @@ const Home = () => {
         </Link>
       </section>
       <section className="shadow bg-slate-100 hover:shadow-lg hover:bg-slate-50 pb-4 mb-4">
-        <Link to="/new-beer">
+        <Link to="/new-beer/">
           <img
             className="mb-2 min-w-full "
             src={newBeerImg}
