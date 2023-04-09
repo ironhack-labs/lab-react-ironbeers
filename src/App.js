@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import BeersList from './components/BeersList'
+import NewBeer from "./components/NewBeer";
+import CreateBeer from "./components/CreateBeer";
 
 function App() {
   return (
