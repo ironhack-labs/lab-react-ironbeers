@@ -22,10 +22,10 @@ function NewBeer() {
         name,
         tagline,
         description,
-        firstBrewed,
-        brewersTips,
-        attenuationLevel,
-        contributedBy,
+        first_brewed: firstBrewed,
+        brewers_tips: brewersTips,
+        attenuation_level: attenuationLevel,
+        contributed_by: contributedBy,
     }
     axios.post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
     .then(response=>{
@@ -57,16 +57,16 @@ function NewBeer() {
           <input type="text" name="description" placeholder="enter the description" onChange={(e) => { setDescription(e.target.value) }} />
           </label>
           <label> First brewed:
-          <input type="text" name="first_brewed" placeholder="enter the firstBrewed" onChange={(e) => { setFirstBrewed(e.target.value) }} />
+          <input type="text" name="firstBrewed" placeholder="enter the firstBrewed" onChange={(e) => { setFirstBrewed(e.target.value) }} />
           </label>
            <label> Brewers tips:
-          <input type="text" name="brewers_tips" placeholder="enter the brewersTips" onChange={(e) => { setBrewersTips(e.target.value) }} />
+          <input type="text" name="brewersTips" placeholder="enter the brewersTips" onChange={(e) => { setBrewersTips(e.target.value) }} />
           </label>
           <label> Attenuation level:
-          <input type="number" name="attenuation_level" placeholder="enter the attenuationLevel" onChange={(e) => { setAttenuationLevel(e.target.value) }} />
+          <input type="number" name="attenuationLevel" placeholder="enter the attenuationLevel" onChange={(e) => { setAttenuationLevel(e.target.value) }} />
           </label>
           <label> Contributed by:
-          <input type="text" name="contributed_by" placeholder="enter the contributedBy" onChange={(e) => { setContributedBy(e.target.value) }} />
+          <input type="text" name="contributedBy" placeholder="enter the contributedBy" onChange={(e) => { setContributedBy(e.target.value) }} />
           </label>
           
           <button>Create</button>
