@@ -59,10 +59,23 @@ const newBeer = (data) => http.post('/beers/new', {
     }
   ))
 
+const filter = (value) => http.get(`/beers/search?q=${value}`)
+  .then((res) => res.data.map((b) => (
+    {
+      image: b.image_url,
+      id: b._id,
+      name: b.name,
+      tagline: b.tagline,
+      contributedBy: b.contributed_by
+    }
+  )))
+
 const service = {
   list,
   detail,
-  random, newBeer
+  random,
+  newBeer,
+  filter
 }
 
 export default service
