@@ -23,7 +23,7 @@ function NewBeer() {
     };
 
     axios
-      .post(`https://ih-beers-api2.herokuapp.com/beers/new`, newBeer)
+      .post(process.env.REACT_APP_APIURL + `/new`, newBeer)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };

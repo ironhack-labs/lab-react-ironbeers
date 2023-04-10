@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function Header() {
   return (
     <div>
     <header>
@@ -13,4 +13,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Header;

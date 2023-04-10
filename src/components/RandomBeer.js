@@ -6,7 +6,7 @@ function RandomBeer() {
 
   useEffect(() => {
     axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers` + `random`)
+      .get(process.env.REACT_APP_APIURL + `/random`)
       .then((response) => {
         setBeer(response.data);
       })
@@ -14,7 +14,7 @@ function RandomBeer() {
         console.log(error);
       });
   }, []);
-    return (
+    return beer ? (
       <div>
         <h1>{beer.name}</h1>
         <img src={beer.image_url} alt={beer.name} />
@@ -24,6 +24,7 @@ function RandomBeer() {
         <p>{beer.description}</p>
         <p>Contributed by: {beer.contributed_by}</p>
       </div>)
+    : ( <p> Loading... </p>)
 
   }
 
