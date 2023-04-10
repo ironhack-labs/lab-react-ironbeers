@@ -1,0 +1,10 @@
+header {
+    background-color: deepskyblue;
+    height: 15vh;
+  }
+  
+  .home {
+    color: white;
+    text-decoration: none;
+    font-size: 70px;
+  }

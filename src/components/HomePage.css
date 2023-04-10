@@ -1,0 +1,12 @@
+.HomePage img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.home-link {
+    display: block;
+    text-decoration: none;
+    font-size: 72px;
+}

@@ -1,0 +1,21 @@
+header {
+  background-color: deepskyblue;
+  height: 15vh;
+}
+
+.home {
+  color: white;
+  text-decoration: none;
+  font-size: 70px;
+}
+
+.beer-img {
+    height: 200px;
+    display: block;
+}
+
+.beerCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
