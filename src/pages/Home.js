@@ -15,7 +15,7 @@ function Home() {
   </nav>
     <div className="home col-12">
       <div className="card-home">
-        <img src={beersImage} alt="beer image" className="beer-image" />
+        <img src={beersImage} alt="beerimage" className="beer-home" />
         <Link className="link-offset-2 link-underline link-underline-opacity-0" to="/beers">
           <h2>All Beers</h2>
         </Link>
@@ -30,7 +30,7 @@ function Home() {
         </p>
       </div>
       <div className="card-home">
-        <img src={randomBeerImage} alt="beer image" className="beer-image" />
+        <img src={randomBeerImage} alt="beerimage" className="beer-home" />
         <Link className="link-offset-2 link-underline link-underline-opacity-0" to="/random-beer">
           <h2>Random Beer</h2>
         </Link>
@@ -45,7 +45,7 @@ function Home() {
         </p>
       </div>
       <div className="card-home">
-        <img src={newBeerImage} alt="beer image" className="beer-image" />
+        <img src={newBeerImage} alt="beerimage" className="beer-home" />
         <Link className="link-offset-2 link-underline link-underline-opacity-0" to="/new-beer">
           <h2>New Beer</h2>
         </Link>
