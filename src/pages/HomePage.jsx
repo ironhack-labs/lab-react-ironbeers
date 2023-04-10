@@ -1,10 +1,9 @@
-import React from 'react'
-import HomeBar from '../components/HomeBar'
 import { Link } from 'react-router-dom'
 
 
 function HomePage() {
   return (
+
     <div className="container flex flex-col items-center justify-center h-full w-full overflow-y-hidden">
 
       <Link to="/beers">
