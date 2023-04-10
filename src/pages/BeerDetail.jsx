@@ -36,7 +36,6 @@ function BeerDetail({ beerList }) {
       <p className="px-8">{beer.description}</p>
 
       <h3 className="px-8 mt-2 text-lg font-bold italic text-yellow-300">{getContributedBy(beer.contributed_by)}</h3>
-
     </div>
   )
 }

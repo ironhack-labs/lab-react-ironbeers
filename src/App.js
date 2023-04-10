@@ -17,7 +17,7 @@ function App() {
       .then(data => {
         setBeerlist(data);
       })
-      .catch(error => console.log('An error has ocurred', error));
+      .catch(error => console.error('An error has ocurred importing the Data Base', error));
   }, []);
 
   return (
