@@ -1,0 +1,104 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card a {
+  color: black;
+  text-decoration: none;
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+
+.card a:hover {
+  color: blue;
+}
+
+.card p {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.card img {
+  width: 100vw;
+}
+
+.header {
+  width: 100vw;
+  height: 20vh;
+}
+
+.beerCard {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 30vh;
+  padding: 5rem 0;
+  margin: 2rem auto;
+  border: 2px solid lightgray;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: min-content;
+  margin: 0 auto;
+  height: 60%;
+}
+
+h1 {
+  color: black;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  color: gray;
+}
+
+p {
+  font-size: 15px;
+  color: black;
+}
+
+.singleBeerCard {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 50vh;
+  padding: 5rem auto;
+  margin: 2rem auto;
+  justify-content: center;
+}
+
+.singleBeerCard img {
+  height: 50%;
+  margin-top: 10rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 1rem;
+}
+
+input {
+  width: 15rem;
+  margin-left: 1rem;
+}
+
+#newButton {
+  width: 7rem;
+  height: 2rem;
+  margin: 1rem auto;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
