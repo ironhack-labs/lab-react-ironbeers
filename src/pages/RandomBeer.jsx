@@ -1,4 +1,6 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import Loader from '../components/Loader';
 
 function RandomBeer() {
 
@@ -6,10 +8,16 @@ function RandomBeer() {
 
 
   useEffect(() => {
-    fetch('https://ih-beers-api2.herokuapp.com/beers/random')
-      .then(res => res.json())
-      .then(data => setBeer(data))
-      .catch(error => console.error('An error has occurred obtaining a random beer', error));
+    const fetchData = () => {
+      setTimeout(() => {
+        axios
+          .get('https://ih-beers-api2.herokuapp.com/beers/random')
+          .then(response => setBeer(response.data))
+          .catch(error => console.log('An error has occurred obtaining a random beer', error));
+      }, 500);
+    };
+
+    fetchData();
   }, []);
 
   const getContributedBy = (contributor) => {
@@ -19,6 +27,7 @@ function RandomBeer() {
       return '-';
     }
   }
+
 
   return (
     <div>
@@ -41,7 +50,9 @@ function RandomBeer() {
           <h3 className="px-8 mt-2 text-lg font-bold italic text-yellow-300">{getContributedBy(beer.contributed_by)}</h3>
         </div>
       ) : (
-        <p className="font-black text-center text-xl my-20">Loading Random Beer...</p>
+        <div className="w-full mt-40 flex justify-center items-center">
+          <Loader />
+        </div>
       )}
     </div>
   );

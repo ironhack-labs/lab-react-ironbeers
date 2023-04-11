@@ -7,7 +7,7 @@ function HomePage() {
     <div className="container flex flex-col items-center justify-center h-full w-full overflow-y-hidden fixed">
 
       <Link to="/beers">
-        <div className="w-full h-full -mt-8 mb-6">
+        <div className="w-full h-full -mt-14 mb-6">
           <div className="w-3/4 h-40 rounded-3xl mx-auto">
             <img className="object-cover h-full w-full rounded-3xl" src="../assets/beers.png" alt="" />
           </div>

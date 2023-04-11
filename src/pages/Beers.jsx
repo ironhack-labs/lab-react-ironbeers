@@ -16,8 +16,8 @@ function Beers({ beerList }) {
 
       <div className="grid grid-cols-1 gap-10">
         {beerList.map((beer) => (
-          <Link to={`/beers/${beer._id}`}>
-            <div key={beer._id} className="border-b h-60 flex">
+          <Link to={`/beers/${beer._id}`} key={beer._id}>
+            <div className="border-b h-60 flex">
               <div className="h-full w-2/5 flex justify-center items-center">
                 <img className="h-auto w-1/3" src={beer.image_url} alt="" />
               </div>
