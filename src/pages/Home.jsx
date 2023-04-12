@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function Home({ beersData }) {
   return (
-    <div>
+    <div >
       <Link className='text-decoration-none text-dark' to={"/beers"}>
       <div>
         <img src="/beers.png" alt="beers" />
