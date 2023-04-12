@@ -3,9 +3,12 @@ import './App.css';
 import BeersList from './components/BeersList/BeersList';
 import { getBeers } from './services/beersService';
 import Home from './pages/Home';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import Header from './components/Header';
 
 function App() {
+
+  const {pathname} = useLocation();
 
   const [beersData, setBeersData] = useState([]);
 
@@ -15,10 +18,11 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div className="App container-fluid">
+    {pathname !== "/" && pathname !== "/home" && <Header /> }
       <Routes>
       <Route path="/home?" element={<Home />} />
-        <Route path="/beers" element={<BeersList beersData={beersData} />}/>
+        <Route path="/beers" element={<BeersList beersData={beersData} />} />
       </Routes>
     </div>
   );
