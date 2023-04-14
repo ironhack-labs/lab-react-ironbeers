@@ -15,7 +15,7 @@ function Random() {
   return (
     <>
       <NavBar />
-      {
+      { //TODO: crear un componente para el card beer y reutilizarlo en Random.js y Beer.js
         !beer ? <><div className='d-flex justify-content-center align-items-center mt-3'>Loading...</div></> :
           <div className='row'>
             <div className='col-12'>
