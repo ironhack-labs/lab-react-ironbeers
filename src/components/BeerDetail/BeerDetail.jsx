@@ -6,6 +6,8 @@ function BeerDetail({ beersData }) {
   //Duda para Cristian: ¿Por qué aquí no es { _id }, que es como se llama la clave realmente las beers?
   const { id } = useParams();
 
+
+
   return (
     <>
       {beersData.filter((beer) => beer._id.includes(id)).map((beer) => (

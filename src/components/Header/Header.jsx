@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <><Link to={'/'}>
-    <img src={'/header.png'} alt="header"/>
+    <img src={'/header.png'}  className='w-100' alt="header"/>
     </Link>
     </>
     

@@ -6,10 +6,11 @@ import Home from './pages/Home';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header/Header';
 import BeerDetail from './components/BeerDetail/BeerDetail';
+import RandomBeer from './components/RandomBeer/RandomBeer';
 
 function App() {
 
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   const [beersData, setBeersData] = useState([]);
 
@@ -19,13 +20,16 @@ function App() {
   });
 
   return (
-    <div className="App container-fluid">
-    {pathname !== "/" && pathname !== "/home" && <Header /> }
-      <Routes>
-      <Route path="/home?" element={<Home />} />
-        <Route path="/beers" element={<BeersList beersData={beersData} />} />
-        <Route path="/beers/:id" element={<BeerDetail beersData={beersData} />} />
-      </Routes>
+    <div className="App">
+      {pathname !== "/" && pathname !== "/home" && <Header />}
+      <div className="container">
+        <Routes>
+          <Route path="/home?" element={<Home />} />
+          <Route path="/beers" element={<BeersList beersData={beersData} />} />
+          <Route path="/beers/:id" element={<BeerDetail beersData={beersData} />} />
+          <Route path="/random-beer" element={<RandomBeer />} />
+        </Routes>
+      </div>
     </div>
   );
 }
