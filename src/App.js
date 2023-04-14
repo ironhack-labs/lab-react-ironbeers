@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
+import BeerDetail from './components/BeerDetail/BeerDetail';
 import BeerList from './components/BeersList/BeerList';
-import Header from './pages/Header';
+import Header from './components/Navbar/Header';
 import Home from './pages/Home';
 import { getBeers } from './services/BeersService';
 
@@ -21,11 +22,12 @@ function App() {
 
   return (
     <div className="App container-fluid">
-    { pathname !== "/" && pathname !== "/home" && <Header />}
-        <Routes>
-          <Route exact path="/home?" element={<Home beersData={beersData} />} />
-          <Route path="/beers" element={<BeerList beersData={beersData} />} />
-        </Routes>
+      {pathname !== "/" && pathname !== "/home" && <Header />}
+      <Routes>
+        <Route exact path="/home?" element={<Home beersData={beersData} />} />
+        <Route path="/beers" element={<BeerList beersData={beersData} />} />
+        <Route path="/beers/:id" element={<BeerDetail beersData={beersData}/>} />
+      </Routes>
     </div>
   );
 }
