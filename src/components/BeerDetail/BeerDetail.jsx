@@ -1,13 +1,15 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
+
 function BeerDetail({ beersData }) {
-  const { id } = useParams()
+  const { id } = useParams();
+
 
   return (
     <div>
       {beersData.filter(beer => beer._id.includes(id)).map(beer =>
-        <div className="row g-0 m-3" key={beer.id}>
+        <div className="row g-0 m-3" key={beer._id}>
           <div className="col-md-4">
             <img src={beer.image_url} className="img-fluid rounded-start" alt="beerPicture" style={{ width: 100 }} />
           </div>
