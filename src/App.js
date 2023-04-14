@@ -4,6 +4,7 @@ import './App.css';
 import BeerDetail from './components/BeerDetail/BeerDetail';
 import BeerList from './components/BeersList/BeerList';
 import Header from './components/Navbar/Header';
+import NewBeer from './components/NewBeer/NewBeer';
 import RandomBeer from './components/RandomBeer/RandomBeer';
 import Home from './pages/Home';
 import { getBeers } from './services/BeersService';
@@ -29,6 +30,7 @@ function App() {
         <Route path="/beers" element={<BeerList beersData={beersData} />} />
         <Route path="/beers/:id" element={<BeerDetail beersData={beersData}/>} />
         <Route path="/random-beer" element={<RandomBeer beersData={beersData}/>} />
+        <Route path="/new-beer" element={<NewBeer/>} />
       </Routes>
     </div>
   );
