@@ -14,7 +14,14 @@ const beer = (id) => http.get(`/beers/${id}`)
   })
   .catch(console.error)
 
+const random = () => http.get(`/beers/random`)
+  .then((response) => {
+    return response.data
+  })
+  .catch(console.error)
+
 export default {
   list,
-  beer
+  beer,
+  random
 }
