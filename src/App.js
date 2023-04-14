@@ -7,6 +7,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header/Header';
 import BeerDetail from './components/BeerDetail/BeerDetail';
 import RandomBeer from './components/RandomBeer/RandomBeer';
+import NewBeer from './components/NewBeer/NewBeer';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/beers" element={<BeersList beersData={beersData} />} />
           <Route path="/beers/:id" element={<BeerDetail beersData={beersData} />} />
           <Route path="/random-beer" element={<RandomBeer />} />
+          <Route path="/new-beer" element={<NewBeer />} />
         </Routes>
       </div>
     </div>
