@@ -4,7 +4,8 @@ import BeersList from './components/BeersList/BeersList';
 import { getBeers } from './services/beersService';
 import Home from './pages/Home';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './components/Header/Header';
+import BeerDetail from './components/BeerDetail/BeerDetail';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
       <Route path="/home?" element={<Home />} />
         <Route path="/beers" element={<BeersList beersData={beersData} />} />
+        <Route path="/beers/:id" element={<BeerDetail beersData={beersData} />} />
       </Routes>
     </div>
   );
