@@ -25,8 +25,8 @@ function Beer() {
         !beer ? <><div className='d-flex justify-content-center align-items-center mt-3'>Loading...</div></> :
           <div className='row'>
             <div className='col-12'>
-              <div className="card d-flex justify-content-center align-items-center pt-4" style={{ width: '100%' }}>
-                <img src={beer.image_url} className="card-img-top" alt="..." style={{ width: '50%' }} />
+              <div className="card d-flex justify-content-center align-items-center pt-4" style={{ height: '100%' }}>
+                <img src={beer.image_url} className="card-img-top" alt="..." style={{ height: '300px', width: 'auto' }} />
                 <div className="card-body">
                   <div className='row'>
                     <div className='col-9'>
