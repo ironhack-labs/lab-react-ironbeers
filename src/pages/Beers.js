@@ -26,7 +26,7 @@ const Beers = () => {
               <img src={beer.image_url} style={{height: "200px"}} alt={beer.name} />
             </div>
             <div className='col-md-8 d-flex flex-column text-start'>
-              <h2><Link to={`beers/${beer._id}`}>{beer.name}</Link></h2>
+              <h2><Link to={`/${beer._id}`} className='text-dark text-decoration-none'>{beer.name}</Link></h2>
               <h5 className='text-secondary'>{beer.tagline}</h5>
               <h6><span className='fw-bold'>Created by: </span>{beer.contributed_by}</h6>
             </div>
