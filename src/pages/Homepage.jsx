@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const homepage = () => {
   return (
     <div>
-      <h1>HomePage</h1>
+      <h1>Pick here ⬇️</h1>
       <div className="container">
         <div className="row">
           <div className="col">
