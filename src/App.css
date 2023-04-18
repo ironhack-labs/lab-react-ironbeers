@@ -36,6 +36,16 @@
 	}
 }
 
+.header {
+	height: 50px;
+	background-color: #61dafb;
+}
+.house {
+	width: 40px;
+	height: 40px;
+	color: white;
+}
+
 .homepage-menu {
 	font-size: 1em;
 	line-height: 1.2em;
