@@ -5,7 +5,7 @@ const NewBeer = () => {
 	return (
 		<div>
 			<Header />
-			New Beer{' '}
+			New Beer
 		</div>
 	);
 };

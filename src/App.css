@@ -59,3 +59,14 @@
 	text-decoration: none;
 	color: black;
 }
+
+.beers-image img {
+	height: 130px;
+}
+.small-script {
+	font-size: 0.8em;
+}
+
+.tagline {
+	color: rgba(128, 128, 128, 0.753);
+}
