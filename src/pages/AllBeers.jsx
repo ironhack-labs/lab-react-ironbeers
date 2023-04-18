@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const AllBeers = () => {
 	const [allBeers, setAllBeers] = useState([]);
@@ -25,7 +26,9 @@ const AllBeers = () => {
 				return (
 					<div className='container-fluid d-flex justify-content-around'>
 						<div className='beers-image d-flex justify-content-center align-items-center p-2'>
-							<img src={beer.image_url} alt='a beer' />
+							<Link to={`/beers/${beer._id}`}>
+								<img src={beer.image_url} alt='a beer' />
+							</Link>
 						</div>
 
 						<div className='d-flex flex-column p-4 justify-content-center align-items-left'>
