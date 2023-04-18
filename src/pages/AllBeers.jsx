@@ -36,7 +36,7 @@ const AllBeers = () => {
                   />
                   <div className="card-body">
                     <h5 className="card-title">{beer.tagline}</h5>
-                    <p className="card-text">Created by: {beer.name}</p>
+                    <p className="card-text">Created by: {beer.contributed_by}</p>
                     <Link className="btn btn-primary" to={`/beers/${beer._id}`}>
                       Check beer Details
                     </Link>

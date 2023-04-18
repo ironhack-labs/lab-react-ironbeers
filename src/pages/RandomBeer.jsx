@@ -27,7 +27,7 @@ const RandomBeer = () => {
                   className="card-img-top mt-2"
                   style={{
                     maxWidth: "125px",
-                    maxHeight: "300px",
+                    maxHeight: "275px",
                     margin: "auto",
                   }}
                   src={beer.image_url}

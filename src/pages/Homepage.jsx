@@ -8,7 +8,10 @@ const homepage = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <div className="card" style={{ maxWidth: "350px" }}>
+            <div
+              className="card"
+              style={{ maxWidth: "350px", minHeight: "500px" }}
+            >
               <img
                 className="card-img-top"
                 src="https://static.yoursurprise.com/galleryimage/37/3731301ea592d4b8c80aaadaf1c1d914.jpg"
@@ -28,7 +31,10 @@ const homepage = () => {
             </div>
           </div>
           <div className="col">
-            <div className="card" style={{ maxWidth: "350px" }}>
+            <div
+              className="card"
+              style={{ maxWidth: "350px", minHeight: "500px" }}
+            >
               <img
                 className="card-img-top"
                 src="https://static.yoursurprise.com/galleryimage/37/3731301ea592d4b8c80aaadaf1c1d914.jpg"
@@ -48,7 +54,10 @@ const homepage = () => {
             </div>
           </div>
           <div className="col">
-            <div className="card" style={{ maxWidth: "350px" }}>
+            <div
+              className="card"
+              style={{ maxWidth: "350px", minHeight: "500px" }}
+            >
               <img
                 className="card-img-top"
                 src="https://static.yoursurprise.com/galleryimage/37/3731301ea592d4b8c80aaadaf1c1d914.jpg"

@@ -8,8 +8,8 @@ const Header = () => {
         <Link to={"/"}>
           <img
             src="https://cdn0.iconfinder.com/data/icons/3d-web-front-vol-2/512/3d-web-front-vol-2/1000/Home.png"
-            width="30"
-            height="30"
+            width="45"
+            height="45"
             alt=""
           />
         </Link>
