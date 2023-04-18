@@ -2,6 +2,30 @@
 
 # LAB | React IronBeers
 
+<details>
+  <summary>
+   <h2>Learning Goals</h2>
+  </summary>
+
+  This exercise allows you to practice and apply the concepts and techniques taught in class. 
+
+  Upon completion of this exercise, you will be able to:
+
+  - Create a React application that contains multiple pages using React Router.
+  - Use the React Router's `useParams` hook to access the URL parameters.
+  - Create a page component that dynamically renders content based on URL parameter values.
+  - Perform side effects in a component with the `useEffect` hook.
+  - Use the `useEffect` hook to fetch data from an API and save it in the component’s state.
+  - Implement an event handler function in a React component to send a POST request to an API.
+  - Create controlled components to manage the form inputs.
+
+  <br>
+  <hr> 
+
+</details>
+
+
+
 Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mission here is to create an app to showcase some of the best-handcrafted beers, but not just that - to save some as well so the rest of Ironhack community is informed 😌. Our end goal is creating something like this:
 
 <div style="display: flex; justify-content: center">
