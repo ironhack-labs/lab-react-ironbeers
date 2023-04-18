@@ -18,7 +18,7 @@ const Beers = () => {
   return (
     <div>
       <Header />
-
+      <div className='pt-3'>
       {
         beers.map(beer => (
           <div className="row" key={beer._id}>
@@ -34,6 +34,7 @@ const Beers = () => {
           </div>
         ))
       }
+      </div>
     </div>
   )
 }

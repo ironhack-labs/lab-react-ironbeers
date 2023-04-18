@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { House } from 'react-bootstrap-icons'
 
 const Header = () => {
 
-  const homePath = "../assets/home-icon.png"
-
   return (
-    <div className='bg-info' style={{height: "80px"}}>
-      <Link to="/"><img src={homePath} alt="home" /></Link>
+    <div className='d-flex bg-info justify-content-center align-items-center' style={{height: "80px"}}>
+      <Link to="/"><House color="white" size={50} /></Link>
     </div>
   )
 }
