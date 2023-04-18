@@ -1,12 +1,13 @@
-import Header from "../components/Header";
+import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import React from "react";
-import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
-const RandomBeer = () => {
-  const [beer, setBeer] = useState([]);
-  const url = `https://ih-beers-api2.herokuapp.com/beers/random`;
+const BeerDeets = () => {
+  const [beer, setBeer] = useState(null);
+  const { id } = useParams();
+
+  const url = `https://ih-beers-api2.herokuapp.com/beers/${id}`;
 
   useEffect(() => {
     axios.get(url).then((res) => {
@@ -25,11 +26,7 @@ const RandomBeer = () => {
               <div className="card" style={{ width: "500px" }}>
                 <img
                   className="card-img-top mt-2"
-                  style={{
-                    maxWidth: "125px",
-                    maxHeight: "300px",
-                    margin: "auto",
-                  }}
+                  style={{ maxWidth: "125px", maxHeight:'300px', margin: "auto" }}
                   src={beer.image_url}
                   alt={beer.name}
                 />
@@ -55,4 +52,4 @@ const RandomBeer = () => {
   );
 };
 
-export default RandomBeer;
+export default BeerDeets;
