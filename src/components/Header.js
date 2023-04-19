@@ -1,9 +1,13 @@
 import house from "../assets/home.png"
 
+import { Link } from "react-router-dom";
+
 function Header() {
     return(
         <div className="headerDiv">
-            <img src={house} alt="" />
+            <Link to="/">
+                <img className="headerIcon" src={house} alt="" />
+            </Link>
         </div>
     )
 }

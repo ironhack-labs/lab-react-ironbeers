@@ -40,8 +40,15 @@ a {
   margin: 5px;
 }
 
-.headerDiv > img {
-  padding: 10px;
+.headerDiv > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.headerIcon {
+  height: 100%;
 }
 
 .beer {
@@ -126,4 +133,71 @@ hr {
 .description {
   font-size: calc(0.75rem + 1vw);
   margin: 0;
+}
+
+.newBeerDiv {
+  height: 88vh;
+  margin: 5px;
+}
+
+.newBeerForm {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.formElement {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.formElement > input {
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(104, 104, 104, 0.555);
+}
+
+.descriptionForm {
+  height: 25%;
+}
+
+label {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.descriptionForm > textarea {
+  font-family: Helvetica, sans-serif;
+  height: 90%;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(104, 104, 104, 0.555);
+}
+
+.addNewButton {
+  width: 85%;
+  background-color: lightblue;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
