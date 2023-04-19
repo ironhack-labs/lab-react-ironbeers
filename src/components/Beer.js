@@ -1,18 +1,27 @@
-import { useParams } from "react-router-dom";
 import Header from "./Header";
 
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function Beer() {
     const [beer, setBeer] = useState(null)
 
     const { beerID } = useParams();
-
+    console.log(beerID)
     useEffect(() => {
-        fetch("https://ih-beers-api2.herokuapp.com/beers/" + beerID)
+        if (!beerID) {
+            fetch("https://ih-beers-api2.herokuapp.com/beers/random")
+                .then(response => response.json())
+                .then(data => setBeer(data))
+                .catch(error => console.log(error))
+        }
+        
+        else {
+            fetch("https://ih-beers-api2.herokuapp.com/beers/" + beerID)
             .then(response => response.json())
             .then(data => setBeer(data))
             .catch(error => console.log(error))
+        }
     }, [beerID])
 
     return(
