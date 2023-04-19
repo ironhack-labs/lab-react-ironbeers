@@ -82,3 +82,48 @@ hr {
   color: #D3D3D3;
   margin: 0 5px;
 }
+
+.singleBeerDiv {
+  height: 85vh;
+  margin: 5px;
+}
+
+.singleBeerImageDiv {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.singleBeerImageDiv > img {
+  height: 90%;
+}
+
+.singleBeerTextDiv {
+  height: 50%;
+  margin: 0 5%;
+  padding-top: 20px;
+}
+
+.firstRowText {
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstRowText > h1 {
+  margin: 0;
+}
+
+.attenuation, .tagline, .contributedBy {
+  color: darkgrey;
+}
+
+.secondRowText {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  font-size: calc(0.75rem + 1vw);
+  margin: 0;
+}
