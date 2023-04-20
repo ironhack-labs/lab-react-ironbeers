@@ -9,7 +9,7 @@ function HomePage () {
         <div className="d-inline-flex flex-column justify-content-center align-items-center"
         style={{ maxWidth: "700px" }}>
             <Link to="/beers">
-                <div className="card-box" style={{ width: "20rem"}}>
+                <div className="card-box" style={{ width: "17rem" }}>
                     <img src={beersImg} className="card-box-img-top" alt="..." />
                     <div className="card-box-body">
                         <h4 className="card-box-title">All Beers</h4>
@@ -20,7 +20,7 @@ function HomePage () {
                 </div>
             </Link>
             <Link to="/random-beer">
-            <div className="card-box" style={{ width: "20rem"}}>
+            <div className="card-box" style={{ width: "17rem" }}>
                     <img src={randomBeerImg} className="card-box-img-top" alt="..." />
                     <div className="card-box-body">
                         <h4 className="card-box-title">Random Beer</h4>
@@ -31,7 +31,7 @@ function HomePage () {
                 </div>
             </Link>
             <Link to="/new-beer">
-            <div className="card-box" style={{ width: "20rem"}}>
+            <div className="card-box" style={{ width: "17rem" }}>
                     <img src={newBeerImg} className="card-box-img-top" alt="..." />
                     <div className="card-box-body">
                         <h4 className="card-box-title">New Beer</h4>
