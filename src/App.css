@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  padding: 20px;
+  background-color: #3dc4fc;
+  margin-bottom: 20px;
+}
+
+.header-link {
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.link-card {
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  margin: 0 auto;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-info {
+  /* display: flex;
+  flex-direction: column; */
+}
