@@ -1,11 +1,11 @@
 
 import './App.css';
-//import { Routes, Route } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AllBeersPage from "./pages/AllBeersPage";
 import RandomBeerPage from "./pages/RandomBeerPage";
 import NewBeerPage from "./pages/NewBeerPage";
+import BeerDetailsPage from "./pages/BeerDetailsPage";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
           <Route path="/beers" element={<AllBeersPage />}/>
           <Route path="/random-beer" element={<RandomBeerPage />}/>
           <Route path="/new-beer" element={<NewBeerPage />}/>
+          <Route path="/beers/:beerId" element={<BeerDetailsPage />}/>
         </Routes>
       </div>
     </Router>
