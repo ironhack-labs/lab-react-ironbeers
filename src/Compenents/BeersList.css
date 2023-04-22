@@ -1,0 +1,44 @@
+.beers-list{
+    display: flex;
+    margin-top: 3vh;
+    border-top: 1px solid rgba(157, 157, 157, 0.32);
+    height:16vh ;
+    }
+    
+    .img-beers-all{
+        width: 12vw;
+        margin-top: 1vh;
+        margin-left: 3vw;
+    }
+    
+    .beer-information {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content:center;
+        width: 70vw;
+        height:15vh;
+       margin-left: 4vw;
+      
+    }
+    
+    .beer-information h3{
+        margin: 0;
+        color: black;
+        font-weight: 300;
+    }
+    
+    .beer-information h5{
+        margin:0;
+        color: rgba(148, 146, 147, 0.96);
+        margin-top: 1vh;
+    }
+    
+    .link{
+        text-decoration: none;
+    }
+    
+    
+    .beer-information p{
+        margin: 0;
+    }

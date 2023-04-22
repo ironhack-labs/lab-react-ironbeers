@@ -1,0 +1,13 @@
+.nav-header{
+    width: 100%;
+    background-color: rgb(38, 147, 221);
+    text-align: center;
+    width: 98%;
+    margin:auto;
+    margin-top: 1%;
+}
+#house-image {
+    width: 15vw;
+    display: flex;
+    display: inline-block;
+}

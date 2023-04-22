@@ -1,0 +1,43 @@
+.create-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.create-form label {
+    margin-top: 3vh;
+    margin-left: 15vw;
+    font-weight: 400;
+}
+
+.small-input{
+    width: 70vw;
+    margin-top: 1vh;
+    margin-left: 13vw;
+    border: 1px solid rgba(157, 157, 157, 0.32) ;
+    border-radius: 25px;
+}
+
+.large-input{
+    width: 70vw;
+    height: 10vh;
+    margin-left: 13vw;
+    margin-top: 1vh;
+    border: 1px solid rgba(157, 157, 157, 0.32);
+    border-radius: 25px;
+}
+
+.create-form button {
+    width: 85vw;
+    margin-left: 7vw;
+    margin-top: 3vh;
+    height: 5vh;
+    font-size: 1.1em;
+    color: white;
+    background-color: rgb(44, 196, 251);
+    border: 0;
+    border-radius: 25px;
+}
+
+h3{
+    margin-left: 30vw;
+}
