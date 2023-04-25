@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 20px;
+}
+.container p {
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 10px 20px;
+  text-align: left;
+}
+
+.title{
+  color: black;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: left;
+  margin-left: 20px;
+}
