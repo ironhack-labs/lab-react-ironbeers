@@ -1,6 +1,7 @@
 import HeaderLink from "../components/headerLink"
 import { useState, useEffect } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 function Beers() {
 
@@ -33,9 +34,11 @@ function Beers() {
             <div key={beer._id} className="beer-card">
               <img src={beer.image_url} alt={beer.name} />
               <div className="beer-info">
-                <h2>{beer.name}</h2>
-                <p>{beer.tagline}</p>
-                <p>{beer.contributed_by}</p>
+                <Link to={`/beers/${beer._id}`}>
+                  <h2>{beer.name}</h2>
+                  <p>{beer.tagline}</p>
+                  <p>{beer.contributed_by}</p>
+                </Link>
               </div>
             </div>
           )
