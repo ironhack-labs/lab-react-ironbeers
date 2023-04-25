@@ -57,3 +57,18 @@
   text-align: left;
   margin-left: 20px;
 }
+
+.beer-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.beer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
