@@ -72,3 +72,17 @@
   align-items: left;
   justify-content: space-between;
 }
+.new-beer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  margin: 20px;
+}
+.new-beer-form label {
+  text-align: left;
+  margin-top: 20px;
+}
+.new-beer-form button {
+  margin: 20px;
+}

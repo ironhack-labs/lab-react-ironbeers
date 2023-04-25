@@ -5,7 +5,7 @@ function HeaderLink() {
   return (
     <div>
         <Link to="/">
-          <img src={headerPic} alt="headerPic" />
+          <img src={headerPic} alt="headerPic" style={{width: '100%'}}/>
         </Link>
         
     </div>
