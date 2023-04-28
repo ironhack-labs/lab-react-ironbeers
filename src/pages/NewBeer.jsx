@@ -1,9 +1,11 @@
 import React from "react";
 import image from "../assets/new-beer.png";
+import Header from "../components/Header";
 
 const NewBeer = () => {
   return (
     <div>
+      <Header />
       <h1>New Beer</h1>
       <img src={image} alt="random-beer" />
       <p>
