@@ -185,6 +185,8 @@ Implement the `HomePage` component located in the `src/pages/HomePage.jsx` so th
 
 Feel free to style the page in any way that you prefer. If you want to follow the below example, you can find the corresponding images in the `src/assets` folder.
 
+<br>
+
 <details>
 
   <summary><b>See Expected Result</b></summary>
@@ -213,7 +215,7 @@ The `Navbar` component should render a `nav` element with a `Link` that, when cl
 
 The `Navbar` component should be rendered on every page.
 
-
+<br>
 
 <details>
 
@@ -298,7 +300,7 @@ In this iteration, you will work on the `BeerDetailsPage` component in the `src/
 
 When a user clicks on one of the beers in the list on the `AllBeersPage`, they should be navigated to the *Beer Details page* (`BeerDetailsPage`) where details of that specific beer should be shown.
 
- 
+<br>
 
 #### 5.1 | Access URL Parameter
 
@@ -314,9 +316,7 @@ Check [this example](https://reactrouter.com/en/6.10.0/hooks/use-params) if you 
 
 To get the beer details, you need to make a `GET` request to the Beers API endpoint `https://ih-beers-api2.herokuapp.com/beers/:id`, where `:id` should be replaced with the id of the selected beer. 
 
-> **Example:**
->
-> - [https://ih-beers-api2.herokuapp.com/beers/**5fb6a86265b9c209606e10e2**](https://ih-beers-api2.herokuapp.com/beers/5fb6a86265b9c209606e10e2)
+**Example:** [https://ih-beers-api2.herokuapp.com/beers/**5fb6a86265b9c209606e10e2**](https://ih-beers-api2.herokuapp.com/beers/5fb6a86265b9c209606e10e2)
 
 Remember to **`console.log`** the response data to help you visualize the structure of the beer object and how the data is structured.
 
@@ -371,7 +371,7 @@ In this iteration, you will work on the `BeerDetailsPage` component in the `src/
 
 When the `RandomBeerPage` component is rendered on the `/random-beer` route, it should show a random beer retrieved from the Beers API. To get the data of a random beer, you need to make a `GET` request to the endpoint `https://ih-beers-api2.herokuapp.com/beers/random`.
 
-
+<br>
 
 The `RandomBeerPage` component should display the following information about the random (same as in the `BeerDetailsPage`):
 
@@ -422,28 +422,45 @@ In this iteration, you will work on the `AddBeerPage` component in the `src/page
 
 When the user navigates to the `/new-beer` route in your react app, the `AddBeerPage` component should be rendered, displaying a `form` where the user can create new beers. 
 
+<br>
 
 
 The `form` should include the following:
 
-- Input: label ***Name***, attributes: `name="name"` and `type="text"`
-- Input: label ***Tagline***, attributes: `name="tagline"` and `type="text"`
-- **Textarea**: label ***Description***, attributes: `name="description"` and `type="text"`
-- Input: label ***First Brewed***, attributes: `name="first_brewed" ` and `type="text"`
-- Input: label ***Brewer's Tips***, attributes: `name="brewers_tips"   ` and `type="text"`
-- Input: label ***Attenuation Level***, attributes: `name="attenuation_level" ` and **`type="number"`**
-- Input: label ***Contributed By***, attributes: `name="contributed_by" `and `type="text"`
-- Submit button with the text "Add Beer".
+- `input`:
+  - Label: Name
+  - Attributes: `name="name"` and `type="text"`
+- `input`:
+  - Label: Tagline
+  - Attributes: `name="tagline"` and `type="text"`
+- `textarea`:
+  - Label: Description
+  - Attributes: `name="description"` and `type="text"`
+- `input`:
+  - Label: First Brewed
+  - Attributes: `name="first_brewed"` and `type="text"`
+- `input`:
+  - Label: Brewer's Tips
+  - Attributes: `name="brewers_tips"` and `type="text"`
+- `input`:
+  - Label: Attenuation Level
+  - Attributes: `name="attenuation_level"` and **`type="number"`**
+- `input`:
+  - Label: Contributed By
+  - Attributes: `name="contributed_by"` and `type="text"`
+- `button`:
+  - Text: "Add Beer"
+  - Attributes: `type="submit"`
 
-
+<br>
 
 **Note:** All inputs are of type `text` except `attenuation_level`, which is of type `number`. This is important because the API will only accept the request if all values have the correct data types.
 
-
+<br>
 
 Once you are done creating the form, make a `POST` request to the API endpoint `https://ih-beers-api2.herokuapp.com/beers/new`, passing all the input values in the request `body` as an object. The fields of the request `body` should have exact **names** so that the API can create a new beer.
 
-If everything goes well, you will receive a **200** response from the server. 
+If everything goes well, you will receive a **200** response from the server. :beer:
 
 The `attenuation_level` value must be set to the correct data type of `number`.  If a `string` is sent instead, the API will respond with a **500** error status code.
 
