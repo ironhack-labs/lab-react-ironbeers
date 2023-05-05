@@ -1,0 +1,36 @@
+.beers {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 15px;
+	border-top: 1px solid gray;
+	width: 100%;
+}
+.card:hover {
+	background-color: rgb(255, 243, 255);
+}
+.card div:first-child {
+	display: flex;
+	justify-content: center;
+	min-width: 120px;
+}
+.card img {
+	height: 120px;
+}
+.card div:last-child {
+	display: flex;
+	flex-flow: column nowrap;
+}
+.card p {
+	font-size: 0.7rem;
+}
+.beers form {
+	margin-bottom: 30px;
+}

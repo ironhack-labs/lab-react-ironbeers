@@ -1,0 +1,20 @@
+nav {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	font-size: 2em;
+	padding: 15px;
+	width: 100%;
+	background-color: plum;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+nav a {
+	color: #fff0ff;
+	font-weight: bold;
+}
+nav a:hover {
+	text-decoration: underline;
+}

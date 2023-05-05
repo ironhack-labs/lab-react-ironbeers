@@ -1,0 +1,37 @@
+.single-beer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 30px;
+}
+.details {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-between;
+}
+.details div:last-child {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.details img {
+	max-height: 45vh;
+}
+.details div:first-child {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.details h3 {
+	font-size: 3em;
+}
+.details h4 {
+	font-size: 2.5em;
+}
+.details p {
+	font-size: 1.2rem;
+}

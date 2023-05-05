@@ -1,0 +1,6 @@
+.home ~ .navbar  {
+	display: none !important;
+}
+.home a div {
+	padding: 0 20px 20px;
+}
