@@ -11,3 +11,86 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* HomePage Links */
+
+.link-frame {
+  text-align: start;
+  width: 500px;
+  height: fit-content;
+  border: 1px solid black;
+  margin: 10px auto;
+}
+
+.link-frame > div > img, h2 {
+  padding-left: 10px;
+}
+
+.link-text {
+  font-size: 14px;
+  color: grey;
+  padding-left: 10px;
+}
+
+/* Navbar */
+
+.nav-bar {
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  margin: auto;
+  padding-top: 10px;
+  background-color: #3CC3FC;
+}
+
+/* All Beers */
+
+.beer-container {
+  width: 500px;
+  height: fit-content;
+  border: 1px solid black;
+  margin: 10px auto;
+  display: flex;
+}
+
+.beer-img {
+  width: 175px;
+  padding: 10px 2px;
+  margin: auto;
+}
+
+.beer-info {
+  width: 350px;
+  padding: 2px;
+  margin: auto;
+  text-align: start;
+}
+
+.beer-container > div > img, h1, h3, p {
+  padding-left: 0;
+}
+
+/* Single Beer */
+
+.single-beer {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  align-items: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.single-beer-info {
+  text-align: start;
+}
+
+.single-beer-display-line {
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+}
+
+.grey-text {
+  color: grey;
+}
