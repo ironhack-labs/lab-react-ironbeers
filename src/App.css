@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 30px;
+}
+
+.navigation-link {
+  padding: 0 200px 30px;
+  text-decoration: none;
+  color: black;
+}
