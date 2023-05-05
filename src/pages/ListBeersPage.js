@@ -18,7 +18,7 @@ function ListBeersPage() {
     return (
         <div>
             <NavBar />
-            
+            <br /><br />
             <div>
                 <h1>List of beers:</h1>
                 {beers.map(beer => (

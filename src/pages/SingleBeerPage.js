@@ -21,7 +21,7 @@ function SingleBeerPage() {
     return (
         <div>
             <NavBar />
-
+            <br /><br />
             <div className="single-beer">
                 <img src={singleBeer.image_url} alt="Beer" width={200}></img>
                 <div className="single-beer-info">
@@ -33,7 +33,7 @@ function SingleBeerPage() {
                         <h3 className="grey-text">{singleBeer.tagline}</h3>
                         <h3>{singleBeer.first_brewed}</h3>
                     </div>
-                    <p>{singleBeer.description}</p>
+                    <p className="text-justify">{singleBeer.description}</p>
                     <p>{singleBeer.contributed_by}</p>
                 </div>
             </div>

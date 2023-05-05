@@ -18,7 +18,7 @@ function RandomBeerPage() {
     return (
         <div>
             <NavBar />
-
+            <br /><br />
             <div className="single-beer">
                 <img src={randomBeer.image_url} alt="Beer" width={200}></img>
                 <div className="single-beer-info">
@@ -30,7 +30,7 @@ function RandomBeerPage() {
                         <h3 className="grey-text">{randomBeer.tagline}</h3>
                         <h3>{randomBeer.first_brewed}</h3>
                     </div>
-                    <p>{randomBeer.description}</p>
+                    <p className="text-justify">{randomBeer.description}</p>
                     <p>{randomBeer.contributed_by}</p>
                 </div>
             </div>
