@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header{
+  background-color: rgb(0, 174, 255);
+  color: white;
+  height: 10vh;
+  text-align: center;
+  font-size: 30px;
+}
+
+.beer-btn img {
+  height: 30vh;
+}
+
+.beerElement{
+  border: 1px solid black;
+  display: flex;
+  padding: 10px;
+  margin: 5px;
+}
+.beerElement img {
+  height: 15vh;
+  padding-right: 15px;
+}
+
+.beerDetail {
+  text-align: center;
+  padding: 15px;
+}
+.beerDetail img {
+  height: 40vh;
+}
