@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import './App.css';
+import Home from './components/Home'
+import Beers from './components/Beers'
+import BeerDetails from './components/BeerDetails';
+import NewBeer from './components/NewBeer';
 
 function App() {
+  const location = useLocation()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {location.pathname !== '/' && <Link to={'/'}>Home</Link>}
+      <Routes>
+        <Route path='/' element={ <Home />}/>
+        <Route path='/beers' element={ <Beers />} />
+        <Route path='/beers/:id' element={ <BeerDetails />} />
+        <Route path='/random-beer' element={ <BeerDetails random={true} /> } />
+        <Route path='/new-beer' element={ <NewBeer /> } />
+      </Routes>
+      
     </div>
   );
 }
