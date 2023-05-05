@@ -28,7 +28,7 @@ function HomePage() {
 
       <Link className="link-homepage" to="/random-beer">
         <img src={randomBeerImage} alt="Random beer" />
-        <h2>New beer</h2>
+        <h2>Random beer</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore.

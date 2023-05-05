@@ -35,3 +35,15 @@ select {
   margin: 10px;
   font-size: 18px;
 }
+
+.image-detailpage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80vw;
+}
+
+.image-beer-detail img {
+  height: 400px;
+  margin: 30x;
+}

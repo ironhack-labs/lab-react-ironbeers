@@ -1,18 +1,7 @@
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
 
-function Beers() {
-  const [beersAll, setBeersAll] = useState([]);
-  /* const [fetching, setFetching] = useState(true); */
-
-  useEffect(() => {
-    axios.get("https://ih-beers-api2.herokuapp.com/beers").then((response) => {
-      setBeersAll(response.data);
-    });
-  }, []);
-
+function Beers({ beersAll }) {
   if (!beersAll) return <p>Page is loading... ❤</p>;
 
   return (
