@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
-}
+@media only screen and (max-width: 768px) {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
+  .App {
+    text-align: center;
+  }
+  
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
   }
-  to {
-    transform: rotate(360deg);
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
   }
+  
+  .App-link {
+    color: #125467;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .nav-container {
+    background-color: #205a69;
+    height: 60px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Link {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 1.2rem;
+    color: #282c34;
+    text-align: left;
+    margin: 10px 0 0 15px;
+    padding: 0;
+  }
+  
+  .paragraph {
+    text-align: left;
+    margin: 15px 5px 15px 15px;
+    padding: 0;
+    color: gray;
+  }
+
+  .fa-home {
+    color: aliceblue;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .beer-container {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .beer-box-photo {
+    align-items: start;
+    margin: 15px 25px;
+  }
+
+  .beer-box-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;  
+  }
+
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-box > div {
+    margin-bottom: 20px;
+  }
+  
+  .form-box label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-box input,
+  .form-box textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-box button {
+    margin: 0 auto;
+    background-color: #89c53b;
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    
+  }
+
+  .form-box button a {
+    color: rgb(220, 214, 214);
+    text-decoration: none;
+  }
+  
+  /* .form-box button:hover {
+    background-color: #e67e22;
+  } */
+  
 }
