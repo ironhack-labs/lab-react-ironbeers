@@ -7,10 +7,13 @@ function Details(props) {
 
     const [beer, setBeer] = useState({});
     const { beerId } = useParams();
+    console.log(beerId)
 
     useEffect(() => {
+        if (!beerId) return
+
         axios
-          .get("https://ih-beers-api2.herokuapp.com/beers/:id")
+          .get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
           .then((response) => {
             console.log("response.data", response.data);
             setBeer(response.data);

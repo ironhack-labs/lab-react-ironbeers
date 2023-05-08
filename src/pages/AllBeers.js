@@ -1,12 +1,35 @@
 import Navbar from "../components/Navbar";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
-function AllBeers(props) {
+function AllBeers() {
+
+  const [beers, setBeers] = useState()
+  const [query, setQuery] = useState('');
+
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
+  }
+
+  console.log(query)
+
+  useEffect(() => {
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+      .then((response) => {
+        setBeers(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [query]);
+  
   return (
     <div>
         <Navbar />
-        {props.beers.map((beer) => {
+        <input type="text" value={query} onChange={handleInputChange} />
+        {beers?.map((beer) => {
           return (
             <div key={beer._id} className="beer-container">
               <div className="beer-box-photo">
