@@ -1,29 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import beers from "./assets/beers.png";
-import randomBeers from "./assets/random-beer.png";
-import newBeer from "./assets/new-beer.png";
+import HomePage from './components/HomePage';
+import BeersList from './components/BeersList';
+import BeerDetails from './components/BeerDetails';
+import RandomBeer from './components/RandomBeer';
+import NewBeer from './components/NewBeer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="Home">
-         <img src={beers} alt="beers"/>
-         <h1>All beers</h1>
-         <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
-       </div>
-       <div className="Home">
-        <img src={randomBeers} alt="random-beers"/>
-        <h1>Random beer</h1>
-        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
-      </div>
-      <div className="Home">
-        <img src={newBeer} alt="new-beer" />
-        <h1>New beer</h1>
-        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span>
-      </div>
-      </header>
+      <Router>
+        <Routes>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/beers" component={BeersList} />
+          <Route path="/random-beer" component={RandomBeer} />
+          <Route path="/new-beer" component={NewBeer} />
+          <Route path="/:id" component={BeerDetails} />
+        </Routes>
+      </Router>
     </div>
   );
 }
