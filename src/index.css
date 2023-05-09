@@ -1,13 +1,65 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+h4,  strong {
+  font-weight: 400;
+  color: var(--text-title);
+  text-align: justify;
+  font-size: 1rem;
+  opacity: 0.6; 
+  color: white; text-shadow: #00000060 0.1em 0.1em 0.2em;
+  filter: saturate(30%) invert(50%); 
+ 
+
 }
+
+h5,  strong {
+  font-weight: 400;
+  color: var(--text-title);
+  text-align: justify;
+  font-size: 1.5rem;
+
+}
+
+h6,  strong {
+  font-weight: 400;
+  color: var(--text-title);
+  text-align: justify;
+  font-size: 1rem;
+}
+
+
+.homeLogo {
+  width: 10vw;
+  margin: auto;
+  display: block;
+
+
+}
+
+.navBar {
+  background-color: rgb(31, 129, 194);
+}
+
+.beerImage {
+  height: 30vh;
+}
+/* 
+.info {
+  display: flex;   display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+ 
+} */
