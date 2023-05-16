@@ -40,7 +40,7 @@ Since beer is one of the most consumed drinks by Ironhackers 🍻 , our mission 
 - Clone this repo
 
 ```shell
-cd lab-react-ironbeers
+cd lab-react-ironbeers-vite
 npm install
 npm run dev
 ```
