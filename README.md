@@ -2,7 +2,33 @@
 
 # LAB | React IronBeers
 
-Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mission here is to create an app to showcase some of the best-handcrafted beers, but not just that - to save some as well so the rest of Ironhack community is informed 😌. Our end goal is creating something like this:
+<details>
+  <summary>
+   <h2>Learning Goals</h2>
+  </summary>
+
+This exercise allows you to practice and apply the concepts and techniques taught in class.
+
+
+
+After completing this exercise, you will be able to:
+
+  - Create a React application that contains multiple pages using React Router.
+  - Use React Router `useParams` hook to access the URL parameters.
+  - Create a page component that renders content based on URL parameter values.
+  - Perform side effects in a component with the `useEffect` hook.
+  - Make a `GET` request to an API (backend) and store retrieved data in the component's state.
+  - Make a `POST` request to an API (backend) to create a new item on the API.
+  - Create controlled components to manage the form inputs.
+
+  <br>
+  <hr> 
+
+</details>
+
+
+
+Since beer is one of the most consumed drinks by Ironhackers 🍻 , our mission here is to create an app to showcase some of the best handcrafted beers, but not just that - to save some as well so the rest of Ironhack community is informed 😌. Our end goal is to create something like this:
 
 <div style="display: flex; justify-content: center">
 <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
@@ -16,7 +42,7 @@ Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mis
 ```shell
 cd lab-react-ironbeers
 npm install
-npm start
+npm run dev
 ```
 
 ## Submission
@@ -29,32 +55,76 @@ npm start
   git push origin master
   ```
 
-- Create Pull Request so that your TAs can check up your work.
+- Create a Pull Request and submit your assignment.
+
+<br>
+
+##  Test Your Code
+
+This lab is equipped with unit tests to provide automated feedback on your progress and help you understand whether your code is working as expected. If you want to check the tests, they are located in the `src/test` folder.
+
+
+### Iterations and Test Results
+
+During an iteration, if your code seems to work as expected but some tests don't pass, feel free to move on to the next iteration. Once you've completed all the mandatory iterations, you can go back and resolve any remaining failed test
+
+<br>
+
+### Run the Tests
+
+1. To execute the tests, run the following command in the terminal:
+
+   ```shell
+   npm run test
+   ```
+
+2. The above command will execute the tests and open the `@vitest/ui` Test Reporter in the browser. 
+
+3. To see the test results, **open** [http://127.0.0.1:51204/\_\_vitest\_\_](http://127.0.0.1:51204/__vitest__) in your browser.
+
+<br>
 
 ## Introduction
 
-We will be building a React app so the API (server) needs to be built somewhere for us, right? You are completely right, it's deployed on _heroku_ and the root fo the API is:
-**`https://ih-beers-api2.herokuapp.com/beers`**.
+### Beers API (backend)
 
-The available endpoints are the following:
+We will be building a React app, so the API (backend) needs to be built somewhere for us, right? You are completely right, it's deployed on _Heroku_, and the base URL of the API is:
 
-| Method | Endpoint            | Response (200)                                         | Action                                                                                                                                  |
-| ------ | ------------------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | /                   | [beers]                                                | Get all the beers from the DB                                                                                                           |
-| GET    | /:id                | { beer }                                               | Get the a single/specific beer                                                                                                          |
-| GET    | /random             | { beer }                                               | Get a random beer from the DB                                                                                                           |
-| POST   | /new                | { message: "New beer successfully saved to database!"} | Create a new beer (the fields are specified in the instructions)                                                                        |
-| GET    | /search?q=`{query}` | [beers]                                                | Get beers from the DB whose name contains the search term. For example `/search?q=lager` searches for all beers with lager in the name. |
+**`https://ih-beers-api2.herokuapp.com/beers`**
 
-On each iteration, we will explain which endpoint you should use!
 
-The **IronBeers** project will include the following features:
 
-- A **Home** page with three different options:
+The API provides the following endpoints:
+
+| Method | Endpoint            | Response (200)                                         | Action                                                       |
+| ------ | ------------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
+| `GET`  | `/`                 | [beers]                                                | Get all the beers from the DB                                |
+| `GET`  | `/:id`              | { beer }                                               | Get a single/specific beer                                   |
+| `GET`  | `/random`           | { beer }                                               | Get a random beer from the DB                                |
+| `POST` | `/new`              | { message: "New beer successfully saved to database!"} | Create a new beer (see iteration 7 for fields)               |
+| `GET`  | `/search?q={query}` | [beers]                                                | Search beers by name containing the specified term. Example: `/search?q=lager` query will return all beers with the word lager in their name. |
+
+<br>
+
+
+
+You can refer to this section any time during the exercise for information about the API endpoints and their usage.
+
+
+
+**Note:** The first time you make a request to the API, it might take a bit longer to respond.
+
+<br>
+
+### App Overview (frontend)
+
+The **IronBeers** app will include the following features:
+
+- A **Home** page with links to 3 different pages:
   - _All Beers_
   - _Random Beer_
   - _New Beer_
-- A **List Beers** page where you should display all the beers
+- An **All Beers** page where you should display all the beers
 - A **Single Beer** page to display the details of the beer the user clicked on
 - A **Random Beer** page to display a Random Beer
 - A **New Beer** page to show a form where a user can create new beers
@@ -63,62 +133,200 @@ The **IronBeers** project will include the following features:
 
 ## Instructions
 
-:exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design! As we said this is bonus, so it's up to you. :+1:
+### Iteration 1 | Setup React Router and Create Routes
 
-<!-- ### Iteration 1: Create the App
+The first step is configuring React Router to allow you to create and navigate between different pages in your app:
 
-Well, at this point, this comes natural: we will use `create-react-app` to build a new app. Feel free to name it as you wish, but if you need some inspiration, we called it **Reactive BeersJS**. -->
+
+
+1. Set up React Router in your `src/main.jsx` file:
+
+```jsx
+// src/main.jsx
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <Router>
+    <App />
+  </Router>
+);
+```
 
 <br>
 
-### Iteration 1 | Home Page
+2. In your `App.jsx` set up the routes that render the following pages:
 
-Create a **Home Page**. This view should include three links to separate pages:
+- Route `/`, which renders the `HomePage` component
+- Route `/beers`, which renders the `AllBeersPage` component.
+- Route `/random-beer`, which renders the `RandomBeerPage` component.
+- Route `/new-beer`, which renders the `AddBeerPage` component.
+- Route `/beers/:beerId`, which renders the `BeerDetailsPage` component.
 
-- `/beers`
-- `/random-beer`
-- `/new-beer`
 
-Feel free to design it however you wish, but in case you want to do it the way we did it, you can find the following images in `src/assets` folder:
+
+<br>
+
+
+
+### Iteration 2 | Home Page
+
+Implement the `HomePage` component located in the `src/pages/HomePage.jsx` so that it includes links to the following pages:
+
+- `/beers` - to the "All Beers" page
+- `/random-beer` - to the "Random Beer" page
+- `/new-beer` - to the "New Beer" page
+
+<br>
+
+Feel free to style the page in any way that you prefer. If you want to follow the below example, you can find the corresponding images in the `src/assets` folder.
+
+<br>
+
+<details>
+
+  <summary><b>See Expected Result</b></summary>
+
+
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png" height="600px" />
 </div>
+
+
+
+  <br>
+
+</details>
+
+
+
 <br>
 
-### Iteration 2 | Header
+### Iteration 3 | Navbar
 
-On every view (except for the `home`), we should add a **header** with a `link` to the root of the `app`.
+In this iteration, you will work on the `Navbar` component located in `src/components/Navbar.jsx`.
+
+The `Navbar` component should render a `nav` element with a `Link` that, when clicked, navigates to the Home Page (`/`).
+
+The `Navbar` component should be rendered on every page.
+
+<br>
+
+<details>
+
+
+  <summary><b>See Expected Result</b></summary>
+
+
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png" height="100px" />
 </div>
+
+
+
+  <br>
+
+</details>
+
+
+
 <br>
 
-### Iteration 3 | List all the beers
 
-On the `/beers` route, we should display all the beers from the database. So, in this case, you need to "hit" the API's route `https://ih-beers-api2.herokuapp.com/beers` and the API will return an **array of beers**.
 
-_Hint_: The array of beers is array of objects. We strongly advise you to **console log the response** from the API so you can see the structure of it.
+### Iteration 4 | List all the beers
 
-You should display the following from each of the beers:
+Next, we'll work on the `AllBeersPage` component in the `src/pages/AllBeersPage.jsx`.
+
+The `AllBeersPage` that gets rendered on the route `/beers`, should display a list of all the beers from the API. 
+
+
+
+To do this, you need to make a `GET` request to the Beers API endpoint `https://ih-beers-api2.herokuapp.com/beers`. This API endpoint returns an **array of beers**. 
+
+**Hint**: The array of beers is an *array* of *objects*. You should **`console.log`** the response data to help you visualize the structure of the beer objects and how the data is structured.
+
+
+
+The list should display the following info for each beer:
 
 - `image`
+
 - `name`
+
 - `tagline`
+
 - `contributed_by`
-- **Also, add the link to check the details of each beer. The link should navigate to `/beers/:beerId`.**
+- **Each beer in the list should include a `Link`** to the beer details page **`/beers/:beerId`** , where `:beerId` is the unique identifier for the beer. 
+
+
+
+<br>
+
+
+
+<details>
+
+
+  <summary><b>See Expected Result</b></summary>
+
+
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40706960-96223ade-63ef-11e8-9375-b7b6d091e716.png" height="600px" />
 </div>
-The first time you call the API, it might take a bit to respond. It's hosted on Heroku, and it goes to sleep after 30 minutes, you know! :wink:
+
+
+
+  <br>
+
+</details>
+
+
 
 <br>
 
-### Iteration 4 | Display a single beer
 
-When a user click on one of the beers, you should display a detailed view of it, including the following fields:
+
+### Iteration 5 | Display a single beer
+
+In this iteration, you will work on the `BeerDetailsPage` component in the `src/pages/BeerDetailsPage.jsx`.
+
+When a user clicks on one of the beers in the list on the `AllBeersPage`, they should be navigated to the *Beer Details page* (`BeerDetailsPage`) where details of that specific beer should be shown.
+
+<br>
+
+#### 5.1 | Access URL Parameter
+
+To access URL parameter `beerId` from the browser's URL bar, use the React Router hook `useParams`.
+
+Check [this example](https://reactrouter.com/en/6.10.0/hooks/use-params) if you need a reminder of how to set up the useParams hook and access the URL parameters.
+
+<br>
+
+
+
+#### 5.2 | Make a request to the API
+
+To get the beer details, you need to make a `GET` request to the Beers API endpoint `https://ih-beers-api2.herokuapp.com/beers/:id`, where `:id` should be replaced with the id of the selected beer. 
+
+**Example:** [https://ih-beers-api2.herokuapp.com/beers/**5fb6a86265b9c209606e10e2**](https://ih-beers-api2.herokuapp.com/beers/5fb6a86265b9c209606e10e2)
+
+Remember to **`console.log`** the response data to help you visualize the structure of the beer object and how the data is structured.
+
+<br>
+
+
+
+#### 5.3 | Display Beer Details
+
+The `BeerDetailsPage` component should display the following information about the selected beer:
 
 - `image`
 - `name`
@@ -128,17 +336,44 @@ When a user click on one of the beers, you should display a detailed view of it,
 - `description`
 - `contributed_by`
 
-Again, we **strongly recommend to console log the response from the API**.
+<br>
+
+
+
+<details>
+
+
+  <summary><b>See Expected Result</b></summary>
+
+
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707269-84bedd78-63f0-11e8-86c3-b14efb9323a7.png" height="600px" />
 </div>
+
+
+
+  <br>
+
+</details>
+
+
+
 <br>
 
-### Iteration 5 | A random beer
 
-On the `/random-beer` route, we will render a single beer that will be retrieved from the database. The endpoint will do all the job for us, all we need to do is to call `https://ih-beers-api2.herokuapp.com/beers/random`. We should receive an object including all the info about a beer.
-The same way we did with the **Single Beer** view, we should render the following fields:
+
+### Iteration 6 | A random beer
+
+In this iteration, you will work on the `BeerDetailsPage` component in the `src/pages/BeerDetailsPage.jsx`.
+
+
+
+When the `RandomBeerPage` component is rendered on the `/random-beer` route, it should show a random beer retrieved from the Beers API. To get the data of a random beer, you need to make a `GET` request to the endpoint `https://ih-beers-api2.herokuapp.com/beers/random`.
+
+<br>
+
+The `RandomBeerPage` component should display the following information about the random (same as in the `BeerDetailsPage`):
 
 - `image`
 - `name`
@@ -148,43 +383,131 @@ The same way we did with the **Single Beer** view, we should render the followin
 - `description`
 - `contributed_by`
 
+
+
+<br>
+
+
+
+<details>
+
+
+  <summary><b>See Expected Result</b></summary>
+
+
+
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707457-05a22990-63f1-11e8-84b2-a86143b7b821.png" height="600px" />
 </div>
+
+
+
+
+
+  <br>
+
+</details>
+
+
+
 <br>
 
-### Iteration 6 | Create a new beer
 
-Finally, on the `/new-beer` route (remember, this is you react route, you're displaying the form on this route), we should render a form where user can create new beers. The `form` should include the following fields:
 
-- **name** - must be type _text_
-- **tagline** - must be type _text_
-- **description** - must be type _text_
-- **first_brewed** - must be type _text_
-- **brewers_tips** - must be type _text_
-- **attenuation_level** - must be type _number_ **!!!**
-- **contributed_by** - must be type _text_
+### Iteration 7 | Create a new beer
 
-Why we pointed out the type? Well, since we already console log response from the API, we could notice that all the fields are strings but _attenuation_level_, which is number. Using our knowledge from module II, we can make conclusion that in the _beer model_ all the properties are type _String_ except _attenuation_level_, which is type _Number_.
-When you have built the form, you should do a `POST` request to `https://ih-beers-api2.herokuapp.com/beers/new`, passing all the data on the `body` object. If everything went ok, you would receive a **200** response from the server.
+In this iteration, you will work on the `AddBeerPage` component in the `src/pages/AddBeerPage.jsx`.
 
-Notice that the fields on the `body` should have those specific **names** so the API can create a new beer.
 
-_What could go wrong?_: You inputted string instead of number in the _attenuation_level_ field and the server sent you **500** error.
-Since we didn't cover how to upload images yet, don't worry about it now - the API will assign a random image to the new beer. :beer:
+
+When the user navigates to the `/new-beer` route in your react app, the `AddBeerPage` component should be rendered, displaying a `form` where the user can create new beers. 
+
+<br>
+
+
+The `form` should include the following:
+
+- `input`:
+  - Label: Name
+  - Attributes: `name="name"` and `type="text"`
+- `input`:
+  - Label: Tagline
+  - Attributes: `name="tagline"` and `type="text"`
+- `textarea`:
+  - Label: Description
+  - Attributes: `name="description"` and `type="text"`
+- `input`:
+  - Label: First Brewed
+  - Attributes: `name="first_brewed"` and `type="text"`
+- `input`:
+  - Label: Brewer's Tips
+  - Attributes: `name="brewers_tips"` and `type="text"`
+- `input`:
+  - Label: Attenuation Level
+  - Attributes: `name="attenuation_level"` and **`type="number"`**
+- `input`:
+  - Label: Contributed By
+  - Attributes: `name="contributed_by"` and `type="text"`
+- `button`:
+  - Text: "Add Beer"
+  - Attributes: `type="submit"`
+
+<br>
+
+**Note:** All inputs are of type `text` except `attenuation_level`, which is of type `number`. This is important because the API will only accept the request if all values have the correct data types.
+
+<br>
+
+Once you are done creating the form, make a `POST` request to the API endpoint `https://ih-beers-api2.herokuapp.com/beers/new`, passing all the input values in the request `body` as an object. The fields of the request `body` should have exact **names** so that the API can create a new beer.
+
+If everything goes well, you will receive a **200** response from the server. :beer:
+
+The `attenuation_level` value must be set to the correct data type of `number`.  If a `string` is sent instead, the API will respond with a **500** error status code.
+
+<br>
+
+
+
+<details>
+
+
+  <summary><b>See Expected Result</b></summary>
+
+
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
 </div>
+
+
+
+
+
+  <br>
+
+</details>
+
+
+
+
+
 <br>
 
-### Iteration 7 | Bonus | Filter the beers
+### Bonus: Iteration 8 | Filter the beers
 
-Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beers-api2.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
+As the final feature, we will implement a search functionality where users can filter beers based on keywords.
+
+In the `AllBeersPage` component, add an `input` where users can type in their search query. Every time the user types a new letter, you should call to `https://ih-beers-api2.herokuapp.com/beers/search?q={query}`, passing the input value as the `q` param.
+
+
 
 **We are done!** :trophy:
 
-Awesome! Grab a beer (if you're not underage :wink: )! Now you are a **React Warrior**, keep training to become the Ninja!
+
+
+Awesome! If you're of legal drinking age and allowed to, feel free to celebrate with a beer! :wink: You've now become a **React Warrior**. Keep practicing, and soon you'll be a React Ninja!
+
+<br>
 
 Happy coding! :heart:
 
@@ -220,12 +543,12 @@ Happy coding! :heart:
   There are a few things you can try to resolve the issue:
 
   1. **Dependencies are not installed**: Make sure that all dependencies are installed.
-   To do this, run the command `npm install` in the root folder of your project.
-   This will install all of the dependencies listed in the project's `package.json` file, and ensure that all of the modules that your Node'js application requires are available.
+      To do this, run the command `npm install` in the root folder of your project.
+      This will install all of the dependencies listed in the project's `package.json` file, and ensure that all of the modules that your Node'js application requires are available.
 
   2. **Module is not installed**: Make sure that the *package* you are trying to use is listed in the project's `package.json` and that it is installed.
-   To do this, run the command `npm install <package_name>`, replacing the `<package_name>` with the name of the package.
-   This will add the package to the list of dependencies in the `package.json` file, and install it in the project.
+      To do this, run the command `npm install <package_name>`, replacing the `<package_name>` with the name of the package.
+      This will add the package to the list of dependencies in the `package.json` file, and install it in the project.
 
   3. **Module is not imported:** Make sure that you've imported the module/package correctly and that the `import` statement is spelled correctly and available in the correct place in your code.
 
@@ -305,9 +628,9 @@ Happy coding! :heart:
   <br>
 
   The warning *"Each child in a list should have a unique “key” prop"*  means that you are trying to render a list of elements, but one or more elements is missing the `key` prop.
-  
+
   To fix this, add a `key` prop to each element you return from the `map()` when rendering the list. The key should be a unique identifier for that element, such as an item ID or the id of the document from the database.
-  
+
   For example, if you have an array of objects with the following structure:
 
   ```js
@@ -584,7 +907,7 @@ const projects = [
   ```
 
   2. **You do not have permission to push to the repository:** If you have cloned the repository directly from the main Ironhack repository without making a *Fork* first, you do not have write access to the repository.
-  To check which remote repository you have cloned, run the following terminal command from the project folder:
+    To check which remote repository you have cloned, run the following terminal command from the project folder:
 
   ```bash
   git remote -v
@@ -598,5 +921,4 @@ const projects = [
   [Back to top](#faqs)
 
 </details>
-
 
