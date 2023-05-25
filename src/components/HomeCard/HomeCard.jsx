@@ -11,8 +11,7 @@ const BeersCard = ({ img, title }) => {
             <Card.Title className='mt-3'>{title}</Card.Title>
             <Card.Body className='mt3'>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cum autem quia magnam illum reprehenderit sint ea, mollitia suscipit ut perferendis optio, maiores sunt sit sequi natus iste labore veritatis?
                 </Card.Text>
             </Card.Body>
         </Card>
