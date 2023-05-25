@@ -1,0 +1,10 @@
+.beerImgDetail {
+
+    height: 400px;
+    object-fit: cover;
+}
+
+.beerImg {
+    text-decoration: none;
+    text-align: center;
+}
