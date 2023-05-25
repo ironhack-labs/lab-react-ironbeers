@@ -2,9 +2,12 @@
 import { useState } from "react"
 import { Form, Button, Row, Col } from "react-bootstrap"
 import beersService from "../../services/beers.services"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+
 
 const NewBeerForm = () => {
+
+    const navigate = useNavigate()
 
     const [beer, setBeer] = useState({
         name: '',
@@ -25,7 +28,7 @@ const NewBeerForm = () => {
         event.preventDefault()
 
         beersService.saveBeer(beer)
-            .then(() => <Link to={'beers'} />)
+            .then(() => navigate('/beers'))
             .catch(err => console.log(err))
     }
 

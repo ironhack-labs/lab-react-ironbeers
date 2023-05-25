@@ -1,4 +1,4 @@
-import { Card, Container } from 'react-bootstrap'
+import { Card, Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import beersPic from '../../assets/beers.png'
@@ -11,28 +11,34 @@ const HomePage = () => {
 
     return (
 
-        <>
-            <Container className='mt-5 mb-5'>
-                <Link to={'/beers'}>
-                    <HomeCard img={beersPic} title={'Beers'} />
-                </Link>
-            </Container>
+        <Container className='mt-5'>
+            <Row>
+                <Col>
+                    <Container className='mt-5 mb-5'>
+                        <Link to={'/beers'}>
+                            <HomeCard img={beersPic} title={'Beers'} />
+                        </Link>
+                    </Container>
 
-            <Container className='mt-5 mb-5'>
-                <Link to={'/random-beer'}>
-                    <HomeCard img={randomBeerPic} title={'Random Beer'} />
-                </Link>
-            </Container>
+                </Col>
 
+                <Col>
+                    <Container className='mt-5 mb-5'>
+                        <Link to={'/random-beer'}>
+                            <HomeCard img={randomBeerPic} title={'Random Beer'} />
+                        </Link>
+                    </Container>
+                </Col>
 
-            <Container className='mt-5 mb-5'>
-                <Link to={'/new-beer'}>
-                    <HomeCard img={newBeerPic} title={'New Beer'} />
-                </Link>
-            </Container>
-        </>
-
-
+                <Col>
+                    <Container className='mt-5 mb-5'>
+                        <Link to={'/new-beer'}>
+                            <HomeCard img={newBeerPic} title={'New Beer'} />
+                        </Link>
+                    </Container>
+                </Col>
+            </Row>
+        </Container>
 
     )
 }
