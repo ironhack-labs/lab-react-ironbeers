@@ -1,0 +1,9 @@
+.beerImg {
+    width: 100%;
+    object-fit: cover;
+}
+
+.beerCard {
+    text-decoration: none;
+    text-align: center;
+}
