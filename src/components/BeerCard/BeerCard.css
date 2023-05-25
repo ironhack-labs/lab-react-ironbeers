@@ -1,0 +1,20 @@
+#beerCard__container--body {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    margin: 5%;
+    color: black;
+    text-decoration: none;
+}
+
+#beerCard__container--text {
+    text-align: left;
+    margin-left: 5%;
+}
+
+#beerCard__img {
+    /* height: 10em; */
+    height: 15%;
+    width: 15%;
+    object-fit: contain;
+}

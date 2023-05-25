@@ -1,0 +1,20 @@
+[
+    {
+        "title": "All Beers",
+        "link": "/beers-list",
+        "imgScr": "../../../assets/beers.png",
+        "text": "Go to list of all our beers in database!"
+    },
+    {
+        "title": "Random Beer",
+        "link": "/beers-random",
+        "imgScr": "../../../assets/new-beer.png",
+        "text": "Feel lucky? Get a random beer!"
+    },
+    {
+        "title": "New Beer",
+        "link": "/beers-create",
+        "imgScr": "../../../assets/random-beer.png",
+        "text": "Do you know a beer that´s not in our archive? Create it!"
+    }
+]
