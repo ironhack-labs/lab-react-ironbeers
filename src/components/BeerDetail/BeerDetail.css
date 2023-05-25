@@ -1,0 +1,22 @@
+#beerDetail__container--text {
+    text-align: left;
+}
+
+#beerDetail__container--body {
+    margin: 10%;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+#beerDetail__img {
+    height: 10%;
+    width: 10%;
+}
+
+#beerDetail__container--title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5%;
+}
