@@ -1,0 +1,36 @@
+.BeerCard:hover {
+    background-color: #aaaaaa;
+}
+
+.beer-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.beer-card-img {
+    max-width: 10%;
+    height: auto;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.beer-title {
+    color: #3e3e3e
+}
+
+.tagline {
+    color: grey;
+    font-size: 0.8em;
+}
+
+.contributed-by {
+    font-size: 0.6em;
+    color: black;
+}

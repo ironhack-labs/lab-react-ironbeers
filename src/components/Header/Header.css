@@ -1,0 +1,14 @@
+.header {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}

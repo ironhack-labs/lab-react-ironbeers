@@ -1,0 +1,9 @@
+.link {
+    text-decoration: none;
+    color: black;
+    background-color: #dedede;
+}
+
+.link:hover {
+    color: inherit
+}
