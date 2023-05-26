@@ -1,0 +1,13 @@
+.Header {
+
+    background-color: rgb(0, 166, 255);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.Header img {
+    width: 50px;
+    align-items: center
+}
