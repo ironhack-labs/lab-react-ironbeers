@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  text-decoration: none;
 }
 
 .App-logo {
@@ -15,11 +16,9 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -35,4 +34,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-picture{
+  width: 100%;
+}
+
+.banner-text{
+  text-align: left;
+  margin-left: 20px;
+}
+
+.w-link{
+  text-decoration: none;
+  color: white;
+}
+
+.b-link{
+  text-decoration: none;
+  color: black;
+}
+
+.homebttn {
+  margin: 0px 200px 3px 0px;
 }
