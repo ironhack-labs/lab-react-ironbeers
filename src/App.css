@@ -13,9 +13,9 @@
   }
 }
 
-.App-header {
+.header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.beer-img{
+  width: 20%;
+  aspect-ratio: 1/2.7;
+}
+
+.beer-card{
+  text-decoration: none;
 }
