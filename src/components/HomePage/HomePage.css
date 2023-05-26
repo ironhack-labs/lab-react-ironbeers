@@ -1,0 +1,19 @@
+img {
+    width: 30%;
+    margin: 20px;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-weight: lighter;
+    color: gray;
+}
