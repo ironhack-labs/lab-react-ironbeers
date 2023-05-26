@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-bar-style{
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: burlywood;
+
+}
+#home-page-style{
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ /*  width: 200px; */
+
+
+
+}
+#home-page-style h3{
+
+  align-items: center;
+  background-color: aqua;
+  /* width: 100px; */
+
+}
+#home-page-style p{
+
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+
+}
