@@ -1,0 +1,12 @@
+.homeArticle {
+    text-align: left;
+}
+
+.homeArticle p {
+    font-size: 0.8em;
+}
+
+.huge-home-button:hover {
+    background-color: #aaaaaa;
+
+}
