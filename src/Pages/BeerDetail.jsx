@@ -35,6 +35,6 @@ function RandomBeerPage() {
             </div>
     </div>
   );
-}
+};
 
 export default RandomBeerPage;
