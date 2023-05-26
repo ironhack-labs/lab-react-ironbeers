@@ -32,7 +32,30 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.Navbar {
+
+  text-align: center;
+  background: #32C3FF;
+  padding: 5px 180px;
+}
+
+.Navbar li,
+.Navbar a {
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 20px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.Navbar img {
+  width: 70px;
 }
