@@ -7,6 +7,7 @@ import './Beers.css'
 const Beers = () => {
 
     const [beers, setBeers] = useState([])
+    const [query, setQuery] = useState('')
 
     const loadBeers = () => {
         beerApiService
@@ -23,6 +24,29 @@ const Beers = () => {
     }
 
     useEffect(() => {
+        if (query !== '') {
+            beerApiService
+                .searchBeers(query)
+                .then(({ data }) => {
+                    console.log(data)
+                    const ascSortedBeers = [...data]
+                    ascSortedBeers.sort((a, b) => {
+                        return a.name.localeCompare(b.name)
+                    })
+                    setBeers(ascSortedBeers)
+                })
+                .catch(err => console.log(err))
+        } else {
+            loadBeers()
+        }
+    }, [query])
+
+    const handleQueryChange = e => {
+        const inputValue = e.target.value
+        setQuery(inputValue)
+    }
+
+    useEffect(() => {
         loadBeers()
     }, [])
 
@@ -30,11 +54,13 @@ const Beers = () => {
         return <p>loading...</p>
     } else {
 
-
         return (
             <section className="Beers">
                 <h1>IronBeers</h1>
                 <hr />
+                <form className="SearchBar mb-4">
+                    <input type="text" placeholder=" Search for a beer" value={query} onChange={handleQueryChange} />
+                </form>
                 <Row>
                     {beers.map(elm => {
                         return (

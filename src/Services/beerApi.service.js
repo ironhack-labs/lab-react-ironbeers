@@ -24,6 +24,11 @@ class BeerApiService {
     saveBeer(beerData) {
         return this.api.post('/new', beerData)
     }
+
+    searchBeers(query) {
+        return this.api.get(`search?q=${query}`)
+    }
+
 }
 
 const beerApiService = new BeerApiService()
