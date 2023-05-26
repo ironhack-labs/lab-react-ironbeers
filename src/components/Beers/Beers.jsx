@@ -56,8 +56,8 @@ const Beers = () => {
 
         return (
             <section className="Beers">
-                <h1>IronBeers</h1>
-                <hr />
+                <h1 className="titleAllBeers">IronBeers</h1>
+                <hr className="hrAllBeers" />
                 <form className="SearchBar mb-4">
                     <input type="text" placeholder=" Search for a beer" value={query} onChange={handleQueryChange} />
                 </form>

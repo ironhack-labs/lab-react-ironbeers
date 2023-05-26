@@ -21,7 +21,13 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #3e3e3e;
+}
+
+hr {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .App-link {
