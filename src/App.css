@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 0;
 }
 
 .App-logo {
@@ -28,11 +29,46 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav{
+  background-color: #61dafb;
 }
+nav h3{
+  margin: 0;
+  padding: 2vh;
+}
+.home-article{
+  margin-top: 2vh;
+  width: 80vw;
+  text-align: left;
+}
+.home-article img{
+  width: 100%;
+  object-fit: cover;
+  height:40vh;
+}
+
+.beersList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+.beerCard{
+  display: flex;
+ width: 350px;
+  border: 1px solid black;
+  margin: 2vh 1vw;
+}
+.beerCard img{
+  height: 30vh;
+  object-fit: scale-down;
+  margin: 1vh 2vw;
+}
+.beer-info{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: baseline;
+  text-align: left;
+}
+
