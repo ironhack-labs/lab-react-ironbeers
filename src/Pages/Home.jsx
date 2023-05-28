@@ -14,7 +14,7 @@ function Home() {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et ultrices neque. Praesent mollis blandit neque a euismod. Phasellus ac elementum nibh. Nullam ultricies enim quis condimentum lobortis. Ut vel volutpat orci, at ullamcorper magna. Etiam et rutrum massa. Duis convallis lacus justo, id blandit mauris accumsan sollicitudin. In scelerisque dui at lectus feugiat posuere.</p>
         <img src={randomBeerImg} className="random-beer-img"/>
         <br></br>
-        <a href="/random-beer">Random Beer</a>
+        <a href="/random">Random Beer</a>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et ultrices neque. Praesent mollis blandit neque a euismod. Phasellus ac elementum nibh. Nullam ultricies enim quis condimentum lobortis. Ut vel volutpat orci, at ullamcorper magna. Etiam et rutrum massa. Duis convallis lacus justo, id blandit mauris accumsan sollicitudin. In scelerisque dui at lectus feugiat posuere.</p>
         <img src={newBeerImg} className="new-beer-img"/>
         <br></br>
