@@ -5,7 +5,7 @@ import axios from "axios";
 
 function AllBeers() {
   const [allBeers, setAllBeers] = useState();
-
+//comment
   useEffect(() => {
     const getBeers = async () => {
       const { data } = await axios(
