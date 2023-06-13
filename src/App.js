@@ -3,11 +3,12 @@ import { Link, Outlet, Route, Routes } from 'react-router-dom'
 import imgAllBeers from './assets/beers.png'
 import imgRandomBeer from './assets/random-beer.png'
 import imgNewBeer from './assets/new-beer.png'
+import Navbar from './components/Navbar'
 
 function PageLayout() {
 	return (
 		<div>
-			Navbar
+			<Navbar />
 			<main>
 				<Outlet />
 			</main>
