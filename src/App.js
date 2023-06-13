@@ -4,6 +4,9 @@ import imgAllBeers from './assets/beers.png'
 import imgRandomBeer from './assets/random-beer.png'
 import imgNewBeer from './assets/new-beer.png'
 import Navbar from './components/Navbar'
+import Beers from './components/Beers'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
 function PageLayout() {
 	return (
@@ -51,12 +54,22 @@ function Home() {
 }
 
 function App() {
+	const [beers, setBeers] = useState([])
+	useEffect(() => {
+		async function fetchBeers() {
+			const response = await fetch('https://ih-beers-api2.herokuapp.com/beers')
+			const data = await response.json()
+			setBeers([...data])
+		}
+		fetchBeers()
+	}, [])
+
 	return (
 		<div className="App">
 			<Routes>
 				<Route path="/" element={<PageLayout />}>
 					<Route path="/" element={<Home />} />
-					<Route path="/beers" element="" />
+					<Route path="/beers" element={<Beers beers={beers} />} />
 					<Route path="/random-beer" element="" />
 					<Route path="/new-beer" element="" />
 					<Route path="*" element={<h1>This page does not exist</h1>} />
