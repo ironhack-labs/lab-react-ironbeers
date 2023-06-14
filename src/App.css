@@ -25,7 +25,8 @@ header {
 }
 
 .beers-container,
-.beers-details {
+.beers-details,
+.random-beer-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +37,8 @@ header {
   border-radius: 10px;
 }
 
-.all-beer-img {
+.all-beer-img,
+.random-beer {
   width: 100px;
 }
 
