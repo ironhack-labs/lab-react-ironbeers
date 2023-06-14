@@ -5,6 +5,7 @@ import imgRandomBeer from './assets/random-beer.png'
 import imgNewBeer from './assets/new-beer.png'
 import Navbar from './components/Navbar'
 import Beers from './components/Beers'
+import Beer from './components/Beer'
 import { useEffect } from 'react'
 import { useState } from 'react'
 
@@ -70,6 +71,7 @@ function App() {
 				<Route path="/" element={<PageLayout />}>
 					<Route path="/" element={<Home />} />
 					<Route path="/beers" element={<Beers beers={beers} />} />
+					<Route path="/beers/:beerId" element={<Beer beers={beers} />} />
 					<Route path="/random-beer" element="" />
 					<Route path="/new-beer" element="" />
 					<Route path="*" element={<h1>This page does not exist</h1>} />
