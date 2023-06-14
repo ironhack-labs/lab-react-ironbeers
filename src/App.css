@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+.menu-link, .beer-link{
+  color: black;
+  text-decoration: none;
+}
+.menu{
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px gray solid;
+  border-radius: 10px;
+  padding:20px;
+}
+.menu img{
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  background-color: rgb(0, 191, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.beer-box{
+  display: flex;
+  padding: 20px;
+  margin: 10px;
+  border: 2px gray solid;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.beer-box img{
+  margin: 20px;
+}
+.start-end{
+  display: flex;
+  justify-content: space-between;
+  
+}    
+
+.single-beer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+.single-beer img{
+  height: 50vh;
+}
+
+form{
+  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+input, textarea{
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  border:0px;
+}
+label{
+  margin: 10px;
+}
+
+button{
+  border:0px;
+  border-radius: 10px;
+  background-color: rgb(0, 191, 255);
   color: white;
+  padding: 10px;
+  margin:20px;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-center{
+text-align: center;
+display: flex;
+justify-content: center;
 }
