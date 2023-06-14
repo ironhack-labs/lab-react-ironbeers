@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function AllBeers() {
-  const [allBeers, setAllBeers] = useState();
+  const [allBeers, setAllBeers] = useState([]);
 
   useEffect(() => {
     const getBeers = async () => {
@@ -18,11 +18,26 @@ function AllBeers() {
     console.log("beers", allBeers);
   }, []);
 
+  if (!allBeers) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div>
       <header>
         <Link to={"/"}>Back to Home</Link>
-      </header>{" "}
+      </header>
+      <h1>Beers</h1>
+      {allBeers.map((beer) => {
+        return (
+          <div key={beer._id} className="beers-container">
+            <img src={beer.image_url} alt="beer" className="all-beer-img" />
+            <h2>{beer.name}</h2>
+            <h3>{beer.tagline}</h3>
+            <h4>{beer.contributed_by}</h4>
+          </div>
+        );
+      })}
     </div>
   );
 }
