@@ -1,6 +1,14 @@
 .beer-links a {
   margin: 10px;
   padding: 10px;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(3, 63, 25);
+  font-size: 22px;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .home-icon {
@@ -16,7 +24,8 @@ header {
   background-color: rgb(227, 231, 228);
 }
 
-.beers-container {
+.beers-container,
+.beers-details {
   display: flex;
   justify-content: center;
   align-items: center;

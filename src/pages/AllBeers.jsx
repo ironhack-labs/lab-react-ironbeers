@@ -38,6 +38,7 @@ function AllBeers() {
             <h2>{beer.name}</h2>
             <h3>{beer.tagline}</h3>
             <h4>{beer.contributed_by}</h4>
+            <Link to={"/beers/:beerId"}>Check Beer Details</Link>
           </div>
         );
       })}
