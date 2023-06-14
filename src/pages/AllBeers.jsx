@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { SiHomebrew } from "react-icons/si";
 
 function AllBeers() {
   const [allBeers, setAllBeers] = useState([]);
@@ -24,8 +25,10 @@ function AllBeers() {
 
   return (
     <div>
-      <header>
-        <Link to={"/"}>Back to Home</Link>
+      <header className="header">
+        <Link to={"/"}>
+          <SiHomebrew className="home-icon" />
+        </Link>{" "}
       </header>
       <h1>Beers</h1>
       {allBeers.map((beer) => {

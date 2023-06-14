@@ -3,6 +3,19 @@
   padding: 10px;
 }
 
+.home-icon {
+  font-size: 70px;
+  color: rgb(3, 67, 30);
+  margin: 20px;
+}
+.navbar,
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(227, 231, 228);
+}
+
 .beers-container {
   display: flex;
   justify-content: center;
