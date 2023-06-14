@@ -1,0 +1,15 @@
+.Navbar {
+  background-color: #3DC4FC;
+  height: 50px;
+
+}
+
+i {
+  width: 20px;
+  height: 20px;
+  z-index: 4;
+}
+
+img {
+  height: 200px;
+}
