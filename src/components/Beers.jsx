@@ -9,7 +9,7 @@ function Beers(props) {
 
 			{props.beers.map((beer) => {
 				return (
-					<div>
+					<div key={beer._id}>
 						<img src={beer.image_url} alt={beer.name} width="100" />
 						<h2>{beer.name}</h2>
 						<p>{beer.tagline}</p>

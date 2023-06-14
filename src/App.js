@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import Beers from './components/Beers'
 import Beer from './components/Beer'
 import RandomBeer from './components/RandomBeer'
+import NewBeer from './components/NewBeer'
 import { useEffect } from 'react'
 import { useState } from 'react'
 
@@ -84,7 +85,7 @@ function App() {
 					<Route path="/beers" element={<Beers beers={beers} />} />
 					<Route path="/beers/:beerId" element={<Beer beers={beers} />} />
 					<Route path="/random-beer" element={<RandomBeer randomBeer={randomBeer} />} />
-					<Route path="/new-beer" element="" />
+					<Route path="/new-beer" element={<NewBeer />} />
 					<Route path="*" element={<h1>This page does not exist</h1>} />
 				</Route>
 			</Routes>
