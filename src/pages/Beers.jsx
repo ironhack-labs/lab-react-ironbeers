@@ -1,13 +1,15 @@
 import { Card, CardBody, Image, Stack, Heading, Text } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import beerImg from "../assets/beers.png";
+import BeerList from "../components/BeerList";
 
 function Beers() {
   return (
     <>
       <Navbar />
       <Card>
-        <CardBody>
+        <BeerList />
+        {/* <CardBody>
           <Image src={beerImg} alt="Beers" borderRadius="lg" />
           <Stack mt="6" spacing="3">
             <Heading size="md">All Beers</Heading>
@@ -18,7 +20,7 @@ function Beers() {
               vulputate laoreet quam.
             </Text>
           </Stack>
-        </CardBody>
+        </CardBody> */}
       </Card>
     </>
   );
