@@ -6,6 +6,7 @@ import imgNewBeer from './assets/new-beer.png'
 import Navbar from './components/Navbar'
 import Beers from './components/Beers'
 import Beer from './components/Beer'
+import RandomBeer from './components/RandomBeer'
 import { useEffect } from 'react'
 import { useState } from 'react'
 
@@ -65,6 +66,16 @@ function App() {
 		fetchBeers()
 	}, [])
 
+	const [randomBeer, setRandomBeer] = useState([])
+	useEffect(() => {
+		async function fetchRandomBeer() {
+			const response = await fetch('https://ih-beers-api2.herokuapp.com/beers/random')
+			const dataRandom = await response.json()
+			setRandomBeer(dataRandom)
+		}
+		fetchRandomBeer()
+	}, [])
+
 	return (
 		<div className="App">
 			<Routes>
@@ -72,7 +83,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/beers" element={<Beers beers={beers} />} />
 					<Route path="/beers/:beerId" element={<Beer beers={beers} />} />
-					<Route path="/random-beer" element="" />
+					<Route path="/random-beer" element={<RandomBeer randomBeer={randomBeer} />} />
 					<Route path="/new-beer" element="" />
 					<Route path="*" element={<h1>This page does not exist</h1>} />
 				</Route>
