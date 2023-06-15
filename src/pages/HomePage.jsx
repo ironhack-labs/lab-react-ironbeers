@@ -13,14 +13,14 @@ function HomePage() {
           <SiHomebrew className="home-icon" />
         </Link>
       </nav>
-      <img src={AllBeersimg} alt="Beers" />
-      <Link to={"/beers"}>All Beers</Link>
-      <img src={randomBeerImg} alt=" random-beer" />
-
-      <Link to={"/random-beer"}>Random Beers</Link>
-      <img src={newBeerImg} alt="new-beer" />
-
-      <Link to={"/new-beer"}>New Beer</Link>
+      <div className="home-page-container">
+        <Link to={"/beers"}>All Beers</Link>
+        <img src={AllBeersimg} alt="Beers" />
+        <Link to={"/random-beer"}>Random Beers</Link>
+        <img src={randomBeerImg} alt=" random-beer" />
+        <Link to={"/new-beer"}>New Beer</Link>
+        <img src={newBeerImg} alt="new-beer" />
+      </div>
     </div>
   );
 }

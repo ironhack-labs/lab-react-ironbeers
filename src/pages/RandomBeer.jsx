@@ -26,13 +26,15 @@ function RandomBeer() {
 
       <h1>Random Beer</h1>
       <div className="random-beer-container">
-        <img src={randomBeer.image_url} alt="beer" className="random-beer" />
-        <h1>{randomBeer.name}</h1>
-        <h3>{randomBeer.tagline}</h3>
-        <h4>{randomBeer.contributed_by}</h4>
-        <h4>{randomBeer.first_brewed}</h4>
-        <h4>{randomBeer.attenuation_level}</h4>
-        <h4>{randomBeer.description}</h4>
+        <div className="beer-card">
+          <img src={randomBeer.image_url} alt="beer" className="random-beer" />
+          <h1>{randomBeer.name}</h1>
+          <h3> {randomBeer.tagline}</h3>
+          <h4> Contributed By: {randomBeer.contributed_by}</h4>
+          <h4> First Brewed: {randomBeer.first_brewed}</h4>
+          <h4> Attenuation Level: {randomBeer.attenuation_level}</h4>
+          <h4>Description: {randomBeer.description}</h4>
+        </div>
       </div>
     </div>
   );

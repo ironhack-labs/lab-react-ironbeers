@@ -5,9 +5,10 @@
 }
 a {
   text-decoration: none;
-  color: rgb(3, 63, 25);
-  font-size: 22px;
+  color: rgb(32, 124, 66);
+  font-size: 25px;
   font-style: italic;
+  font-weight: bolder;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -21,20 +22,38 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(227, 231, 228);
+  background-color: rgb(198, 212, 201);
+}
+
+.home-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
 }
 
 .beers-container,
 .beers-details,
 .random-beer-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 20px;
   padding: 10px;
-  border: 2px solid black;
+}
+
+.beer-card {
+  width: 500px;
+  margin: 40px;
+  padding: 30px;
+  border: 2px solid #03441c;
   border-radius: 10px;
+  text-align: center;
+  background-color: rgba(238, 236, 234, 0.609);
 }
 
 .new-beer-container,
@@ -65,6 +84,14 @@ button {
   color: white;
   font-size: 20px;
   width: 400px;
+  border-radius: 10px;
+}
+
+.search-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
   border-radius: 10px;
 }
 
