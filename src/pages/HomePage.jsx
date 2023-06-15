@@ -1,9 +1,8 @@
-import axios from 'axios'
 import { Link } from 'react-router-dom'
+
 
 const HomePage = () => {
 
-const API_URL = 'https://ih-beers-api2.herokuapp.com/beers'
 
     return(
         <div>
