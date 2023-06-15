@@ -1,27 +1,28 @@
-import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { Center, Spinner, Text } from "@chakra-ui/react";
 import BeerBoxDetail from "../components/BeerBoxDetail";
 
-const API_URL = "https://ih-beers-api2.herokuapp.com/beers/random";
+const API_URL = "https://ih-beers-api2.herokuapp.com/beers";
 
-function RandomBeer() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [beer, setBeer] = useState([]);
+export default function BeerDetail() {
+  const { id } = useParams();
+  const [loading, setLoading] = useState(true);
+  const [beer, setBeer] = useState(null);
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get(API_URL);
+      const res = await axios.get(`${API_URL}/${id}`);
       setBeer(res.data);
-      setIsLoading(false);
+      setLoading(false);
     };
     getData();
-  }, []);
-
+  }, [id]);
   return (
     <>
       <Navbar />
-      {isLoading ? (
+      {loading ? (
         <Center>
           <Spinner m={4} />
         </Center>
@@ -31,11 +32,9 @@ function RandomBeer() {
         </Center>
       ) : (
         <Text fontSize={32} textAlign={"center"}>
-          La cerveza aleatoria no existe 🙈
+          La cerveza elegida no existe 🙈
         </Text>
       )}
     </>
   );
 }
-
-export default RandomBeer;

@@ -1,25 +1,57 @@
-import { Card, CardBody, Image, Stack, Heading, Text } from "@chakra-ui/react";
-import newBeerImg from "../assets/new-beer.png";
+import { Box, Button, Flex, FormControl, FormLabel, Input, Textarea } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
+import { useState } from "react";
+
+const API_URL = "https://ih-beers-api2.herokuapp.com/beers/new";
 
 function NewBeer() {
+  const [data, setData] = useState({});
+  const handleChange = (e) => {
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = () => {};
+
   return (
     <>
       <Navbar />
-      <Card>
-        <CardBody>
-          <Image src={newBeerImg} alt="Beers" borderRadius="lg" />
-          <Stack mt="6" spacing="3">
-            <Heading size="md">New Beer</Heading>
-            <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ultricies turpis. Proin sit amet
-              diam id nulla blandit efficitur. Vivamus ut justo velit. Etiam tristique purus vel orci aliquam aliquam.
-              Etiam vehicula rhoncus metus, vel semper felis iaculis congue. Maecenas sem turpis, bibendum nec mi vitae,
-              vulputate laoreet quam.
-            </Text>
-          </Stack>
-        </CardBody>
-      </Card>
+      <Flex justifyContent={"center"}>
+        <Box w={"80%"} as="form" onSubmit={handleSubmit}>
+          <FormControl mb={2}>
+            <FormLabel>Name</FormLabel>
+            <Input type="text" name={"name"} value={data.name} onChange={handleChange} />
+          </FormControl>
+          <FormControl mb={2}>
+            <FormLabel>Tagline</FormLabel>
+            <Input type="text" name={"tagline"} value={data.tagline} onChange={handleChange} />
+          </FormControl>
+          <FormControl mb={2}>
+            <FormLabel>Description</FormLabel>
+            <Textarea type="text" name={"description"} value={data.description} onChange={handleChange} />
+          </FormControl>
+          <FormControl mb={2}>
+            <FormLabel>First Brewed</FormLabel>
+            <Input type="text" name={"first_brewed"} value={data.first_brewed} onChange={handleChange} />
+          </FormControl>
+          <FormControl mb={2}>
+            <FormLabel>Brewers Tips</FormLabel>
+            <Input type="text" name={"brewers_tips"} value={data.brewers_tips} onChange={handleChange} />
+          </FormControl>
+          <FormControl mb={2}>
+            <FormLabel>Attenuation Level</FormLabel>
+            <Input type="number" name={"attenuation_level"} value={data.attenuation_level} onChange={handleChange} />
+          </FormControl>
+          <FormControl mb={2}>
+            <FormLabel>Contributed by</FormLabel>
+            <Input type="text" name={"contributed_by"} value={data.contributed_by} onChange={handleChange} />
+          </FormControl>
+          <Button mt={4} colorScheme="blue" type="submit">
+            Enviar
+          </Button>
+        </Box>
+      </Flex>
     </>
   );
 }
