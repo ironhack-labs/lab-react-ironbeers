@@ -37,6 +37,37 @@ header {
   border-radius: 10px;
 }
 
+.new-beer-container,
+label,
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+input {
+  width: 400px;
+}
+
+label {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+button {
+  padding: 10px;
+  margin: 40px;
+  background-color: rgb(9, 79, 38);
+  box-shadow: none;
+  color: white;
+  font-size: 20px;
+  width: 400px;
+  border-radius: 10px;
+}
+
 .all-beer-img,
 .random-beer {
   width: 100px;
