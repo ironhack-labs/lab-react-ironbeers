@@ -17,10 +17,10 @@ function RandomBeer() {
     getBeer();
   }, [id]);
 
-  if (!beer) return <div>No beer today 😢</div>;
+  if (!beer) return <div style={{textAlign: "center"}}>Looking in the fridge</div>;
 
   return (
-    <div>
+    <div className="card">
       <Navbar />
       <h1>{beer.name}</h1>
       <img src={beer.image_url} alt={beer.name} />

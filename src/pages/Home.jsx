@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div>
-      <Link to="/beers">
-        <img src={beersImg} alt="Beers" />
-        <h2>All Beers</h2>
+      <div className="card">
+        <Link to="/beers">
+          <img src={beersImg} alt="Beers" className="homeImg" />
+          <h1>All Beers</h1>
+        </Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptatibus, quae, voluptas, aspernatur quia quos voluptates
@@ -16,10 +18,12 @@ function Home() {
           voluptatibus, quae, voluptas, aspernatur quia quos voluptates
           voluptatem reprehenderit quod doloribus voluptatum!
         </p>
-      </Link>
-      <Link to="/random-beer">
-        <img src={randomBeerImg} alt="Random Beer" />
-        <h2>Random Beer</h2>
+      </div>
+      <div className="card">
+        <Link to="/random-beer">
+          <img src={randomBeerImg} alt="Random Beer" className="homeImg" />
+          <h1>Random Beer</h1>
+        </Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptatibus, quae, voluptas, aspernatur quia quos voluptates
@@ -27,10 +31,12 @@ function Home() {
           voluptatibus, quae, voluptas, aspernatur quia quos voluptates
           voluptatem reprehenderit quod doloribus voluptatum!
         </p>
-      </Link>
-      <Link to="/new-beer">
-        <img src={newBeerImg} alt="New Beer" />
-        <h2>New Beer</h2>
+      </div>
+      <div className="card">
+        <Link to="/new-beer">
+          <img src={newBeerImg} alt="New Beer" className="homeImg" />
+          <h1>New Beer</h1>
+        </Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptatibus, quae, voluptas, aspernatur quia quos voluptates
@@ -38,7 +44,7 @@ function Home() {
           voluptatibus, quae, voluptas, aspernatur quia quos voluptates
           voluptatem reprehenderit quod doloribus voluptatum!
         </p>
-      </Link>
+      </div>
     </div>
   );
 }

@@ -1,28 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 nav {
-  background: lightblue;
+  background: #32c3ff;
   color: white;
   padding: 10px;
   box-shadow: 0px 1px 2px gray;
-  display: flex;
-  align-items: flex-start;
   width: 100%;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
 button,
 select {
   padding: 5px 10px;
   min-width: 50px;
-  margin: 10px;
   font-size: 18px;
   cursor: pointer;
+}
+
+img {
+  height: 300px;
+  object-fit: scale-down;
+  margin: 10px;
+}
+
+body {
+  height: 844px;
+  width: 390px;
+  margin: 20px;
+}
+
+.homeImg {
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+  margin: 0px;
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+h3 {
+  margin-left: 10px;
+}
+
+p {
+  margin: 10px;
+}
+
+label {
+  margin-left: 10px;
+}
+
+input {
+  margin-left: 10px;
 }

@@ -3,17 +3,17 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <nav>
-      <NavLink exact to="/">
-      <button>Home</button>
+      <NavLink to="/">
+        <button className="btn btn-light">Home</button>
       </NavLink>
-      <NavLink exact to="/beers">
-      <button>Beers</button>
+      <NavLink to="/beers">
+        <button className="btn btn-light">Beers</button>
       </NavLink>
-      <NavLink exact to="/random-beer">
-      <button>Random Beer</button>
+      <NavLink to="/random-beer">
+        <button className="btn btn-light">Random Beer</button>
       </NavLink>
-      <NavLink exact to="/new-beer">
-      <button>New Beer</button>
+      <NavLink to="/new-beer">
+        <button className="btn btn-light">New Beer</button>
       </NavLink>
     </nav>
   );
