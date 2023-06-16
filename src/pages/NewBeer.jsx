@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"
 import { Button, FormControl, FormLabel, Input, Box, Textarea, Center } from "@chakra-ui/react";
 export default function NewBeer () {
 
     const API_URL = "https://ih-beers-api2.herokuapp.com/beers"
-    const [beers, setBeers] = useState([])
+
     const [newBeer, setNewBeer] = useState ({
         name:'',
         tagline: '',
@@ -15,18 +16,8 @@ export default function NewBeer () {
         contributed_by: '',
     })
 
-    const getData = async () => {
-        try {
-            const res = await axios.get(API_URL)
-            setBeers(res.data)
-        } catch (error) {
-            console.error(error)
-        }
-    }
+    const navigate = useNavigate();
 
-    useEffect (() => {
-        getData()
-    }, [])
 
     const cleanInputs = () => {
     setNewBeer ({
@@ -43,9 +34,9 @@ export default function NewBeer () {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          await axios.post(`${API_URL}/new`, {name, tagline, description, first_brewed, brewers_tips, attenuation_level, contributed_by}) 
-          getData(); 
+          await axios.post(`${API_URL}/new`, newBeer) 
           cleanInputs();
+          navigate("/beers");
         } catch (error) {
           console.log(error)  
         }
@@ -64,7 +55,8 @@ export default function NewBeer () {
         <Box
         maxW="60%"
         m={30}>
-          <FormControl as="form" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
+          <FormControl>
             <FormLabel>Name</FormLabel>
             <Input type='text' name={"name"} value={newBeer.name} onChange={handleChange} />
           </FormControl>
@@ -94,6 +86,7 @@ export default function NewBeer () {
           </FormControl>
        
           <Button variant='solid' colorScheme='blue'>Crear</Button>
+          </form>
           </Box>
     )
 }
