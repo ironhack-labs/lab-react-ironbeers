@@ -26,24 +26,36 @@ function Beers(props) {
   return (
     <div>
       <input
+        className="search"
         type="text"
         value={query}
         onChange={handleSearch}
         placeholder="search for a beer"
       />
-      <h1>Beers</h1>
-
-      {props.beers.map((beer) => {
-        return (
-          <div key={beer._id}>
-            <img src={beer.image_url} alt={beer.name} width="100" />
-            <h2>{beer.name}</h2>
-            <p>{beer.tagline}</p>
-            <small>{beer.contributed_by}</small>
-            <Link to={`/beers/${beer._id}`}>Details</Link>
-          </div>
-        );
-      })}
+      <div className="allBeers">
+        {props.beers.map((beer) => {
+          return (
+            <div className="beer" key={beer._id}>
+              <img
+                className="beerImg"
+                src={beer.image_url}
+                alt={beer.name}
+                width="100"
+              />
+              <div className="beerDescription">
+                <h2>{beer.name}</h2>
+                <p>{beer.tagline}</p>
+                <small>
+                  <strong>Created by:</strong> {beer.contributed_by}
+                </small>
+                <Link className="beerDetails" to={`/beers/${beer._id}`}>
+                  Details
+                </Link>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
