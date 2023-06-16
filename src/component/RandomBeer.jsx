@@ -18,11 +18,14 @@ function RandomBeer() {
     {oneRandomBeer.map((oneBeer) => {
       return (
         <div className="">
-          <img src={oneBeer.image_url} alt="beer bottle" />
+          <img src={oneBeer.image} alt="beer bottle" />
           <div className="side-text" style={{ height: "200px"}}>
-            <h2>{oneBeer.name}</h2>
-            <h3>{oneBeer.tagline}</h3>
-            <h5>Created by: {oneBeer.contributed_by}</h5>
+            <h1>{oneBeer.name}</h1>
+            <h2>{oneBeer.tagline}</h2>
+            <h3>{oneBeer.first_brewed}</h3>
+            <h3>{oneBeer.attenuation_level}</h3>
+            <h3>{oneBeer.description}</h3>
+            <h3>{oneBeer.contributed_by}</h3>
           </div>
         </div>
       );
