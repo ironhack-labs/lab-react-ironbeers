@@ -12,7 +12,6 @@ function BeerList() {
 
   const fetchBeers = async () => {
     const { data } = await axios("https://ih-beers-api2.herokuapp.com/beers");
-    console.log("here are the new characters", data);
     setBeers(data);
   };
 
