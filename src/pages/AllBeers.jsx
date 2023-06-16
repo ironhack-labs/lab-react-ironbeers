@@ -11,9 +11,7 @@ export default function AllBeers() {
     const getData = async () => {
         try {
             const res = await axios.get(API_URL)
-            console.log(res.data)
             setBeers(res.data)
-            console.log("hola")
         } catch (error) {
             console.error(error)
         }

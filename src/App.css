@@ -1,11 +1,9 @@
 .Navbar {
   background-color: #3DC4FC;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
-i {
-  width: 20px;
-  height: 20px;
-  z-index: 4;
-}
