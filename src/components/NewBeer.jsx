@@ -23,10 +23,10 @@ function NewBeer() {
     contributed_by: beercontributed,
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     try {
-      const create = await axios.post(
+      await axios.post(
         "https://ih-beers-api2.herokuapp.com/beers/new",
         newBeerData
       );
