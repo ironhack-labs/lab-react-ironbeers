@@ -11,7 +11,7 @@ export default function BeerBoxDetail({ beer }) {
         <Text>{beer.attenuation_level}</Text>
       </Flex>
       <Flex justifyContent={"space-between"}>
-        <Heading size="lg">{beer.tagline}</Heading>
+        <Heading size="md">{beer.tagline}</Heading>
         <Text>{beer.first_brewed}</Text>
       </Flex>
       <Text>{beer.description}</Text>

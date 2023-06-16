@@ -1,18 +1,30 @@
 import { Box, Button, Flex, FormControl, FormLabel, Input, Textarea } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
+import axios from "axios";
 
 const API_URL = "https://ih-beers-api2.herokuapp.com/beers/new";
 
 function NewBeer() {
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     setData({
       ...data,
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await axios.post(API_URL, data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -47,7 +59,7 @@ function NewBeer() {
             <FormLabel>Contributed by</FormLabel>
             <Input type="text" name={"contributed_by"} value={data.contributed_by} onChange={handleChange} />
           </FormControl>
-          <Button mt={4} colorScheme="blue" type="submit">
+          <Button mt={4} colorScheme="blue" type="submit" isLoading={loading}>
             Enviar
           </Button>
         </Box>
