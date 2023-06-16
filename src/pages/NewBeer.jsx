@@ -15,7 +15,7 @@ function NewBeer() {
     let name = event.target.name;
     let value = event.target.value;
 
-    setNewBeerObj({ ...newBeerObj, [name]: value });
+    setNewBeerObj({ ...newBeerObj, [name]: value }); 
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
