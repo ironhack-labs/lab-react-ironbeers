@@ -7,4 +7,16 @@ width: 200px;
 aspect-ratio:3/2; 
 object-fit:contain;
 }
+header a{
+  margin: 10px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+
+}
+form button{
+  width: 70px;
+}
 

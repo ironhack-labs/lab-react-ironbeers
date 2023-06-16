@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
 
 function BeerDetail() {
     const { beerId } = useParams();
@@ -31,7 +29,8 @@ function BeerDetail() {
     return (
         <div>
             <header>
-        <Link to={"/"}>Back to Home</Link>
+                <Link to={"/"}>Back to Home  </Link>
+                <Link to={"/beers"}>   Back</Link>
       </header>
             <h1>Beer Detail</h1>
             {allBeers.map((beer) => {
@@ -43,23 +42,13 @@ function BeerDetail() {
             <h2>{beer.tagline}</h2>
             <h4>Created by: {beer.contributed_by}</h4>
                             <h4>First brewed: {beer.first_brewed}</h4>
-
+                            <h4>{beer.description}</h4>
                     </div>
-                    
-                    )
-                    
+                    ) 
                 }
-                    
-                
             })}
-
-
         </div>
-        
-
-
     )
-
 }
 
 export default BeerDetail;
