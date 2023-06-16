@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -29,6 +30,9 @@ function BeerDetail() {
 
     return (
         <div>
+            <header>
+        <Link to={"/"}>Back to Home</Link>
+      </header>
             <h1>Beer Detail</h1>
             {allBeers.map((beer) => {
                 if (beer._id === beerId) {
