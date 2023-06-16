@@ -23,7 +23,7 @@ function RandomBeer() {
       {!beer ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <div className="beer-container">
           <h3>Name: {beer.name}</h3>
           <p>Tagline: {beer.tagline}</p>
           <img src={beer.image_url} alt="" />

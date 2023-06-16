@@ -48,7 +48,7 @@ function NewBeer() {
   return (
     <div>
       <Navbar />
-      <form onSubmit={handleSubmit}>
+      <form className="beer-container" onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
           type="text"

@@ -19,10 +19,11 @@ function BeerList() {
     <div>
       <Navbar />
       <h3>All Beers</h3>
+
       {!beers && <p>Loading...</p>}
       {beers.map((beer) => {
         return (
-          <div key={beer._id}>
+          <div className="beer-container" key={beer._id}>
             <h3>Name: {beer.name}</h3>
             <p>Tagline: {beer.tagline}</p>
             <img
@@ -31,7 +32,9 @@ function BeerList() {
               alt={beer.name}
             />
             <p>Contributed By: {beer.contributed_by}</p>
-            <Link to={`/beers/${beer._id}`}>See details</Link>
+            <Link className="link" to={`/beers/${beer._id}`}>
+              See details
+            </Link>
           </div>
         );
       })}

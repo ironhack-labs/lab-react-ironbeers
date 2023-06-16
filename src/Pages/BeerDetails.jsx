@@ -18,14 +18,15 @@ function BeerDetails() {
   return (
     <div>
       <Navbar />
+
       {!oneBeer ? (
         <p>Loading...</p>
       ) : (
-        <div key={oneBeer._id}>
-          <h3>Name: {oneBeer.name}</h3>
+        <div className="beer-container" key={oneBeer._id}>
+          <h2>Name: {oneBeer.name}</h2>
           <p>Tagline: {oneBeer.tagline}</p>
           <img src={oneBeer.image_url} alt="" />
-          <p>Contributed By: {oneBeer.contributed_by}</p>
+          <h3>Contributed By: {oneBeer.contributed_by}</h3>
         </div>
       )}
     </div>
