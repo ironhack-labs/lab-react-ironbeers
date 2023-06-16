@@ -1,5 +1,4 @@
 function Beer({ randomBeer }) {
-  console.log("random beer", randomBeer);
   return (
     <div className="oneBeer">
       <img
