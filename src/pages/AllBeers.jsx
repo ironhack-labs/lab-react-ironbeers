@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import headerImg from "../assets/headerImg.png";
 import { useEffect } from "react";
 import axios from "axios";
+import "../App.css";
 
 function AllBeers() {
   const [beers, setBeers] = useState([]);
@@ -17,19 +18,21 @@ function AllBeers() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <Link to="/">
-        <img src={headerImg} alt="headerImg" />
+        <img src={headerImg} alt="headerImg" style={{ width: "100%" }} />
       </Link>
 
       {beers.map((beer) => (
-        <div key={beer.id}>
-          <h2> Created by: {beer.name}</h2>
+        <div key={beer.id} className="beer-card">
           <img src={beer.image_url} alt={beer.name} />
-          <h2> {beer.tagline}</h2>
-          <Link to={`/beers/${beer.id}`}>
-            <button> Details </button>
-          </Link>
+          <div className="text-container">
+            <h2> Created by: {beer.name}</h2>
+            <p> {beer.tagline}</p>
+            <Link to={`/beers/${beer._id}`}>
+              <button> Details </button>
+            </Link>
+          </div>
         </div>
       ))}
     </div>
