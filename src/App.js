@@ -1,10 +1,10 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./components/Homepage";
-import BeerList from "./components/BeerList";
-import BeerDetails from "./components/BeerDetails";
-import RandomBeer from "./components/RandomBeer";
-import NewBeer from "./components/NewBeer";
+import Homepage from "./Pages/Homepage";
+import BeerList from "./Pages/BeerList";
+import BeerDetails from "./Pages/BeerDetails";
+import RandomBeer from "./Pages/RandomBeer";
+import NewBeer from "./Pages/NewBeer";
 
 function App() {
   return (
