@@ -1,5 +1,5 @@
 .beer-links a {
-  margin: 10px;
+  margin: 0px;
   padding: 10px;
   text-decoration: none;
 }
@@ -98,6 +98,12 @@ button {
 .all-beer-img,
 .random-beer {
   width: 100px;
+}
+
+.home-img {
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 500px;
 }
 
 h1 {
