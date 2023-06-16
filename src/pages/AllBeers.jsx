@@ -9,9 +9,10 @@ function AllBeers() {
   useEffect(() => {
     const getBeers = async () => {
       const { data } = await axios(
-        "https://ih-beers-api2.herokuapp.com/beers "
+        "https://ih-beers-api2.herokuapp.com/beers"
       );
       setAllBeers(data);
+      
      
     };
     getBeers();
@@ -26,7 +27,7 @@ function AllBeers() {
     <div>
       <header>
         <Link to={"/"}>Back to Home</Link>
-      </header>{" "}
+      </header>
       {allBeers.map((beer) => {
         return (
           <div>
@@ -34,6 +35,10 @@ function AllBeers() {
             <h1>{beer.name}</h1>
             <h2>{beer.tagline}</h2>
             <h4>Created by: {beer.contributed_by}</h4>
+            <Link to={`/beer-details/${beer._id}`}>
+              <button>View Details</button>
+              
+            </Link>
             <hr/>
 
           </div>
