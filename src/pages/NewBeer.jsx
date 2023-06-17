@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import NavBar from "./components/NavBar";
+import { useNavigate } from "react-router-dom";
 
 function NewBeer() {
   const [name, setName] = useState("");
@@ -10,6 +11,7 @@ function NewBeer() {
   const [brewersTips, setBrewersTips] = useState("");
   const [attenuationLevel, setAttenuationLevel] = useState(0);
   const [contributedBy, setContributedBy] = useState("");
+  const navigate = useNavigate();  
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -32,6 +34,7 @@ function NewBeer() {
     setBrewersTips("");
     setAttenuationLevel(0);
     setContributedBy("");
+    navigate("/");
   };
 
   return (
