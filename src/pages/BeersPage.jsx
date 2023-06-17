@@ -1,11 +1,16 @@
-import BeersList from '../components/BeersList'
+import BeersList from "../components/BeersList";
+import Navbar from "../components/Navbar";
+import "../App.css"
 
 const BeersPage = () => {
-    return(
-        <>
-            <BeersList />
-        </>
-    )
-}
+  return (
+    <>
+      <Navbar />
+      <div className="body">
+        <BeersList />
+      </div>
+    </>
+  );
+};
 
-export default BeersPage
+export default BeersPage;
