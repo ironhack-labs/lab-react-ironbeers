@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import NavBar from "./components/NavBar";
 
 function AllBeers() {
   const [allBeers, setAllBeers] = useState();
@@ -13,7 +12,7 @@ function AllBeers() {
       setAllBeers(data);
     };
     getBeers();
-  },[]);
+  }, []);
   console.log("beers", allBeers);
 
   if (!allBeers) {
@@ -22,26 +21,25 @@ function AllBeers() {
 
   return (
     <>
-    <div>
-      <header>
-        <Link to={"/"}>Back to Home</Link>
-      </header>{" "}
+      <NavBar />
 
-     
-        {allBeers.map((oneBeer) =>{
+      <div>
+        {allBeers.map((oneBeer) => {
           return (
-          <div>
-          <img src={oneBeer.image_url} alt="beer" />
-          <h1>{oneBeer.name}</h1>
-          <p>{oneBeer.tagline}</p>
-          <p>{oneBeer.contributed_by}</p>
-          <Link to={`/beers/${oneBeer._id}`}>Click for more details </Link>
-          </div>
-          )
+            <div className="allbeersdiv">
+              <div className="allbeersdiv1">
+                <img src={oneBeer.image_url} alt="beer" />
+              </div>
+              <div className="allbeersdiv2">
+                  <h1>{oneBeer.name}</h1>
+                  <p>{oneBeer.tagline}</p>
+                  <p>{oneBeer.contributed_by}</p>
+                  <Link to={`/beers/${oneBeer._id}`}>Click for more details </Link>
+              </div>
+            </div>
+          );
         })}
-     
-
-    </div>
+      </div>
     </>
   );
 }

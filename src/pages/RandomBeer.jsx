@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+
 import axios from "axios";
 import { useEffect, useState } from "react";
+import NavBar from "./components/NavBar";
 
 function RandomBeer() {
   const [fetchedRandomBeer, setFetchedRandomBeer] = useState("");
@@ -18,13 +19,15 @@ function RandomBeer() {
   console.log(fetchedRandomBeer);
 
   return (
-    <div>
-      <header>
-        <Link to={"/"}>Back to Home</Link>
-      </header>
+    <>
+      <NavBar />
 
-      <div>
-        <img src={fetchedRandomBeer.image_url} alt="beer" />
+      <div className="randombeer">
+        <img
+          className="randombeerimg"
+          src={fetchedRandomBeer.image_url}
+          alt="beer"
+        />
         <h1>{fetchedRandomBeer.name}</h1>
         <p>{fetchedRandomBeer.tagline}</p>
         <p>{fetchedRandomBeer.contributed_by}</p>
@@ -32,7 +35,7 @@ function RandomBeer() {
         <p>{fetchedRandomBeer.attenuation_level}</p>
         <p>{fetchedRandomBeer.description}</p>
       </div>
-    </div>
+    </>
   );
 }
 

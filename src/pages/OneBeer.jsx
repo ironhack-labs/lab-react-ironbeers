@@ -1,6 +1,7 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import NavBar from "./components/NavBar";
 
 function OneBeer() {
   const { beerId } = useParams();
@@ -21,11 +22,10 @@ function OneBeer() {
 
   return (
     <div>
-          <header>
-        <Link to={"/"}>Back to Home</Link>
-      </header>
-      <div>
-        <img src={fetchedBeer.image_url} alt="beer" />
+      <NavBar />   
+
+      <div className="randombeer">
+        <img className="randombeerimg" src={fetchedBeer.image_url} alt="beer" />
         <h1>{fetchedBeer.name}</h1>
         <p>{fetchedBeer.tagline}</p>
         <p>{fetchedBeer.contributed_by}</p>
