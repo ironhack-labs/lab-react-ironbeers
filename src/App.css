@@ -1,38 +1,391 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    text-align:  center;
   }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #66B2FF;
+    height: 10vh;
+  }
+  
+  .homeButton {
+    width: 15vh;
+  }
+  
+  .home {
+    text-decoration:none
+  }
+  
+  .home img {
+  width: 100vw;
+  }
+  
+  .home h2{
+    text-align: left;
+    margin: 5px 0 5px 20px;
+  }
+  
+  .home p {
+    font-size: 10px;
+    text-align: justify;
+    margin: 0 20px 20px;
+  }
+  
+.search{
+  width: 30vh;
+  margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.allBeers{
+ margin: 20px;
+}
+
+.beer{
+  display: flex;
+  margin: 20px;
+}
+
+.beerImg {
+  max-width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.beerDescription {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.beerDescription h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.beerDescription p {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  color: gray;
+} 
+
+.beerDescription small {
+  font-size: 10px;
+   margin-bottom: 5px;
+} 
+
+.beerDetails {
+  text-decoration: none;
+  color: black;
+  font-size: 8px;
+}
+
+.oneBeer{
+  margin: 10px;
+}
+
+
+.oneBeerName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+}
+
+.oneBeerName h1 {
+  font-size: 25px;
+  font-weight:400;
+  margin: 0;
+}
+
+.oneBeerName p {
+  color: lightgrey;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.oneBeerTagLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+.oneBeerTagLine h2 {
+  color: lightgrey;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.oneBeerTagLine p {
+  font-size: 10px;
+  font-weight:bold
+}
+
+.oneBeer img {
+  margin-top: 30px;
+}
+
+.oneBeerdescription p {
+  text-align: left;
+  font-weight:600;
+  line-height: 18px;
+  margin: 12px 0;
+}
+
+.oneBeerContributedBy p {
+  text-align: left;
+  font-weight:700;
+  color: grey;
+  font-size: 12px;
+}
+
+
+
+form {
+  text-align: left;
+  max-width: 60vw;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin: 10px;
+}
+
+input {
+  font-size: 18px;
+  padding: 1rem;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 30px;
+  border: solid 1px lightgray;
+}
+
+.inputDescription {
+  height: 180px;
+}
+
+button {
+  font-size: 18px;
   color: white;
+  width: 100%;
+  padding: 1rem;
+  background-color: #66B2FF;
+  border-radius: 30px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 769px) {
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:  center;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #66B2FF;
+    height: 10vh;
+
+  }
+  
+  .homeButton {
+    width: 15vh;
+  }
+  
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-decoration:none;
+
+  }
+  
+  .home img {
+    width: 100%;
+ 
+  }
+
+  .home h2{
+    text-align: left;
+    margin: 5px 0 5px 20px;
+
+  }
+  
+  .home p {
+    font-size: 10px;
+    text-align: justify;
+    margin: 0 20px 20px;
+  }
+
+  .search{
+    width: 60vh;
+    margin: 10px;
+  }
+  
+  .allBeers{
+   margin: 30px;
+  }
+  
+  .beer{
+    display: flex;
+    justify-content: center;
+    margin: 20px 40px;
+  }
+  
+  .beerImg {
+    max-width: 400px;
+    height: 400px;
+    object-fit: contain;
+  }
+  
+  .beerDescription {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    text-align: left;
+  }
+  
+  .beerDescription h2 {
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-size: 40px;
+  }
+  
+  .beerDescription p {
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    color: gray;
+  } 
+  
+  .beerDescription small {
+    font-size: 14px;
+     margin-bottom: 5px;
+  } 
+  
+  .beerDetails {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+  }
+
+.oneBeer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vh;
+}
+
+  .oneBeerName {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .oneBeerName h1 {
+    font-size: 25px;
+    font-weight:400;
+    margin: 0;
+  }
+  
+  .oneBeerName p {
+    color: lightgrey;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .oneBeerTagLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .oneBeerTagLine h2 {
+    color: lightgrey;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .oneBeerTagLine p {
+    font-size: 10px;
+    font-weight:bold
+  }
+  
+  .oneBeer img {
+    margin-top: 30px;
+  }
+  
+  .oneBeerdescription p {
+    text-align: left;
+    font-weight:600;
+    line-height: 18px;
+    margin: 12px 0;
+  }
+  
+  .oneBeerContributedBy p {
+    text-align: left;
+    font-weight:700;
+    color: grey;
+    font-size: 12px;
+  }
+  
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  
+  label {
+     margin: 10px;
+  }
+  
+  input {
+    font-size: 18px;
+    padding: 1rem;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 30px;
+    border: solid 1px lightgray;
+  }
+  
+  .inputDescription {
+    height: 180px;
+  }
+  
+  button {
+    font-size: 18px;
+    color: white;
+    width: 60%;
+    padding: 1rem;
+    background-color: #66B2FF;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 20px;
   }
 }
