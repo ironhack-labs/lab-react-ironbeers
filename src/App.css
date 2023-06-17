@@ -1,9 +1,12 @@
-.App {
-  text-align: center;
-}
 
 @media (max-width: 768px) {
   
+  .App {
+    display: flex;
+    flex-direction: column;
+    text-align:  center;
+  }
+
   nav {
     display: flex;
     justify-content: center;
@@ -190,6 +193,13 @@ button {
 
 @media (min-width: 769px) {
 
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:  center;
+  }
+
   nav {
     display: flex;
     justify-content: center;
@@ -205,14 +215,13 @@ button {
   .home {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     text-decoration:none;
-    width: 100vw;
- 
+
   }
   
   .home img {
-    width: 80%;
+    width: 100%;
  
   }
 
@@ -229,7 +238,7 @@ button {
   }
 
   .search{
-    width: 80vh;
+    width: 60vh;
     margin: 10px;
   }
   
@@ -346,14 +355,14 @@ button {
   
 
   form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: left;
-    max-width: 60vw;
-    margin: 0 auto;
   }
   
   label {
-    display: block;
-    margin: 10px;
+     margin: 10px;
   }
   
   input {
@@ -372,10 +381,11 @@ button {
   button {
     font-size: 18px;
     color: white;
-    width: 100%;
+    width: 60%;
     padding: 1rem;
     background-color: #66B2FF;
     border-radius: 30px;
     border: none;
+    margin-bottom: 20px;
   }
 }
