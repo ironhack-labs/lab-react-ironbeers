@@ -1,31 +1,32 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 
 function RandomBeer() {
-    const [oneRandomBeer, setOneRandomBeer] = useState([]);
-    useEffect(() => {
-      fetchRandomBeer();
-    }, []);
-    const fetchRandomBeer = async () => {
-      const { data } = await axios("https://ih-beers-api2.herokuapp.com/beers/random");
-      setOneRandomBeer(data);
+  const [oneRandomBeer, setRandomBeer] = useState(null);
+  useEffect(() => {
+    const getOneRandomBeer = async () => {
+      const { data } = await axios(
+        "https://ih-beers-api2.herokuapp.com/beers/random"
+      );
+      setRandomBeer(data);
     };
+    getOneRandomBeer();
+  }, []);
+  if (oneRandomBeer == null) {
+    return <p>loading....it can take a few seconds </p>;
+  }
   return (
-    
     <div>
     {oneRandomBeer.map((oneBeer) => {
       return (
         <div className="">
-          <img src={oneBeer.image} alt="beer bottle" />
+          <img src={oneBeer.image_url} alt="beer bottle" />
           <div className="side-text" style={{ height: "200px"}}>
-            <h1>{oneBeer.name}</h1>
-            <h2>{oneBeer.tagline}</h2>
-            <h3>{oneBeer.first_brewed}</h3>
-            <h3>{oneBeer.attenuation_level}</h3>
-            <h3>{oneBeer.description}</h3>
-            <h3>{oneBeer.contributed_by}</h3>
+            <h2>{oneBeer.name}</h2>
+            <h3>{oneBeer.tagline}</h3>
+            <h5>Created by: {oneBeer.contributed_by}</h5>
           </div>
         </div>
       );
@@ -34,4 +35,4 @@ function RandomBeer() {
   )
 }
 
-export default RandomBeer
+export default RandomBeer;
