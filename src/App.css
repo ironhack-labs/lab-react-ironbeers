@@ -1,38 +1,120 @@
-.App {
+header{
+  height: 50px;
+  background-color: #38c4fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeicon{
+  height: 25px;
+}
+
+.beer-links a {
+  margin: 10px;
+  padding: 10px;
+}
+
+
+
+.beerpage{
+  display: flex;
+  flex-direction: column;
+}
+
+.beerdivs{
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.beerdivs > h1 a{
+  text-decoration: none; 
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+.beerdivs > h1{
+  text-decoration: none; 
+  padding: 0;
+  margin: 0;
+  color: black;
+  margin-left: 15px;
+}
+
+.beerdivs p {
+  color: darkgray;
+  margin-left: 15px;
+}
+
+.allbeersdiv{
+  height: 150px;
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px darkgray solid;
+  max-width: 350px;
+  /* margin: 10px; */
+}
+
+.allbeersdiv img{
+  height: 150px;
+  padding: 10px;
+  
+}
+
+.allbeersdiv h1{
+  font-size: 20px;
+}
+
+.allbeersdiv1{
+  width: 100px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.allbeersdiv2 a {
+  color: darkgrey;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.randombeer{
+  max-width: 400px;
+  padding: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.randombeerimg {
+  padding-left: 25%;
+  height: 250px;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 30px;
+  max-width: 300px;
+  padding: 10px;
+}
+
+label{
+  color: grey;
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+input{
+  border: 1px lightblue solid;
+  border-radius: 15px;
+  min-height: 20px;
+  margin-bottom: 15px;
+}
+
+button{
+  border: 1px lightblue solid;
+  background-color: #38c4fc;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-weight: bold;
+  border-radius: 15px;
+  min-height: 25px;
+  margin-bottom: 15px;
 }
