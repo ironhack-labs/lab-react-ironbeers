@@ -26,7 +26,7 @@ After completing this exercise, you will be able to:
 
 </details>
 
-
+## Introduction
 
 Since beer is one of the most consumed drinks by Ironhackers 🍻 , our mission here is to create an app to showcase some of the best handcrafted beers, but not just that - to save some as well so the rest of Ironhack community is informed 😌. Our end goal is to create something like this:
 
