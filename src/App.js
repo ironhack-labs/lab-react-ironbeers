@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
 import BeersList from "./components/BeersList";
+import BeerDetails from "./components/BeerDetails";
 
 function App() {
 	const [beers, setBeers] = useState([]);
@@ -27,7 +28,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<NavBar />
+			<NavBar beers={beers} />
 
 			<Routes>
 				<Route path="/" element={<HomePage />} />
@@ -41,11 +42,11 @@ function App() {
 					}
 				/>
 				<Route
-					path="/random"
+					path="/beers/:id"
 					element={
 						<div>
 							<Header />
-							<HomePage />
+							<BeerDetails />
 						</div>
 					}
 				/>
@@ -55,6 +56,15 @@ function App() {
 						<div>
 							<Header />
 							<HomePage />
+						</div>
+					}
+				/>
+				<Route
+					path="/beers/:id"
+					element={
+						<div>
+							<Header />
+							<BeerDetails />
 						</div>
 					}
 				/>

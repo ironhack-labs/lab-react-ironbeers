@@ -3,9 +3,9 @@
 import { Link } from "react-router-dom";
 
 function BeersList({ beers }) {
-	// if (beers === null) {
-	// 	return <p>loading...</p>;
-	// }
+	if (beers === null) {
+		return <p>loading...</p>;
+	}
 	return (
 		<div>
 			{beers.map((beer) => {
