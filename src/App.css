@@ -26,6 +26,10 @@
 
 .App-link {
   color: #61dafb;
+  
+}
+.beer-card{
+  text-decoration: none;
 }
 /* .card-beer {
   flex-direction: row;

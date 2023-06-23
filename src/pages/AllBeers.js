@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const AllBeers = () => {
   const [beers, setBeers] = useState(null);
@@ -22,33 +23,38 @@ export const AllBeers = () => {
       <div className="all-beers grid row-gap-3 d-flex flex-column justify-content-center align-items-center row">
         {beers.map((beer) => {
           return (
-            <div
-              class="beer-card d-flex flex-row card pt-3"
-              style={{ width: '35rem' }}
-            >
-              <div
-                class="d-flex align-self-center col-1"
-                style={{ height: '5rem', width: '3rem' }}
+            <div style={{ maxWidth: '35rem', width: '100%' }}>
+              <Link
+                className="beer-card d-flex flex-row card px-3"
+                to={`/${beer._id}`}
               >
-                <img
-                  className="beer-card-img"
-                  style={{
-                    'object-fit': 'contain',
-                    width: '100%',
-                    height: '100%',
-                  }}
-                  src={beer.image_url}
-                  class="card-img-top "
-                  alt={`image of ${beer.name}`}
-                />
-              </div>
-              <div class="card-body ">
-                <h5 class="card-title d-flex">{beer.name}</h5>
-                <p class="card-text text-start">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
+                <div
+                  className="d-flex align-self-center col-1"
+                  style={{ height: '5rem', width: '3rem' }}
+                >
+                  <img
+                    className="beer-card-img"
+                    style={{
+                      'object-fit': 'contain',
+                      width: '100%',
+                      height: '100%',
+                    }}
+                    src={beer.image_url}
+                    className="card-img-top "
+                    alt={`image of ${beer.name}`}
+                  />
+                </div>
+                <div className="card-body ">
+                  <h5 className="card-title d-flex">{beer.name}</h5>
+                  <p className="card-text text-start">
+                    <h6 className="text-black-50">{beer.tagline}</h6>
+                    <p>
+                      <span className="fw-medium">Created by: </span>
+                      {beer.contributed_by}
+                    </p>
+                  </p>
+                </div>
+              </Link>
             </div>
           );
         })}
