@@ -30,7 +30,7 @@ function HomePage() {
 
       <div>
         <img src={newBeer} alt="beers" /> <br />
-        <Link to="/new-beers">New Beer</Link>
+        <Link to="/new-beer">New Beer</Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem
           numquam molestiae odit, atque quaerat dolor quisquam eligendi voluptas
