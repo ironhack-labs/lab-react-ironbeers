@@ -21,7 +21,7 @@ export default function Home() {
                 </Link>
             </section>
             <section>
-                <Link to="/new-beers">
+                <Link to="/new-beer">
                     <img src={NewBeer} alt="New Beer" />
                     <h1>New Beer</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae qui quae obcaecati voluptatem ipsa accusamus libero reprehenderit error culpa illo nemo odio unde dolore dolores cupiditate delectus, quidem ut.</p>
