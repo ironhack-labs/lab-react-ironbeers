@@ -1,6 +1,6 @@
 import axios from "axios";
 import Header from "../components/Header";
-import SingleBeer from "./SingleBeer";
+import SingleBeer from "../components/SingleBeer";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
