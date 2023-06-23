@@ -6,11 +6,12 @@ import { Link } from "react-router-dom";
 export default function Beers() {
 
     const [beers, setBeers] = useState([]);
+    const [searchText, setSearchText] = useState("");
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}/beers`)
+        axios.get(`${process.env.REACT_APP_API_URL}/beers/search?q=`+ searchText)
         .then(response => setBeers(response.data))
         .catch(console.log);
-    }, []);
+    }, [searchText]);
 
     return(
         <>
@@ -18,6 +19,7 @@ export default function Beers() {
 
             <div id="beers">
             <p>Beer count: {beers.length}</p>
+            <input type="text" value={searchText} placeholder="Search a beer" onChange={e => setSearchText(e.target.value)}></input>
             {beers.map(b => <article>
 
                 <div className="beer" key={b.id}>
