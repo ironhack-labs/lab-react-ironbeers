@@ -27,6 +27,12 @@
 .App-link {
   color: #61dafb;
 }
+/* .card-beer {
+  flex-direction: row;
+}
+.card-beer-img {
+  width: 30%;
+} */
 
 @keyframes App-logo-spin {
   from {

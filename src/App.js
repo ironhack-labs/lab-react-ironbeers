@@ -10,9 +10,9 @@ import { Header } from './components/Header';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       {/* <NavBar /> */}
-      <Header />
+      <Header className="row" />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<AllBeers />} />
