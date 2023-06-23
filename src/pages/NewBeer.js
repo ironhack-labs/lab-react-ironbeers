@@ -36,27 +36,41 @@ export default function NewBeer() {
 
             <form onSubmit={createBeer}>
 
-                <label>Name:
-                    <input value={name} type="text" onChange={e => setName(e.target.value)} required />
-                </label>
-                <label>Tagline:
-                    <input value={tagline} type="text" onChange={e => setTagline(e.target.value)} required />
-                </label>
-                <label>Description:
-                    <input value={description} type="text" onChange={e => setDescription(e.target.value)} required />
-                </label>
-                <label>First Brewed:
-                    <input value={first_brewed} type="text" onChange={e => setFirst_brewed(e.target.value)} required />
-                </label>
-                <label>Brewers tips:
-                    <input value={brewers_tips} type="text" onChange={e => setBrewers_tips(e.target.value)} />
-                </label>
-                <label>Attenuation level:
-                    <input value={attenuation_level} type="number" onChange={e => setAttenuation_level(e.target.value)} required min={0} max={100} />
-                </label>
-                <label>Contributed by:
-                    <input value={contributed_by} type="text" onChange={e => setContributed_by(e.target.value)} required />
-                </label>
+                <p>
+                    <label>Name:
+                        <input value={name} type="text" onChange={e => setName(e.target.value)} required />
+                    </label>
+                </p>
+                <p>
+                    <label>Tagline:
+                        <input value={tagline} type="text" onChange={e => setTagline(e.target.value)} required />
+                    </label>
+                </p>
+                <p>
+                    <label>Description:
+                        <textarea value={description} onChange={e => setDescription(e.target.value)} required />
+                    </label>
+                </p>
+                <p>
+                    <label>First Brewed:
+                        <input value={first_brewed} type="text" onChange={e => setFirst_brewed(e.target.value)} required />
+                    </label>
+                </p>
+                <p>
+                    <label>Brewers tips:
+                        <input value={brewers_tips} type="text" onChange={e => setBrewers_tips(e.target.value)} />
+                    </label>
+                </p>
+                <p>
+                    <label>Attenuation level:
+                        <input value={attenuation_level} type="number" onChange={e => setAttenuation_level(e.target.value)} required min={0} max={100} />
+                    </label>
+                </p>
+                <p>
+                    <label>Contributed by:
+                        <input value={contributed_by} type="text" onChange={e => setContributed_by(e.target.value)} required />
+                    </label>
+                </p>
 
                 <button>Create</button>
 

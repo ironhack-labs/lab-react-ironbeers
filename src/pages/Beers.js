@@ -10,22 +10,23 @@ export default function Beers() {
         axios.get(`${process.env.REACT_APP_API_URL}/beers`)
         .then(response => setBeers(response.data))
         .catch(console.log);
-    });
+    }, []);
 
     return(
         <>
             <Header />
 
             <div id="beers">
+            <p>Beer count: {beers.length}</p>
             {beers.map(b => <article>
 
-                <div className="beer">
+                <div className="beer" key={b.id}>
                     <Link to={"/beers/" + b._id}>
                         <img src={b.image_url} alt={b.name} />
                     </Link>
                     <div className="infos">
                         <p className="name">{b.name}</p>
-                        <p className="tagline">{b.tagline}</p>
+                        <p className="tagline grey">{b.tagline}</p>
                         <p className="created-by"><b>Created by: </b>{b.contributed_by}</p>
                     </div>
                 </div>

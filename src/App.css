@@ -41,23 +41,26 @@
   text-decoration: none;
   color: black;
 }
+
 #home h1, p {
   text-align: justify;
   margin: 0px 20px;
 }
 
 #home img {
-  width:100%
+  margin: auto;
+  width:98%
 }
 
 #home p {
   color:grey;
   margin-bottom: 20px;
+  font-size: 0.6rem;
 }
 
 header {
   background-color: #3dc4fc;
-  padding: 30px;
+  padding: 10px;
 }
 
 header a {
@@ -70,6 +73,12 @@ header a {
   height: 150px;
 }
 
+#beers hr {
+  /* color:lightgrey; */
+  border: 1px solid lightgrey;
+  
+}
+
 .beer {
   margin: 20px;
   display: flex;
@@ -80,13 +89,60 @@ header a {
   flex-direction: column;
   justify-content: space-around;
 } */
-.beer .name {
-  font-size: 1.2rem;;
+.name {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
-.beer .tagline {
-  color: gray;
+.grey {
+  color: grey;
 }
-.beer .created-by {
-  font-size: 0.6rem;;
+
+.created-by {
+  margin-top: 20px;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+#beer-detail img {
+  margin: 40px auto;
+  max-height: 30vh;
+}
+
+#beer-detail .line {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+
+#create-beer {
+  margin: 5px;;
+}
+
+#create-beer input,textarea {
+  border-radius: 12px;
+  width: 90%;
+  border: 1px solid lightgrey;
+}
+
+#create-beer input {
+  height: 3vh;
+}
+
+#create-beer textarea {
+  height: 15vh;
+}
+
+#create-beer label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+#create-beer button {
+  border-radius: 12px;
+  width: 90%;
+  background-color: #61dafb;
+  color: white;
+  border: 0px;;
 }
