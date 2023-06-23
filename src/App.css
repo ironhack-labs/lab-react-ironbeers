@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+#home a {
+  text-decoration: none;
+  color: black;
+}
+#home h1, p {
+  text-align: justify;
+  margin: 0px 20px;
+}
+
+#home img {
+  width:100%
+}
+
+#home p {
+  color:grey;
+  margin-bottom: 20px;
+}
