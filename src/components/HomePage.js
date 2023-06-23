@@ -21,7 +21,7 @@ function HomePage() {
 				</Link>
 			</div>
 			<div>
-				<Link to={`/all`}>
+				<Link to={`/random`}>
 					<img src={RandomBeer} alt="random" />
 					<h1>Random Beer</h1>
 					<p>
@@ -33,7 +33,7 @@ function HomePage() {
 				</Link>
 			</div>
 			<div>
-				<Link to={`/all`}>
+				<Link to={`/new`}>
 					<img src={NewBeer} />
 					<h1>New Beer</h1>
 					<p>
