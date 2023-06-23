@@ -78,3 +78,11 @@
 	font-weight: light;
 	color: gray;
 }
+.beer-card a {
+	text-decoration: none;
+	color: gray;
+}
+.beer-card a:hover {
+	text-decoration: none;
+	color: turquoise;
+}

@@ -1,6 +1,6 @@
 /** @format */
 
-// import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function BeersList({ beers }) {
 	// if (beers === null) {
@@ -23,9 +23,10 @@ function BeersList({ beers }) {
 							<h1>{beer.name}</h1>
 							<h2>{beer.tagline}</h2>
 							<p>
-								<strong>Created by:</strong>
-								{beer.name}
+								<strong>Created by: </strong>
+								{beer.contributed_by.split("<")[0].trim()}
 							</p>
+							<Link to={`/beers/${beer._id}`}>Check it out</Link>
 						</div>
 					</div>
 				);
