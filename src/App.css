@@ -62,3 +62,19 @@
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 	font-weight: 500;
 }
+.beer-card {
+	display: flex;
+	margin: 2rem 5rem;
+	text-align: left;
+}
+.beer-card img {
+	height: 10rem;
+	margin: 0 2rem;
+}
+.beer-card h1 {
+	font-weight: normal;
+}
+.beer-card h2 {
+	font-weight: light;
+	color: gray;
+}

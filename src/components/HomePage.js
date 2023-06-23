@@ -9,7 +9,7 @@ function HomePage() {
 	return (
 		<div className="home-page">
 			<div>
-				<Link to={`/all`}>
+				<Link to={`/beers`}>
 					<img src={Beers} alt="all beers" />
 					<h1>All Beers</h1>
 					<p>

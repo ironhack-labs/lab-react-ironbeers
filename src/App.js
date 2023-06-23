@@ -5,19 +5,38 @@ import { Routes, Route, Link } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
+import { useEffect, useState } from "react";
+import BeersList from "./components/BeersList";
 
 function App() {
+	const [beers, setBeers] = useState([]);
+
+	useEffect(() => {
+		getBeersFromApi();
+	}, []);
+
+	const getBeersFromApi = () => {
+		axios
+			.get(`https://ih-beers-api2.herokuapp.com/beers`)
+			.then((response) => {
+				console.log(response.data);
+				setBeers(response.data);
+			})
+			.catch((e) => console.log(e));
+	};
+
 	return (
 		<div className="App">
 			<NavBar />
+
 			<Routes>
 				<Route path="/" element={<HomePage />} />
 				<Route
-					path="/all"
+					path="/beers"
 					element={
 						<div>
 							<Header />
-							<HomePage />
+							<BeersList beers={beers} />
 						</div>
 					}
 				/>
