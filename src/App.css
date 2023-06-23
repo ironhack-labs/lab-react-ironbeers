@@ -65,3 +65,28 @@ header a {
   text-shadow: 0 0 0 white;
   font-size: 1.5rem;
 }
+
+#beers img {
+  height: 150px;
+}
+
+.beer {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+/* .beer .infos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} */
+.beer .name {
+  font-size: 1.2rem;;
+}
+
+.beer .tagline {
+  color: gray;
+}
+.beer .created-by {
+  font-size: 0.6rem;;
+}
