@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import { useEffect, useState } from "react";
 import BeersList from "./components/BeersList";
 import BeerDetails from "./components/BeerDetails";
+import CreateBeer from "./components/CreateBeer";
 
 function App() {
 	const [beers, setBeers] = useState([]);
@@ -20,7 +21,7 @@ function App() {
 		axios
 			.get(`https://ih-beers-api2.herokuapp.com/beers`)
 			.then((response) => {
-				console.log(response.data);
+				// console.log(response.data);
 				setBeers(response.data);
 			})
 			.catch((e) => console.log(e));
@@ -55,7 +56,7 @@ function App() {
 					element={
 						<div>
 							<Header />
-							<HomePage />
+							<CreateBeer />
 						</div>
 					}
 				/>

@@ -2,13 +2,13 @@
 import { NavLink } from "react-router-dom";
 
 function NavBar({ beers }) {
-	function getRandomIndex(array) {
-		let randomIndex = Math.floor(Math.random() * array.length);
-		return randomIndex;
-	}
+	// function getRandomIndex(array) {
+	// 	let randomIndex = Math.floor(Math.random() * array.length);
+	// 	return randomIndex;
+	// }
 
-	let randomIndex = getRandomIndex(beers);
-	console.log(randomIndex);
+	// let randomIndex = getRandomIndex(beers);
+	// console.log(randomIndex);
 
 	return (
 		<div className="navbar">
