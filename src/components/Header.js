@@ -2,11 +2,14 @@ import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
-    <Link to="/">
-      <img
-        src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png"
-        alt="header image"
-      />
-    </Link>
+    <div className="d-flex justify-content-center mb-3">
+      <Link to="/">
+        <img
+          style={{ width: '98vw', height: '10vh', objectFit: 'cover' }}
+          src="https://res.cloudinary.com/dkuwzoiqf/image/upload/v1687559819/Header_s45vn0.png"
+          alt="header image"
+        />
+      </Link>
+    </div>
   );
 };

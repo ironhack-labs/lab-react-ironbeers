@@ -33,14 +33,13 @@ export const AllBeers = () => {
                   style={{ height: '5rem', width: '3rem' }}
                 >
                   <img
-                    className="beer-card-img"
+                    className="beer-card-img card-img-top"
                     style={{
                       'object-fit': 'contain',
                       width: '100%',
                       height: '100%',
                     }}
                     src={beer.image_url}
-                    className="card-img-top "
                     alt={`image of ${beer.name}`}
                   />
                 </div>
