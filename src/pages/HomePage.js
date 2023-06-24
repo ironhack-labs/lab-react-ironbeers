@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
-import beersImg from "../assets/beers.png"
-import randomBeer from "../assets/random-beer.png"
-import newBeer from "../assets/new-beer.png"
+import beersImg from "../assets/beers.png";
+import randomBeer from "../assets/random-beer.png";
+import newBeer from "../assets/new-beer.png";
 
 function HomePage() {
   return (
-    <div>
+    <nav>
       <div>
-        <img src={beersImg} alt="beers" /> <br />
-        <Link to="/beers">All Beers</Link>
+        <Link to="/beers">
+          <img src={beersImg} alt="beers" /> <br />
+          All Beers
+        </Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem
           numquam molestiae odit, atque quaerat dolor quisquam eligendi voluptas
@@ -18,8 +20,10 @@ function HomePage() {
       </div>
 
       <div>
-        <img src={randomBeer} alt="beers" /> <br />
-        <Link to="/random-beer">Random Beer</Link>
+        <Link to="/random-beer">
+          <img src={randomBeer} alt="beers" /> <br />
+          Random Beer
+        </Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem
           numquam molestiae odit, atque quaerat dolor quisquam eligendi voluptas
@@ -29,8 +33,10 @@ function HomePage() {
       </div>
 
       <div>
-        <img src={newBeer} alt="beers" /> <br />
-        <Link to="/new-beer">New Beer</Link>
+        <Link to="/new-beer">
+          <img src={newBeer} alt="beers" /> <br />
+          New Beer
+        </Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem
           numquam molestiae odit, atque quaerat dolor quisquam eligendi voluptas
@@ -38,7 +44,7 @@ function HomePage() {
           corporis id.
         </p>
       </div>
-    </div>
+    </nav>
   );
 }
 

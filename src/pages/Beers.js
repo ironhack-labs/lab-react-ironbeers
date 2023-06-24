@@ -20,12 +20,13 @@ function Beers() {
       <Header />
       {beersArr ? (
         beersArr.map((beerObj) => {
-          console.log(beerObj);
           return (
             <div key={beerObj._id}>
               <div>
                 {beerObj.image_url && (
-                  <img src={beerObj.image_url} alt={beerObj.name} />
+                  <Link to={`/beers/${beerObj._id}`}>
+                    <img src={beerObj.image_url} alt={beerObj.name} />
+                  </Link>
                 )}
               </div>
               <div>
