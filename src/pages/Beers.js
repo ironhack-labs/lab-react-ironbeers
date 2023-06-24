@@ -5,19 +5,38 @@ import { Link } from "react-router-dom";
 
 function Beers() {
   const [beersArr, setBeersArr] = useState(null);
+  const [query, setQuery] = useState("");
 
-  useEffect(() => {
+  useEffect(() => getBeersArr(), []);
+
+  const getBeersArr = () => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/`)
       .then((response) => setBeersArr(response.data))
       .catch((e) =>
         console.log("Error getting the list of beers from the API", e)
       );
-  }, []);
+  };
+
+  const searchBeer = (queryToSearch) => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/search?q=${queryToSearch}`)
+      .then((response) => setBeersArr(response.data))
+      .catch((e) => console.log("Error getting beers from API", e));
+  };
 
   return (
     <>
-      <Header />
+      <Header /> <br />
+      <label>Search by name</label> <br />
+      <input
+        type="search"
+        value={query}
+        onChange={(e) => {
+          setQuery(e.target.value);
+          searchBeer(e.target.value);
+        }}
+      />
       {beersArr ? (
         beersArr.map((beerObj) => {
           return (

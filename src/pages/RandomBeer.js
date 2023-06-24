@@ -3,23 +3,20 @@ import Header from "../components/Header";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
-
 function RandomBeer() {
+  const [randomBeer, setRandomBeer] = useState(null);
 
-    const [randomBeer, setRandomBeer] = useState(null)
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/random`)
+      .then((response) => setRandomBeer(response.data))
+      .catch((e) => console.log("Error getting random beer from the API", e));
+  }, []);
 
-    useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}/random`)
-            .then(response => setRandomBeer(response.data))
-            .catch(e => console.log("Error getting random beer from the API", e))
-    }, [])
-
-
-    return (
-        <>
-        <Header />
-        {randomBeer ? (
+  return (
+    <>
+      <Header />
+      {randomBeer ? (
         <div>
           <div>
             {randomBeer.image_url && (
@@ -40,8 +37,8 @@ function RandomBeer() {
       ) : (
         <p>Loading...</p>
       )}
-        </>
-    )
+    </>
+  );
 }
 
 export default RandomBeer;
