@@ -37,43 +37,42 @@ export default function NewBeer() {
             <form onSubmit={createBeer}>
 
                 <p>
-                    <label>Name:
+                    <label>Name:<br/>
                         <input value={name} type="text" onChange={e => setName(e.target.value)} required />
                     </label>
                 </p>
                 <p>
-                    <label>Tagline:
+                    <label>Tagline:<br/>
                         <input value={tagline} type="text" onChange={e => setTagline(e.target.value)} required />
                     </label>
                 </p>
                 <p>
-                    <label>Description:
+                    <label>Description:<br/>
                         <textarea value={description} onChange={e => setDescription(e.target.value)} required />
                     </label>
                 </p>
                 <p>
-                    <label>First Brewed:
+                    <label>First Brewed:<br/>
                         <input value={first_brewed} type="text" onChange={e => setFirst_brewed(e.target.value)} required />
                     </label>
                 </p>
                 <p>
-                    <label>Brewers tips:
+                    <label>Brewers tips:<br/>
                         <input value={brewers_tips} type="text" onChange={e => setBrewers_tips(e.target.value)} />
                     </label>
                 </p>
                 <p>
-                    <label>Attenuation level:
+                    <label>Attenuation level:<br/>
                         <input value={attenuation_level} type="number" onChange={e => setAttenuation_level(e.target.value)} required min={0} max={100} />
                     </label>
                 </p>
                 <p>
-                    <label>Contributed by:
+                    <label>Contributed by:<br/>
                         <input value={contributed_by} type="text" onChange={e => setContributed_by(e.target.value)} required />
                     </label>
                 </p>
 
                 <button>Create</button>
-
             </form>
 
             </div>

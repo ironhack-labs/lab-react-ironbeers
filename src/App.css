@@ -116,13 +116,28 @@ header a {
 }
 
 #create-beer {
-  margin: 5px;;
+  margin: 5px;
+  height: 90vh;
+}
+
+#create-beer form{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#create-beer p {
+  margin: 10px 0px;
+  width: 90%;
 }
 
 #create-beer input,textarea {
   border-radius: 12px;
-  width: 90%;
   border: 1px solid lightgrey;
+  width: 100%;
 }
 
 #create-beer input {
@@ -144,5 +159,7 @@ header a {
   width: 90%;
   background-color: #61dafb;
   color: white;
-  border: 0px;;
+  border: 0px;
+  padding: 5px;
+  margin-top: 15px;
 }
