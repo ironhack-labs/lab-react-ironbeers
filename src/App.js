@@ -9,9 +9,11 @@ import { useEffect, useState } from "react";
 import BeersList from "./components/BeersList";
 import BeerDetails from "./components/BeerDetails";
 import CreateBeer from "./components/CreateBeer";
+import Search from "./components/Search";
 
 function App() {
 	const [beers, setBeers] = useState([]);
+	const [search, setSearch] = useState("");
 
 	useEffect(() => {
 		getBeersFromApi();
@@ -26,6 +28,9 @@ function App() {
 			})
 			.catch((e) => console.log(e));
 	};
+	const filteredBeers = beers.filter((beer) => {
+		return beer.name.toLowerCase().includes(search.toLowerCase());
+	});
 
 	return (
 		<div className="App">
@@ -38,7 +43,8 @@ function App() {
 					element={
 						<div>
 							<Header />
-							<BeersList beers={beers} />
+							<Search search={search} setSearch={setSearch} />
+							<BeersList beers={filteredBeers} />
 						</div>
 					}
 				/>
