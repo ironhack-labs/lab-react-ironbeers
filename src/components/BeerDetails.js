@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
 
-function BeerDetails(props) {
+function BeerDetails() {
   const { id } = useParams();
 
   const [beerDetails, setBeerDetails] = useState([]);
