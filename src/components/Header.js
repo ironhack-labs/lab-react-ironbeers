@@ -1,5 +1,14 @@
+import header from "../assets/header.png";
+import { Link } from "react-router-dom";
+
 function Header() {
-  return <h1>This is the Header page</h1>;
+  return (
+    <div>
+      <Link to={`/`}>
+        <img src={header} />
+      </Link>
+    </div>
+  );
 }
 
 export default Header;

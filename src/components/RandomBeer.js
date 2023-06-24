@@ -1,5 +1,12 @@
+import Header from "./Header";
+
 function RandomBeer() {
-  return <h1>This is the Beers page</h1>;
+  return (
+    <div>
+      <Header />
+      <h1>Random Beer</h1>
+    </div>
+  );
 }
 
 export default RandomBeer;
