@@ -24,6 +24,16 @@
   color: white;
 }
 
+.beer-listing {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+#images {
+  max-width: 50%;
+  max-height: 50%;
+}
+
 .App-link {
   color: #61dafb;
 }
