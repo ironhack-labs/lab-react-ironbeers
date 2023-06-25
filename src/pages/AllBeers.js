@@ -10,12 +10,15 @@ export const AllBeers = () => {
     getBeersFromApi();
   }, []);
 
+  //GET all beers from API
   const getBeersFromApi = () => {
     axios
       .get(`${process.env.REACT_APP_API_URL}`)
       .then((res) => setBeers(res.data))
       .catch((e) => console.log('Error GET beers from API.......', e));
   };
+
+  //Filter beers from the whole list of beers according to search input
   let filteredBeers = beers;
   if (beers === null) {
     return <p>loading...</p>;
@@ -27,6 +30,7 @@ export const AllBeers = () => {
       return beer.name.toLowerCase().includes(query.toLowerCase());
     });
     return (
+      // Search bar
       <div className="all-beers grid row-gap-3 d-flex flex-column justify-content-center align-items-center row">
         <div>
           <label className="mx-2">Search</label>
