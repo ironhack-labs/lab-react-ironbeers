@@ -10,33 +10,41 @@ import { useState } from 'react';
 import axios from "axios";
 import { useEffect } from 'react';
 
+
 function App() {
+  const [beers, setBeers] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(process.env.REACT_APP_API_URL)
+      .then((response) => {
+        setBeers(response.data);
+      })
+      .catch((e) => console.log(e));
+  }, []);
+
+
+  const getContributorName = (contributor) => {
+    const startIndex = contributor.indexOf("<");
+    if (startIndex !== -1) {
+      return contributor.slice(0, startIndex).trim();
+    }
+    return contributor;
+  };
+
+  
+
   return (
-    <div className="App">
+    // ...
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/beers" element={<AllBeers beers={beers} callbackToName={getContributorName} />} />
+      <Route path="/beers/:beerId" element={<BeerDetails beers={beers} callbackToName={getContributorName} />} />
 
-      <header>
-        
-        <Link to= "/">
-        <img src="./logo.svg"/>
-        </Link>
-
-      </header>
-
-      
-
-
-      <Routes>
-
-      <Route   path="/" element= {<HomePage/>}/>
-        <Route   path="/beers" element= {<AllBeers/>}/>
-        <Route   path="/beers/:beerId" element={<BeerDetails/>}/>
-        <Route   path="/random-beer" element={<RandomBeer/>}/>
-        <Route   path="/new-beer" element={<NewBeer/>}/>
-
-
-      </Routes>
-      
-    </div>
+      <Route path="/random-beer" element={<RandomBeer callbackToName={getContributorName} />} />
+      <Route path="/new-beer" element={<NewBeer />} />
+    </Routes>
+    // ...
   );
 }
 
