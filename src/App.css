@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.header-logo {
+  background-color: #61dafb;
+}
+
+.home-logo {
+  width: 50px;
+}
+
+
+.form-create {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-create label {
+  display: flex;
+  flex-direction: column;
+}
