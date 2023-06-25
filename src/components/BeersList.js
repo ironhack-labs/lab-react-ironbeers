@@ -7,18 +7,20 @@ const BeersList = () => {
 
     const baseUrl = "https://ih-beers-api2.herokuapp.com/beers";
     const [beers, setBeers] = useState([]);
+    const [query, setQuery] = useState("");
 
-    useEffect(() => {
+    const handleChange = (e) => {
+        setQuery(e.target.value)
         axios
-            .get(baseUrl)
+            .get(`${baseUrl}/search?q=${e.target.value}`)
             .then(response => {
-                setBeers(response.data);
+                setBeers(response.data)
             })
             .catch(e => console.log(e))
-    }, [])
+    }
 
-    return <div className="BeersList">
-        {beers.map(beer => {
+    const renderBeers = () => {
+        return beers.map(beer => {
             return <div className="Beer" key={beer._id}>
                 <Link to={`/beers/${beer._id}`}>
                     <div className="img-container">
@@ -32,7 +34,23 @@ const BeersList = () => {
                 </Link>
                 <hr />
             </div>
-        })}
+        })
+    }
+
+    useEffect(() => {
+        axios
+            .get(baseUrl)
+            .then(response => {
+                setBeers(response.data);
+            })
+            .catch(e => console.log(e))
+    }, [])
+
+    return <div className="BeersList">
+        <div className="BeersSearch">
+            <input type="text" onChange={handleChange}/>
+        </div>
+        {renderBeers()}
     </div>
 }
 
