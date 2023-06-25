@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const AllBeers = () => {
   const [beers, setBeers] = useState(null);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     getBeersFromApi();
@@ -15,13 +16,28 @@ export const AllBeers = () => {
       .then((res) => setBeers(res.data))
       .catch((e) => console.log('Error GET beers from API.......', e));
   };
-
+  let filteredBeers = beers;
   if (beers === null) {
     return <p>loading...</p>;
   } else {
+    const handleInput = (e) => {
+      setQuery(e.target.value);
+    };
+    filteredBeers = beers.filter((beer) => {
+      return beer.name.toLowerCase().includes(query.toLowerCase());
+    });
     return (
       <div className="all-beers grid row-gap-3 d-flex flex-column justify-content-center align-items-center row">
-        {beers.map((beer) => {
+        <div>
+          <label className="mx-2">Search</label>
+          <input value={undefined} type="text" onChange={handleInput} />
+        </div>
+        {query !== '' &&
+          (filteredBeers.length === 0
+            ? 'No result found'
+            : `${filteredBeers.length} results`)}
+
+        {filteredBeers.map((beer) => {
           return (
             <div style={{ maxWidth: '35rem', width: '100%' }}>
               <Link
