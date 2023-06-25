@@ -1,18 +1,23 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export const BeerDetails = () => {
   const { id } = useParams();
 
+  const navigate = useNavigate();
+
   const [beerDetails, setBeerDetails] = useState();
 
+  //GET details from API
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/${id}`)
       .then((res) => setBeerDetails(res.data))
       .catch((e) => console.log('Error GET details from API............', e));
   }, []);
+
+  
 
   if (beerDetails === undefined) {
     return <p>loading...</p>;
@@ -62,6 +67,7 @@ export const BeerDetails = () => {
               </p>
             </p>
           </div>
+          
         </div>
       </div>
     );
