@@ -48,7 +48,7 @@ function App() {
         <nav className="nav-container">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/beers">List</NavLink>
-          <NavLink to="/beers/new">New Beer</NavLink>
+          <NavLink to="/beers/new-beer">New Beer</NavLink>
           <NavLink to="/beers/random-beer">Random Beer</NavLink>
           <NavLink to="/beers/:id">Single Beer</NavLink>
         </nav>
@@ -56,7 +56,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/beers" element={<ListBeers listBeers={appArray}  />} />
-          <Route path="/beers/new" element={<NewBeer />} />
+          <Route path="/beers/new-beer" element={<NewBeer />} />
           <Route path="/beers/random-beer" element={<RandomBeer randomBeer={randomArray}/>} />
           <Route path="/beers/:_id" element={<SingleBeers listBeers={appArray} />} />
         </Routes>
