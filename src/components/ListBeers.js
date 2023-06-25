@@ -44,7 +44,7 @@ function ListBeers() {
 							>
 								<Card
 									className="m-3 container p-3 align-items-center justify-content-center"
-									style={{ width: '18rem', minHeight: '18rem' }}
+									style={{ width: '18rem', minHeight: '25rem' }}
 								>
 									<div className="d-flex align-items-center row no-gutters">
 										<div className="col-4">
