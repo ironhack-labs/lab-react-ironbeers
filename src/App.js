@@ -35,16 +35,21 @@ function App() {
   
 
   return (
-    // ...
+    <div>
+      <Link to={`/`}>
+      <header>
+      <img src="./logo.svg"/>
+      </header>
+      </Link>
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/beers" element={<AllBeers beers={beers} callbackToName={getContributorName} />} />
       <Route path="/beers/:beerId" element={<BeerDetails beers={beers} callbackToName={getContributorName} />} />
 
-      <Route path="/random-beer" element={<RandomBeer callbackToName={getContributorName} />} />
+      <Route path="/random-beer" element={<RandomBeer beers={beers} callbackToName={getContributorName} />} />
       <Route path="/new-beer" element={<NewBeer />} />
     </Routes>
-    // ...
+    </div>
   );
 }
 
