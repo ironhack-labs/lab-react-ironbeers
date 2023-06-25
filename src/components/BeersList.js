@@ -12,7 +12,6 @@ const BeersList = () => {
         axios
             .get(baseUrl)
             .then(response => {
-                console.log(response.data[0]);
                 setBeers(response.data);
             })
             .catch(e => console.log(e))
@@ -20,19 +19,19 @@ const BeersList = () => {
 
     return <div className="BeersList">
         {beers.map(beer => {
-            return <Link to={`/beers/${beer._id}`} key={beer._id}>
-                <div className="Beer">
+            return <div className="Beer" key={beer._id}>
+                <Link to={`/beers/${beer._id}`}>
                     <div className="img-container">
-                        <img src={beer.image_url} alt={beer.name} />
+                        <img src={beer.image_url} alt={beer.name}/>
                     </div>
                     <div className="text-container">
-                        <h3>{beer.name}</h3>
-                        <h4>{beer.tagline}</h4>
+                        <h2>{beer.name}</h2>
+                        <h3>{beer.tagline}</h3>
                         <p>Create by: <span>{beer.contributed_by.split(" <")[0]}</span></p>
                     </div>
-                </div>
+                </Link>
                 <hr />
-            </Link>
+            </div>
         })}
     </div>
 }
