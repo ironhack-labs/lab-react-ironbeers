@@ -1,4 +1,4 @@
-import { Container, Navbar, Nav, Form, Button, Switch } from "react-bootstrap";
+import { Container, Navbar, Nav, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 export const NavBar = () => {
   return (
@@ -14,8 +14,8 @@ export const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to={"/"}>
-              All Beers
+            <Nav.Link as={Link} to={"/beers"}>
+              All the Beers
             </Nav.Link>
             <Nav.Link as={Link} to={"/random"}>
               Random Beer
