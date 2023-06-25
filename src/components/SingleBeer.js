@@ -2,11 +2,15 @@ import Header from "./Header"
 
 
 function SingleBeer(){
+
     return (
        <div>
         <Header />
 
-            <p>single beer</p>
+            <h1>single beer</h1>
+           
+
+            
 
 
        </div>

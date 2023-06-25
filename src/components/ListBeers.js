@@ -1,7 +1,7 @@
 import Header from "./Header";
 import axios from "axios";
 import {useState, useEffect} from "react"
-// import {Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
 function ListBeers () {
@@ -29,9 +29,8 @@ useEffect(()=>{
                             <img src={beersObj.image_url} alt={beersObj.name} />
                             <h2>Name: {beersObj.name}</h2>
                             <h4>tagline: {beersObj.tagline}</h4>
-                            <p>contributed by: {beersObj.contributed_by}</p>
-
-
+                            <p>contributed by: {beersObj.contributed_by}</p> <br />
+                            <Link to={`/beers/${beersObj._id}`}>More Details</Link>
 
                         </div>
                     )
