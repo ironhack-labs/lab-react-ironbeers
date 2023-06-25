@@ -23,7 +23,7 @@ function Home() {
 			</Card>
 
 			<Card className="bg-danger-subtle m-2">
-				<Link to={'/beer/random'} className="text-decoration-none">
+				<Link to={'/beer/new'} className="text-decoration-none">
 					<Card.Img
 						className="img-fluid"
 						variant="top"
@@ -39,7 +39,7 @@ function Home() {
 			</Card>
 
 			<Card className="bg-danger-subtle m-2">
-				<Link to={'/beer/new'} className="text-decoration-none">
+				<Link to={'/beer/random'} className="text-decoration-none">
 					<Card.Img
 						className="img-fluid"
 						variant="top"
