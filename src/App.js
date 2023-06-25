@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Homepage from "./components/Homepage";
+import BeersList from "./components/BeersList";
+import SingleBeer from "./components/SingleBeer";
+import RandomBeer from "./components/RandomBeer";
+import NewBeer from "./components/NewBeer";
+import Header from "./components/Header";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  //shows header on every view except for '/'
+  const location = useLocation();
+
+  if (location.pathname === "/") {
+    return <Homepage />;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <Routes>
+        <Route path="/beers" element={<BeersList />} />
+        <Route path="/random-beer" element={<RandomBeer />} />
+        <Route path="/beers/:beerId" element={<SingleBeer />} />
+        <Route path="/new-beer" element={<NewBeer />} />
+      </Routes>
     </div>
   );
 }
