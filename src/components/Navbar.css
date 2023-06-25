@@ -13,7 +13,8 @@
     border-radius: 0.5rem;
 }
 
+
 .Navbar a.active {
     color: white;
-    background-color: #1ee5bd;
+    background-color: #598aec;
 }

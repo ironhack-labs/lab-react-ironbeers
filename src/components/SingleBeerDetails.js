@@ -1,5 +1,13 @@
+import Header from "./Header";
+
 function SingleBeerDetails() {
-  return <h1>Beer Details</h1>;
+  return (
+    <>
+      <Header />
+
+      <h1>Beer Details</h1>
+    </>
+  );
 }
 
 export default SingleBeerDetails;
