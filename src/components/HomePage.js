@@ -1,6 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import newBeer from '../assets/new-beer.png'
+import randomBeer from "../assets/random-beer.png";
+import beersList from '../assets/beers.png';
 
-function HomePage (props){
+function HomePage (){
     console.log("this is working")
 
 
@@ -8,9 +11,16 @@ function HomePage (props){
     return(
     <div className="HomeContainer">
         <div>
-        <NavLink to="/beers"> Beers List </NavLink>
-        <NavLink to="/random-beer"> Random Beer </NavLink>
-        <NavLink to="/new-beer"> Create a Beer </NavLink>
+        <img src={beersList} alt="beersList" />
+        <Link to="/beers"> Beers List </Link>
+
+        <br />
+        <img src={randomBeer} alt="randomBeer" />
+        <Link to="/random-beer"> Random Beer </Link>
+
+        <br />
+        <img src={newBeer} alt="newBeer" />
+        <Link to="/new-beer"> Create a Beer </Link>
         </div>
     </div>
 )}

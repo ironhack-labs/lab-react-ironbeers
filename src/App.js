@@ -2,12 +2,12 @@ import HomePage from './components/HomePage';
 import Header from './components/Header';
 import BeersList from './components/BeersList';
 import RandomBeer from './components/RandomBeer';
-import NewBeer from './components/NewBeer';
 import BeerDetails from './components/BeerDetails';
+import CreateBeer from './components/CreateBeer';
 import {Routes, Route} from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import { useEffect, useState } from 'react';
 
 function App() {
 
@@ -46,7 +46,7 @@ function App() {
       <Route path='/' element={<HomePage/>}/>/
       <Route path='/beers' element={renderBeerList()}/>
       <Route path='/random-beer' element={<RandomBeer />}/>
-      <Route path='/new-beer' element={<NewBeer />}/>
+      <Route path='/new-beer' element={<CreateBeer callbackGetBeers={getBeers}/>}/>
       <Route path='/beers/:beerId' element={<BeerDetails/>}/>/
     </Routes>
 
