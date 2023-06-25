@@ -1,3 +1,4 @@
+import "./NewBeer.css"
 import { useState } from "react";
 import Header from "../components/Header";
 import axios from "axios";
@@ -30,7 +31,7 @@ function NewBeer() {
   return (
     <>
       <Header />
-
+      <div className="formcontainer">
       <form onSubmit={handleSubmit}>
         <label>
           Name
@@ -43,6 +44,8 @@ function NewBeer() {
             onChange={handleOnchange}
           />
         </label>
+        <br />
+        <br />
 
         <label>
           Tagline
@@ -55,6 +58,8 @@ function NewBeer() {
             onChange={handleOnchange}
           />
         </label>
+        <br />
+        <br />
 
         <label>
           Description
@@ -66,6 +71,8 @@ function NewBeer() {
             onChange={handleOnchange}
           />
         </label>
+        <br />
+        <br />
 
         <label>
           First Brewed
@@ -77,6 +84,8 @@ function NewBeer() {
             onChange={handleOnchange}
           />
         </label>
+        <br />
+        <br />
 
         <label>
           Brewers Tips
@@ -88,6 +97,8 @@ function NewBeer() {
             onChange={handleOnchange}
           />
         </label>
+        <br />
+        <br />
 
         <label>
           Attenuation Level
@@ -100,6 +111,8 @@ function NewBeer() {
             onChange={handleOnchange}
           />
         </label>
+        <br />
+        <br />
 
         <label>
           Contributed By
@@ -111,9 +124,12 @@ function NewBeer() {
             onChange={handleOnchange}
           />
         </label>
+        <br />
+        <br />
 
         <button>Create</button>
       </form>
+      </div>
     </>
   );
 }

@@ -1,0 +1,19 @@
+.beercontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.beerimg2 img {
+    height: 300px;
+}
+
+.beerdetails {
+    display: flex;
+    flex-direction: column;
+}
+
+

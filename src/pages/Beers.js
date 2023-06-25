@@ -1,3 +1,4 @@
+import "./Beers.css";
 import axios from "axios";
 import Header from "../components/Header";
 import { useEffect, useState } from "react";
@@ -37,30 +38,34 @@ function Beers() {
           searchBeer(e.target.value);
         }}
       />
+      <div className="container">
       {beersArr ? (
         beersArr.map((beerObj) => {
           return (
-            <div key={beerObj._id}>
-              <div>
+            
+            <div className="beerbox" key={beerObj._id}>
+              <div className="beerimg">
                 {beerObj.image_url && (
                   <Link to={`/beers/${beerObj._id}`}>
                     <img src={beerObj.image_url} alt={beerObj.name} />
                   </Link>
                 )}
               </div>
-              <div>
+              <div className="beerinfo">
                 <h1>{beerObj.name}</h1>
                 <h2>{beerObj.tagline}</h2>
-                <p>Created by: {beerObj.contributed_by}</p>
+                <p><span style={{fontWeight: 'bold'}}>Created by:</span> {beerObj.contributed_by}</p>
                 <Link to={`/beers/${beerObj._id}`}>Details</Link>
-                <hr />
               </div>
             </div>
+            
+            
           );
         })
       ) : (
         <p>Loading...</p>
       )}
+      </div>
     </>
   );
 }
