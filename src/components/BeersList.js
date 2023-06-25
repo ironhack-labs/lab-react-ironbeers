@@ -9,9 +9,9 @@ function BeersList({ Beers }){
 
                 <img src={beer.image_url} alt="beerImg" />
                
-                <h3>Beer Name: {beer.name}</h3>
-                <h3>Tagline: {beer.tagline}</h3>
-                <h3>Contributor: {beer.contributed_by}</h3>
+                <h3>{beer.name}</h3>
+                <h3> {beer.tagline}</h3>
+                <h3>Created by: {beer.contributed_by}</h3>
 
                 <Link to={`/beers/${beer._id}`}>More Details</Link>
 

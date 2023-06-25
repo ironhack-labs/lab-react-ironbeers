@@ -14,19 +14,22 @@ import { Link, useParams } from "react-router-dom"
             .then((response) => {
                 console.log(response.data)
                 setBeer(response.data)
-            })}, [])
-            .catch(e => console.log(e))
+            })
+            .catch(e => console.log(e))} ,[])
     return (
-        <>
+        <>      
                 <div className="beerContainer" key={beer._id}>
-
+                
                 <img src={beer.image_url} alt="beerImg" />
                
                 <h3>Beer Name: {beer.name}</h3>
-                <h3>Tagline: {beer.tagline}</h3>
-                <h3>Contributor: {beer.contributed_by}</h3>
+                <h3> {beer.tagline}</h3>
+                <h3> {beer.first_brewed}</h3>
+                <h4> {beer.attenuation_level}</h4>
+                <p> {beer.description}</p>
+                <h3>Created by: {beer.contributed_by}</h3>
 
-                <Link to={`/beers/${beer._id}`}></Link>
+                <Link to="/beers">Back</Link>
 
                 </div>
         </>

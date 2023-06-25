@@ -1,4 +1,4 @@
-function NewBeer(props){
+function NewBeer(){
     return (
         <h1>This is the nEWbEER</h1>
     )

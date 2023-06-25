@@ -1,7 +1,38 @@
+import { useEffect, useState } from "react"
+import axios from "axios"
+import { Link } from "react-router-dom"
+
 function RandomBeer(){
+
+    const [randomBeer, setRandomBeer] = useState({})
+    useEffect(() => {
+        axios
+            .get(`${process.env.REACT_APP_API_URL}/random`)
+            .then((response) => {
+                setRandomBeer(response.data)
+            })
+            .catch(e => console.log(e))
+    },[])
+
+
     return (
-        <h1>This is the RANDOM BEERRRRR</h1>
-    )
+            <>      
+                    <div className="beerContainer" key={randomBeer._id}>
+                    
+                    <img src={randomBeer.image_url} alt="beerImg" />
+                   
+                    <h3>Beer Name: {randomBeer.name}</h3>
+                    <h3> {randomBeer.tagline}</h3>
+                    <h3> {randomBeer.first_brewed}</h3>
+                    <h4> {randomBeer.attenuation_level}</h4>
+                    <p> {randomBeer.description}</p>
+                    <h3>Created by: {randomBeer.contributed_by}</h3>
+    
+                    <Link to="/">Back</Link>
+    
+                    </div>
+            </>
+        )
 }
 
 export default RandomBeer
