@@ -2,3 +2,7 @@
   text-align: center;
 }
 
+header {
+  background-color: lightblue;
+  height: 70px;
+}
