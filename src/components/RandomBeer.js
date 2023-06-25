@@ -1,10 +1,15 @@
+import Header from "./Header";
 
 
 function RandomBeer (){
     return (
-        <header>
-             <Link to="/">HOME</Link>
-         </header>
+        <div>
+             <Header />
+
+
+             <h1>random beer</h1>
+        </div>
+
     )
 }
 

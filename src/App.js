@@ -13,17 +13,15 @@ function App() {
   return (
    
     <div className="App">
-       <header>
-      <Navbar />
-      </header>
-      
+       
+
      
      <Routes>
           <Route path='/' element={<HomePage />}/> 
-          <Route path='/random-beer' element={<RandomBeer />}/> 
+          <Route path='/beers' element={<ListBeers />}/> 
           <Route path='/new-beer' element={<NewBeer />}/> 
-          {/* <Route path='/' element={<HomePage />}/> 
-          <Route path='/' element={<HomePage />}/>  */}
+          <Route path='/random-beer' element={<RandomBeer />}/> 
+          {/* <Route path='/' element={<HomePage />}/>   */}
      </Routes>
       
 

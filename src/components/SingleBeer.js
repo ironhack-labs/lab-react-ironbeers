@@ -1,10 +1,15 @@
+import Header from "./Header"
 
 
 function SingleBeer(){
     return (
-        <header>
-             <Link to="/">HOME</Link>
-         </header>
+       <div>
+        <Header />
+
+            <p>single beer</p>
+
+
+       </div>
     )
 }
 

@@ -1,8 +1,13 @@
+import Header from "./Header";
+
 function NewBeer (){
     return(
-        <header>
-             <Link to="/">HOME</Link>
-         </header>
+        <div>
+             <Header />
+
+             <h1>New Beer</h1>
+
+        </div>
     )
     
 }
