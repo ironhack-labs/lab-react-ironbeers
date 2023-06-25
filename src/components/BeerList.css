@@ -11,13 +11,13 @@
 
 .BeerList a:hover {
     color: white;
-    background-color: #e51e52;
+    background-color: #ad2ccd;
 }
 
 .BeerList .beer-summary {
     text-align: center;
     border: 1px solid #666;
-    background-color: #e51e531c;
+    background-color: #1ee55a1c;
     margin: 2rem 2rem 4rem;
     padding: 1rem;
     border-radius: 1rem;
