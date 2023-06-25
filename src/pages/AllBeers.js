@@ -32,14 +32,18 @@ export const AllBeers = () => {
           <label className="mx-2">Search</label>
           <input value={undefined} type="text" onChange={handleInput} />
         </div>
+
+        {/* showing message if theres search input */}
         {query !== '' &&
           (filteredBeers.length === 0
             ? 'No result found'
             : `${filteredBeers.length} results`)}
 
+        {/* render filtered beers accordingly to search input */}
         {filteredBeers.map((beer) => {
           return (
             <div style={{ maxWidth: '35rem', width: '100%' }}>
+              {/* embeded the whole individual beer component with a Link */}
               <Link
                 className="beer-card d-flex flex-row card px-3"
                 to={`/${beer._id}`}
