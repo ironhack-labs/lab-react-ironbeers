@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/beers" element={<BeerList />} />
         <Route path="/beers/:beerId" element={<SingleBeerDetails />} />
-        <Route path="/random-beer" element={<RandomBeer />} />
+        {/* <Route path="/random-beer" element={<RandomBeer />} /> */}
         <Route path="/new-beer" element={<NewBeer />} />
         {/* 
         <Route path="*" element={<ErrorPage />} /> */}

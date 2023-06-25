@@ -33,8 +33,8 @@ function SingleBeerDetails() {
       <br />
       <table className="table">
         {/* <tr className="textAlign">
-          <th>Attentuation Level: </th>
-          <td>{details.attentuation_level}</td>
+          <th>Attenuation Level: </th>
+          <td>{details.attenuation_level}</td>
         </tr> */}
         <tr className="textAlign">
           <th>Description</th>
