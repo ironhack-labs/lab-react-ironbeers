@@ -17,11 +17,12 @@ export const RandomBeer = () => {
 
   return (
     <Container fluid className="d-flex flex-column align-items-center">
+      <h1 className="m-0">Random Beer</h1>
       <Card
         style={{ width: "25rem" }}
         className="m-4 d-flex flex-column align-items-center"
       >
-        <Col className="col-lg-12 col-sm-10 col-sm-6 mx-auto">
+        <Col className="col-lg-12 col-md-8 col-sm-6 mx-auto">
           <Card.Img className="w-25" variant="top" src={beer.image_url} />
         </Col>
         <Card.Body>

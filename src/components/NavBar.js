@@ -10,10 +10,10 @@ export const NavBar = () => {
       className="NavBar"
     >
       <Container>
-        <Navbar.Brand href="/">IronBeer</Navbar.Brand>
+        <Navbar.Brand href="/">🍺IronBeer</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="mx-auto">
             <Nav.Link as={Link} to={"/beers"}>
               All the Beers
             </Nav.Link>
@@ -24,15 +24,6 @@ export const NavBar = () => {
               New Beer
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

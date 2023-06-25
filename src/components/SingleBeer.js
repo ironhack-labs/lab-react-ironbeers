@@ -18,6 +18,7 @@ export const SingleBeer = () => {
   });
   return (
     <Container fluid className="d-flex flex-column align-items-center">
+      <h1 className="m-0">Details</h1>
       <Card
         style={{ width: "25rem" }}
         className="m-4 d-flex flex-column align-items-center"
@@ -40,13 +41,12 @@ export const SingleBeer = () => {
               </i>
             </ListGroup.Item>
           </ListGroup>
-          <Card.Text>
-            {beer.description}
-          </Card.Text>
+          <Card.Text>{beer.description}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroup.Item><i style={{ color: "gray" }}>{beer.contributed_by}</i></ListGroup.Item>
-          
+          <ListGroup.Item>
+            <i style={{ color: "gray" }}>{beer.contributed_by}</i>
+          </ListGroup.Item>
         </ListGroup>
         <Card.Body>
           <Button

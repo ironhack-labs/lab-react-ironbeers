@@ -1,22 +1,55 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Button, Card, Col, Container, Row, ListGroup } from "react-bootstrap";
+import {
+  Button,
+  Card,
+  Col,
+  Container,
+  Row,
+  ListGroup,
+  Form,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 export const ListBeer = () => {
   const [beerList, setBeerList] = useState([]);
+  const [query, setQuery] = useState("");
   useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_API_URL}`)
-      .then((res) => {
-        setBeerList(res.data);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    if (query === "") {
+      axios
+        .get(`${process.env.REACT_APP_API_URL}`)
+        .then((res) => {
+          setBeerList(res.data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    } else {
+      axios
+        .get(`${process.env.REACT_APP_API_URL}/search?q=${query}`)
+        .then((res) => {
+          setBeerList(res.data);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    }
   });
 
   return (
     <Container className="px-4">
+      <Form className="mt-4 d-flex justify-content-center">
+        <Form.Control
+          style={{ width: "25%" }}
+          type="search"
+          placeholder="Search"
+          className="me-2"
+          aria-label="Search"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+          }}
+        />
+      </Form>
       <Row xxl={5} xl={4} lg={3} md={2} sm={1}>
         {beerList.map((beer, index) => (
           <div key={index} className="container d-flex justify-content-center">
@@ -33,7 +66,9 @@ export const ListBeer = () => {
                     <p>{beer.tagline}</p>{" "}
                     <ListGroup className="list-group-flush">
                       <ListGroup.Item className="p-0">
-                        <small><i style={{ color: "gray" }}>{beer.contributed_by}</i></small>
+                        <small>
+                          <i style={{ color: "gray" }}>{beer.contributed_by}</i>
+                        </small>
                       </ListGroup.Item>
                     </ListGroup>
                   </Card.Text>
