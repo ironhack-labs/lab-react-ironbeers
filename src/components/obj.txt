@@ -1,0 +1,32 @@
+attenuation_level
+: 
+80.9
+brewers_tips
+: 
+"Getting good Bramling Cross is key. Most English hops are in leaf form (not pelletised), so getting fresh hops close to harvest (September) will give this beer the right amount of dark berry intensity."
+contributed_by
+: 
+"Sam Mason <samjbmason>"
+description
+: 
+"Good old Bramling Cross is elegant, refined, assured, (boring) and understated. Understated that is unless you hop the living daylights out of a beer with it. This is Bramling Cross re-invented and re-imagined, and shows just what can be done with English hops if you use enough of them. Poor Bramling Cross normally gets lost in a woeful stream of conformist brown ales made by sleepy cask ale brewers. But not anymore. This beer shows that British hops do have some soul, and is a fruity riot of blackberries, pears, and plums. Reminds me of the bramble, apple and ginger jam my grandmother used to make."
+expireAt
+: 
+"2023-06-25T07:00:49.936Z"
+first_brewed
+: 
+"01/2011"
+image_url
+: 
+"https://images.punkapi.com/v2/10.png"
+name
+: 
+"Bramling X"
+tagline
+: 
+"Single Hop IPA Series - 2011."
+__v
+: 
+0
+_id
+:

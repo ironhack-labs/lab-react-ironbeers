@@ -1,0 +1,32 @@
+.BeerList a {
+    display: inline-block;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    outline: 1px solid;
+}
+
+.BeerList a:hover {
+    color: white;
+    background-color: #ad2ccd;
+}
+
+.BeerList .beer-summary {
+    text-align: center;
+    border: 1px solid #666;
+    background-color: #1ee55a1c;
+    margin: 2rem 2rem 4rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem 0rem #aaa;
+}
+
+.BeerList .beer-summary img {
+    max-height: 200px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 1rem;
+}
