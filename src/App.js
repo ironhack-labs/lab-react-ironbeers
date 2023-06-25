@@ -4,7 +4,7 @@ import FindBeer from "./components/FindBeer";
 import NewBeer from "./components/NewBeer";
 import RandomBeer from "./components/RandomBeer";
 import HomePage from "./components/HomePage";
-import NavBar from "./components/NavBar";
+
 
 
 import './App.css';
@@ -15,8 +15,6 @@ function App() {
 
   return (
     <div className="App">
-
-      <NavBar/>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/list' element={<BeersList />} />

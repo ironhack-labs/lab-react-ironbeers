@@ -4,16 +4,24 @@ import { Link } from 'react-router-dom';
 
 function BeersList() {
 
-    const [beersArr, setBeersArr] = useState([]);
+    const [beersArr, setBeersArr] = useState(null);
 
     useEffect(() => {
-        
-        axios.get(`${process.env.REACT_APP_API_URL}/beers`)
-            .then(response => {
+        getBeersFromAPI();
+    }, []);
+
+    const getBeersFromAPI = () => {
+        axios
+        .get(`${process.env.REACT_APP_API_URL}/beers`)
+        .then((response) => {
                 setBeersArr(response.data);
             })
             .catch(e => console.log("Error getting beers from API", e))
-    }, []);
+    };
+
+    if (!beersArr) {
+        return <div>Loading...</div>;
+      }
 
     return (
         <div>

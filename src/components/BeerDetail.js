@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 
 function BeerDetail(props) {
 
-    const {beerId} = useParams();
+    const { beerId } = useParams();
     const [beersArr, setBeersArr] = useState([]);
 
     useEffect(() => {
