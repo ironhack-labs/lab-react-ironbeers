@@ -27,6 +27,10 @@
 .App-link {
   color: #61dafb;
 }
+.card-img {
+  max-width: 200px;
+  max-height: 240px;
+}
 
 @keyframes App-logo-spin {
   from {
