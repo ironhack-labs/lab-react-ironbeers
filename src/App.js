@@ -7,19 +7,22 @@ import ListBeers from './components/ListBeers';
 import NewBeer from './components/NewBeer';
 import RandomBeer from './components/RandomBeers';
 import SingleBeers from './components/SingleBeers';
-import { useEffect, useState } from "react";
+import { useEffect ,useState } from "react";
 
 
 function App() {
 
   const [appArray, setAppArray] = useState();
-
+  const [randomArray, setRandomArray] = useState(null);
 
 
   const baseURL= "https://ih-beers-api2.herokuapp.com/beers";
   
+  const randomURL ="https://ih-beers-api2.herokuapp.com/beers/random";
+
   useEffect(() => {
     getBeerAPI();
+    getRandomBeerAPI();
   },[]);
   
   const getBeerAPI = () => {
@@ -28,16 +31,25 @@ function App() {
       setAppArray(response.data)})
       .catch(e => console.log(e));
     };
+
+  const getRandomBeerAPI = () => {
+    axios.get(`${randomURL}`)
+    .then(response => {
+      setRandomArray([response.data])})
+      .catch(e => console.log(e));
+    };
+  
   
 
   return (
+
     <Router>
       <div className='totalframe'>
         <nav className="nav-container">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/beers">List</NavLink>
           <NavLink to="/beers/new">New Beer</NavLink>
-          <NavLink to="/beers/search">Random Beer</NavLink>
+          <NavLink to="/beers/random-beer">Random Beer</NavLink>
           <NavLink to="/beers/:id">Single Beer</NavLink>
         </nav>
 
@@ -45,8 +57,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/beers" element={<ListBeers listBeers={appArray}  />} />
           <Route path="/beers/new" element={<NewBeer />} />
-          <Route path="/beers/search?q={query}" element={<RandomBeer />} />
-          <Route path="/beers/:id" element={<SingleBeers />} />
+          <Route path="/beers/random-beer" element={<RandomBeer randomBeer={randomArray}/>} />
+          <Route path="/beers/:_id" element={<SingleBeers listBeers={appArray} />} />
         </Routes>
       </div>
     </Router>

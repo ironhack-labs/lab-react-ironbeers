@@ -11,7 +11,7 @@ function HomePage() {
         <p>This is HomePage</p>
 
         <section>
-                 <img src={beersImage} alt="Beers" />
+                 <img className="imghome" src={beersImage} alt="Beers" />
             <div className="text-container">
                 <h2><Link to="/beers">All Beers</Link></h2>
                 <p>Lorem ipsum dolor sit amet, consetetur 
@@ -24,7 +24,7 @@ function HomePage() {
         </section>
 
         <section>
-                <img src={newBeersImage} alt="Beers" />
+                <img className="imghome"  src={newBeersImage} alt="Beers" />
             <div className="text-container">
                 <h2><Link to="/beers/search">Random Beer</Link></h2>
                 <p>Lorem ipsum dolor sit amet, consetetur 
@@ -36,7 +36,7 @@ function HomePage() {
         </section>
 
         <section>
-                <img src={randomBeersImage} alt="Beers" />
+                <img className="imghome" src={randomBeersImage} alt="Beers" />
             <div className="text-container">
                 <h2><Link to="/beers/new">New Beer</Link></h2>
                  <p>Lorem ipsum dolor sit amet, consetetur 
