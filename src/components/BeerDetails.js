@@ -23,7 +23,13 @@ function BeerDetails() {
 
 	if (!beer) {
 		return (
-			<div className="container-fluid d-flex justify-content-center align-items-center vh-100">
+			<div
+				className="container-fluid
+			d-flex 
+			justify-content-center 
+			align-items-center 
+			vh-100"
+			>
 				<Spinner animation="border" variant="danger" role="status">
 					<span className="visually-hidden">Loading...</span>
 				</Spinner>
@@ -32,14 +38,24 @@ function BeerDetails() {
 	} else {
 		return (
 			<>
-				<div className="d-flex flex-wrap align-items-center justify-content-center">
+				<div
+					className="d-flex 
+				flex-wrap 
+				align-items-center 
+				justify-content-center"
+				>
 					<Card
-						className="m-3 container p-3 align-items-center justify-content-center"
+						className="m-3 
+						container 
+						p-3 
+						align-items-center 
+						justify-content-center"
 						style={{ width: '18rem', minHeight: '18rem' }}
 					>
 						<Card.Img
 							className="img-fluid"
 							variant="top"
+							style={{ maxWidth: '5rem' }}
 							src={beer.image_url}
 						/>
 						<Card.Body>
