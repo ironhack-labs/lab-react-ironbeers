@@ -30,7 +30,7 @@ function Home() {
 						src="/assets/random-beer.png"
 					/>
 					<Card.Body style={{ color: 'black' }}>
-						<Card.Title className="fs-3 fw-bold">List of beers</Card.Title>
+						<Card.Title className="fs-3 fw-bold">Add a Beer</Card.Title>
 						<Card.Text>
 							Add your unique creation to our esteemed database.
 						</Card.Text>
@@ -46,7 +46,7 @@ function Home() {
 						src="/assets/new-beer.png"
 					/>
 					<Card.Body style={{ color: 'black' }}>
-						<Card.Title className="fs-3 fw-bold">List of beers</Card.Title>
+						<Card.Title className="fs-3 fw-bold">Random Beer</Card.Title>
 						<Card.Text>
 							Let chance lead you to your new favorite beer!
 						</Card.Text>
