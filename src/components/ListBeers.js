@@ -12,7 +12,6 @@ function ListBeers() {
 			.get('https://ih-beers-api2.herokuapp.com/beers')
 			.then((response) => {
 				setBeerList(response.data);
-				console.log(beerList);
 			})
 			.catch((error) => {
 				console.log('getBeers error: ', error);
