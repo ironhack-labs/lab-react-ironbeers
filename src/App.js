@@ -13,8 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/beers" element={<><Header /><BeersList /></>} />
-        <Route path="/beers/:beerId" element={<><Header /><Beer /></>} />
-        <Route path="/random-beer" />
+        <Route path="/beers/:beerId" element={<><Header /><Beer random={false}/></>} />
+        <Route path="/random-beer" element={<><Header /><Beer random={true}/></>} />
         <Route path="/new-beer" />
       </Routes>
 
