@@ -1,0 +1,16 @@
+/* https://angel-rs.github.io/css-color-filter-generator/ */
+.Header img {
+    filter: brightness(0) 
+        saturate(100%) 
+        invert(100%) 
+        sepia(100%) 
+        saturate(0%) 
+        hue-rotate(131deg) 
+        brightness(105%) 
+        contrast(101%);
+    height: 50px;
+}
+
+.Header {
+    background: rgb(50,195,255); /* #32c3ff */
+}
