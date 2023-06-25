@@ -1,0 +1,19 @@
+.Navbar {
+    padding: 1rem;
+    background-color: #1ecee534;
+    box-shadow: 0.2rem 0.2rem 0.5rem 0rem #aaa;
+}
+
+.Navbar a {
+    padding: 0.5rem;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.Navbar a.active {
+    color: white;
+    background-color: #1ee5bd;
+}
