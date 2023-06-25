@@ -5,6 +5,7 @@ import Header from "./Header";
 
 function Beers() {
   const [beersList, setBeersList] = useState([]);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     axios
@@ -16,10 +17,29 @@ function Beers() {
       .catch((e) => console.log(e));
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/search?q=${query}`)
+
+      .then((response) => {
+        console.log(response.data);
+        setBeersList(response.data);
+      })
+      .catch((e) => console.log(e));
+  }, [query]);
+
   return (
     <div>
       <Header />
       <h1>Our range of beers:</h1>
+
+      <input
+        value={query}
+        type="search"
+        onChange={(e) => {
+          setQuery(e.target.value);
+        }}
+      />
 
       {beersList.map((element) => {
         return (
