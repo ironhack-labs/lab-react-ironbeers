@@ -24,14 +24,18 @@ function BeerList(){
         listBeer.map((e) => {
             return(
         <>  
-            <Link to={`/beers/${e._id}`} key={e._id}>
-                    <img src={e.image_url} alt={e.name} />
-                <div>
-                    <h1>{e.name}</h1>
-                    <h3>{e.tagline}</h3>
-                    <p>{e.contributed_by}</p>
-                </div>
+        <div className="flex h-30">
+            
+            <Link className="flex-shrink-0" to={`/beers/${e._id}`} key={e._id}>
+                    <img src={e.image_url} alt={e.name} className="w-12 h-36 m-6" />
             </Link>
+                <div className="  text-start  w-auto m-8">
+                    <h1 className="text-2xl">{e.name}</h1>
+                    <h3 className="text-gray-400">{e.tagline}</h3>
+                    <p className="font-bold">Ceated By : <span className="font-normal">{e.contributed_by}</span></p>
+                </div>
+        </div>
+        <hr className="bg-black w-[100vw]"/>
         </>
         )})
     )

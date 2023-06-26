@@ -5,7 +5,7 @@ function NavBar (){
 
     return(
         <nav>
-            <NavLink to="/"><img src={navBarImg}></img></NavLink>
+            <NavLink to="/"><img src={navBarImg} className="w-[100vw]"></img></NavLink>
         </nav>
     )
 
