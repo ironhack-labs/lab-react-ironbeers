@@ -1,0 +1,32 @@
+.BeersList a {
+    color: black;
+    text-decoration: none;
+}
+
+.BeersList {
+    position: relative;
+}
+
+.BeersList .img-container {
+    position: absolute;
+    margin: 0 auto;
+    width: 150px;
+}
+
+.BeersList img {
+    height: 150px;
+    max-height: 120px;
+}
+
+.BeersList p {
+    font-weight: bold;
+}
+
+.BeersList p span {
+    font-weight: normal;
+}
+
+.BeersList .text-container {
+    text-align: left;
+    margin: 30px 0 30px 150px;
+}
