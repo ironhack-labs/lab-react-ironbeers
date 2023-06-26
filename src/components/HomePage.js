@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function HomePage(){
 
     return(
-        <div>
+        <div className='h-[100vh] bg-slate-900'>
             <div>
                 <Link to='/beers'><img src={imgList}/></Link>
                 <h1>All Beer</h1>
