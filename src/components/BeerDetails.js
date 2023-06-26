@@ -15,7 +15,7 @@ function BeerDetails() {
         setBeer(response.data);
       })
       .catch((e) => console.log(e.response.data));
-  });
+  }, []);
 
   return (
     <section className="vh-100">

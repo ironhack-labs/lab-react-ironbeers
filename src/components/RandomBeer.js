@@ -6,13 +6,13 @@ import axios from "axios";
 
 function RandomBeer() {
   const [beer, setBeer] = useState([]);
-  const baseURL = "https://ih-beers-api2.herokuapp.com/beers";
+  const baseURL = "https://ih-beers-api2.herokuapp.com";
 
   useEffect(() => {
     axios
       .get(`${baseURL}/random`)
       .then((response) => {
-        console.log(response.data);
+        setBeer(response.data);
       })
       .catch((e) => {
         console.log(e);

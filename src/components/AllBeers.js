@@ -11,7 +11,6 @@ function AllBeers() {
   const baseURL = "https://ih-beers-api2.herokuapp.com/beers";
 
   useEffect(() => {
-    if (query === "") {
       axios
         .get(`${baseURL}`)
         .then((response) => {
@@ -20,17 +19,8 @@ function AllBeers() {
         .catch((e) => {
           console.log(e);
         });
-    } else {
-      axios
-        .get(`${baseURL}/search?q=${query}`)
-        .then((response) => {
-          setallBeers(response.data);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    }
-  });
+  }, []) 
+      
 
   return (
     <div>
