@@ -6,11 +6,14 @@ import RandomBeerPage from "./pages/HomePage";
 import AddBeerPage from "./pages/HomePage";
 import BeerDetailsPage from "./pages/HomePage";
 
+import Navbar from "./components/Navbar";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<AllBeersPage />} />

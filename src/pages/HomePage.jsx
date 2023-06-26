@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
+import beers from "../assets/beers.jpg";
+import randomBeer from "../assets/random-beer.png";
+import newBeer from "../assets/new-beer.png";
 
 function HomePage() {
   return (
     <div className="homepage">
       <div className="page">
         <NavLink to="/beers">
-          <img
-            src="https://cdn.pixabay.com/photo/2013/11/12/01/29/bar-209148_1280.jpg"
-            alt=""
-          />
+          <img src={beers} alt="" />
           <div>
             <h2>All Beers</h2>
             <p>
@@ -23,10 +23,7 @@ function HomePage() {
 
       <div className="page">
         <NavLink to="/random-beer">
-          <img
-            src="https://cdn.pixabay.com/photo/2015/09/24/20/36/beer-barrel-956322_640.jpg"
-            alt=""
-          />
+          <img src={randomBeer} alt="" />
           <div>
             <h2>Random Beer</h2>
             <p>
@@ -41,10 +38,7 @@ function HomePage() {
 
       <div className="page">
         <NavLink to="/new-beer">
-          <img
-            src="https://cdn.pixabay.com/photo/2018/05/31/16/51/beer-3444480_640.jpg"
-            alt="beers"
-          />
+          <img src={newBeer} alt="beers" />
           <div>
             <h2>New Beer</h2>
             <p>

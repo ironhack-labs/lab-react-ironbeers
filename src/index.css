@@ -25,6 +25,15 @@ form {
   margin: 20px;
 }
 
+nav {
+  background-color: #1c8adb;
+  display: flex;
+  justify-content: center;
+}
+
+nav img {
+  width: 100px;
+}
 .homepage {
   padding: 50px;
   display: flex;
