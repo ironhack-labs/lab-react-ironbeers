@@ -1,11 +1,12 @@
-
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import CreateBeer from './components/CreateBeer';
+import RandomBeer from './components/RandomBeer';
 import BeerDetails from './components/BeerDetails';
 import BeersList from './components/BeersList';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
-import { Routes, Route } from 'react-router-dom';
-import RandomBeer from './components/RandomBeer';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path='/beers' element={<BeersList />} />
         <Route path='/beers/:id' element={<BeerDetails />} />
         <Route path='/random-beer' element={<RandomBeer />} />
-        <Route path='/new-beer' element={<Homepage />} />
+        <Route path='/new-beer' element={<CreateBeer />} />
       </Routes>
     </div>
   );
