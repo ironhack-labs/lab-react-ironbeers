@@ -19,3 +19,11 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+.navbar{
+  background-color: skyblue;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
