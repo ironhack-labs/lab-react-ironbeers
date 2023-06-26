@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function BeersList() {
 
@@ -27,7 +28,7 @@ function BeersList() {
                         <h1>{beerObj.name}</h1>
                         <h3>{beerObj.tagline}</h3>
                         <p>Created by: {beerObj.contributed_by}</p>
-                        <button>Details</button>
+                        <Link to={`/beers/${beerObj._id}`}>Learn more...</Link>
                         <hr></hr>
                     </div>
                 )
