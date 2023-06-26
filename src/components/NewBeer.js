@@ -1,5 +1,5 @@
 import './NewBeer.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { Form } from 'react-router-dom';
 
@@ -16,7 +16,8 @@ const NewBeer = ({random}) => {
                 console.log(response)
                 setInputs({});
             })
-            .catch(e => console.log(e))
+            // .catch(e => console.log(e))
+            .catch(console.log)
     }
 
     const handleChange = (e) => {

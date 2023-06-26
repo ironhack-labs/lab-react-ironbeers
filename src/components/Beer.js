@@ -28,7 +28,8 @@ const Beer = ({random}) => {
             .then(response => {
                 setBeer(response.data);
             })
-            .catch(e => console.log(e))
+            // .catch(e => console.log(e))
+            .catch(console.log)
     }, [])
 
     return <div className="Beer">
