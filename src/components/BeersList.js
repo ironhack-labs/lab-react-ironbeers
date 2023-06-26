@@ -4,8 +4,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const BeersList = () => {
-    console.log("BeersList")
-
     const baseUrl = "https://ih-beers-api2.herokuapp.com/beers";
     const [beers, setBeers] = useState([]);
     const [query, setQuery] = useState("");
@@ -33,7 +31,6 @@ const BeersList = () => {
     }
 
     useEffect(() => {
-        console.log("effect")
         axios
             .get(`${baseUrl}/search?q=${query}`)
             .then(response => {
@@ -47,7 +44,8 @@ const BeersList = () => {
         <div className="BeersSearch">
             <input type="text" value={query} onChange={handleChange}/>
         </div>
-        {renderBeers()}
+        {beers.length > 0 && renderBeers()}
+        {beers.length === 0 && <p><b>Loading...</b></p>}
     </div>
 }
 

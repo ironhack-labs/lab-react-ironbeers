@@ -32,7 +32,8 @@ const Beer = ({random}) => {
             .catch(console.log)
     }, [])
 
-    return <div className="Beer">
+    return <>
+    {beer && Object.keys(beer).length > 0 && <div className="Beer">
         <img src={beer.image_url} alt={beer.name} style={{height: "300px"}}></img>
         <h2>{beer.name}</h2>
         <h3>{beer.tagline}</h3>
@@ -40,8 +41,9 @@ const Beer = ({random}) => {
         <h5>{beer.first_brewed}</h5>
         <p>{beer.description}</p>
         <p>{beer.contributed_by}</p>
-
-    </div>
+    </div>}
+    {(!beer || Object.keys(beer).length === 0) && <p><b>Loading...</b></p>}
+    </>
 }
 
 export default Beer;
