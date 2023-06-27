@@ -27,3 +27,33 @@ form {
   justify-content: center;
   margin-bottom: 10px;
 }
+/* css pour allBeerPage */
+
+.beer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.beer-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+.beer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+hr {
+  border: none;
+  border-top: 1px solid black;  
+  margin: 10px 0;  
+}
+.beer-container h3 {
+  opacity: 0.5;
+}
