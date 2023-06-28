@@ -1,13 +1,100 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none !important;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.search-bar {
+  margin-bottom: 50px;
+}
+
+.btn-round {
+  margin: 20px;
+}
+
+.navbar{
+  background-color: skyblue;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+/* css pour allBeerPage */
+
+.beer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.beer-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+.beer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+hr {
+  border: none;
+  border-top: 1px solid black;  
+  margin: 10px 0;  
+}
+.beer-container h3 {
+  opacity: 0.5;
+}
+
+/* beerdetailspage et randombeerpage*/
+
+.beer-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beer-detail .beer-image {
+  width: 100px;  
+  height: auto;
+}
+
+.beer-detail .beer-header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.beer-detail .beer-name-level,
+.beer-detail .beer-tag-brewed {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.beer-name-level h3 {
+ opacity: 0.5;
+}
+.beer-attenuation {
+  opacity: 0.5;
+  font-size: 25px;
+}
+.beer-contributed {
+  opacity: 0.5;
+  font-size: 25px;
+}
+.beer-description {
+  margin: 20px 0;
+  text-align: center;
 }
