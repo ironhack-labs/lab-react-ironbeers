@@ -12,11 +12,6 @@ a {
   color: black;
 }
 
-form {
-  max-width: 400px;
-  margin: 20px auto;
-}
-
 .search-bar {
   margin-bottom: 50px;
 }
@@ -152,3 +147,50 @@ nav img {
   font-size: 18px;
 }
 
+.createBeer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.createBeer-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.createBeer-container form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.createBeer-container form label input {
+  border-radius: 30px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  font-size: 20px;
+  padding: 15px;
+}
+
+.createBeer-container form label textarea {
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  font-size: 20px;
+  padding: 10px;
+  height: 300px;
+}
+
+.createBeer-container button {
+  background-color: #1c8adb;
+  color: white;
+  border-radius: 30px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  font-size: 20px;
+  padding: 15px;
+}
