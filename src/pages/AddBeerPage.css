@@ -1,0 +1,28 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+input, textarea {
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #333;
+    width: 80%;
+  }
+  textarea{
+     padding-top: 80%;
+  }
+label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: 800;
+}  
+button{
+    background-color: skyblue;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+}
