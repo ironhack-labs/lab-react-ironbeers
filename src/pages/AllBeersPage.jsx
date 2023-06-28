@@ -13,17 +13,17 @@ function AllBeersPage() {
         console.log(response.data);
       })
       .catch((err) => console.log(err));
-  });
+  }, []);
 
   return (
     <div>
       {allBeers.map(function (beer) {
         return (
-          <Link to={`/${beer._id}`}>
+          <Link key={beer._id} to={`/beers/${beer._id}`}>
             <div key={beer._id}>
               <img src={beer.image_url} alt="" />
               <h3>{beer.name}</h3>
-              <p>{beer.tagline}</p>
+              <h4>{beer.tagline}</h4>
               <i>{beer.contributed_by}</i>
             </div>
           </Link>
