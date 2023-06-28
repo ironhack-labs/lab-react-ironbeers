@@ -99,47 +99,56 @@ nav img {
   font-size: 20px;
 }
 
-.detailsPage {
+.detailsPage,
+.randomBeer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
 }
 
-.detailsPage .img-wrapper img {
+.detailsPage .img-wrapper img,
+.randomBeer-container .img-wrapper img {
   object-fit: cover;
 }
 
-.details-info h2 {
+.details-info h2,
+.randomBeer-container h2 {
   font-size: 40px;
   display: flex;
 }
 
-.details-info h2 span {
+.details-info h2 span,
+.randomBeer-container h2 span {
   color: gray;
   display: block;
   margin-left: auto;
 }
 
-.details-info h3 {
+.details-info h3,
+.randomBeer-container h3 {
   font-size: 24px;
   display: flex;
   color: gray;
 }
 
-.details-info h3 span {
+.details-info h3 span,
+.randomBeer-container h3 span {
   color: black;
   display: block;
   margin-left: auto;
 }
 
-.details-info .description {
+.details-info .description,
+.randomBeer-container .description {
   font-size: 20px;
-  width: 400px;
+  width: 600px;
 }
 
-.details-info .creator {
+.details-info .creator,
+.randomBeer-container .creator {
   color: gray;
   font-weight: 700;
   font-size: 18px;
 }
+
