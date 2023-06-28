@@ -13,6 +13,8 @@ function AddBeerPage() {
   const [attenuationLevel, setAttenuationLevel] = useState(0);
   const [contributedBy, setContributedBy] = useState("");
 
+  const navigate = useNavigate();
+
   const createBeer = (e) => {
     e.preventDefault();
     const body = {
