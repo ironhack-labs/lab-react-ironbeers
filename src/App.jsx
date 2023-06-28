@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
-import AllBeersPage from "./pages/HomePage";
-import RandomBeerPage from "./pages/HomePage";
-import AddBeerPage from "./pages/HomePage";
-import BeerDetailsPage from "./pages/HomePage";
+import AllBeersPage from "./pages/AllBeersPage";
+import RandomBeerPage from "./pages/RandomBeerPage";
+import AddBeerPage from "./pages/AddBeerPage";
+import BeerDetailsPage from "./pages/BeerDetailsPage";
 
 import Navbar from "./components/Navbar";
 import "./App.css";

@@ -65,3 +65,36 @@ nav img {
 .page p {
   color: grey;
 }
+
+.allBeersPage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 50px;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 20px;
+}
