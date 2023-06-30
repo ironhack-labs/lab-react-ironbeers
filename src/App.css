@@ -29,8 +29,18 @@ h1 {
     font-size: 3rem;
 }
 
+form {
+    text-align: right;
+    
+}
+
 label {
     display: block;
+    margin: 10px;
+}
+
+input {
+    margin-left: auto;
 }
 
 
@@ -121,4 +131,8 @@ label {
 
 .beerCardLarge > img {
     height: 30vh;
+}
+
+.addBeerPage h3 {
+    margin-top: 50px;
 }

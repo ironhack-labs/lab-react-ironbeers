@@ -33,12 +33,12 @@ function AddBeerPage() {
   };
 
   return (
-    <div>
+    <div className="addBeerPage">
       <h3>Add beer</h3>
 
       <form onSubmit={handleSubmit}>
         <label>
-          Beer name
+          Beer name{" "}
           <input
             type="text"
             name="name"
@@ -48,7 +48,7 @@ function AddBeerPage() {
         </label>
 
         <label>
-          Tagline
+          Tagline{" "}
           <input
             type="text"
             name="tagline"
@@ -58,7 +58,7 @@ function AddBeerPage() {
         </label>
 
         <label>
-          Description
+          Description{" "}
           <input
             type="text"
             name="description"
@@ -68,7 +68,7 @@ function AddBeerPage() {
         </label>
 
         <label>
-          First Brewed
+          First Brewed{" "}
           <input
             type="text"
             name="firstBrewed"
@@ -78,7 +78,7 @@ function AddBeerPage() {
         </label>
 
         <label>
-          Brewer&aposs Tips
+          Brewer&aposs Tips{" "}
           <input
             type="text"
             name="brewersTips"
@@ -88,7 +88,7 @@ function AddBeerPage() {
         </label>
 
         <label>
-          Attenuation Level
+          Attenuation Level{" "}
           <input
             type="number"
             name="attenuationLevel"
@@ -98,7 +98,7 @@ function AddBeerPage() {
         </label>
 
         <label>
-          Contributed By
+          Contributed By{" "}
           <input
             type="text"
             name="contributedBy"
