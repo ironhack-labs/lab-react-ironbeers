@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Grid } from "@mui/material";
+
 import axios from "axios";
 import SearchBar from "../components/Searchbar";
 
@@ -35,20 +37,28 @@ function AllBeersPage() {
   }
 
   return (
-    <div>
+    <div className="allBeersPage">
       <SearchBar value={query} handleSearch={handleSearch} />
-      {allBeers.map(function (beer) {
-        return (
-          <Link key={beer._id} to={`/beers/${beer._id}`}>
-            <div key={beer._id}>
-              <img src={beer.image_url} alt="" />
-              <h3>{beer.name}</h3>
-              <h4>{beer.tagline}</h4>
-              <i>{beer.contributed_by}</i>
-            </div>
-          </Link>
-        );
-      })}
+      <div>
+        <Grid container spacing={2}>
+          {allBeers.map(function (beer) {
+            return (
+              <Grid item xs={12} sm={6} md={4} key={beer._id}>
+                <Link to={`/beers/${beer._id}`}>
+                  <div key={beer._id} className="beerCard">
+                    <img src={beer.image_url} alt="" />
+                    <div className="beerCardContent">
+                      <h3>{beer.name}</h3>
+                      <h5>{beer.tagline}</h5>
+                      <i>{beer.contributed_by}</i>
+                    </div>
+                  </div>
+                </Link>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </div>
     </div>
   );
 }

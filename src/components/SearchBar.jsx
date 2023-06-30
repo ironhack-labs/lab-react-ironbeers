@@ -1,13 +1,13 @@
 function SearchBar(props) {
-  const { searchWord, handleSearch } = props;
+  const { query, handleSearch } = props;
 
   return (
-    <div>
+    <div className="search-bar">
       <label>
         Search
         <input
           name="searchBar"
-          value={searchWord}
+          value={query}
           type="text"
           onChange={(event) => handleSearch(event)}
         />

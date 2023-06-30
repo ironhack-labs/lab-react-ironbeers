@@ -25,12 +25,13 @@ function BeerDetailsPage() {
   if (!beerDetails) return "loading";
 
   return (
-    <div>
+    <div className="beerCardLarge">
       <img src={beerDetails.image_url}></img>
       <h3>{beerDetails.name}</h3>
-      <h4>{beerDetails.tagline}</h4>
-      <div>{beerDetails.first_brewed}</div>
-      <div>{beerDetails.attenuation_level}</div>
+      <h5>{beerDetails.tagline}</h5>
+      <span className="firstBrewed">{beerDetails.first_brewed}</span>
+      <span style={{ margin: "0 10px" }}> </span>
+      <span className="attenuationLevel">{beerDetails.attenuation_level}</span>
       <p>{beerDetails.description}</p>
       <i>{beerDetails.contributed_by}</i>
     </div>

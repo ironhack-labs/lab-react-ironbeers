@@ -1,0 +1,124 @@
+body {
+    background-color: #f0d4a7;
+}
+
+a {
+    color: #1b262c;
+}
+
+h3 {
+    font-family: Bitter;
+    color: #1b262c;
+}
+
+h1, h5, i, p, span, nav, .search-bar, label {
+    font-family: Raleway;
+    color: #1b262c;
+}
+
+span {
+    color: #71757a;
+    font-weight: 800;
+}
+
+p {
+    color: #04648c;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+label {
+    display: block;
+}
+
+
+
+.App {
+    text-align: center;
+}
+
+.navLink{
+    color: #f9b515;
+    padding: 1rem 2rem;
+    background-color: #04648c;
+    border-radius: 2rem;
+}
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.homePagelink {
+    width: 70vw;
+    aspect-ratio: 3/1;
+    display: flex;
+    align-items: flex-end;
+
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    
+    
+    font-family: Bitter;
+    font-size: 2rem;
+    color: white;
+    padding: 20px 20px;
+    margin: 20px 0;
+    
+}
+
+
+
+.allBeersPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar {
+    margin: 50px 0;
+}
+
+.beerCard {
+    position: relative;
+    height: 30vh;
+    display: flex;
+    margin-left: 20px;
+}
+
+.beerCard img {
+    position: absolute;
+    top: 0;
+    height: 60%;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.beerCard div {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.beerCardLarge {
+    width: 50vw;
+    text-align: center;
+    margin: 50px auto;
+    
+    
+}
+
+.beerCardLarge > img {
+    height: 30vh;
+}
