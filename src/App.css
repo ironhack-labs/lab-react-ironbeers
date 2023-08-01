@@ -1,0 +1,44 @@
+:root {
+    font-family: "Helvetica Neue", sans-serif;
+    width: 480px;
+    text-align: center;
+}
+
+h2 {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 480px;
+}
+
+#nav-image {
+    width: 480px;
+}
+
+.beer-image {
+    height: 200px;
+    width: auto;
+}
+
+.beer-details {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: start;
+}
+
+button {
+    margin-top: 20px;
+}
