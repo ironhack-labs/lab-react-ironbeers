@@ -12,13 +12,13 @@ function BeerDetailsPage() {
             const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
             setBeer(response.data)
         } catch (error) {
-            console.log(error)
+            console.error(error.message)
         }
     }
 
     useEffect(() => {
         getBeer()
-    }, [beerId])
+    }, [])
 
     if (!beer) {
         return <p>Loading...</p>

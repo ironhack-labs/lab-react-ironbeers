@@ -39,6 +39,7 @@ function RandomBeerPage() {
                 <b>Created by: </b>
                 {randomBeer.contributed_by}
             </p>
+            <button onClick={getRandomBeer}>New Random Beer</button>
             <Link to={`/beers`}>See All Beers</Link>
         </div>
     )

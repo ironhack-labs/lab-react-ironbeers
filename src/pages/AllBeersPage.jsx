@@ -11,7 +11,7 @@ function AllBeersPage() {
             const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers")
             setBeers(response.data)
         } catch (error) {
-            console.log(error)
+            console.error(error.message)
         }
     }
 
@@ -28,7 +28,11 @@ function AllBeersPage() {
             {beers.map(beer => (
                 <div className="each-beer" key={beer._id}>
                     <Link to={`/beers/${beer._id}`}>
-                        <img className="beer-image" src={beer.image_url} alt={`${beer.name} image`} />
+                        <img
+                            className="beer-image"
+                            src={beer.image_url}
+                            alt={`${beer.name} image`}
+                        />
                         <h2>{beer.name}</h2>
                     </Link>
                     <h3>{beer.tagline}</h3>
