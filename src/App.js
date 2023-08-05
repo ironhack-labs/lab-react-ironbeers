@@ -11,15 +11,12 @@ import SingleBeer from './pages/SingleBeer';
 function App() {
 
   const [beers, setBeers] = useState([])
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(()=> {
     async function fetchBeers(){
         try {
             const response = await axios.get('https://ih-beers-api2.herokuapp.com/beers');
             setBeers(response.data)
-            console.log(response.data)
-            setIsLoading(true);
         } catch (error) {
             console.log(error)
         }
