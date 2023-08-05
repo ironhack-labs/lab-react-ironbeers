@@ -1,10 +1,19 @@
 import './App.css';
+import { Routes, Route } from "react-router-dom";
 import HomePage from './pages/HomePage';
+import ListBeers from './pages/ListBeers';
+import NewBeer from './pages/NewBeer';
+import RandomBeer from './pages/RandomBeer';
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Routes>
+        <Route path='/' element={ <HomePage /> }/>
+        <Route path='/beers' element={ <ListBeers /> }/>
+        <Route path='/random-beer' element={ <RandomBeer /> }/>
+        <Route path='/new-beer' element={ <NewBeer /> }/>
+      </Routes>
     </div>
   );
 }
