@@ -6,6 +6,7 @@ import randomBeer from "../assets/random-beer.png"
 const HomePage = () => {
     return (
             <>
+
                 <img src={beers} alt="Beers"></img>
                 <Link to="/beers"><h2>All Beers</h2></Link>
                 <img src={newBeer} alt="Random Beer"></img>
