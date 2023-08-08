@@ -11,3 +11,132 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.no-detailed-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+.no-detailed-card .img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+.no-detailed-card img{
+  height: 100px;
+  width: fit-content;
+}
+.no-detailed-card .card-body {
+  max-width: 70%;
+}
+.no-detailed-card div p small {
+  font-size: 0.7rem;
+}
+
+.detailed-card {
+  border: none !important;
+  text-align: center !important;
+}
+.detailed-card img {
+  height: 200px;
+  width: fit-content;
+  margin-top: 30px;
+}
+.detailed-card .card-body {
+  text-align: left;
+}
+.detailed-card .card-body h5 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+.detailed-card .card-body h5 span {
+  color: rgb(0, 0, 0, 0.2);
+}
+.detailed-card .card-body small b { 
+  text-align: justify;
+}
+.detailed-card .tagline-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.detailed-card .tagline-container b {
+  font-size: 0.6rem;
+}
+.detailed-card .details {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.detailed-card .card-text .text-body-secondary {
+  font-weight: 700;
+}
+
+form {
+  margin: 0px 20px !important;
+  
+}
+form div {
+  margin-top: 10px !important;
+}
+
+form label {
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 5px !important;
+  margin-top: 8px;
+}
+
+form input {
+  height: 1.8rem;
+  border-radius: 20px !important;
+}
+
+form textarea {
+  border-radius: 20px !important;
+}
+
+.btn-container {
+  display: flex !important;
+  justify-content: center !important;
+}
+.btn {
+  border-radius: 20px !important;
+  font-size: 0.8rem !important;
+  margin-top: 24px !important;
+  max-width: 400px !important;
+  min-width: 200px !important;
+}
+
+
+@media screen and (min-width: 768px) {
+  .Homepage {
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+  }
+
+  .Section h5 {
+    font-size: 2rem !important;
+  }
+  .Section p {
+    font-size: 1.5rem !important;
+  }
+  .detailed-card {
+    align-items: center !important;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  form {
+    margin-left: 30% !important;
+    margin-right: 30% !important;
+  }
+
+  form label{
+    font-size: 0.8rem;
+  }
+}
