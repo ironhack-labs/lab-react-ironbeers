@@ -34,3 +34,46 @@ code {
 .no-detailed-card .card-body {
   max-width: 70%;
 }
+.no-detailed-card div p small {
+  font-size: 0.7rem;
+}
+
+.detailed-card {
+  border: none !important;
+  text-align: center !important;
+}
+.detailed-card img {
+  height: 200px;
+  width: fit-content;
+  margin-top: 30px;
+}
+.detailed-card .card-body {
+  text-align: left;
+}
+.detailed-card .card-body h5 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+.detailed-card .card-body h5 span {
+  color: rgb(0, 0, 0, 0.2);
+}
+.detailed-card .card-body small b { 
+  text-align: justify;
+}
+.detailed-card .tagline-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.detailed-card .tagline-container b {
+  font-size: 0.6rem;
+}
+.detailed-card .details {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.detailed-card .card-text .text-body-secondary {
+  font-weight: 700;
+}

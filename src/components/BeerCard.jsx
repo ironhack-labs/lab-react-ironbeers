@@ -18,14 +18,21 @@ function BeerCard(props) {
       </div>
       <div className="card-body">
         <h5 className="card-title">
-          {name} {detailed && attnLevel}
+          {name} <span>{detailed && attnLevel}</span>
         </h5>
-        <small className="text-body-secondary">
-          {tagline} {detailed && firstBrew}
-        </small>
-        <p className="card-text">{detailed && description}</p>
+        <div className="tagline-container">
+          <small className="text-body-secondary">{tagline}</small>
+          <small>
+            <b>{detailed && firstBrew}</b>
+          </small>
+        </div>
+        <p className="card-text details">{detailed && description}</p>
         <p className="card-text">
-          <small className="text-body-secondary">{detailed && contributed}</small>
+          <small className="text-body-secondary">
+            <b>{!detailed && "Created by: "}</b>
+            {!detailed && contributed.replace(/<[^>]+>/g, "")}
+            {detailed && contributed}
+          </small>
         </p>
       </div>
     </div>
