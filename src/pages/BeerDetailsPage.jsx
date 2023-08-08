@@ -23,8 +23,6 @@ function BeerDetailsPage(props) {
     fetchData()
   }, [beerId, isRandom])
 
-  console.log(beerData)
-
   return (
     <div>
       <Header />
