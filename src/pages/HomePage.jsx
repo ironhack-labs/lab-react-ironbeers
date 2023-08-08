@@ -4,7 +4,6 @@ import newBeer from '../assets/new-beer.png'
 import randomBeer from '../assets/random-beer.png'
 import { loremIpsum } from "../utils/constants";
 
-
 function HomePage () {
     return (
         <div>
