@@ -21,3 +21,11 @@ code {
   background: #fff;
   border-radius: 4px;
 }
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
