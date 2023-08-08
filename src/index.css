@@ -12,8 +12,6 @@ code {
     monospace;
 }
 
-
-
 .no-detailed-card {
   display: flex;
   justify-content: space-between;
@@ -76,4 +74,41 @@ code {
 }
 .detailed-card .card-text .text-body-secondary {
   font-weight: 700;
+}
+
+form {
+  margin: 0px 20px !important;
+  
+}
+form div {
+  margin-top: 10px !important;
+}
+
+form label {
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 5px !important;
+  margin-top: 8px;
+}
+
+form input {
+  height: 1.8rem;
+  border-radius: 20px !important;
+}
+
+form textarea {
+  border-radius: 20px !important;
+}
+
+.btn-container {
+  display: flex !important;
+  justify-content: center !important;
+}
+.btn {
+  border-radius: 20px !important;
+  font-size: 0.8rem !important;
+  margin-top: 24px !important;
+  max-width: 400px !important;
+  min-width: 200px !important;
 }

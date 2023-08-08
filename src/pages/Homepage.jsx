@@ -18,7 +18,7 @@ function Homepage() {
       </Link>
 
       <Link to="/new-beer" style={{textDecoration: 'none'}}>
-        {<Section imgSrc={newBeer} cardText={loremIpsum} title={"New Beers"} />}
+        {<Section imgSrc={newBeer} cardText={loremIpsum} title={"New Beer"} />}
       </Link>
     </div>
   )
