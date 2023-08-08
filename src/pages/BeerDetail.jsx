@@ -10,9 +10,8 @@ function BeerDetail ({beers}) {
     return (
         <div>
             <Header/>
-
             <div className="card-detail">
-            <img src={foundBeer.image_url} width="200px" alt=""/>
+                <img src={foundBeer.image_url} width="200px" alt=""/>
                 <h3>{foundBeer.name}</h3> 
                 <h4>{foundBeer.tagline}</h4> 
                 <p>{foundBeer.first_brewed}</p>
