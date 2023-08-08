@@ -112,3 +112,31 @@ form textarea {
   max-width: 400px !important;
   min-width: 200px !important;
 }
+
+
+@media screen and (min-width: 768px) {
+  .Homepage {
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+  }
+
+  .Section h5 {
+    font-size: 2rem !important;
+  }
+  .Section p {
+    font-size: 1.5rem !important;
+  }
+  .detailed-card {
+    align-items: center !important;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  form {
+    margin-left: 30% !important;
+    margin-right: 30% !important;
+  }
+
+  form label{
+    font-size: 0.8rem;
+  }
+}

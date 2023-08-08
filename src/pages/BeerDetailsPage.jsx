@@ -24,7 +24,7 @@ function BeerDetailsPage(props) {
   }, [beerId, isRandom])
 
   return (
-    <div>
+    <div className="BeerDetailsPage">
       <Header />
       {beerData && <BeerCard beerData={beerData} detailed={true}/>}
     </div>

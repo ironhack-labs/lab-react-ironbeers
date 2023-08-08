@@ -8,7 +8,7 @@ function Homepage() {
   const loremIpsum = 'lorem ipsum dolor sit amet, consectet adipiscing elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquy. Lorem ipsum dolor sit amet, consectet adipis.'
 
   return (
-    <div>
+    <div className='Homepage'>
       <Link to="/beers" style={{textDecoration: 'none'}}>
         {<Section imgSrc={beers} cardText={loremIpsum} title={"All Beers"} />}
       </Link>
