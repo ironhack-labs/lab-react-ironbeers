@@ -8,11 +8,17 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        
+
         <Route path="/beers" element={<BeersPage />} />
-        <Route path="/beers/:beerId" element={<BeerDetailsPage/>} />
-        
-        <Route path="/random-beer" element={""} />
+        <Route
+          path="/beers/:beerId"
+          element={<BeerDetailsPage isRandom={false} />}
+        />
+
+        <Route
+          path="/random-beer"
+          element={<BeerDetailsPage isRandom={true} />}
+        />
         <Route path="/new-beer" element={""} />
       </Routes>
     </div>

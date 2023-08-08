@@ -5,17 +5,23 @@ import axios from "axios"
 import { baseUrl } from "../utils/constants"
 import Header from "../components/Header"
 
-function BeerDetailsPage() {
+function BeerDetailsPage(props) {
   const {beerId} = useParams('beerId') 
   const [beerData, setBeerData] = useState(null)
+  const { isRandom } = props
   
   useEffect(() => {
     const fetchData = async () => {
-      const beerFromApi = await (await axios.get(baseUrl + "/" + beerId)).data
-      setBeerData(beerFromApi)
+      if (isRandom) {
+        const beerFromApi = await (await axios.get(baseUrl + "/random")).data
+        setBeerData(beerFromApi)
+      } else {
+        const beerFromApi = await (await axios.get(baseUrl + "/" + beerId)).data
+        setBeerData(beerFromApi)
+      }
     }
     fetchData()
-  }, [beerId])
+  }, [beerId, isRandom])
 
   return (
     <div>
