@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-link {
+  font-size: 3em;
+  padding: 50px;
+  text-decoration: none;
+  color: black;
+}
