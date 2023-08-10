@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Home = () => (
-<div>
+  <div>
     <section>
       <img src="/assets/beers.png" alt="Beers" />
       <Link to="/Beers" className="home-link">Beers</Link>
@@ -16,7 +16,8 @@ const Home = () => (
       <img src="/assets/random-beer.png" alt="Random Beers" />
       <Link to="/RandomBeer" className="home-link">Random Beer</Link>
     </section>
-  </div>);
+  </div>
+);
 
 
 export default Home;

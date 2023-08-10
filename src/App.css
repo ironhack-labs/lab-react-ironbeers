@@ -1,50 +1,112 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
 section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .home-link {
-  font-size: 3em;
-  padding: 50px;
+  font-size: 1.5em;
+  padding: 15px 25px;
   text-decoration: none;
-  color: black;
+  color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.home-link:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.beer-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.beer-card:hover {
+  background-color: #f7f7f7;
+}
+
+.beer-image {
+  width: 80px;
+  height: 120px;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+.beer-tagline,
+.beer-contributor {
+  margin: 5px 0;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+header {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.detail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.detail-image {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+
+.detail-name {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.detail-tagline {
+  color: #777777;
+  margin-bottom: 20px;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-section-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.detail-contributor {
+  font-size: 0.8em;
+  color: #555555;
+  text-align: right;
 }
