@@ -6,7 +6,7 @@ import Header from '../components/Header';
 function RandomBeer() {
 	const [Beer, setBeer] = useState(null);
 	const baseURL = 'https://ih-beers-api2.herokuapp.com/beers';
-    
+
 	useEffect(() => {
 		axios
 			.get(`${baseURL}/random`)
@@ -17,10 +17,9 @@ function RandomBeer() {
 	}, []);
 
 	return (
-		<>
+		<div>
 			<Header />
 			{Beer ? (
-				<>
 					<div>
 						{Beer.image_url && <img src={Beer.image_url} alt={Beer.name} />}
 
@@ -31,11 +30,10 @@ function RandomBeer() {
 						<p>{Beer.description}</p>
 						<p>Created by: {Beer.contributed_by}</p>
 					</div>
-				</>
 			) : (
 				<p>Beer to your table...</p>
 			)}
-		</>
+		</div>
 	);
 }
 

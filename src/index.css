@@ -29,3 +29,47 @@ code {
   align-items: center;
 }
 
+/* Estilos para el formulario */
+.beer-form {
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px;
+  background-color: #ffffff; /* Color de fondo del formulario */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  display: flex;
+  flex-direction: column;
+  padding: 0 500px 0 500px;
+  align-items: center;
+}
+
+/* Estilos para el botón */
+.submit-button {
+  background-color: #3dc4fc; /* Color de fondo del botón */
+  color: #ffffff; /* Color del texto del botón */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.submit-button:hover {
+  background-color: #2b9ad1; /* Color de fondo del botón al pasar el mouse */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  border-radius: 5px; /* Bordes redondeados para los labels */
+  background-color: #f0f0f0; /* Color de fondo de los labels */
+  padding: 5px 10px;
+}
+
+.form-group .description-input {
+  height: 120px; /* Ajusta la altura según tus necesidades */
+  resize: vertical; /* Permite redimensionar verticalmente */
+}

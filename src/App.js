@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { baseUrl } from './utils/constants';
 import RandomBeer from './pages/RandomBeer';
+import NewBeer from './pages/NewBeer';
 
 function App() {
   const [beers,setBeers] = useState([]);
@@ -26,6 +27,7 @@ function App() {
         <Route path='/beers' element={<Beers beers={beers}/>}/>
         <Route path='/beers/:beerId' element={ <BeerDetail beers={beers} /> }/>
         <Route path='/random-beer' element={<RandomBeer/>}/>
+        <Route path='/new-beer' element={<NewBeer/>}/>
       </Routes>
     </div>
   );
