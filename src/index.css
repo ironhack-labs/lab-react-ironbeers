@@ -1,21 +1,38 @@
 .card-link{
   box-shadow: 10px 5px 5px gray;
-  display: flex;
-  flex-direction: column;
   margin: 10px;
+  padding: 10px 0;
   width: 710px;
-  align-items: end;
-  align-content: end;
-  justify-content: end;
   
 }
 
 .link{
   text-decoration: none;
-  margin: 0;
-  paddings: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   
 }
+.link h1{
+  margin: 0;
+  padding: 5px;
+  text-align: justify;
+  color: black;
+  width: 640px;
+  
+}
+.link p{
+  margin: 0;
+  padding: 5px;
+  text-align: justify;
+  color: darkgrey;
+  width: 640px;
+  justify-content: center;
+  
+}
+
 
 header{
   background-color:deepskyblue;
@@ -27,3 +44,45 @@ header{
   width: 40px;
   margin: 10px;
 }
+
+.beers{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 10px 5px 5px gray;
+  justify-content: center;
+
+}
+
+.beers-img{
+  padding: 10px;
+  margin: 20px;
+  width: 120px;
+}
+
+.beers-info{
+  padding: 10px;
+  margin: 20px;
+  width: 320px;
+  
+}
+
+.beers-info h2{
+  margin: 20px 0 0 0;
+  padding: 0;
+  text-align: justify;
+}
+.beers-info h3{
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+.beers-info p{
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
