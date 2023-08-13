@@ -6,7 +6,7 @@ import baseURL from "../utils/constants.js";
 const Beers = () => {
   const [beers, setBeers] = useState([]);
   useEffect(() => {
-    axios.get(baseURL+"/beers").then((response) => {
+    axios.get(baseURL + "/beers").then((response) => {
       console.log("response data:", response.data);
       setBeers(response.data);
     });
@@ -14,8 +14,10 @@ const Beers = () => {
 
   return (
     <div>
-      <header>
-        <Link to="/">Home</Link>
+      <header className=".home-link">
+        <Link to="/" className="home-link">
+          Home
+        </Link>
       </header>
       {beers.map((beer) => {
         return (

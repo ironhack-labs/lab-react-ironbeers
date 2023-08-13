@@ -9,11 +9,11 @@ import Details from "./pages/Details";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
       <Route path="/Beers/:beerId" element={<Details />} />
       <Route path="/Beers" element={<Beers />} />
       <Route path="/NewBeer" element={<NewBeer />} />
       <Route path="/RandomBeer" element={<RandomBeer />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }

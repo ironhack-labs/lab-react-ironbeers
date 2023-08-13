@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NewBeer = () => (
   <header>
-    <Link to="/">Home</Link>
+    <Link to="/" className="home-link">Home</Link>
   </header>
 );
 
