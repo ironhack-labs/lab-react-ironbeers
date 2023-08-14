@@ -5,13 +5,30 @@ import baseURL from "../utils/constants.js";
 
 const Beers = () => {
   const [beers, setBeers] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  
   useEffect(() => {
-    axios.get(baseURL + "/beers").then((response) => {
-      console.log("response data:", response.data);
-      setBeers(response.data);
-    });
-  }, []);
-
+    if (searchQuery) {
+      axios
+        .get(`${baseURL}/beers/search?q=${searchQuery}`)
+        .then((response) => {
+          setBeers(response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching the beers:", error);
+        });
+    } else {
+      axios
+        .get(`${baseURL}/beers`)
+        .then((response) => {
+          setBeers(response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching the beers:", error);
+        });
+    }
+  }, [searchQuery]);
+  
   return (
     <div>
       <header className=".home-link">
@@ -19,6 +36,12 @@ const Beers = () => {
           Home
         </Link>
       </header>
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        placeholder="Search for beers..."
+      />
       {beers.map((beer) => {
         return (
           <div className="beer-card" key={beer._id}>
