@@ -117,3 +117,46 @@ header {
   margin: 10px 0;
   font-weight: 500;
 }
+
+.add-beer-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-beer-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;  /* Space between elements */
+}
+
+.add-beer-container input,
+.add-beer-container textarea,
+.add-beer-container button {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.add-beer-container textarea {
+  min-height: 100px;
+  resize: vertical;  /* Allows the user to resize the textarea vertically */
+}
+
+.add-beer-container button {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-beer-container button:hover {
+  background-color: #555;
+}
