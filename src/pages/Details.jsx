@@ -3,16 +3,18 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import baseURL from "../utils/constants";
 
-const Details = () => {
+const Details = ({ beer }) => {
   const { beerId } = useParams();
   const [beerDetails, setBeerDetails] = useState({});
 
   useEffect(() => {
-    axios.get(`${baseURL}/beers/${beerId}`).then((response) => {
+    const endpoint = beer ? `${baseURL}/beers/random` : `${baseURL}/beers/${beerId}`;
+  
+    axios.get(endpoint).then((response) => {
       console.log("Beer Details:", response.data);
       setBeerDetails(response.data);
     });
-  }, [beerId]);
+  }, [beerId, beer]);
 
   return (
     <div>
