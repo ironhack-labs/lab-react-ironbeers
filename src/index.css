@@ -158,5 +158,12 @@ header{
   cursor: pointer;
 }
 
+.searchInput{
+  margin: 20px;
+  width: 520px;
+  height: 25px;
+  border: 1px solid rgb(205, 200, 200);
+  border-radius: 10px;
+}
 
 
