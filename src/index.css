@@ -1,13 +1,169 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ 
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
 }
+ 
+.card-link{
+  box-shadow: 10px 5px 5px gray;
+  margin: 10px;
+  padding: 10px 0;
+  width: 710px;
+  
+}
+
+.link{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  
+}
+.link h1{
+  margin: 0;
+  padding: 5px;
+  text-align: justify;
+  color: black;
+  width: 640px;
+  
+}
+.link p{
+  margin: 0;
+  padding: 5px;
+  text-align: justify;
+  color: darkgrey;
+  width: 640px;
+  justify-content: center;
+  
+}
+
+
+header{
+  background-color:deepskyblue;
+  color: white;
+  height: 60px;
+}
+
+.header-img{
+  width: 40px;
+  margin: 10px;
+}
+
+.beers{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 10px 5px 5px gray;
+  justify-content: center;
+
+}
+
+.beers-img{
+  padding: 10px;
+  margin: 20px;
+  width: 120px;
+}
+
+.beers-info{
+  padding: 10px;
+  margin: 20px;
+  width: 320px;
+}
+.beers-info h2{
+  margin: 20px 0 10px 0;
+  padding: 0;
+  text-align: justify;
+}
+.beers-info h3{
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  color:darkgrey;
+}
+.beers-info p{
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+.single-beer{
+ margin-top: 30px
+
+}
+
+.single-beer-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+ 
+
+}
+.single-beer-row h1{
+  margin: 0;
+
+}
+.addBeer{
+  width: 400px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.addBeer label{
+  width: 80px;
+  font-size: 14px;
+  text-align: left;
+  
+}
+
+.addBeer input{
+  width: 380px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(205, 200, 200);
+
+
+}
+.addBeer textarea{
+  width: 380px;
+  height: 120px;
+  margin: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+}
+
+.addBeer button{
+  background-color: deepskyblue;
+  border: 0px;
+  border-radius: 10px;
+  width: 160px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.searchInput{
+  margin: 20px;
+  width: 520px;
+  height: 25px;
+  border: 1px solid rgb(205, 200, 200);
+  border-radius: 10px;
+}
+
+
