@@ -1,3 +1,21 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+}
+ 
 .card-link{
   box-shadow: 10px 5px 5px gray;
   margin: 10px;
@@ -100,5 +118,45 @@ header{
   margin: 0;
 
 }
+.addBeer{
+  width: 400px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.addBeer label{
+  width: 80px;
+  font-size: 14px;
+  text-align: left;
+  
+}
+
+.addBeer input{
+  width: 380px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(205, 200, 200);
+
+
+}
+.addBeer textarea{
+  width: 380px;
+  height: 120px;
+  margin: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+}
+
+.addBeer button{
+  background-color: deepskyblue;
+  border: 0px;
+  border-radius: 10px;
+  width: 160px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+}
+
 
 

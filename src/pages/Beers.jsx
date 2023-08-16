@@ -26,6 +26,11 @@ const Beers = () =>{
         <div>
             <Header/>
             {
+                beers.length === 0 && <h1> Error 404 Beers no found</h1>
+            }
+
+            {
+                beers.length !== 0 && (
                 beers.map(beer =>(
                     <Link to={`/beers/${beer._id}`} key={beer._id} className="beers">
                         <div className="beers-image">
@@ -34,10 +39,10 @@ const Beers = () =>{
                         <div className="beers-info">
                             <h2>{beer.name}</h2>
                             <h3>{beer.tagline}</h3>
-                            <p>Contributed by {beer.contributed_by.replace(/<[^>]+>/g, '')}</p>
+                            <p>Contributed by {beer.contributed_by}</p>
                         </div>
                     </Link>
-                ))
+                )))
             }
         </div>
     )
