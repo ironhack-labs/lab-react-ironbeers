@@ -27,12 +27,21 @@ function Beers() {
                 <img src={houseicon} alt="houseicon" style={{width:"500px"}}/>
             </Link>
         </header>
-    
     <div>
       <h2>Beer List</h2>
       <ul>
         {beers.map(beer => (
-          <li key={beer._id}>{beer.name}</li>
+            <div>
+                <Link to="/beers/:beerId"></Link>
+                <div key={beer._id} style={{display:"flex", }}>
+                    <img src={beer.image_url} alt="beerimage" style={{width:"30px"}}/>
+                    <div>
+                        <h3>{beer.name}</h3>
+                        <h4>{beer.tagline}</h4>
+                        Created by: {beer.contributed_by}
+                    </div>
+                </div>
+            </div>
         ))}
       </ul>
     </div>
