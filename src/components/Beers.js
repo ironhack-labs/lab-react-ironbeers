@@ -31,16 +31,17 @@ function Beers() {
       <h2>Beer List</h2>
       <ul>
         {beers.map(beer => (
-            <div>
-                <Link to="/beers/:beerId"></Link>
-                <div key={beer._id} style={{display:"flex", }}>
-                    <img src={beer.image_url} alt="beerimage" style={{width:"30px"}}/>
+            <div key={beer._id}>
+                <Link to={`/beers/${beer._id}`}>
+                <div style={{display:"flex"}}>
+                    <img src={beer.image_url} alt="beerimage" style={{width:"30px", height:"auto", paddingRight:"30px"}}/>
                     <div>
                         <h3>{beer.name}</h3>
                         <h4>{beer.tagline}</h4>
                         Created by: {beer.contributed_by}
                     </div>
                 </div>
+                </Link>
             </div>
         ))}
       </ul>
