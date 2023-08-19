@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 import { useParams } from 'react-router-dom';
 
 
@@ -26,7 +27,7 @@ function Details () {
     return (
         <div>
             <h2>Beer Details</h2>
-            <img src={beer.image_url} alt={beer.name} />
+            <img style={{width:"30px"}} src={beer.image_url} alt={beer.name} />
             <h3>{beer.name}</h3>
             <p>Tagline: {beer.tagline}</p>
             <p>First Brewed: {beer.first_brewed}</p>
