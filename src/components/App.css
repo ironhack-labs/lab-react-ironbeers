@@ -1,0 +1,5 @@
+.beersPictures {
+    object-fit: cover;
+    max-width: 10vh;
+    height: auto;
+}
