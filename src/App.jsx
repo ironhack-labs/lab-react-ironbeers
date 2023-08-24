@@ -1,11 +1,20 @@
-import "./App.css";
+import './App.css'
+// import Footer from './components/Footer/Footer'
+import Navigation from './components/Navbar'
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
+
   return (
     <div className="App">
-      <h1>LAB | React IronBeers</h1>
+
+       <Navigation /> 
+
+      <AppRoutes />
+
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
