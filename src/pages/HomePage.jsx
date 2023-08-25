@@ -7,17 +7,25 @@ function HomePage() {
 
     return (
         <section className="Navbar">
+            <div>
+            <img src={beers} alt="Beers Image"/>
             <Link to="/beers">
-                <img src={beers} alt="Beers Image"></img>
+                <h2>All Beers</h2>
             </Link>
-            <p></p>
+            </div>
+            <img src={randomBeer} alt="Random Beers Image"/>
             <Link to="/random-beer">
-            <img src={randomBeer} alt="Random Beers Image"></img>
+                <h2>Random Beer</h2>
             </Link>
-            <p></p>
+
+            <div>
+            <img src={newBeer} alt="New Beers Image"/>
             <Link to="/new-beer">
-            <img src={newBeer} alt="New Beers Image"></img>
+                <h2>New Beer</h2>
             </Link>
+
+            </div>
+     
         </section>  
     )
 }

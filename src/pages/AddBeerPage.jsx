@@ -9,9 +9,8 @@ function AddBeerPage() {
     const [description, setDescription] = useState("");
     const [first_brewed, setBrewed] = useState("");
     const [tips, setTips] = useState("");
-    const [attenuation, setAttenuation] = useState(1);
+    const [attenuation, setAttenuation] = useState(0);
     const [contributed, setContributed] = useState("");
-    const [img, setImg] = useState("");
 
     const navigate = useNavigate();
 
@@ -24,7 +23,7 @@ function AddBeerPage() {
             tagline: tagline, 
             description: description, 
             first_brewed: first_brewed, 
-            brewer_tips: tips, 
+            brewers_tips: tips, 
             attenuation_level: attenuation, 
             contributed_by: contributed
         };
@@ -33,11 +32,10 @@ function AddBeerPage() {
             // time to reset State Values
             setName("");
             setTagline("");
-            setImg("");
             setDescription("");
             setBrewed("");
             setTips("");
-            setAttenuation(1);
+            setAttenuation(0);
             setContributed("");
             // Same thing as res.redirect("/") that we had on Express
             navigate("/beers");
@@ -61,7 +59,7 @@ function AddBeerPage() {
                     </label>
                     <label>
                         Description
-                        <input type="text" name="description" onChange={(e) => setDescription(e.target.value)} value={description}/>
+                        <textarea type="text" name="description" onChange={(e) => setDescription(e.target.value)} value={description}/>
                     </label>
                     <label>
                         First Brewed
@@ -77,7 +75,7 @@ function AddBeerPage() {
                     </label>
                     <label>
                         Contributed By
-                        <input type="text" name="contributed" onChange={(e) => setContributed(e.target.value)} value={contributed} />
+                        <input type="text" name="contributed_by" onChange={(e) => setContributed(e.target.value)} value={contributed} />
                     </label>
                     <button type="submit">
                         Add Beer

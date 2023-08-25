@@ -18,14 +18,12 @@ function AllBeersPage() {
             {beers.map((beer) => {
                 return(
                     <div key={beer._id}>
+                        <img src={beer.image_url}/>
                         <Link to={`/beers/${beer._id}`}>
-                            <img src={beer.image_url}/>
-                        <div>
-                            <h3>Name: {beer.name}</h3>
-                            <h3>Tagline: {beer.tagline}</h3>
-                            <h3>Contributed by: {beer.contributed_by}</h3>
-                        </div>
+                        <h3>{beer.name}</h3>    
                         </Link>
+                        <h3>{beer.tagline}</h3>
+                        <h3>Created by: {beer.contributed_by}</h3>
                     </div>
                 )
             })}
