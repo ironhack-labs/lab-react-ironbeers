@@ -19,13 +19,26 @@ function BeerDetailsPage() {
   }, []);
 
   return (
-    <div>
-      <h1>Beer Details Page</h1>
-      <img src={beer.image_url} alt={beer.name} />
-      <h2>{beer.name}</h2>
-      <h3>{beer.tagline}</h3>
-      <p>{beer.description}</p>
-      <p>{beer.contributed_by}</p>
+    <div className="BeerDetailsPage">
+      <div className="BeerDetailsImg">
+        <img src={beer.image_url} alt={beer.name} />
+      </div>
+      <div className="BeerDetailsInfo">
+        <div className="BeerDetailsInfo-Header">
+          <div className="BeerDetailsInfo-Header-Left">
+            <h1>{beer.name}</h1>
+            <h2>{beer.tagline}</h2>
+          </div>
+          <div className="BeerDetailsInfo-Header-Right">
+            <h2>{beer.attenuation_level}</h2>
+            <p><b>{beer.first_brewed}</b></p>
+          </div>
+        </div>
+        <div className="BeerDetailsInfo-Body">
+          <p>{beer.description}</p>
+          <p>{beer.contributed_by}</p>
+        </div>
+      </div>
     </div>
   );
 }
