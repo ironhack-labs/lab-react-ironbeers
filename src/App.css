@@ -1,0 +1,29 @@
+nav {
+    background-color: rgb(69, 69, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beer-details-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+
+.beer-details-container img {
+    width: 100px;
+}
+
+.beer-details-container h6, h3 {
+    margin: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;  
+    flex-direction: column;  
+    text-align: center;
+}
