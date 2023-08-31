@@ -1,0 +1,18 @@
+.links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .link img {
+    width: 30%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  
