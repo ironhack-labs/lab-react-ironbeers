@@ -27,7 +27,9 @@ const HomePage = () => {
             </Link>
 
             <Link>
-            
+            <img src={newBeer} alt="NewBeerImg" />
+            <h1>NEW BEER</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
             </Link>
 
 
