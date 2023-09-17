@@ -1,0 +1,86 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+/* HOME PAGE STYLING */
+.home-page-wrapper {
+  padding: 20px;
+}
+
+.home-page-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid rgb(0, 0, 0);
+  margin: 20px;
+}
+
+.home-page-item img {
+  max-width: 100%;
+  height: auto;
+  padding-top: 20px;
+}
+
+.home-page-item img {
+  margin: 10px;
+}
+
+.home-page-item p {
+  margin: 0px 0px 20px;
+}
+/* ******************** */
+
+/* NAVBAR STYLING */
+.navbar {
+  text-align: center;
+  background-color: rgb(58, 189, 255);
+  padding: 15px 0;
+}
+
+.navbar img {
+  width: 50px;
+  height: auto;
+}
+/* ******************** */
+
+/* BEERS LIST STYLING */
+.beers-list {
+  flex-direction: column; 
+  align-items: start; 
+}
+
+.beer-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid rgb(192, 192, 192);
+}
+
+.beer-item-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beer-item-info-wrapper {
+  padding: 20px;
+}
+
+.beer-item img {
+  max-width: 100px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+/* ******************** */
+
+/* BEERS LIST STYLING */
+.img-beer-details {
+  max-height: 500px;
+  width: auto;
+}
+/* ******************** */
