@@ -1,0 +1,28 @@
+/* Navbar.css */
+nav {
+    background-color: royalblue;
+    color: white;
+    padding: 10px;
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-content p {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .navbar-content a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  .navbar-content a:hover {
+    text-decoration: underline;
+  }
+  
