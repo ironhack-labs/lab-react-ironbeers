@@ -1,0 +1,7 @@
+.nav-home {
+    background-color: #2EC4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
