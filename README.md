@@ -365,7 +365,7 @@ The `BeerDetailsPage` component should display the following information about t
 
 ### Iteration 6 | A random beer
 
-In this iteration, you will work on the `BeerDetailsPage` component in the `src/pages/BeerDetailsPage.jsx`.
+In this iteration, you will work on the `RandomBeerPage` component in the `src/pages/RandomBeerPage.jsx`.
 
 
 
