@@ -1,0 +1,21 @@
+img {
+    margin-left: 50%;
+}
+
+.nav-bar {
+    background-color: lightblue;
+
+}
+
+.beer-img {
+    width: 100%;
+    margin: 0;
+}
+
+
+
+.card {
+    border: 1px solid #eee;
+    padding: 1rem;
+    margin: 2rem auto;
+  }
