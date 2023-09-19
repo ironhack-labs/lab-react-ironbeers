@@ -2,9 +2,14 @@
   width: 50%;
   margin: 0 auto;
   text-align: left;
+  padding: 25px;
 }
 
 .beers-info-container {
   width: 50%;
   margin: 0 auto;
+}
+
+.homepage-link {
+  text-decoration: none;
 }
