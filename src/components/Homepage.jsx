@@ -9,7 +9,9 @@ function Homepage() {
     <div className="homepage-container">
       <div className="beers-info-container">
         <img src={beers} alt="beers" />
-        <Link to="/beers">All Beers</Link>
+        <Link className="homepage-link" to="/beers">
+          All Beers
+        </Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem amet libero nam? Praesentium laboriosam adipisci nemo, debitis veniam, quis quam suscipit quasi minima
           asperiores eos.
@@ -17,7 +19,9 @@ function Homepage() {
       </div>
       <div className="beers-info-container">
         <img src={newBeer} alt="new beer" />
-        <Link to="/random-beer">Random Beer</Link>
+        <Link className="homepage-link" to="/random-beer/:id">
+          Random Beer
+        </Link>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quos iure voluptate pariatur. Aliquid, autem error. Eaque animi, iure vitae cupiditate hic delectus
           quisquam veniam.
@@ -25,7 +29,9 @@ function Homepage() {
       </div>
       <div className="beers-info-container">
         <img src={randomBeer} alt="randomBeer" />
-        <Link to="/new-beer">New Beer</Link>
+        <Link className="homepage-link" to="/new-beer/:id">
+          New Beer
+        </Link>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est praesentium excepturi natus harum vitae, eum assumenda cumque repudiandae odio, amet repellat? Alias eum
           nihil animi.

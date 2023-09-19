@@ -8,11 +8,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Homepage />
       <Routes>
-        <Route path="/beers" element={ListBeers}></Route>
-        <Route path="/random-beer:id" element={RandomBeer}></Route>
-        <Route path="/new-beer:id" element={NewBeer}></Route>
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/beers" element={<ListBeers />}></Route>
+        <Route path="/random-beer/:id" element={<RandomBeer />}></Route>
+        <Route path="/new-beer/:id" element={<NewBeer />}></Route>
       </Routes>
     </div>
   );
