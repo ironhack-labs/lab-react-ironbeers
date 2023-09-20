@@ -23,10 +23,10 @@ function Homepage() {
       </div>
       <div className="beers-info-container">
         <div className="homepage-img-container">
-          <img className="homepage-img" src={newBeer} alt="new beer" />
+          <img className="homepage-img" src={randomBeer} alt="random beer" />
         </div>
         <div className="padding-25">
-          <Link className="homepage-link" to="/random-beer/:id">
+          <Link className="homepage-link" to="/random-beer">
             Random Beer
           </Link>
           <p>
@@ -37,10 +37,10 @@ function Homepage() {
       </div>
       <div className="beers-info-container">
         <div className="homepage-img-container">
-          <img className="homepage-img" src={randomBeer} alt="randomBeer" />
+          <img className="homepage-img" src={newBeer} alt="new beer" />
         </div>
         <div className="padding-25">
-          <Link className="homepage-link" to="/new-beer/:id">
+          <Link className="homepage-link" to="/new-beer">
             New Beer
           </Link>
           <p>

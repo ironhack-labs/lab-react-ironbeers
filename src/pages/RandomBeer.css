@@ -1,0 +1,25 @@
+.random-beer-wrapper {
+  margin-top: 100px;
+  padding: 0 25px;
+}
+
+.random-beer-content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.random-beer-name-container {
+  text-align: left;
+}
+
+.random-beer-info-container {
+  text-align: right;
+}
+
+.random-beer-description-container {
+  text-align: left;
+}
+
+.color-grey {
+  color: grey;
+}
