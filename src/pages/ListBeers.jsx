@@ -27,7 +27,7 @@ function ListBeers() {
                 <img className="one-beer-img" src={beer.image_url} alt="beer" />
               </div>
               <div className="beer-content">
-                <Link className="list-beer-link" to={`${beer._id}`}>
+                <Link className="list-beer-link" to={`/beers/${beer._id}`}>
                   <h1>{beer.name}</h1>
                 </Link>
 

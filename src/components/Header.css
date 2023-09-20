@@ -7,3 +7,8 @@
   margin-top: 50px;
   color: white;
 }
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
