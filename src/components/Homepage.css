@@ -1,15 +1,23 @@
 .homepage-container {
-  width: 50%;
-  margin: 0 auto;
   text-align: left;
-  padding: 25px;
 }
 
 .beers-info-container {
-  width: 50%;
   margin: 0 auto;
 }
 
 .homepage-link {
   text-decoration: none;
+  display: block;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.homepage-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.padding-25 {
+  padding: 0 25px;
 }
