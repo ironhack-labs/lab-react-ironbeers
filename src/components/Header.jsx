@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom/dist';
 
 function Header() {
   return (
-    <div>
+    <div className="icon-container">
       <Link to="/">
         <i className="fa-solid fa-house fa-2xl home-icon"></i>
       </Link>
