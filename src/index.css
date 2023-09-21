@@ -11,3 +11,158 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+p {
+  margin: 0;
+}
+
+.homePage > div {
+  width: 57%;
+  text-align: start;
+  margin: 10px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+
+.homeLinks {
+  font-size: 2em;
+}
+
+.homePage {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeButton {
+  background-color: lightblue;
+  padding: 15px 40px;
+  margin: 4px;
+}
+
+.listBeersLeft > a > img {
+  height: 150px;
+  width: auto;
+}
+
+.listBeers {
+  display: flex;
+  gap: 20px;
+  padding: 20px 50px;
+  text-align: center;
+}
+
+.listBeersLeft {
+  text-align: center;
+  width: 200px;
+}
+
+.listBeersRight {
+  text-align: left;
+}
+
+.singleBeer {
+  padding: 30px 0px; 
+  display: flex;
+  justify-content: center;
+}
+
+.singleBeer > div {
+  width: 40%;
+}
+
+.singleBeer > div > img {
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.singleBeer > div > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.singleBeerLeft {
+  text-align: left;
+}
+
+.singleBeerLeft > h1 {
+  font-weight: 400;
+  margin: 0;
+}
+
+.singleBeerLeft > p {
+  color: gray
+}
+
+.singleBeerRight {
+  text-align: right;
+}
+
+.singleBeerRight > h1 {
+  color: lightgray;
+  margin: 0;
+}
+
+.singleBeerRight > p {
+  font-weight: bold;
+}
+
+.singleBeer > div > p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contributed {
+  font-weight: bold;
+  color: grey
+}
+
+.newBeer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.newBeer > form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: start;
+  width: 25%
+}
+
+.newBeer > form > input, textarea {
+  border-radius: 10px;
+  border: solid grey 1px;
+  padding: 7px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.newBeer > form > p {
+  font-weight: bold;
+  font-size: 0.8em;
+  padding-left: 10px;
+}
+
+.newBeer > form > button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background-color: lightskyblue;
+  padding: 10px 10px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.success {
+  color: rgb(34, 186, 34);
+}
