@@ -26,9 +26,16 @@ function Randombeer() {
 
       {oneBeer && (
         <div className='card'>
-          <h2>{oneBeer.name}</h2>
-          
+        <div>
+            <img src={oneBeer.image_url} alt="beer" width={60} />                 
+            <h2>{oneBeer.name}</h2>
+            <h5 className='color-detail'>{oneBeer.tagline}</h5>
+            <h5>{oneBeer.first_brewed}</h5>
+            <h5>{oneBeer.attenuation_level}</h5>
+            <h5>{oneBeer.description}</h5>
+            <h5>{oneBeer.contributed_by}</h5>
         </div>
+    </div>
       )}
     </div>
   )
