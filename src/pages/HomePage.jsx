@@ -13,6 +13,7 @@ function HomePage() {
             <div className="card mb-3" style={{width: "18rem"}}>
               <img
                 src={beersImg}
+                style={{eight:"12rem"}}
                 className="card-img-top"
                 alt="Beer"
               />
@@ -34,6 +35,7 @@ function HomePage() {
               <img
                 src={randomBeerImg}
                 className="card-img-top"
+                style={{height:"12rem"}}
                 alt="Beer"
               />
               <div className="card-body">
@@ -54,6 +56,7 @@ function HomePage() {
               <img
                 src={newBeerImg}
                 className="card-img-top"
+                style={{height:"12rem"}}
                 alt="Beer"
               />
               <div className="card-body">
