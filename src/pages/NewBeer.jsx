@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import { useState } from 'react';
 import '../pages/NewBeer.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function NewBeer() {
   const [name, setName] = useState('');
@@ -11,6 +12,8 @@ function NewBeer() {
   const [brewersTips, setBrewersTips] = useState('');
   const [attenuationLevel, setAttenuationLevel] = useState(0);
   const [contributedBy, setContributedBy] = useState('');
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +25,7 @@ function NewBeer() {
     console.log(body);
 
     axios
-      .post('https://ih-beers-api2.herokuapp.com/beers/new')
+      .post('https://ih-beers-api2.herokuapp.com/beers/new', body)
       .then((response) => {
         console.log(response.data);
         setName('');
@@ -32,6 +35,8 @@ function NewBeer() {
         setBrewersTips('');
         setAttenuationLevel(0);
         setContributedBy('');
+
+        navigate('/');
       })
       .catch((err) => {
         console.log(err);
