@@ -11,7 +11,7 @@ function Homepage() {
         <div className="homepage-img-container">
           <img className="homepage-img" src={beers} alt="beers" />
         </div>
-        <div className="padding-25">
+        <div className="padding-25 beer-description">
           <Link className="homepage-link" to="/beers">
             All Beers
           </Link>
@@ -25,7 +25,7 @@ function Homepage() {
         <div className="homepage-img-container">
           <img className="homepage-img" src={randomBeer} alt="random beer" />
         </div>
-        <div className="padding-25">
+        <div className="padding-25 beer-description">
           <Link className="homepage-link" to="/random-beer">
             Random Beer
           </Link>
@@ -39,7 +39,7 @@ function Homepage() {
         <div className="homepage-img-container">
           <img className="homepage-img" src={newBeer} alt="new beer" />
         </div>
-        <div className="padding-25">
+        <div className="padding-25 beer-description">
           <Link className="homepage-link" to="/new-beer">
             New Beer
           </Link>

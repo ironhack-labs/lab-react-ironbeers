@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../pages/ListBeers.css';
 import { Link } from 'react-router-dom';
-
 function ListBeers() {
   const [beers, setBeers] = useState([]);
 
@@ -19,6 +18,7 @@ function ListBeers() {
       <div className="header">
         <Header />
       </div>
+
       {beers.map((beer) => {
         return (
           <div className="all-beers-wrapper" key={beer._id}>

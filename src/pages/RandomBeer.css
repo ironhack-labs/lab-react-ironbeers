@@ -23,3 +23,17 @@
 .color-grey {
   color: grey;
 }
+
+@media screen and (min-width: 780px) {
+  .random-beer-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-top: 100px;
+  }
+
+  .random-beer-wrapper > img {
+    width: 100px;
+    height: auto;
+  }
+}
