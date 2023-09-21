@@ -9,7 +9,7 @@ function NewBeer() {
   const [description, setDescription] = useState('');
   const [firstBrewed, setFirstBrewed] = useState('');
   const [brewersTips, setBrewersTips] = useState('');
-  const [attenuationLevel, setAttenuationLevel] = useState('');
+  const [attenuationLevel, setAttenuationLevel] = useState(0);
   const [contributedBy, setContributedBy] = useState('');
 
   const handleSubmit = (e) => {
@@ -21,16 +21,21 @@ function NewBeer() {
     const body = { name, tagline, description, firstBrewed, brewersTips, attenuationLevel, contributedBy };
     console.log(body);
 
-    axios.post(' https://ih-beers-api2.herokuapp.com/beers/new').then((response) => {
-      console.log(response.data);
-      setName('');
-      setTagLine('');
-      setDescription('');
-      setFirstBrewed('');
-      setBrewersTips('');
-      setAttenuationLevel(0);
-      setContributedBy('');
-    });
+    axios
+      .post(' https://ih-beers-api2.herokuapp.com/beers/new')
+      .then((response) => {
+        console.log(response.data);
+        setName('');
+        setTagLine('');
+        setDescription('');
+        setFirstBrewed('');
+        setBrewersTips('');
+        setAttenuationLevel(0);
+        setContributedBy('');
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
