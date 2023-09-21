@@ -2,6 +2,32 @@
   text-align: center;
 }
 
+.menu {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  /* display: inline-flex; */
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: #555;
+}
+
+.menu span {
+  margin-right: 10px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -24,6 +50,29 @@
   color: white;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Para evitar barras de rolagem horizontais */
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 50vh; /* Limita a altura para menos da metade da página */
+  overflow: hidden; /* Para esconder partes da imagem que estendem além da altura máxima */
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%); /* Centraliza a imagem horizontalmente */
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -32,6 +81,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
