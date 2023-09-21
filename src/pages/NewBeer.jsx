@@ -18,11 +18,11 @@ function NewBeer() {
     // Creating the body for the POST request
     // using the object property value shorthand
     // values are coming from the state variable
-    const body = { name, tagline, description, firstBrewed, brewersTips, attenuationLevel, contributedBy };
+    const body = { name, tagline, description, first_brewed: firstBrewed, brewers_tips: brewersTips, attenuation_level: attenuationLevel, contributed_by: contributedBy };
     console.log(body);
 
     axios
-      .post(' https://ih-beers-api2.herokuapp.com/beers/new')
+      .post('https://ih-beers-api2.herokuapp.com/beers/new')
       .then((response) => {
         console.log(response.data);
         setName('');
@@ -94,9 +94,8 @@ function NewBeer() {
             <input type="text" name="contributed-by" onChange={(e) => setContributedBy(e.target.value)} value={contributedBy} />
           </div>
         </div>
-        <div>
-          <button type="submit">Add New</button>
-        </div>
+
+        <button type="submit">Add New</button>
       </form>
     </div>
   );
