@@ -21,3 +21,18 @@
 .padding-25 {
   padding: 0 25px;
 }
+
+@media screen and (min-width: 780px) {
+  .beers-info-container {
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .beer-description {
+    padding-left: 150px;
+  }
+
+  .beer-description > p {
+    width: 75%;
+  }
+}

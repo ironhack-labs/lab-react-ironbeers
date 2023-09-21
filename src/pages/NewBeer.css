@@ -25,4 +25,12 @@ input {
 
 textarea {
   border-radius: 25px;
+  width: 350px;
+}
+
+button {
+  background-color: hsl(192, 89%, 52%);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 15px;
 }
