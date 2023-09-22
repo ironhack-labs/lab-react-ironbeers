@@ -4,9 +4,16 @@ import axios from "axios";
 
 const API_URL = "https://ih-beers-api2.herokuapp.com/beers";
 
-function AllBeersPage() {
+function AllBeersPage({beersAll}) {
   const [allBeers, setAllBeers] = useState([]);
   const [error, setError] = useState(null);
+  const [searchBeer, setsearchBeer] = useState("");
+
+  let handleSearch = (e) => {
+    setsearchBeer(e.target.value);
+  };
+
+  if (!beersAll) return <p>Page is loading... ❤</p>;
 
   useEffect(() => {
     axios
@@ -19,31 +26,44 @@ function AllBeersPage() {
 
   return (
     <div>
-      <div
+      <div className="beerSearch">
+        <label>Search beer</label>
+        <input
+          value={searchBeer}
+          type="text"
+          placeholder="Search for beer"
+          onChange={handleSearch}
+        />
+      </div>
+   <div
         className="container"
         style={{ maxHeight: "90vh", overflow: "scroll" }}
       >
-        <div className="beer-list">
-          {allBeers &&
-            allBeers.map((beer) => {
-              return (
-                <Link
-                  key={beer._id}
-                  className="list-group-item list-group-item-action"
-                  to={`/beers/${beer._id}`}>  
-                  <div className="beer-card"> 
-                 <img src={beer.img_url} alt="beer-picture"/>
-                 <h3>{beer.name}</h3>
-                 <h4>{beer.tagline}</h4>
-                 <p>
-                    <b>Contributed by:{beer.contributed_by}</b>
+       
+      {beersAll
+        ?.filter((beer) => {
+          return beer.name.toLowerCase().includes(searchBeer.toLowerCase());
+        })
+        .map((beer) => (
+          <div key={beer._id}>
+            <Link to={`/beers/${beer._id}`}>
+              <div className="card-beer">
+                <div className="image-beer-list">
+                  <img src={beer.image_url} alt="beer" width="100"/>
+                </div>
+                <div className="info-beer-list">
+                  <h3>{beer.name}</h3>
+                  <h4>{beer.tagline}</h4>
+                  <p>
+                    <b>Created by: </b>
+                    {beer.name}
                   </p>
-                 </div>
-              </Link>
-              );
-            })}
-        </div>
-      </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
+     </div>
     </div>
   );
 }

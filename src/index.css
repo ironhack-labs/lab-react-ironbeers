@@ -26,3 +26,12 @@ height:auto;
 display:block;
 text-align: center;
 }
+
+.beer-small {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8%;
+  height:auto;
+}
