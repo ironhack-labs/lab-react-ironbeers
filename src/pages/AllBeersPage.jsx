@@ -1,17 +1,22 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import "./AllBeersPage.css";
 
 const apiUrl = "https://ih-beers-api2.herokuapp.com/beers";
 
 function AllBeersPage() {
   const [beers, setBeers] = useState([]);
-  console.log(beers);
 
   useEffect(() => {
     const fetchAllBeers = async () => {
       try {
         const response = await axios.get(apiUrl);
-        setBeers(response.data);
+        const parsedData = response.data.map(
+          ({ _id, name, contributed_by, image_url, tagline }) => {
+            return { id: _id, name, contributed_by, image_url, tagline };
+          }
+        );
+        setBeers(parsedData);
       } catch (error) {
         console.error("Error fetching beers:", error);
       }
@@ -21,13 +26,18 @@ function AllBeersPage() {
 
   return (
     <div>
-      <h1>All beers page </h1>
-      <ul>
+      <ul className="allBeerList">
         {beers.map((beer) => (
-          <li key={beer._id}>
-            <h2>{beer.name}</h2>
-            <img src={beer.image_url} alt={beer.name} width="150" />
-            <p>{beer.description}</p>
+          <li key={beer.id} className="allBeerListItem">
+            <div className="left-container">
+              <img src={beer.image_url} alt={beer.name} />
+            </div>
+
+            <div>
+              <p>{beer.name}</p>
+              <p>{beer.tagline}</p>
+              <p>Created by: {beer.contributed_by}</p>
+            </div>
           </li>
         ))}
       </ul>

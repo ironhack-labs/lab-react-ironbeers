@@ -19,3 +19,8 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
