@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./AllBeersPage.css";
+import { Link } from "react-router-dom";
 
 const apiUrl = "https://ih-beers-api2.herokuapp.com/beers";
 
@@ -28,17 +29,19 @@ function AllBeersPage() {
     <div>
       <ul className="allBeerList">
         {beers.map((beer) => (
-          <li key={beer.id} className="allBeerListItem">
-            <div className="left-container">
-              <img src={beer.image_url} alt={beer.name} />
-            </div>
+          <Link to={`/beers/${beer.id}`} key={beer.id}>
+            <li className="allBeerListItem">
+              <div className="left-container">
+                <img src={beer.image_url} alt={beer.name} />
+              </div>
 
-            <div>
-              <p>{beer.name}</p>
-              <p>{beer.tagline}</p>
-              <p>Created by: {beer.contributed_by}</p>
-            </div>
-          </li>
+              <div>
+                <p>{beer.name}</p>
+                <p>{beer.tagline}</p>
+                <p>Created by: {beer.contributed_by}</p>
+              </div>
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
