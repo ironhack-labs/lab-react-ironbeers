@@ -7,10 +7,15 @@ function ListBeers() {
   const [beers, setBeers] = useState([]);
 
   useEffect(() => {
-    axios.get('https://ih-beers-api2.herokuapp.com/beers').then((response) => {
-      console.log(console.log(response.data));
-      setBeers(response.data);
-    });
+    axios
+      .get('https://ih-beers-api2.herokuapp.com/beers')
+      .then((response) => {
+        console.log(console.log(response.data));
+        setBeers(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (
