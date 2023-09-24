@@ -1,0 +1,9 @@
+.beerList {
+  list-style: none;
+}
+
+.beerList li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
