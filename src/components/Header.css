@@ -1,0 +1,14 @@
+.header {
+  background-color: hsl(192, 89%, 52%);
+  height: 100px;
+}
+
+.home-icon {
+  margin-top: 50px;
+  color: white;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}

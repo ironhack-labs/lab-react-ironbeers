@@ -1,0 +1,28 @@
+.one-beer-img {
+  width: 75px;
+  margin-top: 25px;
+  padding-left: 25px;
+}
+
+.all-beers-wrapper {
+  text-align: left;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.all-beers-container {
+  display: flex;
+  gap: 25px;
+}
+
+.list-beer-link {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 780px) {
+  .all-beers-wrapper {
+    width: 1200px;
+    max-width: 100%;
+  }
+}
