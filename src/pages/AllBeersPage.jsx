@@ -18,6 +18,7 @@ function AllBeersPage() {
     };
     fetchAllBeers();
   }, []);
+
   return (
     <div>
       <h1>All beers page </h1>

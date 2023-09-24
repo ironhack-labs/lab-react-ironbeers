@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>LAB | React IronBeers</h1>
+        <Navbar />
 
         <Routes>
           <Route path="/" element={<HomePage />} />
