@@ -1,0 +1,19 @@
+.details .image-container img {
+  height: 200px;
+  width: auto;
+}
+
+.details .image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.details {
+  padding: 20px;
+}
+
+.details .name-container,
+.details .tagline-container {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
