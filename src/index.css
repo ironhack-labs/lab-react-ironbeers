@@ -11,3 +11,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* Para alinhar os textos à direita da imagem dentro da div .card, você pode usar a propriedade CSS display: flex e flex-direction: row. Isso fará com que os elementos filhos (a imagem e os textos) se comportem como uma linha, colocando-os lado a lado horizontalmente. Aqui está como você pode modificar o seu CSS: */
+
+
+.card {
+  display: flex;
+  flex-direction: row; /* Altere para 'row' para alinhar a imagem e os textos lado a lado */
+  width: 400px;
+  padding: 10px;
+  box-shadow: 0px 2px 3px grey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: whitesmoke;
+  border-radius: 4px;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 10px;
+  box-shadow: 0px 2px 3px grey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: whitesmoke;
+  border-radius: 4px;
+}
+
+.bottle {
+  flex: 0 0 60px;
+  margin-right: 10px;
+}
+
+/* Use flex-direction 'column' para empilhar os textos verticalmente */
+.card h1,
+.card h5 {
+  flex-direction: column;
+}
+
+.color-detail {
+  color: gray;
+}
+
