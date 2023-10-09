@@ -51,8 +51,8 @@ describe("Iteration 4", () => {
     test("renders a list of all beers and their details from the Beers API", async () => {
       await waitFor(() => {
         expect(screen.getByText("Beer 1")).toBeInTheDocument();
+        expect(screen.getByText("Beer 2")).toBeInTheDocument();
       });
-      expect(screen.getByText("Beer 2")).toBeInTheDocument();
 
       const images = screen.getAllByRole("img");
       const img1 = images.find(
