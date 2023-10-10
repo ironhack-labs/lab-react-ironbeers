@@ -9,7 +9,7 @@ const API_URL = "https://ih-beers-api2.herokuapp.com";
 
 axios.defaults.adapter = "http";
 
-describe("Iteration 6", () => {
+describe("Bonus: Iteration 4", () => {
   describe("RandomBeerPage component", () => {
     const randomBeer = {
       _id: "r1",

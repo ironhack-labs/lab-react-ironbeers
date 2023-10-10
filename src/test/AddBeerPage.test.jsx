@@ -9,7 +9,7 @@ const API_URL = "https://ih-beers-api2.herokuapp.com";
 
 axios.defaults.adapter = "http";
 
-describe("Iteration 7", () => {
+describe("Iteration 3", () => {
   describe("AddBeerPage component", () => {
     const newBeer = {
       name: "New Beer 1",
@@ -56,36 +56,36 @@ describe("Iteration 7", () => {
       });
     });
 
-    test("renders the 'first_brewed' input field", async () => {
+    test("renders the 'firstBrewed' input field", async () => {
       const firstBrewedInput = container.querySelector(
-        'input[name="first_brewed"]'
+        'input[name="firstBrewed"]'
       );
       await waitFor(() => {
         expect(firstBrewedInput).not.toBeNull();
       });
     });
 
-    test("renders the 'brewers_tips' input field", async () => {
+    test("renders the 'brewersTips' input field", async () => {
       const brewersTipsInput = container.querySelector(
-        'input[name="brewers_tips"]'
+        'input[name="brewersTips"]'
       );
       await waitFor(() => {
         expect(brewersTipsInput).not.toBeNull();
       });
     });
 
-    test("renders the 'contributed_by' input field", async () => {
+    test("renders the 'contributedBy' input field", async () => {
       const contributedByInput = container.querySelector(
-        'input[name="contributed_by"]'
+        'input[name="contributedBy"]'
       );
       await waitFor(() => {
         expect(contributedByInput).not.toBeNull();
       });
     });
 
-    test("renders the 'attenuation_level' input field", async () => {
+    test("renders the 'attenuationLevel' input field", async () => {
       const attenuationInput = container.querySelector(
-        'input[name="attenuation_level"]'
+        'input[name="attenuationLevel"]'
       );
       await waitFor(() => {
         expect(attenuationInput).not.toBeNull();
@@ -100,7 +100,7 @@ describe("Iteration 7", () => {
       });
     });
 
-    test("sends form values to the API via POST request when the form is submitted", async () => {
+    test("sends form values to the Beers API via POST request when the form is submitted", async () => {
       let requestBody;
       const scope = nock(API_URL)
         .post("/beers/new", (body) => {
@@ -115,16 +115,16 @@ describe("Iteration 7", () => {
         'textarea[name="description"]'
       );
       const firstBrewedInput = container.querySelector(
-        'input[name="first_brewed"]'
+        'input[name="firstBrewed"]'
       );
       const brewersTipsInput = container.querySelector(
-        'input[name="brewers_tips"]'
+        'input[name="brewersTips"]'
       );
       const contributedByInput = container.querySelector(
-        'input[name="contributed_by"]'
+        'input[name="contributedBy"]'
       );
       const attenuationInput = container.querySelector(
-        'input[name="attenuation_level"]'
+        'input[name="attenuationLevel"]'
       );
 
       fireEvent.change(nameInput, {

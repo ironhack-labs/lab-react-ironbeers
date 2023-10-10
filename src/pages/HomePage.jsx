@@ -28,7 +28,7 @@ function HomePage() {
             <div className="card-body">
               <h3 className="card-title">Random Beer</h3>
               <p className="card-text">
-              Discover unique beers with intriguing details, one random beer at a time.
+              Discover unique beers with intriguing details at random, one beer at a time.
               </p>
             </div>
           </div>

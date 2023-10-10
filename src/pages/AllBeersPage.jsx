@@ -5,8 +5,6 @@ import beersJSON from "./../assets/beers.json";
 
 
 
-// Structure and the content of the page showing the beer details. You can leave this as it is:
-
 function AllBeersPage() {
   // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.
   const [beers, setBeers] = useState(beersJSON);
@@ -20,7 +18,7 @@ function AllBeersPage() {
 
 
 
-  // The logic and the structure for the page showing the list of beers. You can leave this as it is for now:
+  // The logic and the structure for the page showing the list of beers. You can leave this as it is for now.
   return (
     <>
       <Search />
