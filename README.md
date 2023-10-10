@@ -34,7 +34,7 @@ Our final result of the app should resemble something similar to this:
 
 
 <p align="center">
-  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/finished+lab.gif" width="250" />
+  <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
 </p>
 
 
@@ -183,9 +183,9 @@ Your task is to make a `GET` request to the Beers API endpoint `https://ih-beers
 
 
 
-<div style="display: flex; justify-content: center">
+<p align="center">
   <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+1.png" height="800px" />
-</div>
+</p>
 
 
 
@@ -254,9 +254,9 @@ The `BeerDetailsPage` component already has a state variable `beer` and is set u
 
 
 
-<div style="display: flex; justify-content: center">
+<p align="center">
   <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+2.png" height="750px" />
-</div>
+</p>
 
 
 
@@ -325,9 +325,9 @@ The `attenuation_level` value must be set to the correct data type of `number`. 
 
 
 
-<div style="display: flex; justify-content: center">
+<p align="center">
   <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+3.gif" height="750px" />
-</div>
+</p>
 
 
 
@@ -375,9 +375,9 @@ The `RandomBeerPage` component already has a state variable `randomBeer` and is 
 
 
 
-<div style="display: flex; justify-content: center">
+<p align="center">
   <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+4.png" height="750px" />
-</div>
+</p>
 
 
 
@@ -414,9 +414,9 @@ Every time the user types a new letter in the search bar, you should make a requ
 
 
 
-<div style="display: flex; justify-content: center">
+<p align="center">
   <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+5.gif" height="750px" />
-</div>
+</p>
 
 
 
