@@ -7,7 +7,7 @@
    <h2>Learning Goals</h2>
   </summary>
 
-This exercise allows you to practice and apply the concepts and techniques taught in class.
+This exercise is designed to help you practice and apply the concepts and techniques taught in class.
 
 
 
@@ -25,7 +25,9 @@ After completing this exercise, you will be able to:
 
 <br>
 
-In this lab, we will be working on an app that caters to brewers, beer enthusiasts, and all those interested in handcrafted beers - the Iron Brewers app. Our mission here is to create an app to showcase some of the best handcrafted beers, but not just that - also make it so that users can contribute by saving their handcrafted beers to the database and sharing them with fellow brewers and the community. Our final result of the app should resemble something similar to this:
+In this lab, we will be working on an app that caters to brewers, beer enthusiasts, and all those interested in handcrafted beers - the Iron Brewers app. Our mission here is to create an app to showcase some of the best handcrafted beers, but not just that - also make it so that users can contribute by saving their handcrafted beers to the database and sharing them with fellow brewers and the community.
+
+Our final result of the app should resemble something similar to this:
 
 
 
@@ -147,7 +149,7 @@ The app already includes the following pages:
 - A **New Beer** page showing a form where you should implement the functionality to create new beer ( make a POST request to the API
 
 <br>
-  
+
 Take a moment to explore the starter code and familiarize yourself with the components and the structure of the app. To run the app, use the command `npm run dev` in the terminal. 
 
 
