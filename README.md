@@ -33,9 +33,10 @@ Our final result of the app should resemble something similar to this:
 
 
 
-<div style="display: flex; justify-content: center">
-<img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
-</div>
+<p align="center">
+  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/finished+lab.gif" width="250" />
+</p>
+
 
 ## Setup
 
@@ -144,9 +145,9 @@ The app already includes the following pages:
 
 - A **Single Beer** page where you should display the details of the beer the user clicked on
 
-- A **Random Beer** page where you should display a random handcrafted beer
+- A **New Beer** page showing a form where you should implement the functionality to create new beer (make a POST request to the API)
 
-- A **New Beer** page showing a form where you should implement the functionality to create new beer ( make a POST request to the API
+- A **Random Beer** page where you should display a random handcrafted beer
 
 <br>
 
@@ -162,12 +163,12 @@ Take a moment to explore the starter code and familiarize yourself with the comp
 In this iteration, you will work on the `AllBeersPage` component in the `src/pages/AllBeersPage.jsx`, which is rendered on the `/beers` route.
 
 
-The `AllBeersPage` component already displays a list of beers coming from a static JSON file that is stored in a state variable `beers`. However, the component should display a list of all the beers from the Beers API. Your task is to replace the static data with the data coming from the Beers API.
+The `AllBeersPage` component already displays a list of beers coming from a static JSON data that is stored in a state variable `beers`. However, the component should display a list of all the beers from the Beers API. Your task is to replace the static data with the data coming from the Beers API.
 
 
 <br>
 
-Your task is to make a `GET` request to the Beers API endpoint `https://ih-beers-api2.herokuapp.com/beers`. This API endpoint returns an **array of beers**. Once you get a response from the Beers API, save it in the state variable `beers`.
+Your task is to make a `GET` request to the Beers API endpoint `https://ih-beers-api2.herokuapp.com/beers` using `axios`. This API endpoint returns an **array of beers**. Once you get a response from the Beers API, save it in the state variable `beers`.
 
 
 
@@ -183,8 +184,9 @@ Your task is to make a `GET` request to the Beers API endpoint `https://ih-beers
 
 
 <div style="display: flex; justify-content: center">
-  <img src="https://user-images.githubusercontent.com/23629340/40706960-96223ade-63ef-11e8-9375-b7b6d091e716.png" height="600px" />
+  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+1.png" height="800px" />
 </div>
+
 
 
 
@@ -253,8 +255,9 @@ The `BeerDetailsPage` component already has a state variable `beer` and is set u
 
 
 <div style="display: flex; justify-content: center">
-  <img src="https://user-images.githubusercontent.com/23629340/40707269-84bedd78-63f0-11e8-86c3-b14efb9323a7.png" height="600px" />
+  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+2.png" height="750px" />
 </div>
+
 
 
 
@@ -323,8 +326,9 @@ The `attenuation_level` value must be set to the correct data type of `number`. 
 
 
 <div style="display: flex; justify-content: center">
-  <img src="" height="600px" />
+  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+3.gif" height="750px" />
 </div>
+
 
 
 
@@ -372,8 +376,9 @@ The `RandomBeerPage` component already has a state variable `randomBeer` and is 
 
 
 <div style="display: flex; justify-content: center">
-  <img src="https://user-images.githubusercontent.com/23629340/40707457-05a22990-63f1-11e8-84b2-a86143b7b821.png" height="600px" />
+  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+4.png" height="750px" />
 </div>
+
 
 
 
@@ -410,8 +415,9 @@ Every time the user types a new letter in the search bar, you should make a requ
 
 
 <div style="display: flex; justify-content: center">
-  <img src="" height="600px" />
+  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-iron-brewers/Iteration+5.gif" height="750px" />
 </div>
+
 
 
 
