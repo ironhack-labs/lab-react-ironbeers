@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function AllBeersPage() {
     const [beers, setBeers] = useState([]);
 
     useEffect(() => {
-        fetch("https://ih-beers-api2.herokuapp.com/beers")
-            .then(response => response.json())
-            .then(data => {
-                setBeers(data);
-            })
-            .catch(error => console.log(error));
-    }, []);
+        axios.get("https://ih-beers-api2.herokuapp.com/beers").then((response) => {
+          console.log("response.data", response.data);
+          setBeers(response.data);
+        });
+      }, []);
 
     return (
         <div>
