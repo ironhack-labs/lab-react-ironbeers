@@ -20,21 +20,32 @@ function BeerDetailsPage() {
     return <h1>Loading...</h1>
   }
 
+  //<div className="d-flex justify-content-center align-items-center vh-100">
+
   return (
+    <>
+      <div className="d-flex flex-column justify-content-center align-items-center ">
 
-    <div>
-      
-      <h1>Detalles de la Cerveza</h1>
-      <img src={beer.image_url} alt={beer.name} />
-      <h2>{beer.name}</h2>
-      <p>{beer.tagline}</p>
-      <p>Primera elaboración: {beer.first_brewed}</p>
-      <p>Atenuación: {beer.attenuation_level}</p>
-      <p>Descripción: {beer.description}</p>
-      <p>Contribuido por: {beer.contributed_by}</p>
+        <h1 style={{textAlign: "center"}} className='m-4'>Detalles de la Cerveza</h1>
 
-    </div>
+        <div className="card mb-3 align-items-center p-5" style={{width:"800px"}}>
+          <img 
+            src={beer.image_url} 
+            alt={beer.name}
+            className='card-img-top mb-3'
+            style={{maxWidth: "100px", heigth:"auto"}}
+          />
+          <h2>{beer.name}</h2>
+          <p>{beer.tagline}</p>
+          <p>Primera elaboración: {beer.first_brewed}</p>
+          <p>Atenuación: {beer.attenuation_level}</p>
+          <p>Descripción: {beer.description}</p>
+          <p>Contribuido por: {beer.contributed_by}</p>
 
+        </div>
+
+      </div>
+    </>
   );
 
 }
