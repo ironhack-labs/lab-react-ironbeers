@@ -15,19 +15,25 @@ function RandomBeersPage() {
   }, []);
 
   return (
-    <div>
-      {!randomBeer && <h3>Beer not found!</h3>}
-      {randomBeer && (
-        <div>
-          <img src={randomBeer.image_url} />
-          <h3>{randomBeer.name}</h3>
-          <p>{randomBeer.tagline}</p>
-          <p>{randomBeer.first_brewed}</p>
-          <p>{randomBeer.attenuation_level}</p>
-          <p>{randomBeer.description}</p>
-          <p>{randomBeer.contributed_by}</p>
-        </div>
-      )}
+    <div className="container my-4">
+      <h2 className="text-center">Random Beer</h2>
+      <div className="mt-4">
+        {!randomBeer && <h3>Beer not found!</h3>}
+        {randomBeer && (
+          <div className="d-flex gap-5">
+            <img className="beer-image" src={randomBeer.image_url} />
+            <div className="border rounded bg-light p-4">
+              <h3>{randomBeer.name}</h3>
+              <br />
+              <p>{randomBeer.tagline}</p>
+              <p>First Brewed: {randomBeer.first_brewed}</p>
+              <p>Attenuation Level: {randomBeer.attenuation_level}</p>
+              <p>{randomBeer.description}</p>
+              <p>Created by: {randomBeer.contributed_by}</p>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

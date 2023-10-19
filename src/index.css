@@ -2,23 +2,18 @@ body {
   margin: 0;
   padding: 0;
 }
-
 a {
   text-decoration: none !important;
 }
-
 form {
   max-width: 400px;
-  margin: 20px auto;
+  margin: auto;
 }
-
-.search-bar {
-  margin-bottom: 50px;
+.beer-img:hover {
+  opacity: 0.8;
+  transform: scale(1.08);
 }
-
-.btn-round {
-  margin: 20px;
-}
-.navbar {
-  background-color: rgb(0, 157, 255);
+.beer-image {
+  width: 10%;
+  height: 10%;
 }

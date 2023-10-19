@@ -40,74 +40,90 @@ function AddBeerPage() {
   };
 
   return (
-    <div>
-      <h3>Add New Beer</h3>
+    <div className="container">
+      <h3 className="text-center mt-4">Add New Beer</h3>
       <form onSubmit={handleSubmit}>
-        <label>
-          Name
-          <input
-            type="text"
-            name="name"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-          />
-        </label>
-        <label>
-          Tagline
-          <input
-            type="text"
-            name="tagline"
-            onChange={(e) => setTagline(e.target.value)}
-            value={tagline}
-          />
-        </label>
-        <label>
-          Description
-          <textarea
-            type="text"
-            name="description"
-            onChange={(e) => setDescription(e.target.value)}
-            value={description}
-          ></textarea>
-        </label>
-
-        <label>
-          First Brewed
-          <input
-            type="text"
-            name="first_brewed"
-            onChange={(e) => setFirstBrewed(e.target.value)}
-            value={first_brewed}
-          />
-        </label>
-        <label>
-          Brewer's Tips
-          <input
-            type="text"
-            name="brewers_tips"
-            onChange={(e) => setBrewersTips(e.target.value)}
-            value={brewers_tips}
-          />
-        </label>
-        <label>
-          Attenuation Level
-          <input
-            type="number"
-            name="attenuation_level"
-            onChange={(e) => setAttenuationLevel(e.target.value)}
-            value={attenuation_level}
-          />
-        </label>
-        <label>
-          Contributed By
-          <input
-            type="text"
-            name="contributed_by"
-            onChange={(e) => setContributedBy(e.target.value)}
-            value={contributed_by}
-          />
-        </label>
-        <button type="submit">Add Beer</button>
+        <div className="row">
+          <label className="my-1">
+            Name
+            <input
+              className="form-control my-1"
+              type="text"
+              name="name"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+            />
+          </label>
+          <label className="my-1">
+            Tagline
+            <input
+              className="form-control my-1"
+              type="text"
+              name="tagline"
+              onChange={(e) => setTagline(e.target.value)}
+              value={tagline}
+            />
+          </label>
+          <label className="my-1">
+            Description
+            <textarea
+              className="form-control my-1"
+              type="text"
+              name="description"
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
+            ></textarea>
+          </label>
+          <label className="my-1">
+            First Brewed
+            <input
+              className="form-control my-1"
+              type="text"
+              name="first_brewed"
+              onChange={(e) => setFirstBrewed(e.target.value)}
+              value={first_brewed}
+            />
+          </label>
+          <label className="my-1">
+            Brewer's Tips
+            <input
+              className="form-control my-1"
+              type="text"
+              name="brewers_tips"
+              onChange={(e) => setBrewersTips(e.target.value)}
+              value={brewers_tips}
+            />
+          </label>
+          <div className="col-sm-6">
+            <label className="my-1">
+              Attenuation Level
+              <input
+                className="form-control"
+                type="number"
+                name="attenuation_level"
+                onChange={(e) => setAttenuationLevel(e.target.value)}
+                value={attenuation_level}
+              />
+            </label>
+          </div>
+          <div className="col-sm-6">
+            <label className="my-1">
+              Contributed By
+              <input
+                className="form-control"
+                type="text"
+                name="contributed_by"
+                onChange={(e) => setContributedBy(e.target.value)}
+                value={contributed_by}
+              />
+            </label>
+          </div>
+          <div className="text-center">
+            <button className="btn btn-secondary mt-3" type="submit">
+              Add Beer
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );
