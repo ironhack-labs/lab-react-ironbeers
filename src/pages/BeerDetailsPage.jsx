@@ -6,7 +6,7 @@ function BeerDetailsPage() {
   const params = useParams()
   useEffect(() => {
     
-    fetch(`https://ih-beers-api2.herokuapp.com/beers/${params.id}`)  
+    fetch(`https://ih-beers-api2.herokuapp.com/beers/${params.beerId}`)  
       .then((res) => res.json())
       .then((data) => {
         setBeer(data); 
