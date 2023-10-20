@@ -1,0 +1,8 @@
+.navbarClass {
+    background-color: rgb(127, 127, 234);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
