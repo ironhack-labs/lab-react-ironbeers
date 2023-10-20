@@ -9,6 +9,24 @@ a {
 
 }
 
+.add-btn{
+  background-color: #0BC5EA;
+    color: #fff; 
+    border-radius: 25px;
+
+}
+
+.navbar{
+  background-color: #0BC5EA;
+}
+
+input, textarea {
+  border: 1px solid #ccc;  /* #ccc es un color gris apagado */
+  border-radius: 25px;
+  height: 35px;
+  padding: 5px 15px;
+}
+
 /* form {
   max-width: 400px;
   margin: 20px auto;

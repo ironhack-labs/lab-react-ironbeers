@@ -4,7 +4,7 @@ import Image from "../assets/home-icon.png"
 function Navbar() {
 
   return(
-    <nav className="py-4 my-1 bg-primary d-flex justify-content-center ">
+    <nav className="py-4 my-1 navbar d-flex justify-content-center ">
       <Link to={"/"}>
         <img src={Image} alt="" />
       </Link>
