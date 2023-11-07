@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+#navbar{
+    background-color: rgb(182, 103, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+    color: white;
+    text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#add-new{
+    color: white;
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#new-beer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#add-beer{
+    display: flex;
+    justify-content: left;
+    position: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+#beer-row{
+    gap:2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+#beer-row input{
+    border-radius: 20px;
+    height: 30px;
+    width: 100%;
+    text-indent: 20px;
+}
+
+#beer-button{
+    background-color: rgb(182, 103, 29);
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    width: 40%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 5px grey;
+    margin-top: 20px;
+}
+
+#beer-img{
+    width: 150px;
+    margin-top: 20px;
+}
+
+#details-img{
+    width: 150px;
+    margin-top: 10px;
 }
