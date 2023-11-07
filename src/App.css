@@ -4,4 +4,69 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    gap: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+#add-new{
+    color: white;
+    text-decoration: none;
+}
+
+#new-beer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#add-beer{
+    display: flex;
+    justify-content: left;
+    position: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#beer-row{
+    gap:2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 15px;
+}
+
+
+#beer-row input{
+    border-radius: 20px;
+    height: 30px;
+    width: 100%;
+    text-indent: 20px;
+}
+
+#beer-button{
+    background-color: rgb(182, 103, 29);
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    width: 40%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 5px grey;
+    margin-top: 20px;
+}
+
+#beer-img{
+    width: 150px;
+    margin-top: 20px;
+}
+
+#details-img{
+    width: 150px;
+    margin-top: 10px;
 }

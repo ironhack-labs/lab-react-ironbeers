@@ -3,6 +3,7 @@ const API_URL="https://ih-beers-api2.herokuapp.com/beers";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "../App.css";
+import { Card, Divider} from "antd";
 
 function BeerDetailsPage() {
     const {beerId} = useParams();
@@ -16,16 +17,16 @@ function BeerDetailsPage() {
     }, [])
     
     return(
-        <div>
-            <div>
-                <p>{details.name}</p>
-                <p>{details.tagline}</p>
-                <p>{details.contributed_by}</p>
-                <p>{details.first_brewed}</p>
-                <p>{details.attenuation_level}</p>
-            </div>
-            <img src={details.image_url}/>
-        </div>
+        <Card>
+            <Card>
+                <Divider>{details.name}</Divider>
+                <Divider>{details.tagline}</Divider>
+                <Divider>{details.contributed_by}</Divider>
+                <Divider>{details.first_brewed}</Divider>
+                <Divider>{details.attenuation_level}</Divider>
+            </Card>
+            <Divider><img id="details-img"src={details.image_url}/></Divider>
+        </Card>
     )
 }
 
