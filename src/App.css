@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+
+
+nav {
+    background: #39C3F8;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-beers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+   
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.img-container {
+    
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
 }
+.description-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
 
-.App-link {
-  color: #61dafb;
-}
+    
+} 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-form {
+    display: flex;
+    flex-direction: column;
 }
