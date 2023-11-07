@@ -1,0 +1,38 @@
+.navbar{
+    display: flex;
+    top: 0;
+    left: 0;
+    width: calc(100%);
+    padding: 10px 0px 10px 20px;
+    margin-bottom: 40px;
+    background-color: #FF8D15;
+}
+.beer-map{
+    display: flex;
+}
+.beer-map img{
+    height: 400px;
+}
+.random{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(40%);
+}
+.random img{
+    height: 300px;
+}
+.random-name{
+    display: flex;
+    justify-content: space-around;
+}
+.form{
+   display: flex;
+   flex-direction: column;
+   align-items:flex-end;
+}
+.back-button{
+    display: flex;
+    justify-content: right;
+    padding-right: 30px;
+}
