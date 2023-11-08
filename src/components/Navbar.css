@@ -1,0 +1,8 @@
+nav {
+  height: 80px;
+  background: #39C3F8;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
