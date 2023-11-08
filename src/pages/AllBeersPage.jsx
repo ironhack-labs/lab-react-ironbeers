@@ -10,7 +10,7 @@ function AllBeersPage() {
     const [beers, setBeers] = useState("");
     const [loading, setLoading] = useState(true);
 
-   useEffect(()=>{ // fazer de outra forma, talvez n seja preciso tanto
+   useEffect(()=>{ 
     axios.get(BeersAPI).then((response)=>{
         const beer = response.data;
         setBeers(beer);
@@ -19,7 +19,8 @@ function AllBeersPage() {
         console.log(beer)
     })
 }, []);
-// verificar se estas a usar o LINK que imprtaste
+
+
     return(
         <div className="list-beers">
             <h1>All Beers</h1>
