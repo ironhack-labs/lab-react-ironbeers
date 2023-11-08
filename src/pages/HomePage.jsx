@@ -2,11 +2,25 @@ import { Link } from "react-router-dom";
 function HomePage() {
     return(
         <div>
-           <ul>
-            <li><Link to="/beers">All Beers</Link></li>
-            <li><Link to="/random-beer">Random Beer</Link></li>
-            <li><Link to="/new-beer">New Beer</Link></li>
-            </ul>
+                <Link to="/beers">
+                    <div>
+                        <img src="src/assets/beers.png"/> 
+                        <h2>All Beers</h2>                   
+                    </div>
+                </Link>
+            <Link to="/random-beer">
+                <div>
+                    <img src="src/assets/random-beer.png"/>
+                    <h2>Random Beer</h2>
+                </div>
+            </Link>
+            <Link to="/new-beer">
+                <div>
+                    <img src="src/assets/new-beer.png"/>
+                    <h2>New Beer</h2>
+                </div>
+            </Link>
+            
         </div>
     )
 }
