@@ -1,13 +1,151 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  text-align: center;
+  font-family: monospace;
+  color: #1d5a37;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none !important;
+  color: #1d5a37;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.homepage > div {
+  display: flex;
+    flex-direction: column;
+}
+
+.homepage img {
+  width: 100%;
+}
+
+.text-homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-homepage:hover {
+  background-color: #1d5a37;
+  color: white;
+}
+
+.navbar {
+  background-color: #1d5a37;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.beer-all-beers-page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid #1d5a37;
+  color: #1d5a37;
+}
+
+.beer-all-beers-page a {
+  width: 70%;
+  color: inherit;
+}
+
+.beer-all-beers-page:hover {
+  background-color: #1d5a37a1;
+  color: white;
+}
+
+.beer-all-beers-page img {
+  height: 250px;
+}
+
+.beer-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.beer-info {
+  width: 500px;
+  padding-left: 40px;
+}
+
+.beer-details img {
+  height: 300px;
+  padding: 30px;
+}
+
+.text-beer-details {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+.add-new-beer {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 30%;
+  font-size: xx-large;
+}
+
+label {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input {
+  width: 400px;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.description .custom-height-input {
+  height: 150px;
+}
+
+button {
+  background-color: #1d5a37;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2f7d51;
 }
