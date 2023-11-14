@@ -17,6 +17,16 @@ h1 {
   font-size: 4rem;
 }
 
+#home-icon {
+  width: 2rem;
+}
+
+.navbar {
+  background-color: #00c5ff;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
 .search-bar {
   margin-bottom: 50px;
 }
