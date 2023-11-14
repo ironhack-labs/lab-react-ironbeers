@@ -19,3 +19,28 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+.navbar {
+  background-color: lightskyblue;
+  padding: 1rem;
+}
+
+.AllBeersPage {
+  display: grid;
+  padding: 1rem;
+}
+
+.AllBeersPage img {
+  width: 10%;
+  height: auto;
+}
+
+.divBeerPage {
+  margin: 10px;
+  padding: 2rem;
+}
+
+.BeerDetails img {
+  width: 10%;
+  height: auto;
+}
