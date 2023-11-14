@@ -1,6 +1,7 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -12,10 +13,30 @@ form {
   margin: 20px auto;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
 .search-bar {
   margin-bottom: 50px;
 }
 
 .btn-round {
   margin: 20px;
+}
+
+.card {
+  font-family: Helvetica;
+  width: 60vw;
+  display: block;
+  margin: 0 auto;
+}
+
+.card img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin-bottom: 1rem;
 }
