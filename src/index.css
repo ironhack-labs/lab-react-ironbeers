@@ -8,11 +8,43 @@ a {
   color: black;
 }
 
-form {
+.formContainer {
   max-width: 400px;
   margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
+.labelForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.labelForm label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.inputField {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.submitBtn {
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border: none; 
+  background-color: #515f7d; /* Change button background color */
+  color: white; 
+  cursor: pointer; 
+}
 .search-bar {
   margin-bottom: 50px;
 }

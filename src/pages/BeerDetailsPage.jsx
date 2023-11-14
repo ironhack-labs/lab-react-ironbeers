@@ -31,10 +31,10 @@ function BeerDetailsPage() {
                     <div className="beerDetails">
                     <h1>{beer.name}</h1>
                     <p>{beer.tagline}</p>
-                    <p>First Brewed: {beer.first_brewed}</p>
-                    <p>Attenuation Level: {beer.attenuation_level}</p>
-                    <p>Description: {beer.description}</p>
-                    <p>Contributed By: {beer.contributed_by}</p>
+                    <p>{beer.first_brewed}</p>
+                    <p>{beer.attenuation_level}</p>
+                    <p>{beer.description}</p>
+                    <p>{beer.contributed_by}</p>
                 </div>
             </div>
         </div>
