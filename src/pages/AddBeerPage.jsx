@@ -126,7 +126,6 @@ function AddBeerPage() {
           </label>
 
           <button className="newBeerButton" type="submit">Add Beer</button>
-
           
         </form>
       </div>
