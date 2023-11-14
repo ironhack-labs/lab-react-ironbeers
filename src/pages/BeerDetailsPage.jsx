@@ -2,22 +2,23 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+const API_URL = "https://ih-beers-api2.herokuapp.com"
+
 function BeerDetailsPage() {
 
     const [beerDetails, setBeerDetails] = useState(null)
 
     const beerId = useParams();
 
-    const API_URL = "https://ih-beers-api2.herokuapp.com"
-
     useEffect(() => {
         axios.get(API_URL + "/beers/" + beerId.beerId)
             .then((response) => {
+                console.log(response.data)
                 setBeerDetails(response.data)
             })
-            .catch((e) => {
+            .catch((error) => {
                 console.log("An error occurred:")
-                console.log(e)
+                console.log(error)
             })
     }, [])
 

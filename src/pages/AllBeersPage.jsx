@@ -2,10 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+const API_URL = "https://ih-beers-api2.herokuapp.com"
 
 function AllBeersPage() {
-
-    const API_URL = "https://ih-beers-api2.herokuapp.com"
 
     const [beers, setBeers] = useState(null)
 
@@ -14,9 +13,9 @@ function AllBeersPage() {
             .then((response) => {
                 setBeers(response.data)
             })
-            .catch((e) => {
+            .catch((error) => {
                 console.log("An error occurred:")
-                console.log(e)
+                console.log(error)
             })
     }, [])
 

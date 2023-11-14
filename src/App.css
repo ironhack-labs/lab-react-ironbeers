@@ -82,3 +82,22 @@ body {
     align-items: flex-end;
     height: 130px;
 }
+
+.create-new-beer {
+  background-color: cadetblue;
+  border: 1px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.create-new-beer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
