@@ -42,7 +42,18 @@ form {
 }
 
 .beers-list img{
-  height: 10rem;
-  width: auto;
+  height: auto;
+  width: 10rem ;
 
+}
+
+.beer-details {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.beer-details img{
+  height: auto;
+  width: 10rem ;
 }
