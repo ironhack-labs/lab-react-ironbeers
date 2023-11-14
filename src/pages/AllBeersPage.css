@@ -1,0 +1,39 @@
+.AllPage {
+    text-align: center;
+}
+
+.AllBeersPage {
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .AllBeersPage ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .AllBeersPage li {
+    border-bottom: 1px solid #72bfd3; 
+    padding: 15px;
+    display: grid;
+    align-items: center;
+  }
+  
+  .AllBeersPage img {
+    width: 50px; 
+    height: auto;
+    margin-right: 15px;
+  }
+  
+
+  .AllBeersPage h2 {
+    color: #72bfd3;
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .AllBeersPage p {
+    margin: 5px 0;
+    color: #777;
+  }
