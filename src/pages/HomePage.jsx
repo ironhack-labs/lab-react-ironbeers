@@ -9,22 +9,22 @@ function HomePage() {
 
     return (
         <>
-            <div className="beers-div">
-                <img src={beers} alt="" srcset="" />
+            <div className="homepage-beers-div">
+                <img src={beers} alt="Beers image" />
                 <Link to="/beers">
                     <h1>All Beers</h1>
                 </Link>
                 <p>Some random text</p>
             </div>
-            <div className="beers-div">
-                <img src={randomBeer} alt="" srcset="" />
+            <div className="homepage-beers-div">
+                <img src={randomBeer} alt="Random beer image" />
                 <Link to="/random-beer">
                     <h1>Random Beer</h1>
                 </Link>
                 <p>Some random text</p>
             </div>
-            <div className="beers-div">
-                <img src={newBeer} alt="" srcset="" />
+            <div className="homepage-beers-div">
+                <img src={newBeer} alt="New beer image" />
                 <Link to="/new-beer">
                     <h1>New Beer</h1>
                 </Link>
