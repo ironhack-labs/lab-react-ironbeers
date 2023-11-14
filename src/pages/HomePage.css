@@ -1,0 +1,18 @@
+.homepage-space {
+    text-align: center;
+  padding: 20px;
+}
+
+.beer-image {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  h2{
+    margin-top: 5px;
+    margin-bottom: -10px;
+  }
+
+  .description-text {
+    color: #747474;
+  }
