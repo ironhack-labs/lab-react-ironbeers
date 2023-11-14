@@ -57,3 +57,10 @@ form {
   height: auto;
   width: 10rem ;
 }
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto, 0.5rem;
+}
