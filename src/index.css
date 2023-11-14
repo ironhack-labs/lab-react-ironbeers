@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Helvetica;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -36,7 +40,6 @@ h1 {
 }
 
 .card {
-  font-family: Helvetica;
   width: 60vw;
   display: block;
   margin: 0 auto;
@@ -49,4 +52,23 @@ h1 {
 
 .card p {
   margin-bottom: 1rem;
+}
+
+.beer-card {
+  width: 60vw;
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: flex;
+  gap: 2rem;
+}
+
+.beer-logo {
+  height: 10rem;
+}
+
+.beer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
