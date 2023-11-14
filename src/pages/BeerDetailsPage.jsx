@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const beersAPI_URL = "https://ih-beers-api2.herokuapp.com/beers/";
 
@@ -40,6 +40,10 @@ console.log(beerDetails)
             <p>{beerDetails.description}</p>
             <p>Created by: {beerDetails.contributed_by}</p>
           </div>
+
+          <Link to="/beers">
+            <button className="goBackButton">Back to Beers</button>
+          </Link>
         </>
       )}
     </div>
