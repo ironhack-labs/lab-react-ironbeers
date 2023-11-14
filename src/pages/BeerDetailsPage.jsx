@@ -20,18 +20,42 @@ function BeerDetailsPage(props) {
             .catch((error) => console.log(error))
     }, [beerId])
 
+    const imgStyle = {
+        maxHeight: '250px',
+        width: 'auto',
+    }
+
+
     return (
-        <div>
+        <div className="container pt-5">
             {fetching ? <p>Loading ...</p> :
-                <ul>
-                    <li><img src={beerDetails.image_url} alt="Beer Image" /></li>
-                    <li>{beerDetails.name}</li>
-                    <li>{beerDetails.tagline}</li>
-                    <li>{beerDetails.first_brewed}</li>
-                    <li>{beerDetails.attenuation_level}</li>
-                    <li>{beerDetails.description}</li>
-                    <li>{beerDetails.contributed_by}</li>
-                </ul>
+                <>
+                    <div className="row justify-content-center">
+                        <img src={beerDetails.image_url} alt="Beer Image" style={imgStyle} />
+                    </div>
+                    <div className="row pt-3">
+                        <div className="col-9">
+                            <h2>{beerDetails.name}</h2>
+                        </div>
+                        <div className="col-3 text-end">
+                            <p className="text-secondary fs-4">{beerDetails.attenuation_level}</p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-9">
+                            <p className="text-secondary fs-4">{beerDetails.tagline}</p>
+                        </div>
+                        <div className="col-3 text-end">
+                            <p><strong>{beerDetails.first_brewed}</strong></p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <p>{beerDetails.description}</p>
+                    </div>
+                    <div className="row">
+                        <p className="text-secondary fw-bold"> {beerDetails.contributed_by}</p>
+                    </div>
+                </>
             }
         </div>
 

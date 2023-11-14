@@ -18,7 +18,16 @@ function AddBeerPage() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const requestBody = { name, tagline, description, firstBrewed, brewersTips, attenuationLevel, contributedBy }
+        const requestBody = {
+            name: name,
+            tagline: tagline,
+            description: description,
+            first_brewed: firstBrewed,
+            brewers_tips: brewersTips,
+            attenuation_level: attenuationLevel,
+            contributed_by: contributedBy
+        }
+
         axios
             .post(addBeerAPI, requestBody)
             .then((response) => {
@@ -30,28 +39,35 @@ function AddBeerPage() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name</label>
-                <input type="text" name="name" value={name} onChange={(event) => setName(event.target.value)} />
-
-                <label htmlFor="tagline">Tagline</label>
-                <input type="text" name="tagline" value={tagline} onChange={(event) => setTagline(event.target.value)} />
-
-                <label htmlFor="description">Description</label>
-                <input type="text" name="description" value={description} onChange={(event) => setDescription(event.target.value)} />
-
-                <label htmlFor="first_brewed">First Brewed</label>
-                <input type="text" name="first_brewed" value={firstBrewed} onChange={(event) => setFirstBrewed(event.target.value)} />
-
-                <label htmlFor="brewers_tips">Brewers Tips</label>
-                <input type="text" name="brewers_tips" value={brewersTips} onChange={(event) => setBrewersTips(event.target.value)} />
-
-                <label htmlFor="attenuation_level">Attenuation Level</label>
-                <input type="number" name="attenuation_level" value={attenuationLevel} onChange={(event) => setAttenuationLevel(event.target.value)} />
-
-                <label htmlFor="contributed_by">Contributed By</label>
-                <input type="text" name="contributed_by" value={contributedBy} onChange={(event) => setContributedBy(event.target.value)} />
-
-                <button type="submit">Add Beer</button>
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Name</label>
+                    <input type="text" name="name" className="form-control" value={name} onChange={(event) => setName(event.target.value)} required />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="tagline" className="form-label">Tagline</label>
+                    <input type="text" name="tagline" className="form-control" value={tagline} onChange={(event) => setTagline(event.target.value)} required />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="description" className="form-label">Description</label>
+                    <textarea type="text" name="description" className="form-control" value={description} onChange={(event) => setDescription(event.target.value)} required />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="first_brewed" className="form-label">First Brewed</label>
+                    <input type="text" name="first_brewed" className="form-control" value={firstBrewed} onChange={(event) => setFirstBrewed(event.target.value)} required />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="brewers_tips" className="form-label">Brewers Tips</label>
+                    <input type="text" name="brewers_tips" className="form-control" value={brewersTips} onChange={(event) => setBrewersTips(event.target.value)} required />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="attenuation_level" className="form-label">Attenuation Level</label>
+                    <input type="number" name="attenuation_level" className="form-control" value={attenuationLevel} onChange={(event) => setAttenuationLevel(event.target.value)} required />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="contributed_by" className="form-label">Contributed By</label>
+                    <input type="text" name="contributed_by" className="form-control" value={contributedBy} onChange={(event) => setContributedBy(event.target.value)} required />
+                </div>
+                <button type="submit" className="btn btn-primary">Add Beer</button>
             </form>
         </div>
     )
