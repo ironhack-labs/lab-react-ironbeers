@@ -24,20 +24,26 @@ function BeerDetailsPage() {
     getBeer();
   }, [])
 
+
+console.log(beerDetails)
+
   return (
     <div className="BeerDetailsPage">
-        {beerDetails && (
-            <>
-            <img src={beerDetails.image_url} />
-            </>
-        )
-
-        }
-
-
+      {beerDetails && (
+        <>
+          <img src={beerDetails.image_url} />
+          <div className="OneBeer">
+            <h1>{beerDetails.name}</h1>
+            <h2>{beerDetails.tagline}</h2>
+            <p>First brewed: {beerDetails.first_brewed}</p>
+            <p>Attenuation level: {beerDetails.attenuation_level}</p>
+            <p>{beerDetails.description}</p>
+            <p>Created by: {beerDetails.contributed_by}</p>
+          </div>
+        </>
+      )}
     </div>
-  )
-  
+  );
 }
 
 export default BeerDetailsPage;
