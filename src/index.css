@@ -31,3 +31,18 @@ form {
   text-align: center;
 }
 
+.beers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.beers-list li{
+  display: flex;
+}
+
+.beers-list img{
+  height: 10rem;
+  width: auto;
+
+}
