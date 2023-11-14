@@ -13,7 +13,6 @@ function BeerDetailsPage() {
     useEffect(() => {
         axios.get(API_URL + "/beers/" + beerId.beerId)
             .then((response) => {
-                console.log(response.data)
                 setBeerDetails(response.data)
             })
             .catch((error) => {

@@ -44,7 +44,7 @@ function AddBeerPage() {
         <div className="create-new-beer">
             <form onSubmit={handleSubmit}>
                 <label>
-                    Name
+                    <p>Name</p>
                     <input
                         type="text"
                         name="name"
@@ -54,7 +54,7 @@ function AddBeerPage() {
                     />
                 </label>
                 <label>
-                    Tagline
+                    <p>Tagline</p>
                     <input
                         type="text"
                         name="tagline"
@@ -64,7 +64,7 @@ function AddBeerPage() {
                     />
                 </label>
                 <label>
-                    Description
+                    <p>Description</p>
                     <textarea
                         type="text"
                         name="description"
@@ -74,7 +74,7 @@ function AddBeerPage() {
                     />
                 </label>
                 <label>
-                    First Brewed
+                    <p>First Brewed</p>
                     <input
                         type="text"
                         name="first_brewed"
@@ -84,7 +84,7 @@ function AddBeerPage() {
                     />
                 </label>
                 <label>
-                    Brewer's Tips
+                    <p>Brewer's Tips</p>
                     <input
                         type="text"
                         name="brewers_tips"
@@ -94,7 +94,7 @@ function AddBeerPage() {
                     />
                 </label>
                 <label>
-                    Attenuation Level
+                    <p>Attenuation Level</p>
                     <input
                         type="number"
                         name="attenuation_level"
@@ -106,7 +106,7 @@ function AddBeerPage() {
                     />
                 </label>
                 <label>
-                    Contributed By
+                    <p>Contributed By</p>
                     <input
                         type="text"
                         name="contributed_by"
@@ -115,7 +115,7 @@ function AddBeerPage() {
                         onChange={(e) => { setContributedBy(e.target.value) }}
                     />
                 </label>
-                <button>Create new beer</button>
+                <button className="create-beer">Create new beer</button>
             </form>
         </div>
     )

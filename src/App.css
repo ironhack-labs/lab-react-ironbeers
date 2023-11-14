@@ -10,6 +10,9 @@ body {
     height: 100px;
     width: 600px;
     margin: 50px auto;
+    border: 1px solid grey;
+    box-shadow: 0px 2px 3px grey;
+    border-radius: 4px;
 }
 
 .beers-page-div {
@@ -43,7 +46,6 @@ body {
 }
 
 .beer:hover {
-    
 }
 
 .beer-details-div {
@@ -84,20 +86,63 @@ body {
 }
 
 .create-new-beer {
-  background-color: cadetblue;
-  border: 1px solid grey;
-  box-shadow: 0px 2px 3px grey;
-  width: 400px;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 4px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.create-new-beer p {
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.create-beer,
+.create-new-beer input, textarea {
+    width: 400px;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.create-new-beer textarea {
+    height: 100px
 }
 
 .create-new-beer form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    height: auto;
+    margin: 0 auto;
 }
 
+.create-beer {
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 26px;
+}
+
+.create-beer:hover {
+    background-color: rgb(105, 161, 162);
+    width: 420px;
+    height: 45px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.create-beer:active {
+    background-color: rgb(72, 155, 156);
+    width: 390px;
+    height: 38px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}

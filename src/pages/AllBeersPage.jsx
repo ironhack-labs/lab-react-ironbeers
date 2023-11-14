@@ -26,16 +26,18 @@ function AllBeersPage() {
                     ? <p>Loading list of beers...</p>
                     : (beers.map((beer) => {
                         return (
-                            <Link to={`/beers/${beer._id}`}className="beer" >
-                                <div className="beer-image-div" key={beer._id}>
-                                    <img src={beer.image_url} className="beer-image" />
-                                </div>
-                                <div className="beer-details">
-                                    <h1>{beer.name}</h1>
-                                    <h2>{beer.tagline}</h2>
-                                    <h3>Created by: {beer.name}</h3>
-                                </div>
-                            </Link>
+                            <div key={beer._id}>
+                                <Link to={`/beers/${beer._id}`} className="beer" >
+                                    <div className="beer-image-div" >
+                                        <img src={beer.image_url} className="beer-image" />
+                                    </div>
+                                    <div className="beer-details">
+                                        <h1>{beer.name}</h1>
+                                        <h2>{beer.tagline}</h2>
+                                        <h3>Created by: {beer.name}</h3>
+                                    </div>
+                                </Link>
+                            </div>
                         )
                     }))}
             </div>
