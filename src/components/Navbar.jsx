@@ -5,7 +5,6 @@ function Navbar() {
       <div className="Navbar">
         <NavLink to="/">
             <img src="src/assets/home-icon.png"/>
-
         </NavLink>
       </div>
     );
