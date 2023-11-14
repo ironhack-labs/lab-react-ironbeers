@@ -16,27 +16,29 @@ function AllBeersPage() {
             .catch((error) => {
                 console.log('Error' + error);
             })
-    })
+    }, [])
 
     return (
-        <div className="all-beers">
-            {fetching ? <p>Loading...</p> : beers.map((beer, i) => {
+        <section className="all-beers">
+            {fetching ? <p>Loading...</p> : beers.map((beer) => {
                 return (
-                    <section key={i} className="beer-all-beers-page">
-                        <NavLink to={'/beers/${beer.id}'} >
-                        <div className="beer-info">
+                    <div key={beer._id} className="beer-all-beers-page">
+                        <NavLink to={`/beers/${beer._id}`} >
+                        <div className="beer-container">
                             <img src={beer.image_url} alt={`${beer.name} bottle`} />
-                            <h1>{beer.name}</h1>
-                            <h2>{beer.tagline}</h2>
-                            <h3>Created by: {beer.contributed_by}</h3>
+                            <div className="beer-info">
+                                <h1>{beer.name}</h1>
+                                <h2>{beer.tagline}</h2>
+                                <h3>Created by: {beer.contributed_by}</h3>
+                            </div>
                         </div>
                         </NavLink>
 
-                    </section>
+                    </div>
                 )
             })}
 
-        </div>
+        </section>
     )
 }
 
