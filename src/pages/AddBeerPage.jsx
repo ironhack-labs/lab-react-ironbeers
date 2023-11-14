@@ -1,16 +1,20 @@
 import axios from "axios";
 import {  useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
-function AddBeerPage(props) {
+
+function AddBeerPage() {
 
     const [name, setName] = useState("")
     const [tagline, setTagline] = useState("")
     const [description, setDescription] = useState("")
-    const [firstBrewed, setFirstBrewed] = useState("")
-    const [brewersTips, setBrewersTips] = useState("")
-    const [attenuation, setAttenuation] = useState(0)
-    const [contributed, setContributed] = useState("")
+    const [first_brewed, setFirstBrewed] = useState("")
+    const [brewers_tips, setBrewersTips] = useState("")
+    const [attenuation_level, setAttenuation] = useState(0)
+    const [contributed_by, setContributed] = useState("")
+
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,15 +23,15 @@ function AddBeerPage(props) {
             name, 
             tagline, 
             description, 
-            firstBrewed, 
-            brewersTips, 
-            attenuation, 
-            contributed
+            first_brewed, 
+            brewers_tips, 
+            attenuation_level, 
+            contributed_by,
         }
    
-        axios.post(`https://ih-beers-api2.herokuapp.com/beers/new`, requestBody)
+        axios.post("https://ih-beers-api2.herokuapp.com/beers/new", requestBody)
             .then((response) => {
-                props.callbackToUpdateBeers()
+                navigate ("/beers")
             })
             .catch((error) => {
                 console.log(error)

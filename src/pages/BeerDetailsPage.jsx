@@ -36,7 +36,6 @@ function BeerDetailsPage() {
             </>
             )}
         
-        <AddBeerPage beerId={beerId} callbackToUpdateBeers={getBeerDetails}/>
         </div>
     )
 
