@@ -20,17 +20,17 @@ function AddBeerPage() {
         e.preventDefault();
 
         const requestBody = {
-            name, 
-            tagline, 
-            description, 
-            first_brewed, 
-            brewers_tips, 
-            attenuation_level, 
-            contributed_by,
+            name: name, 
+            tagline: tagline, 
+            description: description, 
+            first_brewed: first_brewed, 
+            brewers_tips: brewers_tips, 
+            attenuation_level: attenuation_level, 
+            contributed_by: contributed_by
         }
    
         axios.post("https://ih-beers-api2.herokuapp.com/beers/new", requestBody)
-            .then((response) => {
+            .then(() => {
                 navigate ("/beers")
             })
             .catch((error) => {
@@ -46,37 +46,66 @@ function AddBeerPage() {
                 <label>Name</label>
                 <input 
                     type="text" 
-                    name="name" />
+                    name="name"
+                    value={name}
+                    onChange={(e) => {
+                        setName(e.target.value);
+                      }}
+                     />
                 <br />
                 <label>Tagline</label>
                 <input 
                     type="text" 
-                    name="tagline" />
+                    name="tagline"
+                    value={tagline}
+                    onChange={(e) => {
+                        setTagline(e.target.value);
+                      }} />
                 <br />
                 <label>Description</label>
                 <input 
                     type="text" 
-                    name="Description" />
+                    name="description"
+                    value={description}
+                    onChange={(e) => {
+                        setDescription(e.target.value);
+                      }} />
                 <br />
                 <label>First Brewed</label>
                 <input 
                     type="text" 
-                    name="first_brewed" />
+                    name="first_brewed" 
+                    value={first_brewed}
+                    onChange={(e) => {
+                        setFirstBrewed(e.target.value);
+                      }}/>
                 <br />
                 <label>Brewer's Tips</label>
                 <input 
                     type="text" 
-                    name="brewers_tips" />
+                    name="brewers_tips"
+                    value={brewers_tips}
+                    onChange={(e) => {
+                        setBrewersTips(e.target.value);
+                      }} />
                 <br />
                 <label>Attenuation Level</label>
                 <input 
                     type="number" 
-                    name="brewers_tips" />
+                    name="attenuation_level" 
+                    value={attenuation_level}
+                    onChange={(e) => {
+                        setAttenuation(e.target.value);
+                      }}/>
                 <br />
                 <label>Contributed By</label>
                 <input 
                     type="text" 
-                    name="contributed_by" />
+                    name="contributed_by"
+                    value={contributed_by}
+                    onChange={(e) => {
+                        setContributed(e.target.value);
+                      }} />
                 <br />
                 <button type="submit">Add Beer</button>
             </form>
