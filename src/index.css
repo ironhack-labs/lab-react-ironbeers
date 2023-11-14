@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 a {
@@ -22,4 +23,8 @@ form {
 
 h1 {
   color: black;
+}
+
+.Navbar{
+  background-color: rgb(91, 179, 237 );
 }
