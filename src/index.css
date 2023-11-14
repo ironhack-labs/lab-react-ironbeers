@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #FAE96F;
 }
 
 a {
@@ -18,4 +19,53 @@ form {
 
 .btn-round {
   margin: 20px;
+}
+
+img {
+  height : 250px;
+}
+
+.Navbar {
+  background-color: #C96E12;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Navbar a {
+  font-size: 24px;
+  color : white;
+  font-weight: bolder;
+}
+
+.HomePage-nav {
+  background-color: #DF8D03;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.HomePage-nav a {
+  font-size: 18px;
+  color : white;
+  font-weight: bolder;
+}
+
+
+.AllBeersPage-beer{
+  border : 5px solid #EC9D00;
+  margin : 50px
+}
+
+.BeerDetailsPage-beer{
+  border : 10px solid #EC9D00;
+  margin : 50px
+}
+
+.RandomBeerPage-beer{
+  border : 10px solid #EC9D00;
+  margin : 50px
+}
+
+label {
+  display: block;
+  margin : 10px;
 }
