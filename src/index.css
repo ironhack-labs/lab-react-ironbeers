@@ -28,3 +28,21 @@ h1 {
 .Navbar{
   background-color: rgb(91, 179, 237 );
 }
+
+.BeerList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 100px;
+}
+
+.BeerDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 100px;
+  font-size: xx-large;
+  width: 700px;
+}
+
