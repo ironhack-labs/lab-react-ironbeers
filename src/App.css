@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100px;
-    width: 600px;
+    width: 705px;
     margin: 50px auto;
     border: 1px solid grey;
     box-shadow: 0px 2px 3px grey;
@@ -20,13 +20,13 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 600px;
+    width: 705px;
     margin: 0 auto;
 }
 
 .beer {
     display: flex;
-    width: 600px;
+    width: 705px;
     border-bottom: 1px solid black;
 }
 
@@ -53,7 +53,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 600px;
+    width: 705px;
     height: 800px;
     margin: 0 auto;
 }
@@ -68,7 +68,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width: 600px;
+    width: 705px;
 }
 
 .beer-details-left {
@@ -86,7 +86,7 @@ body {
 }
 
 .create-new-beer {
-    width: 600px;
+    width: 705px;
     margin: 0 auto;
 }
 
@@ -100,7 +100,7 @@ body {
 
 .create-beer,
 .create-new-beer input, textarea {
-    width: 400px;
+    width: 500px;
     height: 40px;
     border: 1px solid grey;
     border-radius: 20px;
