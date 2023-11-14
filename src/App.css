@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.navbar {
+    background-color: skyblue;
+    padding: 10px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-image {
+    margin-left: 48%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.homepage-image {
+    width: 100vw;
+    height: 50vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.homepage-headline {
+    text-align: center;
+    color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.homepage-description {
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-beer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px 50px;
+    border-style: outset;
 }
+
+.beer-image {
+    height: 200px;
+}
+
+.list-beer-text {
+    width: 400px;
+}
+
+.beer-text {
+    color: black;
+}
+
+.search-beer-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-of-beers {
+    text-align: center;
+}
+
+.beer-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.beer-details-image {
+    padding: 100px;
+}
+
+.image-beer {
+    width: 140px;
+}
+
+.beer-details-text {
+    padding: 100px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+
