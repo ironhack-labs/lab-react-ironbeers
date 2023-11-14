@@ -1,13 +1,71 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #FAE96F;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none !important;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.search-bar {
+  margin-bottom: 50px;
+}
+
+.btn-round {
+  margin: 20px;
+}
+
+img {
+  height : 250px;
+}
+
+.Navbar {
+  background-color: #C96E12;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Navbar a {
+  font-size: 24px;
+  color : white;
+  font-weight: bolder;
+}
+
+.HomePage-nav {
+  background-color: #DF8D03;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.HomePage-nav a {
+  font-size: 18px;
+  color : white;
+  font-weight: bolder;
+}
+
+
+.AllBeersPage-beer{
+  border : 5px solid #EC9D00;
+  margin : 50px
+}
+
+.BeerDetailsPage-beer{
+  border : 10px solid #EC9D00;
+  margin : 50px
+}
+
+.RandomBeerPage-beer{
+  border : 10px solid #EC9D00;
+  margin : 50px
+}
+
+label {
+  display: block;
+  margin : 10px;
 }
