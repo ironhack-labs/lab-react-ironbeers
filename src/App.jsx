@@ -11,8 +11,7 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="App">
-      <h1>IronBeers</h1>
-
+    
       <Navbar> </Navbar>
 
       <Routes>
