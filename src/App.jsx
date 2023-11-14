@@ -1,9 +1,25 @@
 import "./App.css";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import BeerDetailsPage from "./pages/BeerDetailsPage";
+import AllBeersPage from "./pages/AllBeersPage";
+import RandomBeerPage from "./pages/RandomBeerPage";
+import AddBeerPage from "./pages/AddBeerPage";
 
 function App() {
   return (
     <div className="App">
       <h1>LAB | React IronBeers</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/beers" element={<AllBeersPage />} />
+        <Route path="/random-beer" element={<RandomBeerPage />} />
+        <Route path="/new-beer" element={<AddBeerPage />} />
+        <Route path="/beers/:beerId" element={<BeerDetailsPage />} />
+      </Routes>
     </div>
   );
 }
