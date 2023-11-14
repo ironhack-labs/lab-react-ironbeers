@@ -39,9 +39,6 @@ function AllBeersPage() {
                     </div>
                 );
             })}
-
-
-
         </div>
     )
 }
