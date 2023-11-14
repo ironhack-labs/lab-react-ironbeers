@@ -88,3 +88,13 @@ p {
   width: 500px;
   padding-left: 40px;
 }
+
+.beer-details img {
+  height: 300px;
+  padding: 30px;
+}
+
+.text-beer-details {
+  margin-right: 200px;
+  margin-left: 200px;
+}
