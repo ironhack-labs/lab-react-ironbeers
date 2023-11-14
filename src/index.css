@@ -98,3 +98,54 @@ p {
   margin-right: 200px;
   margin-left: 200px;
 }
+
+.add-new-beer {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 30%;
+  font-size: xx-large;
+}
+
+label {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input {
+  width: 400px;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.description .custom-height-input {
+  height: 150px;
+}
+
+button {
+  background-color: #1d5a37;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2f7d51;
+}

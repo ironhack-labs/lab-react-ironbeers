@@ -23,7 +23,7 @@ function HomePage() {
                 <img src="src/assets/new-beer.png" alt="IPA Voodoo Ranger beer" />
                 <NavLink to='/new-beer' className="text-homepage">
                     <h1>New Beer</h1>
-                    <h2>CLick here to find out the last releases and be the coolest friend!</h2>
+                    <h2>Be creative and release a new beer!</h2>
                 </NavLink>
             </div>
         </div>

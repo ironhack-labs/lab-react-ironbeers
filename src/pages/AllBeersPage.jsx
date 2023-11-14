@@ -1,11 +1,14 @@
 import axios from "axios";
+
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function AllBeersPage() {
 
     const [beers, setBeers] = useState([]);
-    const [fetching, setFetching] = useState(true)
+    const [fetching, setFetching] = useState(true);
+
+    const [query, setQuery] = useState('');
 
     useEffect(() => {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
@@ -15,11 +18,26 @@ function AllBeersPage() {
             })
             .catch((error) => {
                 console.log('Error' + error);
-            })
+            })       
     }, [])
+
+    const handleInputChange = (e) => {
+        setQuery(e.target.value);
+      };
+
+    const filteredBeers = beers.filter((beer) =>
+      beer.name.toLowerCase().includes(query.toLowerCase())
+    );
 
     return (
         <section className="all-beers">
+            <input
+                type="text"
+                placeholder="Search for beers is under maintenance. It'll work soon ;)"
+                value={query}
+                onChange={handleInputChange}
+            />
+
             {fetching ? <p>Loading...</p> : beers.map((beer) => {
                 return (
                     <div key={beer._id} className="beer-all-beers-page">
