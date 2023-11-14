@@ -34,7 +34,7 @@ function AllBeersPage() {
             ?  <p>Loading</p>
            :  beersList.map((beer) => {
               return (
-                <Link key={beer._id} to={`${API_URL}/beers/${beer._id}`}>
+                <Link key={beer._id} to={`/beers/${beer._id}`}>
                   <li  className="beer-block">
                     <img src={beer.image_url} />
                     <h3>{beer.name}</h3>
