@@ -5,11 +5,13 @@ import { NavLink } from "react-router-dom";
 function AllBeersPage() {
 
     const [beers, setBeers] = useState([]);
+    const [fetching, setFetching] = useState(true)
 
     useEffect(() => {
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
             .then((response) => {
                 setBeers(response.data);
+                setFetching(false);
             })
             .catch((error) => {
                 console.log('Error' + error);
@@ -18,7 +20,7 @@ function AllBeersPage() {
 
     return (
         <div className="all-beers">
-            {beers.map((beer, i) => {
+            {fetching ? <p>Loading...</p> : beers.map((beer, i) => {
                 return (
                     <section key={i} className="beer-all-beers-page">
                         <NavLink to={'/beers/${beer.id}'} >
