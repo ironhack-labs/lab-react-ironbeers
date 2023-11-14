@@ -12,8 +12,6 @@ function App() {
     <>
       <div className="App">
 
-        <h1>LAB | React IronBeers | Iteration 1 solved</h1>
-
         <Routes>
           <Route path='/' element={ <HomePage /> } />
           <Route path="/beers" element={ <AllBeersPage /> } />
