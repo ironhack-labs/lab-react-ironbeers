@@ -14,21 +14,21 @@ function HomePage() {
                 <Link to="/beers">
                     <h1>All Beers</h1>
                 </Link>
-                <p>Some random text</p>
+                <p>Welcome, friend. Can I show ya my wares? Got the best beers anywhere!</p>
             </div>
             <div className="homepage-beers-div">
                 <img src={randomBeer} alt="Random beer image" />
                 <Link to="/random-beer">
                     <h1>Random Beer</h1>
                 </Link>
-                <p>Some random text</p>
+                <p>Shoot your shot, you might get lucky!</p>
             </div>
             <div className="homepage-beers-div">
                 <img src={newBeer} alt="New beer image" />
                 <Link to="/new-beer">
                     <h1>New Beer</h1>
                 </Link>
-                <p>Some random text</p>
+                <p>Don't try anything stupid.</p>
             </div>
         </>
     )

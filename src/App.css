@@ -15,6 +15,14 @@ body {
     border-radius: 4px;
 }
 
+.homepage-beers-div {
+    margin-bottom: 40px;
+}
+
+.homepage-beers-div p {
+    font-size: 18px;
+}
+
 .beers-page-div {
     display: flex;
     flex-direction: column;
