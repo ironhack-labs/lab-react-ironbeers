@@ -1,0 +1,80 @@
+.navbar {
+    background-color: skyblue;
+    padding: 10px;
+
+}
+
+.navbar-image {
+    margin-left: 48%;
+}
+
+
+.homepage-image {
+    width: 100vw;
+    height: 50vh;
+}
+
+.homepage-headline {
+    text-align: center;
+    color: black;
+}
+
+.homepage-description {
+    text-align: center;
+}
+
+.list-beer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px 50px;
+    border-style: outset;
+}
+
+.beer-image {
+    height: 200px;
+}
+
+.list-beer-text {
+    width: 400px;
+}
+
+.beer-text {
+    color: black;
+}
+
+.search-beer-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-of-beers {
+    text-align: center;
+}
+
+.beer-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.beer-details-image {
+    padding: 100px;
+}
+
+.image-beer {
+    width: 140px;
+}
+
+.beer-details-text {
+    padding: 100px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+
