@@ -27,10 +27,11 @@ function AddBeerPage() {
             firstBrewed: firstBrewed,
             brewersTips: brewersTips,
             attenuationLevel: attenuationLevel,
-            contributedBt: contributedBy
+            contributed_by: contributedBy
         }
 
-        axios.post(`${API_URL}`, requestBody)
+
+        axios.post(API_URL, requestBody)
             .then((response) => {
                 navigate("/beers")
             })
