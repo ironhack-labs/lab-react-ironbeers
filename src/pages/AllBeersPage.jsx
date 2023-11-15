@@ -2,72 +2,57 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const API_URL = "https://ih-beers-api2.herokuapp.com";
+const API_URL = "https://ih-beers-api2.herokuapp.com/beers";
 
 function AllBeersPage() {
   const [allBeers, setAllBeers] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const[fetching,setFetching] = useState(false);
 
   useEffect(() => {
     getAllBeers();
-  },[searchQuery]);
+  }, []);
 
   const getAllBeers = () => {
     axios
-      .get(`${API_URL}/beers`)
+      .get(`${API_URL}`)
       .then((response) => {
-        console.log("test")
+        console.log("getAllBeers .then")
+        setFetching(true);
         setAllBeers(response.data);
+        setFetching(false);
       })
       .catch((error) => console.log("error to get all beers : ", error));
   };
 
-  
-
-  useEffect(() => {
-    getQueryBeers();
-  }, [searchQuery]);
-
-  const getQueryBeers = () => {
-    axios
-      .get(
-        `https://ih-beers-api2.herokuapp.com/beers/search?q={${searchQuery}}`
-      )
-      .then((response) => {
-        console.log(response.data);
-        
-      })
-      .catch((error) =>
-        console.log("error to get beer according to query : ", error)
-      );
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleChange = (e) => {
     setSearchQuery(e.target.value);
-    getQueryBeers();
-  };
+    axios.get(`${API_URL}/search?q=${e.target.value}`)
+      .then(response => {
+        setFetching(true);
+        setAllBeers(response.data)
+        setFetching(false);
+      })
+      .catch(error => console.log("error to get search query beers : ", error))
+  } 
 
   return (
     <div>
       <h1>All Beers</h1>
-      <label>
-        Search a beer :
-        <input
-          type="text"
-          name="searhQuery"
-          value={searchQuery}
-          onChange={(e) => handleSubmit(e)}
-        />
-      </label>
+      <form>
+        <label> Search a beer :
+        <input type="text" name="searchQuery" value={searchQuery} placeholder="search something..." onChange={handleChange} />
+        </label>
+        
+      </form>
 
-      {allBeers === null ? (
+      {(fetching === true || allBeers === null) ? (
         <h2>Loading...</h2>
       ) : (
         <div>
           {allBeers.map((beer) => {
             return (
-              <div className="AllBeersPage-beer">
+              <div key={beer._id} className="AllBeersPage-beer">
                 <img src={beer.image_url} />
                 <h2>{beer.name}</h2>
                 <h3>{beer.tagline}</h3>
