@@ -8,10 +8,10 @@ function Navbar() {
     return (
         <nav className="Navbar">
           <NavLink to="/">
-            <img src={HomeIcon} />
+          <img className="HomeIcon" src={HomeIcon} alt="HomeIcon"></img>
           </NavLink>
         </nav>
-      );
+      )
     }
 
 export default Navbar;
