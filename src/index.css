@@ -1,13 +1,74 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Helvetica;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+#home-icon {
+  width: 2rem;
+}
+
+.navbar {
+  background-color: #00c5ff;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.search-bar {
+  margin-bottom: 50px;
+}
+
+.btn-round {
+  margin: 20px;
+}
+
+.card {
+  width: 60vw;
+  display: block;
+  margin: 0 auto;
+}
+
+.card img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+.beer-card {
+  width: 60vw;
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: flex;
+  gap: 2rem;
+}
+
+.beer-logo {
+  height: 10rem;
+}
+
+.beer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
