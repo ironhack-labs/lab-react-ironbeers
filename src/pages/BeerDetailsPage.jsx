@@ -20,7 +20,7 @@ useEffect(()=> {
     return (
         
         <div>
-            <img src={beer.image}/>
+            <img src={beer.image_url}/>
             {beer.name}
             {beer.tagline}
             {beer.first_brewed}
