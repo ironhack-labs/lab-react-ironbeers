@@ -1,6 +1,7 @@
 import axios from "axios";
 
 import { useEffect, useState } from "react";
+import Loader from "../components/Loader";
 
 const API_URL = "https://ih-beers-api2.herokuapp.com/beers/random"
 
@@ -20,7 +21,7 @@ function RandomBeersPage(props) {
 
     return (
         <div className="beer-details">
-            {fetching ? <p>Loading ...</p> :
+            {fetching ? <Loader />  :
                 <div>
                     <img src={randomBeer.image_url} alt={`${randomBeer.name} bottle`}  />
                     <div className="text-beer-details">

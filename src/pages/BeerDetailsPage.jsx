@@ -3,6 +3,7 @@ import React from "react";
 
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Loader from "../components/Loader";
 
 const API_URL = "https://ih-beers-api2.herokuapp.com/beers"
 
@@ -26,7 +27,7 @@ function BeerDetailsPage(props) {
 
     return (
         <div className="beer-details">
-            {fetching ? <p>Loading...</p> : (
+            {fetching ? <Loader /> : (
                 <div>
                     <img src={beerDetails.image_url} alt={`${beerDetails.name} bottle`} />
                     <div className="text-beer-details">

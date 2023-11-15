@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import FilterBeers from "../components/FilterBeers";
+import Loader from "../components/Loader";
 
 function AllBeersPage() {
 
@@ -39,7 +40,7 @@ function AllBeersPage() {
 
             <FilterBeers filterBeers={filterBeers} />
 
-            {fetching ? <p>Loading...</p> : beers.map((beer) => {
+            {fetching ? <Loader /> : beers.map((beer) => {
                 return (
                     <div key={beer._id} className="beer-all-beers-page">
                         <NavLink to={`/beers/${beer._id}`} >
