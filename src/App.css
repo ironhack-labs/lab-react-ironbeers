@@ -1,0 +1,12 @@
+.beer-img {
+    width: 100px;
+    height: auto;
+    max-height: 300px;
+}
+
+.random-beer-img {
+    width: auto;
+    height: auto;
+    min-height: 300px;
+    max-height: 350px;
+}
