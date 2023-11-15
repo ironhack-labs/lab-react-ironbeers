@@ -34,7 +34,8 @@ function AllBeersPage() {
               <div className="Beers" key={beer.name}>
                 <Link to={`/allBeers/${beer.name}`}>
                     <h3>{beer.name}</h3>
-                    <div>{beer.image_url}</div>
+                    <img src={beer.image_url} style={{ height: "200px" }}alt={"image of" + beer.name}
+                    />
                     <p>{beer.tagline}</p>
                     <p>{beer.contributed_by}</p>
                 </Link>
