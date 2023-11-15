@@ -1,13 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mandali&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none !important;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.search-bar {
+  margin-bottom: 50px;
+}
+
+.btn-round {
+  margin: 20px;
+}
+
+.Navbar {
+  background: deepskyblue;
+  box-shadow: 0px 1px 2px gray;
+  text-align: center;
+  padding: 1rem;
+}
+
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+.HomePage img {
+  border-bottom: 5px solid deepskyblue;
+  box-shadow: 0px 1px 2px gray;
+}
+
+.HomePage h3 {
+  color: deepskyblue;
+  font-family: "Mandali", sans-serif;
+  font-size: 1.4rem;
+}
+
+.HomePage h3:hover {
+  text-shadow: 0 0 3px lightblue;
+}
+
+.HomePage p {
+  color: deepskyblue;
+  font-family: "Hammersmith One", sans-serif;
+  font-weight: bold;
+}
+
+.BeersList {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+
+.TextList {
+   display: flex; 
+   line-height: 10px;
+}
+
+.TextList h2 {
+  padding-left: 20px;
+  font-family: "Hammersmith One", sans-serif;
+  color: deepskyblue;
+}
+
+.TextList h3 {
+  padding-left: 20px;
+  font-family: "Mandali", sans-serif;
+  color: lightblue;
+}
+
+.TextList p {
+  padding-left: 20px;
+  font-family: "Mandali", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.InputBeer, form {
+  font-family: "Hammersmith One", sans-serif;
+  font-weight: bold;
+  color: deepskyblue;
+  display: flex;
+  flex-direction: column;
 }
