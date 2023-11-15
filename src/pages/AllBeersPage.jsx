@@ -1,18 +1,18 @@
 import axios from "axios";
 import Navbar from "../components/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 
 function AllBeersPage() {
     const [beers, setBeers] = useState([])
-
+useEffect(() => {
     axios.get("https://ih-beers-api2.herokuapp.com/beers")
     .then(response => {
         setBeers(response.data)
     })
     .catch(error => error)
-    
-
+},[])
     return (
     <>
     <Navbar/>

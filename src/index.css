@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 50px;
   padding: 0;
 }
 
@@ -19,3 +19,14 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+.link {
+  padding: 20px;
+  font-size: 30px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: brown;
+  background-color: rgb(247, 182, 182);
+  border: 1px solid rgb(201, 141, 141);
+  border-radius: 5px;
+}
+

@@ -9,10 +9,9 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <h1>LAB | React IronBeers</h1>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route path="/beers" element={<AllBeersPage/>}/>
+        <Route path="/beers" element={<AllBeersPage />}/>
         <Route path="/beers/:beerId" element={<BeerDetailsPage/>}/>
         <Route path="/random-beer"element={<RandomBeerPage/>}/>
         <Route path="/new-beer" element={<AddBeerPage/>}/>

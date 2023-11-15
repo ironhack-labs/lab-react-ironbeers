@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+//import "./index.css"
 
 function HomePage() {
     return (
-        <>
-        <Link to="/beers">All Beers</Link>
-        <Link to="/random-beer">Surprise me</Link>
-        <Link to="/new-beer">Add new beer</Link>
-        </>
+        <div>
+        <Link className="link" to="/beers">All Beers</Link>
+        <Link className="link" to="/random-beer">Surprise me</Link>
+        <Link className="link" to="/new-beer">Add new beer</Link>
+        </div>
     )
 }
 export default HomePage;
