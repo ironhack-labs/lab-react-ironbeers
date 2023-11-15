@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const beersAPI_UR = "https://ih-beers-api2.herokuapp.com/beers/new"
 
-function AddBeerPage() {
+function AddBeerPage() {cc
     
     const [name, setName] = useState("")
     const [tagline, setTagline] = useState("")
