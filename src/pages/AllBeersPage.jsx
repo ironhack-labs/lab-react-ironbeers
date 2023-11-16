@@ -1,11 +1,13 @@
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 function AllBeersPage() {
+    const beerId = useParams()
     const [beers, setBeers] = useState([])
+
 useEffect(() => {
     axios.get("https://ih-beers-api2.herokuapp.com/beers")
     .then(response => {
@@ -13,6 +15,7 @@ useEffect(() => {
     })
     .catch(error => error)
 },[])
+
     return (
     <>
     <Navbar/>
@@ -23,7 +26,7 @@ useEffect(() => {
             <h1>{elm.name}</h1>
             <p>{elm.tagline}</p>
             <p>{elm.contributed_by}</p>
-            <Link to="/beers/:beerId">Details</Link>
+            <Link to={`/beers/${elm._id}`}>Details</Link>
             <hr />
             </div>
             )

@@ -17,7 +17,7 @@ function BeerDetailsPage(props) {
         })
         .catch((error) => error);
     }
-  }, [beerId]);
+  }, []);
 
   return (
     <>
