@@ -2,32 +2,74 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
 
-const API_URL = "https://ih-beers-api2.herokuapp.com/beers/";
+const apiURL = "https://ih-beers-api2.herokuapp.com/beers/";
 
 function BeerDetailsPage() {
+  const [requestedBeer, setRequestedBeer] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const { beerId } = useParams();
-  const [selectedBeer, setSelectedBeer] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get("https://ih-beers-api2.herokuapp.com/beers/")
-      .then((response) => {
-        setSelectedBeer(response.data);
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(apiURL + beerId);
+        const requestedBeerData = response.data;
+        setRequestedBeer(requestedBeerData);
+        setLoading(false);
+      } catch (err) {
+        return (
+          <div>
+            <p>No beers found</p>
+          </div>
+        );
+      }
+    };
+
+    fetchData();
   }, []);
+
   return (
-    <div>
-      <ul>
-        {selectedBeer.map((selectedBeer) => (
-          <li key={selectedBeer.name}>{selectedBeer.title}</li>
-        ))}
-        ;
-      </ul>
+    <div
+      className="d-inline-flex flex-column justify-content-center align-items-center"
+      style={{ maxWidth: "700px" }}
+    >
+      <Header />
+      {loading && (
+        <img
+          src="https://c.tenor.com/tEBoZu1ISJ8AAAAC/spinning-loading.gif"
+          alt="loading"
+        />
+      )}
+
+      {!loading && (
+        <>
+          <img
+            src={requestedBeer.image_url}
+            alt="beer"
+            height="20%"
+            width="20%"
+          />
+          <h3>{requestedBeer.name}</h3>
+          <p>{requestedBeer.tagline}</p>
+          <p>Attenuation level: {requestedBeer.attenuation_level}</p>
+          <p>Description: {requestedBeer.description}</p>
+          <p>Created by: {requestedBeer.contributed_by}</p>
+
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            Back
+          </button>
+        </>
+      )}
     </div>
   );
 }

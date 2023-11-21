@@ -1,46 +1,87 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Header from "../components/Header";
+import Search from "../components/Search";
 
-const API_URL = "https://ih-beers-api2.herokuapp.com/beers";
+const apiURL = "https://ih-beers-api2.herokuapp.com/beers/";
 
 function AllBeersPage() {
-  const [allBeers, setAllBeers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [beers, setBeers] = useState([]);
+  const [query, setQuery] = useState("");
 
-  const getAllBeers = () => {
-    axios
-      .get(API_URL)
-      .then((response) => {
-        setAllBeers(response.data);
-      })
-      .catch((error) => {
-        console.log("Error getting Beers from the API...");
-        console.log(error);
-      });
-  };
   useEffect(() => {
-    getAllBeers();
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(apiURL);
+        setBeers(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
   }, []);
-  console.log(allBeers);
+
+  useEffect(() => {
+    const fetchSearchedBeers = async () => {
+      try {
+        const response = await axios.get(apiURL + `/search?q=${query}`);
+
+        setBeers(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchSearchedBeers();
+  }, [query]);
+
+  const searchHandler = (string) => {
+    setQuery(string);
+  };
+
   return (
     <>
-      <div>
-        <h2>List of Beers</h2>
+      <div
+        className="d-inline-flex flex-column justify-content-center align-items-center"
+        style={{ maxWidth: "700px" }}
+      >
+        <Header />
+        <Search searchHandler={searchHandler} />
 
-        {allBeers.map((beer) => {
-          console.log(beer);
+        {loading && (
+          <img
+            src="https://c.tenor.com/tEBoZu1ISJ8AAAAC/spinning-loading.gif"
+            alt="loading"
+          />
+        )}
+
+        {beers.map((beer, i) => {
           return (
-            <>
-              <div className="Beers" key={beer.name}>
-                <Link to={`/allBeers/${beer.name}`}>
-                    <h3>{beer.name}</h3>
-                    <img src={beer.image_url} style={{ height: "200px" }}alt={"image of" + beer.name}
+            <div key={i}>
+              <Link to={"/beers/" + beer._id}>
+                <div className="card" style={{ width: "18rem" }}>
+                  <div className="card-body">
+                    <img
+                      src={beer.image_url}
+                      style={{ height: "100px" }}
+                      alt={"image of" + beer.name}
                     />
-                    <p>{beer.tagline}</p>
-                    <p>{beer.contributed_by}</p>
-                </Link>
-              </div>
-            </>
+                    <h5 className="card-title">{beer.name}</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">
+                      {beer.tagline}
+                    </h6>
+                    <p className="card-text">
+                      Created by: {beer.contributed_by}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
           );
         })}
       </div>
