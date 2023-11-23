@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+nav {
+    background-color: rgb(106, 106, 200);
+    padding-top: 7x;
+}
+
+.beersList {
+    display: flex;
+    align-items: center;
+}
+
+.beersimg {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.beerDetails {
+    flex: 1;
+}
