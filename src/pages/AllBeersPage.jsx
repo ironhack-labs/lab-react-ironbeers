@@ -14,7 +14,7 @@ function AllBeersPage() {
                 setBeers(response.data)
             })
             .catch(error => {
-                console.error('Error fetching beers', error);
+                console.error('Error', error)
             })
     }, [])
 
