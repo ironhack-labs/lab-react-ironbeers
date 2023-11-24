@@ -1,9 +1,15 @@
 import "./App.css";
+import Navigation from "./components/Navigation";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
     <div className="App">
-      <h1>LAB | React IronBeers</h1>
+
+      <Navigation />
+
+      <AppRoutes />
+      
     </div>
   );
 }
