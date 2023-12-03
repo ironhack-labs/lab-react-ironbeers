@@ -1,8 +1,8 @@
-import Navbar from '../components/Navbar';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
+import './styles.css';
 
 function BeerDetailsPage() {
   const { beerId } = useParams();
@@ -20,18 +20,17 @@ function BeerDetailsPage() {
 
   return (
     <>
-      <Navbar />
       {data && <h3>Sorry, no beer here</h3>}
 
       {!data && (
-        <div>
+        <div className="flex-center">
           <Card key={beer._id} style={{ width: '18rem' }}>
             <Card.Img variant="top" src={beer.image_url} />
+
             <Card.Body>
               <Card.Title>{beer.name}</Card.Title>
               <Card.Text>{beer.tagline}</Card.Text>
               <Card.Text>
-                {' '}
                 <strong>First Brewed:</strong> {beer.first_brewed}
               </Card.Text>
               <Card.Text>

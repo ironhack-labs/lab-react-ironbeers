@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar';
 import { useState, useNavigate } from 'react';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
@@ -38,7 +37,7 @@ function AddBeerPage() {
     };
 
     axios
-      .post({ apiURL }, newBeer)
+      .post(apiURL, newBeer)
       .then(() => {
         setName('');
         setTagline('');
@@ -57,104 +56,7 @@ function AddBeerPage() {
 
   return (
     <>
-      <Navbar />
-
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name</label>
-          <input
-            style={{ marginBottom: '20px', padding: '5px' }}
-            className="form-control"
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={name}
-            onChange={handleName}
-          />
-        </div>
-
-        <div>
-          <label>Tagline</label>
-          <input
-            style={{ marginBottom: '20px', padding: '5px' }}
-            className="form-control"
-            type="text"
-            name="tagline"
-            placeholder="Tagline"
-            value={tagline}
-            onChange={handleTagline}
-          />
-        </div>
-        <div>
-          <label className="form-label">Description</label>
-          <textarea
-            style={{ margin: '0px', padding: '5px' }}
-            className="form-control"
-            type="text"
-            name="description"
-            placeholder="Description"
-            rows="3"
-            value={description}
-            onChange={handleDescription}></textarea>
-        </div>
-
-        <div>
-          <label>First Brewed</label>
-          <input
-            style={{ marginBottom: '20px', padding: '5px' }}
-            className="form-control"
-            type="text"
-            name="first_brewed"
-            placeholder="First Brewed"
-            value={first_brewed}
-            onChange={handleFirst_Brewed}
-          />
-        </div>
-        <div>
-          <label>Brewer Tips</label>
-          <input
-            style={{ marginBottom: '20px', padding: '5px' }}
-            className="form-control"
-            type="text"
-            name="brewers_tips"
-            value={brewers_tips}
-            onChange={handleBrewers_Tips}
-          />
-        </div>
-        <div>
-          <label>Attenuation Level</label>
-          <input
-            style={{ marginBottom: '20px', padding: '5px' }}
-            className="form-control"
-            type="number"
-            name="attenuation_level"
-            value={attenuation_level}
-            onChange={handleAttenuation_Level}
-          />
-        </div>
-        <div>
-          <label>Created By</label>
-          <input
-            style={{ marginBottom: '20px', padding: '5px' }}
-            className="form-control"
-            type="text"
-            name="contributed_by"
-            placeholder="Created by"
-            value={contributed_by}
-            onChange={handleContributed_By}
-          />
-        </div>
-        <button
-          style={{
-            marginTop: '10px',
-            padding: '10px 20px',
-            fontSize: '16px',
-          }}>
-          Add Beer
-        </button>
-      </form>
-
-      {/* <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <h1>Add new Beer</h1>
         <Form.Group className="mb-3">
           <Form.Label>Name</Form.Label>
@@ -208,7 +110,7 @@ function AddBeerPage() {
         <Button variant="primary" type="submit">
           Add Beer
         </Button>
-      </Form> */}
+      </Form>
     </>
   );
 }

@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
@@ -18,11 +17,10 @@ function RandomBeersPage() {
 
   return (
     <>
-      <Navbar />
       {data && <h3>Sorry, no beer here</h3>}
 
       {!data && (
-        <div>
+        <div className="flex-center">
           <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={randomBeer.image_url} />
             <Card.Body>

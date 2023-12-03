@@ -1,5 +1,3 @@
-import { Link, useParams } from 'react-router-dom';
-import Navbar from '../components/Navbar';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Button, Card } from 'react-bootstrap';
@@ -15,8 +13,6 @@ function AllBeersPage() {
 
   return (
     <>
-      <Navbar />
-
       {allBeers.map((beer) => {
         return (
           <Button variant="custom-btn" href={`/beers/${beer._id}`}>
