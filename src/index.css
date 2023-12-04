@@ -19,3 +19,19 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+.ava-links {
+  color: white !important;
+  font-weight: 400;
+}
+
+.ava-nav {
+  display:flex;
+  flex-direction: row !important  ;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.navbar {
+  height: 50px; 
+}
