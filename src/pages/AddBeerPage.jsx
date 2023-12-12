@@ -1,14 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function AddBeerPage() {
+  const navigate = useNavigate();
+
   const [beerData, setBeerData] = useState({
     name: '',
     tagline: '',
     description: '',
     first_brewed: '',
     brewers_tips: '',
-    attenuation_level: 0, // Default value as it should be a number
+    attenuation_level: 0,
     contributed_by: '',
   });
 
@@ -26,8 +29,8 @@ function AddBeerPage() {
     axios
       .post('https://ih-beers-api2.herokuapp.com/beers/new', beerData)
       .then((response) => {
-        console.log('Beer created successfully:', response.data);
-        // You may want to redirect the user to another page or handle success in some way
+        console.log('Beer created', response.data);
+        navigate('/beers'); 
       })
       .catch((error) => {
         console.error('Error creating beer:', error);
@@ -35,8 +38,9 @@ function AddBeerPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='add-beer-form' onSubmit={handleSubmit}>
       <div>
+      <h1>Add a beer</h1>
         <label>Name</label>
         <input
           type="text"
