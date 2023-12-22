@@ -1,0 +1,35 @@
+.homepage-icon {
+  height: 2rem;
+  width: 4rem;
+}
+.nav-bar {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.beer-img {
+  height: 15rem;
+  width: 5rem;
+}
+
+.beer-detail-img {
+  height: 20rem;
+  width: 5rem;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
