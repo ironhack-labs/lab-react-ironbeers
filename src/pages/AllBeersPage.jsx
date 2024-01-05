@@ -2,11 +2,13 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import SearchBar from "../components/SearchBar";
 
 
 function AllBeersPage() {
     const beerId = useParams()
     const [beers, setBeers] = useState([])
+    const [query, setQuery] = useState("")
 
 useEffect(() => {
     axios.get("https://ih-beers-api2.herokuapp.com/beers")
@@ -16,9 +18,25 @@ useEffect(() => {
     .catch(error => error)
 },[])
 
+useEffect(()=> {
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+    .then((response)=> {
+        setBeers(response.data)
+    })
+    .catch((err) => {
+        console.log("unable to search beer because of error: ", err)
+    })
+}, [query])
+
+    const handleSearch = (string) => {
+        setQuery(string)
+    }
+
     return (
     <>
     <Navbar/>
+    <SearchBar handleSearch={handleSearch}/>
+
     {beers.map((elm) => {
         return (
             <div key={elm._id}>
