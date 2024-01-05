@@ -43,7 +43,6 @@ e.preventDefault()
   
   return (
     <>
-      <Navbar />
       <form onSubmit={handleSubmit}>
         <label>
             Name:

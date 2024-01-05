@@ -34,19 +34,21 @@ useEffect(()=> {
 
     return (
     <>
-    <Navbar/>
     <SearchBar handleSearch={handleSearch}/>
 
     {beers.map((elm) => {
         return (
-            <div key={elm._id}>
+            <Link to={`/beers/${elm._id}`}>
+            <div className="beerCard" key={elm._id}>
             <img width={50} src={elm.image_url}/>
+            <div className="beerInfo">
             <h1>{elm.name}</h1>
             <p>{elm.tagline}</p>
             <p>{elm.contributed_by}</p>
-            <Link to={`/beers/${elm._id}`}>Details</Link>
-            <hr />
+
             </div>
+            </div>
+            </Link>
             )
     })}
     </>

@@ -5,13 +5,14 @@ function SearchBar({ handleSearch }) {
 
   const handleChange = (e) => {
     setString(e.target.value);
-    handleSearch(stringgit );
+    handleSearch(string);
   };
 
   return (
-      <div>
+      <div className="search-bar">
         <label>Search: </label>
         <input
+          placeholder="find beer"
           type="text"
           name="searchBar"
           value={string}

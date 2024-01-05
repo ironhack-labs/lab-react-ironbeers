@@ -21,7 +21,6 @@ function BeerDetailsPage(props) {
 
   return (
     <>
-      <Navbar />
       <img src={beer.image_url} alt="can't load picture"/>
       <h1>{beer.name}</h1>
       <p>{beer.tagline}</p>

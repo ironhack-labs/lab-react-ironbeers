@@ -13,15 +13,12 @@ useEffect(() => {
         let max = response.data.length-1
         const id = Math.floor(Math.random() * max)
         setRandomBeer(response.data[id])
-        console.log(randomBeer)
-        console.log(randomBeer.name)
     })
     .catch(error => error)
 }, [])
 
     return (
     <>
-    <Navbar/>
     <img src={randomBeer.image_url} alt="can't load picture"/>
       <h1>{randomBeer.name}</h1>
       <p>{randomBeer.tagline}</p>

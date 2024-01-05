@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import HomePage from "../pages/HomePage";
-//import "../index.css"
+import HomeLogo from "../assets/home-icon.png";
+import "../index.css"
 
 function Navbar() {
-return(
+  return (
+      <Link to="/">
     <nav>
-        <Link to="/" element={<HomePage/>}>Home</Link>
+         <img src={ HomeLogo } alt="homepagelogo"/>
     </nav>
-)
-
+      </Link>
+  );
 }
 
 export default Navbar;

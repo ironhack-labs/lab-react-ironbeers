@@ -1,6 +1,8 @@
 body {
-  margin: 50px;
+  margin: 0;
   padding: 0;
+  background-color: rgb(89, 33, 33);
+  font-family:fantasy;
 }
 
 a {
@@ -13,7 +15,7 @@ form {
 }
 
 .search-bar {
-  margin-bottom: 50px;
+  margin: 2%;
 }
 
 .btn-round {
@@ -23,10 +25,47 @@ form {
 .link {
   padding: 20px;
   font-size: 30px;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: brown;
-  background-color: rgb(247, 182, 182);
+  color: rgb(108, 45, 45);
+  background-color: black;
   border: 1px solid rgb(201, 141, 141);
-  border-radius: 5px;
 }
 
+.category {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 30px;
+  border: 1px solid rgb(165, 42, 42, 0.5);
+  border-radius: 0.5%;
+}
+
+nav {
+  background-color: rgb(30, 9, 9);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 2px solid black;
+  padding: 1%;
+}
+
+.beerCard {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgba(210, 182, 134, 0.5);
+  margin: 2%;
+}
+
+.beerInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%
+}
+p {
+  color: rgb(0, 0, 0, 0.5);
+}
+
+h1 {
+  color: black;
+}
