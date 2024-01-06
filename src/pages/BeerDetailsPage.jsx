@@ -20,16 +20,18 @@ function BeerDetailsPage(props) {
   }, []);
 
   return (
-    <>
-      <img src={beer.image_url} alt="can't load picture"/>
+    <div className="beerCard">
+      <img src={beer.image_url} width="100vw" height="auto" alt="can't load picture"/>
+      <div className="beerInfo">
       <h1>{beer.name}</h1>
-      <p>{beer.tagline}</p>
-      <p>{beer.first_brewed}</p>
-      <p>{beer.description}</p>
-      <p>{beer.attenuation_level}</p>
-      <p>{beer.contributed_by}</p>
-      <p>{beer.brewers_tips}</p>
-    </>
+      <p>"{beer.tagline}"</p>
+      <p className="description">{beer.description}</p>
+      <p>First brewed: {beer.first_brewed}</p>
+      <p>Attenuation level: {beer.attenuation_level}</p>
+      <p>Contributed by: {beer.contributed_by}</p>
+      <p>Tips: {beer.brewers_tips}</p>
+      </div>
+    </div>
   );
 }
 

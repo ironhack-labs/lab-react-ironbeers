@@ -14,6 +14,7 @@ useEffect(() => {
     axios.get("https://ih-beers-api2.herokuapp.com/beers")
     .then(response => {
         setBeers(response.data)
+        console.log(beers)
     })
     .catch(error => error)
 },[])
@@ -43,8 +44,8 @@ useEffect(()=> {
             <img width={50} src={elm.image_url}/>
             <div className="beerInfo">
             <h1>{elm.name}</h1>
-            <p>{elm.tagline}</p>
-            <p>{elm.contributed_by}</p>
+            <p>"{elm.tagline}"</p>
+            <p>Contributed by: {elm.contributed_by}</p>
 
             </div>
             </div>

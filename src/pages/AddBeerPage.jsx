@@ -43,7 +43,7 @@ e.preventDefault()
   
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label>
             Name:
           <input name="name" type="text" value={name} onChange={(e)=> {setName(e.target.value)}}/>

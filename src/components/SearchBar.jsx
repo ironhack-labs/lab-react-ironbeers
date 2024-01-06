@@ -12,7 +12,7 @@ function SearchBar({ handleSearch }) {
       <div className="search-bar">
         <label>Search: </label>
         <input
-          placeholder="find beer"
+          placeholder="Find beer"
           type="text"
           name="searchBar"
           value={string}

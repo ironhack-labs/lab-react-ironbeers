@@ -18,15 +18,18 @@ useEffect(() => {
 }, [])
 
     return (
-    <>
-    <img src={randomBeer.image_url} alt="can't load picture"/>
+    <div className="beerCard">
+    <img src={randomBeer.image_url} width="100vw" height="auto" alt="can't load picture"/>
+      <div className="beerInfo">
       <h1>{randomBeer.name}</h1>
-      <p>{randomBeer.tagline}</p>
-      <p>{randomBeer.first_brewed}</p>
-      <p>{randomBeer.attenuation_level}</p>
-      <p>{randomBeer.description}</p>
-      <p>{randomBeer.contributed_by}</p>
-    </>
+      <p>"{randomBeer.tagline}"</p>
+      <p className="description">{randomBeer.description}</p>
+      <p>First brewed: {randomBeer.first_brewed}</p>
+      <p>Attenuation level: {randomBeer.attenuation_level}</p>
+      <p>Contributed by: {randomBeer.contributed_by}</p>
+      <p>Tips: {randomBeer.brewers_tips}</p>
+      </div>
+    </div>
     
     )
 }
