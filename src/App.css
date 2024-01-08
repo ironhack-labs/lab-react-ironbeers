@@ -1,0 +1,57 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(211, 237, 237);
+  font-weight: bolder;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(77, 137, 137);
+}
+
+.beerImg {
+  height: 300px;
+  width: max-content;
+}
+
+.newBeer {
+  background-color: rgb(77, 137, 137);
+  color: rgb(248, 248, 248);
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.beerData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  color: rgb(12, 78, 78);
+}
+
+button {
+  color: aliceblue;
+  background-color: rgb(64, 80, 80);
+  font-size: larger;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-color: rgb(64, 80, 80);
+  border-radius: 10%;
+  width: 100px;
+  height: 35px;
+}
