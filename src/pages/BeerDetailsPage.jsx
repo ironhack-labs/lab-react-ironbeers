@@ -16,6 +16,7 @@ function BeerDetailsPage() {
 
   const { beerId } = useParams();
 
+  const API_URL = "https://ih-beers-api2.herokuapp.com/beers"
 
 const getBeerDeets = () => {
   axios
@@ -24,11 +25,11 @@ const getBeerDeets = () => {
   .catch((error) => console.log(error))
 };
  
-const API_URL = "https://ih-beers-api2.herokuapp.com/beers"
+
 
 useEffect(() => {
   getBeerDeets();
-}, [] );
+}, [beerId] );
 console.log(`${API_URL}/${beerId}`);
 
   // TASKS:

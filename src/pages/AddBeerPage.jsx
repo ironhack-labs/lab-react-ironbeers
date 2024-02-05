@@ -1,15 +1,19 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-function AddBeerPage() {
+const API_URL = "https://ih-beers-api2.herokuapp.com/beers";
+
+function AddBeerPage(props) {
   // State variables to store the values of the form inputs. You can leave these as they are.
   const [name, setName] = useState("");
   const [tagline, setTagline] = useState("");
   const [description, setDescription] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-  const [firstBrewed, setFirstBrewed] = useState("");
-  const [brewersTips, setBrewersTips] = useState("");
-  const [attenuationLevel, setAttenuationLevel] = useState(0);
-  const [contributedBy, setContributedBy] = useState("");
+  const [image_url, setImageUrl] = useState("");
+  const [first_brewed, setFirstBrewed] = useState("");
+  const [brewers_tips, setBrewersTips] = useState("");
+  const [attenuation_level, setAttenuationLevel] = useState(0);
+  const [contributed_by, setContributedBy] = useState("");
 
   // Handler functions for the form inputs. You can leave these as they are.
   const handleName = (e) => setName(e.target.value);
@@ -21,20 +25,40 @@ function AddBeerPage() {
   const handleAttenuationLevel = (e) => setAttenuationLevel(e.target.value);
   const handleContributedBy = (e) => setContributedBy(e.target.value);
 
-
-
   // TASK:
   // 1. Create a function to handle the form submission and send the form data to the Beers API to create a new beer.
   // 2. Use axios to make a POST request to the Beers API.
   // 3. Once the beer is created, navigate the user to the page showing the list of all beers.
+  const navigate = useNavigate();
 
+  const addNewBeer = (event) => {
+    event.preventDefault();
+    const requestBody = {
+      name,
+      tagline,
+      description,
+      image_url,
+      first_brewed,
+      brewers_tips,
+      attenuation_level: parseFloat(attenuation_level),
+      contributed_by,
+    };
 
+    axios
+      .post("https://ih-beers-api2.herokuapp.com/beers/new", requestBody)
+      .then((response) => {
+        const newBeerId = response.data._id; 
+      navigate(`/beers`);
+     
+      })
+      .catch((error) => console.log(error));
+  };
 
   // Structure and the content of the page showing the form for adding a new beer. You can leave this as it is.
   return (
     <>
       <div className="d-inline-flex flex-column w-100 p-4">
-        <form>
+        <form onSubmit={addNewBeer}>
           <label>Name</label>
           <input
             className="form-control mb-4"
@@ -71,7 +95,7 @@ function AddBeerPage() {
             type="text"
             name="imageUrl"
             placeholder="Image URL"
-            value={imageUrl}
+            value={image_url}
             onChange={handleImageUrl}
           />
 
@@ -81,7 +105,7 @@ function AddBeerPage() {
             type="text"
             name="firstBrewed"
             placeholder="Date - MM/YYYY"
-            value={firstBrewed}
+            value={first_brewed}
             onChange={handleFirstBrewed}
           />
 
@@ -91,7 +115,7 @@ function AddBeerPage() {
             type="text"
             name="brewersTips"
             placeholder="..."
-            value={brewersTips}
+            value={brewers_tips}
             onChange={handleBrewersTips}
           />
 
@@ -106,7 +130,7 @@ function AddBeerPage() {
               className="form-control mb-4"
               type="number"
               name="attenuationLevel"
-              value={attenuationLevel}
+              value={attenuation_level}
               onChange={handleAttenuationLevel}
               min={0}
               max={100}
@@ -119,7 +143,7 @@ function AddBeerPage() {
             type="text"
             name="contributedBy"
             placeholder="Contributed by"
-            value={contributedBy}
+            value={contributed_by}
             onChange={handleContributedBy}
           />
           <button className="btn btn-primary btn-round">Add Beer</button>
