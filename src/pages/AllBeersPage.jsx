@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Search from "../components/Search";
-import beersJSON from "./../assets/beers.json";
+// import beersJSON from "./../assets/beers.json";
 import axios from "axios";
 
 const API_URL = "https://ih-beers-api2.herokuapp.com/beers"
@@ -20,7 +20,7 @@ function AllBeersPage() {
 
   const getAllBeers = () => {
     axios
-    .get({API_URL})
+    .get(API_URL)
     .then((response) => setBeers(response.data))
     .catch((error) => console.log(error));
   };
