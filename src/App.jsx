@@ -7,6 +7,7 @@ import RandomBeerPage from "./pages/RandomBeerPage";
 import AddBeerPage from "./pages/AddBeerPage";
 import BeerDetailsPage from "./pages/BeerDetailsPage";
 
+
 function App() {
   return (
     <div className="App">

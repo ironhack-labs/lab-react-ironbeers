@@ -1,6 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import beersJSON from "./../assets/beers.json";
+import axios from "axios";
+
+const API_URL = "https://ih-beers-api2.herokuapp.com/beers"
+
+
+
 
 
 function RandomBeersPage() {
