@@ -19,3 +19,9 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+nav {
+  background-color: #3DC4FC;
+  height: 50px; 
+  width: 100%;
+}
