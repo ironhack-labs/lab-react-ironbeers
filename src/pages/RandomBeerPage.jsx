@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 
 function RandomBeersPage() {
   const [randomBeer, setRandomBeer] = useState(null);
@@ -16,18 +17,31 @@ function RandomBeersPage() {
       });
   }, []);
 
-  if (!randomBeer) return <p>loading..</p>;
-  if (randomBeer)
+  if (!randomBeer)
     return (
       <div>
-        <img src={randomBeer.image_url} alt="" />
-        <h1>{randomBeer.name}</h1>
-        <h2>{randomBeer.tagline}</h2>
-        <h2> {randomBeer.first_brewed} </h2>
-        <h1>{randomBeer.attenuation_level}</h1>
-        <p>{randomBeer.description}</p>
-        <p>{randomBeer.contributed_by}</p>
+        <Navbar></Navbar>
+        <p className="loading">loading random..</p>
       </div>
+    );
+  if (randomBeer)
+    return (
+      <>
+        <Navbar></Navbar>
+        <div className="one-wrapper">
+          <div className="one-img-wrapper">
+            <img src={randomBeer.image_url} alt="" />
+          </div>
+          <div className="one-info-wrapper">
+            <h1>{randomBeer.name}</h1>
+            <h2>{randomBeer.tagline}</h2>
+            <h2> {randomBeer.first_brewed} </h2>
+            <h1>{randomBeer.attenuation_level}</h1>
+            <p>{randomBeer.description}</p>
+            <p>{randomBeer.contributed_by}</p>
+          </div>
+        </div>
+      </>
     );
 }
 

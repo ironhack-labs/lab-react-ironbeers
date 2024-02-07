@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
-    <div>
+    <div className="homepage-container">
       <Link to="/beers">
-        <div>
+        <div className="homepage-card">
           <img src="../../public/beers.png" alt="" />
-          <h1>All Beers</h1>
-          <p>
+          <h1 className="homepage-beer-title">All Beers</h1>
+          <p className="homepage-beer-description">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
             sed unde quo debitis facere cum commodi perspiciatis iusto?
             Consequatur quae, aliquid officiis animi laudantium dolor facilis
@@ -16,10 +16,10 @@ function HomePage() {
         </div>
       </Link>
       <Link to="/random-beer">
-        <div>
+        <div className="homepage-card">
           <img src="../../public/random-beer.png" alt="" />
-          <h1>Random Beer</h1>
-          <p>
+          <h1 className="homepage-beer-title">Random Beer</h1>
+          <p className="homepage-beer-description">
             {" "}
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
             sed unde quo debitis facere cum commodi perspiciatis iusto?
@@ -29,10 +29,10 @@ function HomePage() {
         </div>
       </Link>
       <Link to="/new-beer">
-        <div>
+        <div className="homepage-card">
           <img src="../../public/new-beer.png" alt="" />
-          <h1>New Beer</h1>
-          <p>
+          <h1 className="homepage-beer-title">New Beer</h1>
+          <p className="homepage-beer-description">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
             sed unde quo debitis facere cum commodi perspiciatis iusto?
             Consequatur quae, aliquid officiis animi laudantium dolor facilis

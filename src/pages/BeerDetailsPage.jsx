@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 
 function BeerDetailsPage() {
   const [beer, setBeer] = useState(null);
@@ -18,18 +19,31 @@ function BeerDetailsPage() {
       });
   }, [beerId]);
 
-  if (!beer) return <p>loading..</p>;
-  if (beer)
+  if (!beer)
     return (
       <div>
-        <img src={beer.image_url} alt="" />
-        <h1>{beer.name}</h1>
-        <h2>{beer.tagline}</h2>
-        <h2> {beer.first_brewed} </h2>
-        <h1>{beer.attenuation_level}</h1>
-        <p>{beer.description}</p>
-        <p>{beer.contributed_by}</p>
+        <Navbar></Navbar>
+        <p className="loading">loading..</p>
       </div>
+    );
+  if (beer)
+    return (
+      <>
+        <Navbar></Navbar>
+        <div className="one-wrapper">
+          <div className="one-img-wrapper">
+            <img src={beer.image_url} alt="" />
+          </div>
+          <div className="one-info-wrapper">
+            <h1>{beer.name}</h1>
+            <h2>{beer.tagline}</h2>
+            <h2> {beer.first_brewed} </h2>
+            <h1>{beer.attenuation_level}</h1>
+            <p>{beer.description}</p>
+            <p>{beer.contributed_by}</p>
+          </div>
+        </div>
+      </>
     );
 }
 
