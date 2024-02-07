@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Search from "../components/Search";
 import beersJSON from "./../assets/beers.json";
 
-const URL = "https://ih-beers-api2.herokuapp.com/beers";
+const URL = import.meta.env.VITE_API_BEERS;
 
 function AllBeersPage() {
   // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.

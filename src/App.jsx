@@ -10,7 +10,7 @@ import BeerDetailsPage from "./pages/BeerDetailsPage";
 function App() {
   return (
     <div className="App">
-    <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/beers" element={<AllBeersPage />} />

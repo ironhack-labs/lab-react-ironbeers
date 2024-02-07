@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import beersJSON from "./../assets/beers.json";
 
-const URL = "https://ih-beers-api2.herokuapp.com/beers/";
+const URL = import.meta.env.VITE_API_DETAIL;
 
 function BeerDetailsPage() {
   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.

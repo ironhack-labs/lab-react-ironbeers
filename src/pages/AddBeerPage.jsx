@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const URL = "https://ih-beers-api2.herokuapp.com/beers/new";
+const URL = import.meta.env.VITE_API_BEERS
 
 function AddBeerPage() {
   // State variables to store the values of the form inputs. You can leave these as they are.
@@ -39,7 +39,6 @@ function AddBeerPage() {
       name,
       tagline,
       description,
-      description,
       first_brewed: firstBrewed,
       brewers_tips: brewersTips,
       attenuation_level: attenuationLevel,
@@ -47,7 +46,7 @@ function AddBeerPage() {
     };
 
     try {
-      await axios.post(URL, beerData);
+      await axios.post(URL + "/new", beerData);
       navigate("/beers");
     } catch (error) {
       console.log("ERROR: ", error);
