@@ -5,31 +5,31 @@ import newBeerImage from "../assets/new-beer.png";
 
 function HomePage() {
   return (
-    <div>
-      <Link to={"/beers"}>
-        <img src={allBeersImage} alt="beers" />
-        <h2>All Beers</h2>
-        <p>
+    <div className="homePage">
+      <Link className="categoryContainer" to={"/beers"}>
+        <img className="categoryImage" src={allBeersImage} alt="beers" />
+        <h2 className="categoryTitle">All Beers</h2>
+        <p className="categoryText">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut
           expedita fuga, magnam quasi at sapiente totam nam reprehenderit
           quaerat nemo in, veritatis quibusdam. Distinctio pariatur odit quas
           explicabo quam.
         </p>
       </Link>
-      <Link to={"/random-beer"}>
-        <img src={randomBeerImage} alt="beers" />
-        <h2>Random Beer</h2>
-        <p>
+      <Link className="categoryContainer" to={"/random-beer"}>
+        <img className="categoryImage" src={randomBeerImage} alt="beers" />
+        <h2 className="categoryTitle">Random Beer</h2>
+        <p className="categoryText">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut
           expedita fuga, magnam quasi at sapiente totam nam reprehenderit
           quaerat nemo in, veritatis quibusdam. Distinctio pariatur odit quas
           explicabo quam.
         </p>
       </Link>
-      <Link to={"/new-beer"}>
-        <img src={newBeerImage} alt="beers" />
-        <h2>New Beer</h2>
-        <p>
+      <Link className="categoryContainer" to={"/new-beer"}>
+        <img className="categoryImage" src={newBeerImage} alt="beers" />
+        <h2 className="categoryTitle">New Beer</h2>
+        <p className="categoryText">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut
           expedita fuga, magnam quasi at sapiente totam nam reprehenderit
           quaerat nemo in, veritatis quibusdam. Distinctio pariatur odit quas

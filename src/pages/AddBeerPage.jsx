@@ -20,12 +20,11 @@ function AddBeerPage() {
     axios
       .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
       .then((result) => {
-<<<<<<< HEAD
-        console.log(result.data); 
+      console.log(result.data); 
         navigate(`/beers`);
-=======
+
         console.log(result);
->>>>>>> cc5bef14789d2790ac8f90c0cfcfa3cbe8bd0cb0
+
       })
       .catch((err) => {
         console.log(err);

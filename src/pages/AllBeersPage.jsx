@@ -25,26 +25,32 @@ function AllBeersPage() {
   console.log(beers);
   return (
     
-    <div>
-
-      <label>Search for beer
+    <div className="allBeerContainer">
+  <div className="searchBar">
+      <label >Search for beer:</label>
         <input type="text"
         value={query}
         onChange={(e)=>{setQuery(e.target.value)}} />
-      </label>
+     
+      </div>  
       
 
       {beers.map((oneBeer) => {
         return (
-          <div key={oneBeer._id}>
-            <Link to={`/beers/${oneBeer._id}`}>
-              <img src={oneBeer.image_url} alt="" style={{ width: "120px" }} />
+          <div className="oneBeerContainer" key={oneBeer._id}>
+            <Link className="oneBeerContainer" to={`/beers/${oneBeer._id}`}>
+
+              <div className="oneBeerImageContainer">
+              <img className="oneBeerImage" src={oneBeer.image_url} alt=""  />
+              </div>
+              <div className="oneBeerTextContainer">
               <h3>{oneBeer.name}</h3>
               <h4>{oneBeer.tagline}</h4>
               <p>
                 Created by:
                 {oneBeer.contributed_by}
               </p>
+              </div>
             </Link>
           </div>
         );
