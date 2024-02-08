@@ -1,0 +1,11 @@
+.nav-icon{
+    width: 40px;
+    margin: auto;
+}
+
+.navbar{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
