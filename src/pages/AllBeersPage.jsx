@@ -23,6 +23,7 @@ function AllBeersPage() {
                 return (
                     <div className="one-beer" key={oneBeer._id}>
                         <img src={oneBeer.image_url} alt="" className="beer-img"/>
+                        
                         <div className="beer-details">
                             <Link to={`/beers/${oneBeer._id}`}><h1>{oneBeer.name}</h1></Link>
                             <p>{oneBeer.tagline}</p>
