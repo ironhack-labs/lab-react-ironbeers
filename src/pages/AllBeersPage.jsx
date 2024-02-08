@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 
 function AllBeersPage() {
   const [beers, setBeers] = useState(null);
+  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     axios
@@ -18,9 +19,30 @@ function AllBeersPage() {
       });
   }, []);
 
+  // search query filtering
+  useEffect(() => {
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${searchInput}`)
+      .then((response) => {
+        // console.log(response.data);
+        setBeers(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [searchInput]);
+
   return (
     <div>
       <Navbar></Navbar>
+      <input
+        type="text"
+        style={{ width: "80%", height: "30px", marginTop: "20px" }}
+        onChange={(e) => {
+          setSearchInput(e.target.value);
+        }}
+        value={searchInput}
+      />
       {beers &&
         beers.map((beer) => {
           return (

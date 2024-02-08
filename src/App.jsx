@@ -20,9 +20,7 @@ function App() {
         <Route
           path="/beers/:beerId"
           element={<BeerDetailsPage></BeerDetailsPage>}
-        >
-          {" "}
-        </Route>
+        ></Route>
       </Routes>
     </div>
   );

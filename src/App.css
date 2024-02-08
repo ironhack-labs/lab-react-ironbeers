@@ -103,3 +103,9 @@ nav {
   text-align: center;
   padding-top: 50px;
 }
+
+.create-forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
