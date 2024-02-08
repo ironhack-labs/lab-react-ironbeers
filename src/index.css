@@ -19,3 +19,91 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+
+.Navbar {
+  background-color: skyblue;
+  padding: 30px;
+  margin-bottom: 30px;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.Navbar a {
+  color: white;
+}
+
+.home-icon {
+  width: 80px
+}
+
+.beers-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 30px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.individual-beer p {
+  color: gray;
+}
+
+.individual-beer h1 {
+  font-weight: 100;
+}
+
+.individual-beer img {
+  width: 100%;
+  height: auto;
+}
+
+.one-beer {
+  display: flex;
+  margin: 40px;
+  align-items: center;
+  text-align: left;
+}
+
+.beer-img {
+  width: auto;
+  height: 150px;
+  margin-right: 30px;
+}
+
+.individual-beer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  margin: 30px
+}
+
+.individual-beer-container img {
+  height: 200px
+}
+
+.create-beer-form label {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  font-weight: bold;
+}
+
+.create-beer-form input {
+  border-radius: 20px;
+  min-height: 30px;
+}
+
+.create-beer-form button {
+  background-color: skyblue;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  min-height: 30px;
+  padding: 20px
+}
