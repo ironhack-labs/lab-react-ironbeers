@@ -34,7 +34,7 @@ function AddBeerPage() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="CreateProjectPage">
         <label>
           Name
           <input
@@ -76,7 +76,7 @@ function AddBeerPage() {
           />
         </label>
         <label>
-          `Brewer's Tips`
+          Brewer's Tips
           <input
             type="text"
             name="brewers_tips"

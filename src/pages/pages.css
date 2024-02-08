@@ -1,0 +1,171 @@
+*{
+    font-family: 'Raleway', sans-serif;
+    /* font-size: 20px; */
+    margin: 0;
+}
+.container-search{
+
+}
+.search-input{
+    width: 100%;
+    padding: 5px;
+    border: 0.5px solid #ccc;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+.container-all-beer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-all-beer-details{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.container-all-beer-text{
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    
+}
+
+.img-all-beer{
+    width: 70px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.h3-all-beer-h3{
+    font-size: x-large;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 10px;
+    
+}
+
+.p-all-beer-p-tagline{
+    color: grey;
+    margin-bottom: 3px;
+}
+
+.p-all-beer-p-created{
+    color: black;
+    font-size: small;
+    font-weight: 700;
+}
+
+.contributed_by{
+    font-weight: 500;
+}
+
+hr.solid {
+    margin-top: 10px;
+    border-top: 0.5px solid #d0cfcf;
+}
+
+.container-home-page{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container-home-page img{
+    width: 100%;
+}
+.container-home-page h2{
+    color: black;
+    
+}
+
+.container-home-page-text{
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.container-home-page p{
+    color: #979797;
+}
+
+.container-random-beer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.container-random-beer img{
+    width: 180px;
+    height: 250px;
+    object-fit: contain;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container-random-beer-text{
+    padding: 20px;
+}
+
+.h2-container-home-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom:10px;
+}
+
+.h4-container-home-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom:10px;
+}
+
+.p-container-home-page{
+    gap: 5px;
+}
+
+
+label {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+   
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  
+  .CreateProjectPage {
+    background: #f9eec3;
+    border: 1px solid grey;
+    box-shadow: 0px 2px 3px grey;
+    width: 400px;
+    text-align: center;
+    /* margin: 0 auto; */
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+   
+   
+  .CreateProjectPage form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+   
+  .CreateProjectPage button {
+    display: block;
+    
+    margin: 0 auto;
+  }
