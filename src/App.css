@@ -1,0 +1,40 @@
+html, body{
+    font-family: 'Arial', sans-serif;
+}
+
+.Navbar{
+    background-color: #3dc4fc;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.home-container > h2 {
+    margin: 20px;
+    font-weight: 200;
+    font-size: 34px;
+    color: black;
+}
+
+.beer-wrapper{
+    height: 280px;
+    padding: 20px 0;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    color: black;
+    border-bottom: 1px solid grey;
+}
+.img-wrapper{
+    height: 250px;
+    width: 250px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+.beer-info{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 function HomePage() {
   return (
-    <div>
+    <div className="home-container">
       <Link to="/beers">
         <img src="./src/assets/beers.png" alt="beers" />
         <h2>All Beers</h2>

@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div>
+    <nav className="Navbar">
       <Link to="/">
-        <button>Go to Home page</button>
+        <img src="./src/assets/home-icon.png" alt="home icon" />
       </Link>
-    </div>
+    </nav>
   );
 }
 export default Navbar;
