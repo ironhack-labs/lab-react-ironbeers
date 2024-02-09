@@ -1,38 +1,151 @@
-.App {
+h1,
+h2,
+h3,
+p,
+div,
+nav,
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif
+}
+
+nav {
   text-align: center;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homepage-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.homepage-card {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 30px;
+  background-color: rgb(237, 237, 237);
+  padding-bottom: 50px;
+}
+
+.homepage-beer-description {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  font-size: 26px;
+}
+
+.homepage-beer-title {
+  margin: auto;
+}
+
+.all-beer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
+  background-color: rgb(238, 238, 238);
+  padding: 5% 10%;
+  border-radius: 50px;
+}
+
+.all-beer-description {
+  max-width: 60%;
+}
+
+.all-beer-image {
+  width: 5%;
+}
+
+.all-beer-image > img {
+  width: 100%;
+}
+
+.one-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 50px;
+}
+
+.one-img-wrapper {
+  width: 100px;
+}
+
+.one-img-wrapper > img {
+  width: 100%;
+}
+
+.one-info-wrapper {
+  max-width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.one-info-wrapper > p {
+  /* max-width: 80%; */
+}
+
+.loading {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.create-forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 24px;
+  width: 100%;
+  height: 100%;
+  margin-top: 70px;
+}
+
+.create-forms input,
+textarea {
+  padding: 10px 20px;
+  margin: 18px 0px;
+  border-radius: 10px;
+  border: solid black 3px;
+  font-size: 20px;
+}
+
+.create-forms button {
+  background-color: blue;
+  border: solid black 2px;
+  border-radius: 10px;
   color: white;
+  height: 90px;
+  margin-top: 18px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: 40px;
+  margin: 20px auto;
+  border: solid black 4px;
+  border-radius: 30px;
+  font-size: 20px;
+  text-align: center;
 }
