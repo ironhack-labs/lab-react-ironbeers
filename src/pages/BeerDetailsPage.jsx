@@ -19,14 +19,14 @@ function BeerDetailsPage() {
   }, [beerId]);
 
   return (
-    <div>
-      <img src={oneBeer.image_url} alt="" />
-      <h1>{oneBeer.name}</h1>
-      <h2>{oneBeer.attenuation_level}</h2>
-      <h2>{oneBeer.tagline}</h2>
-      <h3>{oneBeer.first_brewed}</h3>
-      <p>{oneBeer.description}</p>
-      <p>{oneBeer.contributed_by}</p>
+    <div className="beerDetailsContainer">
+      <img src={oneBeer.image_url} style={{width:'300px'}} />
+      <h1  className="oneBeerDetail" style={{marginTop: `20px`}}>{oneBeer.name}</h1>
+      <h2 className="oneBeerDetail" >{oneBeer.attenuation_level}</h2>
+      <h2 className="oneBeerDetail">{oneBeer.tagline}</h2>
+      <h3 className="oneBeerDetail">{oneBeer.first_brewed}</h3>
+      <p className="oneBeerDetail" >{oneBeer.description}</p>
+      <p className="oneBeerDetail" style={{paddingBottom: `20px`}}>{oneBeer.contributed_by}</p>
     </div>
   );
 }

@@ -16,14 +16,16 @@ function RandomBeersPage() {
   }, []);
 
   return (
-    <div>
-      <img src={randomBeer.image_url} alt="" />
-      <h1>{randomBeer.name}</h1>
-      <h2>{randomBeer.attenuation_level}</h2>
-      <h2>{randomBeer.tagline}</h2>
-      <h3>{randomBeer.first_brewed}</h3>
-      <p>{randomBeer.description}</p>
-      <p>{randomBeer.contributed_by}</p>
+    <div className="beerDetailsContainer">
+      <img style={{width:'100px'}} src={randomBeer.image_url} alt="" />
+      <h1 className="oneBeerDetail" style={{marginTop: `20px`}}>{randomBeer.name}</h1>
+      <h2 className="oneBeerDetail" >{randomBeer.attenuation_level}</h2>
+      <h2 className="oneBeerDetail">{randomBeer.tagline}</h2>
+      <h3 className="oneBeerDetail">{randomBeer.first_brewed}</h3>
+<div className="oneBeerDescriptionContainer">
+      <p className="oneBeerDetail1" style={{width:`75%`}} >{randomBeer.description}</p>
+      </div>
+      <p className="oneBeerDetail" style={{paddingBottom: `20px`}} >{randomBeer.contributed_by}</p>
     </div>
   );
 }

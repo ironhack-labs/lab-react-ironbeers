@@ -1,6 +1,8 @@
-.App{
+body{
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .header{
@@ -123,5 +125,53 @@ width: 100%;
     width: 200px;
     height: 30px;
     
+
+}
+
+.beerDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: #cbe8f5;
+    border-radius: 20%;
+    width: 50%;
+    margin-left: 25% ;
+  
+}
+.beerDetailsContainer img{
+    margin-top: 20px;
+}
+
+.oneBeerDetail{
+    background-color: rgb(255, 255, 255,0.5);
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   color: #014260;
+   margin: 0px;
+   padding-top: 15px;
+   text-align: center;
+   
+}
+
+.oneBeerDescriptionContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(255, 255, 255,0.5);
+    width: 100%;
+}
+
+.oneBeerDetail1{
+    
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   color: #014260;
+   margin: 0px;
+   padding-top: 15px;
+   text-align: center;
+   
 
 }
