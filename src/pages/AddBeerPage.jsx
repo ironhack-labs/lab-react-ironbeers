@@ -107,7 +107,7 @@ function AddBeerPage() {
               setContributor(e.target.value);
             }}
           />
-        <button type="submit">ADD NEW</button>
+        <button type="submit">ADD BEER</button>
       </form>
     </div>
   );
