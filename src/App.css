@@ -124,6 +124,7 @@ width: 100%;
 
     width: 200px;
     height: 30px;
+    font-size: 30px;
     
 
 }
@@ -164,7 +165,6 @@ width: 100%;
 }
 
 .oneBeerDetail1{
-    
     width: 100%;
    display: flex;
    justify-content: center;
@@ -173,5 +173,46 @@ width: 100%;
    padding-top: 15px;
    text-align: center;
    
+
+}
+
+.addBeerForm{
+
+    display: flex;
+    flex-direction: column;
+    color: #014260;
+    background: #c7e9f7;
+    padding: 0rem 1rem 1rem;
+    border-radius: 5%;
+    align-items: center;
+}
+
+.addBeerForm label{
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.addBeerForm label input{
+    border-radius: 5%;
+    margin-left: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 15px; 
+    padding-top: 5px;
+    padding-left: 5px;
+
+
+}
+
+.addBeerForm button{
+
+    background-color: white;
+    width: 30%;
+    color: #014260;
+    display: flex;
+    justify-content: center;
+    border-radius: 10%;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(20, 60, 163, 0.2);
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    
 
 }

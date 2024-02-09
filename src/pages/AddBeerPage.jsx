@@ -40,9 +40,9 @@ function AddBeerPage() {
   const [contributedBy, setContributedBy] = useState("");
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
+    <div >
+      <form className="addBeerForm" onSubmit={handleSubmit}>
+        <label className="addBeerLabel">
           Name
           <input
             type="text"
