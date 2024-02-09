@@ -106,6 +106,7 @@ a{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 0;
 }
 .beer-details-info{
     height: 450px;
@@ -115,24 +116,24 @@ a{
 }
 .beer-name{
     font-weight: 200;
-    font-size: 45px;
+    font-size: 36px;
     top:0px;
 }
 .beer-tagline{
     font-weight: 200;
     color:#b4b6b6;
-    font-size: 26px;
+    font-size: 22px;
     margin: 12px 0;
 }
 .top-right-info{
-    position: absolute;
     right: 20px;
     text-align: right;
+    position:absolute;
     
 }
 .beer-level{
-    font-size: 40px;
-    margin: 0 0 16px 0;
+    font-size: 32px;
+    margin: 0;
     font-weight: 600;
     color:#b4b6b6;
 }
