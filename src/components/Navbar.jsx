@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar(props) {
   return (
     <nav className="Navbar">
       <Link to="/">
-        <img src="./src/assets/home-icon.png" alt="home icon" />
+      <div className="home-icon-wrapper">
+        {props.children}
+      </div>
       </Link>
     </nav>
   );

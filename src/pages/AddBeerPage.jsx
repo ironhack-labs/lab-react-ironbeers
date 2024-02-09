@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function AddBeerPage() {
   const [name, setName] = useState("");
@@ -9,6 +10,7 @@ function AddBeerPage() {
   const [brewersTips, setBrewersTips] = useState("");
   const [attenuation, setAttenuation] = useState(0);
   const [contributor, setContributor] = useState("");
+  const navigate = useNavigate()
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -25,16 +27,19 @@ function AddBeerPage() {
 
     axios
       .post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer)
-      .then(() => {})
+      .then(() => {
+        navigate('/beers')
+      })
       .catch((err) => {
         console.log(err);
       });
   }
   return (
-    <div>
+    <div id="AddBeerPage">
       <form onSubmit={handleSubmit}>
-        <label>
+        <label htmlFor="name">
           Name
+        </label>
           <input
           name='name'
             type="text"
@@ -42,9 +47,9 @@ function AddBeerPage() {
               setName(e.target.value);
             }}
           />
-        </label>
-        <label>
+        <label htmlFor="tagline">
           Tagline
+        </label>
           <input
           name='tagline'
             type="text"
@@ -52,9 +57,9 @@ function AddBeerPage() {
               setTagline(e.target.value);
             }}
           />
-        </label>
-        <label>
+        <label htmlFor="description">
           Description
+        </label>
           <textarea
           name='description'
             type="text"
@@ -62,9 +67,9 @@ function AddBeerPage() {
               setDescription(e.target.value);
             }}
           />
-        </label>
-        <label>
+        <label htmlFor="first_brewed">
           First Brewed
+        </label>
           <input
           name='first_brewed'
             type="text"
@@ -72,9 +77,9 @@ function AddBeerPage() {
               setFirstBrewed(e.target.value);
             }}
           />
-        </label>
-        <label>
+        <label htmlFor="brewers_tips">
           Brewers Tips
+        </label>
           <input
           name='brewers_tips'
             type="text"
@@ -82,9 +87,9 @@ function AddBeerPage() {
               setBrewersTips(e.target.value);
             }}
           />
-        </label>
-        <label>
+        <label htmlFor="attenuation_level">
           Attenuation Level
+        </label>
           <input
           name='attenuation_level'
             type="number"
@@ -92,9 +97,9 @@ function AddBeerPage() {
               setAttenuation(e.target.value);
             }}
           />
-        </label>
-        <label>
+        <label htmlFor="contributed_by">
           Contributed by
+        </label>
           <input
           name='contributed_by'
             type="text"
@@ -102,8 +107,7 @@ function AddBeerPage() {
               setContributor(e.target.value);
             }}
           />
-        </label>
-        <button type="submit">Add Beer</button>
+        <button type="submit">ADD NEW</button>
       </form>
     </div>
   );

@@ -10,7 +10,9 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="App">
-    <Navbar></Navbar>
+    <Navbar>
+    <img src="./src/assets/home-icon.png" alt="home icon" />
+    </Navbar>
       <Routes>
         <Route path="/" element={<HomePage></HomePage>}></Route>
         <Route path="/beers" element={<AllBeersPage></AllBeersPage>}></Route>

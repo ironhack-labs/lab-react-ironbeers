@@ -15,21 +15,23 @@ function BeerDetailsPage() {
     }, [beerId])
 
     return(
-        <div>
-            {!beerDetails && <p>...loading</p>}
+        <div id="BeerDetailsPage">
+            {!beerDetails && <div className="loading"><p>...loading</p></div>}
             {beerDetails && (
-                <div className="beer-wrapper">
-                            <div className="img-wrapper">
-                        <img src={beerDetails.image_url} alt={beerDetails.name} height={200} />
+                <div className="beer-details-wrapper">
+                            <div className="img-details-wrapper">
+                        <img src={beerDetails.image_url} alt={beerDetails.name} height={300} />
 
                             </div>
-                        <div className="beer-info">
-                        <h2>{beerDetails.name}</h2>
-                        <p>{beerDetails.tagline}</p>
-                        <p>{beerDetails.first_brewed}</p>
-                        <p>{beerDetails.attenuation_level}</p>
-                        <p>{beerDetails.description}</p>
-                        <p>{beerDetails.contributed_by}</p>
+                        <div className="beer-details-info">
+                        <span className="beer-name">{beerDetails.name}</span>
+                        <p className="beer-tagline">{beerDetails.tagline}</p>
+                        <aside className="top-right-info">
+                        <p className="beer-level">{beerDetails.attenuation_level}</p>
+                        <p className="beer-brewed">{beerDetails.first_brewed}</p>
+                        </aside>
+                        <p className="beer-desc">{beerDetails.description}</p>
+                        <p className="beer-contributed">{beerDetails.contributed_by}</p>
 
                         </div>
                         </div>

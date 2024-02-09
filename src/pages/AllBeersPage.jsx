@@ -1,28 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from 'axios'
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function AllBeersPage() {
     const [allBeers, setAllBeers] = useState([])
     const [query, setQuery] = useState('')
 
-    // function handleSearch(e){
-    //     setQuery(e)
-    //     axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
-    //     .then((filteredBeers)=>{
-    //         console.log(filteredBeers.data)
-    //         setAllBeers(filteredBeers.data)
-    //     })
-    //     .catch((err)=>{
-    //         console.log(err)
-    //     })
-
-    // }
 
     useEffect(()=>{
         axios.get('https://ih-beers-api2.herokuapp.com/beers')
         .then((beers)=>{
-            // console.log(beers.data)
+            console.log(beers.data)
             setAllBeers(beers.data)
         }) 
     }, [])
@@ -39,9 +27,9 @@ function AllBeersPage() {
     }, [query])
 
     return(
-        <div>
-        <input type="text" placeholder="search" onChange={(e)=>{setQuery(e.target.value)}} />
-            {!allBeers.length && <p>...loading</p>}
+        <div id="AllBeersPage">
+        <input type="text" placeholder="search" id="searchbar" onChange={(e)=>{setQuery(e.target.value)}} />
+            {!allBeers.length && <p className="loading">...loading</p>}
             {allBeers && (
             
                     allBeers.map((oneBeer)=>{
@@ -49,13 +37,13 @@ function AllBeersPage() {
                         <Link key={oneBeer._id} to={`/beers/${oneBeer._id}`}>
                             <div className="beer-wrapper">
                             <div className="img-wrapper">
-                        <img src={oneBeer.image_url} alt={oneBeer.name} height={200} />
+                        <img src={oneBeer.image_url} alt={oneBeer.name} />
 
                             </div>
                         <div className="beer-info">
-                        <h2>{oneBeer.name}</h2>
-                        <p>{oneBeer.tagline}</p>
-                        <p>Created by: {oneBeer.contributed_by}</p>
+                        <h2 className="all-beers-name">{oneBeer.name}</h2>
+                        <h3 className="all-beers-tagline">{oneBeer.tagline}</h3>
+                        <p className="all-beers-contributed"><strong>Created by: </strong>{oneBeer.contributed_by}</p>
 
                         </div>
                         </div>

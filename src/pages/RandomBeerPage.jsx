@@ -15,7 +15,7 @@ function RandomBeersPage() {
 
     return(
         <div>
-            {!beerDetails && <p>...loading</p>}
+            {!beerDetails && <div className="loading"><p>...loading</p></div>}
             {beerDetails && (
                 <div className="beer-wrapper">
                             <div className="img-wrapper">
