@@ -41,7 +41,7 @@ function AddBeerPage() {
   return (
     <div>
       <Navbar></Navbar>
-      <div>
+      <div className="add-beer">
         <form onSubmit={handleSubmit} action="" className="create-forms">
           <label htmlFor="">Name</label>
           <input
@@ -51,6 +51,7 @@ function AddBeerPage() {
               setName(e.target.value);
             }}
             value={name}
+            
           />
           <label htmlFor="">Tagline</label>
           <input
@@ -90,6 +91,7 @@ function AddBeerPage() {
           />
           <label htmlFor="">Attenuation Level</label>
           <input
+          placeholder=" "
             type="number"
             name="attenuation_level"
             onChange={(e) => {

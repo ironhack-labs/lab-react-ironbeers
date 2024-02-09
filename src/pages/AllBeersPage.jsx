@@ -35,9 +35,9 @@ function AllBeersPage() {
   return (
     <div>
       <Navbar></Navbar>
-      <input
+      <input className="search-bar"
+        placeholder="Search beer..."
         type="text"
-        style={{ width: "80%", height: "30px", marginTop: "20px" }}
         onChange={(e) => {
           setSearchInput(e.target.value);
         }}
