@@ -20,9 +20,9 @@ function AddBeerPage() {
         const newBeer = {name:name, tagline:tagline, description:description, firstBrewed:firstBrewed, brewersTips:brewersTips, attenuationLevel:attenuationLevel, contributedBy:contributedBy}
 
         axios.post('https://ih-beers-api2.herokuapp.com/beers/new', newBeer)
-        .then(()=>{
-            navigate(`/beers`)
-
+        .then((beer)=>{
+            navigate(`/beers/${beer.data._id}`)
+            console.log(beer)
         })
         .catch(()=>{
             
@@ -32,8 +32,7 @@ function AddBeerPage() {
 
     return(
         <div className="create-beer-form">
-            <form onSubmit={handleSubmit}>
-                
+            <form onSubmit={handleSubmit}>                
                 <label>Name
                     <input type="text" onChange={(e) => setName(e.target.value)} />
                 </label>

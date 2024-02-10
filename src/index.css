@@ -61,6 +61,12 @@ form {
   height: auto;
 }
 
+.beers-list input {
+  margin: 30px;
+  min-height: 30px;
+  min-width: 30vw;
+}
+
 .one-beer {
   display: flex;
   margin: 40px;

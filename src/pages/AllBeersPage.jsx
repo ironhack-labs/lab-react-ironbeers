@@ -17,8 +17,19 @@ function AllBeersPage() {
         })
     },[])
 
+    function filterBeers(query){
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+        .then((beerFiltered)=>{
+            setBeers(beerFiltered.data)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+
     return (
         <div className="beers-list">
+            <input onChange={(e)=>{filterBeers(e.target.value)}} />
             {beers.map((oneBeer) => {
                 return (
                     <div className="one-beer" key={oneBeer._id}>
