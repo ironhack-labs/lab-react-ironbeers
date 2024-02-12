@@ -6,6 +6,7 @@ import axios from "axios";
 function AllBeersPage() {
   // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.
   const [beers, setBeers] = useState(null);
+  const [query, setQuery] = useState("");
   const baseUrl = "https://ih-beers-api2.herokuapp.com";
 
   useEffect(() => {
@@ -20,6 +21,20 @@ function AllBeersPage() {
       });
   }, []);
 
+  console.log(query);
+
+  useEffect(() => {
+    axios
+      .get(`${baseUrl}/beers/search?q=${query}`)
+      .then((response) => {
+        setBeers(response.data);
+      })
+      .catch((e) => {
+        console.log("Error getting characters from the API...");
+        console.log(e);
+      });
+  }, [query]);
+
   // TASKS:
   // 1. Set up an effect hook to make a request to the Beers API and get a list with all the beers.
   // 2. Use axios to make a HTTP request.
@@ -28,7 +43,7 @@ function AllBeersPage() {
   // The logic and the structure for the page showing the list of beers. You can leave this as it is for now.
   return (
     <>
-      <Search />
+      <Search onChange={(e) => setQuery(e.target.value)} query={query} />
 
       <div className="d-inline-flex flex-wrap justify-content-center align-items-center w-100 p-4">
         {beers &&
