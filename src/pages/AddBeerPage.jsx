@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AddBeerPage() {
   // State variables to store the values of the form inputs. You can leave these as they are.
@@ -11,6 +13,8 @@ function AddBeerPage() {
   const [attenuationLevel, setAttenuationLevel] = useState(0);
   const [contributedBy, setContributedBy] = useState("");
 
+  const navigate = useNavigate();
+
   // Handler functions for the form inputs. You can leave these as they are.
   const handleName = (e) => setName(e.target.value);
   const handleTagline = (e) => setTagline(e.target.value);
@@ -21,11 +25,36 @@ function AddBeerPage() {
   const handleAttenuationLevel = (e) => setAttenuationLevel(e.target.value);
   const handleContributedBy = (e) => setContributedBy(e.target.value);
 
-
+  const API_URL = 'https://ih-beers-api2.herokuapp.com'
 
   // TASK:
   // 1. Create a function to handle the form submission and send the form data to the Beers API to create a new beer.
   // 2. Use axios to make a POST request to the Beers API.
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newProject = {
+        name: name,
+        tagline: tagline,
+        description: description,
+        imageUrl:imageUrl,
+        firstBrewed:firstBrewed,
+        brewersTips:brewersTips,
+        attenuationLevel:attenuationLevel,
+        contributedBy:contributedBy
+    }
+
+    axios.post(`${API_URL}/beers`, newProject)
+        .then((response) => {
+            navigate("/beers");
+        })
+        .catch((error) => {
+            console.log("Error creating new project...");
+            console.log(error);
+        });
+
+}
+
   // 3. Once the beer is created, navigate the user to the page showing the list of all beers.
 
 
@@ -34,7 +63,7 @@ function AddBeerPage() {
   return (
     <>
       <div className="d-inline-flex flex-column w-100 p-4">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Name</label>
           <input
             className="form-control mb-4"

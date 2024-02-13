@@ -1,0 +1,118 @@
+{
+    "sourceFile": "src/pages/BeerDetailsPage.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1707836309753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1707836324033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n \r\n \r\n function BeerDetailsPage() {\r\n \r\n+  const API_URL = https://ih-beers-api2.herokuapp.com/beers\r\n \r\n-  \r\n   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n   const [beer, setBeer] = useState(beersJSON[0]);\r\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n"
+                },
+                {
+                    "date": 1707836329938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n \r\n function BeerDetailsPage() {\r\n \r\n-  const API_URL = https://ih-beers-api2.herokuapp.com/beers\r\n+  const API_URL = 'https://ih-beers-api2.herokuapp.com/beers'\r\n \r\n   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n   const [beer, setBeer] = useState(beersJSON[0]);\r\n \r\n"
+                },
+                {
+                    "date": 1707836347171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n \r\n function BeerDetailsPage() {\r\n \r\n   const API_URL = 'https://ih-beers-api2.herokuapp.com/beers'\r\n+  \r\n \r\n   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n   const [beer, setBeer] = useState(beersJSON[0]);\r\n \r\n"
+                },
+                {
+                    "date": 1707836395278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,11 @@\n \r\n function BeerDetailsPage() {\r\n \r\n   const API_URL = 'https://ih-beers-api2.herokuapp.com/beers'\r\n-  \r\n \r\n+  const { beerId } = useParams();\r\n+\r\n   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n   const [beer, setBeer] = useState(beersJSON[0]);\r\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n"
+                },
+                {
+                    "date": 1707836422200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n   const { beerId } = useParams();\r\n \r\n   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n   const [beer, setBeer] = useState(beersJSON[0]);\r\n+  const [beer, setBeer] = useState(beersJSON[0]);\r\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n   const navigate = useNavigate();\r\n \r\n"
+                },
+                {
+                    "date": 1707836431535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n \r\n   const { beerId } = useParams();\r\n \r\n   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n-  const [beer, setBeer] = useState(beersJSON[0]);\r\n-  const [beer, setBeer] = useState(beersJSON[0]);\r\n+  //const [beer, setBeer] = useState(beersJSON[0]);\r\n+  const [beer, setBeer] = useState(null);\r\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n   const navigate = useNavigate();\r\n \r\n"
+                },
+                {
+                    "date": 1707836443001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import { useState } from \"react\";\r\n import { useNavigate } from \"react-router-dom\";\r\n-import beersJSON from \"./../assets/beers.json\";\r\n \r\n \r\n function BeerDetailsPage() {\r\n \r\n"
+                },
+                {
+                    "date": 1707836449509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n   const { beerId } = useParams();\r\n \r\n   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n-  //const [beer, setBeer] = useState(beersJSON[0]);\r\n+\r\n   const [beer, setBeer] = useState(null);\r\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n   const navigate = useNavigate();\r\n"
+                },
+                {
+                    "date": 1707836454711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n \r\n   const { beerId } = useParams();\r\n \r\n   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n-\r\n   const [beer, setBeer] = useState(null);\r\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n   const navigate = useNavigate();\r\n"
+                },
+                {
+                    "date": 1707836505621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n   const navigate = useNavigate();\r\n \r\n+  \r\n \r\n-\r\n   // TASKS:\r\n   // 1. Get the beer ID from the URL, using the useParams hook.\r\n   // 2. Set up an effect hook to make a request for the beer info from the Beers API.\r\n   // 3. Use axios to make a HTTP request.\r\n"
+                },
+                {
+                    "date": 1707836515030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,21 @@\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n   const navigate = useNavigate();\r\n \r\n-  \r\n+  const getProject = () => {\r\n+    axios.get(`${API_URL}/projects/${projectId}?_embed=tasks`)\r\n+        .then((response) => {\r\n+            setProject(response.data);\r\n+        })\r\n+        .catch((error) => {\r\n+            console.log(\"Error getting project details from the API...\");\r\n+            console.log(error)\r\n+        });\r\n+};\r\n \r\n   // TASKS:\r\n-  // 1. Get the beer ID from the URL, using the useParams hook.\r\n+  \r\n   // 2. Set up an effect hook to make a request for the beer info from the Beers API.\r\n   // 3. Use axios to make a HTTP request.\r\n   // 4. Use the response data from the Beers API to update the state variable.\r\n \r\n"
+                },
+                {
+                    "date": 1707836520446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n function BeerDetailsPage() {\r\n \r\n   const API_URL = 'https://ih-beers-api2.herokuapp.com/beers'\r\n \r\n+  // 1. Get the beer ID from the URL, using the useParams hook.\r\n   const { beerId } = useParams();\r\n \r\n   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n   const [beer, setBeer] = useState(null);\r\n"
+                },
+                {
+                    "date": 1707836537522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \r\n   // TASKS:\r\n   \r\n   // 2. Set up an effect hook to make a request for the beer info from the Beers API.\r\n-  // 3. Use axios to make a HTTP request.\r\n+  \r\n   // 4. Use the response data from the Beers API to update the state variable.\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1707836542542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n   const navigate = useNavigate();\r\n \r\n+  \r\n   const getProject = () => {\r\n     axios.get(`${API_URL}/projects/${projectId}?_embed=tasks`)\r\n         .then((response) => {\r\n             setProject(response.data);\r\n"
+                },
+                {
+                    "date": 1707836566461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \r\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n   const navigate = useNavigate();\r\n \r\n-  \r\n+  // 3. Use axios to make a HTTP request.\r\n   const getProject = () => {\r\n     axios.get(`${API_URL}/projects/${projectId}?_embed=tasks`)\r\n         .then((response) => {\r\n             setProject(response.data);\r\n@@ -29,9 +29,12 @@\n \r\n   // TASKS:\r\n   \r\n   // 2. Set up an effect hook to make a request for the beer info from the Beers API.\r\n-  \r\n+  useEffect(() => {\r\n+    getProject();\r\n+}, []);\r\n+\r\n   // 4. Use the response data from the Beers API to update the state variable.\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1707836584665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n   const navigate = useNavigate();\r\n \r\n   // 3. Use axios to make a HTTP request.\r\n-  const getProject = () => {\r\n+  const getBeer = () => {\r\n     axios.get(`${API_URL}/projects/${projectId}?_embed=tasks`)\r\n         .then((response) => {\r\n             setProject(response.data);\r\n         })\r\n"
+                },
+                {
+                    "date": 1707836603714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n \r\n function BeerDetailsPage() {\r\n \r\n-  const API_URL = 'https://ih-beers-api2.herokuapp.com/beers'\r\n+  const API_URL = 'https://ih-beers-api2.herokuapp.com/'\r\n \r\n   // 1. Get the beer ID from the URL, using the useParams hook.\r\n   const { beerId } = useParams();\r\n \r\n"
+                },
+                {
+                    "date": 1707836634209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n \r\n function BeerDetailsPage() {\r\n \r\n-  const API_URL = 'https://ih-beers-api2.herokuapp.com/'\r\n+  const API_URL = 'https://ih-beers-api2.herokuapp.com'\r\n \r\n   // 1. Get the beer ID from the URL, using the useParams hook.\r\n   const { beerId } = useParams();\r\n \r\n@@ -16,9 +16,9 @@\n   const navigate = useNavigate();\r\n \r\n   // 3. Use axios to make a HTTP request.\r\n   const getBeer = () => {\r\n-    axios.get(`${API_URL}/projects/${projectId}?_embed=tasks`)\r\n+    axios.get(`${API_URL}/beers/${projectId}?_embed=tasks`)\r\n         .then((response) => {\r\n             setProject(response.data);\r\n         })\r\n         .catch((error) => {\r\n"
+                },
+                {
+                    "date": 1707836649838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         .then((response) => {\r\n             setProject(response.data);\r\n         })\r\n         .catch((error) => {\r\n-            console.log(\"Error getting project details from the API...\");\r\n+            console.log(\"Error getting beer details from the API...\");\r\n             console.log(error)\r\n         });\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1707836679174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n   // TASKS:\r\n   \r\n   // 2. Set up an effect hook to make a request for the beer info from the Beers API.\r\n   useEffect(() => {\r\n-    getProject();\r\n+    getBeer();\r\n }, []);\r\n \r\n   // 4. Use the response data from the Beers API to update the state variable.\r\n \r\n"
+                },
+                {
+                    "date": 1707837076939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { useState } from \"react\";\r\n import { useNavigate } from \"react-router-dom\";\r\n \r\n \r\n+\r\n function BeerDetailsPage() {\r\n \r\n   const API_URL = 'https://ih-beers-api2.herokuapp.com'\r\n \r\n"
+                },
+                {
+                    "date": 1707837086442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n-import { useState } from \"react\";\r\n+import { useState, useEffect  } from \"react\";\r\n import { useNavigate } from \"react-router-dom\";\r\n+import { Link, useParams } from \"react-router-dom\";\r\n \r\n \r\n-\r\n function BeerDetailsPage() {\r\n \r\n   const API_URL = 'https://ih-beers-api2.herokuapp.com'\r\n \r\n"
+                },
+                {
+                    "date": 1707837099947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { useState, useEffect  } from \"react\";\r\n import { useNavigate } from \"react-router-dom\";\r\n import { Link, useParams } from \"react-router-dom\";\r\n+import axios from \"axios\";\r\n \r\n \r\n function BeerDetailsPage() {\r\n \r\n"
+                },
+                {
+                    "date": 1707837181532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,74 @@\n+import { useState, useEffect  } from \"react\";\r\n+import { useNavigate } from \"react-router-dom\";\r\n+import { Link, useParams } from \"react-router-dom\";\r\n+import axios from \"axios\";\r\n+\r\n+\r\n+function BeerDetailsPage() {\r\n+\r\n+  const API_URL = 'https://ih-beers-api2.herokuapp.com'\r\n+\r\n+  // 1. Get the beer ID from the URL, using the useParams hook.\r\n+  const { beerId } = useParams();\r\n+\r\n+  // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n+  const [beer, setBeer] = useState(null);\r\n+\r\n+  // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n+  const navigate = useNavigate();\r\n+\r\n+  // 3. Use axios to make a HTTP request.\r\n+  const getBeer = () => {\r\n+    axios.get(`${API_URL}/beers/${beerId}?_embed=tasks`)\r\n+        .then((response) => {\r\n+            setProject(response.data);\r\n+        })\r\n+        .catch((error) => {\r\n+            console.log(\"Error getting beer details from the API...\");\r\n+            console.log(error)\r\n+        });\r\n+};\r\n+\r\n+  // TASKS:\r\n+  \r\n+  // 2. Set up an effect hook to make a request for the beer info from the Beers API.\r\n+  useEffect(() => {\r\n+    getBeer();\r\n+}, []);\r\n+\r\n+  // 4. Use the response data from the Beers API to update the state variable.\r\n+\r\n+\r\n+\r\n+  // Structure and the content of the page showing the beer details. You can leave this as it is:\r\n+  return (\r\n+    <div className=\"d-inline-flex flex-column justify-content-center align-items-center w-100 p-4\">\r\n+      {beer && (\r\n+        <>\r\n+          <img\r\n+            src={beer.image_url}\r\n+            alt=\"Beer Image\"\r\n+            height=\"300px\"\r\n+            width=\"auto\"\r\n+          />\r\n+          <h3>{beer.name}</h3>\r\n+          <p>{beer.tagline}</p>\r\n+          <p>Attenuation level: {beer.attenuation_level}</p>\r\n+          <p>Description: {beer.description}</p>\r\n+          <p>Created by: {beer.contributed_by}</p>\r\n+\r\n+          <button\r\n+            className=\"btn btn-primary\"\r\n+            onClick={() => {\r\n+              navigate(-1);\r\n+            }}\r\n+          >\r\n+            Back\r\n+          </button>\r\n+        </>\r\n+      )}\r\n+    </div>\r\n+  );\r\n+}\r\n+\r\n+export default BeerDetailsPage;\r\n"
+                },
+                {
+                    "date": 1707837364168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   // 3. Use axios to make a HTTP request.\r\n   const getBeer = () => {\r\n     axios.get(`${API_URL}/beers/${beerId}?_embed=tasks`)\r\n         .then((response) => {\r\n-            setProject(response.data);\r\n+          setBeer(response.data);\r\n         })\r\n         .catch((error) => {\r\n             console.log(\"Error getting beer details from the API...\");\r\n             console.log(error)\r\n@@ -71,78 +71,4 @@\n   );\r\n }\r\n \r\n export default BeerDetailsPage;\r\n-import { useState, useEffect  } from \"react\";\r\n-import { useNavigate } from \"react-router-dom\";\r\n-import { Link, useParams } from \"react-router-dom\";\r\n-import axios from \"axios\";\r\n-\r\n-\r\n-function BeerDetailsPage() {\r\n-\r\n-  const API_URL = 'https://ih-beers-api2.herokuapp.com'\r\n-\r\n-  // 1. Get the beer ID from the URL, using the useParams hook.\r\n-  const { beerId } = useParams();\r\n-\r\n-  // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n-  const [beer, setBeer] = useState(null);\r\n-\r\n-  // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n-  const navigate = useNavigate();\r\n-\r\n-  // 3. Use axios to make a HTTP request.\r\n-  const getBeer = () => {\r\n-    axios.get(`${API_URL}/beers/${projectId}?_embed=tasks`)\r\n-        .then((response) => {\r\n-            setProject(response.data);\r\n-        })\r\n-        .catch((error) => {\r\n-            console.log(\"Error getting beer details from the API...\");\r\n-            console.log(error)\r\n-        });\r\n-};\r\n-\r\n-  // TASKS:\r\n-  \r\n-  // 2. Set up an effect hook to make a request for the beer info from the Beers API.\r\n-  useEffect(() => {\r\n-    getBeer();\r\n-}, []);\r\n-\r\n-  // 4. Use the response data from the Beers API to update the state variable.\r\n-\r\n-\r\n-\r\n-  // Structure and the content of the page showing the beer details. You can leave this as it is:\r\n-  return (\r\n-    <div className=\"d-inline-flex flex-column justify-content-center align-items-center w-100 p-4\">\r\n-      {beer && (\r\n-        <>\r\n-          <img\r\n-            src={beer.image_url}\r\n-            alt=\"Beer Image\"\r\n-            height=\"300px\"\r\n-            width=\"auto\"\r\n-          />\r\n-          <h3>{beer.name}</h3>\r\n-          <p>{beer.tagline}</p>\r\n-          <p>Attenuation level: {beer.attenuation_level}</p>\r\n-          <p>Description: {beer.description}</p>\r\n-          <p>Created by: {beer.contributed_by}</p>\r\n-\r\n-          <button\r\n-            className=\"btn btn-primary\"\r\n-            onClick={() => {\r\n-              navigate(-1);\r\n-            }}\r\n-          >\r\n-            Back\r\n-          </button>\r\n-        </>\r\n-      )}\r\n-    </div>\r\n-  );\r\n-}\r\n-\r\n-export default BeerDetailsPage;\r\n"
+                }
+            ],
+            "date": 1707836309753,
+            "name": "Commit-0",
+            "content": "import { useState } from \"react\";\r\nimport { useNavigate } from \"react-router-dom\";\r\nimport beersJSON from \"./../assets/beers.json\";\r\n\r\n\r\nfunction BeerDetailsPage() {\r\n\r\n\r\n  \r\n  // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.\r\n  const [beer, setBeer] = useState(beersJSON[0]);\r\n\r\n  // React Router hook for navigation. We use it for the back button. You can leave this as it is.\r\n  const navigate = useNavigate();\r\n\r\n\r\n\r\n  // TASKS:\r\n  // 1. Get the beer ID from the URL, using the useParams hook.\r\n  // 2. Set up an effect hook to make a request for the beer info from the Beers API.\r\n  // 3. Use axios to make a HTTP request.\r\n  // 4. Use the response data from the Beers API to update the state variable.\r\n\r\n\r\n\r\n  // Structure and the content of the page showing the beer details. You can leave this as it is:\r\n  return (\r\n    <div className=\"d-inline-flex flex-column justify-content-center align-items-center w-100 p-4\">\r\n      {beer && (\r\n        <>\r\n          <img\r\n            src={beer.image_url}\r\n            alt=\"Beer Image\"\r\n            height=\"300px\"\r\n            width=\"auto\"\r\n          />\r\n          <h3>{beer.name}</h3>\r\n          <p>{beer.tagline}</p>\r\n          <p>Attenuation level: {beer.attenuation_level}</p>\r\n          <p>Description: {beer.description}</p>\r\n          <p>Created by: {beer.contributed_by}</p>\r\n\r\n          <button\r\n            className=\"btn btn-primary\"\r\n            onClick={() => {\r\n              navigate(-1);\r\n            }}\r\n          >\r\n            Back\r\n          </button>\r\n        </>\r\n      )}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default BeerDetailsPage;\r\n"
+        }
+    ]
+}

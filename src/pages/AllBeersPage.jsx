@@ -1,19 +1,38 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Search from "../components/Search";
-import beersJSON from "./../assets/beers.json";
+//import beersJSON from "./../assets/beers.json";
 
 
 
 function AllBeersPage() {
   // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.
-  const [beers, setBeers] = useState(beersJSON);
+  const API_URL = "https://ih-beers-api2.herokuapp.com"
+  
+  //const [beers, setBeers] = useState(beersJSON);
+  const [beers, setBeers] = useState(null);
 
-
+  
 
   // TASKS:
   // 1. Set up an effect hook to make a request to the Beers API and get a list with all the beers.
+    useEffect(() => {
+      getAllBeers()
+    }, []);
+  
   // 2. Use axios to make a HTTP request.
+  const getAllBeers = () => {
+    axios.get(`${API_URL}/beers?_embed=tasks`)
+        .then((response) => {
+          console.log(response.data)
+          setBeers(response.data);
+        })
+        .catch((error) => {
+            console.log("Error getting beers from the API...");
+            console.log(error);
+        });
+  }
   // 3. Use the response data from the Beers API to update the state variable.
 
 
@@ -24,8 +43,12 @@ function AllBeersPage() {
       <Search />
 
       <div className="d-inline-flex flex-wrap justify-content-center align-items-center w-100 p-4">
-        {beers &&
+        {
+        beers === null
+        ? <p>Loading...</p>
+        :beers &&
           beers.map((beer, i) => {
+            console.log('beer: ',beer)
             return (
               <div key={i}>
                 <Link to={"/beers/" + beer._id}>
