@@ -18,7 +18,6 @@ function AllBeersPage() {
     axios
       .get(API_URL)
       .then((res) => {
-        console.log(res.data);
         setBeers(res.data);
       })
       .catch((e) => {
@@ -29,7 +28,7 @@ function AllBeersPage() {
   // The logic and the structure for the page showing the list of beers. You can leave this as it is for now.
   return (
     <>
-      <Search />
+      <Search setBeers={setBeers} />
 
       <div className="d-inline-flex flex-wrap justify-content-center align-items-center w-100 p-4">
         {beers &&

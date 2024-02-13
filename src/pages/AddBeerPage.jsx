@@ -39,7 +39,7 @@ function AddBeerPage() {
       image_url: imageUrl,
       first_brewed: firstBrewed,
       brewers_tips: brewersTips,
-      attenuation_level: parseInt(attenuationLevel),
+      attenuation_level: attenuationLevel,
       contributed_by: contributedBy,
     };
     axios
