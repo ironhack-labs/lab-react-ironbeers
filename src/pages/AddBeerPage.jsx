@@ -49,7 +49,7 @@ function AddBeerPage() {
           contributedBy: contributedBy
       }
 
-      axios.post(`${API_URL}/beers`, newBeer)
+      axios.post(`${API_URL}/beers/new`, newBeer)
           .then((response) => {
               navigate("/beers");
           })
