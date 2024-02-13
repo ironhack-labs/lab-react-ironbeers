@@ -11,17 +11,17 @@ function BeerDetailsPage() {
   const { beerId } = useParams();
 
   const API_URL = "https://ih-beers-api2.herokuapp.com/beers/"
-  
+
   // React Router hook for navigation. We use it for the back button. You can leave this as it is.
   const navigate = useNavigate();
 
   axios.get(API_URL + beerId)
-  .then((response) => {
-    setBeer(response.data)
-  })
-  .catch((e) => {
-    console.log(e)
-  })
+    .then((response) => {
+      setBeer(response.data)
+    })
+    .catch((e) => {
+      console.log(e)
+    })
 
   // TASKS:
   // 1. Get the beer ID from the URL, using the useParams hook.
