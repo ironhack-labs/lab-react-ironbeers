@@ -1,15 +1,28 @@
+
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Search from "../components/Search";
-import beersJSON from "./../assets/beers.json";
-
-
 
 function AllBeersPage() {
-  // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.
-  const [beers, setBeers] = useState(beersJSON);
+  const [beers, setBeers] = useState(null);
 
+  useEffect(() => {
+    const API_URL = "https://ih-beers-api2.herokuapp.com";
 
+    const getAllBeers = () => {
+      axios.get(`${API_URL}/beers`)
+        .then((response) => {
+          setBeers(response.data);
+        })
+        .catch((error) => {
+          
+          console.log(error + `Error getting API`);
+        });
+    };
+
+    getAllBeers();
+  }, []);
 
   // TASKS:
   // 1. Set up an effect hook to make a request to the Beers API and get a list with all the beers.
