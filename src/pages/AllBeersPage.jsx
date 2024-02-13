@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Search from "../components/Search";
 import beersJSON from "./../assets/beers.json";
 import axios from "axios";
@@ -17,13 +17,12 @@ function AllBeersPage() {
   // 2. Use axios to make a HTTP request.
   // 3. Use the response data from the Beers API to update the state variable.
 
-  axios.get(API_URL)
-    .then((response) => {
-      setBeers(response.data)
-    })
-    .catch((e) => {
-      console.log(e)
-    })
+  useEffect(() => {
+    axios.get(API_URL)
+      .then((response) => setBeers(response.data))
+      .catch((e) => console.log(e))
+  }, [])
+
 
 
 

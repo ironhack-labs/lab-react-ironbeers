@@ -19,16 +19,10 @@ function RandomBeersPage() {
   // 3. Use the response data from the Beers API to update the state variable.
 
   useEffect(() => {
-
     axios.get(API_URL + "random")
-      .then((response) => {
-        setRandomBeer(response.data)
-      })
-      .catch((e) => {
-        console.log(e)
-      })
-
-  }, [])
+      .then((response) => setRandomBeer(response.data))
+      .catch((e) => console.log(e))
+  }, [randomBeer])
 
 
   // The logic and the structure for the page showing the random beer. You can leave this as it is.

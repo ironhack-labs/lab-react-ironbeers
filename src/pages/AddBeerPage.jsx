@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AddBeerPage() {
   // State variables to store the values of the form inputs. You can leave these as they are.
@@ -44,12 +45,8 @@ function AddBeerPage() {
     }
 
     axios.post(API_URL + "new", newBeer)
-      .then((response) => {
-        console.log(response.data)
-      })
-      .catch((e) => {
-        console.log(e)
-      })
+      .then((response) => navigate('/beers'))
+      .catch((e) => console.log(e))
   }
 
   // Structure and the content of the page showing the form for adding a new beer. You can leave this as it is.

@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 function Search() {
+
+  const [search, setSearch ] = useState();
+  
   return (
     <div className="d-inline-flex justify-content-center align-items-center w-100 p-4">
       <div className="input-group mb-2 w-50">
