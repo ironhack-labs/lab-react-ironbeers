@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
 }
@@ -115,4 +115,9 @@ form {
   border: none;
   min-height: 30px;
   padding: 20px
+} */
+
+
+.rounded-lg{
+  border-radius: 2rem
 }

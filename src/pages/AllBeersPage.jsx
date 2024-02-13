@@ -28,19 +28,21 @@ function AllBeersPage() {
     }
 
     return (
-        <div className="beers-list">
-            <input onChange={(e)=>{filterBeers(e.target.value)}} />
+        <div className="container">
+            <input className="form-control text-center" onChange={(e)=>{filterBeers(e.target.value)}} placeholder="Search Beers"/>
             {beers.map((oneBeer) => {
                 return (
-                    <div className="one-beer" key={oneBeer._id}>
-                        <img src={oneBeer.image_url} alt="" className="beer-img"/>
-                        
-                        <div className="beer-details">
-                            <Link to={`/beers/${oneBeer._id}`}><h1>{oneBeer.name}</h1></Link>
-                            <p>{oneBeer.tagline}</p>
-                            <p><strong>Created by:</strong> {oneBeer.contributed_by}</p>
+                    <div className="row align-items-center" key={oneBeer._id}>
+                        <div className="col-md-2">
+                            <img src={oneBeer.image_url} alt="" style={{height:'200px', width: 'auto', marginBottom:'15px', marginTop:'25px'}} />
+                        </div> 
+                        <div className="col-md-8">
+                            <div>
+                                <Link to={`/beers/${oneBeer._id}`}><h1 className="text-body">{oneBeer.name}</h1></Link>
+                                <p className="lead">{oneBeer.tagline}</p>
+                                <p><strong>Created by:</strong> {oneBeer.contributed_by}</p>
+                            </div>
                         </div>
-                        <br></br>
                     </div>
                 )
             })}

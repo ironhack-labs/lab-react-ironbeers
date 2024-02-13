@@ -31,37 +31,49 @@ function AddBeerPage() {
 
 
     return(
-        <div className="create-beer-form">
-            <form onSubmit={handleSubmit}>                
+        <div className="container d-flex justify-content-center text-align-center">
+            <form onSubmit={handleSubmit} className="form-inline m-4 fw-bold">
+                <div>                
                 <label>Name
-                    <input type="text" onChange={(e) => setName(e.target.value)} />
+                    <input className="m-3" type="text" onChange={(e) => setName(e.target.value)} />
                 </label>
-                
+                </div>
+                <div>
                 <label>Tagline
-                    <input type="text" onChange={(e) => setTagline(e.target.value)} />
+                    <input className="m-3" type="text" onChange={(e) => setTagline(e.target.value)} />
                 </label>
-                
+                </div>
+                <div>
                 <label>Description
-                    <input type="text" onChange={(e) => setDescription(e.target.value)} />
+                    <input className="m-3" type="text" onChange={(e) => setDescription(e.target.value)} />
                 </label>
-                                
+                </div>
+
+                <div>                
                 <label>First Brewed
-                    <input type="text" onChange={(e) => setFirstBrewed(e.target.value)} />
-                </label>               
-                
+                    <input className="m-3" type="text" onChange={(e) => setFirstBrewed(e.target.value)} />
+                </label>
+                </div>    
+
+                <div>
                 <label>Brewer's Tips
-                    <input type="text" onChange={(e) => setBrewersTips(e.target.value)} />
+                    <input className="m-3" type="text" onChange={(e) => setBrewersTips(e.target.value)} />
                 </label>
-                              
+                </div>
+
+                <div>      
                 <label>Attenuation Level
-                    <input type="number" onChange={(e) => setAttenuationLevel(e.target.value)} />
+                    <input className="m-3" type="number" onChange={(e) => setAttenuationLevel(e.target.value)} />
                 </label>
-                               
+                </div>  
+                <div>        
                 <label>Contributed By
-                    <input type="text" onChange={(e) => setContributedBy(e.target.value)} />
+                    <input className="m-3" type="text" onChange={(e) => setContributedBy(e.target.value)} />
                 </label>
-                
-                <button>ADD BEER</button>
+                </div>
+                <div className="d-flex justify-content-center">
+                <button className="btn btn-primary btn-lg m-2" >ADD BEER</button>
+                </div>
             </form>
         </div>
     )

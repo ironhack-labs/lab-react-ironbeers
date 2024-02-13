@@ -6,6 +6,8 @@ import AllBeersPage from "./pages/AllBeersPage";
 import RandomBeerPage from "./pages/RandomBeerPage"
 import AddBeerPage from "./pages/AddBeerPage"
 import BeerDetailsPage from "./pages/BeerDetailsPage"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
