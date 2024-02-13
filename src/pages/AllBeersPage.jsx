@@ -8,7 +8,7 @@ import axios from "axios";
 
 function AllBeersPage() {
   // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.
-  const [beers, setBeers] = useState(beersJSON);
+  const [beers, setBeers] = useState(null);
 
   const API_URL = "https://ih-beers-api2.herokuapp.com/beers/"
 
@@ -33,8 +33,8 @@ function AllBeersPage() {
       <Search />
 
       <div className="d-inline-flex flex-wrap justify-content-center align-items-center w-100 p-4">
-        {beers &&
-          beers.map((beer, i) => {
+        {beers
+          ? beers.map((beer, i) => {
             return (
               <div key={i}>
                 <Link to={"/beers/" + beer._id}>
@@ -57,7 +57,9 @@ function AllBeersPage() {
                 </Link>
               </div>
             );
-          })}
+          })
+          : <div>Loading...</div>
+        }
       </div>
     </>
   );
