@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import beersJSON from "./../assets/beers.json";
 import axios from "axios";
 
 
