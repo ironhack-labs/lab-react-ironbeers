@@ -62,7 +62,7 @@ function AddBeerPage() {
   // Structure and the content of the page showing the form for adding a new beer. You can leave this as it is.
   return (
     <>
-      <div className="d-inline-flex flex-column w-100 p-4">
+      <div className="d-inline-flex flex-column w-50 p-4">
         <form onSubmit={handleSubmit}>
           <label>Name</label>
           <input
