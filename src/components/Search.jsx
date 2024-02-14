@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Search(onSearch) {
+function Search({onSearch, beers}) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleInputChange = (e) => {
