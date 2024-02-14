@@ -1,19 +1,8 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 
-function Search() {
+function Search(props) {
+  const { handleSearchChange } = props;
   const [name, setName] = useState("");
-
-  useEffect(() => {
-    axios
-      .get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${name}`)
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, [name]);
 
   return (
     <div className="d-inline-flex justify-content-center align-items-center w-100 p-4">
@@ -29,6 +18,7 @@ function Search() {
           value={name}
           onChange={(event) => {
             setName(event.target.value);
+            handleSearchChange(event);
           }}
         />
       </div>
