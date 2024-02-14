@@ -19,13 +19,12 @@ function RandomBeersPage() {
     axios
       .get("https://ih-beers-api2.herokuapp.com/beers/random")
       .then((response) => {
-        console.log(response.data);
         setRandomBeer(response.data);
       })
       .catch((error) => {
         console.error(error);
-      }, []);
-  });
+      });
+  }, []);
 
   // The logic and the structure for the page showing the random beer. You can leave this as it is.
   return (
