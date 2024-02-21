@@ -1,0 +1,9 @@
+.AddBeer > form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px 0;
+}
+
+.AddBeer > form > label, .AddBeer > form > button {
+    margin-top: 8px;
+}
