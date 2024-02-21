@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "1111a111111aa11111a1aa11",
+    "name": "Beer One",
+    "tagline": "Beer One Tagline",
+    "description": "Beer one description text...",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "first_brewed": "04/2008",
+    "brewers_tips": "Here are some tips ....",
+    "attenuation_level": 1,
+    "contributed_by": "Ironhacker"
+  },
+  {
+    "_id": "2222a222222aa22222a2aa22",
+    "name": "Beer Two",
+    "tagline": "Beer Two Tagline",
+    "description": "Beer two description text...",
+    "image_url": "https://images.punkapi.com/v2/keg.png",
+    "first_brewed": "04/2008",
+    "brewers_tips": "Here are some tips ....",
+    "attenuation_level": 2,
+    "contributed_by": "Ironhacker"
+  }
+]
