@@ -24,7 +24,7 @@ function RandomBeersPage() {
     <div className="d-inline-flex flex-column justify-content-center align-items-center w-100 p-4">
       <h2>Random Beer</h2>
 
-      {randomBeer && (
+      {randomBeer && ( //igual hay que quitar el randomBeer &&, si veo que no funciona probarlo
         <>
           <img
             src={randomBeer.image_url}
