@@ -34,10 +34,10 @@ function AllBeersPage() {
   // The logic and the structure for the page showing the list of beers. You can leave this as it is for now.
   return (
     <>
-      <Search />
+      <Search setBeers={setBeers}/>
 
       <div className="d-inline-flex flex-wrap justify-content-center align-items-center w-100 p-4">
-        {beers &&
+        {beers && //este es un operador de corto circuito que indica que cuando beers exista se renderice todo lo demás. también se puede usar un operador ternario o el if que hemos hecho hasta ahora (if beers === null) {xxx})
           beers.map((beer, i) => {
             return (
               <div key={i}>
