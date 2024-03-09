@@ -1,0 +1,102 @@
+.body{
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    background-color: rgba(14, 103, 177, 0.919);
+    padding: 17px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.home-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.info-box{
+    border: 3px solid  rgba(14, 103, 177, 0.919);
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: 20px;
+    color: black
+}
+
+.info-box img{
+    width: 70vw;
+}
+
+.info-box div{
+    padding: 20px;
+}
+
+.info-box div h2{
+    font-size: 40px;
+}
+
+.info-box div p{
+    font-size: 18px;
+}
+
+.beer-info{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid lightgrey;
+    padding: 50px;
+    align-items: center;
+    column-gap: 70px;
+    font-size: 1.5em;
+}
+
+.beer-info img{
+    width: 150px;
+}
+
+.button{
+    background-color: rgba(14, 103, 177, 0.919);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    top: 20px;
+    margin: 30px;
+    font-size: 24px;
+}
+
+.beer-detail-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid  rgba(14, 103, 177, 0.919);
+    margin: 50px 200px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.beer-detail-info div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.4em;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.beer-detail-info img{
+    width: 200px;
+}
+
+
+.beer-detail-info h2{
+    font-size: 45px;
+}
+
+.beer-detail-info span{
+    color: grey;
+    font-size: 25px;
+}
