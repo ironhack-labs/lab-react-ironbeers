@@ -4,26 +4,28 @@ import BeerService from '../service/BeerService';
 
 export default function RandomBeerPage() {
     const [randBeer, setRandBeer] = useState();
+    const [loadingBeer, setLoadingBeer] = useState(true);
     const service = new BeerService();
   
     const getRandBeer = async () => {
       const beerApi = await service.getRandomBeer();
       setRandBeer(beerApi);
+      setLoadingBeer(false);
     }
   
     useEffect(() =>{
-        getRandBeer();
+        if(loadingBeer) getRandBeer();
     }, [])
 
-    useEffect(() => {
-        return setRandBeer()
-    }, [])
+    // useEffect(() => {
+    //     return setRandBeer(null);
+    // }, [])
   
-    console.log({beer: randBeer});
+    // console.log({randBeer: randBeer});
     
     return (
       <div>
-          {!!randBeer ? <DetailBox {...randBeer} /> : <h3>Loading...</h3>}
+          {!loadingBeer ? <DetailBox {...randBeer} /> : <h3>Loading...</h3>}
       </div>
     )
 }

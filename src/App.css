@@ -100,3 +100,18 @@ nav{
     color: grey;
     font-size: 25px;
 }
+
+.form-beer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.form-beer input,
+.form-beer textarea{
+    margin-bottom: 20px;
+}
+
+.form-beer label{
+    font-weight: 900;
+}

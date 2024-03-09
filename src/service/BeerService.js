@@ -20,4 +20,8 @@ export default class BeerService {
     getRandomBeer(){
         return this.service.get("/random").then((resp) => resp.data);
     }
+
+    createBeer(newBeer){
+        return this.service.post("/new", newBeer).then((resp) => resp.data);
+    }
 }
