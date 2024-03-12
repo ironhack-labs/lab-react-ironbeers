@@ -17,7 +17,29 @@ function BeerDetailsPage() {
   // 2. Set up an effect hook to make a request for the beer info from the Beers API.
   // 3. Use axios to make a HTTP request.
   // 4. Use the response data from the Beers API to update the state variable.
+ }, [])
 
+
+  // Structure and the content of the page showing the beer details. You can leave this as it is:
+@@ -40,15 +41,15 @@ function BeerDetailsPage() {
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              navigate(-1);
+              navigate(-1)
+            }}
+          >
+            Back
+          </button>
+        </>
+      )}
+    </div>
+  );
+  )
+}
+
+export default BeerDetailsPage;
+export default BeerDetailsPage
 
 
   // Structure and the content of the page showing the beer details. You can leave this as it is:
