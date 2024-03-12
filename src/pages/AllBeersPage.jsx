@@ -16,6 +16,19 @@ function AllBeersPage() {
   // 2. Use axios to make a HTTP request.
   // 3. Use the response data from the Beers API to update the state variable.
 
+const [beers, setBeers] = useState([])
+
+  useEffect(() => loadBeers(), [])
+
+  const loadBeers = () => {
+    axios
+      .get(api_base_url)
+      .then(({ data }) => setBeers(data))
+      .catch(err => console.log(err))
+  }
+
+  // The logic and the structure for the page showing the list of beers. You can leave this as it is for now.
+  return (
 
 
   // The logic and the structure for the page showing the list of beers. You can leave this as it is for now.
