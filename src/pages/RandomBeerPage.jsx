@@ -11,7 +11,7 @@ function RandomBeersPage() {
   const navigate = useNavigate();
 
 
-  
+
   // TASKS:
   // 1. Set up an effect hook to make a request for a random beer from the Beers API.
   // 2. Use axios to make a HTTP request.
