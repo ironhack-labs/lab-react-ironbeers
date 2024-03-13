@@ -41,7 +41,7 @@ function AddBeerPage() {
         imageUrl,
         firstBrewed,
         brewersTips,
-        attenuationLevel,
+        attenuation_Level : attenuationLevel,
         contributedBy,
       }
 
