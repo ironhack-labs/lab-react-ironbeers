@@ -42,7 +42,7 @@ function AddBeerPage() {
 
       try {
         axios.post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer);
-        nav("/");
+        nav("/beers");
       } catch (err) {
         console.log(err);
       }
