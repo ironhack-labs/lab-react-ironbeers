@@ -37,7 +37,7 @@ function AddBeerPage() {
         first_brewed: firstBrewed,
         brewers_tips: brewersTips,
         attenuation_level: attenuationLevel,
-        contribured_by: contributedBy,
+        contributed_by: contributedBy,
       };
 
       try {
