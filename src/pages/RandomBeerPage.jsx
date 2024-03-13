@@ -21,12 +21,12 @@ function RandomBeersPage() {
   useEffect(() => {
     const getRandomBeer = async () => {
       try {
-        const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers")
+        const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers/random")
         setRandomBeer(response.data)
         //console.log(response.data)
       } catch(err) {
         console.log(err)
-      }
+      } 
     }
     getRandomBeer();
   }, [])

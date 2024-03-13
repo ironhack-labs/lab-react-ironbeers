@@ -30,7 +30,7 @@ function AddBeerPage() {
   // 2. Use axios to make a POST request to the Beers API.
   // 3. Once the beer is created, navigate the user to the page showing the list of all beers.
 
-  const attenuation_level = parseInt(attenuationLevel)
+  const attenuation_Level = parseInt(attenuationLevel)
   const navigate = useNavigate()
   const handleNewBeer = async (e) => {
     e.preventDefault(); // para no recargar la pagina una y otra vez.
@@ -41,7 +41,7 @@ function AddBeerPage() {
         imageUrl,
         firstBrewed,
         brewersTips,
-        attenuation_Level : attenuationLevel,
+       attenuationLevel: attenuation_Level,
         contributedBy,
       }
 
