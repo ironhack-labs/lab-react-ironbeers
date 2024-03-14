@@ -5,6 +5,7 @@ import nock from "nock";
 import axios from "axios";
 import App from "../App";
 
+
 const API_URL = "https://ih-beers-api2.herokuapp.com";
 
 axios.defaults.adapter = "http";
@@ -30,6 +31,8 @@ describe("Iteration 2", () => {
     let scope;
 
     beforeEach(() => {
+      
+      jest.spyOn(require("react-router-dom"), "useParams").mockReturnValue({ beerId: "a1" })
       scope = nock(API_URL).get("/beers/a1").reply(200, beer);
 
       render(
@@ -40,6 +43,8 @@ describe("Iteration 2", () => {
     });
 
     afterEach(() => {
+
+     
       scope.done();
     });
 

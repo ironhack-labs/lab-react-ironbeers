@@ -1,14 +1,36 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+//import { useState } from "react";
 import Search from "../components/Search";
 import beersJSON from "./../assets/beers.json";
+import axios from "axios"; 
 
-
+import React, { useState, useEffect } from 'react';
 
 function AllBeersPage() {
   // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.
-  const [beers, setBeers] = useState(beersJSON);
+ const [beers, setBeers] = useState(beersJSON);
 
+ //const [beers, setBeers] = useState([]);
+
+  // Set up an effect hook to make a request to the Beers API and get a list with all the beers.
+  useEffect(() => {
+    // Function to fetch data from the Beers API
+    const fetchBeers = async () => {
+      try {
+        // Use axios to make a GET request to the Beers API
+        const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers");
+
+        // Use the response data from the Beers API to update the state variable
+        setBeers(response.data);
+      } catch (error) {
+        // Handle any errors that may occur during the API request
+        console.error("Error fetching beers:", error);
+      }
+    };
+
+    // Call the fetchBeers function when the component mounts
+    fetchBeers();
+  }, []); // The empty dependency array ensures that this effect runs only once, when the component mounts
 
 
   // TASKS:

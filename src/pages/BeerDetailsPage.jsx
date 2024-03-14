@@ -8,9 +8,35 @@ function BeerDetailsPage() {
   const [beer, setBeer] = useState(beersJSON[0]);
 
   // React Router hook for navigation. We use it for the back button. You can leave this as it is.
+  //const navigate = useNavigate();
+
+  // React Router hook for navigation.
   const navigate = useNavigate();
 
+  // Get the beer ID from the URL using the useParams hook.
+  const { beerId } = useParams();
 
+  // Set up an effect hook to make a request for the beer info from the Beers API.
+  useEffect(() => {
+    // Function to fetch data from the Beers API
+    const fetchBeerDetails = async () => {
+      try {
+        // Use axios to make a GET request to the Beers API for the specific beer ID
+        const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`);
+
+        // Use the response data from the Beers API to update the state variable
+        setBeer(response.data);
+      } catch (error) {
+        // Handle any errors that may occur during the API request
+        console.error("Error fetching beer details:", error);
+      }
+    };
+
+    // Call the fetchBeerDetails function when the component mounts
+    fetchBeerDetails();
+  }, [beerId]); // The dependency array ensures that this effect runs whenever beerId changes
+
+  // Structure and the content of the page showing the beer details
 
   // TASKS:
   // 1. Get the beer ID from the URL, using the useParams hook.

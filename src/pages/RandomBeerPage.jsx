@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import beersJSON from "./../assets/beers.json";
-
+import React, {  useEffect } from 'react'
+import axios from 'axios';
 
 function RandomBeersPage() {
   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.
@@ -11,7 +12,27 @@ function RandomBeersPage() {
   const navigate = useNavigate();
 
 
-  
+  // Set up an effect hook to make a request for a random beer from the Beers API.
+  useEffect(() => {
+    // Function to fetch a random beer from the Beers API
+    const fetchRandomBeer = async () => {
+      try {
+        // Use axios to make a GET request to the Beers API for a random beer
+        const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers/random");
+
+        // Use the response data from the Beers API to update the state variable
+        setRandomBeer(response.data);
+      } catch (error) {
+        // Handle any errors that may occur during the API request
+        console.error("Error fetching random beer:", error);
+      }
+    };
+
+    // Call the fetchRandomBeer function when the component mounts
+    fetchRandomBeer();
+  }, []); // The empty dependency array ensures that this effect runs once when the component mounts
+
+  // Structure and the content of the page showing the random beer
   // TASKS:
   // 1. Set up an effect hook to make a request for a random beer from the Beers API.
   // 2. Use axios to make a HTTP request.
