@@ -11,7 +11,6 @@ function RandomBeersPage() {
 				const res = await axios.get(
 					`https://ih-beers-api2.herokuapp.com/beers/random`
 				);
-				console.log(res.data);
 				setBeer(res.data);
 			} catch (error) {
 				console.log(error);

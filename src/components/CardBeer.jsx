@@ -1,5 +1,4 @@
 export const CardBeer = ({ beer }) => {
-	console.log(beer);
 	if (!beer) {
 		return <div>loading...</div>;
 	}

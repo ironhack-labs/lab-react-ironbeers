@@ -32,16 +32,18 @@ function HomePage() {
 						</p>
 					</div>
 				</Link>
-				<div className="card">
-					<img src={NewBeer} alt="NewBeer " />
-					<h2 className="titleCard">New Beer</h2>
-					<p className="textCard">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-						fugit fuga consequatur assumenda id! Soluta voluptatum fugit
-						officiis porro voluptates reiciendis deleniti aut laudantium sunt
-						nihil, doloribus, incidunt facilis recusandae?
-					</p>
-				</div>
+				<Link to="/new-beer">
+					<div className="card">
+						<img src={NewBeer} alt="NewBeer " />
+						<h2 className="titleCard">New Beer</h2>
+						<p className="textCard">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+							fugit fuga consequatur assumenda id! Soluta voluptatum fugit
+							officiis porro voluptates reiciendis deleniti aut laudantium sunt
+							nihil, doloribus, incidunt facilis recusandae?
+						</p>
+					</div>
+				</Link>
 			</div>
 		</div>
 	);
