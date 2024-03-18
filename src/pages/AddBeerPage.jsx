@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
 
 function AddBeerPage() {
   // State variables to store the values of the form inputs. You can leave these as they are.
@@ -27,8 +29,52 @@ function AddBeerPage() {
   // 1. Create a function to handle the form submission and send the form data to the Beers API to create a new beer.
   // 2. Use axios to make a POST request to the Beers API.
   // 3. Once the beer is created, navigate the user to the page showing the list of all beers.
+  const { beerId } = useParams();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+   //first stop the page from reloading with e.preventDefault()
+   e.preventDefault();
+   //create a new variable that has all the states, you will send this variable in the POST
+   
+   const AddBeerPage = { 
+    name,
+    tagline,
+    description,
+    imageUrl,
+    firstBrewed,
+    brewersTips,
+    attenuationLevel,
+    contributedBy
+  };
+  console.log("form submitted", AddBeerPage);
+
+  try {
+    //new variable for what the POST fetch returns
+    const response = await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", newBeer) 
+      console.log("beer was successfully added", response.data);
+      nav("/");
+
+  } catch (err) {
+    console.log("Error adding beer:", err);
+  }
+};
+
+useEffect(() => {
+  const getOneBeer = async () => {
+    try {
+      const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`);
+      const data = response.data;
+      setBeer(data);
+    } catch (err) {
+      console.log("Error fetching beer:", err)
+    }
+  };
+  getOneBeer();
+}, [beerId]);
 
 
+//if no product the return loading
 
   // Structure and the content of the page showing the form for adding a new beer. You can leave this as it is.
   return (
