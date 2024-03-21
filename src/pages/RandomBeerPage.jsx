@@ -10,9 +10,9 @@ function RandomBeersPage() {
     const [beer, setBeer] = useState([]);
 
     useEffect(() => {
-        axios.get(`${beersAPI}/random`).then((res) => {
-          setBeer(res.data);
-          console.log(res.data);
+        axios.get(`${beersAPI}/random`).then((result) => {
+          setBeer(result.data);
+          console.log(result.data);
         });
       }, []);
 

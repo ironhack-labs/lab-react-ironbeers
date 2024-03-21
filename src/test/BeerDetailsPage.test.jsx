@@ -25,7 +25,7 @@ describe("Iteration 5", () => {
     const taglinePattern = new RegExp(beer.tagline, "i");
     const attenuationPattern = new RegExp(beer.attenuation_level, "i");
     const descriptionPattern = new RegExp(beer.description, "i");
-    const contributedByPattern = new RegExp(beer.contributed_by, "i");
+    const contributed_byPattern = new RegExp(beer.contributed_by, "i");
 
     let scope;
 
@@ -78,7 +78,7 @@ describe("Iteration 5", () => {
 
     test("renders the contributor of the selected beer", async () => {
       await waitFor(() => {
-        expect(screen.getByText(contributedByPattern)).toBeInTheDocument();
+        expect(screen.getByText(contributed_byPattern)).toBeInTheDocument();
       });
     });
   });

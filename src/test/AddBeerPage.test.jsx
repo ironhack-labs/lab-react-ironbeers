@@ -75,11 +75,11 @@ describe("Iteration 7", () => {
     });
 
     test("renders the 'contributed_by' input field", async () => {
-      const contributedByInput = container.querySelector(
+      const contributed_byInput = container.querySelector(
         'input[name="contributed_by"]'
       );
       await waitFor(() => {
-        expect(contributedByInput).not.toBeNull();
+        expect(contributed_byInput).not.toBeNull();
       });
     });
 
@@ -120,7 +120,7 @@ describe("Iteration 7", () => {
       const brewersTipsInput = container.querySelector(
         'input[name="brewers_tips"]'
       );
-      const contributedByInput = container.querySelector(
+      const contributed_byInput = container.querySelector(
         'input[name="contributed_by"]'
       );
       const attenuationInput = container.querySelector(
@@ -147,7 +147,7 @@ describe("Iteration 7", () => {
         target: { value: newBeer.brewers_tips },
       });
 
-      fireEvent.change(contributedByInput, {
+      fireEvent.change(contributed_byInput, {
         target: { value: newBeer.contributed_by },
       });
 
