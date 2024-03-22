@@ -33,7 +33,7 @@ function AllBeersPage() {
   };
 
   return (
-    <div>
+    <div className="list-group">
       <h1>All Beers</h1>
       <input
         onChange={handleChange}
@@ -43,11 +43,31 @@ function AllBeersPage() {
       <br />
       <ul>
         {beers.map((beer) => (
-          <li className="beer-container" key={beer._id}>
-            <img style={{width: '50px', height: 'auto'}}src={beer.image_url} />
-            <Link to={`/beers/${beer._id}`}>{beer.name}</Link>
-            <p>{beer.tagline}</p>
-            <p>Created by: {beer.contributed_by}</p>
+          <li
+            className="list-group-item list-group-item-action"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: "30px"
+            }}
+            key={beer._id}
+          >
+            <img
+              style={{ width: "50px", height: "auto" }}
+              src={beer.image_url}
+            />
+
+            <div className="container">
+              <Link to={`/beers/${beer._id}`} className="text-dark">
+                <h3>{beer.name}</h3>
+              </Link>
+              <p style={{ color: "grey" }}>{beer.tagline}</p>
+              <p>
+                <strong>Created by: </strong>
+                {beer.contributed_by}
+              </p>
+            </div>
           </li>
         ))}
       </ul>
