@@ -29,17 +29,6 @@ function AddBeerPage({ beers, setBeers }) {
   // 2. Use axios to make a POST request to the Beers API.
   // 3. Once the beer is created, navigate the user to the page showing the list of all beers.
 
-  const beerPost = async () => {
-    try {
-      const response = await axios.post(
-        "https://ih-beers-api2.herokuapp.com/beers/new",
-        {}
-      );
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -53,18 +42,16 @@ function AddBeerPage({ beers, setBeers }) {
       attenuation_level,
       contributed_by,
     };
-    console.log("form submitted", newBeer);
 
-    try {
-      const res = await axios("https://ih-beers-api2.herokuapp.com/new-beer", {
-        method: "POST",
+    axios
+      .post(`https://ih-beers-api2.herokuapp.com/new-beer`, newBeer)
+      .then(function (response) {
+        console.log(response);
+        nav(`https://ih-beers-api2.herokuapp.com/beers`);
+      })
+      .catch(function (error) {
+        console.log(error);
       });
-      console.log("product was successfully added", res);
-      setBeers([res, ...beers]);
-      nav("/");
-    } catch (err) {
-      console.log(err);
-    }
   };
 
   // Structure and the content of the page showing the form for adding a new beer. You can leave this as it is.
@@ -159,7 +146,9 @@ function AddBeerPage({ beers, setBeers }) {
             value={contributedBy}
             onChange={handleContributedBy}
           />
-          <button className="btn btn-primary btn-round">Add Beer</button>
+          <button className="btn btn-primary btn-round" type="submit">
+            Add Beer
+          </button>
         </form>
       </div>
     </>
