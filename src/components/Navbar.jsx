@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
+import home from '../assets/home-icon.png'
 
 function Navbar() {
     return (
-        <nav>
-            <Link to={'/'}>
-                <p>Home</p>
+        <nav className="navbar navbar-light bg-dark mb-5">
+            <Link class="navbar-brand" to={'/'}>
+                <img className='mx-3' src={home} />
             </Link>
         </nav>
+
     )
 }
 

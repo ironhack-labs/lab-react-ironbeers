@@ -6,6 +6,7 @@ function BeerDetailsPage() {
     const { beerId } = useParams()
 
     const [beer, setBeer] = useState([])
+    
     useEffect(() => {
 
         axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
