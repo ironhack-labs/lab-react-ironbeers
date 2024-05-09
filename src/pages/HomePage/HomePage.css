@@ -1,0 +1,20 @@
+.cards-container-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 44rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.homeLink{
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+    font-weight: normal
+}

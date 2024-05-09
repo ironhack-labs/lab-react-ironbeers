@@ -1,0 +1,18 @@
+.BeersList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card img {
+    max-height: 15rem;
+    width: auto;
+    height: auto;
+}
+.card-body a {
+    text-decoration: none;
+    color: black;
+}
+.card-text{
+    margin-bottom: 2rem;    
+}

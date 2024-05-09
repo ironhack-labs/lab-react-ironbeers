@@ -1,0 +1,10 @@
+.Navbar {
+    background-color: rgb(72, 114, 172);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Navbar img{
+    width: 3rem;
+}

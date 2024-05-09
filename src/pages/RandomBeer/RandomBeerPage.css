@@ -1,0 +1,7 @@
+.RandomBeer{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 35rem;
+}

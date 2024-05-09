@@ -1,0 +1,8 @@
+.form {
+    width: 30rem;
+    margin-top: 2rem;
+}
+.new-beer{
+    display: flex;
+    justify-content: center;
+}
