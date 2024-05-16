@@ -1,24 +1,24 @@
 [
   {
+    "image_url": "https://images.punkapi.com/v2/keg.png",
     "_id": "1111a111111aa11111a1aa11",
     "name": "Beer One",
     "tagline": "Beer One Tagline",
-    "description": "Beer one description text...",
-    "image_url": "https://images.punkapi.com/v2/keg.png",
     "first_brewed": "04/2008",
-    "brewers_tips": "Here are some tips ....",
+    "description": "Beer One Description text...",
     "attenuation_level": 1,
+    "brewers_tips": "Here are some tips ....",
     "contributed_by": "Ironhacker"
   },
   {
+    "image_url": "https://images.punkapi.com/v2/keg.png",
     "_id": "2222a222222aa22222a2aa22",
     "name": "Beer Two",
     "tagline": "Beer Two Tagline",
-    "description": "Beer two description text...",
-    "image_url": "https://images.punkapi.com/v2/keg.png",
     "first_brewed": "04/2008",
-    "brewers_tips": "Here are some tips ....",
+    "description": "Beer Two Description text...",
     "attenuation_level": 2,
+    "brewers_tips": "Here are some tips ....",
     "contributed_by": "Ironhacker"
   }
 ]
