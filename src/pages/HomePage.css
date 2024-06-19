@@ -1,0 +1,45 @@
+/* src/pages/HomePage.css */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.home-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.home-link img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.home-link-text {
+  padding: 10px;
+  text-align: center;
+}
+
+.home-link-text h2 {
+  margin: 10px 0 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.home-link-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}

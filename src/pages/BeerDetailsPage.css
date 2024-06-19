@@ -1,0 +1,78 @@
+/* src/pages/BeerDetailsPage.css */
+.beer-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .beer-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .beer-info {
+    flex: 1;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .beer-info h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .beer-info .attenuation-level {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .tagline-first-brewed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .beer-info .tagline {
+    color: grey;
+    margin: 5px 0;
+    flex: 1;
+  }
+  
+  .beer-info .first-brewed {
+    font-size: 16px;
+    color: grey;
+    margin-left: 20px;
+  }
+  
+  .beer-info p {
+    margin: 5px 0;
+  }
+  
+  .beer-info p strong {
+    font-weight: bold;
+  }
+  
+  .beer-info .description {
+    margin-top: 10px;
+  }
+  
+  .beer-info .contributed {
+    margin-top: 20px;
+    color: grey;
+    font-weight: bold;
+  }
+  

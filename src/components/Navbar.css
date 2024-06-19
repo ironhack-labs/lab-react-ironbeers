@@ -1,0 +1,14 @@
+/* src/components/Navbar.css */
+.navbar {
+    background-color: #2ec3f5;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-icon {
+    width: 50px;
+    height: auto;
+  }
+  
