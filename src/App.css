@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+body{
+    background-color: rgb(22, 26, 43);
+    color: white;
+    font-size: 14px;
+    font-family: 'Montserrat';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{ 
+    text-align: center;  
+} 
+
+.buttonContainer{
+
+    width: 20%;
+    min-width: 300px;
+    margin: auto;
+    margin-top: 90px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+    padding: 20px;
+    font-size: 1.6rem;
+    width: 100%; 
+    color: white;
+    background-color: rgb(51, 51, 77);
+    border: 1px solid white;
+    box-shadow: none;
+    border-radius: 10px; 
+    text-underline-offset: none;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:hover{
+    background-color: rgb(67, 67, 100);
 }
 
-.App-link {
-  color: #61dafb;
+Link{
+    width: 100%; 
+    text-decoration: none;
+    box-shadow: none;
+    text-underline-offset: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+    width: 100%; 
+    text-decoration: none;
+    box-shadow: none;
+    text-underline-offset: none;
+}
+
+h2{
+    font-size: 1rem;
+}
+
+.allBeers{
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.beer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+
+    width: 20%;
+    height: 40vh;
+}
+
+.beer img{
+   width: 90%;
+}
+
+.oneBeer{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
