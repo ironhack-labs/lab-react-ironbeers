@@ -7,10 +7,7 @@ function Search() {
             Search
           </span>
         </div>
-        <input
-          type="text"
-          className="form-control search-bar"
-        />
+        <input type="text" className="form-control search-bar" />
       </div>
     </div>
   );
