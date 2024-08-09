@@ -1,0 +1,32 @@
+.random-beer-page {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .beer-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin: 10px 0;
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    margin: 20px 0;
+    font-size: 1.2rem;
+  }
+  
+  p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+  }
+  

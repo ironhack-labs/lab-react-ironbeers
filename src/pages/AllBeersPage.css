@@ -1,0 +1,41 @@
+.all-beers-page {
+    padding: 20px;
+  }
+  
+  .beer-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .beer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .beer-image {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .beer-info {
+    flex-grow: 1;
+  }
+  
+  .beer-info h2 {
+    margin: 0 0 5px;
+    font-size: 1.5rem;
+  }
+  
+  .details-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .details-link:hover {
+    text-decoration: underline;
+  }
+  
