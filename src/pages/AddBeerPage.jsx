@@ -1,4 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+const API_URL = "https://ih-beers-api2.herokuapp.com/beers/new";
 
 function AddBeerPage() {
   // State variables to store the values of the form inputs. You can leave these as they are.
@@ -28,13 +32,31 @@ function AddBeerPage() {
   // 2. Use axios to make a POST request to the Beers API.
   // 3. Once the beer is created, navigate the user to the page showing the list of all beers.
 
+  function handleSubmit(e){
+    e.preventDefault();
+    const newBeer = {
+      name,
+      tagline,
+      description,
+      image_url: imageUrl,
+      first_brewed: firstBrewed,
+      brewers_tips: brewersTips,
+      attenuation_level: attenuationLevel,
+      contributed_by: contributedBy,
+    };
+
+    axios
+    .post(API_URL, newBeer)
+    .then((response)=>console.log(response))
+    .catch((error)=>console.log(error))
+  }
 
 
   // Structure and the content of the page showing the form for adding a new beer. You can leave this as it is.
   return (
     <>
       <div className="d-inline-flex flex-column w-100 p-4">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Name</label>
           <input
             className="form-control mb-4"
