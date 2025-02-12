@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* src/components/Navbar.css */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
+  
+  .home-page a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .home-page img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+
+.navbar {
+    background-color: #4ac3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+  }
+  
+  .home-icon {
+    color: white;
+    font-size: 40px;
+  }
+
+  /* All Beers page */
+  .all-beers-page {
+    padding: 20px;
+  }
+  
+  .beer-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .beer-image {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .beer-info {
+    flex-grow: 1;
+  }
+  
+  .tagline {
+    color: gray;
+    font-style: italic;
+  }
+  
+  .details-link {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .details-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* BeerDetails Page */
+  .beer-details {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .beer-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .tagline {
+    color: gray;
+    font-style: italic;
+  }
+  
+  .description {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* AddBeer Page */
+  /* src/App.css */
+.add-beer-page {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-beer-page form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.add-beer-page form div {
+  margin-bottom: 15px;
+}
+
+.add-beer-page form label {
+  font-weight: bold;
+}
+
+.add-beer-page form input,
+.add-beer-page form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-beer-page form button {
+  padding: 10px 15px;
+  background-color: #2d9cdb;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.add-beer-page form button:hover {
+  background-color: #1c7ab8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
