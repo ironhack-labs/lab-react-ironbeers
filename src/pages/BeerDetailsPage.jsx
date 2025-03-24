@@ -1,14 +1,28 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React,{ useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from 'axios';
 import beersJSON from "./../assets/beers.json";
 
 
 function BeerDetailsPage() {
   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.
   const [beer, setBeer] = useState(beersJSON[0]);
+  const { beerId } = useParams();
 
   // React Router hook for navigation. We use it for the back button. You can leave this as it is.
   const navigate = useNavigate();
+
+  useEffect(() => {
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers/${beerId}`)
+      .then((response) => {
+        setBeer(response.data); 
+      })
+      .catch((error) => {
+        console.error("Hubo un error al obtener los detalles de la cerveza:", error);
+      });
+  }, [beerId]);
+
+  if (!beer) return <p>Loading...</p>;
 
 
 
