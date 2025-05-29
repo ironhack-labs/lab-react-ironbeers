@@ -6,6 +6,8 @@ import AllBeersPage from "./pages/AllBeersPage";
 import RandomBeerPage from "./pages/RandomBeerPage";
 import AddBeerPage from "./pages/AddBeerPage";
 import BeerDetailsPage from "./pages/BeerDetailsPage";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
   return (
