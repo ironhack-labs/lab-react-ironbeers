@@ -14,7 +14,6 @@ function AddBeerPage() {
 
   const navigate = useNavigate();
 
-  // ✅ Handlers originais mantidos
   const handleName = (e) => setName(e.target.value);
   const handleTagline = (e) => setTagline(e.target.value);
   const handleDescription = (e) => setDescription(e.target.value);
@@ -45,7 +44,7 @@ function AddBeerPage() {
         navigate("/beers");
       })
       .catch((err) => {
-        console.error("Error creating beer:", err);
+        console.error(err);
       });
   }
 
