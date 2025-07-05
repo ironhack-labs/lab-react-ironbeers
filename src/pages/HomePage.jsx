@@ -5,7 +5,6 @@ import newBeerImg from "../assets/new-beer.png";
 
 function HomePage() {
 
-  // The home page showing the links to the 3 main pages of the app. You can leave this as it is.
   return (
     <>
       <div

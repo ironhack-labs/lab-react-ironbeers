@@ -1,85 +1,56 @@
-import { describe, test, expect, beforeEach, afterEach } from "vitest";
-import { render, screen, waitFor } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import nock from "nock";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import RandomBeerPage from "../pages/RandomBeerPage";
 
-const API_URL = "https://ih-beers-api2.herokuapp.com";
+function RandomBeersPage() {
+  const [randomBeer, setRandomBeer] = useState(null);
 
-axios.defaults.adapter = "http";
-
-describe("Bonus: Iteration 4", () => {
-  describe("RandomBeerPage component", () => {
-    const randomBeer = {
-      _id: "r1",
-      image_url: "https://random-image1.jpg",
-      name: "Random Beer 1",
-      tagline: "Random Tagline 1",
-      attenuation_level: 99,
-      description: "Random Description 1",
-      contributed_by: "Random Contributor 1",
-    };
-
-    const namePattern = new RegExp(randomBeer.name, "i");
-    const taglinePattern = new RegExp(randomBeer.tagline, "i");
-    const attenuationPattern = new RegExp(randomBeer.attenuation_level, "i");
-    const descriptionPattern = new RegExp(randomBeer.description, "i");
-    const contributedByPattern = new RegExp(randomBeer.contributed_by, "i");
-
-    let scope;
-
-    beforeEach(() => {
-      scope = nock(API_URL).get("/beers/random").reply(200, randomBeer);
-
-      render(
-        <MemoryRouter initialEntries={["/random-beer"]}>
-          <RandomBeerPage />
-        </MemoryRouter>
-      );
-    });
-
-    afterEach(() => {
-      scope.done();
-    });
-
-    test("renders the image of the selected beer", async () => {
-      await waitFor(() => {
-        const images = screen.getAllByRole("img");
-        expect(
-          images.find((img) => img.getAttribute("src") === randomBeer.image_url)
-        ).toHaveAttribute("src", randomBeer.image_url);
+  const navigate = useNavigate();
+  
+ 
+  useEffect(() => {
+    axios
+      .get("https://ih-beers-api2.herokuapp.com/beers/random")
+      .then((response) => {
+        setRandomBeer(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching random beer:", error);
       });
-    });
+  }, []);
+  
+  if (!randomBeer) return <p>Loading...</p>;
 
-    test("renders the name of the selected beer", async () => {
-      await waitFor(() => {
-        expect(screen.getByText(namePattern)).toBeInTheDocument();
-      });
-    });
+  return (
+    <div className="d-inline-flex flex-column justify-content-center align-items-center w-100 p-4">
+      <h2>Random Beer</h2>
 
-    test("renders the tagline of the selected beer", async () => {
-      await waitFor(() => {
-        expect(screen.getByText(taglinePattern)).toBeInTheDocument();
-      });
-    });
+      {randomBeer && (
+        <>
+          <img
+            src={randomBeer.image_url}
+            alt="beer"
+            height="300px"
+            width="auto"
+          />
+          <h3>{randomBeer.name}</h3>
+          <p>{randomBeer.tagline}</p>
+          <p>Attenuation level: {randomBeer.attenuation_level}</p>
+          <p>Description: {randomBeer.description}</p>
+          <p>Created by: {randomBeer.contributed_by}</p>
 
-    test("renders the attenuation level of the selected beer", async () => {
-      await waitFor(() => {
-        expect(screen.getByText(attenuationPattern)).toBeInTheDocument();
-      });
-    });
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            Back
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
 
-    test("renders the description of the selected beer", async () => {
-      await waitFor(() => {
-        expect(screen.getByText(descriptionPattern)).toBeInTheDocument();
-      });
-    });
-
-    test("renders the contributor of the selected beer", async () => {
-      await waitFor(() => {
-        expect(screen.getByText(contributedByPattern)).toBeInTheDocument();
-      });
-    });
-  });
-});
+export default RandomBeersPage;
