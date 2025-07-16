@@ -1,4 +1,5 @@
-function Search() {
+function Search(props) {
+
   return (
     <div className="d-inline-flex justify-content-center align-items-center w-100 p-4">
       <div className="input-group mb-2 w-50">
@@ -10,6 +11,8 @@ function Search() {
         <input
           type="text"
           className="form-control search-bar"
+          // needed for search functionality
+          onChange={event => props.onSearchChange(event.target.value)}
         />
       </div>
     </div>

@@ -1,6 +1,9 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import beersJSON from "./../assets/beers.json";
+import axios from "axios";
+
+const API_URL = "https://ih-beers-api2.herokuapp.com"
 
 
 function BeerDetailsPage() {
@@ -17,6 +20,19 @@ function BeerDetailsPage() {
   // 2. Set up an effect hook to make a request for the beer info from the Beers API.
   // 3. Use axios to make a HTTP request.
   // 4. Use the response data from the Beers API to update the state variable.
+
+  const { beerId } = useParams();
+
+  useEffect(() => {
+    axios.get(`${API_URL}/beers/${beerId}`)
+    .then((response) => {
+      setBeer(response.data)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+
+  },[beerId])
 
 
 
