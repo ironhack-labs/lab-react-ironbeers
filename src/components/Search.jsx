@@ -1,4 +1,4 @@
-function Search() {
+function Search({ searchValue, onSearchChange }) {
   return (
     <div className="d-inline-flex justify-content-center align-items-center w-100 p-4">
       <div className="input-group mb-2 w-50">
@@ -7,9 +7,12 @@ function Search() {
             Search
           </span>
         </div>
+
         <input
           type="text"
           className="form-control search-bar"
+          value={searchValue}
+          onChange={(e) => onSearchChange(e.target.value)}
         />
       </div>
     </div>
@@ -17,3 +20,4 @@ function Search() {
 }
 
 export default Search;
+
