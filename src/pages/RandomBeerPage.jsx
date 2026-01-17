@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import beersJSON from "./../assets/beers.json";
 
 
-function RandomBeersPage() {
+function RandomBeerPage() {
   // Mock initial state, to be replaced by data from the Beers API. Store the beer info retrieved from the Beers API in this state variable.
   const [randomBeer, setRandomBeer] = useState(beersJSON[0]);
 
@@ -12,10 +13,16 @@ function RandomBeersPage() {
 
 
   
-  // TASKS:
-  // 1. Set up an effect hook to make a request for a random beer from the Beers API.
-  // 2. Use axios to make a HTTP request.
-  // 3. Use the response data from the Beers API to update the state variable.
+  // Cuando el componente se monta, pedimos una cerveza aleatoria a la API
+  useEffect(() => {
+    axios.get("https://beers-api.edu.ironhack.com/beers/random")
+      .then((response) => {
+        setRandomBeer(response.data);
+      })
+      .catch((error) => {
+        console.error("Error al pedir la cerveza aleatoria:", error);
+      });
+  }, []);
 
 
 
@@ -52,4 +59,4 @@ function RandomBeersPage() {
   );
 }
 
-export default RandomBeersPage;
+export default RandomBeerPage;
