@@ -1,4 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
+const API_URL = "https://beers-api.edu.ironhack.com/beers";
 
 function AddBeerPage() {
   // State variables to store the values of the form inputs. You can leave these as they are.
@@ -11,6 +15,8 @@ function AddBeerPage() {
   const [attenuationLevel, setAttenuationLevel] = useState(0);
   const [contributedBy, setContributedBy] = useState("");
 
+   const navigate = useNavigate();
+
   // Handler functions for the form inputs. You can leave these as they are.
   const handleName = (e) => setName(e.target.value);
   const handleTagline = (e) => setTagline(e.target.value);
@@ -21,6 +27,29 @@ function AddBeerPage() {
   const handleAttenuationLevel = (e) => setAttenuationLevel(e.target.value);
   const handleContributedBy = (e) => setContributedBy(e.target.value);
 
+const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newBeer = {
+      name: name,
+      tagline: tagline,
+      description: description,
+      image_url: imageUrl,
+      first_brewed: firstBrewed,
+      brewers_tips: brewersTips,
+      attenuation_level: Number(attenuationLevel), // IMPORTANT: must be number
+      contributed_by: contributedBy,
+    };
+
+    axios
+      .post(`${API_URL}/new`, newBeer)
+      .then(() => {
+        navigate("/beers");
+      })
+      .catch((error) => {
+        console.log("Error creating beer:", error);
+      });
+  };
 
 
   // TASK:
@@ -34,7 +63,7 @@ function AddBeerPage() {
   return (
     <>
       <div className="d-inline-flex flex-column w-100 p-4">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Name</label>
           <input
             className="form-control mb-4"
@@ -44,6 +73,7 @@ function AddBeerPage() {
             value={name}
             onChange={handleName}
           />
+
           <label>Tagline</label>
           <input
             className="form-control mb-4"
@@ -57,9 +87,7 @@ function AddBeerPage() {
           <label className="form-label">Description</label>
           <textarea
             className="form-control mb-4"
-            type="text"
             name="description"
-            placeholder="Description"
             rows="3"
             value={description}
             onChange={handleDescription}
@@ -70,7 +98,6 @@ function AddBeerPage() {
             className="form-control mb-4"
             type="text"
             name="imageUrl"
-            placeholder="Image URL"
             value={imageUrl}
             onChange={handleImageUrl}
           />
@@ -80,7 +107,6 @@ function AddBeerPage() {
             className="form-control mb-4"
             type="text"
             name="firstBrewed"
-            placeholder="Date - MM/YYYY"
             value={firstBrewed}
             onChange={handleFirstBrewed}
           />
@@ -90,7 +116,6 @@ function AddBeerPage() {
             className="form-control mb-4"
             type="text"
             name="brewersTips"
-            placeholder="..."
             value={brewersTips}
             onChange={handleBrewersTips}
           />
@@ -98,9 +123,7 @@ function AddBeerPage() {
           <label>Attenuation Level</label>
           <div className="input-group mb-2">
             <div className="input-group-prepend">
-              <span className="input-group-text" id="basic-addon1">
-                %
-              </span>
+              <span className="input-group-text">%</span>
             </div>
             <input
               className="form-control mb-4"
@@ -118,11 +141,13 @@ function AddBeerPage() {
             className="form-control mb-4"
             type="text"
             name="contributedBy"
-            placeholder="Contributed by"
             value={contributedBy}
             onChange={handleContributedBy}
           />
-          <button className="btn btn-primary btn-round">Add Beer</button>
+
+          <button className="btn btn-primary btn-round" type="submit">
+            Add Beer
+          </button>
         </form>
       </div>
     </>

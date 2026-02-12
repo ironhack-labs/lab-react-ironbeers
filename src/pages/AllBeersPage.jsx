@@ -1,13 +1,28 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Search from "../components/Search";
-import beersJSON from "./../assets/beers.json";
+
+const API_URL = "https://beers-api.edu.ironhack.com/beers";
+
 
 
 
 function AllBeersPage() {
   // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.
-  const [beers, setBeers] = useState(beersJSON);
+    const [beers, setBeers] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(API_URL)
+      .then((response) => {
+        setBeers(response.data);
+      })
+      .catch((error) => {
+        console.log("Error getting beers:", error);
+      });
+  }, []);
+
 
 
 
@@ -23,20 +38,25 @@ function AllBeersPage() {
     <>
       <Search />
 
-      <div className="d-inline-flex flex-wrap justify-content-center align-items-center w-100 p-4">
+   <div className="d-inline-flex flex-wrap justify-content-center align-items-center w-100 p-4">
         {beers &&
-          beers.map((beer, i) => {
+          beers.map((beer) => {
             return (
-              <div key={i}>
+              <div key={beer._id}>
                 <Link to={"/beers/" + beer._id}>
-                  <div className="card m-2 p-2 text-center" style={{ width: "24rem", height: "18rem" }}>
+                  <div
+                    className="card m-2 p-2 text-center"
+                    style={{ width: "24rem", height: "18rem" }}
+                  >
                     <div className="card-body">
                       <img
                         src={beer.image_url}
                         style={{ height: "6rem" }}
-                        alt={"image of" + beer.name}
+                        alt={"image of " + beer.name}
                       />
-                      <h5 className="card-title text-truncate mt-2">{beer.name}</h5>
+                      <h5 className="card-title text-truncate mt-2">
+                        {beer.name}
+                      </h5>
                       <h6 className="card-subtitle mb-3 text-muted">
                         <em>{beer.tagline}</em>
                       </h6>
