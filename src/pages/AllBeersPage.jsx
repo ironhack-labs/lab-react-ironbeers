@@ -9,6 +9,14 @@ function AllBeersPage() {
   // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.
   const [beers, setBeers] = useState(beersJSON);
 
+  useEffect(() => {
+    axios.get("https://beers-api.edu.ironhack.com/beers")
+      .then((response) => {
+        setBeers(response.data); // save API response in state
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
 
 
   // TASKS:

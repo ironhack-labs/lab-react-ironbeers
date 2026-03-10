@@ -11,6 +11,8 @@ function AddBeerPage() {
   const [attenuationLevel, setAttenuationLevel] = useState(0);
   const [contributedBy, setContributedBy] = useState("");
 
+  const navigate = useNavigate();
+
   // Handler functions for the form inputs. You can leave these as they are.
   const handleName = (e) => setName(e.target.value);
   const handleTagline = (e) => setTagline(e.target.value);
@@ -18,15 +20,38 @@ function AddBeerPage() {
   const handleImageUrl = (e) => setImageUrl(e.target.value);
   const handleFirstBrewed = (e) => setFirstBrewed(e.target.value);
   const handleBrewersTips = (e) => setBrewersTips(e.target.value);
-  const handleAttenuationLevel = (e) => setAttenuationLevel(e.target.value);
+  const handleAttenuationLevel = (e) => setAttenuationLevel(Number(e.target.value));
   const handleContributedBy = (e) => setContributedBy(e.target.value);
-
 
 
   // TASK:
   // 1. Create a function to handle the form submission and send the form data to the Beers API to create a new beer.
   // 2. Use axios to make a POST request to the Beers API.
   // 3. Once the beer is created, navigate the user to the page showing the list of all beers.
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+
+  const newBeer = {
+      name,
+      tagline,
+      description,
+      image_url: imageUrl, // API expects image_url
+      first_brewed: firstBrewed,
+      brewers_tips: brewersTips,
+      attenuation_level: attenuationLevel, // must be a number
+      contributed_by: contributedBy,
+    };
+
+    axios.post("https://beers-api.edu.ironhack.com/beers/new", newBeer)
+      .then((response) => {
+        console.log("Beer created:", response.data);
+        navigate("/beers"); // redirect to beers list page
+      })
+      .catch((error) => {
+        console.log("Error creating beer:", error);
+      });
+  };
 
 
 
