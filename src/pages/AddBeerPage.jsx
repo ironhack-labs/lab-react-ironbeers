@@ -57,11 +57,7 @@ function AddBeerPage() {
         navigate("/beers")
         
       })
-
-      
   }
-
-
 
   // Structure and the content of the page showing the form for adding a new beer. You can leave this as it is.
   return (
