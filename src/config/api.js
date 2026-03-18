@@ -1,0 +1,1 @@
+export const _BASE_URL_ = "https://beers-api.edu.ironhack.com/"
