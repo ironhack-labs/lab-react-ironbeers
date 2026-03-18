@@ -50,7 +50,7 @@ function AddBeerPage() {
     axios
       .post(_BASE_URL_+ "beers/new", newBeer)
       .then((response) => {
-        console.log(response.data).
+        console.log(response.data)
          navigate("/beers")
       })
       .catch((err) => {
