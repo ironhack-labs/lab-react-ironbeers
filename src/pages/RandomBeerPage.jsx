@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import beersJSON from "./../assets/beers.json";
+import { useEffect } from "react";
 
 
 function RandomBeersPage() {
@@ -10,7 +11,18 @@ function RandomBeersPage() {
   // React Router hook for navigation. We use it for the back button. You can leave this as it is.
   const navigate = useNavigate();
 
-
+useEffect(()=>{
+ getData()
+ },[])
+const getData = async()=>{
+  try{
+  const response = await axios.get("https://beers-api.edu.ironhack.com/beers/random")
+  console.log(response.data)
+  setRandomBeer(response.data)
+  }catch (error){
+  console.log(error)
+  }
+ }
   
   // TASKS:
   // 1. Set up an effect hook to make a request for a random beer from the Beers API.
