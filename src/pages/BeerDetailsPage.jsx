@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import beersJSON from "./../assets/beers.json";
+import axios from "axios";
 
 
 function BeerDetailsPage() {
@@ -10,7 +11,14 @@ function BeerDetailsPage() {
   // React Router hook for navigation. We use it for the back button. You can leave this as it is.
   const navigate = useNavigate();
 
+  const { beerId } = useParams();
 
+  useEffect( ()=> {
+    axios
+      .get(`https://beers-api.edu.ironhack.com/beers/${beerId}`)
+      .then((response) => setBeer(response.data))
+      .catch((error) => console.log(error));
+  }, [beerId])
 
   // TASKS:
   // 1. Get the beer ID from the URL, using the useParams hook.
