@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
 import beersJSON from "./../assets/beers.json";
 
 
@@ -14,7 +15,19 @@ function BeerDetailsPage() {
 
   // TASKS:
   // 1. Get the beer ID from the URL, using the useParams hook.
+  const { beerId } = useParams();
   // 2. Set up an effect hook to make a request for the beer info from the Beers API.
+  useEffect(() => {
+    axios
+      .get(`https://beers-api.edu.ironhack.com/beers/${beerId}`)
+      .then((response) => {
+        console.log(response.data);
+        setBeer(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [beerId]);
   // 3. Use axios to make a HTTP request.
   // 4. Use the response data from the Beers API to update the state variable.
 
@@ -30,6 +43,9 @@ function BeerDetailsPage() {
             alt="Beer Image"
             height="300px"
             width="auto"
+            onError={(e) => {
+              e.target.style.display = "none"
+            }}
           />
           <h3>{beer.name}</h3>
           <p>{beer.tagline}</p>

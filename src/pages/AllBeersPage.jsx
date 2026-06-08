@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Search from "../components/Search";
 import beersJSON from "./../assets/beers.json";
 
@@ -15,7 +16,17 @@ function AllBeersPage() {
   // 1. Set up an effect hook to make a request to the Beers API and get a list with all the beers.
   // 2. Use axios to make a HTTP request.
   // 3. Use the response data from the Beers API to update the state variable.
-
+  useEffect(() => {
+    axios
+      .get("https://beers-api.edu.ironhack.com/beers")
+      .then((response) => {
+        console.log(response.data);
+        setBeers(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
 
   // The logic and the structure for the page showing the list of beers. You can leave this as it is for now.
@@ -27,7 +38,7 @@ function AllBeersPage() {
         {beers &&
           beers.map((beer, i) => {
             return (
-              <div key={i}>
+              <div key={beer._id}>
                 <Link to={"/beers/" + beer._id}>
                   <div className="card m-2 p-2 text-center" style={{ width: "24rem", height: "18rem" }}>
                     <div className="card-body">
@@ -35,6 +46,9 @@ function AllBeersPage() {
                         src={beer.image_url}
                         style={{ height: "6rem" }}
                         alt={"image of" + beer.name}
+                        onError={(e) => {
+                          e.target.style.display = "none";
+                        }}
                       />
                       <h5 className="card-title text-truncate mt-2">{beer.name}</h5>
                       <h6 className="card-subtitle mb-3 text-muted">
