@@ -27,7 +27,7 @@ After completing this exercise, you will be able to:
 
 In this lab, we will be working on an app that caters to brewers, beer enthusiasts, and all those interested in handcrafted beers - the Iron Brewers app. Our mission here is to create an app to showcase some of the best handcrafted beers, but not just that - also make it so that users can contribute by saving their handcrafted beers to the database and sharing them with fellow brewers and the community.
 
-Our final result of the app should resemble something similar to this:
+Our final result of the app should resemble something similar to this::
 
 
 
