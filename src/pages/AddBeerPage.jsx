@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, userEffect, useNavigate } from "react";
+import axios from 'axios';
 
 function AddBeerPage() {
   // State variables to store the values of the form inputs. You can leave these as they are.
@@ -28,6 +29,25 @@ function AddBeerPage() {
   // 2. Use axios to make a POST request to the Beers API.
   // 3. Once the beer is created, navigate the user to the page showing the list of all beers.
 
+  const submitBeerHandler= (e)=>{
+
+    e.preventDefault()
+   
+    if (typeOf(attenuationLevel) === 'string') {
+      setAttenuationLevel(parseInt(attenuationLevel))
+    } 
+
+    axios.post('https://beers-api.edu.ironhack.com/beers', {'name':name,
+       'tagline':tagline, 
+       'description': description,
+       'image_url': imageUrl, 
+       'first_brewed':firstBrewed, 
+       'brewers_tips':brewersTips,
+       'attenuation_level': attenuationLevel,
+       'contributed_by': contributedBy})
+       .then(res=>navigate('/beers')).catch(err=>console.log(err))
+
+  } 
 
 
   // Structure and the content of the page showing the form for adding a new beer. You can leave this as it is.
@@ -122,7 +142,7 @@ function AddBeerPage() {
             value={contributedBy}
             onChange={handleContributedBy}
           />
-          <button className="btn btn-primary btn-round">Add Beer</button>
+          <button className="btn btn-primary btn-round" onClick={submitBeerHandler}>Add Beer</button>
         </form>
       </div>
     </>

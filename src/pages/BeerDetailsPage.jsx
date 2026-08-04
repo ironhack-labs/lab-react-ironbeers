@@ -19,6 +19,17 @@ function BeerDetailsPage() {
   // 4. Use the response data from the Beers API to update the state variable.
 
 
+    const {beerId} = useParams()
+
+    useEffect(()=>{
+
+
+    axios.get('https://beers-api.edu.ironhack.com/beers/' + beerId).then(res=>setBeer(res.data))
+    },beers)
+    
+
+
+
 
   // Structure and the content of the page showing the beer details. You can leave this as it is:
   return (
