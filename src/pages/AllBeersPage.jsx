@@ -5,7 +5,7 @@ import beersJSON from "./../assets/beers.json";
 import axios from "axios";
 
 function AllBeersPage() {
-  // Mock initial state, to be replaced by data from the API. Once you retrieve the list of beers from the Beers API store it in this state variable.
+
   const [beers, setBeers] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [query, setQuery] = useState("");
