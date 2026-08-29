@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <Link to="/">
-      <nav style={{ background: "cornflowerblue", textAlign: "center", padding: "10px 40px" }}>
+      <nav
+        style={{
+          background: "cornflowerblue",
+          textAlign: "center",
+          padding: "10px 40px",
+        }}
+      >
         <img
           src={homeIcon}
           alt="home icon"
