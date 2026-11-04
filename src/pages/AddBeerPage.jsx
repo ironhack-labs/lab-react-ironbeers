@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function AddBeerPage() {
   // State variables to store the values of the form inputs. You can leave these as they are.
@@ -20,6 +22,7 @@ function AddBeerPage() {
   const handleBrewersTips = (e) => setBrewersTips(e.target.value);
   const handleAttenuationLevel = (e) => setAttenuationLevel(e.target.value);
   const handleContributedBy = (e) => setContributedBy(e.target.value);
+  const navigate = useNavigate();
 
 
 
@@ -28,13 +31,37 @@ function AddBeerPage() {
   // 2. Use axios to make a POST request to the Beers API.
   // 3. Once the beer is created, navigate the user to the page showing the list of all beers.
 
+  const handleSubmit = async(e) => {
+    e.preventDefault()
+    const body = {
+      name: name,
+      tagline: tagline,
+      description: description,
+      imageUrl: imageUrl,
+      firstBrewed: firstBrewed,
+      brewersTips: brewersTips,
+      attenuationLevel: Number(attenuationLevel),
+      contributedBy: contributedBy
+
+    }
+    try{
+      const response = await axios.post(`https://beers-api.edu.ironhack.com/beers/new`, body)
+      navigate("/beers")
+    }
+   
+
+    catch(error){
+    console.log(error)
+  }
+  }
+
 
 
   // Structure and the content of the page showing the form for adding a new beer. You can leave this as it is.
   return (
     <>
       <div className="d-inline-flex flex-column w-100 p-4">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>Name</label>
           <input
             className="form-control mb-4"
@@ -122,7 +149,7 @@ function AddBeerPage() {
             value={contributedBy}
             onChange={handleContributedBy}
           />
-          <button className="btn btn-primary btn-round">Add Beer</button>
+          <button className="btn btn-primary btn-round" type="submit">Add Beer</button>
         </form>
       </div>
     </>
